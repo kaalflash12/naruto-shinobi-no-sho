@@ -39,7 +39,7 @@ jobs:
           node --check tools/ast-index-functions.mjs
           node --check tools/refine-technical-spec.mjs
           node --check tools/audit-documentation-coverage.mjs
-          node --check tools/build-final-canonical-spec.mjs
+          node --check tools/build-final-canonical-spec-ast.mjs
           node --check tools/audit-final-canonical-spec.mjs
 
       - name: Generate exhaustive source inventory
@@ -54,8 +54,8 @@ jobs:
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
-      - name: Build single canonical full specification
-        run: node tools/build-final-canonical-spec.mjs
+      - name: Build single canonical full specification from AST
+        run: node tools/build-final-canonical-spec-ast.mjs
 
       - name: Validate generated files and static gates
         run: |
