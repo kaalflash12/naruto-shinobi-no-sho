@@ -2,13 +2,25 @@
 
 Status: **PASS_STATIC_COVERAGE**
 
-`PASS_STATIC_COVERAGE` significa somente que os elementos descobertos pelo gerador foram documentados e rastreados até o código. Não significa teste vivo.
+Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `docs/`, `tools/` e `.github/` não podem criar IA/rotas/DB/UI/movimento fictícios.
+
+`PASS_STATIC_COVERAGE` não equivale a teste vivo.
+
+## Modelos de IA detectados no runtime
+
+- `@cf/meta/llama-3.2-1b-instruct`
+- `@cf/zai-org/glm-4.7-flash`
 
 ## Cobertura
 
 | Categoria | Total |
 |---|---:|
-| functions | 921 |
+| sourceFiles | 56 |
+| gameRuntimeSourceFiles | 51 |
+| toolingSourceFiles | 5 |
+| functions | 926 |
+| gameRuntimeFunctions | 881 |
+| toolingFunctions | 45 |
 | routes | 31 |
 | models | 2 |
 | collections | 11 |
@@ -18,12 +30,22 @@ Status: **PASS_STATIC_COVERAGE**
 | movementEvidence | 7824 |
 | scripts | 30 |
 | runtimeFiles | 53 |
+| uniqueAssetReferences | 5445 |
+| missingLiteralAssetReferences | 70 |
 
 ## Gates
 
 - **staticInventory:** PASS
+- **documentationExcludedFromDiscovery:** PASS
+- **toolingExcludedFromGameSemantics:** PASS
 - **runtimeExecution:** UNVERIFIED
 - **browserInteraction:** UNVERIFIED
 - **workersLive:** UNVERIFIED
 - **mongodbLive:** UNVERIFIED
+- **gameplayE2E:** UNVERIFIED
 - **semanticCompleteness:** REQUIRES_TRACEABLE_EVIDENCE
+- **assetPathCompleteness:** FAIL_OR_EXTERNAL_OVERLAY_REQUIRED
+
+## Avisos
+
+- 70 referencias literais de assets nao materializadas; ver docs/generated/10-ASSET-REFERENCES.md e auditoria especifica de assets

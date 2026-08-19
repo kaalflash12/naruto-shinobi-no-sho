@@ -1,10 +1,17 @@
 {
-  "generatedAt": "2026-08-19T19:46:13.094Z",
+  "generatedAt": "2026-08-19T19:47:13.248Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
-  "meaning": "PASS_STATIC_COVERAGE prova cobertura do inventario estatico; nao equivale a PASS de runtime, jogabilidade ou completude semantica.",
+  "meaning": "PASS_STATIC_COVERAGE prova cobertura estatica: funcoes de toda fonte nao documental + semantica do jogo somente do runtime. Nao equivale a PASS de runtime, jogabilidade, visual ou E2E.",
+  "discoveryMode": "runtime-semantics-plus-tooling-functions",
+  "semanticDiscovery": "game-runtime-only",
   "staticCoverage": {
-    "functions": 921,
+    "sourceFiles": 56,
+    "gameRuntimeSourceFiles": 51,
+    "toolingSourceFiles": 5,
+    "functions": 926,
+    "gameRuntimeFunctions": 881,
+    "toolingFunctions": 45,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -13,16 +20,28 @@
     "events": 9,
     "movementEvidence": 7824,
     "scripts": 30,
-    "runtimeFiles": 53
+    "runtimeFiles": 53,
+    "uniqueAssetReferences": 5445,
+    "missingLiteralAssetReferences": 70
   },
+  "modelNames": [
+    "@cf/meta/llama-3.2-1b-instruct",
+    "@cf/zai-org/glm-4.7-flash"
+  ],
   "failures": [],
-  "warnings": [],
+  "warnings": [
+    "70 referencias literais de assets nao materializadas; ver docs/generated/10-ASSET-REFERENCES.md e auditoria especifica de assets"
+  ],
   "gates": {
     "staticInventory": "PASS",
+    "documentationExcludedFromDiscovery": "PASS",
+    "toolingExcludedFromGameSemantics": "PASS",
     "runtimeExecution": "UNVERIFIED",
     "browserInteraction": "UNVERIFIED",
     "workersLive": "UNVERIFIED",
     "mongodbLive": "UNVERIFIED",
-    "semanticCompleteness": "REQUIRES_TRACEABLE_EVIDENCE"
+    "gameplayE2E": "UNVERIFIED",
+    "semanticCompleteness": "REQUIRES_TRACEABLE_EVIDENCE",
+    "assetPathCompleteness": "FAIL_OR_EXTERNAL_OVERLAY_REQUIRED"
   }
 }
