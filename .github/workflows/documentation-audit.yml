@@ -1,0 +1,67 @@
+name: Documentacao tecnica integral
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/generated/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: technical-documentation-main
+  cancel-in-progress: true
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check generator syntax
+        run: node --check tools/generate-technical-spec.mjs
+
+      - name: Check audit syntax
+        run: node --check tools/audit-documentation-coverage.mjs
+
+      - name: Generate inventory from real source
+        run: node tools/generate-technical-spec.mjs
+
+      - name: Audit documentation coverage
+        run: node tools/audit-documentation-coverage.mjs
+
+      - name: Validate generated files
+        run: |
+          test -s docs/generated/TECHNICAL-INVENTORY.json
+          test -s docs/generated/01-FUNCTIONS.md
+          test -s docs/generated/02-API.md
+          test -s docs/generated/03-AI.md
+          test -s docs/generated/04-PERSISTENCE.md
+          test -s docs/generated/05-UI-INTERACTIONS.md
+          test -s docs/generated/06-SCRIPTS.md
+          test -s docs/generated/07-MOVEMENT-ACTIONS.md
+          test -s docs/generated/08-TRACEABILITY.md
+          test -s docs/generated/DOCUMENTATION-AUDIT.json
+          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE') process.exit(1); console.log(r.staticCoverage)"
+
+      - name: Commit generated documentation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/generated
+          if git diff --cached --quiet; then
+            echo 'Generated documentation is already current.'
+          else
+            git commit -m 'docs: regenerate exhaustive technical inventory'
+            git push
+          fi
