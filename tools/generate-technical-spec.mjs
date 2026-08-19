@@ -2,234 +2,279 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-const ROOT = process.cwd();
-const OUT = path.join(ROOT, 'docs', 'generated');
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'docs/generated']);
-const TEXT_EXT = new Set(['.js','.mjs','.cjs','.html','.json','.toml','.md','.txt','.css','.ps1','.yml','.yaml']);
-const RUNTIME_EXT = new Set(['.js','.mjs','.cjs','.html','.json','.toml','.ps1']);
-const MAX_READ = 12 * 1024 * 1024;
+const ROOT=process.cwd();
+const OUT=path.join(ROOT,'docs','generated');
+const SKIP=new Set(['.git','node_modules']);
+const TEXT_EXT=new Set(['.js','.mjs','.cjs','.html','.json','.toml','.md','.txt','.css','.ps1','.yml','.yaml']);
+const RUNTIME_EXT=new Set(['.js','.mjs','.cjs','.html','.json','.toml','.ps1']);
+const NON_FUNCTION=new Set(['if','for','while','switch','catch','with','return','throw','else','do','try','finally']);
+const MAX_TEXT=12*1024*1024;
 
-function posix(p){ return p.split(path.sep).join('/'); }
-function rel(p){ return posix(path.relative(ROOT,p)); }
-function sha256(buf){ return crypto.createHash('sha256').update(buf).digest('hex'); }
-function lineOf(text, idx){ let n=1; for(let i=0;i<idx;i++) if(text.charCodeAt(i)===10)n++; return n; }
-function uniq(a){ return [...new Set(a.filter(Boolean))]; }
-function esc(s){ return String(s??'').replace(/\|/g,'\\|').replace(/\r?\n/g,' '); }
-function id(prefix,n){ return `${prefix}-${String(n).padStart(5,'0')}`; }
+const px=p=>p.split(path.sep).join('/');
+const rel=p=>px(path.relative(ROOT,p));
+const code=s=>'`'+String(s??'').replace(/`/g,'\\`')+'`';
+const clean=s=>String(s??'').replace(/\|/g,'\\|').replace(/\r?\n/g,' ').trim();
+const uniq=a=>[...new Set(a.filter(Boolean))];
+const ident=(prefix,n)=>prefix+'-'+String(n).padStart(5,'0');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 
-function walk(dir=ROOT, out=[]){
+function walk(dir=ROOT,out=[]){
   for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
-    const full=path.join(dir,ent.name), r=rel(full);
+    const full=path.join(dir,ent.name),r=rel(full);
     if(ent.isDirectory()){
-      if(SKIP_DIRS.has(ent.name) || r==='docs/generated' || r.startsWith('assets/')) continue;
+      if(SKIP.has(ent.name)||r==='docs/generated')continue;
       walk(full,out);
     }else out.push(full);
   }
   return out;
 }
 
-function readText(file){
-  const st=fs.statSync(file);
-  if(st.size>MAX_READ) return null;
-  const ext=path.extname(file).toLowerCase();
-  if(!TEXT_EXT.has(ext)) return null;
-  return fs.readFileSync(file,'utf8');
-}
-
-function blockEnd(text, open){
-  let depth=0, quote=null, lineComment=false, blockComment=false, escNext=false;
-  for(let i=open;i<text.length;i++){
-    const c=text[i], n=text[i+1];
-    if(lineComment){ if(c==='\n') lineComment=false; continue; }
-    if(blockComment){ if(c==='*'&&n==='/'){ blockComment=false;i++; } continue; }
-    if(quote){
-      if(escNext){ escNext=false; continue; }
-      if(c==='\\'){ escNext=true; continue; }
-      if(c===quote){ quote=null; continue; }
-      continue;
-    }
-    if(c==='/'&&n==='/'){ lineComment=true;i++;continue; }
-    if(c==='/'&&n==='*'){ blockComment=true;i++;continue; }
-    if(c==='"'||c==="'"||c==='`'){ quote=c;continue; }
-    if(c==='{') depth++;
-    else if(c==='}'){ depth--; if(depth===0)return i; }
-  }
-  return Math.min(text.length-1,open+8000);
-}
-
-function bodyFor(text, start){
-  const open=text.indexOf('{',start);
-  if(open<0 || open-start>800) return '';
-  const end=blockEnd(text,open);
-  return text.slice(open,end+1);
-}
-
-function strings(re,text){ const a=[]; let m; re.lastIndex=0; while((m=re.exec(text))) a.push(m[1]); return uniq(a); }
-function refsIn(text){
-  return {
-    routes: strings(/["'`]((?:\/api\/)[A-Za-z0-9_./:-]+)["'`]/g,text),
-    collections: strings(/\.collection\(\s*["'`]([^"'`]+)["'`]\s*\)/g,text),
-    models: strings(/["'`](@cf\/[A-Za-z0-9_.\-/]+)["'`]/g,text),
-    domIds: uniq([...strings(/getElementById\(\s*["'`]([^"'`]+)["'`]\s*\)/g,text),...strings(/querySelector\(\s*["'`]#([^"'`\s>+~.[\]]+)["'`]\s*\)/g,text)]),
-    storageKeys: strings(/(?:localStorage|sessionStorage)\.(?:getItem|setItem|removeItem)\(\s*["'`]([^"'`]+)["'`]/g,text),
-    env: strings(/\benv\.([A-Z][A-Z0-9_]*)\b/g,text),
-    actions: uniq([...strings(/data-action=["']([^"']+)["']/g,text),...strings(/data-go=["']([^"']+)["']/g,text)]),
-    assetRefs: strings(/["'`]((?:assets\/)[^"'`?#]+)["'`]/g,text),
+function lineLocator(text){
+  const starts=[0];
+  for(let i=0;i<text.length;i++)if(text.charCodeAt(i)===10)starts.push(i+1);
+  return idx=>{
+    let lo=0,hi=starts.length-1;
+    while(lo<=hi){const mid=(lo+hi)>>1;if(starts[mid]<=idx)lo=mid+1;else hi=mid-1;}
+    return hi+1;
   };
 }
 
-function extractFunctions(file,text){
-  const found=[];
+function readText(file){
+  const st=fs.statSync(file),ext=path.extname(file).toLowerCase();
+  if(st.size>MAX_TEXT||!TEXT_EXT.has(ext))return null;
+  return fs.readFileSync(file,'utf8');
+}
+
+function blockEnd(text,open){
+  let depth=0,quote='',lineComment=false,blockComment=false,escape=false;
+  for(let i=open;i<text.length;i++){
+    const c=text[i],n=text[i+1];
+    if(lineComment){if(c==='\n')lineComment=false;continue;}
+    if(blockComment){if(c==='*'&&n==='/'){blockComment=false;i++;}continue;}
+    if(quote){
+      if(escape){escape=false;continue;}
+      if(c==='\\'){escape=true;continue;}
+      if(c===quote)quote='';
+      continue;
+    }
+    if(c==='/'&&n==='/'){lineComment=true;i++;continue;}
+    if(c==='/'&&n==='*'){blockComment=true;i++;continue;}
+    if(c==='"'||c==="'"||c==='`'){quote=c;continue;}
+    if(c==='{')depth++;
+    else if(c==='}'){depth--;if(depth===0)return i;}
+  }
+  return text.length-1;
+}
+
+function bodyAt(text,start){
+  const open=text.indexOf('{',start);
+  if(open<0||open-start>1000)return '';
+  return text.slice(open,blockEnd(text,open)+1);
+}
+
+function captures(text,re,group=1){
+  const out=[];let m;re.lastIndex=0;
+  while((m=re.exec(text)))out.push(m[group]);
+  return uniq(out);
+}
+
+function refs(text){
+  return {
+    routes:captures(text,/["'`]((?:\/api\/)[A-Za-z0-9_./:-]+)["'`]/g),
+    collections:captures(text,/\.collection\(\s*["'`]([^"'`]+)["'`]\s*\)/g),
+    models:captures(text,/["'`](@cf\/[A-Za-z0-9_.\-/]+)["'`]/g),
+    storageKeys:captures(text,/(?:localStorage|sessionStorage)\.(?:getItem|setItem|removeItem)\(\s*["'`]([^"'`]+)["'`]/g),
+    env:captures(text,/\benv\.([A-Z][A-Z0-9_]*)\b/g),
+    domIds:uniq([
+      ...captures(text,/getElementById\(\s*["'`]([^"'`]+)["'`]\s*\)/g),
+      ...captures(text,/querySelector\(\s*["'`]#([^"'`\s>+~.\[]+)["'`]\s*\)/g)
+    ]),
+    actions:uniq([
+      ...captures(text,/data-action=["']([^"']+)["']/g),
+      ...captures(text,/data-go=["']([^"']+)["']/g)
+    ])
+  };
+}
+
+function extractFunctions(file,text,lineAt){
   const patterns=[
-    {kind:'declaration', re:/(?:^|[^\w$])((?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(([^)]*)\))/gm, name:2, params:3},
-    {kind:'arrow', re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?\(([^)]*)\)\s*=>/gm, name:1, params:2},
-    {kind:'arrow1', re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?([A-Za-z_$][\w$]*)\s*=>/gm, name:1, params:2},
-    {kind:'function-expression', re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?function(?:\s+[A-Za-z_$][\w$]*)?\s*\(([^)]*)\)/gm, name:1, params:2},
-    {kind:'class-method', re:/^\s{0,8}(async\s+)?(constructor|fetch|[A-Za-z_$][\w$]*)\s*\(([^)]*)\)\s*\{/gm, name:2, params:3},
+    {kind:'declaration',re:/(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(([^)]*)\)/gm,name:1,params:2},
+    {kind:'arrow',re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?\(([^)]*)\)\s*=>/gm,name:1,params:2},
+    {kind:'arrow-one',re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?([A-Za-z_$][\w$]*)\s*=>/gm,name:1,params:2},
+    {kind:'function-expression',re:/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?function(?:\s+[A-Za-z_$][\w$]*)?\s*\(([^)]*)\)/gm,name:1,params:2},
+    {kind:'method',re:/^\s{0,12}(?:async\s+)?([A-Za-z_$][\w$]*)\s*\(([^)]*)\)\s*\{/gm,name:1,params:2}
   ];
-  const seen=new Set();
+  const out=[],seen=new Set();
   for(const p of patterns){
-    let m; p.re.lastIndex=0;
+    let m;p.re.lastIndex=0;
     while((m=p.re.exec(text))){
-      const name=m[p.name], key=`${m.index}:${name}`;
-      if(seen.has(key)) continue; seen.add(key);
-      const body=bodyFor(text,m.index), refs=refsIn(body);
-      found.push({file,line:lineOf(text,m.index),name,kind:p.kind,params:String(m[p.params]||'').trim(),body,refs});
+      const name=m[p.name];
+      if(NON_FUNCTION.has(name))continue;
+      const key=m.index+':'+name;
+      if(seen.has(key))continue;
+      seen.add(key);
+      const body=bodyAt(text,m.index);
+      out.push({file,line:lineAt(m.index),name,kind:p.kind,params:clean(m[p.params]),body,refs:refs(body)});
     }
   }
-  return found;
+  return out;
 }
 
-const files=walk();
-const fileRecords=[];
+const absolute=walk();
+const files=[];
 const texts=new Map();
-for(const f of files){
-  const r=rel(f), st=fs.statSync(f), buf=fs.readFileSync(f);
-  fileRecords.push({path:r,size:st.size,sha256:sha256(buf),extension:path.extname(f).toLowerCase(),runtime:RUNTIME_EXT.has(path.extname(f).toLowerCase())});
-  const t=readText(f); if(t!==null) texts.set(r,t);
+const lineAtByFile=new Map();
+for(const f of absolute){
+  const r=rel(f),buf=fs.readFileSync(f),ext=path.extname(f).toLowerCase();
+  files.push({path:r,size:buf.length,sha256:hash(buf),extension:ext,runtime:RUNTIME_EXT.has(ext),asset:r.startsWith('assets/')});
+  const text=readText(f);
+  if(text!==null){texts.set(r,text);lineAtByFile.set(r,lineLocator(text));}
 }
+files.sort((a,b)=>a.path.localeCompare(b.path));
 
 let functions=[];
-for(const [file,text] of texts){ if(/\.(?:m?js|cjs)$/.test(file)) functions.push(...extractFunctions(file,text)); }
-const functionNames=new Set(functions.map(x=>x.name));
+for(const [file,text] of texts){if(/\.(?:m?js|cjs)$/.test(file))functions.push(...extractFunctions(file,text,lineAtByFile.get(file)));}
+functions.sort((a,b)=>a.file.localeCompare(b.file)||a.line-b.line||a.name.localeCompare(b.name));
+const knownNames=new Set(functions.map(f=>f.name));
 for(const f of functions){
-  const calls=[];
-  const re=/\b([A-Za-z_$][\w$]*)\s*\(/g; let m;
-  while((m=re.exec(f.body))) if(functionNames.has(m[1])&&m[1]!==f.name) calls.push(m[1]);
-  f.calls=uniq(calls);
-  delete f.body;
+  const callNames=[];let m;const re=/\b([A-Za-z_$][\w$]*)\s*\(/g;
+  while((m=re.exec(f.body)))if(knownNames.has(m[1])&&m[1]!==f.name)callNames.push(m[1]);
+  f.calls=uniq(callNames);delete f.body;
 }
-functions.sort((a,b)=>a.file.localeCompare(b.file)||a.line-b.line);
-functions.forEach((x,i)=>x.id=id('FUNC',i+1));
+functions.forEach((f,i)=>f.id=ident('FUNC',i+1));
 
-const occurrences={routes:[],models:[],collections:[],storage:[],uiActions:[],events:[],movement:[],assets:[],env:[]};
+const occ={routes:[],models:[],collections:[],storage:[],ui:[],events:[],movement:[],assets:[],env:[]};
 for(const [file,text] of texts){
-  const add=(bucket,re,mapper)=>{ let m; re.lastIndex=0; while((m=re.exec(text))) bucket.push(mapper(m)); };
-  add(occurrences.routes,/["'`]((?:\/api\/)[A-Za-z0-9_./:-]+)["'`]/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  add(occurrences.models,/["'`](@cf\/[A-Za-z0-9_.\-/]+)["'`]/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  add(occurrences.collections,/\.collection\(\s*["'`]([^"'`]+)["'`]\s*\)/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  add(occurrences.storage,/(localStorage|sessionStorage)\.(getItem|setItem|removeItem)\(\s*["'`]([^"'`]+)["'`]/g,m=>({file,line:lineOf(text,m.index),scope:m[1],operation:m[2],value:m[3]}));
-  add(occurrences.uiActions,/data-(action|go)=["']([^"']+)["']/g,m=>({file,line:lineOf(text,m.index),kind:m[1],value:m[2]}));
-  add(occurrences.events,/\.addEventListener\(\s*["'`]([^"'`]+)["'`]/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  add(occurrences.assets,/["'`]((?:assets\/)[^"'`?#]+)["'`]/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  add(occurrences.env,/\benv\.([A-Z][A-Z0-9_]*)\b/g,m=>({file,line:lineOf(text,m.index),value:m[1]}));
-  const lines=text.split(/\r?\n/);
-  lines.forEach((ln,idx)=>{ if(/\b(move|movement|travel|location|position|map|route|distance|range|alcance|desloc|mover|movimento|viajar|localiza|posi[cç][aã]o)\b/i.test(ln)) occurrences.movement.push({file,line:idx+1,text:ln.trim().slice(0,500)}); });
+  const lineAt=lineAtByFile.get(file);
+  const add=(bucket,re,map)=>{let m;re.lastIndex=0;while((m=re.exec(text)))bucket.push(map(m,lineAt(m.index)));};
+  add(occ.routes,/["'`]((?:\/api\/)[A-Za-z0-9_./:-]+)["'`]/g,(m,line)=>({file,line,value:m[1]}));
+  add(occ.models,/["'`](@cf\/[A-Za-z0-9_.\-/]+)["'`]/g,(m,line)=>({file,line,value:m[1]}));
+  add(occ.collections,/\.collection\(\s*["'`]([^"'`]+)["'`]\s*\)/g,(m,line)=>({file,line,value:m[1]}));
+  add(occ.storage,/(localStorage|sessionStorage)\.(getItem|setItem|removeItem)\(\s*["'`]([^"'`]+)["'`]/g,(m,line)=>({file,line,scope:m[1],operation:m[2],value:m[3]}));
+  add(occ.ui,/data-(action|go)=["']([^"']+)["']/g,(m,line)=>({file,line,kind:m[1],value:m[2]}));
+  add(occ.events,/\.addEventListener\(\s*["'`]([^"'`]+)["'`]/g,(m,line)=>({file,line,value:m[1]}));
+  add(occ.assets,/["'`]((?:assets\/)[^"'`?#]+)["'`]/g,(m,line)=>({file,line,value:m[1]}));
+  add(occ.env,/\benv\.([A-Z][A-Z0-9_]*)\b/g,(m,line)=>({file,line,value:m[1]}));
+  text.split(/\r?\n/).forEach((ln,i)=>{
+    if(/\b(move|movement|travel|location|position|map|route|distance|range|alcance|desloc|mover|movimento|viajar|localiza|posi[cç][aã]o)\b/i.test(ln))occ.movement.push({file,line:i+1,text:clean(ln).slice(0,500)});
+  });
 }
-for(const k of Object.keys(occurrences)) occurrences[k].forEach((x,i)=>x.id=id(k.toUpperCase().slice(0,8),i+1));
+
+function grouped(list,prefix){
+  const map=new Map();
+  for(const x of list){if(!map.has(x.value))map.set(x.value,[]);map.get(x.value).push({file:x.file,line:x.line,...(x.kind?{kind:x.kind}:{})});}
+  return [...map.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([value,sources],i)=>({id:ident(prefix,i+1),value,sources}));
+}
+const routes=grouped(occ.routes,'API').map(x=>({id:x.id,route:x.value,sources:x.sources}));
+const models=grouped(occ.models,'AI').map(x=>({id:x.id,model:x.value,sources:x.sources}));
+const collections=grouped(occ.collections,'DB').map(x=>({id:x.id,name:x.value,sources:x.sources}));
+const uiActions=grouped(occ.ui,'UI');
+const events=grouped(occ.events,'EVENT');
+occ.storage.forEach((x,i)=>x.id=ident('STORE',i+1));
+occ.movement.forEach((x,i)=>x.id=ident('MOVE',i+1));
+occ.assets.forEach((x,i)=>x.id=ident('ASSETREF',i+1));
+occ.env.forEach((x,i)=>x.id=ident('ENV',i+1));
 
 const index=texts.get('index.html')||'';
-const scripts=[]; let sm;
-const sr=/<script\s+[^>]*src=["']([^"']+)["'][^>]*><\/script>/gi;
-while((sm=sr.exec(index))){ const raw=sm[1], local=raw.split('?')[0]; scripts.push({id:id('SCRIPT',scripts.length+1),order:scripts.length+1,src:raw,local,exists:fs.existsSync(path.join(ROOT,local)),line:lineOf(index,sm.index)}); }
-
-const routeMap=new Map();
-for(const x of occurrences.routes){
-  if(!routeMap.has(x.value))routeMap.set(x.value,[]);
-  routeMap.get(x.value).push({file:x.file,line:x.line});
+const indexLine=lineAtByFile.get('index.html')||(()=>1);
+const scripts=[];let sm;const sr=/<script\s+[^>]*src=["']([^"']+)["'][^>]*><\/script>/gi;
+while((sm=sr.exec(index))){
+  const src=sm[1],local=src.split('?')[0];
+  scripts.push({id:ident('SCRIPT',scripts.length+1),order:scripts.length+1,src,local,exists:fs.existsSync(path.join(ROOT,local)),line:indexLine(sm.index)});
 }
-const routes=[...routeMap].sort((a,b)=>a[0].localeCompare(b[0])).map(([route,sources],i)=>({id:id('API',i+1),route,sources}));
 
-const modelMap=new Map();
-for(const x of occurrences.models){ if(!modelMap.has(x.value))modelMap.set(x.value,[]);modelMap.get(x.value).push({file:x.file,line:x.line}); }
-const models=[...modelMap].map(([model,sources],i)=>({id:id('AI',i+1),model,sources}));
-
-const collectionMap=new Map();
-for(const x of occurrences.collections){ if(!collectionMap.has(x.value))collectionMap.set(x.value,[]);collectionMap.get(x.value).push({file:x.file,line:x.line}); }
-const collections=[...collectionMap].sort((a,b)=>a[0].localeCompare(b[0])).map(([name,sources],i)=>({id:id('DB',i+1),name,sources}));
-
-const allActionValues=uniq(occurrences.uiActions.map(x=>x.value)).sort();
-const uiActions=allActionValues.map((value,i)=>({id:id('UI',i+1),value,sources:occurrences.uiActions.filter(x=>x.value===value).map(({file,line,kind})=>({file,line,kind}))}));
-
-const allEvents=uniq(occurrences.events.map(x=>x.value)).sort();
-const events=allEvents.map((value,i)=>({id:id('EVENT',i+1),value,sources:occurrences.events.filter(x=>x.value===value).map(({file,line})=>({file,line}))}));
+const assetFiles=new Set(files.filter(f=>f.asset).map(f=>f.path));
+const assetRefs=occ.assets.map(x=>({...x,exists:assetFiles.has(x.value)}));
 
 const inventory={
   generatedAt:new Date().toISOString(),
   repository:'kaalflash12/naruto-shinobi-no-sho',
-  methodology:{type:'static-source-inventory',note:'A descoberta e mecanica. Nenhuma ausencia de evidencia e convertida em comportamento inventado.'},
-  counts:{files:fileRecords.length,textFiles:texts.size,functions:functions.length,routes:routes.length,models:models.length,collections:collections.length,storageOccurrences:occurrences.storage.length,uiActions:uiActions.length,events:events.length,movementEvidence:occurrences.movement.length,scriptTags:scripts.length,assetReferences:occurrences.assets.length},
-  files:fileRecords,functions,routes,models,collections,storage:occurrences.storage,uiActions,events,movement:occurrences.movement,scripts,assets:occurrences.assets,environment:occurrences.env,
+  methodology:{type:'static-source-inventory',rule:'Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha.'},
+  counts:{
+    files:files.length,
+    runtimeFiles:files.filter(f=>f.runtime).length,
+    assetFiles:files.filter(f=>f.asset).length,
+    textFiles:texts.size,
+    functions:functions.length,
+    routes:routes.length,
+    models:models.length,
+    collections:collections.length,
+    storageOccurrences:occ.storage.length,
+    uiActions:uiActions.length,
+    events:events.length,
+    movementEvidence:occ.movement.length,
+    scriptTags:scripts.length,
+    assetReferences:assetRefs.length,
+    missingLiteralAssetReferences:assetRefs.filter(x=>!x.exists).length
+  },
+  files,functions,routes,models,collections,storage:occ.storage,uiActions,events,movement:occ.movement,scripts,assets:assetRefs,environment:occ.env
 };
 
 fs.mkdirSync(OUT,{recursive:true});
 fs.writeFileSync(path.join(OUT,'TECHNICAL-INVENTORY.json'),JSON.stringify(inventory,null,2)+'\n');
 
-function mdHeader(title,desc){ return `# ${title}\n\n${desc}\n\nGerado em: \`${inventory.generatedAt}\`\n\n`; }
-function srcs(a){ return a.map(x=>`\`${x.file}:${x.line}\``).join(', '); }
+function header(title,desc){return ['# '+title,'',desc,'','Gerado em: '+code(inventory.generatedAt),''].join('\n');}
+function sources(a){return a.map(x=>code(x.file+':'+x.line)).join(', ');}
+function listCodes(a){return a?.length?a.map(code).join(', '):'—';}
 
-let md=mdHeader('INVENTÁRIO TÉCNICO — NARUTO SHINOBI NO SHO','Inventário gerado diretamente do código do repositório. É evidência estática, não substitui teste de execução.');
-md+='## Totais\n\n| Item | Total |\n|---|---:|\n';
-for(const [k,v] of Object.entries(inventory.counts))md+=`| ${k} | ${v} |\n`;
-md+='\n## Regra de interpretação\n\n`STATICALLY_TRACED` significa que o elemento foi localizado no código e ligado a arquivo/linha. Não significa que o comportamento foi executado em navegador, Worker ou banco.\n';
-fs.writeFileSync(path.join(OUT,'00-INVENTORY-SUMMARY.md'),md);
+let lines=[header('INVENTÁRIO TÉCNICO — NARUTO SHINOBI NO SHO','Gerado diretamente do código. Cobertura estática não equivale a teste de execução.'),'## Totais','','| Item | Total |','|---|---:|'];
+for(const [k,v] of Object.entries(inventory.counts))lines.push('| '+k+' | '+v+' |');
+lines.push('','Status dos itens: '+code('STATICALLY_TRACED')+'.');
+fs.writeFileSync(path.join(OUT,'00-INVENTORY-SUMMARY.md'),lines.join('\n')+'\n');
 
-md=mdHeader('FUNÇÕES E MÉTODOS','Cada entrada foi localizada mecanicamente. Efeitos listados abaixo são referências observáveis dentro do corpo da função; quando não há evidência suficiente, a documentação não inventa finalidade.');
+lines=[header('FUNÇÕES E MÉTODOS','Lista de funções/métodos detectados, com evidências observáveis no corpo localizado.')];
 for(const f of functions){
-  md+=`## ${f.id} — \`${f.name}\`\n\n- **Fonte:** \`${f.file}:${f.line}\`\n- **Forma:** ${f.kind}\n- **Parâmetros:** \`${esc(f.params)||'(nenhum explícito)'}\`\n- **Chamadas internas detectadas:** ${f.calls.length?f.calls.map(x=>`\`${x}\``).join(', '):'nenhuma identificada estaticamente'}\n- **Rotas referidas:** ${f.refs.routes.length?f.refs.routes.map(x=>`\`${x}\``).join(', '):'—'}\n- **Coleções MongoDB:** ${f.refs.collections.length?f.refs.collections.map(x=>`\`${x}\``).join(', '):'—'}\n- **Modelos IA:** ${f.refs.models.length?f.refs.models.map(x=>`\`${x}\``).join(', '):'—'}\n- **DOM IDs:** ${f.refs.domIds.length?f.refs.domIds.map(x=>`\`${x}\``).join(', '):'—'}\n- **Storage keys:** ${f.refs.storageKeys.length?f.refs.storageKeys.map(x=>`\`${x}\``).join(', '):'—'}\n- **Env:** ${f.refs.env.length?f.refs.env.map(x=>`\`${x}\``).join(', '):'—'}\n- **Ações UI literais:** ${f.refs.actions.length?f.refs.actions.map(x=>`\`${x}\``).join(', '):'—'}\n- **Status:** `STATICALLY_TRACED`\n\n`Uso preciso`: consultar a fonte indicada; este inventário não atribui efeito que não esteja observável no corpo da função.\n\n`;
+  lines.push('## '+f.id+' — '+code(f.name),'',
+    '- **Fonte:** '+code(f.file+':'+f.line),
+    '- **Forma:** '+f.kind,
+    '- **Parâmetros:** '+code(f.params||'(nenhum explícito)'),
+    '- **Chamadas internas detectadas:** '+listCodes(f.calls),
+    '- **Rotas referidas:** '+listCodes(f.refs.routes),
+    '- **Coleções MongoDB:** '+listCodes(f.refs.collections),
+    '- **Modelos IA:** '+listCodes(f.refs.models),
+    '- **DOM IDs:** '+listCodes(f.refs.domIds),
+    '- **Storage keys:** '+listCodes(f.refs.storageKeys),
+    '- **Env:** '+listCodes(f.refs.env),
+    '- **Ações UI literais:** '+listCodes(f.refs.actions),
+    '- **Status:** '+code('STATICALLY_TRACED'),'');
 }
-fs.writeFileSync(path.join(OUT,'01-FUNCTIONS.md'),md);
+fs.writeFileSync(path.join(OUT,'01-FUNCTIONS.md'),lines.join('\n')+'\n');
 
-md=mdHeader('API E ROTAS','Rotas literais encontradas no frontend/backend, com todos os pontos de referência detectados.');
-for(const r of routes)md+=`## ${r.id} — \`${r.route}\`\n\n- **Referências:** ${srcs(r.sources)}\n- **Contrato:** ver implementação nas fontes acima; método, autenticação e payload devem ser determinados pelo código correspondente.\n- **Status:** \`STATICALLY_TRACED\`\n\n`;
-fs.writeFileSync(path.join(OUT,'02-API.md'),md);
+lines=[header('API E ROTAS','Rotas /api literais encontradas em todo o código.')];
+for(const r of routes)lines.push('## '+r.id+' — '+code(r.route),'','- **Referências:** '+sources(r.sources),'- **Status:** '+code('STATICALLY_TRACED'),'');
+fs.writeFileSync(path.join(OUT,'02-API.md'),lines.join('\n')+'\n');
 
-md=mdHeader('IA — MODELOS E PONTOS DE USO','Modelos encontrados literalmente no código. O modelo efetivo depende do entrypoint configurado no Worker; a especificação mestre explica a precedência.');
-for(const a of models)md+=`## ${a.id} — \`${a.model}\`\n\n- **Fontes:** ${srcs(a.sources)}\n- **Status:** \`STATICALLY_TRACED\`\n\n`;
-fs.writeFileSync(path.join(OUT,'03-AI.md'),md);
+lines=[header('IA — MODELOS','Identificadores de modelo @cf encontrados literalmente no código.')];
+for(const a of models)lines.push('## '+a.id+' — '+code(a.model),'','- **Fontes:** '+sources(a.sources),'- **Status:** '+code('STATICALLY_TRACED'),'');
+fs.writeFileSync(path.join(OUT,'03-AI.md'),lines.join('\n')+'\n');
 
-md=mdHeader('PERSISTÊNCIA','Coleções MongoDB e chaves de storage detectadas.');
-md+='## Coleções MongoDB\n\n';
-for(const c of collections)md+=`- **${c.id}** \`${c.name}\` — ${srcs(c.sources)}\n`;
-md+='\n## localStorage / sessionStorage\n\n| ID | Escopo | Operação | Chave | Fonte |\n|---|---|---|---|---|\n';
-for(const x of occurrences.storage)md+=`| ${x.id} | ${x.scope} | ${x.operation} | \`${esc(x.value)}\` | \`${x.file}:${x.line}\` |\n`;
-fs.writeFileSync(path.join(OUT,'04-PERSISTENCE.md'),md);
+lines=[header('PERSISTÊNCIA','Coleções MongoDB e chaves de localStorage/sessionStorage detectadas.'),'## Coleções MongoDB',''];
+for(const c of collections)lines.push('- **'+c.id+'** '+code(c.name)+' — '+sources(c.sources));
+lines.push('','## Storage do navegador','','| ID | Escopo | Operação | Chave | Fonte |','|---|---|---|---|---|');
+for(const s of occ.storage)lines.push('| '+s.id+' | '+s.scope+' | '+s.operation+' | '+code(s.value)+' | '+code(s.file+':'+s.line)+' |');
+fs.writeFileSync(path.join(OUT,'04-PERSISTENCE.md'),lines.join('\n')+'\n');
 
-md=mdHeader('INTERAÇÕES DE UI E EVENTOS','Ações declaradas via data-action/data-go e eventos registrados via addEventListener.');
-md+='## Ações\n\n';
-for(const a of uiActions)md+=`- **${a.id}** \`${a.value}\` — ${srcs(a.sources)}\n`;
-md+='\n## Eventos DOM\n\n';
-for(const e of events)md+=`- **${e.id}** \`${e.value}\` — ${srcs(e.sources)}\n`;
-fs.writeFileSync(path.join(OUT,'05-UI-INTERACTIONS.md'),md);
+lines=[header('INTERAÇÕES DE UI E EVENTOS','Ações data-action/data-go e listeners literais detectados.'),'## Ações',''];
+for(const a of uiActions)lines.push('- **'+a.id+'** '+code(a.value)+' — '+sources(a.sources));
+lines.push('','## Eventos','');for(const e of events)lines.push('- **'+e.id+'** '+code(e.value)+' — '+sources(e.sources));
+fs.writeFileSync(path.join(OUT,'05-UI-INTERACTIONS.md'),lines.join('\n')+'\n');
 
-md=mdHeader('SCRIPTS E ORDEM DE CARREGAMENTO','Ordem real dos scripts declarados em index.html.');
-md+='| Ordem | Script | Existe | Linha index |\n|---:|---|---|---:|\n';
-for(const s of scripts)md+=`| ${s.order} | \`${s.local}\` | ${s.exists?'SIM':'NÃO'} | ${s.line} |\n`;
-md+='\n## Todos os arquivos de código/configuração\n\n';
-for(const f of fileRecords.filter(x=>x.runtime))md+=`- \`${f.path}\` — ${f.size} bytes — SHA-256 \`${f.sha256}\`\n`;
-fs.writeFileSync(path.join(OUT,'06-SCRIPTS.md'),md);
+lines=[header('SCRIPTS E ORDEM DE CARREGAMENTO','Ordem real das tags script de index.html e hashes dos arquivos de runtime.'),'| Ordem | Script | Existe | Linha |','|---:|---|---|---:|'];
+for(const s of scripts)lines.push('| '+s.order+' | '+code(s.local)+' | '+(s.exists?'SIM':'NÃO')+' | '+s.line+' |');
+lines.push('','## Arquivos de runtime/configuração','');
+for(const f of files.filter(x=>x.runtime))lines.push('- '+code(f.path)+' — '+f.size+' bytes — SHA-256 '+code(f.sha256));
+fs.writeFileSync(path.join(OUT,'06-SCRIPTS.md'),lines.join('\n')+'\n');
 
-md=mdHeader('AÇÕES, MOVIMENTO, MAPA E POSIÇÃO','Evidências de código contendo termos de movimento/localização/mapa. São pistas rastreáveis para localizar a regra real; não são interpretação narrativa.');
-for(const x of occurrences.movement)md+=`- **${x.id}** \`${x.file}:${x.line}\` — ${esc(x.text)}\n`;
-fs.writeFileSync(path.join(OUT,'07-MOVEMENT-ACTIONS.md'),md);
+lines=[header('AÇÕES, MOVIMENTO, MAPA E POSIÇÃO','Índice amplo de evidências de movimento/localização/mapa. Não inventa custo, distância ou regra.')];
+for(const x of occ.movement)lines.push('- **'+x.id+'** '+code(x.file+':'+x.line)+' — '+clean(x.text));
+fs.writeFileSync(path.join(OUT,'07-MOVEMENT-ACTIONS.md'),lines.join('\n')+'\n');
 
-md=mdHeader('RASTREABILIDADE GERADA','Cada requisito técnico abaixo aponta para evidência de código.');
-md+='| ID | Tipo | Elemento | Evidência | Status |\n|---|---|---|---|---|\n';
-for(const f of functions)md+=`| ${f.id} | função | \`${f.name}\` | \`${f.file}:${f.line}\` | STATICALLY_TRACED |\n`;
-for(const r of routes)md+=`| ${r.id} | API | \`${r.route}\` | ${srcs(r.sources)} | STATICALLY_TRACED |\n`;
-for(const a of models)md+=`| ${a.id} | IA | \`${a.model}\` | ${srcs(a.sources)} | STATICALLY_TRACED |\n`;
-for(const c of collections)md+=`| ${c.id} | persistência | \`${c.name}\` | ${srcs(c.sources)} | STATICALLY_TRACED |\n`;
-for(const a of uiActions)md+=`| ${a.id} | UI | \`${a.value}\` | ${srcs(a.sources)} | STATICALLY_TRACED |\n`;
-fs.writeFileSync(path.join(OUT,'08-TRACEABILITY.md'),md);
+lines=[header('RASTREABILIDADE GERADA','Cada item descoberto aponta para evidência concreta.'),'| ID | Tipo | Elemento | Evidência | Status |','|---|---|---|---|---|'];
+for(const f of functions)lines.push('| '+f.id+' | função | '+code(f.name)+' | '+code(f.file+':'+f.line)+' | STATICALLY_TRACED |');
+for(const r of routes)lines.push('| '+r.id+' | API | '+code(r.route)+' | '+sources(r.sources)+' | STATICALLY_TRACED |');
+for(const a of models)lines.push('| '+a.id+' | IA | '+code(a.model)+' | '+sources(a.sources)+' | STATICALLY_TRACED |');
+for(const c of collections)lines.push('| '+c.id+' | persistência | '+code(c.name)+' | '+sources(c.sources)+' | STATICALLY_TRACED |');
+for(const a of uiActions)lines.push('| '+a.id+' | UI | '+code(a.value)+' | '+sources(a.sources)+' | STATICALLY_TRACED |');
+fs.writeFileSync(path.join(OUT,'08-TRACEABILITY.md'),lines.join('\n')+'\n');
 
-console.log(JSON.stringify({ok:true,out:rel(OUT),counts:inventory.counts},null,2));
+console.log(JSON.stringify({ok:true,counts:inventory.counts},null,2));
