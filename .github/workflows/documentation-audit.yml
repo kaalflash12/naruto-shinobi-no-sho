@@ -98,3 +98,12 @@ jobs:
 
       - name: Enforce final canonical specification gate
         run: node tools/audit-final-canonical-spec.mjs
+
+      - name: Preserve generated canonical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-canonical-spec-${{ github.run_id }}
+          path: docs/generated/**
+          if-no-files-found: error
+          retention-days: 7
