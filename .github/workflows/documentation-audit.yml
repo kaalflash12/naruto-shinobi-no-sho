@@ -30,57 +30,57 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install pinned AST parser
+        run: npm install --no-save --ignore-scripts acorn@8.15.0
+
       - name: Check documentation tools syntax
         run: |
           node --check tools/generate-technical-spec.mjs
+          node --check tools/ast-index-functions.mjs
           node --check tools/refine-technical-spec.mjs
-          node --check tools/enrich-technical-spec.mjs
+          node --check tools/ast-enrich-technical-spec.mjs
           node --check tools/audit-documentation-coverage.mjs
 
-      - name: Generate exhaustive source inventory
+      - name: Generate repository inventory
         run: node tools/generate-technical-spec.mjs
+
+      - name: Build exact AST function index
+        run: node tools/ast-index-functions.mjs
 
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
 
-      - name: Enrich every function and operational crosswalk
-        run: node tools/enrich-technical-spec.mjs
+      - name: Enrich exact AST behavior and crosswalks
+        run: node tools/ast-enrich-technical-spec.mjs
 
-      - name: Report unresolved UI mappings
+      - name: Report unresolved concrete UI mappings
         run: |
           node - <<'NODE'
           const i=require('./docs/generated/TECHNICAL-INVENTORY.json');
-          const u=(i.uiActionCrosswalk||[]).filter(x=>!x.handlerCandidates.length);
-          console.log('UNRESOLVED_UI_COUNT='+u.length);
-          for(const x of u) console.log(JSON.stringify({id:x.id,action:x.action,status:x.status,sources:x.sources,mentions:x.mentionFunctions,emitters:x.emitterFunctions}));
+          const u=(i.uiActionCrosswalk||[]).filter(x=>!x.dynamicTemplate&&!x.handlerCandidates.length);
+          console.log('UNRESOLVED_CONCRETE_UI_COUNT='+u.length);
+          for(const x of u) console.log(JSON.stringify({id:x.id,action:x.action,status:x.status,sources:x.sources,emitters:x.emitterFunctions,mentions:x.mentionFunctions}));
+          const esc=(i.functions||[]).find(f=>f.file==='app.js'&&f.name==='esc');
+          console.log('ESC_AST_SANITY='+JSON.stringify(esc?{id:esc.id,line:esc.line,endLine:esc.endLine,calls:esc.calls,handlers:esc.ast.handlerLiterals,bodySha:esc.ast.bodySha256}:null));
           NODE
 
-      - name: Audit documentation coverage
+      - name: Audit AST documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
       - name: Validate generated files and gates
         run: |
-          test -s docs/generated/TECHNICAL-INVENTORY.json
-          test -s docs/generated/00-INVENTORY-SUMMARY.md
-          test -s docs/generated/01-FUNCTIONS.md
-          test -s docs/generated/02-API.md
-          test -s docs/generated/03-AI.md
-          test -s docs/generated/04-PERSISTENCE.md
-          test -s docs/generated/05-UI-INTERACTIONS.md
-          test -s docs/generated/06-SCRIPTS.md
-          test -s docs/generated/07-MOVEMENT-ACTIONS.md
-          test -s docs/generated/08-TRACEABILITY.md
-          test -s docs/generated/09-DOCUMENTATION-AUDIT.md
-          test -s docs/generated/10-ASSET-REFERENCES.md
-          test -s docs/generated/11-FUNCTION-BEHAVIORS.md
-          test -s docs/generated/12-UI-ACTION-CROSSWALK.md
-          test -s docs/generated/13-API-CONTRACT-EVIDENCE.md
-          test -s docs/generated/14-PERSISTENCE-OPERATIONS.md
-          test -s docs/generated/15-SCRIPT-RESPONSIBILITIES.md
-          test -s docs/generated/16-MOVEMENT-FUNCTIONS.md
-          test -s docs/generated/17-INTERACTION-MATRIX.md
-          test -s docs/generated/DOCUMENTATION-AUDIT.json
-          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_DOCUMENTATION'||r.gates.functionBehaviorDocumentation!=='PASS'||r.gates.interactionCrosswalkDocumentation!=='PASS'||r.gates.apiCrosswalkDocumentation!=='PASS'||r.gates.persistenceCrosswalkDocumentation!=='PASS'||r.gates.scriptResponsibilityDocumentation!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
+          for f in \
+            TECHNICAL-INVENTORY.json 00-INVENTORY-SUMMARY.md 01-FUNCTIONS.md 02-API.md 03-AI.md \
+            04-PERSISTENCE.md 05-UI-INTERACTIONS.md 06-SCRIPTS.md 07-MOVEMENT-ACTIONS.md 08-TRACEABILITY.md \
+            09-DOCUMENTATION-AUDIT.md 10-ASSET-REFERENCES.md 11-FUNCTION-BEHAVIORS.md 12-UI-ACTION-CROSSWALK.md \
+            13-API-CONTRACT-EVIDENCE.md 14-PERSISTENCE-OPERATIONS.md 15-SCRIPT-RESPONSIBILITIES.md \
+            16-MOVEMENT-FUNCTIONS.md 17-INTERACTION-MATRIX.md 18-AST-FUNCTION-INDEX.md 19-UNRESOLVED-UI-ACTIONS.md \
+            DOCUMENTATION-AUDIT.json; do test -s "docs/generated/$f"; done
+          node - <<'NODE'
+          const r=require('./docs/generated/DOCUMENTATION-AUDIT.json');
+          if(!r.ok||r.status!=='PASS_AST_STATIC_DOCUMENTATION'||r.gates.astParsing!=='PASS'||r.gates.functionBehaviorDocumentation!=='PASS'||r.gates.runtimeSemanticIsolation!=='PASS') process.exit(1);
+          console.log(r.staticCoverage,r.modelNames,r.gates);
+          NODE
 
       - name: Commit generated documentation
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -91,6 +91,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate full operational technical documentation'
+            git commit -m 'docs: regenerate exact AST technical documentation'
             git push
           fi
