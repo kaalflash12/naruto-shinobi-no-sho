@@ -30,9 +30,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install pinned AST parser
+        run: npm install --no-save --ignore-scripts acorn@8.15.0
+
       - name: Check documentation tools syntax
         run: |
           node --check tools/generate-technical-spec.mjs
+          node --check tools/ast-index-functions.mjs
           node --check tools/refine-technical-spec.mjs
           node --check tools/audit-documentation-coverage.mjs
           node --check tools/build-final-canonical-spec.mjs
@@ -40,6 +44,9 @@ jobs:
 
       - name: Generate exhaustive source inventory
         run: node tools/generate-technical-spec.mjs
+
+      - name: Replace heuristic function inventory with exact AST index
+        run: node tools/ast-index-functions.mjs
 
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
@@ -53,6 +60,7 @@ jobs:
       - name: Validate generated files and static gates
         run: |
           test -s docs/generated/TECHNICAL-INVENTORY.json
+          test -s docs/generated/18-AST-FUNCTION-INDEX.md
           test -s docs/generated/00-INVENTORY-SUMMARY.md
           test -s docs/generated/01-FUNCTIONS.md
           test -s docs/generated/02-API.md
@@ -67,7 +75,13 @@ jobs:
           test -s docs/generated/DOCUMENTATION-AUDIT.json
           test -s docs/generated/NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md
           test -s docs/generated/FINAL-CANONICAL-AUDIT.json
-          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
+          node - <<'NODE'
+          const r=require('./docs/generated/DOCUMENTATION-AUDIT.json');
+          const inv=require('./docs/generated/TECHNICAL-INVENTORY.json');
+          if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1);
+          if(!inv.astIndex||inv.astIndex.parser!=='acorn'||inv.astIndex.parseFailures!==0) process.exit(1);
+          console.log({coverage:r.staticCoverage,models:r.modelNames,astFunctions:inv.astIndex.functions,callbacks:inv.astIndex.callbackFunctions});
+          NODE
 
       - name: Commit generated documentation and canonical report
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
