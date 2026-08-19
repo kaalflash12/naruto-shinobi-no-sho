@@ -46,6 +46,15 @@ jobs:
       - name: Enrich every function and operational crosswalk
         run: node tools/enrich-technical-spec.mjs
 
+      - name: Report unresolved UI mappings
+        run: |
+          node - <<'NODE'
+          const i=require('./docs/generated/TECHNICAL-INVENTORY.json');
+          const u=(i.uiActionCrosswalk||[]).filter(x=>!x.handlerCandidates.length);
+          console.log('UNRESOLVED_UI_COUNT='+u.length);
+          for(const x of u) console.log(JSON.stringify({id:x.id,action:x.action,status:x.status,sources:x.sources,mentions:x.mentionFunctions,emitters:x.emitterFunctions}));
+          NODE
+
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
