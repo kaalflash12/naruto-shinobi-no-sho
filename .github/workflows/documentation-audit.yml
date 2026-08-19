@@ -43,6 +43,8 @@ jobs:
           node --check tools/ast-resolve-ui-dispatch.mjs
           node --check tools/report-unresolved-ui-context.mjs
           node --check tools/audit-documentation-coverage.mjs
+          node --check tools/build-final-game-spec.mjs
+          node --check tools/audit-final-game-spec.mjs
 
       - name: Generate repository inventory
         run: node tools/generate-technical-spec.mjs
@@ -68,6 +70,12 @@ jobs:
       - name: Audit AST documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
+      - name: Build the single canonical full-game specification
+        run: node tools/build-final-game-spec.mjs
+
+      - name: Strictly audit the canonical full-game specification
+        run: node tools/audit-final-game-spec.mjs
+
       - name: Validate generated files and gates
         run: |
           for f in \
@@ -77,11 +85,16 @@ jobs:
             13-API-CONTRACT-EVIDENCE.md 14-PERSISTENCE-OPERATIONS.md 15-SCRIPT-RESPONSIBILITIES.md \
             16-MOVEMENT-FUNCTIONS.md 17-INTERACTION-MATRIX.md 18-AST-FUNCTION-INDEX.md 19-UNRESOLVED-UI-ACTIONS.md \
             20-UI-SOURCE-FILTER.md 21-UI-DISPATCH-RESOLUTION.md 22-UI-DISPATCHERS.md 23-UNRESOLVED-UI-ACTIONS-AST.md \
-            DOCUMENTATION-AUDIT.json; do test -s "docs/generated/$f"; done
+            DOCUMENTATION-AUDIT.json NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md FINAL-SPEC-AUDIT.json; do \
+              test -s "docs/generated/$f"; \
+          done
           node - <<'NODE'
-          const r=require('./docs/generated/DOCUMENTATION-AUDIT.json');
-          if(!r.ok||r.status!=='PASS_AST_STATIC_DOCUMENTATION'||r.gates.astParsing!=='PASS'||r.gates.functionBehaviorDocumentation!=='PASS'||r.gates.runtimeSemanticIsolation!=='PASS'||r.gates.uiSourceFiltering!=='PASS'||r.gates.uiDispatchResolution!=='PASS') process.exit(1);
-          console.log(r.staticCoverage,r.modelNames,r.gates);
+          const base=require('./docs/generated/DOCUMENTATION-AUDIT.json');
+          const final=require('./docs/generated/FINAL-SPEC-AUDIT.json');
+          if(!base.ok||base.status!=='PASS_AST_STATIC_DOCUMENTATION') process.exit(1);
+          if(!final.ok||final.status!=='PASS_FINAL_CANONICAL_SPEC') process.exit(1);
+          if(final.gates.exactFunctionCode!=='PASS'||final.gates.allIdentifiersPresent!=='PASS'||final.gates.uiHandlerCompleteness!=='PASS') process.exit(1);
+          console.log({base:base.status,final:final.status,coverage:final.coverage,spec:final.spec});
           NODE
 
       - name: Commit generated documentation
@@ -93,6 +106,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate exact AST technical documentation'
+            git commit -m 'docs: regenerate canonical full-game specification'
             git push
           fi
