@@ -2,7 +2,7 @@ name: Documentacao tecnica integral
 
 on:
   push:
-    branches: [main]
+    branches: [main, docs-ast-exact-v2-20260819]
     paths-ignore:
       - 'docs/generated/**'
   pull_request:
@@ -97,7 +97,7 @@ jobs:
           console.log({base:base.status,final:final.status,coverage:final.coverage,spec:final.spec});
           NODE
       - name: Commit generated documentation
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
