@@ -2,7 +2,7 @@
 
 Referências literais encontradas somente no runtime do jogo. A existência do caminho não prova adequação semântica da imagem.
 
-Gerado em: `2026-08-19T19:47:12.838Z`
+Gerado em: `2026-08-19T21:05:27.699Z`
 
 ## Ausentes
 

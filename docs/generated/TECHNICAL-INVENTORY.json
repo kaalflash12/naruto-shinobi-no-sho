@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-19T19:47:12.838Z",
+  "generatedAt": "2026-08-19T21:05:27.699Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5446,
-    "runtimeFiles": 53,
+    "files": 5448,
+    "runtimeFiles": 55,
     "assetFiles": 5378,
-    "textFiles": 66,
-    "functions": 926,
+    "textFiles": 68,
+    "functions": 941,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -22,11 +22,11 @@
     "assetReferences": 15818,
     "missingLiteralAssetReferences": 70,
     "gameRuntimeFunctions": 881,
-    "toolingFunctions": 45,
+    "toolingFunctions": 60,
     "uniqueAssetReferences": 5445,
-    "sourceFiles": 56,
+    "sourceFiles": 58,
     "gameRuntimeSourceFiles": 51,
-    "toolingSourceFiles": 5
+    "toolingSourceFiles": 7
   },
   "files": [
     {
@@ -39,8 +39,8 @@
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
-      "size": 2799,
-      "sha256": "900735931a2b1e2691c4621e04de0396775c5b344dd794b190f0359455f7ae79",
+      "size": 3316,
+      "sha256": "9b8f414ada7e3351e59059cbcda342645f25c63e654e60a98e4dd752670f1ac4",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43574,9 +43574,25 @@
       "asset": false
     },
     {
+      "path": "tools/audit-final-canonical-spec.mjs",
+      "size": 3143,
+      "sha256": "d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "tools/audit-r41-assets.mjs",
       "size": 3591,
       "sha256": "a051ed61d92d4c5510eb4c1bedeb59ab58a1950024ba30bcfe970d12c6575bce",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/build-final-canonical-spec.mjs",
+      "size": 15497,
+      "sha256": "5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -65186,6 +65202,25 @@
       "domain": "tooling"
     },
     {
+      "file": "tools/audit-final-canonical-spec.mjs",
+      "line": 10,
+      "name": "sha256",
+      "kind": "arrow-one",
+      "params": "d",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00890",
+      "domain": "tooling"
+    },
+    {
       "file": "tools/audit-r41-assets.mjs",
       "line": 13,
       "name": "walk",
@@ -65201,7 +65236,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00890",
+      "id": "FUNC-00891",
       "domain": "tooling"
     },
     {
@@ -65220,7 +65255,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00891",
+      "id": "FUNC-00892",
       "domain": "tooling"
     },
     {
@@ -65246,7 +65281,7 @@
         "walk",
         "warn"
       ],
-      "id": "FUNC-00892",
+      "id": "FUNC-00893",
       "domain": "tooling"
     },
     {
@@ -65269,7 +65304,289 @@
         "isDynamic",
         "get"
       ],
-      "id": "FUNC-00893",
+      "id": "FUNC-00894",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 19,
+      "name": "sha256",
+      "kind": "arrow-one",
+      "params": "data",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00895",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 20,
+      "name": "norm",
+      "kind": "arrow-one",
+      "params": "p",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00896",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 21,
+      "name": "isDocs",
+      "kind": "arrow-one",
+      "params": "p",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00897",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 22,
+      "name": "isSource",
+      "kind": "arrow-one",
+      "params": "p",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00898",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 23,
+      "name": "esc",
+      "kind": "arrow-one",
+      "params": "s",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00899",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 24,
+      "name": "code",
+      "kind": "arrow-one",
+      "params": "s",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00900",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 25,
+      "name": "fence",
+      "kind": "arrow",
+      "params": "text, lang='text'",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00901",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 26,
+      "name": "langFor",
+      "kind": "arrow-one",
+      "params": "p",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00902",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 31,
+      "name": "lineLocator",
+      "kind": "declaration",
+      "params": "text",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00903",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 41,
+      "name": "blockEnd",
+      "kind": "declaration",
+      "params": "text, open",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00904",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 62,
+      "name": "snippetAt",
+      "kind": "declaration",
+      "params": "text, start",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "blockEnd"
+      ],
+      "id": "FUNC-00905",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 72,
+      "name": "scanFunctions",
+      "kind": "declaration",
+      "params": "file, text",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "lineLocator",
+        "add",
+        "snippetAt",
+        "sha256",
+        "isSource",
+        "test",
+        "get",
+        "actionHandlerEvidence",
+        "esc",
+        "gate",
+        "code",
+        "fence",
+        "langFor"
+      ],
+      "id": "FUNC-00906",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 126,
+      "name": "actionHandlerEvidence",
+      "kind": "declaration",
+      "params": "action",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00907",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/build-final-canonical-spec.mjs",
+      "line": 175,
+      "name": "gate",
+      "kind": "declaration",
+      "params": "list",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00908",
       "domain": "tooling"
     },
     {
@@ -65291,7 +65608,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00894",
+      "id": "FUNC-00909",
       "domain": "tooling"
     },
     {
@@ -65312,7 +65629,7 @@
       "calls": [
         "walk"
       ],
-      "id": "FUNC-00895",
+      "id": "FUNC-00910",
       "domain": "tooling"
     },
     {
@@ -65334,7 +65651,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00896",
+      "id": "FUNC-00911",
       "domain": "tooling"
     },
     {
@@ -65356,7 +65673,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00897",
+      "id": "FUNC-00912",
       "domain": "tooling"
     },
     {
@@ -65378,7 +65695,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00898",
+      "id": "FUNC-00913",
       "domain": "tooling"
     },
     {
@@ -65400,7 +65717,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00899",
+      "id": "FUNC-00914",
       "domain": "tooling"
     },
     {
@@ -65422,7 +65739,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-00900",
+      "id": "FUNC-00915",
       "domain": "tooling"
     },
     {
@@ -65443,7 +65760,7 @@
       "calls": [
         "rel"
       ],
-      "id": "FUNC-00901",
+      "id": "FUNC-00916",
       "domain": "tooling"
     },
     {
@@ -65462,7 +65779,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00902",
+      "id": "FUNC-00917",
       "domain": "tooling"
     },
     {
@@ -65481,7 +65798,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00903",
+      "id": "FUNC-00918",
       "domain": "tooling"
     },
     {
@@ -65500,7 +65817,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00904",
+      "id": "FUNC-00919",
       "domain": "tooling"
     },
     {
@@ -65521,7 +65838,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-00905",
+      "id": "FUNC-00920",
       "domain": "tooling"
     },
     {
@@ -65542,7 +65859,7 @@
       "calls": [
         "uniq"
       ],
-      "id": "FUNC-00906",
+      "id": "FUNC-00921",
       "domain": "tooling"
     },
     {
@@ -65564,7 +65881,7 @@
         "captures",
         "uniq"
       ],
-      "id": "FUNC-00907",
+      "id": "FUNC-00922",
       "domain": "tooling"
     },
     {
@@ -65602,7 +65919,7 @@
         "sources",
         "listCodes"
       ],
-      "id": "FUNC-00908",
+      "id": "FUNC-00923",
       "domain": "tooling"
     },
     {
@@ -65621,7 +65938,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00909",
+      "id": "FUNC-00924",
       "domain": "tooling"
     },
     {
@@ -65643,7 +65960,7 @@
         "get",
         "ident"
       ],
-      "id": "FUNC-00910",
+      "id": "FUNC-00925",
       "domain": "tooling"
     },
     {
@@ -65664,7 +65981,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-00911",
+      "id": "FUNC-00926",
       "domain": "tooling"
     },
     {
@@ -65685,7 +66002,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-00912",
+      "id": "FUNC-00927",
       "domain": "tooling"
     },
     {
@@ -65704,7 +66021,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00913",
+      "id": "FUNC-00928",
       "domain": "tooling"
     },
     {
@@ -65723,7 +66040,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00914",
+      "id": "FUNC-00929",
       "domain": "tooling"
     },
     {
@@ -65742,7 +66059,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00915",
+      "id": "FUNC-00930",
       "domain": "tooling"
     },
     {
@@ -65761,7 +66078,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00916",
+      "id": "FUNC-00931",
       "domain": "tooling"
     },
     {
@@ -65780,7 +66097,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00917",
+      "id": "FUNC-00932",
       "domain": "tooling"
     },
     {
@@ -65799,7 +66116,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00918",
+      "id": "FUNC-00933",
       "domain": "tooling"
     },
     {
@@ -65818,7 +66135,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00919",
+      "id": "FUNC-00934",
       "domain": "tooling"
     },
     {
@@ -65837,7 +66154,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00920",
+      "id": "FUNC-00935",
       "domain": "tooling"
     },
     {
@@ -65856,7 +66173,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00921",
+      "id": "FUNC-00936",
       "domain": "tooling"
     },
     {
@@ -65875,7 +66192,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00922",
+      "id": "FUNC-00937",
       "domain": "tooling"
     },
     {
@@ -65894,7 +66211,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00923",
+      "id": "FUNC-00938",
       "domain": "tooling"
     },
     {
@@ -65913,7 +66230,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00924",
+      "id": "FUNC-00939",
       "domain": "tooling"
     },
     {
@@ -65932,7 +66249,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00925",
+      "id": "FUNC-00940",
       "domain": "tooling"
     },
     {
@@ -65951,7 +66268,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00926",
+      "id": "FUNC-00941",
       "domain": "tooling"
     }
   ],
@@ -229165,23 +229482,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 881,
-      "tooling": 45,
+      "tooling": 60,
       "otherSource": 0
     },
     "before": {
-      "functions": 926,
+      "functions": 941,
       "routes": 31,
       "models": 3,
       "collections": 12,
       "storage": 10,
       "uiActions": 217,
       "events": 9,
-      "movement": 7920,
+      "movement": 7943,
       "assets": 15819,
       "environment": 49
     },
     "after": {
-      "functions": 926,
+      "functions": 941,
       "routes": 31,
       "models": 2,
       "collections": 11,
