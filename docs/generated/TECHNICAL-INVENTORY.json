@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-19T19:33:28.282Z",
+  "generatedAt": "2026-08-19T19:37:12.455Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5445,
+    "files": 5446,
     "runtimeFiles": 53,
     "assetFiles": 5378,
-    "textFiles": 65,
+    "textFiles": 66,
     "functions": 911,
     "routes": 31,
     "models": 3,
@@ -43451,6 +43451,14 @@
       "path": "docs/04-RASTREABILIDADE-E-VALIDACAO.md",
       "size": 8182,
       "sha256": "cd3837c3e6860714f554a6ef858d81383427b0fbc9ccb93c65b040ce24f25c0b",
+      "extension": ".md",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": "docs/AUDIT-EXECUTION-TRIGGER.md",
+      "size": 320,
+      "sha256": "b89a0cd85057864f50e4e6e26751664e167d0f8c759e0bb877a83fc46d451ecf",
       "extension": ".md",
       "runtime": false,
       "asset": false

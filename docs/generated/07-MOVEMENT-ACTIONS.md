@@ -2,7 +2,7 @@
 
 Índice amplo de evidências de movimento/localização/mapa. Não inventa custo, distância ou regra.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 - **MOVE-00001** `.github/workflows/documentation-audit.yml:58` — test -s docs/generated/07-MOVEMENT-ACTIONS.md
 - **MOVE-00002** `README.md:15` — 1. [`docs/00-ESPECIFICACAO-MESTRA.md`](docs/00-ESPECIFICACAO-MESTRA.md) — arquitetura, precedência, modelo de função, script, ação, movimento, combate, IA e critérios de PASS.

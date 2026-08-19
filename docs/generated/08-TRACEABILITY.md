@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência de código.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 | ID | Tipo | Elemento | Evidência | Status |
 |---|---|---|---|---|

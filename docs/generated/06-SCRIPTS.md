@@ -2,7 +2,7 @@
 
 Ordem real das tags script de index.html e hashes dos arquivos de runtime.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|

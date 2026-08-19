@@ -2,7 +2,7 @@
 
 Coleções MongoDB e chaves de localStorage/sessionStorage detectadas.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## Coleções MongoDB
 

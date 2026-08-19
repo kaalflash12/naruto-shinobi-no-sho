@@ -2,7 +2,7 @@
 
 Ações data-action/data-go e listeners literais detectados.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## Ações
 

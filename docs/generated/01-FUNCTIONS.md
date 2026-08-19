@@ -2,7 +2,7 @@
 
 Cada entrada foi localizada mecanicamente e refinada para remover construções de controle. As referências listadas são observáveis no corpo localizado; não se atribui efeito que a fonte não sustente.
 
-Gerado em: `2026-08-19T19:33:28.282Z`
+Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## FUNC-00001 — `accountToken`
 

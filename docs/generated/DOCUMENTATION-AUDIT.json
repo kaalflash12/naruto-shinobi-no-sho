@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T19:33:28.574Z",
+  "generatedAt": "2026-08-19T19:37:12.767Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura do inventario estatico; nao equivale a PASS de runtime, jogabilidade ou completude semantica.",
