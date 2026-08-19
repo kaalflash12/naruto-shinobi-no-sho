@@ -10,7 +10,7 @@ Este repositório pertence exclusivamente ao jogo **NARUTO SHINOBI NO SHO**.
 
 ## Documentação técnica obrigatória
 
-A documentação não depende de listas escritas à mão: um gerador percorre o código e cria inventários rastreáveis por arquivo/linha e SHA-256.
+A documentação não depende de listas escritas à mão: um gerador percorre o código, um refinador elimina falsos positivos de estruturas de controle e uma auditoria valida a cobertura rastreável por arquivo/linha e SHA-256.
 
 1. [`docs/00-ESPECIFICACAO-MESTRA.md`](docs/00-ESPECIFICACAO-MESTRA.md) — arquitetura, precedência, modelo de função, script, ação, movimento, combate, IA e critérios de PASS.
 2. [`docs/01-IA-TERION-E-AUTORIDADE.md`](docs/01-IA-TERION-E-AUTORIDADE.md) — modelo real de IA, prompt, TERION e fronteira de autoridade.
@@ -19,11 +19,22 @@ A documentação não depende de listas escritas à mão: um gerador percorre o 
 5. [`docs/04-RASTREABILIDADE-E-VALIDACAO.md`](docs/04-RASTREABILIDADE-E-VALIDACAO.md) — matriz de requisitos, gates e distinção entre cobertura estática e teste real.
 6. `docs/generated/` — inventário automático de **funções, métodos, rotas, modelos IA, MongoDB/storage, ações UI, eventos, scripts, movimento e matriz de rastreabilidade**.
 
-### Gerar e auditar
+### Gerar + refinar + auditar
+
+Comando canônico:
+
+```bash
+npm run docs:check
+```
+
+Equivalente explícito:
 
 ```bash
 node tools/generate-technical-spec.mjs
+node tools/refine-technical-spec.mjs
 node tools/audit-documentation-coverage.mjs
 ```
 
 `PASS_STATIC_COVERAGE` significa que os elementos descobertos no código foram rastreados e documentados. Não é usado como substituto de `PASS_RUNTIME` ou `PASS_E2E`.
+
+O workflow `.github/workflows/documentation-audit.yml` executa esse gate no `main` e grava `docs/generated/` somente se geração/refino/auditoria terminarem sem falha.
