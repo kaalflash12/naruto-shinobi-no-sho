@@ -28,14 +28,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Check generator syntax
-        run: node --check tools/generate-technical-spec.mjs
-
-      - name: Check audit syntax
-        run: node --check tools/audit-documentation-coverage.mjs
+      - name: Check documentation tools syntax
+        run: |
+          node --check tools/generate-technical-spec.mjs
+          node --check tools/refine-technical-spec.mjs
+          node --check tools/audit-documentation-coverage.mjs
 
       - name: Generate inventory from real source
         run: node tools/generate-technical-spec.mjs
+
+      - name: Refine function inventory
+        run: node tools/refine-technical-spec.mjs
 
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
@@ -43,6 +46,7 @@ jobs:
       - name: Validate generated files
         run: |
           test -s docs/generated/TECHNICAL-INVENTORY.json
+          test -s docs/generated/00-INVENTORY-SUMMARY.md
           test -s docs/generated/01-FUNCTIONS.md
           test -s docs/generated/02-API.md
           test -s docs/generated/03-AI.md
@@ -51,6 +55,7 @@ jobs:
           test -s docs/generated/06-SCRIPTS.md
           test -s docs/generated/07-MOVEMENT-ACTIONS.md
           test -s docs/generated/08-TRACEABILITY.md
+          test -s docs/generated/09-DOCUMENTATION-AUDIT.md
           test -s docs/generated/DOCUMENTATION-AUDIT.json
           node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE') process.exit(1); console.log(r.staticCoverage)"
 
