@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+// CI trigger: canonical specification validation after streaming + selector AST fixes.
 const outDir = path.join(process.cwd(), 'docs', 'generated');
 fs.mkdirSync(outDir, { recursive: true });
 const outFile = path.join(outDir, 'AST-UI-DISPATCH-ERROR.log');
