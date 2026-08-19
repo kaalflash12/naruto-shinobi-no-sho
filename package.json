@@ -4,9 +4,9 @@
   "private": true,
   "engines": { "node": ">=20" },
   "scripts": {
-    "docs:generate": "node tools/generate-technical-spec.mjs",
+    "docs:generate": "node tools/generate-technical-spec.mjs && node tools/refine-technical-spec.mjs",
     "docs:audit": "node tools/audit-documentation-coverage.mjs",
-    "docs:check": "node tools/generate-technical-spec.mjs && node tools/audit-documentation-coverage.mjs"
+    "docs:check": "node tools/generate-technical-spec.mjs && node tools/refine-technical-spec.mjs && node tools/audit-documentation-coverage.mjs"
   },
   "dependencies": { "mongodb": "^6.18.0" }
 }
