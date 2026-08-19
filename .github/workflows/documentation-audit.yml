@@ -39,7 +39,7 @@ jobs:
       - name: Generate inventory from real source
         run: node tools/generate-technical-spec.mjs
 
-      - name: Refine function inventory
+      - name: Refine to source/runtime only
         run: node tools/refine-technical-spec.mjs
 
       - name: Audit documentation coverage
@@ -58,8 +58,9 @@ jobs:
           test -s docs/generated/07-MOVEMENT-ACTIONS.md
           test -s docs/generated/08-TRACEABILITY.md
           test -s docs/generated/09-DOCUMENTATION-AUDIT.md
+          test -s docs/generated/10-ASSET-REFERENCES.md
           test -s docs/generated/DOCUMENTATION-AUDIT.json
-          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE') process.exit(1); console.log(r.staticCoverage)"
+          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='source-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS') process.exit(1); console.log(r.staticCoverage)"
 
       - name: Commit generated documentation
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -70,6 +71,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate exhaustive technical inventory'
+            git commit -m 'docs: regenerate source-only technical inventory'
             git push
           fi
