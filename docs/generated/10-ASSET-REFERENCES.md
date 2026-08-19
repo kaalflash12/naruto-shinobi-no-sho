@@ -1,0 +1,5526 @@
+# REFERÊNCIAS DE ASSETS
+
+Referências literais encontradas somente no runtime do jogo. A existência do caminho não prova adequação semântica da imagem.
+
+Gerado em: `2026-08-19T19:46:12.426Z`
+
+## Ausentes
+
+- `assets/items_v7/${item.id}.svg` — `app.js:2999`
+- `assets/jutsus_v75/${j.id}.svg` — `app.js:1619`, `app.js:2998`
+- `assets/leon_tech_v75/${n}.svg` — `app.js:1620`
+- `assets/original_v7/${pics[index%pics.length]}` — `app.js:1344`
+- `assets/original/icones/${map[k]}` — `app.js:1190`
+- `assets/r31/entities/` — `styles.css:383`, `styles.css:389`, `styles.css:390`, `styles.css:391`, `styles.css:398`, `styles.css:399`, `styles.css:406`, `styles.css:407`, `styles.css:408`, `styles.css:409`
+- `assets/r31/items/${folder}/variant-${String(i).padStart(2,` — `app.js:4528`
+- `assets/r40/atlas_sources` — `data/r31-assets.js:1`, `data/r31-assets.json:4083`
+- `assets/r40/atlas_verified` — `data/r31-assets.js:1`, `data/r31-assets.json:4082`
+- `assets/ui_v8/${kind}/${String(index).padStart(2,` — `app.js:2105`
+- `assets/ui_v8/combat/actions/action_${String(index).padStart(2,` — `app.js:2109`
+- `assets/ui_v8/creator/${kind}/${kind}_${String(index).padStart(2,` — `app.js:2106`
+- `assets/ui_v8/creator/roster/roster_${String(n).padStart(2,` — `app.js:2615`
+- `assets/ui_v8/events/cards/event_${String(index).padStart(2,` — `app.js:2110`
+- `assets/ui_v8/items/cards/item_${String(index).padStart(2,` — `app.js:2108`
+- `assets/ui_v8/techniques/cards/tech_${String(index).padStart(2,` — `app.js:2107`
+- `assets/user-provided/jutsu/chidori.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_domu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_doryou_dango.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_doryuu_taiga.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_doryuuheki.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_ganchurou.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/doton_shinju_zanshu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/fuuton_atsugai.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/fuuton_kamaitachi.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/fuuton_reppusho.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/genjutsu_kotoamatsukami.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/genjutsu_magen_kyoten_chiten.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/genjutsu_sharingan.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/genjutsu_tsukuyomi.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kamui.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/katon_goukakyuu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/katon_housenka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/katon_ryukafu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/katon_ryuuka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kirin.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kuchiyose_gamabunta.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kuchiyose_gamahiro.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kuchiyose_gamaken.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/kuchiyose_gamakichi.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/mangekyou_kamui.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/ninjutsu_medico_chakra_no_mesu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/ninjutsu_medico_iryo_ninjutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/ninjutsu_medico_saisei_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/ninjutsu_medico_seishin_chokei.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/raikiri.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/raiton_gian.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/raiton_kage_bunshin_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/raiton_raijuu_heki.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/suiton_suiryudan_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/suiton_suishoha_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/susanoo_perfeito.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/taijutsu_dynamic_entry.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/taijutsu_hakke_rokujuuyon_shou.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/taijutsu_kage_buyou.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/jutsu/taijutsu_konoha_renshu.jpg` — `data/r41-user-visuals.js:3`
+- `assets/user-provided/maps/Arena shinobi circular em planta baixa.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:48`
+- `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
+- `assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png` — `src/r41-canonical-repair.js:47`
+- `assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png` — `src/r41-canonical-repair.js:42`, `src/r41-canonical-repair.js:43`
+- `assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png` — `src/r41-canonical-repair.js:46`
+- `assets/v841/creator/layers/eyes/eyes_${String(idx(` — `app.js:5586`
+- `assets/v841/creator/layers/face/face_${String(idx(` — `app.js:5586`
+- `assets/v841/creator/layers/hair/hair_${String(idx(` — `app.js:5586`
+- `assets/v841/creator/layers/outfit/outfit_${String(idx(` — `app.js:5586`
+
+## Todas as referências únicas
+
+- PASS_PATH `assets/enemies_v7/bandido_batedor.svg` — `app.js:1339`, `app.js:2187`
+- PASS_PATH `assets/enemies_v7/elite_espachim.svg` — `app.js:1339`, `app.js:1504`, `app.js:2187`, `app.js:3057`, `app.js:3233`, `app.js:3265`
+- PASS_PATH `assets/enemies_v7/monstro_aranha.svg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/enemies_v7/monstro_javali.svg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/enemies_v7/monstro_lobo.svg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/enemies_v7/monstro_serpente.svg` — `data/v7-content.js:1`, `data/v83-integrated-config.js:6`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/events_v74/ferreiro.svg` — `data/v74-content.js:1`
+- PASS_PATH `assets/events_v74/festival.svg` — `data/v74-content.js:1`
+- PASS_PATH `assets/events_v74/gai.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:45`, `data/v84-integrated-config.js:13`
+- PASS_PATH `assets/events_v74/inverno.svg` — `data/v74-content.js:1`
+- PASS_PATH `assets/events_v74/iruka.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:48`, `data/v84-integrated-config.js:28`
+- PASS_PATH `assets/events_v74/kakashi.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:46`, `data/v84-integrated-config.js:18`
+- PASS_PATH `assets/events_v74/mensageiro.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:50`
+- PASS_PATH `assets/events_v74/omamori.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:8`
+- PASS_PATH `assets/events_v74/pergaminho_mensageiro.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:7`
+- PASS_PATH `assets/events_v74/pergaminho.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:49`
+- PASS_PATH `assets/final_generated/mestre_dargan_saudacao.svg` — `src/r41-canonical-repair.js:37`
+- MISSING_PATH `assets/items_v7/${item.id}.svg` — `app.js:2999`
+- PASS_PATH `assets/items_v7/aian_nakkuru.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/algemas.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/antidoto.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/arco_curto.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/arco_longo.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/armadura_batalha.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/armadura_reforcada.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/bastao.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/besta_leve.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/besta_pesada.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/boleadeira.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/bomba_fumaca.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/bomba_luminosa.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/bomba_marcacao.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/bomba_trovao.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/chakram.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/chicote.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/chokuto.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/cimitarra.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/coldre.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/colete_ninja.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/colete_resistente.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/corda.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/corrente_cravos.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/disparador_oculto.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/espada_curta.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/espada_duas_laminas.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/espada_grande.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/espada_longa.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/estrepes.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/florete.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/foice.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/fuuma_gigante.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/fuuma_kage.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/fuuma_reta.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/gladio.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/instrumento.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/katana.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kit_artesao.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kit_ferramentas.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kit_laboratorio.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kit_medico.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kousen.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kunai.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/kusarigama.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/lamina_oculta.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/lanca.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/lanterna.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/leque_gigante.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/maca.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/machado_grande.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/machado.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/manopla_leve.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/martelo_guerra.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/mochila.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/ninja_to.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/nunchaku.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/otsuchi.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/pergaminho_escrita.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/pergaminho_jutsu.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/pilula_soldado.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/pique.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/racao_viagem.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/ramen_simples.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/rede.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/roupa_comum.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/saco_dormir.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/sai.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/senbon.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/shuriken.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tacape.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tampoes.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tanto.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tarja_especial.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tarja_explosiva.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tekko_kagi.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/tonfa.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_kunai_selo_quebrado.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_lamina_nevoa.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_manto_batedor.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_pergaminho_carmesim.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_protetor_areia.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/unico_reliquia_trovao.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/wakizashi.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/items_v7/yari.svg` — `data/v7-content.js:1`
+- MISSING_PATH `assets/jutsus_v75/${j.id}.svg` — `app.js:1619`, `app.js:2998`
+- PASS_PATH `assets/jutsus_v75/bunshin_kaiten_kakato_otoshi_i.svg` — `data/v83-integrated-config.js:22`
+- PASS_PATH `assets/jutsus_v75/bunshin_no_jutsu_i.svg` — `data/v83-integrated-config.js:20`
+- PASS_PATH `assets/jutsus_v75/chokugeki_raikou.svg` — `data/v83-integrated-config.js:26`
+- PASS_PATH `assets/jutsus_v75/dynamic_entry.svg` — `data/v83-integrated-config.js:25`
+- PASS_PATH `assets/jutsus_v75/gunbai_kaze_aekousha.svg` — `data/v83-integrated-config.js:33`
+- PASS_PATH `assets/jutsus_v75/hiken_tsukikage.svg` — `data/v83-integrated-config.js:15`
+- PASS_PATH `assets/jutsus_v75/iaigiri.svg` — `data/v83-integrated-config.js:16`
+- PASS_PATH `assets/jutsus_v75/kage_bunshin_no_jutsu_i.svg` — `data/v83-integrated-config.js:19`
+- PASS_PATH `assets/jutsus_v75/kage_bunshin_no_jutsu_ii.svg` — `data/v83-integrated-config.js:21`
+- PASS_PATH `assets/jutsus_v75/kage_shuriken_no_jutsu.svg` — `data/v83-integrated-config.js:32`
+- PASS_PATH `assets/jutsus_v75/kaihou.svg` — `data/v83-integrated-config.js:18`
+- PASS_PATH `assets/jutsus_v75/kumoryuu_mikazukigiri.svg` — `data/v83-integrated-config.js:29`
+- PASS_PATH `assets/jutsus_v75/kumoryuu_omotegiri.svg` — `data/v83-integrated-config.js:28`
+- PASS_PATH `assets/jutsus_v75/raiton_raiden.svg` — `data/v83-integrated-config.js:27`
+- PASS_PATH `assets/jutsus_v75/tajuu_kage_bunshin_no_jutsu_i.svg` — `data/v83-integrated-config.js:23`
+- PASS_PATH `assets/jutsus_v75/tajuu_kage_bunshin_no_jutsu_ii.svg` — `data/v83-integrated-config.js:24`
+- MISSING_PATH `assets/leon_tech_v75/${n}.svg` — `app.js:1620`
+- PASS_PATH `assets/maps/akatsuki.jpg` — `data/conteudo-livros.js:25`
+- PASS_PATH `assets/maps/areia.jpg` — `data/conteudo-livros.js:19`
+- PASS_PATH `assets/maps/folha.jpg` — `data/conteudo-livros.js:18`, `styles.css:361`
+- PASS_PATH `assets/maps/nevoa.jpg` — `data/conteudo-livros.js:20`, `data/conteudo-livros.js:23`
+- PASS_PATH `assets/maps/nuvem.jpg` — `data/conteudo-livros.js:22`
+- PASS_PATH `assets/maps/pedra.jpg` — `data/conteudo-livros.js:21`, `data/conteudo-livros.js:24`
+- PASS_PATH `assets/maps/world_v74.svg` — `styles.css:184`
+- PASS_PATH `assets/npcs_v7/areia_batedor.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/areia_mercador.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/chuva_informante.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/errante_viajante.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/folha_balconista.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/folha_instrutor.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/folha_medica.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/folha_oficial.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/nevoa_ferreiro.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/nevoa_guia.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/nuvem_instrutor.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/pedra_mestre.svg` — `data/v7-content.js:1`
+- PASS_PATH `assets/npcs_v7/som_contato.svg` — `data/v7-content.js:1`
+- MISSING_PATH `assets/original_v7/${pics[index%pics.length]}` — `app.js:1344`
+- PASS_PATH `assets/original_v7/layout_dojo_1.png` — `app.js:1339`, `app.js:1504`, `app.js:1506`, `app.js:3057`, `styles.css:377`
+- PASS_PATH `assets/original_v7/layout_topo_logado_icones_bag2.png` — `app.js:1271`
+- PASS_PATH `assets/original/avatares/layout_icon_vip_1747.jpg` — `data/v5-content.js:111`
+- PASS_PATH `assets/original/avatares/layout_icon_vip_1797.jpg` — `data/v5-content.js:112`
+- PASS_PATH `assets/original/avatares/layout_profile_7.png` — `data/v5-content.js:110`
+- PASS_PATH `assets/original/avatares/perfil_original.png` — `data/v5-content.js:109`
+- MISSING_PATH `assets/original/icones/${map[k]}` — `app.js:1190`
+- PASS_PATH `assets/original/ui/kunai.jpg` — `app.js:1271`
+- PASS_PATH `assets/original/ui/layout_bg_home.png` — `styles.css:83`
+- PASS_PATH `assets/original/ui/layout_cadastro_rapido.png` — `app.js:1232`
+- PASS_PATH `assets/original/ui/layout_combate_bg_log.png` — `styles.css:307`
+- PASS_PATH `assets/original/ui/layout_comidas_nissin.jpg` — `data/v5-content.js:89`, `data/v5-content.js:90`, `data/v83-integrated-config.js:37`
+- PASS_PATH `assets/original/ui/layout_enhancements_kunai_up.jpg` — `data/v5-content.js:87`
+- PASS_PATH `assets/original/ui/layout_foto_equipe.jpg` — `app.js:1160`
+- PASS_PATH `assets/original/ui/layout_home_1.jpg` — `styles.css:78`
+- PASS_PATH `assets/original/ui/layout_ico_shuriken.png` — `app.js:1271`, `data/v5-content.js:88`
+- PASS_PATH `assets/original/ui/pergaminho.png` — `app.js:1055`, `app.js:1271`, `data/v5-content.js:91`, `data/v83-integrated-config.js:35`
+- PASS_PATH `assets/original/ui/ramen.jpg` — `app.js:1271`
+- PASS_PATH `assets/original/vilas/layout_bandanas_1.png` — `data/v5-content.js:6`
+- PASS_PATH `assets/original/vilas/layout_bandanas_2.png` — `data/v5-content.js:7`
+- PASS_PATH `assets/original/vilas/layout_bandanas_3.png` — `data/v5-content.js:8`
+- PASS_PATH `assets/original/vilas/layout_bandanas_4.png` — `data/v5-content.js:9`
+- PASS_PATH `assets/original/vilas/layout_bandanas_5.png` — `data/v5-content.js:10`
+- PASS_PATH `assets/original/vilas/layout_bandanas_6.png` — `data/v5-content.js:11`
+- PASS_PATH `assets/original/vilas/layout_bandanas_7.png` — `data/v5-content.js:12`
+- PASS_PATH `assets/original/vilas/layout_bandanas_8.png` — `data/v5-content.js:13`
+- PASS_PATH `assets/original/vilas/layout_home_kages_1.jpg` — `data/v5-content.js:6`
+- PASS_PATH `assets/original/vilas/layout_home_kages_2.jpg` — `data/v5-content.js:7`
+- PASS_PATH `assets/original/vilas/layout_home_kages_3.jpg` — `data/v5-content.js:8`
+- PASS_PATH `assets/original/vilas/layout_home_kages_4.jpg` — `data/v5-content.js:9`
+- PASS_PATH `assets/original/vilas/layout_home_kages_5.jpg` — `data/v5-content.js:10`
+- PASS_PATH `assets/original/vilas/layout_home_kages_6.jpg` — `data/v5-content.js:11`
+- PASS_PATH `assets/original/vilas/layout_home_kages_7.jpg` — `data/v5-content.js:12`
+- PASS_PATH `assets/original/vilas/layout_home_kages_8.jpg` — `data/v5-content.js:13`
+- PASS_PATH `assets/original/vilas/layout_mapa_1.jpg` — `data/v5-content.js:6`, `data/v6-content.js:16`
+- PASS_PATH `assets/original/vilas/layout_mapa_2.jpg` — `data/v5-content.js:7`, `data/v6-content.js:17`
+- PASS_PATH `assets/original/vilas/layout_mapa_3.jpg` — `data/v5-content.js:8`, `data/v6-content.js:18`
+- PASS_PATH `assets/original/vilas/layout_mapa_4.jpg` — `data/v5-content.js:9`, `data/v6-content.js:19`
+- PASS_PATH `assets/original/vilas/layout_mapa_5.jpg` — `data/v5-content.js:10`, `data/v6-content.js:20`
+- PASS_PATH `assets/original/vilas/layout_mapa_6.jpg` — `data/v5-content.js:11`, `data/v6-content.js:21`
+- PASS_PATH `assets/original/vilas/layout_mapa_7.jpg` — `data/v5-content.js:12`, `data/v6-content.js:22`
+- PASS_PATH `assets/original/vilas/layout_mapa_8.jpg` — `data/v5-content.js:13`, `data/v6-content.js:23`
+- PASS_PATH `assets/private/kurai_fragmento.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:17`
+- PASS_PATH `assets/private/kurai.svg` — `app.js:1490`, `app.js:3115`, `data/v74-content.js:1`, `data/v83-integrated-config.js:14`
+- PASS_PATH `assets/private/leon_kosmo_avatar.jpg` — `app.js:779`, `app.js:1134`, `app.js:1167`, `app.js:1808`, `app.js:2345`, `app.js:2743`, `app.js:2883`, `data/v81-leon-content.js:2`
+- PASS_PATH `assets/private/leon_kosmo_dossie.jpg` — `app.js:1138`, `app.js:1239`, `app.js:1350`, `app.js:2432`, `app.js:4429`, `app.js:4483`, `app.js:4783`, `app.js:4915`, `data/v81-leon-content.js:2`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/a-quarto-raikage.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/akatsuchi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ameyuri-ringo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/anko-mitarashi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ao.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/aoba-yamashiro.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/armeira-de-nova-konoha.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/arquivista-da-vila.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/asuma-sarutobi.jpg` — `data/v84-integrated-config.js:35`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ayame.jpg` — `data/v7-content.js:1`
+- PASS_PATH `assets/r25/characters/baki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/balconista-de-missoes.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/boruto-uzumaki.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/c.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/capitao-da-guarda.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/chiyo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/chocho-akimichi.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/choji-akimichi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/chojuro.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/comerciante-de-suprimentos.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/corretor-do-mercado-negro.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/danzo-shimura.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/darui.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/deidara.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/denki-kaminarimon.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/dona-da-estalagem.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ebisu.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ferreiro-de-nova-konoha.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/fu-yamanaka.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/fuu.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/gaara.jpg` — `app.js:3559`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/genma-shiranui.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/haku.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/han.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hanabi-hyuga.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hanzo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/herbalista-da-vila.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hiashi-hyuga.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hidan.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/himawari-uzumaki.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hinata-hyuga.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/hiruzen-sarutobi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/homura-mitokado.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/ino-yamanaka.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/inojin-yamanaka.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/instrutor-do-dojo.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/iruka-umino.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/itachi-uchiha.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/iwabe-yuino.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/izumo-kamizuki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/jinin-akebino.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/jiraiya.jpg` — `data/v84-integrated-config.js:45`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/jugo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kabuto-yakushi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kakashi-hatake.jpg` — `app.js:3558`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kakuzu.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kankuro.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/karin.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/karui.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/karura.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kawaki.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kiba-inuzuka.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/killer-b.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kimimaro.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kisame-hoshigaki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kitsuchi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/koharu-utatane.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/konan.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/konohamaru-sarutobi-adulto.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/konohamaru.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kotetsu-hagane.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kurai-avatar.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kurenai-yuhi.jpg` — `data/v84-integrated-config.js:31`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kurotsuchi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/kusenro-avatar.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/leon-kosmo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mabui.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/madara-uchiha.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mangetsu-hozuki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/matriz-kosmo.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/medico-da-vila.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mei-terumi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mercador-de-pergaminhos.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/metal-lee.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mifune.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/might-guy.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/mitsuki.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/moegi-kazamatsuri-adulta.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/moegi.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/nagato.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/naruto-uzumaki-hokage.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/naruto-uzumaki.jpg` — `app.js:3555`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/navegadora-de-campo.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/neji-hyuga.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/obito-uchiha.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/omoi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/onoki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/orochimaru.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/pain.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/pakura.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/raidou-namiashi.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/rasa.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/rock-lee.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/roshi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sai-adulto.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sai.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sakura-haruno.jpg` — `app.js:3557`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sakura-uchiha.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/samui.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sarada-uchiha.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sasori.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sasuke-uchiha-adulto.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sasuke-uchiha.jpg` — `app.js:3556`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/shibi-aburame.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/shikadai-nara.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/shikamaru-nara.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/shino-aburame.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/shizune.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/suigetsu-hozuki.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/suirin.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/sumire-kakei.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/temari.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/tenten.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/teuchi.jpg` — `data/v7-content.js:1`
+- PASS_PATH `assets/r25/characters/tobi.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/torune-aburame.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/treinador-tatico.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/tsunade.jpg` — `data/v84-integrated-config.js:39`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/udon-ise-adulto.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/udon.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/utakata.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/vendedor-de-armas.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/wasabi-izuno.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/yagura.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/yamato.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/yugito-nii.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/zabuza-momochi.jpg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/characters/zetsu.jpg` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/ichiraku/ayame.png` — `app.js:3718`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/ichiraku/exterior.png` — `app.js:3718`, `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/ichiraku/interior.png` — `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r25/ichiraku/teuchi.png` — `app.js:3718`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_01_konoha_principais.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_02_konoha_apoio_vendedores.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_03_areia_nevoa.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_04_nuvem_pedra_vilas.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_05_akatsuki_viloes.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_07_exclusivos_vendedores.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/atlas_08_boruto_nova_geracao.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r26/atlas_sources/ichiraku_exterior_hd.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/accessory/accessory_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/bandana/bandana_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/body/body_01.svg` — `app.js:5586`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/body/body_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/body/body_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/body/body_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/brows/brows_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/effect/effect_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mark/mark_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/mouth/mouth_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/nose/nose_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/layers/skin/skin_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/accessory/accessory_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/bandana/bandana_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/body/body_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/body/body_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/body/body_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/body/body_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/brows/brows_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/effect/effect_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mark/mark_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/mouth/mouth_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/nose/nose_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/creator/previews/skin/skin_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/anbu_renegado.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/bandido_batedor.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/bandido_deserto.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/bandido_estrada.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/bandido_pesado.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/cacador_nin_hostil.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/elite_espachim.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/elite_mascara.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/mercenario_teleporte.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/mercenario.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/ninja_veneno.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_areia.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_assassino.jpg` — `app.js:3879`, `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_chuva.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_folha.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_nevoa.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_nuvem.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_pedra.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_sensor.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/nukenin_som.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/enemies/samurai_hostil.jpg` — `data/v7-content.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/areia_armaduras_ren-sazame.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:36841`, `data/v84-live-world.json:36844`, `data/v84-live-world.json:36845`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/areia_armas_daichi-arasuna.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:36505`, `data/v84-live-world.json:36508`, `data/v84-live-world.json:36509`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/areia_comida_hana-soraku.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37009`, `data/v84-live-world.json:37012`, `data/v84-live-world.json:37013`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/areia_ferramentas_miyo-kazebana.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:36673`, `data/v84-live-world.json:36676`, `data/v84-live-world.json:36677`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/chuva_armaduras_kuro-renga.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39529`, `data/v84-live-world.json:39532`, `data/v84-live-world.json:39533`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/chuva_armas_shigure-amemori.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39193`, `data/v84-live-world.json:39196`, `data/v84-live-world.json:39197`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/chuva_comida_aya-mizusawa.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39697`, `data/v84-live-world.json:39700`, `data/v84-live-world.json:39701`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/chuva_ferramentas_nami-shizuku.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39361`, `data/v84-live-world.json:39364`, `data/v84-live-world.json:39365`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/errante_armaduras_sora-michibiki.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40873`, `data/v84-live-world.json:40876`, `data/v84-live-world.json:40877`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/errante_armas_gen-tabiya.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40537`, `data/v84-live-world.json:40540`, `data/v84-live-world.json:40541`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/errante_comida_hana-nomura.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:41041`, `data/v84-live-world.json:41044`, `data/v84-live-world.json:41045`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/errante_ferramentas_rei-kogane.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40705`, `data/v84-live-world.json:40708`, `data/v84-live-world.json:40709`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nevoa_armaduras_rika-hoshina.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37513`, `data/v84-live-world.json:37516`, `data/v84-live-world.json:37517`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nevoa_armas_genji-mizunoe.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37177`, `data/v84-live-world.json:37180`, `data/v84-live-world.json:37181`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nevoa_comida_toma-uminari.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37681`, `data/v84-live-world.json:37684`, `data/v84-live-world.json:37685`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nevoa_ferramentas_aoi-kirisame.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37345`, `data/v84-live-world.json:37348`, `data/v84-live-world.json:37349`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nuvem_armaduras_daigo-amagiri.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38857`, `data/v84-live-world.json:38860`, `data/v84-live-world.json:38861`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nuvem_armas_raizo-kumonaka.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38521`, `data/v84-live-world.json:38524`, `data/v84-live-world.json:38525`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nuvem_comida_sora-kumogane.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39025`, `data/v84-live-world.json:39028`, `data/v84-live-world.json:39029`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/nuvem_ferramentas_yuna-raiden.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38689`, `data/v84-live-world.json:38692`, `data/v84-live-world.json:38693`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/pedra_armaduras_mina-tsuchida.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38185`, `data/v84-live-world.json:38188`, `data/v84-live-world.json:38189`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/pedra_armas_goro-iwamine.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:37849`, `data/v84-live-world.json:37852`, `data/v84-live-world.json:37853`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/pedra_comida_renji-ganmori.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38353`, `data/v84-live-world.json:38356`, `data/v84-live-world.json:38357`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/pedra_ferramentas_nao-sekigan.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:38017`, `data/v84-live-world.json:38020`, `data/v84-live-world.json:38021`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/som_armaduras_kenta-shion.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40201`, `data/v84-live-world.json:40204`, `data/v84-live-world.json:40205`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/som_armas_hibiki-otogane.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:39865`, `data/v84-live-world.json:39868`, `data/v84-live-world.json:39869`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/som_comida_miki-kanade.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40369`, `data/v84-live-world.json:40372`, `data/v84-live-world.json:40373`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r27/vendors/som_ferramentas_saya-neiro.jpg` — `data/v7-content.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.js:1`, `data/v84-live-world.json:40033`, `data/v84-live-world.json:40036`, `data/v84-live-world.json:40037`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/r29/examiner.svg` — `src/r41-canonical-repair.js:40`, `src/r41-canonical-repair.js:41`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_026_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_028_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_036_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_038_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_051_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_056_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/earth/earth_057_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_023_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_033_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_047_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/fire/fire_052_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_024_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_034_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_048_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/lightning/lightning_053_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_030_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_032_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_040_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_041_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_042_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_044_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_045_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_059_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/mixed/mixed_060_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_001_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_029_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_031_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_039_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_043_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_046_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_058_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/space/space_061_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_027_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_037_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_050_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/water/water_055_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_025_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_035_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_049_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_00.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_01.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_02.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_03.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_04.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_05.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_06.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_07.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_08.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_09.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_10.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_11.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_12.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_13.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_14.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_15.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_16.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_17.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_18.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_19.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_20.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_21.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_22.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_23.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/from_user/wind/wind_054_24.webp` — `data/r29-user-assets.js:1`
+- PASS_PATH `assets/r29/nukenin-inimigo.svg` — `src/r41-canonical-repair.js:44`, `src/r41-canonical-repair.js:45`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/aptidoes/aptidoes_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/efeitos/efeitos_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/items/items_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/jutsus/jutsus_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/npcs/npcs_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/pericias/pericias_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/personagens/personagens_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/recursos/recursos_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/titulos/titulos_12.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_01.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_02.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_03.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_04.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_05.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_06.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_07.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_08.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_09.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_10.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_11.webp` — `data/r30-assets.js:1`
+- PASS_PATH `assets/r30/generated/ui/ui_12.webp` — `data/r30-assets.js:1`
+- MISSING_PATH `assets/r31/entities/` — `styles.css:383`, `styles.css:389`, `styles.css:390`, `styles.css:391`, `styles.css:398`, `styles.css:399`, `styles.css:406`, `styles.css:407`, `styles.css:408`, `styles.css:409`
+- PASS_PATH `assets/r31/entities/actions/0001-move.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1794`, `data/r31-assets.json:3803`
+- PASS_PATH `assets/r31/entities/actions/0002-defend.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1795`, `data/r31-assets.json:3804`
+- PASS_PATH `assets/r31/entities/actions/0003-attack.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1796`, `data/r31-assets.json:3805`
+- PASS_PATH `assets/r31/entities/actions/0004-technique.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1797`, `data/r31-assets.json:3806`
+- PASS_PATH `assets/r31/entities/actions/0005-item.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1798`, `data/r31-assets.json:3807`
+- PASS_PATH `assets/r31/entities/actions/0006-talk.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1799`, `data/r31-assets.json:3808`
+- PASS_PATH `assets/r31/entities/actions/0007-investigate.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1800`, `data/r31-assets.json:3809`
+- PASS_PATH `assets/r31/entities/actions/0008-observe.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1801`, `data/r31-assets.json:3810`
+- PASS_PATH `assets/r31/entities/actions/0009-hide.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1802`, `data/r31-assets.json:3811`
+- PASS_PATH `assets/r31/entities/actions/0010-travel.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1803`, `data/r31-assets.json:3812`
+- PASS_PATH `assets/r31/entities/actions/0011-train.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1804`, `data/r31-assets.json:3813`
+- PASS_PATH `assets/r31/entities/actions/0012-rest.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1805`, `data/r31-assets.json:3814`
+- PASS_PATH `assets/r31/entities/actions/0013-narrate.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1806`, `data/r31-assets.json:3815`
+- PASS_PATH `assets/r31/entities/actions/0014-continue.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1807`, `data/r31-assets.json:3816`
+- PASS_PATH `assets/r31/entities/aiModes/0001-game-master.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1810`, `data/r31-assets.json:3819`
+- PASS_PATH `assets/r31/entities/aiModes/0002-npc-dialogue.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1811`, `data/r31-assets.json:3820`
+- PASS_PATH `assets/r31/entities/aiModes/0003-investigation.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1812`, `data/r31-assets.json:3821`
+- PASS_PATH `assets/r31/entities/aiModes/0004-training.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1813`, `data/r31-assets.json:3822`
+- PASS_PATH `assets/r31/entities/aiModes/0005-combat-director.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1814`, `data/r31-assets.json:3823`
+- PASS_PATH `assets/r31/entities/aiModes/0006-rules-question.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1815`, `data/r31-assets.json:3824`
+- PASS_PATH `assets/r31/entities/aptidoes/0001-acuidade.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:715`, `data/r31-assets.json:2724`
+- PASS_PATH `assets/r31/entities/aptidoes/0002-ambidestria.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:716`, `data/r31-assets.json:2725`
+- PASS_PATH `assets/r31/entities/aptidoes/0003-ataque-movimento.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:717`, `data/r31-assets.json:2726`
+- PASS_PATH `assets/r31/entities/aptidoes/0004-atirador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:718`, `data/r31-assets.json:2727`
+- PASS_PATH `assets/r31/entities/aptidoes/0005-combate-defensivo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:719`, `data/r31-assets.json:2728`
+- PASS_PATH `assets/r31/entities/aptidoes/0006-critico-aprimorado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:720`, `data/r31-assets.json:2729`
+- PASS_PATH `assets/r31/entities/aptidoes/0007-especialista.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:721`, `data/r31-assets.json:2730`
+- PASS_PATH `assets/r31/entities/aptidoes/0008-guerreiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:722`, `data/r31-assets.json:2731`
+- PASS_PATH `assets/r31/entities/aptidoes/0009-intuicao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:723`, `data/r31-assets.json:2732`
+- PASS_PATH `assets/r31/entities/aptidoes/0010-lutador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:724`, `data/r31-assets.json:2733`
+- PASS_PATH `assets/r31/entities/aptidoes/0011-maestria.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:725`, `data/r31-assets.json:2734`
+- PASS_PATH `assets/r31/entities/aptidoes/0012-mestre-selos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:726`, `data/r31-assets.json:2735`
+- PASS_PATH `assets/r31/entities/aptidoes/0013-mira-apurada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:727`, `data/r31-assets.json:2736`
+- PASS_PATH `assets/r31/entities/aptidoes/0014-oportunista.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:728`, `data/r31-assets.json:2737`
+- PASS_PATH `assets/r31/entities/aptidoes/0015-punho-ferro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:729`, `data/r31-assets.json:2738`
+- PASS_PATH `assets/r31/entities/aptidoes/0016-reflexos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:730`, `data/r31-assets.json:2739`
+- PASS_PATH `assets/r31/entities/aptidoes/0017-saque-rapido.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:731`, `data/r31-assets.json:2740`
+- PASS_PATH `assets/r31/entities/aptidoes/0018-tiro-longo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:732`, `data/r31-assets.json:2741`
+- PASS_PATH `assets/r31/entities/aptidoes/0019-usar-armadura-pesada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:733`, `data/r31-assets.json:2742`
+- PASS_PATH `assets/r31/entities/aptidoes/0020-velocista.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:734`, `data/r31-assets.json:2743`
+- PASS_PATH `assets/r31/entities/aptidoes/0021-ataque-atordoante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:735`, `data/r31-assets.json:2744`
+- PASS_PATH `assets/r31/entities/aptidoes/0022-ataque-giratorio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:736`, `data/r31-assets.json:2745`
+- PASS_PATH `assets/r31/entities/aptidoes/0023-ataque-multiplo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:737`, `data/r31-assets.json:2746`
+- PASS_PATH `assets/r31/entities/aptidoes/0024-chute-giratorio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:738`, `data/r31-assets.json:2747`
+- PASS_PATH `assets/r31/entities/aptidoes/0025-contragolpe.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:739`, `data/r31-assets.json:2748`
+- PASS_PATH `assets/r31/entities/aptidoes/0026-derrubar-agressivo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:740`, `data/r31-assets.json:2749`
+- PASS_PATH `assets/r31/entities/aptidoes/0027-desarme-agressivo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:741`, `data/r31-assets.json:2750`
+- PASS_PATH `assets/r31/entities/aptidoes/0028-ponto-cego.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:742`, `data/r31-assets.json:2751`
+- PASS_PATH `assets/r31/entities/aptidoes/0029-tecnica-acelerada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:743`, `data/r31-assets.json:2752`
+- PASS_PATH `assets/r31/entities/aptidoes/0030-tecnica-potente.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:744`, `data/r31-assets.json:2753`
+- PASS_PATH `assets/r31/entities/aptidoes/0031-tecnica-precisa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:745`, `data/r31-assets.json:2754`
+- PASS_PATH `assets/r31/entities/aptidoes/0032-clone-verdadeiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:746`, `data/r31-assets.json:2755`
+- PASS_PATH `assets/r31/entities/aptidoes/0033-sensor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:747`, `data/r31-assets.json:2756`
+- PASS_PATH `assets/r31/entities/aptidoes/0034-quimico.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:748`, `data/r31-assets.json:2757`
+- PASS_PATH `assets/r31/entities/aptidoes/0035-medico.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:749`, `data/r31-assets.json:2758`
+- PASS_PATH `assets/r31/entities/aptidoes/0036-perito.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:750`, `data/r31-assets.json:2759`
+- PASS_PATH `assets/r31/entities/aptidoes/0037-furtividade-grupo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:751`, `data/r31-assets.json:2760`
+- PASS_PATH `assets/r31/entities/aptidoes/0038-recuperacao-acelerada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:752`, `data/r31-assets.json:2761`
+- PASS_PATH `assets/r31/entities/aptidoes/0039-atirador-agil.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:753`, `data/r31-assets.json:2762`
+- PASS_PATH `assets/r31/entities/aptidoes/0040-gun-fu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:754`, `data/r31-assets.json:2763`
+- PASS_PATH `assets/r31/entities/aptidoes/0041-zui-quan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:755`, `data/r31-assets.json:2764`
+- PASS_PATH `assets/r31/entities/aptidoes/0042-jiu-jitsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:756`, `data/r31-assets.json:2765`
+- PASS_PATH `assets/r31/entities/aptidoes/0043-utilitarista.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:757`, `data/r31-assets.json:2766`
+- PASS_PATH `assets/r31/entities/aptidoes/0044-ilusionista-musical.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:758`, `data/r31-assets.json:2767`
+- PASS_PATH `assets/r31/entities/arcs/0001-arc-10.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1442`, `data/r31-assets.json:3451`
+- PASS_PATH `assets/r31/entities/arcs/0002-arc-17.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1443`, `data/r31-assets.json:3452`
+- PASS_PATH `assets/r31/entities/arcs/0003-arc-03.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1444`, `data/r31-assets.json:3453`
+- PASS_PATH `assets/r31/entities/arcs/0004-arc-11.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1445`, `data/r31-assets.json:3454`
+- PASS_PATH `assets/r31/entities/arcs/0005-arc-20.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1446`, `data/r31-assets.json:3455`
+- PASS_PATH `assets/r31/entities/arcs/0006-arc-24.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1447`, `data/r31-assets.json:3456`
+- PASS_PATH `assets/r31/entities/arcs/0007-arc-26.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1448`, `data/r31-assets.json:3457`
+- PASS_PATH `assets/r31/entities/arcs/0008-arc-08.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1449`, `data/r31-assets.json:3458`
+- PASS_PATH `assets/r31/entities/arcs/0009-arc-05.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1450`, `data/r31-assets.json:3459`
+- PASS_PATH `assets/r31/entities/arcs/0010-arc-09.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1451`, `data/r31-assets.json:3460`
+- PASS_PATH `assets/r31/entities/arcs/0011-arc-19.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1452`, `data/r31-assets.json:3461`
+- PASS_PATH `assets/r31/entities/arcs/0012-arc-18.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1453`, `data/r31-assets.json:3462`
+- PASS_PATH `assets/r31/entities/arcs/0013-arc-25.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1454`, `data/r31-assets.json:3463`
+- PASS_PATH `assets/r31/entities/arcs/0014-arc-13.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1455`, `data/r31-assets.json:3464`
+- PASS_PATH `assets/r31/entities/arcs/0015-arc-02.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1456`, `data/r31-assets.json:3465`
+- PASS_PATH `assets/r31/entities/arcs/0016-arc-15.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1457`, `data/r31-assets.json:3466`
+- PASS_PATH `assets/r31/entities/arcs/0017-arc-06.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1458`, `data/r31-assets.json:3467`
+- PASS_PATH `assets/r31/entities/arcs/0018-arc-04.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1459`, `data/r31-assets.json:3468`
+- PASS_PATH `assets/r31/entities/arcs/0019-arc-01.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1460`, `data/r31-assets.json:3469`
+- PASS_PATH `assets/r31/entities/arcs/0020-arc-22.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1461`, `data/r31-assets.json:3470`
+- PASS_PATH `assets/r31/entities/arcs/0021-arc-23.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1462`, `data/r31-assets.json:3471`
+- PASS_PATH `assets/r31/entities/arcs/0022-arc-21.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1463`, `data/r31-assets.json:3472`
+- PASS_PATH `assets/r31/entities/arcs/0023-arc-12.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1464`, `data/r31-assets.json:3473`
+- PASS_PATH `assets/r31/entities/arcs/0024-arc-14.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1465`, `data/r31-assets.json:3474`
+- PASS_PATH `assets/r31/entities/arcs/0025-arc-16.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1466`, `data/r31-assets.json:3475`
+- PASS_PATH `assets/r31/entities/arcs/0026-arc-07.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1467`, `data/r31-assets.json:3476`
+- PASS_PATH `assets/r31/entities/attributes/0001-forca.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1730`, `data/r31-assets.json:3739`
+- PASS_PATH `assets/r31/entities/attributes/0002-destreza.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1731`, `data/r31-assets.json:3740`
+- PASS_PATH `assets/r31/entities/attributes/0003-agilidade.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1732`, `data/r31-assets.json:3741`
+- PASS_PATH `assets/r31/entities/attributes/0004-percepcao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1733`, `data/r31-assets.json:3742`
+- PASS_PATH `assets/r31/entities/attributes/0005-inteligencia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1734`, `data/r31-assets.json:3743`
+- PASS_PATH `assets/r31/entities/attributes/0006-vigor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1735`, `data/r31-assets.json:3744`
+- PASS_PATH `assets/r31/entities/attributes/0007-espirito.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1736`, `data/r31-assets.json:3745`
+- PASS_PATH `assets/r31/entities/attributes/0008-carisma.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1737`, `data/r31-assets.json:3746`
+- PASS_PATH `assets/r31/entities/attributes/0009-manipulacao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1738`, `data/r31-assets.json:3747`
+- PASS_PATH `assets/r31/entities/battlefieldTools/0001-move.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1818`, `data/r31-assets.json:3827`
+- PASS_PATH `assets/r31/entities/battlefieldTools/0002-hazard.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1819`, `data/r31-assets.json:3828`
+- PASS_PATH `assets/r31/entities/battlefieldTools/0003-cover.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1820`, `data/r31-assets.json:3829`
+- PASS_PATH `assets/r31/entities/campaigns/0001-camp-03.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1470`, `data/r31-assets.json:3479`
+- PASS_PATH `assets/r31/entities/campaigns/0002-camp-01.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1471`, `data/r31-assets.json:3480`
+- PASS_PATH `assets/r31/entities/campaigns/0003-camp-05.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1472`, `data/r31-assets.json:3481`
+- PASS_PATH `assets/r31/entities/campaigns/0004-camp-04.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1473`, `data/r31-assets.json:3482`
+- PASS_PATH `assets/r31/entities/campaigns/0005-camp-06.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1474`, `data/r31-assets.json:3483`
+- PASS_PATH `assets/r31/entities/campaigns/0006-camp-02.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1475`, `data/r31-assets.json:3484`
+- PASS_PATH `assets/r31/entities/characters/0076-leon-kosmo.webp` — `app.js:4390`
+- PASS_PATH `assets/r31/entities/classes/0001-nin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1646`, `data/r31-assets.json:3655`
+- PASS_PATH `assets/r31/entities/classes/0002-tai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1647`, `data/r31-assets.json:3656`
+- PASS_PATH `assets/r31/entities/classes/0003-gen.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1648`, `data/r31-assets.json:3657`
+- PASS_PATH `assets/r31/entities/classes/0004-buk.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1649`, `data/r31-assets.json:3658`
+- PASS_PATH `assets/r31/entities/conditions/0001-queimadura.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1991`, `data/r31-assets.json:4000`
+- PASS_PATH `assets/r31/entities/conditions/0002-paralisia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1992`, `data/r31-assets.json:4001`
+- PASS_PATH `assets/r31/entities/conditions/0003-veneno.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1993`, `data/r31-assets.json:4002`
+- PASS_PATH `assets/r31/entities/conditions/0004-sangramento.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1994`, `data/r31-assets.json:4003`
+- PASS_PATH `assets/r31/entities/conditions/0005-atordoado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1995`, `data/r31-assets.json:4004`
+- PASS_PATH `assets/r31/entities/conditions/0006-imobilizado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1996`, `data/r31-assets.json:4005`
+- PASS_PATH `assets/r31/entities/conditions/0007-cego.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1997`, `data/r31-assets.json:4006`
+- PASS_PATH `assets/r31/entities/conditions/0008-surdo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1998`, `data/r31-assets.json:4007`
+- PASS_PATH `assets/r31/entities/conditions/0009-silenciado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1999`, `data/r31-assets.json:4008`
+- PASS_PATH `assets/r31/entities/conditions/0010-confuso.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2000`, `data/r31-assets.json:4009`
+- PASS_PATH `assets/r31/entities/conditions/0011-amedrontado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2001`, `data/r31-assets.json:4010`
+- PASS_PATH `assets/r31/entities/conditions/0012-exausto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2002`, `data/r31-assets.json:4011`
+- PASS_PATH `assets/r31/entities/conditions/0013-fadiga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2003`, `data/r31-assets.json:4012`
+- PASS_PATH `assets/r31/entities/conditions/0014-drenagem-chakra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2004`, `data/r31-assets.json:4013`
+- PASS_PATH `assets/r31/entities/conditions/0015-selado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2005`, `data/r31-assets.json:4014`
+- PASS_PATH `assets/r31/entities/conditions/0016-marcado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2006`, `data/r31-assets.json:4015`
+- PASS_PATH `assets/r31/entities/conditions/0017-invisivel.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2007`, `data/r31-assets.json:4016`
+- PASS_PATH `assets/r31/entities/conditions/0018-camuflado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2008`, `data/r31-assets.json:4017`
+- PASS_PATH `assets/r31/entities/conditions/0019-regeneracao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2009`, `data/r31-assets.json:4018`
+- PASS_PATH `assets/r31/entities/conditions/0020-fortalecido.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2010`, `data/r31-assets.json:4019`
+- PASS_PATH `assets/r31/entities/conditions/0021-enfraquecido.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2011`, `data/r31-assets.json:4020`
+- PASS_PATH `assets/r31/entities/conditions/0022-chakra-bloqueado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2012`, `data/r31-assets.json:4021`
+- PASS_PATH `assets/r31/entities/conditions/0023-tenketsu-bloqueado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2013`, `data/r31-assets.json:4022`
+- PASS_PATH `assets/r31/entities/conditions/0024-inconsciente.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2014`, `data/r31-assets.json:4023`
+- PASS_PATH `assets/r31/entities/creationSteps/0001-creation-1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1754`, `data/r31-assets.json:3763`
+- PASS_PATH `assets/r31/entities/creationSteps/0002-creation-2.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1755`, `data/r31-assets.json:3764`
+- PASS_PATH `assets/r31/entities/creationSteps/0003-creation-3.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1756`, `data/r31-assets.json:3765`
+- PASS_PATH `assets/r31/entities/creationSteps/0004-creation-4.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1757`, `data/r31-assets.json:3766`
+- PASS_PATH `assets/r31/entities/creationSteps/0005-creation-5.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1758`, `data/r31-assets.json:3767`
+- PASS_PATH `assets/r31/entities/creationSteps/0006-creation-6.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1759`, `data/r31-assets.json:3768`
+- PASS_PATH `assets/r31/entities/creationSteps/0007-creation-7.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1760`, `data/r31-assets.json:3769`
+- PASS_PATH `assets/r31/entities/creationSteps/0008-creation-8.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1761`, `data/r31-assets.json:3770`
+- PASS_PATH `assets/r31/entities/creationSteps/0009-creation-9.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1762`, `data/r31-assets.json:3771`
+- PASS_PATH `assets/r31/entities/creationSteps/0010-creation-10.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1763`, `data/r31-assets.json:3772`
+- PASS_PATH `assets/r31/entities/defenses/0001-esquiva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1640`, `data/r31-assets.json:3649`
+- PASS_PATH `assets/r31/entities/defenses/0002-bloqueio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1641`, `data/r31-assets.json:3650`
+- PASS_PATH `assets/r31/entities/defenses/0003-antecipar.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1642`, `data/r31-assets.json:3651`
+- PASS_PATH `assets/r31/entities/defenses/0004-tecnica.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1643`, `data/r31-assets.json:3652`
+- PASS_PATH `assets/r31/entities/elements/0001-katon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1662`, `data/r31-assets.json:3671`
+- PASS_PATH `assets/r31/entities/elements/0002-fuuton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1663`, `data/r31-assets.json:3672`
+- PASS_PATH `assets/r31/entities/elements/0003-raiton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1664`, `data/r31-assets.json:3673`
+- PASS_PATH `assets/r31/entities/elements/0004-doton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1665`, `data/r31-assets.json:3674`
+- PASS_PATH `assets/r31/entities/elements/0005-suiton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1666`, `data/r31-assets.json:3675`
+- PASS_PATH `assets/r31/entities/enemies/0001-bandido-batedor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1767`, `data/r31-assets.json:3776`
+- PASS_PATH `assets/r31/entities/enemies/0002-bandido-pesado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1768`, `data/r31-assets.json:3777`
+- PASS_PATH `assets/r31/entities/enemies/0003-mercenario-teleporte.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1769`, `data/r31-assets.json:3778`
+- PASS_PATH `assets/r31/entities/enemies/0004-ninja-veneno.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1770`, `data/r31-assets.json:3779`
+- PASS_PATH `assets/r31/entities/enemies/0005-nukenin-assassino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1771`, `data/r31-assets.json:3780`
+- PASS_PATH `assets/r31/entities/enemies/0006-nukenin-sensor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1772`, `data/r31-assets.json:3781`
+- PASS_PATH `assets/r31/entities/enemies/0007-monstro-lobo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1773`, `data/r31-assets.json:3782`
+- PASS_PATH `assets/r31/entities/enemies/0008-monstro-serpente.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1774`, `data/r31-assets.json:3783`
+- PASS_PATH `assets/r31/entities/enemies/0009-monstro-aranha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1775`, `data/r31-assets.json:3784`
+- PASS_PATH `assets/r31/entities/enemies/0010-monstro-javali.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1776`, `data/r31-assets.json:3785`
+- PASS_PATH `assets/r31/entities/enemies/0011-elite-espachim.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1777`, `data/r31-assets.json:3786`
+- PASS_PATH `assets/r31/entities/enemies/0012-elite-mascara.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1778`, `data/r31-assets.json:3787`
+- PASS_PATH `assets/r31/entities/enemies/0013-nukenin-folha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1779`, `data/r31-assets.json:3788`
+- PASS_PATH `assets/r31/entities/enemies/0014-nukenin-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1780`, `data/r31-assets.json:3789`
+- PASS_PATH `assets/r31/entities/enemies/0015-nukenin-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1781`, `data/r31-assets.json:3790`
+- PASS_PATH `assets/r31/entities/enemies/0016-nukenin-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1782`, `data/r31-assets.json:3791`
+- PASS_PATH `assets/r31/entities/enemies/0017-nukenin-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1783`, `data/r31-assets.json:3792`
+- PASS_PATH `assets/r31/entities/enemies/0018-nukenin-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1784`, `data/r31-assets.json:3793`
+- PASS_PATH `assets/r31/entities/enemies/0019-nukenin-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1785`, `data/r31-assets.json:3794`
+- PASS_PATH `assets/r31/entities/enemies/0020-bandido-estrada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1786`, `data/r31-assets.json:3795`
+- PASS_PATH `assets/r31/entities/enemies/0021-bandido-deserto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1787`, `data/r31-assets.json:3796`
+- PASS_PATH `assets/r31/entities/enemies/0022-mercenario.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1788`, `data/r31-assets.json:3797`
+- PASS_PATH `assets/r31/entities/enemies/0023-cacador-nin-hostil.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1789`, `data/r31-assets.json:3798`
+- PASS_PATH `assets/r31/entities/enemies/0024-samurai-hostil.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1790`, `data/r31-assets.json:3799`
+- PASS_PATH `assets/r31/entities/enemies/0025-anbu-renegado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1791`, `data/r31-assets.json:3800`
+- PASS_PATH `assets/r31/entities/equipment/0001-equipment-1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1741`, `data/r31-assets.json:3750`
+- PASS_PATH `assets/r31/entities/equipment/0002-equipment-2.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1742`, `data/r31-assets.json:3751`
+- PASS_PATH `assets/r31/entities/equipment/0003-equipment-3.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1743`, `data/r31-assets.json:3752`
+- PASS_PATH `assets/r31/entities/equipment/0004-equipment-4.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1744`, `data/r31-assets.json:3753`
+- PASS_PATH `assets/r31/entities/equipment/0005-equipment-5.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1745`, `data/r31-assets.json:3754`
+- PASS_PATH `assets/r31/entities/equipment/0006-equipment-6.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1746`, `data/r31-assets.json:3755`
+- PASS_PATH `assets/r31/entities/equipment/0007-equipment-7.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1747`, `data/r31-assets.json:3756`
+- PASS_PATH `assets/r31/entities/equipment/0008-equipment-8.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1748`, `data/r31-assets.json:3757`
+- PASS_PATH `assets/r31/entities/equipment/0009-equipment-9.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1749`, `data/r31-assets.json:3758`
+- PASS_PATH `assets/r31/entities/equipment/0010-equipment-10.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1750`, `data/r31-assets.json:3759`
+- PASS_PATH `assets/r31/entities/equipment/0011-equipment-11.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1751`, `data/r31-assets.json:3760`
+- PASS_PATH `assets/r31/entities/events/0001-evt-01-kyubi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1528`, `data/r31-assets.json:3537`
+- PASS_PATH `assets/r31/entities/events/0002-evt-02-ondas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1529`, `data/r31-assets.json:3538`
+- PASS_PATH `assets/r31/entities/events/0003-evt-03-chegada-exame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1530`, `data/r31-assets.json:3539`
+- PASS_PATH `assets/r31/entities/events/0004-evt-04-prova-escrita.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1531`, `data/r31-assets.json:3540`
+- PASS_PATH `assets/r31/entities/events/0005-evt-05-floresta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1532`, `data/r31-assets.json:3541`
+- PASS_PATH `assets/r31/entities/events/0006-evt-06-preliminares.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1533`, `data/r31-assets.json:3542`
+- PASS_PATH `assets/r31/entities/events/0007-evt-07-treino-mes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1534`, `data/r31-assets.json:3543`
+- PASS_PATH `assets/r31/entities/events/0008-evt-08-finais.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1535`, `data/r31-assets.json:3544`
+- PASS_PATH `assets/r31/entities/events/0009-evt-09-konoha-crush.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1536`, `data/r31-assets.json:3545`
+- PASS_PATH `assets/r31/entities/events/0010-evt-10-tsunade.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1537`, `data/r31-assets.json:3546`
+- PASS_PATH `assets/r31/entities/events/0011-evt-11-itachi-kisame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1538`, `data/r31-assets.json:3547`
+- PASS_PATH `assets/r31/entities/events/0012-evt-12-sasuke-recovery.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1539`, `data/r31-assets.json:3548`
+- PASS_PATH `assets/r31/entities/events/0013-evt-13-kakashi-gaiden.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1540`, `data/r31-assets.json:3549`
+- PASS_PATH `assets/r31/entities/events/0014-evt-14-kazekage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1541`, `data/r31-assets.json:3550`
+- PASS_PATH `assets/r31/entities/events/0015-evt-15-tenchi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1542`, `data/r31-assets.json:3551`
+- PASS_PATH `assets/r31/entities/events/0016-evt-16-hidan-kakuzu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1543`, `data/r31-assets.json:3552`
+- PASS_PATH `assets/r31/entities/events/0017-evt-17-itachi-hunt.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1544`, `data/r31-assets.json:3553`
+- PASS_PATH `assets/r31/entities/events/0018-evt-18-jiraiya-pain.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1545`, `data/r31-assets.json:3554`
+- PASS_PATH `assets/r31/entities/events/0019-evt-19-pain.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1546`, `data/r31-assets.json:3555`
+- PASS_PATH `assets/r31/entities/events/0020-evt-20-kage-summit.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1547`, `data/r31-assets.json:3556`
+- PASS_PATH `assets/r31/entities/events/0021-evt-21-pre-guerra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1548`, `data/r31-assets.json:3557`
+- PASS_PATH `assets/r31/entities/events/0022-evt-22-edo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1549`, `data/r31-assets.json:3558`
+- PASS_PATH `assets/r31/entities/events/0023-evt-23-obito-madara.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1550`, `data/r31-assets.json:3559`
+- PASS_PATH `assets/r31/entities/events/0024-evt-24-dez-caudas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1551`, `data/r31-assets.json:3560`
+- PASS_PATH `assets/r31/entities/events/0025-evt-25-kaguya.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1552`, `data/r31-assets.json:3561`
+- PASS_PATH `assets/r31/entities/events/0026-evt-26-epilogo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1553`, `data/r31-assets.json:3562`
+- PASS_PATH `assets/r31/entities/events/0027-canon-kakashi-controle.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1554`, `data/r31-assets.json:3563`
+- PASS_PATH `assets/r31/entities/events/0028-canon-iruka-academia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1555`, `data/r31-assets.json:3564`
+- PASS_PATH `assets/r31/entities/events/0029-canon-gai-dojo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1556`, `data/r31-assets.json:3565`
+- PASS_PATH `assets/r31/entities/events/0030-season-festival-verao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1557`, `data/r31-assets.json:3566`
+- PASS_PATH `assets/r31/entities/events/0031-season-inverno.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1558`, `data/r31-assets.json:3567`
+- PASS_PATH `assets/r31/entities/events/0032-random-mensageiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1559`, `data/r31-assets.json:3568`
+- PASS_PATH `assets/r31/entities/events/0033-random-ferreiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1560`, `data/r31-assets.json:3569`
+- PASS_PATH `assets/r31/entities/events/0034-random-pergaminho.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1561`, `data/r31-assets.json:3570`
+- PASS_PATH `assets/r31/entities/events/0035-leon-kurai-fissura.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1562`, `data/r31-assets.json:3571`
+- PASS_PATH `assets/r31/entities/factions/0001-factions-anbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1478`, `data/r31-assets.json:3487`
+- PASS_PATH `assets/r31/entities/factions/0002-factions-akatsuki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1479`, `data/r31-assets.json:3488`
+- PASS_PATH `assets/r31/entities/factions/0003-factions-cla-hy-ga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1480`, `data/r31-assets.json:3489`
+- PASS_PATH `assets/r31/entities/factions/0004-factions-konohagakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1481`, `data/r31-assets.json:3490`
+- PASS_PATH `assets/r31/entities/factions/0005-factions-otogakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1482`, `data/r31-assets.json:3491`
+- PASS_PATH `assets/r31/entities/factions/0006-factions-raiz.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1483`, `data/r31-assets.json:3492`
+- PASS_PATH `assets/r31/entities/factions/0007-factions-remanescentes-uchiha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1484`, `data/r31-assets.json:3493`
+- PASS_PATH `assets/r31/entities/factions/0008-factions-sunagakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1485`, `data/r31-assets.json:3494`
+- PASS_PATH `assets/r31/entities/graduations/0001-graduations-1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1721`, `data/r31-assets.json:3730`
+- PASS_PATH `assets/r31/entities/graduations/0002-1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1722`, `data/r31-assets.json:3731`
+- PASS_PATH `assets/r31/entities/graduations/0003-2.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1723`, `data/r31-assets.json:3732`
+- PASS_PATH `assets/r31/entities/graduations/0004-3.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1724`, `data/r31-assets.json:3733`
+- PASS_PATH `assets/r31/entities/graduations/0005-4.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1725`, `data/r31-assets.json:3734`
+- PASS_PATH `assets/r31/entities/graduations/0006-5.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1726`, `data/r31-assets.json:3735`
+- PASS_PATH `assets/r31/entities/graduations/0007-6.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1727`, `data/r31-assets.json:3736`
+- PASS_PATH `assets/r31/entities/hijutsus/0001-dokujutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1587`, `data/r31-assets.json:3596`
+- PASS_PATH `assets/r31/entities/hijutsus/0002-jinchuuriki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1588`, `data/r31-assets.json:3597`
+- PASS_PATH `assets/r31/entities/hijutsus/0003-kuchiyose.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1589`, `data/r31-assets.json:3598`
+- PASS_PATH `assets/r31/entities/hijutsus/0004-magen.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1590`, `data/r31-assets.json:3599`
+- PASS_PATH `assets/r31/entities/hijutsus/0005-senjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1591`, `data/r31-assets.json:3600`
+- PASS_PATH `assets/r31/entities/hijutsus/0006-tensai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1592`, `data/r31-assets.json:3601`
+- PASS_PATH `assets/r31/entities/hijutsus/0007-jiton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1593`, `data/r31-assets.json:3602`
+- PASS_PATH `assets/r31/entities/hijutsus/0008-juuinka.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1594`, `data/r31-assets.json:3603`
+- PASS_PATH `assets/r31/entities/hijutsus/0009-kamijutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1595`, `data/r31-assets.json:3604`
+- PASS_PATH `assets/r31/entities/hijutsus/0010-nintaijutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1596`, `data/r31-assets.json:3605`
+- PASS_PATH `assets/r31/entities/hijutsus/0011-rinnegan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1597`, `data/r31-assets.json:3606`
+- PASS_PATH `assets/r31/entities/hijutsus/0012-samurai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1598`, `data/r31-assets.json:3607`
+- PASS_PATH `assets/r31/entities/hijutsus/0013-senninka.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1599`, `data/r31-assets.json:3608`
+- PASS_PATH `assets/r31/entities/hijutsus/0014-bakuton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1600`, `data/r31-assets.json:3609`
+- PASS_PATH `assets/r31/entities/hijutsus/0015-buki-senmon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1601`, `data/r31-assets.json:3610`
+- PASS_PATH `assets/r31/entities/hijutsus/0016-daikiga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1602`, `data/r31-assets.json:3611`
+- PASS_PATH `assets/r31/entities/hijutsus/0017-kugutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1603`, `data/r31-assets.json:3612`
+- PASS_PATH `assets/r31/entities/hijutsus/0018-kibaku-nendo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1604`, `data/r31-assets.json:3613`
+- PASS_PATH `assets/r31/entities/hijutsus/0019-mateki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1605`, `data/r31-assets.json:3614`
+- PASS_PATH `assets/r31/entities/hijutsus/0020-nan-no-kaizou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1606`, `data/r31-assets.json:3615`
+- PASS_PATH `assets/r31/entities/hijutsus/0021-ranton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1607`, `data/r31-assets.json:3616`
+- PASS_PATH `assets/r31/entities/hijutsus/0022-shakuton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1608`, `data/r31-assets.json:3617`
+- PASS_PATH `assets/r31/entities/hijutsus/0023-shouton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1609`, `data/r31-assets.json:3618`
+- PASS_PATH `assets/r31/entities/hijutsus/0024-tessenjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1610`, `data/r31-assets.json:3619`
+- PASS_PATH `assets/r31/entities/hijutsus/0025-jinton-poeira.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1611`, `data/r31-assets.json:3620`
+- PASS_PATH `assets/r31/entities/hijutsus/0026-saika-ikki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1612`, `data/r31-assets.json:3621`
+- PASS_PATH `assets/r31/entities/items/0001-kunai.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:534`
+- PASS_PATH `assets/r31/entities/items/0002-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:535`
+- PASS_PATH `assets/r31/entities/items/0003-fuuma-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:536`, `data/r31-assets.json:2550`
+- PASS_PATH `assets/r31/entities/items/0004-senbon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:537`, `data/r31-assets.json:2551`
+- PASS_PATH `assets/r31/entities/items/0005-katana.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:538`, `data/r31-assets.json:2552`
+- PASS_PATH `assets/r31/entities/items/0006-wakizashi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:539`, `data/r31-assets.json:2553`
+- PASS_PATH `assets/r31/entities/items/0007-tonfa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:540`, `data/r31-assets.json:2554`
+- PASS_PATH `assets/r31/entities/items/0008-leque-guerra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:541`, `data/r31-assets.json:2555`
+- PASS_PATH `assets/r31/entities/items/0009-bomba-fumaca.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:542`
+- PASS_PATH `assets/r31/entities/items/0010-tarja-explosiva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:543`, `data/r31-assets.json:2557`
+- PASS_PATH `assets/r31/entities/items/0011-fio-aco.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:544`, `data/r31-assets.json:2558`
+- PASS_PATH `assets/r31/entities/items/0012-pilula-soldado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:545`, `data/r31-assets.json:2559`
+- PASS_PATH `assets/r31/entities/items/0013-kit-medico.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:546`
+- PASS_PATH `assets/r31/entities/items/0014-antidoto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:547`, `data/r31-assets.json:2561`
+- PASS_PATH `assets/r31/entities/items/0015-pergaminho-chakra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:548`, `data/r31-assets.json:2562`
+- PASS_PATH `assets/r31/entities/items/0016-colete-ninja.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:549`, `data/r31-assets.json:2563`
+- PASS_PATH `assets/r31/entities/items/0017-armadura-samurai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:550`, `data/r31-assets.json:2564`
+- PASS_PATH `assets/r31/entities/items/0018-ramen-simples.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:551`, `data/r31-assets.json:2565`
+- PASS_PATH `assets/r31/entities/items/0019-ramen-especial.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:552`, `data/r31-assets.json:2566`
+- PASS_PATH `assets/r31/entities/items/0020-argila-explosiva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:553`, `data/r31-assets.json:2567`
+- PASS_PATH `assets/r31/entities/items/0021-tinta-shinobi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:554`, `data/r31-assets.json:2568`
+- PASS_PATH `assets/r31/entities/items/0022-veneno-fraco.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:555`, `data/r31-assets.json:2569`
+- PASS_PATH `assets/r31/entities/items/0023-veneno-paralisante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:556`, `data/r31-assets.json:2570`
+- PASS_PATH `assets/r31/entities/items/0024-veneno-letal.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:557`, `data/r31-assets.json:2571`
+- PASS_PATH `assets/r31/entities/items/0025-espada-curta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:558`, `data/r31-assets.json:2572`
+- PASS_PATH `assets/r31/entities/items/0026-tanto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:559`, `data/r31-assets.json:2573`
+- PASS_PATH `assets/r31/entities/items/0027-gladio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:560`, `data/r31-assets.json:2574`
+- PASS_PATH `assets/r31/entities/items/0028-lanca.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:561`, `data/r31-assets.json:2575`
+- PASS_PATH `assets/r31/entities/items/0029-maca.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:562`, `data/r31-assets.json:2576`
+- PASS_PATH `assets/r31/entities/items/0030-ninja-to.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:563`, `data/r31-assets.json:2577`
+- PASS_PATH `assets/r31/entities/items/0031-bastao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:564`, `data/r31-assets.json:2578`
+- PASS_PATH `assets/r31/entities/items/0032-pique.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:565`, `data/r31-assets.json:2579`
+- PASS_PATH `assets/r31/entities/items/0033-tacape.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:566`, `data/r31-assets.json:2580`
+- PASS_PATH `assets/r31/entities/items/0034-arco-curto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:567`, `data/r31-assets.json:2581`
+- PASS_PATH `assets/r31/entities/items/0035-besta-leve.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:568`, `data/r31-assets.json:2582`
+- PASS_PATH `assets/r31/entities/items/0036-aian-nakkuru.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:569`, `data/r31-assets.json:2583`
+- PASS_PATH `assets/r31/entities/items/0037-kousen.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:570`, `data/r31-assets.json:2584`
+- PASS_PATH `assets/r31/entities/items/0038-nunchaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:571`, `data/r31-assets.json:2585`
+- PASS_PATH `assets/r31/entities/items/0039-sai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:572`, `data/r31-assets.json:2586`
+- PASS_PATH `assets/r31/entities/items/0040-chicote.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:573`, `data/r31-assets.json:2587`
+- PASS_PATH `assets/r31/entities/items/0041-chokuto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:574`, `data/r31-assets.json:2588`
+- PASS_PATH `assets/r31/entities/items/0042-cimitarra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:575`, `data/r31-assets.json:2589`
+- PASS_PATH `assets/r31/entities/items/0043-corrente-cravos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:576`, `data/r31-assets.json:2590`
+- PASS_PATH `assets/r31/entities/items/0044-espada-longa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:577`, `data/r31-assets.json:2591`
+- PASS_PATH `assets/r31/entities/items/0045-florete.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:578`, `data/r31-assets.json:2592`
+- PASS_PATH `assets/r31/entities/items/0046-machado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:579`, `data/r31-assets.json:2593`
+- PASS_PATH `assets/r31/entities/items/0047-martelo-guerra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:580`, `data/r31-assets.json:2594`
+- PASS_PATH `assets/r31/entities/items/0048-chakram.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:581`, `data/r31-assets.json:2595`
+- PASS_PATH `assets/r31/entities/items/0049-kusarigama.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:582`
+- PASS_PATH `assets/r31/entities/items/0050-lamina-oculta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:583`, `data/r31-assets.json:2597`
+- PASS_PATH `assets/r31/entities/items/0051-tekko-kagi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:584`, `data/r31-assets.json:2598`
+- PASS_PATH `assets/r31/entities/items/0052-leque-gigante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:585`, `data/r31-assets.json:2599`
+- PASS_PATH `assets/r31/entities/items/0053-otsuchi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:586`, `data/r31-assets.json:2600`
+- PASS_PATH `assets/r31/entities/items/0054-yari.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:587`, `data/r31-assets.json:2601`
+- PASS_PATH `assets/r31/entities/items/0055-foice.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:588`, `data/r31-assets.json:2602`
+- PASS_PATH `assets/r31/entities/items/0056-espada-duas-laminas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:589`, `data/r31-assets.json:2603`
+- PASS_PATH `assets/r31/entities/items/0057-espada-grande.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:590`, `data/r31-assets.json:2604`
+- PASS_PATH `assets/r31/entities/items/0058-machado-grande.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:591`, `data/r31-assets.json:2605`
+- PASS_PATH `assets/r31/entities/items/0059-fuuma-gigante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:592`, `data/r31-assets.json:2606`
+- PASS_PATH `assets/r31/entities/items/0060-fuuma-reta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:593`, `data/r31-assets.json:2607`
+- PASS_PATH `assets/r31/entities/items/0061-fuuma-kage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:594`, `data/r31-assets.json:2608`
+- PASS_PATH `assets/r31/entities/items/0062-arco-longo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:595`, `data/r31-assets.json:2609`
+- PASS_PATH `assets/r31/entities/items/0063-besta-pesada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:596`, `data/r31-assets.json:2610`
+- PASS_PATH `assets/r31/entities/items/0064-disparador-oculto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:597`, `data/r31-assets.json:2611`
+- PASS_PATH `assets/r31/entities/items/0065-bomba-luminosa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:598`, `data/r31-assets.json:2612`
+- PASS_PATH `assets/r31/entities/items/0066-boleadeira.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:599`, `data/r31-assets.json:2613`
+- PASS_PATH `assets/r31/entities/items/0067-bomba-marcacao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:600`, `data/r31-assets.json:2614`
+- PASS_PATH `assets/r31/entities/items/0068-bomba-trovao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:601`, `data/r31-assets.json:2615`
+- PASS_PATH `assets/r31/entities/items/0069-estrepes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:602`, `data/r31-assets.json:2616`
+- PASS_PATH `assets/r31/entities/items/0070-rede.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:603`, `data/r31-assets.json:2617`
+- PASS_PATH `assets/r31/entities/items/0071-tampoes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:604`, `data/r31-assets.json:2618`
+- PASS_PATH `assets/r31/entities/items/0072-roupa-comum.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:605`, `data/r31-assets.json:2619`
+- PASS_PATH `assets/r31/entities/items/0073-manopla-leve.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:606`, `data/r31-assets.json:2620`
+- PASS_PATH `assets/r31/entities/items/0074-colete-resistente.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:607`, `data/r31-assets.json:2621`
+- PASS_PATH `assets/r31/entities/items/0075-armadura-batalha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:608`, `data/r31-assets.json:2622`
+- PASS_PATH `assets/r31/entities/items/0076-armadura-reforcada.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:609`, `data/r31-assets.json:2623`
+- PASS_PATH `assets/r31/entities/items/0077-coldre.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:610`, `data/r31-assets.json:2624`
+- PASS_PATH `assets/r31/entities/items/0078-mochila.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:611`, `data/r31-assets.json:2625`
+- PASS_PATH `assets/r31/entities/items/0079-algemas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:612`, `data/r31-assets.json:2626`
+- PASS_PATH `assets/r31/entities/items/0080-corda.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:613`, `data/r31-assets.json:2627`
+- PASS_PATH `assets/r31/entities/items/0081-kit-artesao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:614`, `data/r31-assets.json:2628`
+- PASS_PATH `assets/r31/entities/items/0082-kit-ferramentas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:615`, `data/r31-assets.json:2629`
+- PASS_PATH `assets/r31/entities/items/0083-kit-laboratorio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:616`, `data/r31-assets.json:2630`
+- PASS_PATH `assets/r31/entities/items/0084-instrumento.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:617`, `data/r31-assets.json:2631`
+- PASS_PATH `assets/r31/entities/items/0085-lanterna.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:618`, `data/r31-assets.json:2632`
+- PASS_PATH `assets/r31/entities/items/0086-pergaminho-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:619`, `data/r31-assets.json:2633`
+- PASS_PATH `assets/r31/entities/items/0087-pergaminho-escrita.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:620`, `data/r31-assets.json:2634`
+- PASS_PATH `assets/r31/entities/items/0088-tarja-especial.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:621`, `data/r31-assets.json:2635`
+- PASS_PATH `assets/r31/entities/items/0089-saco-dormir.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:622`, `data/r31-assets.json:2636`
+- PASS_PATH `assets/r31/entities/items/0090-racao-viagem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:623`, `data/r31-assets.json:2637`
+- PASS_PATH `assets/r31/entities/items/0091-unico-kunai-selo-quebrado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:624`, `data/r31-assets.json:2638`
+- PASS_PATH `assets/r31/entities/items/0092-unico-manto-batedor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:625`, `data/r31-assets.json:2639`
+- PASS_PATH `assets/r31/entities/items/0093-unico-pergaminho-carmesim.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:626`, `data/r31-assets.json:2640`
+- PASS_PATH `assets/r31/entities/items/0094-unico-lamina-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:627`, `data/r31-assets.json:2641`
+- PASS_PATH `assets/r31/entities/items/0095-unico-protetor-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:628`, `data/r31-assets.json:2642`
+- PASS_PATH `assets/r31/entities/items/0096-unico-reliquia-trovao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:629`, `data/r31-assets.json:2643`
+- PASS_PATH `assets/r31/entities/items/0097-item-039.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:630`, `data/r31-assets.json:2644`
+- PASS_PATH `assets/r31/entities/items/0098-item-051.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:631`, `data/r31-assets.json:2645`
+- PASS_PATH `assets/r31/entities/items/0099-item-012.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:632`, `data/r31-assets.json:2646`
+- PASS_PATH `assets/r31/entities/items/0100-item-038.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:633`, `data/r31-assets.json:2647`
+- PASS_PATH `assets/r31/entities/items/0101-item-031.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:634`, `data/r31-assets.json:2648`
+- PASS_PATH `assets/r31/entities/items/0102-item-006.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:635`, `data/r31-assets.json:2556`
+- PASS_PATH `assets/r31/entities/items/0103-item-007.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:636`, `data/r31-assets.json:2649`
+- PASS_PATH `assets/r31/entities/items/0104-item-036.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:637`, `data/r31-assets.json:2650`
+- PASS_PATH `assets/r31/entities/items/0105-item-037.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:638`, `data/r31-assets.json:2651`
+- PASS_PATH `assets/r31/entities/items/0106-item-053.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:639`, `data/r31-assets.json:2652`
+- PASS_PATH `assets/r31/entities/items/0107-item-041.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:640`, `data/r31-assets.json:2653`
+- PASS_PATH `assets/r31/entities/items/0108-item-045.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:641`, `data/r31-assets.json:2654`
+- PASS_PATH `assets/r31/entities/items/0109-item-057.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:642`, `data/r31-assets.json:2655`
+- PASS_PATH `assets/r31/entities/items/0110-item-030.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:643`, `data/r31-assets.json:2656`
+- PASS_PATH `assets/r31/entities/items/0111-item-009.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:644`, `data/r31-assets.json:2657`
+- PASS_PATH `assets/r31/entities/items/0112-item-003.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:645`, `data/r31-assets.json:2658`
+- PASS_PATH `assets/r31/entities/items/0113-item-025.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:646`, `data/r31-assets.json:2659`
+- PASS_PATH `assets/r31/entities/items/0114-item-019.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:647`, `data/r31-assets.json:2660`
+- PASS_PATH `assets/r31/entities/items/0115-item-022.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:648`, `data/r31-assets.json:2661`
+- PASS_PATH `assets/r31/entities/items/0116-item-020.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:649`, `data/r31-assets.json:2662`
+- PASS_PATH `assets/r31/entities/items/0117-item-013.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:650`, `data/r31-assets.json:2560`
+- PASS_PATH `assets/r31/entities/items/0118-item-034.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:651`, `data/r31-assets.json:2663`
+- PASS_PATH `assets/r31/entities/items/0119-item-017.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:652`, `data/r31-assets.json:2664`
+- PASS_PATH `assets/r31/entities/items/0120-item-001.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:653`, `data/r31-assets.json:2548`
+- PASS_PATH `assets/r31/entities/items/0121-item-052.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:654`, `data/r31-assets.json:2665`
+- PASS_PATH `assets/r31/entities/items/0122-item-058.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:655`, `data/r31-assets.json:2666`
+- PASS_PATH `assets/r31/entities/items/0123-item-024.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:656`, `data/r31-assets.json:2667`
+- PASS_PATH `assets/r31/entities/items/0124-item-015.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:657`, `data/r31-assets.json:2596`
+- PASS_PATH `assets/r31/entities/items/0125-item-032.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:658`, `data/r31-assets.json:2668`
+- PASS_PATH `assets/r31/entities/items/0126-item-026.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:659`, `data/r31-assets.json:2669`
+- PASS_PATH `assets/r31/entities/items/0127-item-043.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:660`, `data/r31-assets.json:2670`
+- PASS_PATH `assets/r31/entities/items/0128-item-005.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:661`, `data/r31-assets.json:2671`
+- PASS_PATH `assets/r31/entities/items/0129-item-040.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:662`, `data/r31-assets.json:2672`
+- PASS_PATH `assets/r31/entities/items/0130-item-027.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:663`, `data/r31-assets.json:2673`
+- PASS_PATH `assets/r31/entities/items/0131-item-028.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:664`, `data/r31-assets.json:2674`
+- PASS_PATH `assets/r31/entities/items/0132-item-029.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:665`, `data/r31-assets.json:2675`
+- PASS_PATH `assets/r31/entities/items/0133-item-042.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:666`, `data/r31-assets.json:2676`
+- PASS_PATH `assets/r31/entities/items/0134-item-021.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:667`, `data/r31-assets.json:2677`
+- PASS_PATH `assets/r31/entities/items/0135-item-056.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:668`, `data/r31-assets.json:2678`
+- PASS_PATH `assets/r31/entities/items/0136-item-055.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:669`, `data/r31-assets.json:2679`
+- PASS_PATH `assets/r31/entities/items/0137-item-010.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:670`, `data/r31-assets.json:2680`
+- PASS_PATH `assets/r31/entities/items/0138-item-046.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:671`, `data/r31-assets.json:2681`
+- PASS_PATH `assets/r31/entities/items/0139-item-054.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:672`, `data/r31-assets.json:2682`
+- PASS_PATH `assets/r31/entities/items/0140-item-014.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:673`, `data/r31-assets.json:2683`
+- PASS_PATH `assets/r31/entities/items/0141-item-011.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:674`, `data/r31-assets.json:2684`
+- PASS_PATH `assets/r31/entities/items/0142-item-049.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:675`, `data/r31-assets.json:2685`
+- PASS_PATH `assets/r31/entities/items/0143-item-044.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:676`, `data/r31-assets.json:2686`
+- PASS_PATH `assets/r31/entities/items/0144-item-018.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:677`, `data/r31-assets.json:2687`
+- PASS_PATH `assets/r31/entities/items/0145-item-048.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:678`, `data/r31-assets.json:2688`
+- PASS_PATH `assets/r31/entities/items/0146-item-047.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:679`, `data/r31-assets.json:2689`
+- PASS_PATH `assets/r31/entities/items/0147-item-008.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:680`, `data/r31-assets.json:2690`
+- PASS_PATH `assets/r31/entities/items/0148-item-004.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:681`, `data/r31-assets.json:2691`
+- PASS_PATH `assets/r31/entities/items/0149-item-023.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:682`, `data/r31-assets.json:2692`
+- PASS_PATH `assets/r31/entities/items/0150-item-033.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:683`, `data/r31-assets.json:2693`
+- PASS_PATH `assets/r31/entities/items/0151-item-002.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:684`, `data/r31-assets.json:2549`
+- PASS_PATH `assets/r31/entities/items/0152-item-035.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:685`, `data/r31-assets.json:2694`
+- PASS_PATH `assets/r31/entities/items/0153-item-016.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:686`, `data/r31-assets.json:2695`
+- PASS_PATH `assets/r31/entities/items/0154-item-050.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:687`, `data/r31-assets.json:2696`
+- PASS_PATH `assets/r31/entities/items/0155-omamori-festival.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:688`, `data/r31-assets.json:2697`
+- PASS_PATH `assets/r31/entities/items/0156-pergaminho-mensageiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:689`, `data/r31-assets.json:2698`
+- PASS_PATH `assets/r31/entities/items/0157-fragmento-espacial-kurai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:690`, `data/r31-assets.json:2699`
+- PASS_PATH `assets/r31/entities/jutsus/0001-defesa-acrobatica.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:43`, `data/r31-assets.json:2063`
+- PASS_PATH `assets/r31/entities/jutsus/0002-chute.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:44`, `data/r31-assets.json:2064`
+- PASS_PATH `assets/r31/entities/jutsus/0003-defesa-mao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:45`, `data/r31-assets.json:2065`
+- PASS_PATH `assets/r31/entities/jutsus/0004-soco.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:46`, `data/r31-assets.json:2066`
+- PASS_PATH `assets/r31/entities/jutsus/0005-dynamic-kick.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:47`, `data/r31-assets.json:2067`
+- PASS_PATH `assets/r31/entities/jutsus/0006-bunshin-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:48`, `data/r31-assets.json:2068`
+- PASS_PATH `assets/r31/entities/jutsus/0007-bunshin-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:49`, `data/r31-assets.json:2069`
+- PASS_PATH `assets/r31/entities/jutsus/0008-kage-bunshin-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:50`, `data/r31-assets.json:2070`
+- PASS_PATH `assets/r31/entities/jutsus/0009-kage-bunshin-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:51`, `data/r31-assets.json:2071`
+- PASS_PATH `assets/r31/entities/jutsus/0010-kage-shuriken-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:52`, `data/r31-assets.json:2072`
+- PASS_PATH `assets/r31/entities/jutsus/0011-kakuremino-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:53`
+- PASS_PATH `assets/r31/entities/jutsus/0012-kawarimi-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:54`
+- PASS_PATH `assets/r31/entities/jutsus/0013-konoha-tzu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:55`, `data/r31-assets.json:2075`
+- PASS_PATH `assets/r31/entities/jutsus/0014-ninpou-mushou-de-hitei.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:56`, `data/r31-assets.json:2076`
+- PASS_PATH `assets/r31/entities/jutsus/0015-sensei-kage-bunshin-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:57`, `data/r31-assets.json:2077`
+- PASS_PATH `assets/r31/entities/jutsus/0016-dynamic-entry.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:58`, `data/r31-assets.json:2078`
+- PASS_PATH `assets/r31/entities/jutsus/0017-gangeki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:59`, `data/r31-assets.json:2079`
+- PASS_PATH `assets/r31/entities/jutsus/0018-hariitsuba.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:60`, `data/r31-assets.json:2080`
+- PASS_PATH `assets/r31/entities/jutsus/0019-konoha-full-kick-soccer.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:61`, `data/r31-assets.json:2081`
+- PASS_PATH `assets/r31/entities/jutsus/0020-konoha-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:62`, `data/r31-assets.json:2082`
+- PASS_PATH `assets/r31/entities/jutsus/0021-horengan-pill-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:63`, `data/r31-assets.json:2083`
+- PASS_PATH `assets/r31/entities/jutsus/0022-horengan-pill-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:64`, `data/r31-assets.json:2084`
+- PASS_PATH `assets/r31/entities/jutsus/0023-karengan-pill-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:65`, `data/r31-assets.json:2085`
+- PASS_PATH `assets/r31/entities/jutsus/0024-karengan-pill-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:66`, `data/r31-assets.json:2086`
+- PASS_PATH `assets/r31/entities/jutsus/0025-sensei-dynamic-entry.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:67`, `data/r31-assets.json:2087`
+- PASS_PATH `assets/r31/entities/jutsus/0026-akahigi-kiki-sankaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:68`, `data/r31-assets.json:2088`
+- PASS_PATH `assets/r31/entities/jutsus/0027-hadan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:69`, `data/r31-assets.json:2089`
+- PASS_PATH `assets/r31/entities/jutsus/0028-kawara-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:70`, `data/r31-assets.json:2090`
+- PASS_PATH `assets/r31/entities/jutsus/0029-kumo-senkyuu-suzaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:71`, `data/r31-assets.json:2091`
+- PASS_PATH `assets/r31/entities/jutsus/0030-nadeshikoryuu-shinku-enbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:72`, `data/r31-assets.json:2092`
+- PASS_PATH `assets/r31/entities/jutsus/0031-raikou-kenka-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:73`, `data/r31-assets.json:2093`
+- PASS_PATH `assets/r31/entities/jutsus/0032-raikou-kenka-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:74`, `data/r31-assets.json:2094`
+- PASS_PATH `assets/r31/entities/jutsus/0033-samedare-kekka.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:75`, `data/r31-assets.json:2095`
+- PASS_PATH `assets/r31/entities/jutsus/0034-sensei-soushuuga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:76`, `data/r31-assets.json:2096`
+- PASS_PATH `assets/r31/entities/jutsus/0035-shikomi-kugutsu-shinshin-happa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:77`, `data/r31-assets.json:2097`
+- PASS_PATH `assets/r31/entities/jutsus/0036-soushuuga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:78`, `data/r31-assets.json:2098`
+- PASS_PATH `assets/r31/entities/jutsus/0037-kokohi-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:79`, `data/r31-assets.json:2099`
+- PASS_PATH `assets/r31/entities/jutsus/0038-kori-shinchuu-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:80`, `data/r31-assets.json:2100`
+- PASS_PATH `assets/r31/entities/jutsus/0039-magen-narakumi-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:81`, `data/r31-assets.json:2101`
+- PASS_PATH `assets/r31/entities/jutsus/0040-magen-narakumi-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:82`, `data/r31-assets.json:2102`
+- PASS_PATH `assets/r31/entities/jutsus/0041-ninpou-hyakka-ryoran.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:83`, `data/r31-assets.json:2103`
+- PASS_PATH `assets/r31/entities/jutsus/0042-oto-no-gen.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:84`, `data/r31-assets.json:2104`
+- PASS_PATH `assets/r31/entities/jutsus/0043-sensei-oto-no-gen.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:85`, `data/r31-assets.json:2105`
+- PASS_PATH `assets/r31/entities/jutsus/0044-bunshin-bakuretsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:86`, `data/r31-assets.json:2106`
+- PASS_PATH `assets/r31/entities/jutsus/0045-doton-dochuu-eigyo-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:87`, `data/r31-assets.json:2107`
+- PASS_PATH `assets/r31/entities/jutsus/0046-doton-doroku-gaeshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:88`, `data/r31-assets.json:2108`
+- PASS_PATH `assets/r31/entities/jutsus/0047-doton-doryou-dango.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:89`, `data/r31-assets.json:2109`
+- PASS_PATH `assets/r31/entities/jutsus/0048-doton-doryuuheki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:90`, `data/r31-assets.json:2110`
+- PASS_PATH `assets/r31/entities/jutsus/0049-fuuton-daitoppa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:91`, `data/r31-assets.json:2111`
+- PASS_PATH `assets/r31/entities/jutsus/0050-fuuton-kaze-kiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:92`, `data/r31-assets.json:2112`
+- PASS_PATH `assets/r31/entities/jutsus/0051-fuuton-kaze-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:93`, `data/r31-assets.json:2113`
+- PASS_PATH `assets/r31/entities/jutsus/0052-fuuton-suiran-reppu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:94`, `data/r31-assets.json:2114`
+- PASS_PATH `assets/r31/entities/jutsus/0053-katon-bushin-katai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:95`, `data/r31-assets.json:2115`
+- PASS_PATH `assets/r31/entities/jutsus/0054-katon-goukakyuu-chakra-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:96`, `data/r31-assets.json:2116`
+- PASS_PATH `assets/r31/entities/jutsus/0055-katon-housenka-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:97`, `data/r31-assets.json:2117`
+- PASS_PATH `assets/r31/entities/jutsus/0056-katon-kasumi-enbu-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:98`, `data/r31-assets.json:2118`
+- PASS_PATH `assets/r31/entities/jutsus/0057-kuro-tatsumaki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:99`, `data/r31-assets.json:2119`
+- PASS_PATH `assets/r31/entities/jutsus/0058-meisai-gakure-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:100`, `data/r31-assets.json:2120`
+- PASS_PATH `assets/r31/entities/jutsus/0059-meisai-gakure-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:101`, `data/r31-assets.json:2121`
+- PASS_PATH `assets/r31/entities/jutsus/0060-raiton-chidori.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:102`, `data/r31-assets.json:2122`
+- PASS_PATH `assets/r31/entities/jutsus/0061-raiton-odori-rakurai-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:103`, `data/r31-assets.json:2123`
+- PASS_PATH `assets/r31/entities/jutsus/0062-raiton-raiden.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:104`, `data/r31-assets.json:2124`
+- PASS_PATH `assets/r31/entities/jutsus/0063-raiton-raikyuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:105`, `data/r31-assets.json:2125`
+- PASS_PATH `assets/r31/entities/jutsus/0064-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:106`
+- PASS_PATH `assets/r31/entities/jutsus/0065-sensei-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:107`, `data/r31-assets.json:2127`
+- PASS_PATH `assets/r31/entities/jutsus/0066-suiton-daibakufu-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:108`, `data/r31-assets.json:2128`
+- PASS_PATH `assets/r31/entities/jutsus/0067-suiton-hahonryu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:109`, `data/r31-assets.json:2129`
+- PASS_PATH `assets/r31/entities/jutsus/0068-suiton-haran-banshou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:110`, `data/r31-assets.json:2130`
+- PASS_PATH `assets/r31/entities/jutsus/0069-suiton-mizu-kamikiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:111`, `data/r31-assets.json:2131`
+- PASS_PATH `assets/r31/entities/jutsus/0070-tajuu-taki-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:112`, `data/r31-assets.json:2132`
+- PASS_PATH `assets/r31/entities/jutsus/0071-panchi.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:113`
+- PASS_PATH `assets/r31/entities/jutsus/0072-aian-kurou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:114`, `data/r31-assets.json:2134`
+- PASS_PATH `assets/r31/entities/jutsus/0073-kongouriki-fudou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:115`, `data/r31-assets.json:2135`
+- PASS_PATH `assets/r31/entities/jutsus/0074-konoha-dai-senkou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:116`, `data/r31-assets.json:2136`
+- PASS_PATH `assets/r31/entities/jutsus/0075-konoha-kage-buyou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:117`, `data/r31-assets.json:2137`
+- PASS_PATH `assets/r31/entities/jutsus/0076-konoha-reppuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:118`, `data/r31-assets.json:2138`
+- PASS_PATH `assets/r31/entities/jutsus/0077-tongarashigan-pill-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:119`, `data/r31-assets.json:2139`
+- PASS_PATH `assets/r31/entities/jutsus/0078-tongarashigan-pill-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:120`, `data/r31-assets.json:2140`
+- PASS_PATH `assets/r31/entities/jutsus/0079-sennen-goroshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:121`, `data/r31-assets.json:2141`
+- PASS_PATH `assets/r31/entities/jutsus/0080-sensei-sennen-goroshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:122`, `data/r31-assets.json:2142`
+- PASS_PATH `assets/r31/entities/jutsus/0081-shishi-rendan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:123`, `data/r31-assets.json:2143`
+- PASS_PATH `assets/r31/entities/jutsus/0082-an-no-genjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:124`, `data/r31-assets.json:2144`
+- PASS_PATH `assets/r31/entities/jutsus/0083-hyakka-ninpou-hanachiri-nuko.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:125`, `data/r31-assets.json:2145`
+- PASS_PATH `assets/r31/entities/jutsus/0084-karasu-no-genjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:126`, `data/r31-assets.json:2146`
+- PASS_PATH `assets/r31/entities/jutsus/0085-magen-kokuni-arazu-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:127`, `data/r31-assets.json:2147`
+- PASS_PATH `assets/r31/entities/jutsus/0086-magen-kokuni-arazu-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:128`, `data/r31-assets.json:2148`
+- PASS_PATH `assets/r31/entities/jutsus/0087-mateki-mugen-onki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:129`, `data/r31-assets.json:2149`
+- PASS_PATH `assets/r31/entities/jutsus/0088-nehan-shouja-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:130`, `data/r31-assets.json:2150`
+- PASS_PATH `assets/r31/entities/jutsus/0089-sensei-kokohi-deboa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:131`, `data/r31-assets.json:2151`
+- PASS_PATH `assets/r31/entities/jutsus/0090-ayatsuito-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:132`, `data/r31-assets.json:2152`
+- PASS_PATH `assets/r31/entities/jutsus/0091-ayatsuito-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:133`, `data/r31-assets.json:2153`
+- PASS_PATH `assets/r31/entities/jutsus/0092-doton-ari-jigoku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:134`, `data/r31-assets.json:2154`
+- PASS_PATH `assets/r31/entities/jutsus/0093-doton-doryuu-jouheki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:135`, `data/r31-assets.json:2155`
+- PASS_PATH `assets/r31/entities/jutsus/0094-doton-kekkai-dorou-doumu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:136`, `data/r31-assets.json:2156`
+- PASS_PATH `assets/r31/entities/jutsus/0095-fuuton-atsuga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:137`, `data/r31-assets.json:2157`
+- PASS_PATH `assets/r31/entities/jutsus/0096-fuuton-juuha-shou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:138`, `data/r31-assets.json:2158`
+- PASS_PATH `assets/r31/entities/jutsus/0097-fuuton-zankuuha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:139`, `data/r31-assets.json:2159`
+- PASS_PATH `assets/r31/entities/jutsus/0098-gokan-sakusou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:140`, `data/r31-assets.json:2160`
+- PASS_PATH `assets/r31/entities/jutsus/0099-katon-endan-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:141`, `data/r31-assets.json:2161`
+- PASS_PATH `assets/r31/entities/jutsus/0100-katon-kaizen-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:142`, `data/r31-assets.json:2162`
+- PASS_PATH `assets/r31/entities/jutsus/0101-katon-ryuuka-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:143`, `data/r31-assets.json:2163`
+- PASS_PATH `assets/r31/entities/jutsus/0102-mikazuki-no-mai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:144`, `data/r31-assets.json:2164`
+- PASS_PATH `assets/r31/entities/jutsus/0103-oodama-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:145`, `data/r31-assets.json:2165`
+- PASS_PATH `assets/r31/entities/jutsus/0104-raiton-chidori-nagashi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:146`, `data/r31-assets.json:2166`
+- PASS_PATH `assets/r31/entities/jutsus/0105-raiton-habateku-chidori.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:147`, `data/r31-assets.json:2167`
+- PASS_PATH `assets/r31/entities/jutsus/0106-raiton-meshirai-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:148`, `data/r31-assets.json:2168`
+- PASS_PATH `assets/r31/entities/jutsus/0107-sensei-mikazuki-no-mai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:149`, `data/r31-assets.json:2169`
+- PASS_PATH `assets/r31/entities/jutsus/0108-shihouhappou-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:150`, `data/r31-assets.json:2170`
+- PASS_PATH `assets/r31/entities/jutsus/0109-suiton-kirigakure-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:151`, `data/r31-assets.json:2171`
+- PASS_PATH `assets/r31/entities/jutsus/0110-suiton-mizurappa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:152`, `data/r31-assets.json:2172`
+- PASS_PATH `assets/r31/entities/jutsus/0111-suiton-suijinheki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:153`, `data/r31-assets.json:2173`
+- PASS_PATH `assets/r31/entities/jutsus/0112-tatsumaki-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:154`, `data/r31-assets.json:2174`
+- PASS_PATH `assets/r31/entities/jutsus/0113-chokugeki-raikou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:155`, `data/r31-assets.json:2175`
+- PASS_PATH `assets/r31/entities/jutsus/0114-doroppu-kikku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:156`, `data/r31-assets.json:2176`
+- PASS_PATH `assets/r31/entities/jutsus/0115-double-dynamic-entry.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:157`, `data/r31-assets.json:2177`
+- PASS_PATH `assets/r31/entities/jutsus/0116-erubou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:158`, `data/r31-assets.json:2178`
+- PASS_PATH `assets/r31/entities/jutsus/0117-hayabusa-otoshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:159`, `data/r31-assets.json:2179`
+- PASS_PATH `assets/r31/entities/jutsus/0118-juuken-shinan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:160`, `data/r31-assets.json:2180`
+- PASS_PATH `assets/r31/entities/jutsus/0119-kakeami.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:161`, `data/r31-assets.json:2181`
+- PASS_PATH `assets/r31/entities/jutsus/0120-kamaitachi-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:162`
+- PASS_PATH `assets/r31/entities/jutsus/0121-konoha-dairetsukuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:163`, `data/r31-assets.json:2183`
+- PASS_PATH `assets/r31/entities/jutsus/0122-konoha-gouhourairaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:164`, `data/r31-assets.json:2184`
+- PASS_PATH `assets/r31/entities/jutsus/0123-konoha-gouriki-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:165`, `data/r31-assets.json:2185`
+- PASS_PATH `assets/r31/entities/jutsus/0124-konoha-kaiganshou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:166`, `data/r31-assets.json:2186`
+- PASS_PATH `assets/r31/entities/jutsus/0125-konoharyuu-yanagi-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:167`, `data/r31-assets.json:2187`
+- PASS_PATH `assets/r31/entities/jutsus/0126-konoharyuu-yanagi-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:168`, `data/r31-assets.json:2188`
+- PASS_PATH `assets/r31/entities/jutsus/0127-kosa-ho.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:169`, `data/r31-assets.json:2189`
+- PASS_PATH `assets/r31/entities/jutsus/0128-kugutsu-sakura-no-mai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:170`, `data/r31-assets.json:2190`
+- PASS_PATH `assets/r31/entities/jutsus/0129-kugutsu-no-jutsu-gishu-senbon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:171`, `data/r31-assets.json:2191`
+- PASS_PATH `assets/r31/entities/jutsus/0130-kumoryuu-mikazukigiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:172`, `data/r31-assets.json:2192`
+- PASS_PATH `assets/r31/entities/jutsus/0131-kumoryuu-uragiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:173`, `data/r31-assets.json:2193`
+- PASS_PATH `assets/r31/entities/jutsus/0132-kusarigama-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:174`, `data/r31-assets.json:2194`
+- PASS_PATH `assets/r31/entities/jutsus/0133-kyaku-kick.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:175`, `data/r31-assets.json:2195`
+- PASS_PATH `assets/r31/entities/jutsus/0134-oborozukiyo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:176`, `data/r31-assets.json:2196`
+- PASS_PATH `assets/r31/entities/jutsus/0135-raigyaku-suihei.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:177`, `data/r31-assets.json:2197`
+- PASS_PATH `assets/r31/entities/jutsus/0136-raikyuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:178`, `data/r31-assets.json:2198`
+- PASS_PATH `assets/r31/entities/jutsus/0137-raisou-ikazuchi-no-utage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:179`, `data/r31-assets.json:2199`
+- PASS_PATH `assets/r31/entities/jutsus/0138-rakanken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:180`, `data/r31-assets.json:2200`
+- PASS_PATH `assets/r31/entities/jutsus/0139-sakura-fubuki-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:181`, `data/r31-assets.json:2201`
+- PASS_PATH `assets/r31/entities/jutsus/0140-senmoufuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:182`, `data/r31-assets.json:2202`
+- PASS_PATH `assets/r31/entities/jutsus/0141-sensei-konoha-gouriki-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:183`, `data/r31-assets.json:2203`
+- PASS_PATH `assets/r31/entities/jutsus/0142-sensei-kumoryuu-mikazukigiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:184`, `data/r31-assets.json:2204`
+- PASS_PATH `assets/r31/entities/jutsus/0143-setsuna.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:185`, `data/r31-assets.json:2205`
+- PASS_PATH `assets/r31/entities/jutsus/0144-shinkuuken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:186`, `data/r31-assets.json:2206`
+- PASS_PATH `assets/r31/entities/jutsus/0145-suiken-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:187`, `data/r31-assets.json:2207`
+- PASS_PATH `assets/r31/entities/jutsus/0146-suiken-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:188`, `data/r31-assets.json:2208`
+- PASS_PATH `assets/r31/entities/jutsus/0147-suishou-tou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:189`, `data/r31-assets.json:2209`
+- PASS_PATH `assets/r31/entities/jutsus/0148-takigakureryuu-mizukiri-no-yaiba.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:190`, `data/r31-assets.json:2210`
+- PASS_PATH `assets/r31/entities/jutsus/0149-genjutsu-no-kiri-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:191`, `data/r31-assets.json:2211`
+- PASS_PATH `assets/r31/entities/jutsus/0150-genjutsu-no-kiri-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:192`, `data/r31-assets.json:2212`
+- PASS_PATH `assets/r31/entities/jutsus/0151-magen-kasegui-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:193`, `data/r31-assets.json:2213`
+- PASS_PATH `assets/r31/entities/jutsus/0152-mugen-marou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:194`, `data/r31-assets.json:2214`
+- PASS_PATH `assets/r31/entities/jutsus/0153-raigen-raikouchuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:195`, `data/r31-assets.json:2215`
+- PASS_PATH `assets/r31/entities/jutsus/0154-sensei-mateki-mugen-onki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:196`, `data/r31-assets.json:2216`
+- PASS_PATH `assets/r31/entities/jutsus/0155-shinu-no-genjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:197`, `data/r31-assets.json:2217`
+- PASS_PATH `assets/r31/entities/jutsus/0156-yubi-no-genjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:198`, `data/r31-assets.json:2218`
+- PASS_PATH `assets/r31/entities/jutsus/0157-chou-oodama-rasen-tarengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:199`, `data/r31-assets.json:2219`
+- PASS_PATH `assets/r31/entities/jutsus/0158-chou-oodama-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:200`, `data/r31-assets.json:2220`
+- PASS_PATH `assets/r31/entities/jutsus/0159-doton-kouka-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:201`, `data/r31-assets.json:2221`
+- PASS_PATH `assets/r31/entities/jutsus/0160-doton-otoshi-buta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:202`, `data/r31-assets.json:2222`
+- PASS_PATH `assets/r31/entities/jutsus/0161-doton-retsudo-tenshou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:203`, `data/r31-assets.json:2223`
+- PASS_PATH `assets/r31/entities/jutsus/0162-enton-kokuen-no-tate.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:204`, `data/r31-assets.json:2224`
+- PASS_PATH `assets/r31/entities/jutsus/0163-enton-kuro-hisaki-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:205`, `data/r31-assets.json:2225`
+- PASS_PATH `assets/r31/entities/jutsus/0164-futton-fukidemono-tashou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:206`, `data/r31-assets.json:2226`
+- PASS_PATH `assets/r31/entities/jutsus/0165-futton-tashou-koutetsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:207`, `data/r31-assets.json:2227`
+- PASS_PATH `assets/r31/entities/jutsus/0166-fuuton-kaze-shunshin-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:208`, `data/r31-assets.json:2228`
+- PASS_PATH `assets/r31/entities/jutsus/0167-fuuton-reppushou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:209`, `data/r31-assets.json:2229`
+- PASS_PATH `assets/r31/entities/jutsus/0168-fuuton-zankyokuhaana.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:210`, `data/r31-assets.json:2230`
+- PASS_PATH `assets/r31/entities/jutsus/0169-hiraishin-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:211`, `data/r31-assets.json:2231`
+- PASS_PATH `assets/r31/entities/jutsus/0170-hiraishin-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:212`, `data/r31-assets.json:2232`
+- PASS_PATH `assets/r31/entities/jutsus/0171-hyouton-hissatsu-hyousou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:213`, `data/r31-assets.json:2233`
+- PASS_PATH `assets/r31/entities/jutsus/0172-hyouton-hyourou-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:214`, `data/r31-assets.json:2234`
+- PASS_PATH `assets/r31/entities/jutsus/0173-kakuan-nitten-suishu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:215`, `data/r31-assets.json:2235`
+- PASS_PATH `assets/r31/entities/jutsus/0174-katon-hibashiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:216`, `data/r31-assets.json:2236`
+- PASS_PATH `assets/r31/entities/jutsus/0175-katon-ninpou-hibashiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:217`, `data/r31-assets.json:2237`
+- PASS_PATH `assets/r31/entities/jutsus/0176-katon-ryuuen-houka-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:218`, `data/r31-assets.json:2238`
+- PASS_PATH `assets/r31/entities/jutsus/0177-minirasenshuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:219`, `data/r31-assets.json:2239`
+- PASS_PATH `assets/r31/entities/jutsus/0178-mokuton-daijurin-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:220`, `data/r31-assets.json:2240`
+- PASS_PATH `assets/r31/entities/jutsus/0179-mokuton-mokujouheki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:221`, `data/r31-assets.json:2241`
+- PASS_PATH `assets/r31/entities/jutsus/0180-ninpou-gyoraishin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:222`, `data/r31-assets.json:2242`
+- PASS_PATH `assets/r31/entities/jutsus/0181-oyako-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:223`, `data/r31-assets.json:2243`
+- PASS_PATH `assets/r31/entities/jutsus/0182-raiton-chidori-eisou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:224`, `data/r31-assets.json:2244`
+- PASS_PATH `assets/r31/entities/jutsus/0183-raiton-chidori-kouken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:225`, `data/r31-assets.json:2245`
+- PASS_PATH `assets/r31/entities/jutsus/0184-raiton-raigeki-no-yoroi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:226`, `data/r31-assets.json:2246`
+- PASS_PATH `assets/r31/entities/jutsus/0185-ranji-shigumi-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:227`, `data/r31-assets.json:2247`
+- PASS_PATH `assets/r31/entities/jutsus/0186-ranton-kuroi-kaminari.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:228`, `data/r31-assets.json:2248`
+- PASS_PATH `assets/r31/entities/jutsus/0187-ranton-kuropansa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:229`, `data/r31-assets.json:2249`
+- PASS_PATH `assets/r31/entities/jutsus/0188-rasenkyuugan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:230`, `data/r31-assets.json:2250`
+- PASS_PATH `assets/r31/entities/jutsus/0189-reika-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:231`, `data/r31-assets.json:2251`
+- PASS_PATH `assets/r31/entities/jutsus/0190-senpou-oodama-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:232`, `data/r31-assets.json:2252`
+- PASS_PATH `assets/r31/entities/jutsus/0191-sensei-chou-oodama-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:233`, `data/r31-assets.json:2253`
+- PASS_PATH `assets/r31/entities/jutsus/0192-sensei-hiraishin-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:234`, `data/r31-assets.json:2254`
+- PASS_PATH `assets/r31/entities/jutsus/0193-suiton-bakusui-shouha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:235`, `data/r31-assets.json:2255`
+- PASS_PATH `assets/r31/entities/jutsus/0194-suiton-suiryuuben.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:236`, `data/r31-assets.json:2256`
+- PASS_PATH `assets/r31/entities/jutsus/0195-suiton-suiryuudan-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:237`, `data/r31-assets.json:2257`
+- PASS_PATH `assets/r31/entities/jutsus/0196-tajuu-kage-bunshin-no-jutsu-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:238`, `data/r31-assets.json:2258`
+- PASS_PATH `assets/r31/entities/jutsus/0197-tajuu-kage-bunshin-no-jutsu-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:239`, `data/r31-assets.json:2259`
+- PASS_PATH `assets/r31/entities/jutsus/0198-wakusei-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:240`, `data/r31-assets.json:2260`
+- PASS_PATH `assets/r31/entities/jutsus/0199-akahigi-kaenhoushaki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:241`, `data/r31-assets.json:2261`
+- PASS_PATH `assets/r31/entities/jutsus/0200-aoi-shougeki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:242`, `data/r31-assets.json:2262`
+- PASS_PATH `assets/r31/entities/jutsus/0201-bunshin-kaiten-kakato-otoshi-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:243`, `data/r31-assets.json:2263`
+- PASS_PATH `assets/r31/entities/jutsus/0202-bunshin-kaiten-kakato-otoshi-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:244`, `data/r31-assets.json:2264`
+- PASS_PATH `assets/r31/entities/jutsus/0203-dokukiri-jigoku-baribari-hyaku-renpatsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:245`, `data/r31-assets.json:2265`
+- PASS_PATH `assets/r31/entities/jutsus/0204-girochin-doroppu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:246`, `data/r31-assets.json:2266`
+- PASS_PATH `assets/r31/entities/jutsus/0205-gourai-renge.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:247`, `data/r31-assets.json:2267`
+- PASS_PATH `assets/r31/entities/jutsus/0206-gunbai-kaze-aekousha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:248`, `data/r31-assets.json:2268`
+- PASS_PATH `assets/r31/entities/jutsus/0207-heddo-batto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:249`, `data/r31-assets.json:2269`
+- PASS_PATH `assets/r31/entities/jutsus/0208-hiken-tsukikage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:250`, `data/r31-assets.json:2270`
+- PASS_PATH `assets/r31/entities/jutsus/0209-ikazuchi-no-kiba.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:251`, `data/r31-assets.json:2271`
+- PASS_PATH `assets/r31/entities/jutsus/0210-kibaku-fuda-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:252`, `data/r31-assets.json:2272`
+- PASS_PATH `assets/r31/entities/jutsus/0211-kongou-rouheki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:253`, `data/r31-assets.json:2273`
+- PASS_PATH `assets/r31/entities/jutsus/0212-konoha-shoufuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:254`, `data/r31-assets.json:2274`
+- PASS_PATH `assets/r31/entities/jutsus/0213-konoha-tsumuji-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:255`, `data/r31-assets.json:2275`
+- PASS_PATH `assets/r31/entities/jutsus/0214-kumoryuu-kaengiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:256`, `data/r31-assets.json:2276`
+- PASS_PATH `assets/r31/entities/jutsus/0215-kurohigi-kiki-ippatsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:257`, `data/r31-assets.json:2277`
+- PASS_PATH `assets/r31/entities/jutsus/0216-kurohigi-kiki-nihatsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:258`, `data/r31-assets.json:2278`
+- PASS_PATH `assets/r31/entities/jutsus/0217-kurohigi-kiki-sanpatsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:259`, `data/r31-assets.json:2279`
+- PASS_PATH `assets/r31/entities/jutsus/0218-mugen-kougai-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:260`, `data/r31-assets.json:2280`
+- PASS_PATH `assets/r31/entities/jutsus/0219-mugen-kougai-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:261`, `data/r31-assets.json:2281`
+- PASS_PATH `assets/r31/entities/jutsus/0220-raiga-bomu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:262`, `data/r31-assets.json:2282`
+- PASS_PATH `assets/r31/entities/jutsus/0221-raiken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:263`, `data/r31-assets.json:2283`
+- PASS_PATH `assets/r31/entities/jutsus/0222-rariatto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:264`, `data/r31-assets.json:2284`
+- PASS_PATH `assets/r31/entities/jutsus/0223-reijingu-sandaa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:265`, `data/r31-assets.json:2285`
+- PASS_PATH `assets/r31/entities/jutsus/0224-sensei-akahigi-kaenhoushaki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:266`, `data/r31-assets.json:2286`
+- PASS_PATH `assets/r31/entities/jutsus/0225-sensei-raiga-bomu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:267`, `data/r31-assets.json:2287`
+- PASS_PATH `assets/r31/entities/jutsus/0226-shuriken-shinkuujin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:268`, `data/r31-assets.json:2288`
+- PASS_PATH `assets/r31/entities/jutsus/0227-souninshuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:269`, `data/r31-assets.json:2289`
+- PASS_PATH `assets/r31/entities/jutsus/0228-taihou-sentou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:270`, `data/r31-assets.json:2290`
+- PASS_PATH `assets/r31/entities/jutsus/0229-tatsumaki-kyaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:271`, `data/r31-assets.json:2291`
+- PASS_PATH `assets/r31/entities/jutsus/0230-tsuutenkyaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:272`, `data/r31-assets.json:2292`
+- PASS_PATH `assets/r31/entities/jutsus/0231-genjutsu-shibari.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:273`, `data/r31-assets.json:2293`
+- PASS_PATH `assets/r31/entities/jutsus/0232-hana-ninpou-bakuhatsu-kemuri-no-hanabira.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:274`, `data/r31-assets.json:2294`
+- PASS_PATH `assets/r31/entities/jutsus/0233-koburabijon-ito-sasshin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:275`, `data/r31-assets.json:2295`
+- PASS_PATH `assets/r31/entities/jutsus/0234-kokohi-tatakai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:276`, `data/r31-assets.json:2296`
+- PASS_PATH `assets/r31/entities/jutsus/0235-magen-gamarinshou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:277`, `data/r31-assets.json:2297`
+- PASS_PATH `assets/r31/entities/jutsus/0236-sensei-magen-kasegui-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:278`, `data/r31-assets.json:2298`
+- PASS_PATH `assets/r31/entities/jutsus/0237-shirano.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:279`, `data/r31-assets.json:2299`
+- PASS_PATH `assets/r31/entities/jutsus/0238-utakata-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:280`, `data/r31-assets.json:2300`
+- PASS_PATH `assets/r31/entities/jutsus/0239-utakata-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:281`, `data/r31-assets.json:2301`
+- PASS_PATH `assets/r31/entities/jutsus/0240-doton-doro-houshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:282`, `data/r31-assets.json:2302`
+- PASS_PATH `assets/r31/entities/jutsus/0241-doton-ex-reppuken-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:283`, `data/r31-assets.json:2303`
+- PASS_PATH `assets/r31/entities/jutsus/0242-doton-tsuchi-kairou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:284`, `data/r31-assets.json:2304`
+- PASS_PATH `assets/r31/entities/jutsus/0243-enton-kagutsuchi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:285`, `data/r31-assets.json:2305`
+- PASS_PATH `assets/r31/entities/jutsus/0244-enton-kuro-magatama.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:286`, `data/r31-assets.json:2306`
+- PASS_PATH `assets/r31/entities/jutsus/0245-futton-jouki-kikku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:287`, `data/r31-assets.json:2307`
+- PASS_PATH `assets/r31/entities/jutsus/0246-futton-koumu-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:288`, `data/r31-assets.json:2308`
+- PASS_PATH `assets/r31/entities/jutsus/0247-fuuton-kami-oroshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:289`, `data/r31-assets.json:2309`
+- PASS_PATH `assets/r31/entities/jutsus/0248-fuuton-kaze-no-yaiba.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:290`, `data/r31-assets.json:2310`
+- PASS_PATH `assets/r31/entities/jutsus/0249-fuuton-rasenshuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:291`, `data/r31-assets.json:2311`
+- PASS_PATH `assets/r31/entities/jutsus/0250-henge-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.json:292`
+- PASS_PATH `assets/r31/entities/jutsus/0251-hyouton-haryuu-mouko.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:293`, `data/r31-assets.json:2313`
+- PASS_PATH `assets/r31/entities/jutsus/0252-hyouton-kokuryuu-boufuusetsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:294`, `data/r31-assets.json:2314`
+- PASS_PATH `assets/r31/entities/jutsus/0253-katon-gouka-mekkyaku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:295`, `data/r31-assets.json:2315`
+- PASS_PATH `assets/r31/entities/jutsus/0254-katon-kakokuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:296`, `data/r31-assets.json:2316`
+- PASS_PATH `assets/r31/entities/jutsus/0255-katon-souenshou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:297`, `data/r31-assets.json:2317`
+- PASS_PATH `assets/r31/entities/jutsus/0256-mokuton-jubaku-eisou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:298`, `data/r31-assets.json:2318`
+- PASS_PATH `assets/r31/entities/jutsus/0257-mokuton-mokujin-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:299`, `data/r31-assets.json:2319`
+- PASS_PATH `assets/r31/entities/jutsus/0258-raiton-kirin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:300`, `data/r31-assets.json:2320`
+- PASS_PATH `assets/r31/entities/jutsus/0259-raiton-limelight.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:301`, `data/r31-assets.json:2321`
+- PASS_PATH `assets/r31/entities/jutsus/0260-raiton-senbon-chidori.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:302`, `data/r31-assets.json:2322`
+- PASS_PATH `assets/r31/entities/jutsus/0261-ranton-raiunkouha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:303`, `data/r31-assets.json:2323`
+- PASS_PATH `assets/r31/entities/jutsus/0262-ranton-rankiryuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:304`, `data/r31-assets.json:2324`
+- PASS_PATH `assets/r31/entities/jutsus/0263-suiton-goshokuzame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:305`, `data/r31-assets.json:2325`
+- PASS_PATH `assets/r31/entities/jutsus/0264-suiton-suihouke.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:306`, `data/r31-assets.json:2326`
+- PASS_PATH `assets/r31/entities/jutsus/0265-suiton-suijinchuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:307`, `data/r31-assets.json:2327`
+- PASS_PATH `assets/r31/entities/jutsus/0266-m-panchi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:308`, `data/r31-assets.json:2133`
+- PASS_PATH `assets/r31/entities/jutsus/0267-bakuhatsuteki-iaikai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:309`, `data/r31-assets.json:2328`
+- PASS_PATH `assets/r31/entities/jutsus/0268-bakutou-jutsu-happa-rokujuushi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:310`, `data/r31-assets.json:2329`
+- PASS_PATH `assets/r31/entities/jutsus/0269-chakurahiru-wanizame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:311`, `data/r31-assets.json:2330`
+- PASS_PATH `assets/r31/entities/jutsus/0270-chiyu-ketsueki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:312`, `data/r31-assets.json:2331`
+- PASS_PATH `assets/r31/entities/jutsus/0271-chou-biburaato-raitontou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:313`, `data/r31-assets.json:2332`
+- PASS_PATH `assets/r31/entities/jutsus/0272-chouharite.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:314`, `data/r31-assets.json:2333`
+- PASS_PATH `assets/r31/entities/jutsus/0273-choutou-ninpou-jigumo-nui.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:315`, `data/r31-assets.json:2334`
+- PASS_PATH `assets/r31/entities/jutsus/0274-daburu-rariatto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:316`, `data/r31-assets.json:2335`
+- PASS_PATH `assets/r31/entities/jutsus/0275-housenka-tsumabeni.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:317`, `data/r31-assets.json:2336`
+- PASS_PATH `assets/r31/entities/jutsus/0276-iaigiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:318`, `data/r31-assets.json:2337`
+- PASS_PATH `assets/r31/entities/jutsus/0277-jigokuzuki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:319`, `data/r31-assets.json:2338`
+- PASS_PATH `assets/r31/entities/jutsus/0278-kaihou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:320`, `data/r31-assets.json:2339`
+- PASS_PATH `assets/r31/entities/jutsus/0279-kanadzuchi-dageki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:321`, `data/r31-assets.json:2340`
+- PASS_PATH `assets/r31/entities/jutsus/0280-kongouriki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:322`, `data/r31-assets.json:2341`
+- PASS_PATH `assets/r31/entities/jutsus/0281-konoha-dai-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:323`, `data/r31-assets.json:2342`
+- PASS_PATH `assets/r31/entities/jutsus/0282-konoha-neppuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:324`, `data/r31-assets.json:2343`
+- PASS_PATH `assets/r31/entities/jutsus/0283-konoha-ryuujin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:325`, `data/r31-assets.json:2344`
+- PASS_PATH `assets/r31/entities/jutsus/0284-kumoryuu-omotegiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:326`, `data/r31-assets.json:2345`
+- PASS_PATH `assets/r31/entities/jutsus/0285-kunai-shinkuujin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:327`, `data/r31-assets.json:2346`
+- PASS_PATH `assets/r31/entities/jutsus/0286-myu-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:328`, `data/r31-assets.json:2347`
+- PASS_PATH `assets/r31/entities/jutsus/0287-nanatsu-butoukai-ken-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:329`, `data/r31-assets.json:2348`
+- PASS_PATH `assets/r31/entities/jutsus/0288-nanatsu-butoukai-ken-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:330`, `data/r31-assets.json:2349`
+- PASS_PATH `assets/r31/entities/jutsus/0289-ookakeami.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:331`, `data/r31-assets.json:2350`
+- PASS_PATH `assets/r31/entities/jutsus/0290-soldier-pill-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:332`, `data/r31-assets.json:2351`
+- PASS_PATH `assets/r31/entities/jutsus/0291-soldier-pill-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:333`, `data/r31-assets.json:2352`
+- PASS_PATH `assets/r31/entities/jutsus/0292-sanbon-nukite.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:334`, `data/r31-assets.json:2353`
+- PASS_PATH `assets/r31/entities/jutsus/0293-sandaageeto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:335`, `data/r31-assets.json:2354`
+- PASS_PATH `assets/r31/entities/jutsus/0294-seinshun-burupapua.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:336`, `data/r31-assets.json:2355`
+- PASS_PATH `assets/r31/entities/jutsus/0295-sensei-chou-biburaato-raitontou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:337`, `data/r31-assets.json:2356`
+- PASS_PATH `assets/r31/entities/jutsus/0296-sensei-kaihou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:338`, `data/r31-assets.json:2357`
+- PASS_PATH `assets/r31/entities/jutsus/0297-sensei-shichikenbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:339`, `data/r31-assets.json:2358`
+- PASS_PATH `assets/r31/entities/jutsus/0298-shichikenbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:340`, `data/r31-assets.json:2359`
+- PASS_PATH `assets/r31/entities/jutsus/0299-tsuiraku-kabuto.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:341`, `data/r31-assets.json:2360`
+- PASS_PATH `assets/r31/entities/jutsus/0300-uchihagaeshi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:342`, `data/r31-assets.json:2361`
+- PASS_PATH `assets/r31/entities/jutsus/0301-yonhon-nukite.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:343`, `data/r31-assets.json:2362`
+- PASS_PATH `assets/r31/entities/jutsus/0302-genei-tajuu-shuriken.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:344`, `data/r31-assets.json:2363`
+- PASS_PATH `assets/r31/entities/jutsus/0303-hijutsu-ishibari-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:345`, `data/r31-assets.json:2364`
+- PASS_PATH `assets/r31/entities/jutsus/0304-hijutsu-ishibari-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:346`, `data/r31-assets.json:2365`
+- PASS_PATH `assets/r31/entities/jutsus/0305-jouro-senbon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:347`, `data/r31-assets.json:2366`
+- PASS_PATH `assets/r31/entities/jutsus/0306-rensha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:348`, `data/r31-assets.json:2367`
+- PASS_PATH `assets/r31/entities/jutsus/0307-sensei-soushuriken-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:349`, `data/r31-assets.json:2368`
+- PASS_PATH `assets/r31/entities/jutsus/0308-shikomishindan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:350`, `data/r31-assets.json:2369`
+- PASS_PATH `assets/r31/entities/jutsus/0309-soufuushasan-no-tachi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:351`, `data/r31-assets.json:2370`
+- PASS_PATH `assets/r31/entities/jutsus/0310-soushuriken-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:352`, `data/r31-assets.json:2371`
+- PASS_PATH `assets/r31/entities/jutsus/0311-soushuujin-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:353`, `data/r31-assets.json:2372`
+- PASS_PATH `assets/r31/entities/jutsus/0312-soushuujin-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:354`, `data/r31-assets.json:2373`
+- PASS_PATH `assets/r31/entities/jutsus/0313-bakuon-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:355`, `data/r31-assets.json:2374`
+- PASS_PATH `assets/r31/entities/jutsus/0314-hana-kyouka-sai-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:356`, `data/r31-assets.json:2375`
+- PASS_PATH `assets/r31/entities/jutsus/0315-hana-kyouka-sai-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:357`, `data/r31-assets.json:2376`
+- PASS_PATH `assets/r31/entities/jutsus/0316-kasumi-juuha-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:358`, `data/r31-assets.json:2377`
+- PASS_PATH `assets/r31/entities/jutsus/0317-kishibari-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:359`, `data/r31-assets.json:2378`
+- PASS_PATH `assets/r31/entities/jutsus/0318-kokoroyoru-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:360`, `data/r31-assets.json:2379`
+- PASS_PATH `assets/r31/entities/jutsus/0319-nemuri-i.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:361`, `data/r31-assets.json:2380`
+- PASS_PATH `assets/r31/entities/jutsus/0320-nemuri-ii.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:362`, `data/r31-assets.json:2381`
+- PASS_PATH `assets/r31/entities/jutsus/0321-sensei-genjutsu-no-kiri.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:363`, `data/r31-assets.json:2382`
+- PASS_PATH `assets/r31/entities/jutsus/0322-sensei-hana-kyouka-sai.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:364`, `data/r31-assets.json:2383`
+- PASS_PATH `assets/r31/entities/jutsus/0323-tazuneru-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:365`, `data/r31-assets.json:2384`
+- PASS_PATH `assets/r31/entities/jutsus/0324-utsusemi-no-jutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:366`, `data/r31-assets.json:2385`
+- PASS_PATH `assets/r31/entities/jutsus/0325-enton-kourin-shippuu-shikkoku-no-ya-zeroshiki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:367`, `data/r31-assets.json:2386`
+- PASS_PATH `assets/r31/entities/jutsus/0326-futton-hageshii-futtou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:368`, `data/r31-assets.json:2387`
+- PASS_PATH `assets/r31/entities/jutsus/0327-hyouton-makyou-hyoushou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:369`, `data/r31-assets.json:2388`
+- PASS_PATH `assets/r31/entities/jutsus/0328-mokuton-shin-suusenju.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:370`, `data/r31-assets.json:2389`
+- PASS_PATH `assets/r31/entities/jutsus/0329-ranton-reizaa-saakasu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:371`, `data/r31-assets.json:2390`
+- PASS_PATH `assets/r31/entities/jutsus/0330-sensei-oyako-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:372`, `data/r31-assets.json:2391`
+- PASS_PATH `assets/r31/entities/jutsus/0331-ippon-nukite.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:373`, `data/r31-assets.json:2392`
+- PASS_PATH `assets/r31/entities/jutsus/0332-sensei-myu-senpuu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:374`, `data/r31-assets.json:2393`
+- PASS_PATH `assets/r31/entities/jutsus/0333-jutsu-131.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:375`, `data/r31-assets.json:2394`
+- PASS_PATH `assets/r31/entities/jutsus/0334-jutsu-071.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:376`, `data/r31-assets.json:2395`
+- PASS_PATH `assets/r31/entities/jutsus/0335-jutsu-148.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:377`, `data/r31-assets.json:2396`
+- PASS_PATH `assets/r31/entities/jutsus/0336-jutsu-096.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:378`, `data/r31-assets.json:2397`
+- PASS_PATH `assets/r31/entities/jutsus/0337-jutsu-085.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:379`, `data/r31-assets.json:2398`
+- PASS_PATH `assets/r31/entities/jutsus/0338-jutsu-060.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:380`, `data/r31-assets.json:2399`
+- PASS_PATH `assets/r31/entities/jutsus/0339-jutsu-140.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:381`, `data/r31-assets.json:2400`
+- PASS_PATH `assets/r31/entities/jutsus/0340-jutsu-152.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:382`, `data/r31-assets.json:2401`
+- PASS_PATH `assets/r31/entities/jutsus/0341-jutsu-002.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:383`, `data/r31-assets.json:2402`
+- PASS_PATH `assets/r31/entities/jutsus/0342-jutsu-064.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:384`, `data/r31-assets.json:2403`
+- PASS_PATH `assets/r31/entities/jutsus/0343-jutsu-106.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:385`, `data/r31-assets.json:2404`
+- PASS_PATH `assets/r31/entities/jutsus/0344-jutsu-130.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:386`, `data/r31-assets.json:2405`
+- PASS_PATH `assets/r31/entities/jutsus/0345-jutsu-126.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:387`, `data/r31-assets.json:2406`
+- PASS_PATH `assets/r31/entities/jutsus/0346-jutsu-127.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:388`, `data/r31-assets.json:2407`
+- PASS_PATH `assets/r31/entities/jutsus/0347-jutsu-128.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:389`, `data/r31-assets.json:2408`
+- PASS_PATH `assets/r31/entities/jutsus/0348-jutsu-129.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:390`, `data/r31-assets.json:2409`
+- PASS_PATH `assets/r31/entities/jutsus/0349-jutsu-105.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:391`, `data/r31-assets.json:2410`
+- PASS_PATH `assets/r31/entities/jutsus/0350-jutsu-141.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:392`, `data/r31-assets.json:2411`
+- PASS_PATH `assets/r31/entities/jutsus/0351-jutsu-014.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:393`, `data/r31-assets.json:2412`
+- PASS_PATH `assets/r31/entities/jutsus/0352-jutsu-086.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:394`, `data/r31-assets.json:2413`
+- PASS_PATH `assets/r31/entities/jutsus/0353-jutsu-123.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:395`, `data/r31-assets.json:2414`
+- PASS_PATH `assets/r31/entities/jutsus/0354-jutsu-034.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:396`, `data/r31-assets.json:2415`
+- PASS_PATH `assets/r31/entities/jutsus/0355-jutsu-032.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:397`, `data/r31-assets.json:2416`
+- PASS_PATH `assets/r31/entities/jutsus/0356-jutsu-031.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:398`, `data/r31-assets.json:2417`
+- PASS_PATH `assets/r31/entities/jutsus/0357-jutsu-036.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:399`, `data/r31-assets.json:2418`
+- PASS_PATH `assets/r31/entities/jutsus/0358-jutsu-035.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:400`, `data/r31-assets.json:2419`
+- PASS_PATH `assets/r31/entities/jutsus/0359-jutsu-033.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:401`, `data/r31-assets.json:2420`
+- PASS_PATH `assets/r31/entities/jutsus/0360-jutsu-037.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:402`, `data/r31-assets.json:2421`
+- PASS_PATH `assets/r31/entities/jutsus/0361-jutsu-042.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:403`, `data/r31-assets.json:2422`
+- PASS_PATH `assets/r31/entities/jutsus/0362-jutsu-114.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:404`, `data/r31-assets.json:2423`
+- PASS_PATH `assets/r31/entities/jutsus/0363-jutsu-067.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:405`, `data/r31-assets.json:2424`
+- PASS_PATH `assets/r31/entities/jutsus/0364-jutsu-115.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:406`, `data/r31-assets.json:2425`
+- PASS_PATH `assets/r31/entities/jutsus/0365-jutsu-058.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:407`, `data/r31-assets.json:2426`
+- PASS_PATH `assets/r31/entities/jutsus/0366-jutsu-112.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:408`, `data/r31-assets.json:2427`
+- PASS_PATH `assets/r31/entities/jutsus/0367-jutsu-043.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:409`, `data/r31-assets.json:2428`
+- PASS_PATH `assets/r31/entities/jutsus/0368-jutsu-046.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:410`, `data/r31-assets.json:2429`
+- PASS_PATH `assets/r31/entities/jutsus/0369-jutsu-045.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:411`, `data/r31-assets.json:2430`
+- PASS_PATH `assets/r31/entities/jutsus/0370-jutsu-044.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:412`, `data/r31-assets.json:2431`
+- PASS_PATH `assets/r31/entities/jutsus/0371-jutsu-144.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:413`, `data/r31-assets.json:2432`
+- PASS_PATH `assets/r31/entities/jutsus/0372-jutsu-092.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:414`, `data/r31-assets.json:2433`
+- PASS_PATH `assets/r31/entities/jutsus/0373-jutsu-142.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:415`, `data/r31-assets.json:2434`
+- PASS_PATH `assets/r31/entities/jutsus/0374-jutsu-110.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:416`, `data/r31-assets.json:2435`
+- PASS_PATH `assets/r31/entities/jutsus/0375-jutsu-111.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:417`, `data/r31-assets.json:2436`
+- PASS_PATH `assets/r31/entities/jutsus/0376-jutsu-100.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:418`, `data/r31-assets.json:2437`
+- PASS_PATH `assets/r31/entities/jutsus/0377-jutsu-079.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:419`, `data/r31-assets.json:2438`
+- PASS_PATH `assets/r31/entities/jutsus/0378-jutsu-077.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:420`, `data/r31-assets.json:2439`
+- PASS_PATH `assets/r31/entities/jutsus/0379-jutsu-078.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:421`, `data/r31-assets.json:2440`
+- PASS_PATH `assets/r31/entities/jutsus/0380-jutsu-001.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:422`, `data/r31-assets.json:2312`
+- PASS_PATH `assets/r31/entities/jutsus/0381-jutsu-146.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:423`, `data/r31-assets.json:2441`
+- PASS_PATH `assets/r31/entities/jutsus/0382-jutsu-147.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:424`, `data/r31-assets.json:2442`
+- PASS_PATH `assets/r31/entities/jutsus/0383-jutsu-097.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:425`, `data/r31-assets.json:2443`
+- PASS_PATH `assets/r31/entities/jutsus/0384-jutsu-049.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:426`, `data/r31-assets.json:2444`
+- PASS_PATH `assets/r31/entities/jutsus/0385-jutsu-050.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:427`, `data/r31-assets.json:2445`
+- PASS_PATH `assets/r31/entities/jutsus/0386-jutsu-075.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:428`, `data/r31-assets.json:2446`
+- PASS_PATH `assets/r31/entities/jutsus/0387-jutsu-076.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:429`, `data/r31-assets.json:2447`
+- PASS_PATH `assets/r31/entities/jutsus/0388-jutsu-056.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:430`, `data/r31-assets.json:2448`
+- PASS_PATH `assets/r31/entities/jutsus/0389-jutsu-121.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:431`, `data/r31-assets.json:2449`
+- PASS_PATH `assets/r31/entities/jutsus/0390-jutsu-061.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:432`, `data/r31-assets.json:2450`
+- PASS_PATH `assets/r31/entities/jutsus/0391-jutsu-062.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:433`, `data/r31-assets.json:2451`
+- PASS_PATH `assets/r31/entities/jutsus/0392-jutsu-122.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:434`, `data/r31-assets.json:2452`
+- PASS_PATH `assets/r31/entities/jutsus/0393-jutsu-091.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:435`, `data/r31-assets.json:2453`
+- PASS_PATH `assets/r31/entities/jutsus/0394-jutsu-080.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:436`, `data/r31-assets.json:2454`
+- PASS_PATH `assets/r31/entities/jutsus/0395-jutsu-006.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:437`, `data/r31-assets.json:2455`
+- PASS_PATH `assets/r31/entities/jutsus/0396-jutsu-082.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:438`, `data/r31-assets.json:2456`
+- PASS_PATH `assets/r31/entities/jutsus/0397-jutsu-081.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:439`, `data/r31-assets.json:2457`
+- PASS_PATH `assets/r31/entities/jutsus/0398-jutsu-072.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:440`, `data/r31-assets.json:2458`
+- PASS_PATH `assets/r31/entities/jutsus/0399-jutsu-009.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:441`, `data/r31-assets.json:2459`
+- PASS_PATH `assets/r31/entities/jutsus/0400-jutsu-005.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:442`, `data/r31-assets.json:2073`
+- PASS_PATH `assets/r31/entities/jutsus/0401-jutsu-047.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:443`, `data/r31-assets.json:2182`
+- PASS_PATH `assets/r31/entities/jutsus/0402-jutsu-125.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:444`, `data/r31-assets.json:2460`
+- PASS_PATH `assets/r31/entities/jutsus/0403-jutsu-073.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:445`, `data/r31-assets.json:2461`
+- PASS_PATH `assets/r31/entities/jutsus/0404-jutsu-133.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:446`, `data/r31-assets.json:2462`
+- PASS_PATH `assets/r31/entities/jutsus/0405-jutsu-020.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:447`, `data/r31-assets.json:2463`
+- PASS_PATH `assets/r31/entities/jutsus/0406-jutsu-016.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:448`, `data/r31-assets.json:2464`
+- PASS_PATH `assets/r31/entities/jutsus/0407-jutsu-019.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:449`, `data/r31-assets.json:2465`
+- PASS_PATH `assets/r31/entities/jutsus/0408-jutsu-021.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:450`, `data/r31-assets.json:2466`
+- PASS_PATH `assets/r31/entities/jutsus/0409-jutsu-017.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:451`, `data/r31-assets.json:2467`
+- PASS_PATH `assets/r31/entities/jutsus/0410-jutsu-022.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:452`, `data/r31-assets.json:2468`
+- PASS_PATH `assets/r31/entities/jutsus/0411-jutsu-018.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:453`, `data/r31-assets.json:2469`
+- PASS_PATH `assets/r31/entities/jutsus/0412-jutsu-003.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:454`, `data/r31-assets.json:2074`
+- PASS_PATH `assets/r31/entities/jutsus/0413-jutsu-157.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:455`, `data/r31-assets.json:2470`
+- PASS_PATH `assets/r31/entities/jutsus/0414-jutsu-088.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:456`, `data/r31-assets.json:2471`
+- PASS_PATH `assets/r31/entities/jutsus/0415-jutsu-048.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:457`, `data/r31-assets.json:2472`
+- PASS_PATH `assets/r31/entities/jutsus/0416-jutsu-108.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:458`, `data/r31-assets.json:2473`
+- PASS_PATH `assets/r31/entities/jutsus/0417-jutsu-069.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:459`, `data/r31-assets.json:2474`
+- PASS_PATH `assets/r31/entities/jutsus/0418-jutsu-010.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:460`, `data/r31-assets.json:2475`
+- PASS_PATH `assets/r31/entities/jutsus/0419-jutsu-145.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:461`, `data/r31-assets.json:2476`
+- PASS_PATH `assets/r31/entities/jutsus/0420-jutsu-041.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:462`, `data/r31-assets.json:2477`
+- PASS_PATH `assets/r31/entities/jutsus/0421-jutsu-101.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:463`, `data/r31-assets.json:2478`
+- PASS_PATH `assets/r31/entities/jutsus/0422-jutsu-117.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:464`, `data/r31-assets.json:2479`
+- PASS_PATH `assets/r31/entities/jutsus/0423-jutsu-066.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:465`, `data/r31-assets.json:2480`
+- PASS_PATH `assets/r31/entities/jutsus/0424-jutsu-153.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:466`, `data/r31-assets.json:2481`
+- PASS_PATH `assets/r31/entities/jutsus/0425-jutsu-102.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:467`, `data/r31-assets.json:2482`
+- PASS_PATH `assets/r31/entities/jutsus/0426-jutsu-154.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:468`, `data/r31-assets.json:2483`
+- PASS_PATH `assets/r31/entities/jutsus/0427-jutsu-155.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:469`, `data/r31-assets.json:2484`
+- PASS_PATH `assets/r31/entities/jutsus/0428-jutsu-054.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:470`, `data/r31-assets.json:2485`
+- PASS_PATH `assets/r31/entities/jutsus/0429-jutsu-051.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:471`, `data/r31-assets.json:2486`
+- PASS_PATH `assets/r31/entities/jutsus/0430-jutsu-052.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:472`, `data/r31-assets.json:2487`
+- PASS_PATH `assets/r31/entities/jutsus/0431-jutsu-053.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:473`, `data/r31-assets.json:2488`
+- PASS_PATH `assets/r31/entities/jutsus/0432-jutsu-055.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:474`, `data/r31-assets.json:2489`
+- PASS_PATH `assets/r31/entities/jutsus/0433-jutsu-089.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:475`, `data/r31-assets.json:2490`
+- PASS_PATH `assets/r31/entities/jutsus/0434-jutsu-004.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:476`, `data/r31-assets.json:2491`
+- PASS_PATH `assets/r31/entities/jutsus/0435-jutsu-103.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:477`, `data/r31-assets.json:2492`
+- PASS_PATH `assets/r31/entities/jutsus/0436-jutsu-087.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:478`, `data/r31-assets.json:2493`
+- PASS_PATH `assets/r31/entities/jutsus/0437-jutsu-143.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:479`, `data/r31-assets.json:2494`
+- PASS_PATH `assets/r31/entities/jutsus/0438-jutsu-094.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:480`, `data/r31-assets.json:2495`
+- PASS_PATH `assets/r31/entities/jutsus/0439-jutsu-015.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:481`, `data/r31-assets.json:2496`
+- PASS_PATH `assets/r31/entities/jutsus/0440-jutsu-038.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:482`, `data/r31-assets.json:2497`
+- PASS_PATH `assets/r31/entities/jutsus/0441-jutsu-039.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:483`, `data/r31-assets.json:2498`
+- PASS_PATH `assets/r31/entities/jutsus/0442-jutsu-040.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:484`, `data/r31-assets.json:2499`
+- PASS_PATH `assets/r31/entities/jutsus/0443-jutsu-063.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:485`, `data/r31-assets.json:2500`
+- PASS_PATH `assets/r31/entities/jutsus/0444-jutsu-013.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:486`, `data/r31-assets.json:2501`
+- PASS_PATH `assets/r31/entities/jutsus/0445-jutsu-011.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:487`, `data/r31-assets.json:2126`
+- PASS_PATH `assets/r31/entities/jutsus/0446-jutsu-068.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:488`, `data/r31-assets.json:2502`
+- PASS_PATH `assets/r31/entities/jutsus/0447-jutsu-138.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:489`, `data/r31-assets.json:2503`
+- PASS_PATH `assets/r31/entities/jutsus/0448-jutsu-135.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:490`, `data/r31-assets.json:2504`
+- PASS_PATH `assets/r31/entities/jutsus/0449-jutsu-136.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:491`, `data/r31-assets.json:2505`
+- PASS_PATH `assets/r31/entities/jutsus/0450-jutsu-134.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:492`, `data/r31-assets.json:2506`
+- PASS_PATH `assets/r31/entities/jutsus/0451-jutsu-098.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:493`, `data/r31-assets.json:2507`
+- PASS_PATH `assets/r31/entities/jutsus/0452-jutsu-116.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:494`, `data/r31-assets.json:2508`
+- PASS_PATH `assets/r31/entities/jutsus/0453-jutsu-156.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:495`, `data/r31-assets.json:2509`
+- PASS_PATH `assets/r31/entities/jutsus/0454-jutsu-059.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:496`, `data/r31-assets.json:2510`
+- PASS_PATH `assets/r31/entities/jutsus/0455-jutsu-065.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:497`, `data/r31-assets.json:2511`
+- PASS_PATH `assets/r31/entities/jutsus/0456-jutsu-109.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:498`, `data/r31-assets.json:2512`
+- PASS_PATH `assets/r31/entities/jutsus/0457-jutsu-124.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:499`, `data/r31-assets.json:2513`
+- PASS_PATH `assets/r31/entities/jutsus/0458-jutsu-119.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:500`, `data/r31-assets.json:2514`
+- PASS_PATH `assets/r31/entities/jutsus/0459-jutsu-118.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:501`, `data/r31-assets.json:2515`
+- PASS_PATH `assets/r31/entities/jutsus/0460-jutsu-090.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:502`, `data/r31-assets.json:2516`
+- PASS_PATH `assets/r31/entities/jutsus/0461-jutsu-084.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:503`, `data/r31-assets.json:2517`
+- PASS_PATH `assets/r31/entities/jutsus/0462-jutsu-139.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:504`, `data/r31-assets.json:2518`
+- PASS_PATH `assets/r31/entities/jutsus/0463-jutsu-083.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:505`, `data/r31-assets.json:2519`
+- PASS_PATH `assets/r31/entities/jutsus/0464-jutsu-132.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:506`, `data/r31-assets.json:2520`
+- PASS_PATH `assets/r31/entities/jutsus/0465-jutsu-113.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:507`, `data/r31-assets.json:2521`
+- PASS_PATH `assets/r31/entities/jutsus/0466-jutsu-008.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:508`, `data/r31-assets.json:2522`
+- PASS_PATH `assets/r31/entities/jutsus/0467-jutsu-104.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:509`, `data/r31-assets.json:2523`
+- PASS_PATH `assets/r31/entities/jutsus/0468-jutsu-027.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:510`, `data/r31-assets.json:2524`
+- PASS_PATH `assets/r31/entities/jutsus/0469-jutsu-025.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:511`, `data/r31-assets.json:2525`
+- PASS_PATH `assets/r31/entities/jutsus/0470-jutsu-028.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:512`, `data/r31-assets.json:2526`
+- PASS_PATH `assets/r31/entities/jutsus/0471-jutsu-030.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:513`, `data/r31-assets.json:2527`
+- PASS_PATH `assets/r31/entities/jutsus/0472-jutsu-024.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:514`, `data/r31-assets.json:2528`
+- PASS_PATH `assets/r31/entities/jutsus/0473-jutsu-023.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:515`, `data/r31-assets.json:2529`
+- PASS_PATH `assets/r31/entities/jutsus/0474-jutsu-026.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:516`, `data/r31-assets.json:2530`
+- PASS_PATH `assets/r31/entities/jutsus/0475-jutsu-029.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:517`, `data/r31-assets.json:2531`
+- PASS_PATH `assets/r31/entities/jutsus/0476-jutsu-137.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:518`, `data/r31-assets.json:2532`
+- PASS_PATH `assets/r31/entities/jutsus/0477-jutsu-074.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:519`, `data/r31-assets.json:2533`
+- PASS_PATH `assets/r31/entities/jutsus/0478-jutsu-120.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:520`, `data/r31-assets.json:2534`
+- PASS_PATH `assets/r31/entities/jutsus/0479-jutsu-093.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:521`, `data/r31-assets.json:2535`
+- PASS_PATH `assets/r31/entities/jutsus/0480-jutsu-107.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:522`, `data/r31-assets.json:2536`
+- PASS_PATH `assets/r31/entities/jutsus/0481-jutsu-007.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:523`, `data/r31-assets.json:2537`
+- PASS_PATH `assets/r31/entities/jutsus/0482-jutsu-150.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:524`, `data/r31-assets.json:2538`
+- PASS_PATH `assets/r31/entities/jutsus/0483-jutsu-151.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:525`, `data/r31-assets.json:2539`
+- PASS_PATH `assets/r31/entities/jutsus/0484-jutsu-070.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:526`, `data/r31-assets.json:2540`
+- PASS_PATH `assets/r31/entities/jutsus/0485-jutsu-095.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:527`, `data/r31-assets.json:2541`
+- PASS_PATH `assets/r31/entities/jutsus/0486-jutsu-099.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:528`, `data/r31-assets.json:2542`
+- PASS_PATH `assets/r31/entities/jutsus/0487-jutsu-149.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:529`, `data/r31-assets.json:2543`
+- PASS_PATH `assets/r31/entities/jutsus/0488-jutsu-057.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:530`, `data/r31-assets.json:2544`
+- PASS_PATH `assets/r31/entities/jutsus/0489-jutsu-012.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:531`, `data/r31-assets.json:2545`
+- PASS_PATH `assets/r31/entities/locations/0001-locations-amegakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1488`, `data/r31-assets.json:3497`
+- PASS_PATH `assets/r31/entities/locations/0002-locations-arena-do-exame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1489`, `data/r31-assets.json:3498`
+- PASS_PATH `assets/r31/entities/locations/0003-locations-caverna-ry-chi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1490`, `data/r31-assets.json:3499`
+- PASS_PATH `assets/r31/entities/locations/0004-locations-complexos-da-raiz.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1491`, `data/r31-assets.json:3500`
+- PASS_PATH `assets/r31/entities/locations/0005-locations-floresta-shikkotsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1492`, `data/r31-assets.json:3501`
+- PASS_PATH `assets/r31/entities/locations/0006-locations-floresta-da-morte.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1493`, `data/r31-assets.json:3502`
+- PASS_PATH `assets/r31/entities/locations/0007-locations-hospital-de-konoha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1494`, `data/r31-assets.json:3503`
+- PASS_PATH `assets/r31/entities/locations/0008-locations-konoha-academia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1495`, `data/r31-assets.json:3504`
+- PASS_PATH `assets/r31/entities/locations/0009-locations-konoha-torre-do-hokage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1496`, `data/r31-assets.json:3505`
+- PASS_PATH `assets/r31/entities/locations/0010-locations-monte-my-boku.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1497`, `data/r31-assets.json:3506`
+- PASS_PATH `assets/r31/entities/locations/0011-locations-otogakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1498`, `data/r31-assets.json:3507`
+- PASS_PATH `assets/r31/entities/locations/0012-locations-pais-do-ferro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1499`, `data/r31-assets.json:3508`
+- PASS_PATH `assets/r31/entities/locations/0013-locations-sala-301.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1500`, `data/r31-assets.json:3509`
+- PASS_PATH `assets/r31/entities/locations/0014-locations-sunagakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1501`, `data/r31-assets.json:3510`
+- PASS_PATH `assets/r31/entities/locations/0015-locations-vale-do-fim.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1502`, `data/r31-assets.json:3511`
+- PASS_PATH `assets/r31/entities/locations/0017-locations-konoha-mercado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1504`, `data/r31-assets.json:3513`
+- PASS_PATH `assets/r31/entities/locations/0018-locations-konoha-portao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1505`, `data/r31-assets.json:3514`
+- PASS_PATH `assets/r31/entities/locations/0019-locations-konoha-campo-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1506`, `data/r31-assets.json:3515`
+- PASS_PATH `assets/r31/entities/locations/0020-locations-konoha-residencial.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1507`, `data/r31-assets.json:3516`
+- PASS_PATH `assets/r31/entities/locations/0021-locations-suna-torre-kazekage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1508`, `data/r31-assets.json:3517`
+- PASS_PATH `assets/r31/entities/locations/0022-locations-suna-mercado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1509`, `data/r31-assets.json:3518`
+- PASS_PATH `assets/r31/entities/locations/0023-locations-suna-campo-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1510`, `data/r31-assets.json:3519`
+- PASS_PATH `assets/r31/entities/locations/0024-locations-kiri-gabinete-mizukage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1511`, `data/r31-assets.json:3520`
+- PASS_PATH `assets/r31/entities/locations/0025-locations-kiri-docas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1512`, `data/r31-assets.json:3521`
+- PASS_PATH `assets/r31/entities/locations/0026-locations-kiri-campo-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1513`, `data/r31-assets.json:3522`
+- PASS_PATH `assets/r31/entities/locations/0027-locations-kumo-gabinete-raikage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1514`, `data/r31-assets.json:3523`
+- PASS_PATH `assets/r31/entities/locations/0028-locations-kumo-campo-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1515`, `data/r31-assets.json:3524`
+- PASS_PATH `assets/r31/entities/locations/0029-locations-kumo-mercado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1516`, `data/r31-assets.json:3525`
+- PASS_PATH `assets/r31/entities/locations/0030-locations-iwa-gabinete-tsuchikage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1517`, `data/r31-assets.json:3526`
+- PASS_PATH `assets/r31/entities/locations/0031-locations-iwa-campo-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1518`, `data/r31-assets.json:3527`
+- PASS_PATH `assets/r31/entities/locations/0032-locations-iwa-mercado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1519`, `data/r31-assets.json:3528`
+- PASS_PATH `assets/r31/entities/locations/0033-locations-oto-centro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1520`, `data/r31-assets.json:3529`
+- PASS_PATH `assets/r31/entities/locations/0034-locations-oto-laboratorio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1521`, `data/r31-assets.json:3530`
+- PASS_PATH `assets/r31/entities/locations/0035-locations-ame-centro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1522`, `data/r31-assets.json:3531`
+- PASS_PATH `assets/r31/entities/locations/0036-locations-ame-torre.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1523`, `data/r31-assets.json:3532`
+- PASS_PATH `assets/r31/entities/locations/0037-locations-estradas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1524`, `data/r31-assets.json:3533`
+- PASS_PATH `assets/r31/entities/locations/0038-locations-mercado-negro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1525`, `data/r31-assets.json:3534`
+- PASS_PATH `assets/r31/entities/missions/0001-task1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1000`, `data/r31-assets.json:3009`
+- PASS_PATH `assets/r31/entities/missions/0002-task9.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1001`, `data/r31-assets.json:3010`
+- PASS_PATH `assets/r31/entities/missions/0003-task10.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1002`, `data/r31-assets.json:3011`
+- PASS_PATH `assets/r31/entities/missions/0004-mission1.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1003`, `data/r31-assets.json:3012`
+- PASS_PATH `assets/r31/entities/missions/0005-mission73.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1004`, `data/r31-assets.json:3013`
+- PASS_PATH `assets/r31/entities/missions/0006-mission78.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1005`, `data/r31-assets.json:3014`
+- PASS_PATH `assets/r31/entities/missions/0007-mission79.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1006`, `data/r31-assets.json:3015`
+- PASS_PATH `assets/r31/entities/missions/0008-mission76.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1007`, `data/r31-assets.json:3016`
+- PASS_PATH `assets/r31/entities/missions/0009-mission75.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1008`, `data/r31-assets.json:3017`
+- PASS_PATH `assets/r31/entities/missions/0010-mission81.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1009`, `data/r31-assets.json:3018`
+- PASS_PATH `assets/r31/entities/missions/0011-mission77.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1010`, `data/r31-assets.json:3019`
+- PASS_PATH `assets/r31/entities/missions/0012-mission2.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1011`, `data/r31-assets.json:3020`
+- PASS_PATH `assets/r31/entities/missions/0013-mission3.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1012`, `data/r31-assets.json:3021`
+- PASS_PATH `assets/r31/entities/missions/0014-mission6.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1013`, `data/r31-assets.json:3022`
+- PASS_PATH `assets/r31/entities/missions/0015-mission7.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1014`, `data/r31-assets.json:3023`
+- PASS_PATH `assets/r31/entities/missions/0016-mission8.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1015`, `data/r31-assets.json:3024`
+- PASS_PATH `assets/r31/entities/missions/0017-mission9.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1016`, `data/r31-assets.json:3025`
+- PASS_PATH `assets/r31/entities/missions/0018-mission4.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1017`, `data/r31-assets.json:3026`
+- PASS_PATH `assets/r31/entities/missions/0019-mission5.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1018`, `data/r31-assets.json:3027`
+- PASS_PATH `assets/r31/entities/missions/0020-mission74.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1019`, `data/r31-assets.json:3028`
+- PASS_PATH `assets/r31/entities/missions/0021-mission372.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1020`, `data/r31-assets.json:3029`
+- PASS_PATH `assets/r31/entities/missions/0022-mission80.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1021`, `data/r31-assets.json:3030`
+- PASS_PATH `assets/r31/entities/missions/0023-mission12.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1022`, `data/r31-assets.json:3031`
+- PASS_PATH `assets/r31/entities/missions/0024-mission11.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1023`, `data/r31-assets.json:3032`
+- PASS_PATH `assets/r31/entities/missions/0025-mission16.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1024`, `data/r31-assets.json:3033`
+- PASS_PATH `assets/r31/entities/missions/0026-mission14.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1025`, `data/r31-assets.json:3034`
+- PASS_PATH `assets/r31/entities/missions/0027-mission13.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1026`, `data/r31-assets.json:3035`
+- PASS_PATH `assets/r31/entities/missions/0028-mission17.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1027`, `data/r31-assets.json:3036`
+- PASS_PATH `assets/r31/entities/missions/0029-mission10.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1028`, `data/r31-assets.json:3037`
+- PASS_PATH `assets/r31/entities/missions/0030-mission15.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1029`, `data/r31-assets.json:3038`
+- PASS_PATH `assets/r31/entities/missions/0031-mission18.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1030`, `data/r31-assets.json:3039`
+- PASS_PATH `assets/r31/entities/missions/0032-mission23.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1031`, `data/r31-assets.json:3040`
+- PASS_PATH `assets/r31/entities/missions/0033-mission24.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1032`, `data/r31-assets.json:3041`
+- PASS_PATH `assets/r31/entities/missions/0034-mission25.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1033`, `data/r31-assets.json:3042`
+- PASS_PATH `assets/r31/entities/missions/0035-mission26.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1034`, `data/r31-assets.json:3043`
+- PASS_PATH `assets/r31/entities/missions/0036-mission27.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1035`, `data/r31-assets.json:3044`
+- PASS_PATH `assets/r31/entities/missions/0037-mission22.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1036`, `data/r31-assets.json:3045`
+- PASS_PATH `assets/r31/entities/missions/0038-mission21.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1037`, `data/r31-assets.json:3046`
+- PASS_PATH `assets/r31/entities/missions/0039-mission19.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1038`, `data/r31-assets.json:3047`
+- PASS_PATH `assets/r31/entities/missions/0040-mission20.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1039`, `data/r31-assets.json:3048`
+- PASS_PATH `assets/r31/entities/missions/0041-mission32.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1040`, `data/r31-assets.json:3049`
+- PASS_PATH `assets/r31/entities/missions/0042-mission31.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1041`, `data/r31-assets.json:3050`
+- PASS_PATH `assets/r31/entities/missions/0043-mission29.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1042`, `data/r31-assets.json:3051`
+- PASS_PATH `assets/r31/entities/missions/0044-mission33.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1043`, `data/r31-assets.json:3052`
+- PASS_PATH `assets/r31/entities/missions/0045-mission34.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1044`, `data/r31-assets.json:3053`
+- PASS_PATH `assets/r31/entities/missions/0046-mission35.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1045`, `data/r31-assets.json:3054`
+- PASS_PATH `assets/r31/entities/missions/0047-mission36.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1046`, `data/r31-assets.json:3055`
+- PASS_PATH `assets/r31/entities/missions/0048-mission30.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1047`, `data/r31-assets.json:3056`
+- PASS_PATH `assets/r31/entities/missions/0049-mission28.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1048`, `data/r31-assets.json:3057`
+- PASS_PATH `assets/r31/entities/missions/0050-mission37.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1049`, `data/r31-assets.json:3058`
+- PASS_PATH `assets/r31/entities/missions/0051-mission41.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1050`, `data/r31-assets.json:3059`
+- PASS_PATH `assets/r31/entities/missions/0052-mission40.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1051`, `data/r31-assets.json:3060`
+- PASS_PATH `assets/r31/entities/missions/0053-mission38.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1052`, `data/r31-assets.json:3061`
+- PASS_PATH `assets/r31/entities/missions/0054-mission39.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1053`, `data/r31-assets.json:3062`
+- PASS_PATH `assets/r31/entities/missions/0055-mission42.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1054`, `data/r31-assets.json:3063`
+- PASS_PATH `assets/r31/entities/missions/0056-mission43.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1055`, `data/r31-assets.json:3064`
+- PASS_PATH `assets/r31/entities/missions/0057-mission44.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1056`, `data/r31-assets.json:3065`
+- PASS_PATH `assets/r31/entities/missions/0058-mission45.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1057`, `data/r31-assets.json:3066`
+- PASS_PATH `assets/r31/entities/missions/0059-mission374.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1058`, `data/r31-assets.json:3067`
+- PASS_PATH `assets/r31/entities/missions/0060-mission375.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1059`, `data/r31-assets.json:3068`
+- PASS_PATH `assets/r31/entities/missions/0061-mission376.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1060`, `data/r31-assets.json:3069`
+- PASS_PATH `assets/r31/entities/missions/0062-mission377.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1061`, `data/r31-assets.json:3070`
+- PASS_PATH `assets/r31/entities/missions/0063-mission48.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1062`, `data/r31-assets.json:3071`
+- PASS_PATH `assets/r31/entities/missions/0064-mission49.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1063`, `data/r31-assets.json:3072`
+- PASS_PATH `assets/r31/entities/missions/0065-mission373.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1064`, `data/r31-assets.json:3073`
+- PASS_PATH `assets/r31/entities/missions/0066-mission53.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1065`, `data/r31-assets.json:3074`
+- PASS_PATH `assets/r31/entities/missions/0067-mission54.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1066`, `data/r31-assets.json:3075`
+- PASS_PATH `assets/r31/entities/missions/0068-mission46.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1067`, `data/r31-assets.json:3076`
+- PASS_PATH `assets/r31/entities/missions/0069-mission47.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1068`, `data/r31-assets.json:3077`
+- PASS_PATH `assets/r31/entities/missions/0070-mission50.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1069`, `data/r31-assets.json:3078`
+- PASS_PATH `assets/r31/entities/missions/0071-mission52.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1070`, `data/r31-assets.json:3079`
+- PASS_PATH `assets/r31/entities/missions/0072-mission51.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1071`, `data/r31-assets.json:3080`
+- PASS_PATH `assets/r31/entities/missions/0073-mission59.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1072`, `data/r31-assets.json:3081`
+- PASS_PATH `assets/r31/entities/missions/0074-mission57.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1073`, `data/r31-assets.json:3082`
+- PASS_PATH `assets/r31/entities/missions/0075-mission55.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1074`, `data/r31-assets.json:3083`
+- PASS_PATH `assets/r31/entities/missions/0076-mission58.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1075`, `data/r31-assets.json:3084`
+- PASS_PATH `assets/r31/entities/missions/0077-mission56.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1076`, `data/r31-assets.json:3085`
+- PASS_PATH `assets/r31/entities/missions/0078-mission60.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1077`, `data/r31-assets.json:3086`
+- PASS_PATH `assets/r31/entities/missions/0079-mission61.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1078`, `data/r31-assets.json:3087`
+- PASS_PATH `assets/r31/entities/missions/0080-mission62.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1079`, `data/r31-assets.json:3088`
+- PASS_PATH `assets/r31/entities/missions/0081-mission63.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1080`, `data/r31-assets.json:3089`
+- PASS_PATH `assets/r31/entities/missions/0082-mission65.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1081`, `data/r31-assets.json:3090`
+- PASS_PATH `assets/r31/entities/missions/0083-mission69.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1082`, `data/r31-assets.json:3091`
+- PASS_PATH `assets/r31/entities/missions/0084-mission70.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1083`, `data/r31-assets.json:3092`
+- PASS_PATH `assets/r31/entities/missions/0085-mission71.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1084`, `data/r31-assets.json:3093`
+- PASS_PATH `assets/r31/entities/missions/0086-mission72.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1085`, `data/r31-assets.json:3094`
+- PASS_PATH `assets/r31/entities/missions/0087-mission67.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1086`, `data/r31-assets.json:3095`
+- PASS_PATH `assets/r31/entities/missions/0088-mission68.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1087`, `data/r31-assets.json:3096`
+- PASS_PATH `assets/r31/entities/missions/0089-mission66.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1088`, `data/r31-assets.json:3097`
+- PASS_PATH `assets/r31/entities/missions/0090-mission64.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1089`, `data/r31-assets.json:3098`
+- PASS_PATH `assets/r31/entities/missions/0091-mission89.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1090`, `data/r31-assets.json:3099`
+- PASS_PATH `assets/r31/entities/missions/0092-mission87.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1091`, `data/r31-assets.json:3100`
+- PASS_PATH `assets/r31/entities/missions/0093-mission88.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1092`, `data/r31-assets.json:3101`
+- PASS_PATH `assets/r31/entities/missions/0094-mission84.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1093`, `data/r31-assets.json:3102`
+- PASS_PATH `assets/r31/entities/missions/0095-mission85.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1094`, `data/r31-assets.json:3103`
+- PASS_PATH `assets/r31/entities/missions/0096-mission378.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1095`, `data/r31-assets.json:3104`
+- PASS_PATH `assets/r31/entities/missions/0097-mission379.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1096`, `data/r31-assets.json:3105`
+- PASS_PATH `assets/r31/entities/missions/0098-mission380.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1097`, `data/r31-assets.json:3106`
+- PASS_PATH `assets/r31/entities/missions/0099-mission381.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1098`, `data/r31-assets.json:3107`
+- PASS_PATH `assets/r31/entities/missions/0100-mission86.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1099`, `data/r31-assets.json:3108`
+- PASS_PATH `assets/r31/entities/missions/0101-mission82.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1100`, `data/r31-assets.json:3109`
+- PASS_PATH `assets/r31/entities/missions/0102-mission90.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1101`, `data/r31-assets.json:3110`
+- PASS_PATH `assets/r31/entities/missions/0103-mission83.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1102`, `data/r31-assets.json:3111`
+- PASS_PATH `assets/r31/entities/missions/0104-mission91.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1103`, `data/r31-assets.json:3112`
+- PASS_PATH `assets/r31/entities/missions/0105-mission382.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1104`, `data/r31-assets.json:3113`
+- PASS_PATH `assets/r31/entities/missions/0106-mission92.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1105`, `data/r31-assets.json:3114`
+- PASS_PATH `assets/r31/entities/missions/0107-mission93.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1106`, `data/r31-assets.json:3115`
+- PASS_PATH `assets/r31/entities/missions/0108-mission94.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1107`, `data/r31-assets.json:3116`
+- PASS_PATH `assets/r31/entities/missions/0109-mission95.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1108`, `data/r31-assets.json:3117`
+- PASS_PATH `assets/r31/entities/missions/0110-mission96.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1109`, `data/r31-assets.json:3118`
+- PASS_PATH `assets/r31/entities/missions/0111-mission97.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1110`, `data/r31-assets.json:3119`
+- PASS_PATH `assets/r31/entities/missions/0112-mission98.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1111`, `data/r31-assets.json:3120`
+- PASS_PATH `assets/r31/entities/missions/0113-mission99.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1112`, `data/r31-assets.json:3121`
+- PASS_PATH `assets/r31/entities/missions/0114-mission100.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1113`, `data/r31-assets.json:3122`
+- PASS_PATH `assets/r31/entities/missions/0115-mission101.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1114`, `data/r31-assets.json:3123`
+- PASS_PATH `assets/r31/entities/missions/0116-mission102.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1115`, `data/r31-assets.json:3124`
+- PASS_PATH `assets/r31/entities/missions/0117-mission103.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1116`, `data/r31-assets.json:3125`
+- PASS_PATH `assets/r31/entities/missions/0118-mission104.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1117`, `data/r31-assets.json:3126`
+- PASS_PATH `assets/r31/entities/missions/0119-mission105.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1118`, `data/r31-assets.json:3127`
+- PASS_PATH `assets/r31/entities/missions/0120-mission106.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1119`, `data/r31-assets.json:3128`
+- PASS_PATH `assets/r31/entities/missions/0121-mission107.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1120`, `data/r31-assets.json:3129`
+- PASS_PATH `assets/r31/entities/missions/0122-mission108.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1121`, `data/r31-assets.json:3130`
+- PASS_PATH `assets/r31/entities/missions/0123-mission109.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1122`, `data/r31-assets.json:3131`
+- PASS_PATH `assets/r31/entities/missions/0124-mission110.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1123`, `data/r31-assets.json:3132`
+- PASS_PATH `assets/r31/entities/missions/0125-mission111.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1124`, `data/r31-assets.json:3133`
+- PASS_PATH `assets/r31/entities/missions/0126-mission112.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1125`, `data/r31-assets.json:3134`
+- PASS_PATH `assets/r31/entities/missions/0127-mission116.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1126`, `data/r31-assets.json:3135`
+- PASS_PATH `assets/r31/entities/missions/0128-mission117.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1127`, `data/r31-assets.json:3136`
+- PASS_PATH `assets/r31/entities/missions/0129-mission118.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1128`, `data/r31-assets.json:3137`
+- PASS_PATH `assets/r31/entities/missions/0130-mission119.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1129`, `data/r31-assets.json:3138`
+- PASS_PATH `assets/r31/entities/missions/0131-mission120.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1130`, `data/r31-assets.json:3139`
+- PASS_PATH `assets/r31/entities/missions/0132-mission113.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1131`, `data/r31-assets.json:3140`
+- PASS_PATH `assets/r31/entities/missions/0133-mission114.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1132`, `data/r31-assets.json:3141`
+- PASS_PATH `assets/r31/entities/missions/0134-mission115.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1133`, `data/r31-assets.json:3142`
+- PASS_PATH `assets/r31/entities/missions/0135-mission122.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1134`, `data/r31-assets.json:3143`
+- PASS_PATH `assets/r31/entities/missions/0136-mission121.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1135`, `data/r31-assets.json:3144`
+- PASS_PATH `assets/r31/entities/missions/0137-mission124.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1136`, `data/r31-assets.json:3145`
+- PASS_PATH `assets/r31/entities/missions/0138-mission125.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1137`, `data/r31-assets.json:3146`
+- PASS_PATH `assets/r31/entities/missions/0139-mission126.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1138`, `data/r31-assets.json:3147`
+- PASS_PATH `assets/r31/entities/missions/0140-mission127.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1139`, `data/r31-assets.json:3148`
+- PASS_PATH `assets/r31/entities/missions/0141-mission123.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1140`, `data/r31-assets.json:3149`
+- PASS_PATH `assets/r31/entities/missions/0142-mission384.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1141`, `data/r31-assets.json:3150`
+- PASS_PATH `assets/r31/entities/missions/0143-mission385.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1142`, `data/r31-assets.json:3151`
+- PASS_PATH `assets/r31/entities/missions/0144-mission386.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1143`, `data/r31-assets.json:3152`
+- PASS_PATH `assets/r31/entities/missions/0145-mission387.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1144`, `data/r31-assets.json:3153`
+- PASS_PATH `assets/r31/entities/missions/0146-mission383.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1145`, `data/r31-assets.json:3154`
+- PASS_PATH `assets/r31/entities/missions/0147-mission133.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1146`, `data/r31-assets.json:3155`
+- PASS_PATH `assets/r31/entities/missions/0148-mission134.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1147`, `data/r31-assets.json:3156`
+- PASS_PATH `assets/r31/entities/missions/0149-mission135.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1148`, `data/r31-assets.json:3157`
+- PASS_PATH `assets/r31/entities/missions/0150-mission136.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1149`, `data/r31-assets.json:3158`
+- PASS_PATH `assets/r31/entities/missions/0151-mission131.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1150`, `data/r31-assets.json:3159`
+- PASS_PATH `assets/r31/entities/missions/0152-mission129.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1151`, `data/r31-assets.json:3160`
+- PASS_PATH `assets/r31/entities/missions/0153-mission128.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1152`, `data/r31-assets.json:3161`
+- PASS_PATH `assets/r31/entities/missions/0154-mission132.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1153`, `data/r31-assets.json:3162`
+- PASS_PATH `assets/r31/entities/missions/0155-mission130.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1154`, `data/r31-assets.json:3163`
+- PASS_PATH `assets/r31/entities/missions/0156-mission141.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1155`, `data/r31-assets.json:3164`
+- PASS_PATH `assets/r31/entities/missions/0157-mission142.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1156`, `data/r31-assets.json:3165`
+- PASS_PATH `assets/r31/entities/missions/0158-mission143.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1157`, `data/r31-assets.json:3166`
+- PASS_PATH `assets/r31/entities/missions/0159-mission144.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1158`, `data/r31-assets.json:3167`
+- PASS_PATH `assets/r31/entities/missions/0160-mission137.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1159`, `data/r31-assets.json:3168`
+- PASS_PATH `assets/r31/entities/missions/0161-mission138.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1160`, `data/r31-assets.json:3169`
+- PASS_PATH `assets/r31/entities/missions/0162-mission139.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1161`, `data/r31-assets.json:3170`
+- PASS_PATH `assets/r31/entities/missions/0163-mission140.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1162`, `data/r31-assets.json:3171`
+- PASS_PATH `assets/r31/entities/missions/0164-mission148.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1163`, `data/r31-assets.json:3172`
+- PASS_PATH `assets/r31/entities/missions/0165-mission149.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1164`, `data/r31-assets.json:3173`
+- PASS_PATH `assets/r31/entities/missions/0166-mission150.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1165`, `data/r31-assets.json:3174`
+- PASS_PATH `assets/r31/entities/missions/0167-mission151.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1166`, `data/r31-assets.json:3175`
+- PASS_PATH `assets/r31/entities/missions/0168-mission146.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1167`, `data/r31-assets.json:3176`
+- PASS_PATH `assets/r31/entities/missions/0169-mission147.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1168`, `data/r31-assets.json:3177`
+- PASS_PATH `assets/r31/entities/missions/0170-mission145.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1169`, `data/r31-assets.json:3178`
+- PASS_PATH `assets/r31/entities/missions/0171-mission152.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1170`, `data/r31-assets.json:3179`
+- PASS_PATH `assets/r31/entities/missions/0172-mission153.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1171`, `data/r31-assets.json:3180`
+- PASS_PATH `assets/r31/entities/missions/0173-mission154.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1172`, `data/r31-assets.json:3181`
+- PASS_PATH `assets/r31/entities/missions/0174-mission156.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1173`, `data/r31-assets.json:3182`
+- PASS_PATH `assets/r31/entities/missions/0175-mission157.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1174`, `data/r31-assets.json:3183`
+- PASS_PATH `assets/r31/entities/missions/0176-mission158.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1175`, `data/r31-assets.json:3184`
+- PASS_PATH `assets/r31/entities/missions/0177-mission159.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1176`, `data/r31-assets.json:3185`
+- PASS_PATH `assets/r31/entities/missions/0178-mission155.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1177`, `data/r31-assets.json:3186`
+- PASS_PATH `assets/r31/entities/missions/0179-mission388.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1178`, `data/r31-assets.json:3187`
+- PASS_PATH `assets/r31/entities/missions/0180-mission389.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1179`, `data/r31-assets.json:3188`
+- PASS_PATH `assets/r31/entities/missions/0181-mission390.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1180`, `data/r31-assets.json:3189`
+- PASS_PATH `assets/r31/entities/missions/0182-mission391.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1181`, `data/r31-assets.json:3190`
+- PASS_PATH `assets/r31/entities/missions/0183-mission164.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1182`, `data/r31-assets.json:3191`
+- PASS_PATH `assets/r31/entities/missions/0184-mission165.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1183`, `data/r31-assets.json:3192`
+- PASS_PATH `assets/r31/entities/missions/0185-mission166.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1184`, `data/r31-assets.json:3193`
+- PASS_PATH `assets/r31/entities/missions/0186-mission167.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1185`, `data/r31-assets.json:3194`
+- PASS_PATH `assets/r31/entities/missions/0187-mission163.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1186`, `data/r31-assets.json:3195`
+- PASS_PATH `assets/r31/entities/missions/0188-mission160.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1187`, `data/r31-assets.json:3196`
+- PASS_PATH `assets/r31/entities/missions/0189-mission161.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1188`, `data/r31-assets.json:3197`
+- PASS_PATH `assets/r31/entities/missions/0190-mission162.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1189`, `data/r31-assets.json:3198`
+- PASS_PATH `assets/r31/entities/missions/0191-mission392.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1190`, `data/r31-assets.json:3199`
+- PASS_PATH `assets/r31/entities/missions/0192-mission169.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1191`, `data/r31-assets.json:3200`
+- PASS_PATH `assets/r31/entities/missions/0193-mission170.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1192`, `data/r31-assets.json:3201`
+- PASS_PATH `assets/r31/entities/missions/0194-mission171.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1193`, `data/r31-assets.json:3202`
+- PASS_PATH `assets/r31/entities/missions/0195-mission172.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1194`, `data/r31-assets.json:3203`
+- PASS_PATH `assets/r31/entities/missions/0196-mission168.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1195`, `data/r31-assets.json:3204`
+- PASS_PATH `assets/r31/entities/missions/0197-mission176.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1196`, `data/r31-assets.json:3205`
+- PASS_PATH `assets/r31/entities/missions/0198-mission177.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1197`, `data/r31-assets.json:3206`
+- PASS_PATH `assets/r31/entities/missions/0199-mission178.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1198`, `data/r31-assets.json:3207`
+- PASS_PATH `assets/r31/entities/missions/0200-mission179.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1199`, `data/r31-assets.json:3208`
+- PASS_PATH `assets/r31/entities/missions/0201-mission173.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1200`, `data/r31-assets.json:3209`
+- PASS_PATH `assets/r31/entities/missions/0202-mission174.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1201`, `data/r31-assets.json:3210`
+- PASS_PATH `assets/r31/entities/missions/0203-mission175.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1202`, `data/r31-assets.json:3211`
+- PASS_PATH `assets/r31/entities/missions/0204-mission181.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1203`, `data/r31-assets.json:3212`
+- PASS_PATH `assets/r31/entities/missions/0205-mission182.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1204`, `data/r31-assets.json:3213`
+- PASS_PATH `assets/r31/entities/missions/0206-mission183.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1205`, `data/r31-assets.json:3214`
+- PASS_PATH `assets/r31/entities/missions/0207-mission184.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1206`, `data/r31-assets.json:3215`
+- PASS_PATH `assets/r31/entities/missions/0208-mission185.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1207`, `data/r31-assets.json:3216`
+- PASS_PATH `assets/r31/entities/missions/0209-mission186.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1208`, `data/r31-assets.json:3217`
+- PASS_PATH `assets/r31/entities/missions/0210-mission187.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1209`, `data/r31-assets.json:3218`
+- PASS_PATH `assets/r31/entities/missions/0211-mission180.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1210`, `data/r31-assets.json:3219`
+- PASS_PATH `assets/r31/entities/missions/0212-mission188.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1211`, `data/r31-assets.json:3220`
+- PASS_PATH `assets/r31/entities/missions/0213-mission189.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1212`, `data/r31-assets.json:3221`
+- PASS_PATH `assets/r31/entities/missions/0214-mission191.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1213`, `data/r31-assets.json:3222`
+- PASS_PATH `assets/r31/entities/missions/0215-mission192.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1214`, `data/r31-assets.json:3223`
+- PASS_PATH `assets/r31/entities/missions/0216-mission193.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1215`, `data/r31-assets.json:3224`
+- PASS_PATH `assets/r31/entities/missions/0217-mission194.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1216`, `data/r31-assets.json:3225`
+- PASS_PATH `assets/r31/entities/missions/0218-mission190.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1217`, `data/r31-assets.json:3226`
+- PASS_PATH `assets/r31/entities/missions/0219-mission196.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1218`, `data/r31-assets.json:3227`
+- PASS_PATH `assets/r31/entities/missions/0220-mission199.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1219`, `data/r31-assets.json:3228`
+- PASS_PATH `assets/r31/entities/missions/0221-mission200.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1220`, `data/r31-assets.json:3229`
+- PASS_PATH `assets/r31/entities/missions/0222-mission201.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1221`, `data/r31-assets.json:3230`
+- PASS_PATH `assets/r31/entities/missions/0223-mission202.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1222`, `data/r31-assets.json:3231`
+- PASS_PATH `assets/r31/entities/missions/0224-mission197.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1223`, `data/r31-assets.json:3232`
+- PASS_PATH `assets/r31/entities/missions/0225-mission198.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1224`, `data/r31-assets.json:3233`
+- PASS_PATH `assets/r31/entities/missions/0226-mission195.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1225`, `data/r31-assets.json:3234`
+- PASS_PATH `assets/r31/entities/missions/0227-mission203.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1226`, `data/r31-assets.json:3235`
+- PASS_PATH `assets/r31/entities/missions/0228-mission206.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1227`, `data/r31-assets.json:3236`
+- PASS_PATH `assets/r31/entities/missions/0229-mission205.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1228`, `data/r31-assets.json:3237`
+- PASS_PATH `assets/r31/entities/missions/0230-mission204.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1229`, `data/r31-assets.json:3238`
+- PASS_PATH `assets/r31/entities/missions/0231-mission207.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1230`, `data/r31-assets.json:3239`
+- PASS_PATH `assets/r31/entities/missions/0232-mission208.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1231`, `data/r31-assets.json:3240`
+- PASS_PATH `assets/r31/entities/missions/0233-mission209.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1232`, `data/r31-assets.json:3241`
+- PASS_PATH `assets/r31/entities/missions/0234-mission210.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1233`, `data/r31-assets.json:3242`
+- PASS_PATH `assets/r31/entities/missions/0235-mission212.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1234`, `data/r31-assets.json:3243`
+- PASS_PATH `assets/r31/entities/missions/0236-mission213.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1235`, `data/r31-assets.json:3244`
+- PASS_PATH `assets/r31/entities/missions/0237-mission214.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1236`, `data/r31-assets.json:3245`
+- PASS_PATH `assets/r31/entities/missions/0238-mission211.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1237`, `data/r31-assets.json:3246`
+- PASS_PATH `assets/r31/entities/missions/0239-mission215.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1238`, `data/r31-assets.json:3247`
+- PASS_PATH `assets/r31/entities/missions/0240-mission216.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1239`, `data/r31-assets.json:3248`
+- PASS_PATH `assets/r31/entities/missions/0241-mission217.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1240`, `data/r31-assets.json:3249`
+- PASS_PATH `assets/r31/entities/missions/0242-mission218.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1241`, `data/r31-assets.json:3250`
+- PASS_PATH `assets/r31/entities/missions/0243-mission222.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1242`, `data/r31-assets.json:3251`
+- PASS_PATH `assets/r31/entities/missions/0244-mission223.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1243`, `data/r31-assets.json:3252`
+- PASS_PATH `assets/r31/entities/missions/0245-mission224.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1244`, `data/r31-assets.json:3253`
+- PASS_PATH `assets/r31/entities/missions/0246-mission225.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1245`, `data/r31-assets.json:3254`
+- PASS_PATH `assets/r31/entities/missions/0247-mission221.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1246`, `data/r31-assets.json:3255`
+- PASS_PATH `assets/r31/entities/missions/0248-mission219.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1247`, `data/r31-assets.json:3256`
+- PASS_PATH `assets/r31/entities/missions/0249-mission220.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1248`, `data/r31-assets.json:3257`
+- PASS_PATH `assets/r31/entities/missions/0250-mission229.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1249`, `data/r31-assets.json:3258`
+- PASS_PATH `assets/r31/entities/missions/0251-mission230.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1250`, `data/r31-assets.json:3259`
+- PASS_PATH `assets/r31/entities/missions/0252-mission231.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1251`, `data/r31-assets.json:3260`
+- PASS_PATH `assets/r31/entities/missions/0253-mission232.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1252`, `data/r31-assets.json:3261`
+- PASS_PATH `assets/r31/entities/missions/0254-mission228.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1253`, `data/r31-assets.json:3262`
+- PASS_PATH `assets/r31/entities/missions/0255-mission227.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1254`, `data/r31-assets.json:3263`
+- PASS_PATH `assets/r31/entities/missions/0256-mission226.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1255`, `data/r31-assets.json:3264`
+- PASS_PATH `assets/r31/entities/missions/0257-mission234.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1256`, `data/r31-assets.json:3265`
+- PASS_PATH `assets/r31/entities/missions/0258-mission233.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1257`, `data/r31-assets.json:3266`
+- PASS_PATH `assets/r31/entities/missions/0259-mission235.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1258`, `data/r31-assets.json:3267`
+- PASS_PATH `assets/r31/entities/missions/0260-mission236.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1259`, `data/r31-assets.json:3268`
+- PASS_PATH `assets/r31/entities/missions/0261-mission237.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1260`, `data/r31-assets.json:3269`
+- PASS_PATH `assets/r31/entities/missions/0262-mission238.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1261`, `data/r31-assets.json:3270`
+- PASS_PATH `assets/r31/entities/missions/0263-mission272.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1262`, `data/r31-assets.json:3271`
+- PASS_PATH `assets/r31/entities/missions/0264-mission273.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1263`, `data/r31-assets.json:3272`
+- PASS_PATH `assets/r31/entities/missions/0265-mission274.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1264`, `data/r31-assets.json:3273`
+- PASS_PATH `assets/r31/entities/missions/0266-mission275.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1265`, `data/r31-assets.json:3274`
+- PASS_PATH `assets/r31/entities/missions/0267-mission283.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1266`, `data/r31-assets.json:3275`
+- PASS_PATH `assets/r31/entities/missions/0268-mission246.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1267`, `data/r31-assets.json:3276`
+- PASS_PATH `assets/r31/entities/missions/0269-mission266.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1268`, `data/r31-assets.json:3277`
+- PASS_PATH `assets/r31/entities/missions/0270-mission267.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1269`, `data/r31-assets.json:3278`
+- PASS_PATH `assets/r31/entities/missions/0271-mission268.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1270`, `data/r31-assets.json:3279`
+- PASS_PATH `assets/r31/entities/missions/0272-mission269.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1271`, `data/r31-assets.json:3280`
+- PASS_PATH `assets/r31/entities/missions/0273-mission270.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1272`, `data/r31-assets.json:3281`
+- PASS_PATH `assets/r31/entities/missions/0274-mission271.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1273`, `data/r31-assets.json:3282`
+- PASS_PATH `assets/r31/entities/missions/0275-mission254.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1274`, `data/r31-assets.json:3283`
+- PASS_PATH `assets/r31/entities/missions/0276-mission255.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1275`, `data/r31-assets.json:3284`
+- PASS_PATH `assets/r31/entities/missions/0277-mission256.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1276`, `data/r31-assets.json:3285`
+- PASS_PATH `assets/r31/entities/missions/0278-mission257.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1277`, `data/r31-assets.json:3286`
+- PASS_PATH `assets/r31/entities/missions/0279-mission294.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1278`, `data/r31-assets.json:3287`
+- PASS_PATH `assets/r31/entities/missions/0280-mission295.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1279`, `data/r31-assets.json:3288`
+- PASS_PATH `assets/r31/entities/missions/0281-mission296.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1280`, `data/r31-assets.json:3289`
+- PASS_PATH `assets/r31/entities/missions/0282-mission297.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1281`, `data/r31-assets.json:3290`
+- PASS_PATH `assets/r31/entities/missions/0283-mission247.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1282`, `data/r31-assets.json:3291`
+- PASS_PATH `assets/r31/entities/missions/0284-mission264.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1283`, `data/r31-assets.json:3292`
+- PASS_PATH `assets/r31/entities/missions/0285-mission284.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1284`, `data/r31-assets.json:3293`
+- PASS_PATH `assets/r31/entities/missions/0286-mission285.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1285`, `data/r31-assets.json:3294`
+- PASS_PATH `assets/r31/entities/missions/0287-mission286.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1286`, `data/r31-assets.json:3295`
+- PASS_PATH `assets/r31/entities/missions/0288-mission287.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1287`, `data/r31-assets.json:3296`
+- PASS_PATH `assets/r31/entities/missions/0289-mission248.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1288`, `data/r31-assets.json:3297`
+- PASS_PATH `assets/r31/entities/missions/0290-mission249.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1289`, `data/r31-assets.json:3298`
+- PASS_PATH `assets/r31/entities/missions/0291-mission250.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1290`, `data/r31-assets.json:3299`
+- PASS_PATH `assets/r31/entities/missions/0292-mission251.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1291`, `data/r31-assets.json:3300`
+- PASS_PATH `assets/r31/entities/missions/0293-mission253.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1292`, `data/r31-assets.json:3301`
+- PASS_PATH `assets/r31/entities/missions/0294-mission240.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1293`, `data/r31-assets.json:3302`
+- PASS_PATH `assets/r31/entities/missions/0295-mission292.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1294`, `data/r31-assets.json:3303`
+- PASS_PATH `assets/r31/entities/missions/0296-mission293.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1295`, `data/r31-assets.json:3304`
+- PASS_PATH `assets/r31/entities/missions/0297-mission277.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1296`, `data/r31-assets.json:3305`
+- PASS_PATH `assets/r31/entities/missions/0298-mission278.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1297`, `data/r31-assets.json:3306`
+- PASS_PATH `assets/r31/entities/missions/0299-mission279.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1298`, `data/r31-assets.json:3307`
+- PASS_PATH `assets/r31/entities/missions/0300-mission280.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1299`, `data/r31-assets.json:3308`
+- PASS_PATH `assets/r31/entities/missions/0301-mission281.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1300`, `data/r31-assets.json:3309`
+- PASS_PATH `assets/r31/entities/missions/0302-mission245.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1301`, `data/r31-assets.json:3310`
+- PASS_PATH `assets/r31/entities/missions/0303-mission239.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1302`, `data/r31-assets.json:3311`
+- PASS_PATH `assets/r31/entities/missions/0304-mission252.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1303`, `data/r31-assets.json:3312`
+- PASS_PATH `assets/r31/entities/missions/0305-mission258.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1304`, `data/r31-assets.json:3313`
+- PASS_PATH `assets/r31/entities/missions/0306-mission265.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1305`, `data/r31-assets.json:3314`
+- PASS_PATH `assets/r31/entities/missions/0307-mission288.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1306`, `data/r31-assets.json:3315`
+- PASS_PATH `assets/r31/entities/missions/0308-mission289.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1307`, `data/r31-assets.json:3316`
+- PASS_PATH `assets/r31/entities/missions/0309-mission290.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1308`, `data/r31-assets.json:3317`
+- PASS_PATH `assets/r31/entities/missions/0310-mission291.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1309`, `data/r31-assets.json:3318`
+- PASS_PATH `assets/r31/entities/missions/0311-mission282.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1310`, `data/r31-assets.json:3319`
+- PASS_PATH `assets/r31/entities/missions/0312-mission241.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1311`, `data/r31-assets.json:3320`
+- PASS_PATH `assets/r31/entities/missions/0313-mission242.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1312`, `data/r31-assets.json:3321`
+- PASS_PATH `assets/r31/entities/missions/0314-mission243.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1313`, `data/r31-assets.json:3322`
+- PASS_PATH `assets/r31/entities/missions/0315-mission244.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1314`, `data/r31-assets.json:3323`
+- PASS_PATH `assets/r31/entities/missions/0316-mission276.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1315`, `data/r31-assets.json:3324`
+- PASS_PATH `assets/r31/entities/missions/0317-mission260.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1316`, `data/r31-assets.json:3325`
+- PASS_PATH `assets/r31/entities/missions/0318-mission261.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1317`, `data/r31-assets.json:3326`
+- PASS_PATH `assets/r31/entities/missions/0319-mission262.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1318`, `data/r31-assets.json:3327`
+- PASS_PATH `assets/r31/entities/missions/0320-mission263.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1319`, `data/r31-assets.json:3328`
+- PASS_PATH `assets/r31/entities/missions/0321-mission259.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1320`, `data/r31-assets.json:3329`
+- PASS_PATH `assets/r31/entities/missions/0322-mission330.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1321`, `data/r31-assets.json:3330`
+- PASS_PATH `assets/r31/entities/missions/0323-mission300.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1322`, `data/r31-assets.json:3331`
+- PASS_PATH `assets/r31/entities/missions/0324-mission359.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1323`, `data/r31-assets.json:3332`
+- PASS_PATH `assets/r31/entities/missions/0325-mission360.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1324`, `data/r31-assets.json:3333`
+- PASS_PATH `assets/r31/entities/missions/0326-mission361.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1325`, `data/r31-assets.json:3334`
+- PASS_PATH `assets/r31/entities/missions/0327-mission362.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1326`, `data/r31-assets.json:3335`
+- PASS_PATH `assets/r31/entities/missions/0328-mission322.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1327`, `data/r31-assets.json:3336`
+- PASS_PATH `assets/r31/entities/missions/0329-mission320.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1328`, `data/r31-assets.json:3337`
+- PASS_PATH `assets/r31/entities/missions/0330-mission321.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1329`, `data/r31-assets.json:3338`
+- PASS_PATH `assets/r31/entities/missions/0331-mission328.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1330`, `data/r31-assets.json:3339`
+- PASS_PATH `assets/r31/entities/missions/0332-mission332.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1331`, `data/r31-assets.json:3340`
+- PASS_PATH `assets/r31/entities/missions/0333-mission333.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1332`, `data/r31-assets.json:3341`
+- PASS_PATH `assets/r31/entities/missions/0334-mission334.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1333`, `data/r31-assets.json:3342`
+- PASS_PATH `assets/r31/entities/missions/0335-mission335.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1334`, `data/r31-assets.json:3343`
+- PASS_PATH `assets/r31/entities/missions/0336-mission344.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1335`, `data/r31-assets.json:3344`
+- PASS_PATH `assets/r31/entities/missions/0337-mission345.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1336`, `data/r31-assets.json:3345`
+- PASS_PATH `assets/r31/entities/missions/0338-mission346.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1337`, `data/r31-assets.json:3346`
+- PASS_PATH `assets/r31/entities/missions/0339-mission347.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1338`, `data/r31-assets.json:3347`
+- PASS_PATH `assets/r31/entities/missions/0340-mission337.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1339`, `data/r31-assets.json:3348`
+- PASS_PATH `assets/r31/entities/missions/0341-mission338.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1340`, `data/r31-assets.json:3349`
+- PASS_PATH `assets/r31/entities/missions/0342-mission339.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1341`, `data/r31-assets.json:3350`
+- PASS_PATH `assets/r31/entities/missions/0343-mission340.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1342`, `data/r31-assets.json:3351`
+- PASS_PATH `assets/r31/entities/missions/0344-mission323.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1343`, `data/r31-assets.json:3352`
+- PASS_PATH `assets/r31/entities/missions/0345-mission329.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1344`, `data/r31-assets.json:3353`
+- PASS_PATH `assets/r31/entities/missions/0346-mission350.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1345`, `data/r31-assets.json:3354`
+- PASS_PATH `assets/r31/entities/missions/0347-mission351.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1346`, `data/r31-assets.json:3355`
+- PASS_PATH `assets/r31/entities/missions/0348-mission352.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1347`, `data/r31-assets.json:3356`
+- PASS_PATH `assets/r31/entities/missions/0349-mission353.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1348`, `data/r31-assets.json:3357`
+- PASS_PATH `assets/r31/entities/missions/0350-mission343.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1349`, `data/r31-assets.json:3358`
+- PASS_PATH `assets/r31/entities/missions/0351-mission358.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1350`, `data/r31-assets.json:3359`
+- PASS_PATH `assets/r31/entities/missions/0352-mission298.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1351`, `data/r31-assets.json:3360`
+- PASS_PATH `assets/r31/entities/missions/0353-mission314.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1352`, `data/r31-assets.json:3361`
+- PASS_PATH `assets/r31/entities/missions/0354-mission313.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1353`, `data/r31-assets.json:3362`
+- PASS_PATH `assets/r31/entities/missions/0355-mission324.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1354`, `data/r31-assets.json:3363`
+- PASS_PATH `assets/r31/entities/missions/0356-mission325.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1355`, `data/r31-assets.json:3364`
+- PASS_PATH `assets/r31/entities/missions/0357-mission326.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1356`, `data/r31-assets.json:3365`
+- PASS_PATH `assets/r31/entities/missions/0358-mission327.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1357`, `data/r31-assets.json:3366`
+- PASS_PATH `assets/r31/entities/missions/0359-mission331.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1358`, `data/r31-assets.json:3367`
+- PASS_PATH `assets/r31/entities/missions/0360-mission336.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1359`, `data/r31-assets.json:3368`
+- PASS_PATH `assets/r31/entities/missions/0361-mission354.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1360`, `data/r31-assets.json:3369`
+- PASS_PATH `assets/r31/entities/missions/0362-mission355.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1361`, `data/r31-assets.json:3370`
+- PASS_PATH `assets/r31/entities/missions/0363-mission356.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1362`, `data/r31-assets.json:3371`
+- PASS_PATH `assets/r31/entities/missions/0364-mission357.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1363`, `data/r31-assets.json:3372`
+- PASS_PATH `assets/r31/entities/missions/0365-mission315.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1364`, `data/r31-assets.json:3373`
+- PASS_PATH `assets/r31/entities/missions/0366-mission316.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1365`, `data/r31-assets.json:3374`
+- PASS_PATH `assets/r31/entities/missions/0367-mission317.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1366`, `data/r31-assets.json:3375`
+- PASS_PATH `assets/r31/entities/missions/0368-mission318.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1367`, `data/r31-assets.json:3376`
+- PASS_PATH `assets/r31/entities/missions/0369-mission308.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1368`, `data/r31-assets.json:3377`
+- PASS_PATH `assets/r31/entities/missions/0370-mission309.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1369`, `data/r31-assets.json:3378`
+- PASS_PATH `assets/r31/entities/missions/0371-mission310.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1370`, `data/r31-assets.json:3379`
+- PASS_PATH `assets/r31/entities/missions/0372-mission311.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1371`, `data/r31-assets.json:3380`
+- PASS_PATH `assets/r31/entities/missions/0373-mission306.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1372`, `data/r31-assets.json:3381`
+- PASS_PATH `assets/r31/entities/missions/0374-mission307.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1373`, `data/r31-assets.json:3382`
+- PASS_PATH `assets/r31/entities/missions/0375-mission305.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1374`, `data/r31-assets.json:3383`
+- PASS_PATH `assets/r31/entities/missions/0376-mission312.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1375`, `data/r31-assets.json:3384`
+- PASS_PATH `assets/r31/entities/missions/0377-mission299.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1376`, `data/r31-assets.json:3385`
+- PASS_PATH `assets/r31/entities/missions/0378-mission301.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1377`, `data/r31-assets.json:3386`
+- PASS_PATH `assets/r31/entities/missions/0379-mission302.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1378`, `data/r31-assets.json:3387`
+- PASS_PATH `assets/r31/entities/missions/0380-mission303.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1379`, `data/r31-assets.json:3388`
+- PASS_PATH `assets/r31/entities/missions/0381-mission304.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1380`, `data/r31-assets.json:3389`
+- PASS_PATH `assets/r31/entities/missions/0382-mission341.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1381`, `data/r31-assets.json:3390`
+- PASS_PATH `assets/r31/entities/missions/0383-mission342.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1382`, `data/r31-assets.json:3391`
+- PASS_PATH `assets/r31/entities/missions/0384-mission319.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1383`, `data/r31-assets.json:3392`
+- PASS_PATH `assets/r31/entities/missions/0385-mission348.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1384`, `data/r31-assets.json:3393`
+- PASS_PATH `assets/r31/entities/missions/0386-mission349.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1385`, `data/r31-assets.json:3394`
+- PASS_PATH `assets/r31/entities/missions/0387-mission364.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1386`, `data/r31-assets.json:3395`
+- PASS_PATH `assets/r31/entities/missions/0388-mission365.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1387`, `data/r31-assets.json:3396`
+- PASS_PATH `assets/r31/entities/missions/0389-mission366.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1388`, `data/r31-assets.json:3397`
+- PASS_PATH `assets/r31/entities/missions/0390-mission367.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1389`, `data/r31-assets.json:3398`
+- PASS_PATH `assets/r31/entities/missions/0391-mission368.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1390`, `data/r31-assets.json:3399`
+- PASS_PATH `assets/r31/entities/missions/0392-mission369.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1391`, `data/r31-assets.json:3400`
+- PASS_PATH `assets/r31/entities/missions/0393-mission370.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1392`, `data/r31-assets.json:3401`
+- PASS_PATH `assets/r31/entities/missions/0394-mission371.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1393`, `data/r31-assets.json:3402`
+- PASS_PATH `assets/r31/entities/missions/0395-mission363.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1394`, `data/r31-assets.json:3403`
+- PASS_PATH `assets/r31/entities/missions/0396-mission-029.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1395`, `data/r31-assets.json:3404`
+- PASS_PATH `assets/r31/entities/missions/0397-mission-040.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1396`, `data/r31-assets.json:3405`
+- PASS_PATH `assets/r31/entities/missions/0398-mission-042.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1397`, `data/r31-assets.json:3406`
+- PASS_PATH `assets/r31/entities/missions/0399-mission-024.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1398`, `data/r31-assets.json:3407`
+- PASS_PATH `assets/r31/entities/missions/0400-mission-038.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1399`, `data/r31-assets.json:3408`
+- PASS_PATH `assets/r31/entities/missions/0401-mission-008.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1400`, `data/r31-assets.json:3409`
+- PASS_PATH `assets/r31/entities/missions/0402-mission-007.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1401`, `data/r31-assets.json:3410`
+- PASS_PATH `assets/r31/entities/missions/0403-mission-014.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1402`, `data/r31-assets.json:3411`
+- PASS_PATH `assets/r31/entities/missions/0404-mission-031.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1403`, `data/r31-assets.json:3412`
+- PASS_PATH `assets/r31/entities/missions/0405-mission-015.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1404`, `data/r31-assets.json:3413`
+- PASS_PATH `assets/r31/entities/missions/0406-mission-002.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1405`, `data/r31-assets.json:3414`
+- PASS_PATH `assets/r31/entities/missions/0407-mission-012.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1406`, `data/r31-assets.json:3415`
+- PASS_PATH `assets/r31/entities/missions/0408-mission-023.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1407`, `data/r31-assets.json:3416`
+- PASS_PATH `assets/r31/entities/missions/0409-mission-033.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1408`, `data/r31-assets.json:3417`
+- PASS_PATH `assets/r31/entities/missions/0410-mission-004.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1409`, `data/r31-assets.json:3418`
+- PASS_PATH `assets/r31/entities/missions/0411-mission-011.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1410`, `data/r31-assets.json:3419`
+- PASS_PATH `assets/r31/entities/missions/0412-mission-022.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1411`, `data/r31-assets.json:3420`
+- PASS_PATH `assets/r31/entities/missions/0413-mission-032.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1412`, `data/r31-assets.json:3421`
+- PASS_PATH `assets/r31/entities/missions/0414-mission-045.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1413`, `data/r31-assets.json:3422`
+- PASS_PATH `assets/r31/entities/missions/0415-mission-036.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1414`, `data/r31-assets.json:3423`
+- PASS_PATH `assets/r31/entities/missions/0416-mission-037.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1415`, `data/r31-assets.json:3424`
+- PASS_PATH `assets/r31/entities/missions/0417-mission-021.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1416`, `data/r31-assets.json:3425`
+- PASS_PATH `assets/r31/entities/missions/0418-mission-044.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1417`, `data/r31-assets.json:3426`
+- PASS_PATH `assets/r31/entities/missions/0419-mission-028.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1418`, `data/r31-assets.json:3427`
+- PASS_PATH `assets/r31/entities/missions/0420-mission-019.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1419`, `data/r31-assets.json:3428`
+- PASS_PATH `assets/r31/entities/missions/0421-mission-018.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1420`, `data/r31-assets.json:3429`
+- PASS_PATH `assets/r31/entities/missions/0422-mission-009.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1421`, `data/r31-assets.json:3430`
+- PASS_PATH `assets/r31/entities/missions/0423-mission-020.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1422`, `data/r31-assets.json:3431`
+- PASS_PATH `assets/r31/entities/missions/0424-mission-034.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1423`, `data/r31-assets.json:3432`
+- PASS_PATH `assets/r31/entities/missions/0425-mission-035.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1424`, `data/r31-assets.json:3433`
+- PASS_PATH `assets/r31/entities/missions/0426-mission-016.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1425`, `data/r31-assets.json:3434`
+- PASS_PATH `assets/r31/entities/missions/0427-mission-026.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1426`, `data/r31-assets.json:3435`
+- PASS_PATH `assets/r31/entities/missions/0428-mission-030.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1427`, `data/r31-assets.json:3436`
+- PASS_PATH `assets/r31/entities/missions/0429-mission-001.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1428`, `data/r31-assets.json:3437`
+- PASS_PATH `assets/r31/entities/missions/0430-mission-017.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1429`, `data/r31-assets.json:3438`
+- PASS_PATH `assets/r31/entities/missions/0431-mission-006.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1430`, `data/r31-assets.json:3439`
+- PASS_PATH `assets/r31/entities/missions/0432-mission-003.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1431`, `data/r31-assets.json:3440`
+- PASS_PATH `assets/r31/entities/missions/0433-mission-010.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1432`, `data/r31-assets.json:3441`
+- PASS_PATH `assets/r31/entities/missions/0434-mission-041.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1433`, `data/r31-assets.json:3442`
+- PASS_PATH `assets/r31/entities/missions/0435-mission-039.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1434`, `data/r31-assets.json:3443`
+- PASS_PATH `assets/r31/entities/missions/0436-mission-025.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1435`, `data/r31-assets.json:3444`
+- PASS_PATH `assets/r31/entities/missions/0437-mission-043.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1436`, `data/r31-assets.json:3445`
+- PASS_PATH `assets/r31/entities/missions/0438-mission-013.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1437`, `data/r31-assets.json:3446`
+- PASS_PATH `assets/r31/entities/missions/0439-mission-027.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1438`, `data/r31-assets.json:3447`
+- PASS_PATH `assets/r31/entities/missions/0440-mission-005.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1439`, `data/r31-assets.json:3448`
+- PASS_PATH `assets/r31/entities/npcs/0002-npc-039.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:762`, `data/r31-assets.json:2771`
+- PASS_PATH `assets/r31/entities/npcs/0008-npc-158.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:768`, `data/r31-assets.json:2777`
+- PASS_PATH `assets/r31/entities/npcs/0009-npc-150.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:769`, `data/r31-assets.json:2778`
+- PASS_PATH `assets/r31/entities/npcs/0011-npc-098.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:771`, `data/r31-assets.json:2780`
+- PASS_PATH `assets/r31/entities/npcs/0017-npc-167.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:777`, `data/r31-assets.json:2786`
+- PASS_PATH `assets/r31/entities/npcs/0018-npc-059.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:778`, `data/r31-assets.json:2787`
+- PASS_PATH `assets/r31/entities/npcs/0022-npc-102.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:782`, `data/r31-assets.json:2791`
+- PASS_PATH `assets/r31/entities/npcs/0023-npc-131.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:783`, `data/r31-assets.json:2792`
+- PASS_PATH `assets/r31/entities/npcs/0025-npc-071.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:785`, `data/r31-assets.json:2794`
+- PASS_PATH `assets/r31/entities/npcs/0026-npc-159.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:786`, `data/r31-assets.json:2795`
+- PASS_PATH `assets/r31/entities/npcs/0027-npc-053.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:787`, `data/r31-assets.json:2796`
+- PASS_PATH `assets/r31/entities/npcs/0028-npc-087.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:788`, `data/r31-assets.json:2797`
+- PASS_PATH `assets/r31/entities/npcs/0029-npc-154.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:789`, `data/r31-assets.json:2798`
+- PASS_PATH `assets/r31/entities/npcs/0033-npc-151.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:793`, `data/r31-assets.json:2802`
+- PASS_PATH `assets/r31/entities/npcs/0034-npc-152.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:794`, `data/r31-assets.json:2803`
+- PASS_PATH `assets/r31/entities/npcs/0035-npc-153.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:795`, `data/r31-assets.json:2804`
+- PASS_PATH `assets/r31/entities/npcs/0036-npc-114.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:796`, `data/r31-assets.json:2805`
+- PASS_PATH `assets/r31/entities/npcs/0037-npc-140.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:797`, `data/r31-assets.json:2806`
+- PASS_PATH `assets/r31/entities/npcs/0039-npc-105.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:799`, `data/r31-assets.json:2808`
+- PASS_PATH `assets/r31/entities/npcs/0040-npc-168.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:800`, `data/r31-assets.json:2809`
+- PASS_PATH `assets/r31/entities/npcs/0041-npc-147.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:801`, `data/r31-assets.json:2810`
+- PASS_PATH `assets/r31/entities/npcs/0043-npc-148.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:803`, `data/r31-assets.json:2812`
+- PASS_PATH `assets/r31/entities/npcs/0045-npc-061.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:805`, `data/r31-assets.json:2814`
+- PASS_PATH `assets/r31/entities/npcs/0048-npc-005.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:808`, `data/r31-assets.json:2817`
+- PASS_PATH `assets/r31/entities/npcs/0049-npc-023.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:809`, `data/r31-assets.json:2818`
+- PASS_PATH `assets/r31/entities/npcs/0054-npc-051.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:814`, `data/r31-assets.json:2823`
+- PASS_PATH `assets/r31/entities/npcs/0056-npc-022.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:816`, `data/r31-assets.json:2825`
+- PASS_PATH `assets/r31/entities/npcs/0057-npc-142.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:817`, `data/r31-assets.json:2826`
+- PASS_PATH `assets/r31/entities/npcs/0058-npc-149.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:818`, `data/r31-assets.json:2827`
+- PASS_PATH `assets/r31/entities/npcs/0060-npc-057.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:820`, `data/r31-assets.json:2829`
+- PASS_PATH `assets/r31/entities/npcs/0062-npc-163.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:822`, `data/r31-assets.json:2831`
+- PASS_PATH `assets/r31/entities/npcs/0064-npc-027.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:824`, `data/r31-assets.json:2833`
+- PASS_PATH `assets/r31/entities/npcs/0066-npc-145.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:826`, `data/r31-assets.json:2835`
+- PASS_PATH `assets/r31/entities/npcs/0068-npc-091.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:828`, `data/r31-assets.json:2837`
+- PASS_PATH `assets/r31/entities/npcs/0070-npc-127.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:830`, `data/r31-assets.json:2839`
+- PASS_PATH `assets/r31/entities/npcs/0071-npc-170.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:831`, `data/r31-assets.json:2840`
+- PASS_PATH `assets/r31/entities/npcs/0074-npc-015.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:834`, `data/r31-assets.json:2843`
+- PASS_PATH `assets/r31/entities/npcs/0075-npc-146.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:835`, `data/r31-assets.json:2844`
+- PASS_PATH `assets/r31/entities/npcs/0082-npc-156.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:842`, `data/r31-assets.json:2851`
+- PASS_PATH `assets/r31/entities/npcs/0084-npc-128.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:844`, `data/r31-assets.json:2853`
+- PASS_PATH `assets/r31/entities/npcs/0087-npc-133.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:847`, `data/r31-assets.json:2856`
+- PASS_PATH `assets/r31/entities/npcs/0088-npc-104.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:848`, `data/r31-assets.json:2857`
+- PASS_PATH `assets/r31/entities/npcs/0092-npc-165.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:852`, `data/r31-assets.json:2861`
+- PASS_PATH `assets/r31/entities/npcs/0094-npc-047.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:854`, `data/r31-assets.json:2863`
+- PASS_PATH `assets/r31/entities/npcs/0096-npc-169.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:856`, `data/r31-assets.json:2865`
+- PASS_PATH `assets/r31/entities/npcs/0099-npc-090.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:859`, `data/r31-assets.json:2868`
+- PASS_PATH `assets/r31/entities/npcs/0100-npc-008.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:860`, `data/r31-assets.json:2869`
+- PASS_PATH `assets/r31/entities/npcs/0103-npc-076.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:863`, `data/r31-assets.json:2872`
+- PASS_PATH `assets/r31/entities/npcs/0104-npc-157.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:864`, `data/r31-assets.json:2873`
+- PASS_PATH `assets/r31/entities/npcs/0106-npc-162.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:866`, `data/r31-assets.json:2875`
+- PASS_PATH `assets/r31/entities/npcs/0110-npc-054.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:870`, `data/r31-assets.json:2879`
+- PASS_PATH `assets/r31/entities/npcs/0111-npc-007.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:871`, `data/r31-assets.json:2880`
+- PASS_PATH `assets/r31/entities/npcs/0112-npc-135.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:872`, `data/r31-assets.json:2881`
+- PASS_PATH `assets/r31/entities/npcs/0113-npc-009.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:873`, `data/r31-assets.json:2882`
+- PASS_PATH `assets/r31/entities/npcs/0114-npc-029.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:874`, `data/r31-assets.json:2883`
+- PASS_PATH `assets/r31/entities/npcs/0115-npc-048.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:875`, `data/r31-assets.json:2884`
+- PASS_PATH `assets/r31/entities/npcs/0116-npc-103.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:876`, `data/r31-assets.json:2885`
+- PASS_PATH `assets/r31/entities/npcs/0117-npc-110.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:877`, `data/r31-assets.json:2886`
+- PASS_PATH `assets/r31/entities/npcs/0124-npc-160.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:884`, `data/r31-assets.json:2893`
+- PASS_PATH `assets/r31/entities/npcs/0126-npc-025.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:886`, `data/r31-assets.json:2895`
+- PASS_PATH `assets/r31/entities/npcs/0131-npc-166.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:891`, `data/r31-assets.json:2900`
+- PASS_PATH `assets/r31/entities/npcs/0132-npc-130.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:892`, `data/r31-assets.json:2901`
+- PASS_PATH `assets/r31/entities/npcs/0133-npc-014.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:893`, `data/r31-assets.json:2902`
+- PASS_PATH `assets/r31/entities/npcs/0139-npc-058.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:899`, `data/r31-assets.json:2908`
+- PASS_PATH `assets/r31/entities/npcs/0141-npc-155.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:901`, `data/r31-assets.json:2910`
+- PASS_PATH `assets/r31/entities/npcs/0143-npc-056.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:903`, `data/r31-assets.json:2912`
+- PASS_PATH `assets/r31/entities/npcs/0145-npc-161.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:905`, `data/r31-assets.json:2914`
+- PASS_PATH `assets/r31/entities/npcs/0146-npc-164.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:906`, `data/r31-assets.json:2915`
+- PASS_PATH `assets/r31/entities/npcs/0148-npc-129.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:908`, `data/r31-assets.json:2917`
+- PASS_PATH `assets/r31/entities/npcs/0149-npc-141.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:909`, `data/r31-assets.json:2918`
+- PASS_PATH `assets/r31/entities/npcs/0152-npc-006.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:912`, `data/r31-assets.json:2921`
+- PASS_PATH `assets/r31/entities/npcs/0153-npc-106.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:913`, `data/r31-assets.json:2922`
+- PASS_PATH `assets/r31/entities/npcs/0155-npc-060.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:915`, `data/r31-assets.json:2924`
+- PASS_PATH `assets/r31/entities/npcs/0157-npc-143.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:917`, `data/r31-assets.json:2926`
+- PASS_PATH `assets/r31/entities/npcs/0158-npc-049.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:918`, `data/r31-assets.json:2927`
+- PASS_PATH `assets/r31/entities/npcs/0160-npc-082.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:920`, `data/r31-assets.json:2929`
+- PASS_PATH `assets/r31/entities/npcs/0161-npc-118.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:921`, `data/r31-assets.json:2930`
+- PASS_PATH `assets/r31/entities/npcs/0163-npc-072.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:923`, `data/r31-assets.json:2932`
+- PASS_PATH `assets/r31/entities/npcs/0164-npc-134.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:924`, `data/r31-assets.json:2933`
+- PASS_PATH `assets/r31/entities/npcs/0167-npc-132.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:927`, `data/r31-assets.json:2936`
+- PASS_PATH `assets/r31/entities/npcs/0168-npc-122.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:928`, `data/r31-assets.json:2937`
+- PASS_PATH `assets/r31/entities/npcs/0169-npc-121.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:929`, `data/r31-assets.json:2938`
+- PASS_PATH `assets/r31/entities/npcs/0210-r25-vendor-armas-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:970`, `data/r31-assets.json:2979`
+- PASS_PATH `assets/r31/entities/npcs/0211-r25-vendor-ferramentas-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:971`, `data/r31-assets.json:2980`
+- PASS_PATH `assets/r31/entities/npcs/0212-r25-vendor-armaduras-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:972`, `data/r31-assets.json:2981`
+- PASS_PATH `assets/r31/entities/npcs/0213-r25-vendor-comida-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:973`, `data/r31-assets.json:2982`
+- PASS_PATH `assets/r31/entities/npcs/0214-r25-vendor-armas-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:974`, `data/r31-assets.json:2983`
+- PASS_PATH `assets/r31/entities/npcs/0215-r25-vendor-ferramentas-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:975`, `data/r31-assets.json:2984`
+- PASS_PATH `assets/r31/entities/npcs/0216-r25-vendor-armaduras-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:976`, `data/r31-assets.json:2985`
+- PASS_PATH `assets/r31/entities/npcs/0217-r25-vendor-comida-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:977`, `data/r31-assets.json:2986`
+- PASS_PATH `assets/r31/entities/npcs/0218-r25-vendor-armas-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:978`, `data/r31-assets.json:2987`
+- PASS_PATH `assets/r31/entities/npcs/0219-r25-vendor-ferramentas-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:979`, `data/r31-assets.json:2988`
+- PASS_PATH `assets/r31/entities/npcs/0220-r25-vendor-armaduras-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:980`, `data/r31-assets.json:2989`
+- PASS_PATH `assets/r31/entities/npcs/0221-r25-vendor-comida-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:981`, `data/r31-assets.json:2990`
+- PASS_PATH `assets/r31/entities/npcs/0222-r25-vendor-armas-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:982`, `data/r31-assets.json:2991`
+- PASS_PATH `assets/r31/entities/npcs/0223-r25-vendor-ferramentas-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:983`, `data/r31-assets.json:2992`
+- PASS_PATH `assets/r31/entities/npcs/0224-r25-vendor-armaduras-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:984`, `data/r31-assets.json:2993`
+- PASS_PATH `assets/r31/entities/npcs/0225-r25-vendor-comida-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:985`, `data/r31-assets.json:2994`
+- PASS_PATH `assets/r31/entities/npcs/0226-r25-vendor-armas-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:986`, `data/r31-assets.json:2995`
+- PASS_PATH `assets/r31/entities/npcs/0227-r25-vendor-ferramentas-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:987`, `data/r31-assets.json:2996`
+- PASS_PATH `assets/r31/entities/npcs/0228-r25-vendor-armaduras-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:988`, `data/r31-assets.json:2997`
+- PASS_PATH `assets/r31/entities/npcs/0229-r25-vendor-comida-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:989`, `data/r31-assets.json:2998`
+- PASS_PATH `assets/r31/entities/npcs/0230-r25-vendor-armas-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:990`, `data/r31-assets.json:2999`
+- PASS_PATH `assets/r31/entities/npcs/0231-r25-vendor-ferramentas-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:991`, `data/r31-assets.json:3000`
+- PASS_PATH `assets/r31/entities/npcs/0232-r25-vendor-armaduras-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:992`, `data/r31-assets.json:3001`
+- PASS_PATH `assets/r31/entities/npcs/0233-r25-vendor-comida-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:993`, `data/r31-assets.json:3002`
+- PASS_PATH `assets/r31/entities/npcs/0234-r25-vendor-armas-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:994`, `data/r31-assets.json:3003`
+- PASS_PATH `assets/r31/entities/npcs/0235-r25-vendor-ferramentas-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:995`, `data/r31-assets.json:3004`
+- PASS_PATH `assets/r31/entities/npcs/0236-r25-vendor-armaduras-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:996`, `data/r31-assets.json:3005`
+- PASS_PATH `assets/r31/entities/npcs/0237-r25-vendor-comida-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:997`, `data/r31-assets.json:3006`
+- PASS_PATH `assets/r31/entities/origins/0001-sem-cla.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1565`, `data/r31-assets.json:3574`
+- PASS_PATH `assets/r31/entities/origins/0002-aburame.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1566`, `data/r31-assets.json:3575`
+- PASS_PATH `assets/r31/entities/origins/0003-akimichi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1567`, `data/r31-assets.json:3576`
+- PASS_PATH `assets/r31/entities/origins/0004-hatake.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1568`, `data/r31-assets.json:3577`
+- PASS_PATH `assets/r31/entities/origins/0005-hyuuga.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1569`, `data/r31-assets.json:3578`
+- PASS_PATH `assets/r31/entities/origins/0006-inuzuka.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1570`, `data/r31-assets.json:3579`
+- PASS_PATH `assets/r31/entities/origins/0007-nara.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1571`, `data/r31-assets.json:3580`
+- PASS_PATH `assets/r31/entities/origins/0008-sarutobi.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1572`, `data/r31-assets.json:3581`
+- PASS_PATH `assets/r31/entities/origins/0009-senju.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1573`, `data/r31-assets.json:3582`
+- PASS_PATH `assets/r31/entities/origins/0010-uchiha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1574`, `data/r31-assets.json:3583`
+- PASS_PATH `assets/r31/entities/origins/0011-uzumaki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1575`, `data/r31-assets.json:3584`
+- PASS_PATH `assets/r31/entities/origins/0012-yamanaka.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1576`, `data/r31-assets.json:3585`
+- PASS_PATH `assets/r31/entities/origins/0013-fuuma.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1577`, `data/r31-assets.json:3586`
+- PASS_PATH `assets/r31/entities/origins/0014-hoshigaki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1578`, `data/r31-assets.json:3587`
+- PASS_PATH `assets/r31/entities/origins/0015-hozuki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1579`, `data/r31-assets.json:3588`
+- PASS_PATH `assets/r31/entities/origins/0016-kaguya.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1580`, `data/r31-assets.json:3589`
+- PASS_PATH `assets/r31/entities/origins/0017-yotsuki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1581`, `data/r31-assets.json:3590`
+- PASS_PATH `assets/r31/entities/origins/0018-yuki.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1582`, `data/r31-assets.json:3591`
+- PASS_PATH `assets/r31/entities/origins/0019-shimura.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1583`, `data/r31-assets.json:3592`
+- PASS_PATH `assets/r31/entities/origins/0020-hoshigakure.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1584`, `data/r31-assets.json:3593`
+- PASS_PATH `assets/r31/entities/pericias/0001-acrobacia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:693`, `data/r31-assets.json:2702`
+- PASS_PATH `assets/r31/entities/pericias/0002-arte.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:694`, `data/r31-assets.json:2703`
+- PASS_PATH `assets/r31/entities/pericias/0003-atletismo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:695`, `data/r31-assets.json:2704`
+- PASS_PATH `assets/r31/entities/pericias/0004-ciencias.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:696`, `data/r31-assets.json:2705`
+- PASS_PATH `assets/r31/entities/pericias/0005-concentracao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:697`, `data/r31-assets.json:2706`
+- PASS_PATH `assets/r31/entities/pericias/0006-cultura.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:698`, `data/r31-assets.json:2707`
+- PASS_PATH `assets/r31/entities/pericias/0007-disfarces.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:699`, `data/r31-assets.json:2708`
+- PASS_PATH `assets/r31/entities/pericias/0008-escapar.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:700`, `data/r31-assets.json:2709`
+- PASS_PATH `assets/r31/entities/pericias/0009-furtividade.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:701`, `data/r31-assets.json:2710`
+- PASS_PATH `assets/r31/entities/pericias/0010-animais.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:702`, `data/r31-assets.json:2711`
+- PASS_PATH `assets/r31/entities/pericias/0011-mecanismos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:703`, `data/r31-assets.json:2712`
+- PASS_PATH `assets/r31/entities/pericias/0012-medicina.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:704`, `data/r31-assets.json:2713`
+- PASS_PATH `assets/r31/entities/pericias/0013-ocultismo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:705`, `data/r31-assets.json:2714`
+- PASS_PATH `assets/r31/entities/pericias/0014-prestidigitacao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:706`, `data/r31-assets.json:2715`
+- PASS_PATH `assets/r31/entities/pericias/0015-procurar.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:707`, `data/r31-assets.json:2716`
+- PASS_PATH `assets/r31/entities/pericias/0016-prontidao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:708`, `data/r31-assets.json:2717`
+- PASS_PATH `assets/r31/entities/pericias/0017-rastrear.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:709`, `data/r31-assets.json:2718`
+- PASS_PATH `assets/r31/entities/pericias/0018-veneficio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:710`, `data/r31-assets.json:2719`
+- PASS_PATH `assets/r31/entities/pericias/0019-persuasao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:711`, `data/r31-assets.json:2720`
+- PASS_PATH `assets/r31/entities/pericias/0020-enganacao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:712`, `data/r31-assets.json:2721`
+- PASS_PATH `assets/r31/entities/powers/0001-ninpou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1615`, `data/r31-assets.json:3624`
+- PASS_PATH `assets/r31/entities/powers/0002-doton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1616`, `data/r31-assets.json:3625`
+- PASS_PATH `assets/r31/entities/powers/0003-fuuton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1617`, `data/r31-assets.json:3626`
+- PASS_PATH `assets/r31/entities/powers/0004-katon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1618`, `data/r31-assets.json:3627`
+- PASS_PATH `assets/r31/entities/powers/0005-raiton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1619`, `data/r31-assets.json:3628`
+- PASS_PATH `assets/r31/entities/powers/0006-suiton.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1620`, `data/r31-assets.json:3629`
+- PASS_PATH `assets/r31/entities/powers/0007-fuuinjutsu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1621`, `data/r31-assets.json:3630`
+- PASS_PATH `assets/r31/entities/powers/0008-iryou.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1622`, `data/r31-assets.json:3631`
+- PASS_PATH `assets/r31/entities/powers/0009-rasengan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1623`, `data/r31-assets.json:3632`
+- PASS_PATH `assets/r31/entities/professions/0001-mensageiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1626`, `data/r31-assets.json:3635`
+- PASS_PATH `assets/r31/entities/professions/0002-rastreador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1627`, `data/r31-assets.json:3636`
+- PASS_PATH `assets/r31/entities/professions/0003-medico-campo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1628`, `data/r31-assets.json:3637`
+- PASS_PATH `assets/r31/entities/professions/0004-armeiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1629`, `data/r31-assets.json:3638`
+- PASS_PATH `assets/r31/entities/professions/0005-investigador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1630`, `data/r31-assets.json:3639`
+- PASS_PATH `assets/r31/entities/professions/0006-artesao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1631`, `data/r31-assets.json:3640`
+- PASS_PATH `assets/r31/entities/professions/0007-comerciante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1632`, `data/r31-assets.json:3641`
+- PASS_PATH `assets/r31/entities/professions/0008-cozinheiro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1633`, `data/r31-assets.json:3642`
+- PASS_PATH `assets/r31/entities/professions/0009-cacador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1634`, `data/r31-assets.json:3643`
+- PASS_PATH `assets/r31/entities/professions/0010-escriba.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1635`, `data/r31-assets.json:3644`
+- PASS_PATH `assets/r31/entities/professions/0011-guarda.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1636`, `data/r31-assets.json:3645`
+- PASS_PATH `assets/r31/entities/professions/0012-explorador.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1637`, `data/r31-assets.json:3646`
+- PASS_PATH `assets/r31/entities/resources/0001-pv.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1823`, `data/r31-assets.json:3832`
+- PASS_PATH `assets/r31/entities/resources/0002-chakra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1824`, `data/r31-assets.json:3833`
+- PASS_PATH `assets/r31/entities/resources/0003-vigor.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1825`, `data/r31-assets.json:3834`
+- PASS_PATH `assets/r31/entities/resources/0004-ryo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1826`, `data/r31-assets.json:3835`
+- PASS_PATH `assets/r31/entities/resources/0005-xp.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1827`, `data/r31-assets.json:3836`
+- PASS_PATH `assets/r31/entities/resources/0006-reputacao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1828`, `data/r31-assets.json:3837`
+- PASS_PATH `assets/r31/entities/resources/0007-kusenro.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1829`, `data/r31-assets.json:3838`
+- PASS_PATH `assets/r31/entities/resources/0008-kurai-chakra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1830`, `data/r31-assets.json:3839`
+- PASS_PATH `assets/r31/entities/resources/0009-suirin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1831`, `data/r31-assets.json:3840`
+- PASS_PATH `assets/r31/entities/resources/0010-kugangan.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1832`, `data/r31-assets.json:3841`
+- PASS_PATH `assets/r31/entities/resources/0011-pontos-aptidao.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1833`, `data/r31-assets.json:3842`
+- PASS_PATH `assets/r31/entities/resources/0012-pontos-evento.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1834`, `data/r31-assets.json:3843`
+- PASS_PATH `assets/r31/entities/secrets/0001-secret-sannin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2017`, `data/r31-assets.json:4026`
+- PASS_PATH `assets/r31/entities/secrets/0002-secret-hero.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2018`, `data/r31-assets.json:4027`
+- PASS_PATH `assets/r31/entities/secrets/0003-secret-archive.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2019`, `data/r31-assets.json:4028`
+- PASS_PATH `assets/r31/entities/secrets/0004-secret-anbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2020`, `data/r31-assets.json:4029`
+- PASS_PATH `assets/r31/entities/secrets/0005-secret-contract.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2021`, `data/r31-assets.json:4030`
+- PASS_PATH `assets/r31/entities/secrets/0006-secret-sage.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2022`, `data/r31-assets.json:4031`
+- PASS_PATH `assets/r31/entities/secrets/0007-secret-rival.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2023`, `data/r31-assets.json:4032`
+- PASS_PATH `assets/r31/entities/secrets/0008-secret-world.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2024`, `data/r31-assets.json:4033`
+- PASS_PATH `assets/r31/entities/secrets/0009-secret-kage-candidate.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2025`, `data/r31-assets.json:4034`
+- PASS_PATH `assets/r31/entities/secrets/0010-secret-forbidden-weapon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2026`, `data/r31-assets.json:4035`
+- PASS_PATH `assets/r31/entities/secrets/0011-secret-biju-echo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2027`, `data/r31-assets.json:4036`
+- PASS_PATH `assets/r31/entities/secrets/0012-secret-clan-heir.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2028`, `data/r31-assets.json:4037`
+- PASS_PATH `assets/r31/entities/secrets/0013-secret-war-veteran.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2029`, `data/r31-assets.json:4038`
+- PASS_PATH `assets/r31/entities/secrets/0014-secret-missing-nin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2030`, `data/r31-assets.json:4039`
+- PASS_PATH `assets/r31/entities/secrets/0015-secret-diplomat.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2031`, `data/r31-assets.json:4040`
+- PASS_PATH `assets/r31/entities/secrets/0016-secret-legendary-summon.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2032`, `data/r31-assets.json:4041`
+- PASS_PATH `assets/r31/entities/titles/0001-sannin.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1837`, `data/r31-assets.json:3846`
+- PASS_PATH `assets/r31/entities/titles/0002-heroi-da-vila.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1838`, `data/r31-assets.json:3847`
+- PASS_PATH `assets/r31/entities/titles/0003-lenda-viva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1839`, `data/r31-assets.json:3848`
+- PASS_PATH `assets/r31/entities/titles/0004-mestre-de-caminho.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1840`, `data/r31-assets.json:3849`
+- PASS_PATH `assets/r31/entities/titles/0005-renegado-marcado.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1841`, `data/r31-assets.json:3850`
+- PASS_PATH `assets/r31/entities/titles/0006-sabio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1842`, `data/r31-assets.json:3851`
+- PASS_PATH `assets/r31/entities/titles/0007-elite-anbu.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1843`, `data/r31-assets.json:3852`
+- PASS_PATH `assets/r31/entities/titles/0008-guardiao-proibido.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1844`, `data/r31-assets.json:3853`
+- PASS_PATH `assets/r31/entities/titles/0009-herdeiro-cla.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1845`, `data/r31-assets.json:3854`
+- PASS_PATH `assets/r31/entities/titles/0010-campeao-exames.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1846`, `data/r31-assets.json:3855`
+- PASS_PATH `assets/r31/entities/titles/0011-cacador-rank-s.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1847`, `data/r31-assets.json:3856`
+- PASS_PATH `assets/r31/entities/titles/0012-salvador-pais.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1848`, `data/r31-assets.json:3857`
+- PASS_PATH `assets/r31/entities/trainings/0001-chakra-arvore.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1711`, `data/r31-assets.json:3720`
+- PASS_PATH `assets/r31/entities/trainings/0002-chakra-agua.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1712`, `data/r31-assets.json:3721`
+- PASS_PATH `assets/r31/entities/trainings/0003-taijutsu-sacos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1713`, `data/r31-assets.json:3722`
+- PASS_PATH `assets/r31/entities/trainings/0004-shuriken-alvos.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1714`, `data/r31-assets.json:3723`
+- PASS_PATH `assets/r31/entities/trainings/0005-furtividade-floresta.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1715`, `data/r31-assets.json:3724`
+- PASS_PATH `assets/r31/entities/trainings/0006-rastreamento.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1716`, `data/r31-assets.json:3725`
+- PASS_PATH `assets/r31/entities/trainings/0007-medicina.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1717`, `data/r31-assets.json:3726`
+- PASS_PATH `assets/r31/entities/trainings/0008-estrategia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1718`, `data/r31-assets.json:3727`
+- PASS_PATH `assets/r31/entities/ui/0001-inicio.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2035`, `data/r31-assets.json:4044`
+- PASS_PATH `assets/r31/entities/ui/0002-ficha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2036`, `data/r31-assets.json:4045`
+- PASS_PATH `assets/r31/entities/ui/0003-tecnicas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2037`, `data/r31-assets.json:4046`
+- PASS_PATH `assets/r31/entities/ui/0004-aptidoes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2038`, `data/r31-assets.json:4047`
+- PASS_PATH `assets/r31/entities/ui/0005-treino.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2039`, `data/r31-assets.json:4048`
+- PASS_PATH `assets/r31/entities/ui/0006-descanso.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2040`, `data/r31-assets.json:4049`
+- PASS_PATH `assets/r31/entities/ui/0007-progresso.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2041`, `data/r31-assets.json:4050`
+- PASS_PATH `assets/r31/entities/ui/0008-relacoes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2042`, `data/r31-assets.json:4051`
+- PASS_PATH `assets/r31/entities/ui/0009-inventario.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2043`, `data/r31-assets.json:4052`
+- PASS_PATH `assets/r31/entities/ui/0010-loja.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2044`, `data/r31-assets.json:4053`
+- PASS_PATH `assets/r31/entities/ui/0011-origem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2045`, `data/r31-assets.json:4054`
+- PASS_PATH `assets/r31/entities/ui/0012-enciclopedia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2046`, `data/r31-assets.json:4055`
+- PASS_PATH `assets/r31/entities/ui/0013-mundo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2047`, `data/r31-assets.json:4056`
+- PASS_PATH `assets/r31/entities/ui/0014-missoes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2048`, `data/r31-assets.json:4057`
+- PASS_PATH `assets/r31/entities/ui/0015-combate.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2049`, `data/r31-assets.json:4058`
+- PASS_PATH `assets/r31/entities/ui/0016-campo-tatico.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2050`, `data/r31-assets.json:4059`
+- PASS_PATH `assets/r31/entities/ui/0017-historia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2051`, `data/r31-assets.json:4060`
+- PASS_PATH `assets/r31/entities/ui/0018-equipe.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2052`, `data/r31-assets.json:4061`
+- PASS_PATH `assets/r31/entities/ui/0019-personagens.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2053`, `data/r31-assets.json:4062`
+- PASS_PATH `assets/r31/entities/ui/0020-configuracoes.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2054`, `data/r31-assets.json:4063`
+- PASS_PATH `assets/r31/entities/ui/0021-duelo.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2055`, `data/r31-assets.json:4064`
+- PASS_PATH `assets/r31/entities/ui/0022-salvar.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2056`, `data/r31-assets.json:4065`
+- PASS_PATH `assets/r31/entities/ui/0023-sair.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2057`, `data/r31-assets.json:4066`
+- PASS_PATH `assets/r31/entities/ui/0024-criar-personagem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:2058`, `data/r31-assets.json:4067`
+- PASS_PATH `assets/r31/entities/vendors/0009-armas-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1677`, `data/r31-assets.json:3686`
+- PASS_PATH `assets/r31/entities/vendors/0010-ferramentas-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1678`, `data/r31-assets.json:3687`
+- PASS_PATH `assets/r31/entities/vendors/0011-armaduras-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1679`, `data/r31-assets.json:3688`
+- PASS_PATH `assets/r31/entities/vendors/0012-comida-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1680`, `data/r31-assets.json:3689`
+- PASS_PATH `assets/r31/entities/vendors/0013-armas-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1681`, `data/r31-assets.json:3690`
+- PASS_PATH `assets/r31/entities/vendors/0014-ferramentas-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1682`, `data/r31-assets.json:3691`
+- PASS_PATH `assets/r31/entities/vendors/0015-armaduras-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1683`, `data/r31-assets.json:3692`
+- PASS_PATH `assets/r31/entities/vendors/0016-comida-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1684`, `data/r31-assets.json:3693`
+- PASS_PATH `assets/r31/entities/vendors/0017-armas-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1685`, `data/r31-assets.json:3694`
+- PASS_PATH `assets/r31/entities/vendors/0018-ferramentas-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1686`, `data/r31-assets.json:3695`
+- PASS_PATH `assets/r31/entities/vendors/0019-armaduras-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1687`, `data/r31-assets.json:3696`
+- PASS_PATH `assets/r31/entities/vendors/0020-comida-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1688`, `data/r31-assets.json:3697`
+- PASS_PATH `assets/r31/entities/vendors/0021-armas-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1689`, `data/r31-assets.json:3698`
+- PASS_PATH `assets/r31/entities/vendors/0022-ferramentas-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1690`, `data/r31-assets.json:3699`
+- PASS_PATH `assets/r31/entities/vendors/0023-armaduras-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1691`, `data/r31-assets.json:3700`
+- PASS_PATH `assets/r31/entities/vendors/0024-comida-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1692`, `data/r31-assets.json:3701`
+- PASS_PATH `assets/r31/entities/vendors/0025-armas-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1693`, `data/r31-assets.json:3702`
+- PASS_PATH `assets/r31/entities/vendors/0026-ferramentas-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1694`, `data/r31-assets.json:3703`
+- PASS_PATH `assets/r31/entities/vendors/0027-armaduras-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1695`, `data/r31-assets.json:3704`
+- PASS_PATH `assets/r31/entities/vendors/0028-comida-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1696`, `data/r31-assets.json:3705`
+- PASS_PATH `assets/r31/entities/vendors/0029-armas-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1697`, `data/r31-assets.json:3706`
+- PASS_PATH `assets/r31/entities/vendors/0030-ferramentas-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1698`, `data/r31-assets.json:3707`
+- PASS_PATH `assets/r31/entities/vendors/0031-armaduras-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1699`, `data/r31-assets.json:3708`
+- PASS_PATH `assets/r31/entities/vendors/0032-comida-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1700`, `data/r31-assets.json:3709`
+- PASS_PATH `assets/r31/entities/vendors/0033-armas-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1701`, `data/r31-assets.json:3710`
+- PASS_PATH `assets/r31/entities/vendors/0034-ferramentas-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1702`, `data/r31-assets.json:3711`
+- PASS_PATH `assets/r31/entities/vendors/0035-armaduras-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1703`, `data/r31-assets.json:3712`
+- PASS_PATH `assets/r31/entities/vendors/0036-comida-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1704`, `data/r31-assets.json:3713`
+- PASS_PATH `assets/r31/entities/vendors/0037-armas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1705`, `data/r31-assets.json:3714`
+- PASS_PATH `assets/r31/entities/vendors/0038-ferramentas.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1706`, `data/r31-assets.json:3715`
+- PASS_PATH `assets/r31/entities/vendors/0039-armaduras.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1707`, `data/r31-assets.json:3716`
+- PASS_PATH `assets/r31/entities/villages/0001-folha.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1652`, `data/r31-assets.json:3661`
+- PASS_PATH `assets/r31/entities/villages/0002-areia.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1653`, `data/r31-assets.json:3662`
+- PASS_PATH `assets/r31/entities/villages/0003-nevoa.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1654`, `data/r31-assets.json:3663`
+- PASS_PATH `assets/r31/entities/villages/0004-pedra.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1655`, `data/r31-assets.json:3664`
+- PASS_PATH `assets/r31/entities/villages/0005-nuvem.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1656`, `data/r31-assets.json:3665`
+- PASS_PATH `assets/r31/entities/villages/0006-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1657`, `data/r31-assets.json:3666`
+- PASS_PATH `assets/r31/entities/villages/0007-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1658`, `data/r31-assets.json:3667`
+- PASS_PATH `assets/r31/entities/villages/0008-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1659`, `data/r31-assets.json:3668`
+- MISSING_PATH `assets/r31/items/${folder}/variant-${String(i).padStart(2,` — `app.js:4528`
+- PASS_PATH `assets/r31/items/flechas-shinobi/variant-00.png` — `app.js:4531`
+- PASS_PATH `assets/r31/items/marionete-karasu/variant-00.png` — `app.js:4532`
+- PASS_PATH `assets/r31/items/pilula-horengan/variant-00.png` — `app.js:4533`
+- PASS_PATH `assets/r31/items/pilula-karengan/variant-00.png` — `app.js:4534`
+- PASS_PATH `assets/r31/items/pilula-tongarashigan/variant-00.png` — `app.js:4535`
+- MISSING_PATH `assets/r40/atlas_sources` — `data/r31-assets.js:1`, `data/r31-assets.json:4083`
+- MISSING_PATH `assets/r40/atlas_verified` — `data/r31-assets.js:1`, `data/r31-assets.json:4082`
+- PASS_PATH `assets/r40/atlas_verified/a-quarto-raikage.webp` — `data/assets/asset-manifest.json:13`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:761`, `data/r31-assets.json:1851`, `data/r31-assets.json:2770`, `data/r31-assets.json:3860`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/akatsuchi.webp` — `data/assets/asset-manifest.json:29`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:763`, `data/r31-assets.json:1852`, `data/r31-assets.json:2772`, `data/r31-assets.json:3861`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ameyuri-ringo.webp` — `data/assets/asset-manifest.json:45`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:764`, `data/r31-assets.json:1853`, `data/r31-assets.json:2773`, `data/r31-assets.json:3862`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/anko-mitarashi.webp` — `data/assets/asset-manifest.json:61`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:765`, `data/r31-assets.json:1854`, `data/r31-assets.json:2774`, `data/r31-assets.json:3863`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ao.webp` — `data/assets/asset-manifest.json:77`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:766`, `data/r31-assets.json:1855`, `data/r31-assets.json:2775`, `data/r31-assets.json:3864`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/aoba-yamashiro.webp` — `data/assets/asset-manifest.json:93`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:767`, `data/r31-assets.json:1856`, `data/r31-assets.json:2776`, `data/r31-assets.json:3865`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/armeira-de-nova-konoha.webp` — `data/assets/asset-manifest.json:109`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:957`, `data/r31-assets.json:1670`, `data/r31-assets.json:1857`, `data/r31-assets.json:2966`, `data/r31-assets.json:3679`, `data/r31-assets.json:3866`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/arquivista-da-vila.webp` — `data/assets/asset-manifest.json:125`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:964`, `data/r31-assets.json:1858`, `data/r31-assets.json:2973`, `data/r31-assets.json:3867`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/asuma-sarutobi.webp` — `data/assets/asset-manifest.json:141`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:770`, `data/r31-assets.json:1859`, `data/r31-assets.json:2779`, `data/r31-assets.json:3868`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ayame.webp` — `data/assets/asset-manifest.json:157`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:935`, `data/r31-assets.json:1860`, `data/r31-assets.json:2944`, `data/r31-assets.json:3869`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/baki.webp` — `data/assets/asset-manifest.json:173`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:772`, `data/r31-assets.json:1861`, `data/r31-assets.json:2781`, `data/r31-assets.json:3870`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/balconista-de-missoes.webp` — `data/assets/asset-manifest.json:189`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:961`, `data/r31-assets.json:1862`, `data/r31-assets.json:2970`, `data/r31-assets.json:3871`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/boruto-uzumaki.webp` — `data/assets/asset-manifest.json:205`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:942`, `data/r31-assets.json:1863`, `data/r31-assets.json:2951`, `data/r31-assets.json:3872`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/c.webp` — `data/assets/asset-manifest.json:221`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:773`, `data/r31-assets.json:1864`, `data/r31-assets.json:2782`, `data/r31-assets.json:3873`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/capitao-da-guarda.webp` — `data/assets/asset-manifest.json:237`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:963`, `data/r31-assets.json:1865`, `data/r31-assets.json:2972`, `data/r31-assets.json:3874`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/chiyo.webp` — `data/assets/asset-manifest.json:253`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:774`, `data/r31-assets.json:1866`, `data/r31-assets.json:2783`, `data/r31-assets.json:3875`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/chocho-akimichi.webp` — `data/assets/asset-manifest.json:269`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:950`, `data/r31-assets.json:1867`, `data/r31-assets.json:2959`, `data/r31-assets.json:3876`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/choji-akimichi.webp` — `data/assets/asset-manifest.json:285`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:775`, `data/r31-assets.json:1868`, `data/r31-assets.json:2784`, `data/r31-assets.json:3877`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/chojuro.webp` — `data/assets/asset-manifest.json:301`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:776`, `data/r31-assets.json:1869`, `data/r31-assets.json:2785`, `data/r31-assets.json:3878`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/comerciante-de-suprimentos.webp` — `data/assets/asset-manifest.json:317`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:965`, `data/r31-assets.json:1674`, `data/r31-assets.json:1870`, `data/r31-assets.json:2974`, `data/r31-assets.json:3683`, `data/r31-assets.json:3879`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/corretor-do-mercado-negro.webp` — `data/assets/asset-manifest.json:333`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:968`, `data/r31-assets.json:1676`, `data/r31-assets.json:1871`, `data/r31-assets.json:2977`, `data/r31-assets.json:3685`, `data/r31-assets.json:3880`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/danzo-shimura.webp` — `data/assets/asset-manifest.json:349`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:779`, `data/r31-assets.json:1872`, `data/r31-assets.json:2788`, `data/r31-assets.json:3881`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/darui.webp` — `data/assets/asset-manifest.json:365`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:780`, `data/r31-assets.json:1873`, `data/r31-assets.json:2789`, `data/r31-assets.json:3882`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/deidara.webp` — `data/assets/asset-manifest.json:381`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:781`, `data/r31-assets.json:1874`, `data/r31-assets.json:2790`, `data/r31-assets.json:3883`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/denki-kaminarimon.webp` — `data/assets/asset-manifest.json:397`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:953`, `data/r31-assets.json:1875`, `data/r31-assets.json:2962`, `data/r31-assets.json:3884`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/dona-da-estalagem.webp` — `data/assets/asset-manifest.json:413`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:960`, `data/r31-assets.json:1675`, `data/r31-assets.json:1876`, `data/r31-assets.json:2969`, `data/r31-assets.json:3684`, `data/r31-assets.json:3885`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ebisu.webp` — `data/assets/asset-manifest.json:429`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:784`, `data/r31-assets.json:1877`, `data/r31-assets.json:2793`, `data/r31-assets.json:3886`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ferreiro-de-nova-konoha.webp` — `data/assets/asset-manifest.json:445`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:956`, `data/r31-assets.json:1671`, `data/r31-assets.json:1878`, `data/r31-assets.json:2965`, `data/r31-assets.json:3680`, `data/r31-assets.json:3887`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/fu-yamanaka.webp` — `data/assets/asset-manifest.json:461`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:791`, `data/r31-assets.json:1879`, `data/r31-assets.json:2800`, `data/r31-assets.json:3888`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/fuu.webp` — `data/assets/asset-manifest.json:477`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:790`, `data/r31-assets.json:938`, `data/r31-assets.json:1880`, `data/r31-assets.json:2799`, `data/r31-assets.json:2947`, `data/r31-assets.json:3889`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/gaara.webp` — `data/assets/asset-manifest.json:493`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:792`, `data/r31-assets.json:1881`, `data/r31-assets.json:2801`, `data/r31-assets.json:3890`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/genma-shiranui.webp` — `data/assets/asset-manifest.json:509`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:798`, `data/r31-assets.json:1882`, `data/r31-assets.json:2807`, `data/r31-assets.json:3891`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/haku.webp` — `data/assets/asset-manifest.json:525`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:802`, `data/r31-assets.json:1883`, `data/r31-assets.json:2811`, `data/r31-assets.json:3892`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/han.webp` — `data/assets/asset-manifest.json:541`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:804`, `data/r31-assets.json:1884`, `data/r31-assets.json:2813`, `data/r31-assets.json:3893`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hanabi-hyuga.webp` — `data/assets/asset-manifest.json:557`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:806`, `data/r31-assets.json:1885`, `data/r31-assets.json:2815`, `data/r31-assets.json:3894`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hanzo.webp` — `data/assets/asset-manifest.json:573`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:807`, `data/r31-assets.json:1886`, `data/r31-assets.json:2816`, `data/r31-assets.json:3895`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/herbalista-da-vila.webp` — `data/assets/asset-manifest.json:589`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:958`, `data/r31-assets.json:1673`, `data/r31-assets.json:1887`, `data/r31-assets.json:2967`, `data/r31-assets.json:3682`, `data/r31-assets.json:3896`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hiashi-hyuga.webp` — `data/assets/asset-manifest.json:605`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:810`, `data/r31-assets.json:1888`, `data/r31-assets.json:2819`, `data/r31-assets.json:3897`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hidan.webp` — `data/assets/asset-manifest.json:621`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:811`, `data/r31-assets.json:1889`, `data/r31-assets.json:2820`, `data/r31-assets.json:3898`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/himawari-uzumaki.webp` — `data/assets/asset-manifest.json:637`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:946`, `data/r31-assets.json:1890`, `data/r31-assets.json:2955`, `data/r31-assets.json:3899`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hinata-hyuga.webp` — `data/assets/asset-manifest.json:653`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:812`, `data/r31-assets.json:1891`, `data/r31-assets.json:2821`, `data/r31-assets.json:3900`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/hiruzen-sarutobi.webp` — `data/assets/asset-manifest.json:669`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:813`, `data/r31-assets.json:1892`, `data/r31-assets.json:2822`, `data/r31-assets.json:3901`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/homura-mitokado.webp` — `data/assets/asset-manifest.json:685`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:815`, `data/r31-assets.json:1893`, `data/r31-assets.json:2824`, `data/r31-assets.json:3902`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ichiraku-ramen.webp` — `data/assets/asset-manifest.json:701`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1503`, `data/r31-assets.json:1669`, `data/r31-assets.json:1708`, `data/r31-assets.json:3512`, `data/r31-assets.json:3678`, `data/r31-assets.json:3717`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/ino-yamanaka.webp` — `data/assets/asset-manifest.json:717`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:819`, `data/r31-assets.json:1894`, `data/r31-assets.json:2828`, `data/r31-assets.json:3903`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/inojin-yamanaka.webp` — `data/assets/asset-manifest.json:733`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:949`, `data/r31-assets.json:1895`, `data/r31-assets.json:2958`, `data/r31-assets.json:3904`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/instrutor-do-dojo.webp` — `data/assets/asset-manifest.json:749`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:962`, `data/r31-assets.json:1896`, `data/r31-assets.json:2971`, `data/r31-assets.json:3905`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/iruka-umino.webp` — `data/assets/asset-manifest.json:765`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:821`, `data/r31-assets.json:1897`, `data/r31-assets.json:2830`, `data/r31-assets.json:3906`, `data/r41-data-delta.js:7`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:8`
+- PASS_PATH `assets/r40/atlas_verified/itachi-uchiha.webp` — `data/assets/asset-manifest.json:781`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:823`, `data/r31-assets.json:1898`, `data/r31-assets.json:2832`, `data/r31-assets.json:3907`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/iwabe-yuino.webp` — `data/assets/asset-manifest.json:797`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:954`, `data/r31-assets.json:1899`, `data/r31-assets.json:2963`, `data/r31-assets.json:3908`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/izumo-kamizuki.webp` — `data/assets/asset-manifest.json:813`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:825`, `data/r31-assets.json:1900`, `data/r31-assets.json:2834`, `data/r31-assets.json:3909`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/jinin-akebino.webp` — `data/assets/asset-manifest.json:829`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:827`, `data/r31-assets.json:1901`, `data/r31-assets.json:2836`, `data/r31-assets.json:3910`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/jiraiya.webp` — `data/assets/asset-manifest.json:845`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:829`, `data/r31-assets.json:1902`, `data/r31-assets.json:2838`, `data/r31-assets.json:3911`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/jugo.webp` — `data/assets/asset-manifest.json:861`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:832`, `data/r31-assets.json:1903`, `data/r31-assets.json:2841`, `data/r31-assets.json:3912`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kabuto-yakushi.webp` — `data/assets/asset-manifest.json:877`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:833`, `data/r31-assets.json:1904`, `data/r31-assets.json:2842`, `data/r31-assets.json:3913`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kakashi-hatake.webp` — `data/assets/asset-manifest.json:893`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:836`, `data/r31-assets.json:1905`, `data/r31-assets.json:2845`, `data/r31-assets.json:3914`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:34`, `src/r41-canonical-repair.js:35`
+- PASS_PATH `assets/r40/atlas_verified/kakuzu.webp` — `data/assets/asset-manifest.json:909`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:837`, `data/r31-assets.json:1906`, `data/r31-assets.json:2846`, `data/r31-assets.json:3915`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kankuro.webp` — `data/assets/asset-manifest.json:925`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:838`, `data/r31-assets.json:1907`, `data/r31-assets.json:2847`, `data/r31-assets.json:3916`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/karin.webp` — `data/assets/asset-manifest.json:941`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:839`, `data/r31-assets.json:1908`, `data/r31-assets.json:2848`, `data/r31-assets.json:3917`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/karui.webp` — `data/assets/asset-manifest.json:957`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:840`, `data/r31-assets.json:1909`, `data/r31-assets.json:2849`, `data/r31-assets.json:3918`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/karura.webp` — `data/assets/asset-manifest.json:973`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:841`, `data/r31-assets.json:1910`, `data/r31-assets.json:2850`, `data/r31-assets.json:3919`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kawaki.webp` — `data/assets/asset-manifest.json:989`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:945`, `data/r31-assets.json:1911`, `data/r31-assets.json:2954`, `data/r31-assets.json:3920`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kiba-inuzuka.webp` — `data/assets/asset-manifest.json:1005`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:843`, `data/r31-assets.json:1912`, `data/r31-assets.json:2852`, `data/r31-assets.json:3921`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/killer-b.webp` — `data/assets/asset-manifest.json:1021`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:845`, `data/r31-assets.json:1913`, `data/r31-assets.json:2854`, `data/r31-assets.json:3922`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kimimaro.webp` — `data/assets/asset-manifest.json:1037`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:846`, `data/r31-assets.json:1914`, `data/r31-assets.json:2855`, `data/r31-assets.json:3923`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kisame-hoshigaki.webp` — `data/assets/asset-manifest.json:1053`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:849`, `data/r31-assets.json:1915`, `data/r31-assets.json:2858`, `data/r31-assets.json:3924`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kitsuchi.webp` — `data/assets/asset-manifest.json:1069`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:850`, `data/r31-assets.json:1916`, `data/r31-assets.json:2859`, `data/r31-assets.json:3925`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/koharu-utatane.webp` — `data/assets/asset-manifest.json:1085`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:851`, `data/r31-assets.json:1917`, `data/r31-assets.json:2860`, `data/r31-assets.json:3926`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/konan.webp` — `data/assets/asset-manifest.json:1101`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:853`, `data/r31-assets.json:1918`, `data/r31-assets.json:2862`, `data/r31-assets.json:3927`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/konohamaru-sarutobi-adulto.webp` — `data/assets/asset-manifest.json:1117`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1919`, `data/r31-assets.json:3928`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/konohamaru.webp` — `data/assets/asset-manifest.json:1133`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:931`, `data/r31-assets.json:1920`, `data/r31-assets.json:2940`, `data/r31-assets.json:3929`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kotetsu-hagane.webp` — `data/assets/asset-manifest.json:1149`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:855`, `data/r31-assets.json:1921`, `data/r31-assets.json:2864`, `data/r31-assets.json:3930`, `data/r41-data-delta.js:9`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:10`
+- PASS_PATH `assets/r40/atlas_verified/kurai-avatar.webp` — `data/assets/asset-manifest.json:1165`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1922`, `data/r31-assets.json:3931`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kurenai-yuhi.webp` — `data/assets/asset-manifest.json:1181`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:857`, `data/r31-assets.json:1923`, `data/r31-assets.json:2866`, `data/r31-assets.json:3932`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kurotsuchi.webp` — `data/assets/asset-manifest.json:1197`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:858`, `data/r31-assets.json:1924`, `data/r31-assets.json:2867`, `data/r31-assets.json:3933`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/kusenro-avatar.webp` — `data/assets/asset-manifest.json:1213`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1925`, `data/r31-assets.json:3934`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/leon-kosmo.webp` — `data/assets/asset-manifest.json:1229`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1926`, `data/r31-assets.json:3935`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mabui.webp` — `data/assets/asset-manifest.json:1245`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:861`, `data/r31-assets.json:1927`, `data/r31-assets.json:2870`, `data/r31-assets.json:3936`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/madara-uchiha.webp` — `data/assets/asset-manifest.json:1261`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:862`, `data/r31-assets.json:1928`, `data/r31-assets.json:2871`, `data/r31-assets.json:3937`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mangetsu-hozuki.webp` — `data/assets/asset-manifest.json:1277`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:865`, `data/r31-assets.json:1929`, `data/r31-assets.json:2874`, `data/r31-assets.json:3938`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/matriz-kosmo.webp` — `data/assets/asset-manifest.json:1293`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1930`, `data/r31-assets.json:3939`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/medico-da-vila.webp` — `data/assets/asset-manifest.json:1309`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:966`, `data/r31-assets.json:1931`, `data/r31-assets.json:2975`, `data/r31-assets.json:3940`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mei-terumi.webp` — `data/assets/asset-manifest.json:1325`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:867`, `data/r31-assets.json:1932`, `data/r31-assets.json:2876`, `data/r31-assets.json:3941`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mercador-de-pergaminhos.webp` — `data/assets/asset-manifest.json:1341`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:959`, `data/r31-assets.json:1672`, `data/r31-assets.json:1933`, `data/r31-assets.json:2968`, `data/r31-assets.json:3681`, `data/r31-assets.json:3942`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/metal-lee.webp` — `data/assets/asset-manifest.json:1357`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:951`, `data/r31-assets.json:1934`, `data/r31-assets.json:2960`, `data/r31-assets.json:3943`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mifune.webp` — `data/assets/asset-manifest.json:1373`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:868`, `data/r31-assets.json:1935`, `data/r31-assets.json:2877`, `data/r31-assets.json:3944`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/might-guy.webp` — `data/assets/asset-manifest.json:1389`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:869`, `data/r31-assets.json:1936`, `data/r31-assets.json:2878`, `data/r31-assets.json:3945`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/mitsuki.webp` — `data/assets/asset-manifest.json:1405`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:944`, `data/r31-assets.json:1937`, `data/r31-assets.json:2953`, `data/r31-assets.json:3946`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/moegi-kazamatsuri-adulta.webp` — `data/assets/asset-manifest.json:1421`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1938`, `data/r31-assets.json:3947`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/moegi.webp` — `data/assets/asset-manifest.json:1437`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:932`, `data/r31-assets.json:1939`, `data/r31-assets.json:2941`, `data/r31-assets.json:3948`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/nagato.webp` — `data/assets/asset-manifest.json:1453`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:878`, `data/r31-assets.json:1940`, `data/r31-assets.json:2887`, `data/r31-assets.json:3949`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/naruto-uzumaki-hokage.webp` — `data/assets/asset-manifest.json:1469`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1941`, `data/r31-assets.json:3950`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/naruto-uzumaki.webp` — `data/assets/asset-manifest.json:1485`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:879`, `data/r31-assets.json:1942`, `data/r31-assets.json:2888`, `data/r31-assets.json:3951`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:30`, `src/r41-canonical-repair.js:31`
+- PASS_PATH `assets/r40/atlas_verified/navegadora-de-campo.webp` — `data/assets/asset-manifest.json:1501`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:967`, `data/r31-assets.json:1943`, `data/r31-assets.json:2976`, `data/r31-assets.json:3952`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/neji-hyuga.webp` — `data/assets/asset-manifest.json:1517`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:880`, `data/r31-assets.json:1944`, `data/r31-assets.json:2889`, `data/r31-assets.json:3953`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/obito-uchiha.webp` — `data/assets/asset-manifest.json:1533`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:881`, `data/r31-assets.json:1945`, `data/r31-assets.json:2890`, `data/r31-assets.json:3954`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/omoi.webp` — `data/assets/asset-manifest.json:1549`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:882`, `data/r31-assets.json:1946`, `data/r31-assets.json:2891`, `data/r31-assets.json:3955`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/onoki.webp` — `data/assets/asset-manifest.json:1565`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:930`, `data/r31-assets.json:1947`, `data/r31-assets.json:2939`, `data/r31-assets.json:3956`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/orochimaru.webp` — `data/assets/asset-manifest.json:1581`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:883`, `data/r31-assets.json:1948`, `data/r31-assets.json:2892`, `data/r31-assets.json:3957`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:36`
+- PASS_PATH `assets/r40/atlas_verified/pain.webp` — `data/assets/asset-manifest.json:1597`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:939`, `data/r31-assets.json:1949`, `data/r31-assets.json:2948`, `data/r31-assets.json:3958`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/pakura.webp` — `data/assets/asset-manifest.json:1613`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:885`, `data/r31-assets.json:1950`, `data/r31-assets.json:2894`, `data/r31-assets.json:3959`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/raidou-namiashi.webp` — `data/assets/asset-manifest.json:1629`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:936`, `data/r31-assets.json:1951`, `data/r31-assets.json:2945`, `data/r31-assets.json:3960`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/rasa.webp` — `data/assets/asset-manifest.json:1645`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:887`, `data/r31-assets.json:1952`, `data/r31-assets.json:2896`, `data/r31-assets.json:3961`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/rock-lee.webp` — `data/assets/asset-manifest.json:1661`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:888`, `data/r31-assets.json:1953`, `data/r31-assets.json:2897`, `data/r31-assets.json:3962`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/roshi.webp` — `data/assets/asset-manifest.json:1677`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:889`, `data/r31-assets.json:1954`, `data/r31-assets.json:2898`, `data/r31-assets.json:3963`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sai-adulto.webp` — `data/assets/asset-manifest.json:1693`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1955`, `data/r31-assets.json:3964`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sai.webp` — `data/assets/asset-manifest.json:1709`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:890`, `data/r31-assets.json:1956`, `data/r31-assets.json:2899`, `data/r31-assets.json:3965`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sakura-haruno.webp` — `data/assets/asset-manifest.json:1725`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:894`, `data/r31-assets.json:1957`, `data/r31-assets.json:2903`, `data/r31-assets.json:3966`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sakura-uchiha.webp` — `data/assets/asset-manifest.json:1741`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:955`, `data/r31-assets.json:1958`, `data/r31-assets.json:2964`, `data/r31-assets.json:3967`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/samui.webp` — `data/assets/asset-manifest.json:1757`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:895`, `data/r31-assets.json:1959`, `data/r31-assets.json:2904`, `data/r31-assets.json:3968`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sarada-uchiha.webp` — `data/assets/asset-manifest.json:1773`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:943`, `data/r31-assets.json:1960`, `data/r31-assets.json:2952`, `data/r31-assets.json:3969`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sasori.webp` — `data/assets/asset-manifest.json:1789`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:896`, `data/r31-assets.json:1961`, `data/r31-assets.json:2905`, `data/r31-assets.json:3970`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sasuke-uchiha-adulto.webp` — `data/assets/asset-manifest.json:1805`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1962`, `data/r31-assets.json:3971`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sasuke-uchiha.webp` — `data/assets/asset-manifest.json:1821`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:897`, `data/r31-assets.json:1963`, `data/r31-assets.json:2906`, `data/r31-assets.json:3972`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:32`, `src/r41-canonical-repair.js:33`
+- PASS_PATH `assets/r40/atlas_verified/shibi-aburame.webp` — `data/assets/asset-manifest.json:1837`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:898`, `data/r31-assets.json:1964`, `data/r31-assets.json:2907`, `data/r31-assets.json:3973`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/shikadai-nara.webp` — `data/assets/asset-manifest.json:1853`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:948`, `data/r31-assets.json:1965`, `data/r31-assets.json:2957`, `data/r31-assets.json:3974`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/shikamaru-nara.webp` — `data/assets/asset-manifest.json:1869`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:900`, `data/r31-assets.json:1966`, `data/r31-assets.json:2909`, `data/r31-assets.json:3975`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/shino-aburame.webp` — `data/assets/asset-manifest.json:1885`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:902`, `data/r31-assets.json:1967`, `data/r31-assets.json:2911`, `data/r31-assets.json:3976`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/shizune.webp` — `data/assets/asset-manifest.json:1901`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:904`, `data/r31-assets.json:1968`, `data/r31-assets.json:2913`, `data/r31-assets.json:3977`, `data/r41-data-delta.js:10`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:11`
+- PASS_PATH `assets/r40/atlas_verified/suigetsu-hozuki.webp` — `data/assets/asset-manifest.json:1917`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:907`, `data/r31-assets.json:1969`, `data/r31-assets.json:2916`, `data/r31-assets.json:3978`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/suirin.webp` — `data/assets/asset-manifest.json:1933`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1970`, `data/r31-assets.json:3979`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/sumire-kakei.webp` — `data/assets/asset-manifest.json:1949`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:947`, `data/r31-assets.json:1971`, `data/r31-assets.json:2956`, `data/r31-assets.json:3980`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/temari.webp` — `data/assets/asset-manifest.json:1965`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:910`, `data/r31-assets.json:1972`, `data/r31-assets.json:2919`, `data/r31-assets.json:3981`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/tenten.webp` — `data/assets/asset-manifest.json:1981`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:911`, `data/r31-assets.json:1973`, `data/r31-assets.json:2920`, `data/r31-assets.json:3982`, `data/r41-data-delta.js:8`, `data/r41-verified-visuals.js:1`, `src/r41-canonical-repair.js:9`
+- PASS_PATH `assets/r40/atlas_verified/teuchi.webp` — `data/assets/asset-manifest.json:1997`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:934`, `data/r31-assets.json:1974`, `data/r31-assets.json:2943`, `data/r31-assets.json:3983`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/tobi.webp` — `data/assets/asset-manifest.json:2013`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:940`, `data/r31-assets.json:1975`, `data/r31-assets.json:2949`, `data/r31-assets.json:3984`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/torune-aburame.webp` — `data/assets/asset-manifest.json:2029`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:914`, `data/r31-assets.json:1976`, `data/r31-assets.json:2923`, `data/r31-assets.json:3985`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/treinador-tatico.webp` — `data/assets/asset-manifest.json:2045`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:969`, `data/r31-assets.json:1977`, `data/r31-assets.json:2978`, `data/r31-assets.json:3986`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/tsunade.webp` — `data/assets/asset-manifest.json:2061`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:916`, `data/r31-assets.json:1978`, `data/r31-assets.json:2925`, `data/r31-assets.json:3987`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/udon-ise-adulto.webp` — `data/assets/asset-manifest.json:2077`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1979`, `data/r31-assets.json:3988`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/udon.webp` — `data/assets/asset-manifest.json:2093`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:933`, `data/r31-assets.json:1980`, `data/r31-assets.json:2942`, `data/r31-assets.json:3989`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/utakata.webp` — `data/assets/asset-manifest.json:2109`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:919`, `data/r31-assets.json:1981`, `data/r31-assets.json:2928`, `data/r31-assets.json:3990`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/vendedor-de-armas.webp` — `data/assets/asset-manifest.json:2125`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1982`, `data/r31-assets.json:3991`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/wasabi-izuno.webp` — `data/assets/asset-manifest.json:2141`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:952`, `data/r31-assets.json:1983`, `data/r31-assets.json:2961`, `data/r31-assets.json:3992`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/yagura.webp` — `data/assets/asset-manifest.json:2157`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:937`, `data/r31-assets.json:1984`, `data/r31-assets.json:2946`, `data/r31-assets.json:3993`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/yamato.webp` — `data/assets/asset-manifest.json:2173`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:922`, `data/r31-assets.json:1985`, `data/r31-assets.json:2931`, `data/r31-assets.json:3994`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/yugito-nii.webp` — `data/assets/asset-manifest.json:2189`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:925`, `data/r31-assets.json:1986`, `data/r31-assets.json:2934`, `data/r31-assets.json:3995`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/zabuza-momochi.webp` — `data/assets/asset-manifest.json:2205`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:926`, `data/r31-assets.json:1987`, `data/r31-assets.json:2935`, `data/r31-assets.json:3996`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/atlas_verified/zetsu.webp` — `data/assets/asset-manifest.json:2221`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:941`, `data/r31-assets.json:1988`, `data/r31-assets.json:2950`, `data/r31-assets.json:3997`, `data/r41-verified-visuals.js:1`
+- PASS_PATH `assets/r40/story/vila_comerciante_icone.svg` — `src/r41-canonical-repair.js:39`
+- PASS_PATH `assets/r40/story/vila_mulher_icone.svg` — `src/r41-canonical-repair.js:38`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p127.jpg` — `data/v5-content.js:95`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p128.jpg` — `data/v5-content.js:96`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p129.jpg` — `data/v5-content.js:97`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p130.jpg` — `data/v5-content.js:98`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p131.jpg` — `data/v5-content.js:99`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p132.jpg` — `data/v5-content.js:100`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p133.jpg` — `data/v5-content.js:101`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p134.jpg` — `data/v5-content.js:102`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p135.jpg` — `data/v5-content.js:103`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p136.jpg` — `data/v5-content.js:104`
+- PASS_PATH `assets/referencias/equipamentos/equipamentos_p137.jpg` — `data/v5-content.js:105`
+- PASS_PATH `assets/rpg_v75/action.svg` — `app.js:1651`, `app.js:1661`, `app.js:1665`, `app.js:1683`, `app.js:1735`, `app.js:1818`, `app.js:1818`, `app.js:1835`, `app.js:2359`
+- PASS_PATH `assets/rpg_v75/chibaku.svg` — `data/v75-content.js:1`, `data/v83-integrated-config.js:11`
+- PASS_PATH `assets/rpg_v75/chikushodo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/gakido.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/gedo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/item.svg` — `app.js:2999`
+- PASS_PATH `assets/rpg_v75/jigokudo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/jutsu_nin.svg` — `app.js:1619`
+- PASS_PATH `assets/rpg_v75/kurai_v75.svg` — `app.js:1690`, `app.js:1693`, `app.js:1694`, `app.js:1859`, `app.js:2276`, `app.js:2319`, `app.js:2394`, `app.js:2399`, `app.js:2499`, `app.js:2638`, `app.js:2743`
+- PASS_PATH `assets/rpg_v75/ningendo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/rinbo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v83-integrated-config.js:12`
+- PASS_PATH `assets/rpg_v75/rinnegan.svg` — `app.js:1855`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/shurado.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
+- PASS_PATH `assets/rpg_v75/summon.svg` — `app.js:1689`, `app.js:1691`, `app.js:1692`
+- PASS_PATH `assets/rpg_v75/tendo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v83-integrated-config.js:10`
+- MISSING_PATH `assets/ui_v8/${kind}/${String(index).padStart(2,` — `app.js:2105`
+- MISSING_PATH `assets/ui_v8/combat/actions/action_${String(index).padStart(2,` — `app.js:2109`
+- PASS_PATH `assets/ui_v8/combat/actions/action_06.jpg` — `app.js:2200`
+- MISSING_PATH `assets/ui_v8/creator/${kind}/${kind}_${String(index).padStart(2,` — `app.js:2106`
+- PASS_PATH `assets/ui_v8/creator/menu_cabelos.png` — `app.js:1950`
+- PASS_PATH `assets/ui_v8/creator/menu_trajes.png` — `app.js:1951`
+- PASS_PATH `assets/ui_v8/creator/roster_classes.png` — `app.js:1952`
+- MISSING_PATH `assets/ui_v8/creator/roster/roster_${String(n).padStart(2,` — `app.js:2615`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_01.jpg` — `app.js:2200`, `app.js:2208`, `app.js:2495`, `app.js:2672`, `app.js:2715`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_08.jpg` — `data/v83-integrated-config.js:51`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_09.jpg` — `data/v84-integrated-config.js:49`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_11.jpg` — `app.js:2200`, `app.js:2208`, `app.js:2495`, `app.js:2672`, `app.js:2715`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_12.jpg` — `data/v83-integrated-config.js:47`, `data/v84-integrated-config.js:23`
+- PASS_PATH `assets/ui_v8/creator/roster/roster_15.jpg` — `data/v83-integrated-config.js:52`
+- MISSING_PATH `assets/ui_v8/events/cards/event_${String(index).padStart(2,` — `app.js:2110`
+- MISSING_PATH `assets/ui_v8/items/cards/item_${String(index).padStart(2,` — `app.js:2108`
+- PASS_PATH `assets/ui_v8/items/cards/item_04.jpg` — `data/v83-integrated-config.js:38`
+- PASS_PATH `assets/ui_v8/items/cards/item_07.jpg` — `data/v83-integrated-config.js:40`
+- PASS_PATH `assets/ui_v8/items/cards/item_08.jpg` — `data/v83-integrated-config.js:41`
+- PASS_PATH `assets/ui_v8/items/cards/item_12.jpg` — `data/v83-integrated-config.js:34`
+- PASS_PATH `assets/ui_v8/items/cards/item_15.jpg` — `data/v83-integrated-config.js:36`
+- PASS_PATH `assets/ui_v8/items/cards/item_16.jpg` — `data/v83-integrated-config.js:42`
+- PASS_PATH `assets/ui_v8/items/cards/item_20.jpg` — `data/v83-integrated-config.js:39`
+- PASS_PATH `assets/ui_v8/items/grade_inventario.png` — `app.js:1954`
+- PASS_PATH `assets/ui_v8/special/kusenro_biju.jpg` — `app.js:2386`, `app.js:2399`, `app.js:2638`, `app.js:2743`, `data/v83-integrated-config.js:13`
+- PASS_PATH `assets/ui_v8/special/kusenro_hero.jpg` — `data/v83-integrated-config.js:9`
+- PASS_PATH `assets/ui_v8/special/suirin_hero.jpg` — `app.js:2390`, `app.js:2399`, `app.js:2432`, `app.js:2638`, `app.js:2743`, `data/v83-integrated-config.js:5`
+- MISSING_PATH `assets/ui_v8/techniques/cards/tech_${String(index).padStart(2,` — `app.js:2107`
+- PASS_PATH `assets/ui_v8/techniques/grade_tecnicas.png` — `app.js:1953`
+- PASS_PATH `assets/ui/avatar.png` — `app.js:782`, `app.js:934`, `app.js:987`, `app.js:996`, `app.js:1033`, `app.js:1057`, `app.js:1072`, `app.js:1150`, `app.js:1162`, `app.js:1167`, `app.js:1339`, `app.js:1811`, `app.js:1869`, `app.js:2201`, `app.js:2500`, `app.js:3239`, `app.js:3442`, `app.js:3670`, `app.js:5281`, `data/v5-content.js:108`
+- PASS_PATH `assets/ui/banner-akatsuki.jpg` — `data/conteudo-livros.js:25`
+- PASS_PATH `assets/ui/banner-areia.jpg` — `data/conteudo-livros.js:19`
+- PASS_PATH `assets/ui/banner-folha.jpg` — `app.js:789`, `data/conteudo-livros.js:18`
+- PASS_PATH `assets/ui/banner-nevoa.jpg` — `data/conteudo-livros.js:20`, `data/conteudo-livros.js:23`
+- PASS_PATH `assets/ui/banner-nuvem.jpg` — `data/conteudo-livros.js:22`
+- PASS_PATH `assets/ui/banner-pedra.jpg` — `data/conteudo-livros.js:21`, `data/conteudo-livros.js:24`
+- PASS_PATH `assets/ui/logo.png` — `index.html:1`
+- PASS_PATH `assets/ui/media-pendente.svg` — `app.js:3312`, `app.js:3316`, `app.js:3318`, `app.js:5576`, `src/r41-core-bundle.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/chidori.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_domu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_doryou_dango.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_doryuu_taiga.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_doryuuheki.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_ganchurou.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/doton_shinju_zanshu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/fuuton_atsugai.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/fuuton_kamaitachi.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/fuuton_reppusho.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/genjutsu_kotoamatsukami.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/genjutsu_magen_kyoten_chiten.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/genjutsu_sharingan.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/genjutsu_tsukuyomi.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kamui.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/katon_goukakyuu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/katon_housenka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/katon_ryukafu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/katon_ryuuka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kirin.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamabunta.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamahiro.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamaken.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamakichi.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/mangekyou_kamui.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_chakra_no_mesu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_iryo_ninjutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_saisei_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_seishin_chokei.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/raikiri.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/raiton_gian.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/raiton_kage_bunshin_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/raiton_raijuu_heki.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/suiton_suiryudan_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/suiton_suishoha_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/susanoo_perfeito.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/taijutsu_dynamic_entry.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/taijutsu_hakke_rokujuuyon_shou.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/taijutsu_kage_buyou.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/jutsu/taijutsu_konoha_renshu.jpg` — `data/r41-user-visuals.js:3`
+- MISSING_PATH `assets/user-provided/maps/Arena shinobi circular em planta baixa.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:48`
+- MISSING_PATH `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
+- MISSING_PATH `assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png` — `src/r41-canonical-repair.js:47`
+- MISSING_PATH `assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png` — `src/r41-canonical-repair.js:42`, `src/r41-canonical-repair.js:43`
+- MISSING_PATH `assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png` — `src/r41-canonical-repair.js:46`
+- PASS_PATH `assets/v84/battlefields/arena_exame.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/battlefields/floresta_missao.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/battlefields/rua_vila.png` — `data/v84-integrated-config.js:79`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/entities/kurai.png` — `app.js:5585`, `data/v84-live-world.js:1`, `data/v84-live-world.json:107`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/entities/kusenro.png` — `data/v84-live-world.js:1`, `data/v84-live-world.json:133`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/entities/suirin.png` — `data/v84-integrated-config.js:53`, `data/v84-live-world.js:1`, `data/v84-live-world.json:162`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kozo_leitura_estrutural.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_arquivo_mimetico.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_copia_cinetica.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_copia_jutsu.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_espelho_selos.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_kanzen_nivel_1.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kugangan_nivel_1.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kuro_marca_vazio.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v84/techniques/kugangan/kuvector_leitura_vetorial.png` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/attack.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/continue.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/defend.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/hide.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/investigate.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/item.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/move.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/narrate.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/observe.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/rest.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/talk.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/technique.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/train.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/actions/travel.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/combat_director.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/game_master.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/investigation.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/npc_dialogue.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/rules_question.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aiModes/training.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/acuidade.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ambidestria.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ataque_atordoante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ataque_giratorio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ataque_movimento.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ataque_multiplo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/atirador_agil.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/atirador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/chute_giratorio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/clone_verdadeiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/combate_defensivo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/contragolpe.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/critico_aprimorado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/derrubar_agressivo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/desarme_agressivo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/especialista.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/furtividade_grupo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/guerreiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/gun_fu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ilusionista_musical.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/intuicao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/jiu_jitsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/lutador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/maestria.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/medico.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/mestre_selos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/mira_apurada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/oportunista.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/perito.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/ponto_cego.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/punho_ferro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/quimico.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/recuperacao_acelerada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/reflexos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/saque_rapido.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/sensor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/tecnica_acelerada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/tecnica_potente.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/tecnica_precisa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/tiro_longo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/usar_armadura_pesada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/utilitarista.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/velocista.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/aptitudes/zui_quan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_17.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_18.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_19.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_20.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_21.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_22.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_23.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_24.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_25.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/arcs/arc_26.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/agilidade.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/carisma.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/destreza.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/espirito.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/forca.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/inteligencia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/manipulacao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/percepcao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/attributes/vigor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/battlefieldTools/cover.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/battlefieldTools/hazard.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/battlefieldTools/move.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/campaigns/camp_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_17.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_18.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_19.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_20.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_21.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_22.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_23.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/characters/preset_24.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/classes/buk.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/classes/gen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/classes/nin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/classes/tai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_2.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_3.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_4.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_5.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_6.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_7.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_8.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creationSteps/passo_9.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- MISSING_PATH `assets/v841/creator/layers/eyes/eyes_${String(idx(` — `app.js:5586`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/eyes/eyes_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- MISSING_PATH `assets/v841/creator/layers/face/face_${String(idx(` — `app.js:5586`
+- PASS_PATH `assets/v841/creator/layers/face/face_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/face/face_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- MISSING_PATH `assets/v841/creator/layers/hair/hair_${String(idx(` — `app.js:5586`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/hair/hair_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- MISSING_PATH `assets/v841/creator/layers/outfit/outfit_${String(idx(` — `app.js:5586`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_04.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_05.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_06.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_07.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_08.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_09.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/layers/outfit/outfit_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_09.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_10.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_11.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_12.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_13.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_14.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_15.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/eyes/eyes_16.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_09.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_10.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_11.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_12.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_13.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_14.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_15.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/face/face_16.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_09.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_10.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_11.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_12.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_13.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_14.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_15.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/hair/hair_16.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_01.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_02.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_03.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_04.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_05.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_06.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_07.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_08.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_09.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_10.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_11.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_12.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_13.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_14.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_15.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/creator/previews/outfit/outfit_16.svg` — `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/defenses/antecipar.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/defenses/bloqueio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/defenses/esquiva.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/defenses/tecnica.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/elements/doton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/elements/fuuton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/elements/katon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/elements/raiton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/elements/suiton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/bandido_batedor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/bandido_pesado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/elite_espachim.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/elite_mascara.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/mercenario_teleporte.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/monstro_aranha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/monstro_javali.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/monstro_lobo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/monstro_serpente.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/ninja_veneno.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/nukenin_assassino.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/enemies/nukenin_sensor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p127.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p128.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p129.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p130.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p131.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p132.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p133.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p134.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p135.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p136.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/equipment/equipamento_p137.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/canon_gai_dojo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/canon_iruka_academia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/canon_kakashi_controle.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/leon_kurai_fissura.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/random_ferreiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/random_mensageiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/random_pergaminho.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/season_festival_verao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/events/season_inverno.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_akatsuki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_anbu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_cla_hy_ga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_konohagakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_otogakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_raiz.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_remanescentes_uchiha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/factions/factions_sunagakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_0.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_2.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_3.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_4.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_5.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/graduations/graduacao_6.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/bakuton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/buki_senmon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/daikiga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/dokujutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/jinchuuriki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/jinton_poeira.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/jiton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/juuinka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/kamijutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/kibaku_nendo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/kuchiyose.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/kugutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/magen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/mateki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/nan_no_kaizou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/nintaijutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/ranton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/rinnegan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/saika_ikki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/samurai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/senjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/senninka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/shakuton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/shouton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/tensai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hijutsus/tessenjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/academia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/arquivo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/dojo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/hospital.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/loja.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/missoes.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/portao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/hotspots/ramen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/aian_nakkuru.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/algemas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/antidoto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/arco_curto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/arco_longo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/argila_explosiva.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/armadura_batalha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/armadura_reforcada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/armadura_samurai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/bastao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/besta_leve.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/besta_pesada.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/boleadeira.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/bomba_fumaca.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/bomba_luminosa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/bomba_marcacao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/bomba_trovao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/chakram.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/chicote.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/chokuto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/cimitarra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/coldre.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/colete_ninja.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/colete_resistente.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/corda.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/corrente_cravos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/disparador_oculto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/espada_curta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/espada_duas_laminas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/espada_grande.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/espada_longa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/estrepes.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fio_aco.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/florete.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/foice.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fragmento_espacial_kurai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fuuma_gigante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fuuma_kage.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fuuma_reta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/fuuma_shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/gladio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/instrumento.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/katana.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kit_artesao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kit_ferramentas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kit_laboratorio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kit_medico.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kousen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kunai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/kusarigama.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/lamina_oculta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/lanca.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/lanterna.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/leque_gigante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/leque_guerra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/maca.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/machado_grande.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/machado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/manopla_leve.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/martelo_guerra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/mochila.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/ninja_to.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/nunchaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/omamori_festival.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/otsuchi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pergaminho_chakra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pergaminho_escrita.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pergaminho_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pergaminho_mensageiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pilula_soldado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/pique.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/racao_viagem.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/ramen_especial.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/ramen_simples.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/rede.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/roupa_comum.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/saco_dormir.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/sai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/senbon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tacape.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tampoes.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tanto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tarja_especial.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tarja_explosiva.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tekko_kagi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tinta_shinobi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/tonfa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_kunai_selo_quebrado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_lamina_nevoa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_manto_batedor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_pergaminho_carmesim.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_protetor_areia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/unico_reliquia_trovao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/veneno_fraco.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/veneno_letal.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/veneno_paralisante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/wakizashi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/items/yari.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_001.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_002.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_003.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_004.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_005.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_006.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_007.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_008.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_009.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_010.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_011.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_012.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_013.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_014.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_015.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_016.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_017.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_018.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_019.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_020.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_021.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_022.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_023.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_024.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_025.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_026.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_027.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_028.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_029.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_030.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_031.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_032.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_033.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_034.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_035.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_036.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_037.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_038.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_039.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_040.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_041.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_042.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_043.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_044.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_045.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_046.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_047.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_048.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_049.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_050.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_051.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_052.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_053.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_054.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_055.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_056.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_057.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_items/item_058.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_001.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_002.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_003.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_004.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_005.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_006.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_007.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_008.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_009.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_010.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_011.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_012.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_013.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_014.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_015.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_016.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_017.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_018.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_019.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_020.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_021.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_022.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_023.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_024.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_025.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_026.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_027.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_028.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_029.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_030.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_031.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_032.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_033.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_034.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_035.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_036.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_037.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_038.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_039.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_040.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_041.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_042.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_043.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_044.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_045.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_046.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_047.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_048.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_049.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_050.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_051.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_052.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_053.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_054.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_055.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_056.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_057.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_058.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_059.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_060.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_061.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_062.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_063.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_064.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_065.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_066.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_067.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_068.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_069.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_070.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_071.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_072.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_073.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_074.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_075.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_076.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_077.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_078.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_079.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_080.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_081.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_082.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_083.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_084.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_085.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_086.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_087.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_088.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_089.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_090.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_091.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_092.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_093.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_094.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_095.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_096.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_097.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_098.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_099.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_100.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_101.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_102.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_103.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_104.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_105.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_106.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_107.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_108.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_109.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_110.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_111.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_112.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_113.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_114.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_115.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_116.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_117.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_118.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_119.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_120.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_121.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_122.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_123.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_124.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_125.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_126.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_127.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_128.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_129.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_130.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_131.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_132.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_133.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_134.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_135.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_136.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_137.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_138.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_139.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_140.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_141.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_142.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_143.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_144.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_145.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_146.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_147.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_148.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_149.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_150.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_151.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_152.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_153.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_154.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_155.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_156.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/knowledge_techniques/jutsu_157.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_ancora.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_cobertura.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_convergencia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_observador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_retorno_sincrono.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/clone_revezamento.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/hachimon_portao_1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/item_kurai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kugangan_arquivo_mimetico.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kugangan_copia_cinetica.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kugangan_copia_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kugangan_espelho_selos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kugangan_n1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_ancora_vazio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_aparo_fenda.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_bainha_nao_letal.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_corte_cruzado_espelho.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_corte_horizonte.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kurai_transferencia_nucleo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kusenro_ancora_de_existencia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kusenro_eco_de_universo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kusenro_passo_entre_segundos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kusenro_poeira_de_constelacao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/kusenro_relogio_estelar.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/raiton_kuryuga_estabilizado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/raiton_ryuga_comprimido.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/suirin_alerta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/suirin_mordida.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/suirin_rastreio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/suirin_vinculo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_001.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_002.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_003.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_004.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_006.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_007.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_008.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_009.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_010.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_011.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_012.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_013.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_014.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_015.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_016.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_017.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_018.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_019.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_020.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_021.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_022.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_023.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_024.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_025.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_026.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_027.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_028.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_029.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_030.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_031.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_032.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_033.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_034.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_035.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_036.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_037.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_038.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_039.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_040.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_041.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_042.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_043.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_044.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_045.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/leon/tec_046.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/academia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/areia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/arquivo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/chuva.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/dojo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/errante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/folha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/hospital.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_amegakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_arena_do_exame.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_caverna_ry_chi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_complexos_da_raiz.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_floresta_da_morte.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_floresta_shikkotsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_hospital_de_konoha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_konoha_academia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_konoha_torre_do_hokage.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_monte_my_boku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_otogakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_pais_do_ferro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_sala_301.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_sunagakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/locations_vale_do_fim.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/loja.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/missoes.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/nevoa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/nuvem.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/pedra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/portao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/ramen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/locations/som.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_001.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_002.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_003.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_004.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_005.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_006.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_007.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_008.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_009.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_010.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_011.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_012.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_013.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_014.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_015.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_016.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_017.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_018.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_019.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_020.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_021.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_022.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_023.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_024.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_025.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_026.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_027.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_028.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_029.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_030.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_031.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_032.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_033.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_034.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_035.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_036.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_037.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_038.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_039.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_040.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_041.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_042.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_043.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_044.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission_045.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission100.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission101.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission102.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission103.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission104.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission105.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission106.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission107.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission108.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission109.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission11.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission110.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission111.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission112.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission113.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission114.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission115.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission116.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission117.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission118.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission119.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission12.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission120.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission121.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission122.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission123.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission124.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission125.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission126.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission127.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission128.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission129.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission13.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission130.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission131.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission132.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission133.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission134.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission135.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission136.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission137.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission138.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission139.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission140.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission141.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission142.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission143.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission144.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission145.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission146.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission147.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission148.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission149.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission150.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission151.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission152.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission153.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission154.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission155.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission156.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission157.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission158.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission159.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission160.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission161.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission162.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission163.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission164.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission165.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission166.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission167.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission168.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission169.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission17.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission170.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission171.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission172.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission173.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission174.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission175.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission176.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission177.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission178.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission179.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission18.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission180.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission181.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission182.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission183.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission184.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission185.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission186.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission187.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission188.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission189.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission19.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission190.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission191.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission192.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission193.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission194.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission195.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission196.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission197.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission198.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission199.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission2.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission20.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission200.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission201.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission202.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission203.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission204.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission205.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission206.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission207.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission208.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission209.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission21.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission210.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission211.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission212.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission213.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission214.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission215.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission216.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission217.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission218.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission219.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission22.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission220.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission221.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission222.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission223.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission224.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission225.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission226.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission227.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission228.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission229.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission23.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission230.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission231.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission232.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission233.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission234.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission235.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission236.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission237.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission238.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission239.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission24.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission240.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission241.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission242.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission243.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission244.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission245.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission246.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission247.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission248.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission249.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission25.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission250.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission251.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission252.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission253.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission254.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission255.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission256.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission257.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission258.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission259.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission26.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission260.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission261.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission262.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission263.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission264.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission265.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission266.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission267.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission268.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission269.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission27.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission270.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission271.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission272.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission273.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission274.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission275.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission276.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission277.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission278.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission279.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission28.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission280.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission281.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission282.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission283.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission284.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission285.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission286.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission287.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission288.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission289.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission29.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission290.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission291.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission292.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission293.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission294.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission295.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission296.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission297.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission298.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission299.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission3.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission30.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission300.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission301.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission302.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission303.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission304.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission305.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission306.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission307.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission308.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission309.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission31.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission310.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission311.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission312.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission313.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission314.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission315.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission316.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission317.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission318.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission319.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission32.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission320.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission321.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission322.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission323.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission324.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission325.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission326.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission327.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission328.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission329.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission33.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission330.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission331.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission332.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission333.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission334.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission335.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission336.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission337.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission338.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission339.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission34.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission340.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission341.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission342.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission343.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission344.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission345.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission346.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission347.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission348.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission349.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission35.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission350.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission351.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission352.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission353.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission354.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission355.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission356.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission357.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission358.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission359.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission36.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission360.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission361.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission362.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission363.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission364.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission365.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission366.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission367.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission368.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission369.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission37.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission370.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission371.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission372.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission373.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission374.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission375.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission376.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission377.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission378.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission379.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission38.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission380.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission381.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission382.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission383.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission384.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission385.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission386.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission387.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission388.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission389.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission39.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission390.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission391.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission392.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission4.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission40.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission41.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission42.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission43.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission44.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission45.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission46.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission47.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission48.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission49.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission5.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission50.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission51.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission52.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission53.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission54.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission55.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission56.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission57.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission58.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission59.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission6.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission60.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission61.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission62.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission63.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission64.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission65.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission66.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission67.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission68.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission69.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission7.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission70.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission71.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission72.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission73.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission74.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission75.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission76.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission77.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission78.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission79.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission8.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission80.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission81.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission82.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission83.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission84.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission85.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission86.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission87.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission88.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission89.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission9.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission90.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission91.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission92.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission93.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission94.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission95.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission96.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission97.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission98.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/mission99.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/task1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/task10.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/missions/task9.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/anko.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/areia_batedor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/areia_mercador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/bandido_batedor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/bandido_pesado.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/chuva_informante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/elite_espachim.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/elite_mascara.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/errante_viajante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/folha_balconista.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/folha_instrutor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/folha_medica.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/folha_oficial.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/gai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/iruka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/kakashi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/mentor_campo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/mentor_selamento.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/mentor_sensorial.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/mentor_viajante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/mercenario_teleporte.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/monstro_aranha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/monstro_javali.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/monstro_lobo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/monstro_serpente.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/nevoa_ferreiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/nevoa_guia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/ninja_veneno.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_001.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_002.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_003.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_004.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_005.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_006.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_007.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_008.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_009.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_010.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_011.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_012.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_013.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_014.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_015.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_016.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_017.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_018.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_019.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_020.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_021.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_022.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_023.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_024.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_025.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_026.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_027.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_028.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_029.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_030.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_031.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_032.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_033.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_034.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_035.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_036.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_037.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_038.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_039.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_040.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_041.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_042.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_043.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_044.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_045.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_046.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_047.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_048.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_049.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_050.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_051.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_052.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_053.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_054.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_055.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_056.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_057.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_058.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_059.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_060.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_061.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_062.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_063.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_064.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_065.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_066.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_067.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_068.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_069.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_070.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_071.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_072.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_073.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_074.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_075.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_076.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_077.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_078.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_079.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_080.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_081.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_082.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_083.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_084.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_085.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_086.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_087.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_088.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_089.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_090.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_091.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_092.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_093.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_094.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_095.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_096.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_097.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_098.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_099.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_100.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_101.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_102.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_103.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_104.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_105.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_106.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_107.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_108.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_109.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_110.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_111.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_112.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_113.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_114.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_115.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_116.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_117.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_118.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_119.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_120.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_121.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_122.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_123.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_124.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_125.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_126.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_127.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_128.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_129.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_130.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_131.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_132.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_133.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_134.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_135.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_136.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_137.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_138.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_139.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_140.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_141.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_142.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_143.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_144.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_145.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_146.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_147.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_148.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_149.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_150.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_151.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_152.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_153.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_154.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_155.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_156.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_157.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_158.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_159.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_160.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_161.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_162.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_163.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_164.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_165.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_166.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_167.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_168.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_169.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/npc_170.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/nukenin_assassino.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/nukenin_sensor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/nuvem_instrutor.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/pedra_mestre.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/npcs/som_contato.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/aburame.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/akimichi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/fuuma.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/hatake.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/hoshigaki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/hoshigakure.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/hozuki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/hyuuga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/inuzuka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/kaguya.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/nara.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/sarutobi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/sem_cla.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/senju.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/shimura.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/uchiha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/uzumaki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/yamanaka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/yotsuki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/origins/yuki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/doton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/fuuinjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/fuuton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/iryou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/katon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/ninpou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/raiton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/powers/suiton.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/armeiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/artesao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/cacador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/comerciante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/cozinheiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/escriba.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/explorador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/guarda.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/investigador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/medico_campo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/mensageiro.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/professions/rastreador.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/acrobacia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/animais.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/arte.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/atletismo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/ciencias.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/concentracao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/cultura.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/disfarces.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/enganacao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/escapar.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/furtividade.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/mecanismos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/medicina.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/ocultismo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/persuasao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/prestidigitacao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/procurar.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/prontidao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/rastrear.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/skills/veneficio.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/sources/basico.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/sources/gas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/sources/hijutsus1.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/sources/hijutsus2.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/aian_kurou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/akahigi_kaenhoushaki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/akahigi_kiki_sankaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/an_no_genjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/aoi_shougeki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ayatsuito_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ayatsuito_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bakuhatsuteki_iaikai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bakuon_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bakutou_jutsu_happa_rokujuushi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bunshin_bakuretsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bunshin_kaiten_kakato_otoshi_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bunshin_kaiten_kakato_otoshi_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bunshin_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/bunshin_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chakurahiru_wanizame.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chiyu_ketsueki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chokugeki_raikou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chou_biburaato_raitontou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chou_oodama_rasen_tarengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chou_oodama_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chouharite.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/choutou_ninpou_jigumo_nui.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/chute.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/daburu_rariatto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/defesa_acrobatica.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/defesa_mao.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/dokukiri_jigoku_baribari_hyaku_renpatsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doroppu_kikku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_ari_jigoku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_dochuu_eigyo_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_doro_houshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_doroku_gaeshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_doryou_dango.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_doryuu_jouheki.svg` — `app.js:3305`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_doryuuheki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_ex_reppuken_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_kekkai_dorou_doumu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_kouka_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_otoshi_buta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_retsudo_tenshou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/doton_tsuchi_kairou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/double_dynamic_entry.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/dynamic_entry.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/dynamic_kick.svg` — `app.js:3309`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/enton_kagutsuchi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/enton_kokuen_no_tate.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/enton_kourin_shippuu_shikkoku_no_ya_zeroshiki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/enton_kuro_hisaki_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/enton_kuro_magatama.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/erubou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/futton_fukidemono_tashou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/futton_hageshii_futtou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/futton_jouki_kikku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/futton_koumu_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/futton_tashou_koutetsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_atsuga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_daitoppa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_juuha_shou.svg` — `app.js:3304`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_kami_oroshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_kaze_kiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_kaze_no_yaiba.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_kaze_shunshin_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_kaze_shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_rasenshuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_reppushou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_suiran_reppu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_zankuuha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/fuuton_zankyokuhaana.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/gangeki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/genei_tajuu_shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/genjutsu_no_kiri_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/genjutsu_no_kiri_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/genjutsu_shibari.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/girochin_doroppu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/gokan_sakusou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/gourai_renge.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/gunbai_kaze_aekousha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hadan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hana_kyouka_sai_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hana_kyouka_sai_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hana_ninpou_bakuhatsu_kemuri_no_hanabira.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hariitsuba.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hayabusa_otoshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/heddo_batto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/henge_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hijutsu_ishibari_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hijutsu_ishibari_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hiken_tsukikage.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hiraishin_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hiraishin_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/horengan_pill_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/horengan_pill_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/housenka_tsumabeni.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyakka_ninpou_hanachiri_nuko.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyouton_haryuu_mouko.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyouton_hissatsu_hyousou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyouton_hyourou_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyouton_kokuryuu_boufuusetsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/hyouton_makyou_hyoushou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/iaigiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ikazuchi_no_kiba.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ippon_nukite.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/jigokuzuki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/jouro_senbon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/juuken_shinan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kage_bunshin_no_jutsu_i.svg` — `app.js:3307`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kage_bunshin_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kage_shuriken_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kaihou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kakeami.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kakuan_nitten_suishu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kakuremino_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kamaitachi_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kanadzuchi_dageki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/karasu_no_genjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/karengan_pill_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/karengan_pill_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kasumi_juuha_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_bushin_katai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_endan_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_gouka_mekkyaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_goukakyuu_chakra_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_hibashiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_housenka_no_jutsu.svg` — `app.js:3301`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_kaizen_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_kakokuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_kasumi_enbu_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_ninpou_hibashiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_ryuuen_houka_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_ryuuka_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/katon_souenshou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kawara_shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kawarimi_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kibaku_fuda_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kishibari_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/koburabijon_ito_sasshin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kokohi_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kokohi_tatakai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kokoroyoru_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kongou_rouheki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kongouriki_fudou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kongouriki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_dai_senkou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_dai_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_dairetsukuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_full_kick_soccer.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_gouhourairaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_gouriki_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_kage_buyou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_kaiganshou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_neppuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_reppuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_ryuujin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_shoufuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_tsumuji_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoha_tzu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoharyuu_yanagi_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/konoharyuu_yanagi_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kori_shinchuu_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kosa_ho.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kugutsu_no_jutsu_gishu_senbon.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kugutsu_sakura_no_mai.svg` — `app.js:3308`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kumo_senkyuu_suzaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kumoryuu_kaengiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kumoryuu_mikazukigiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kumoryuu_omotegiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kumoryuu_uragiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kunai_shinkuujin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kuro_tatsumaki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kurohigi_kiki_ippatsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kurohigi_kiki_nihatsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kurohigi_kiki_sanpatsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kusarigama_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/kyaku_kick.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/m_panchi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_gamarinshou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_kasegui_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_kokuni_arazu_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_kokuni_arazu_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_narakumi_no_jutsu_i.svg` — `app.js:3306`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/magen_narakumi_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mateki_mugen_onki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/meisai_gakure_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/meisai_gakure_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mikazuki_no_mai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/minirasenshuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mokuton_daijurin_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mokuton_jubaku_eisou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mokuton_mokujin_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mokuton_mokujouheki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mokuton_shin_suusenju.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mugen_kougai_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mugen_kougai_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/mugen_marou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/myu_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nadeshikoryuu_shinku_enbu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nanatsu_butoukai_ken_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nanatsu_butoukai_ken_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nehan_shouja_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nemuri_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/nemuri_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ninpou_gyoraishin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ninpou_hyakka_ryoran.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ninpou_mushou_de_hitei.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/oborozukiyo.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/oodama_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ookakeami.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/oto_no_gen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/oyako_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/panchi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiga_bomu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raigen_raikouchuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raigyaku_suihei.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raikou_kenka_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raikou_kenka_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raikyuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raisou_ikazuchi_no_utage.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_chidori_eisou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_chidori_kouken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_chidori_nagashi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_chidori.svg` — `app.js:3303`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_habateku_chidori.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_kirin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_limelight.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_meshirai_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_odori_rakurai_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_raiden.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_raigeki_no_yoroi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_raikyuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/raiton_senbon_chidori.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/rakanken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranji_shigumi_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranton_kuroi_kaminari.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranton_kuropansa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranton_raiunkouha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranton_rankiryuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/ranton_reizaa_saakasu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/rariatto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/rasengan.svg` — `app.js:3310`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/rasenkyuugan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/reijingu_sandaa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/reika_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/rensha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sakura_fubuki_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/samedare_kekka.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sanbon_nukite.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sandaageeto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/seinshun_burupapua.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/senmoufuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sennen_goroshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/senpou_oodama_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_akahigi_kaenhoushaki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_chou_biburaato_raitontou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_chou_oodama_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_dynamic_entry.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_genjutsu_no_kiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_hana_kyouka_sai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_hiraishin_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_kage_bunshin_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_kaihou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_kokohi_deboa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_konoha_gouriki_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_kumoryuu_mikazukigiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_magen_kasegui_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_mateki_mugen_onki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_mikazuki_no_mai.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_myu_senpuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_oto_no_gen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_oyako_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_raiga_bomu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_sennen_goroshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_shichikenbu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_soushuriken_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/sensei_soushuuga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/setsuna.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shichikenbu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shihouhappou_shuriken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shikomi_kugutsu_shinshin_happa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shikomishindan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shinkuuken.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shinu_no_genjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shirano.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shishi_rendan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/shuriken_shinkuujin.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soco.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soldier_pill_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soldier_pill_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soufuushasan_no_tachi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/souninshuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soushuriken_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soushuuga.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soushuujin_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/soushuujin_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiken_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiken_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suishou_tou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_bakusui_shouha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_daibakufu_no_jutsu.svg` — `app.js:3302`, `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_goshokuzame.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_hahonryu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_haran_banshou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_kirigakure_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_mizu_kamikiri.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_mizurappa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_suihouke.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_suijinchuu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_suijinheki.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_suiryuuben.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/suiton_suiryuudan_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/taihou_sentou.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tajuu_kage_bunshin_no_jutsu_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tajuu_kage_bunshin_no_jutsu_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tajuu_taki_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/takigakureryuu_mizukiri_no_yaiba.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tatsumaki_kyaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tatsumaki_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tazuneru_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tongarashigan_pill_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tongarashigan_pill_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tsuiraku_kabuto.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/tsuutenkyaku.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/uchihagaeshi.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/utakata_i.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/utakata_ii.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/utsusemi_no_jutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/wakusei_rasengan.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/yonhon_nukite.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/techniques/yubi_no_genjutsu.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/chakra_agua.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/chakra_arvore.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/estrategia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/furtividade_floresta.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/medicina.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/rastreamento.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/shuriken_alvos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/trainings/taijutsu_sacos.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/vendors/armaduras.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/vendors/armas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/vendors/ferramentas.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/vendors/ramen.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/areia.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/chuva.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/errante.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/folha.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/nevoa.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/nuvem.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/pedra.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
+- PASS_PATH `assets/v841/villages/som.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`

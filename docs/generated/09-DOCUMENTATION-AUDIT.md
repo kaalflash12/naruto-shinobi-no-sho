@@ -8,14 +8,14 @@ Status: **PASS_STATIC_COVERAGE**
 
 | Categoria | Total |
 |---|---:|
-| functions | 911 |
+| functions | 921 |
 | routes | 31 |
-| models | 3 |
-| collections | 12 |
+| models | 2 |
+| collections | 11 |
 | storage | 10 |
 | uiActions | 217 |
 | events | 9 |
-| movementEvidence | 7901 |
+| movementEvidence | 7824 |
 | scripts | 30 |
 | runtimeFiles | 53 |
 

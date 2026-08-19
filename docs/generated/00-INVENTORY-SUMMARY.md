@@ -1,8 +1,8 @@
 # INVENTÁRIO TÉCNICO — NARUTO SHINOBI NO SHO
 
-Inventário gerado diretamente do código do repositório e refinado para excluir palavras de controle que não são funções. É evidência estática, não substitui teste de execução.
+Funções são inventariadas em toda fonte não documental; semântica do jogo (IA/API/DB/UI/movimento/assets/env) é extraída somente do runtime, excluindo docs, ferramentas e workflows.
 
-Gerado em: `2026-08-19T19:37:12.455Z`
+Gerado em: `2026-08-19T19:46:12.426Z`
 
 ## Totais
 
@@ -12,18 +12,26 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 | runtimeFiles | 53 |
 | assetFiles | 5378 |
 | textFiles | 66 |
-| functions | 911 |
+| functions | 921 |
 | routes | 31 |
-| models | 3 |
-| collections | 12 |
+| models | 2 |
+| collections | 11 |
 | storageOccurrences | 10 |
 | uiActions | 217 |
 | events | 9 |
-| movementEvidence | 7901 |
+| movementEvidence | 7824 |
 | scriptTags | 30 |
-| assetReferences | 15819 |
-| missingLiteralAssetReferences | 85 |
+| assetReferences | 15818 |
+| missingLiteralAssetReferences | 70 |
+| gameRuntimeFunctions | 881 |
+| toolingFunctions | 40 |
+| uniqueAssetReferences | 5445 |
+| sourceFiles | 56 |
+| gameRuntimeSourceFiles | 51 |
+| toolingSourceFiles | 5 |
 
-- Falsos positivos de controle removidos: **0**
-
-`STATICALLY_TRACED` significa que o elemento foi localizado no código e ligado a arquivo/linha. Não significa execução em navegador, Worker ou banco.
+- Descoberta semântica: `game-runtime-only`.
+- Funções: `all-source-except-docs` com domínio por entrada.
+- Documentação excluída da descoberta: **SIM**.
+- Ferramentas excluídas da semântica de jogo: **SIM**.
+- Status dos itens: `STATICALLY_TRACED`.

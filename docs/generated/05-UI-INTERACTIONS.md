@@ -1,8 +1,8 @@
 # INTERAÇÕES DE UI E EVENTOS
 
-Ações data-action/data-go e listeners literais detectados.
+Ações e eventos detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-19T19:37:12.455Z`
+Gerado em: `2026-08-19T19:46:12.426Z`
 
 ## Ações
 

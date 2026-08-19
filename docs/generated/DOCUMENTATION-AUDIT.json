@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-19T19:37:12.767Z",
+  "generatedAt": "2026-08-19T19:46:13.094Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura do inventario estatico; nao equivale a PASS de runtime, jogabilidade ou completude semantica.",
   "staticCoverage": {
-    "functions": 911,
+    "functions": 921,
     "routes": 31,
-    "models": 3,
-    "collections": 12,
+    "models": 2,
+    "collections": 11,
     "storage": 10,
     "uiActions": 217,
     "events": 9,
-    "movementEvidence": 7901,
+    "movementEvidence": 7824,
     "scripts": 30,
     "runtimeFiles": 53
   },

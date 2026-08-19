@@ -1,8 +1,8 @@
 # API E ROTAS
 
-Rotas /api literais encontradas em todo o código.
+Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-19T19:37:12.455Z`
+Gerado em: `2026-08-19T19:46:12.426Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -26,7 +26,7 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00005 — `/api/ai`
 
-- **Referências:** `app.js:613`, `app.js:1147`, `cloudflare/r41-api/src/entry.js:38`, `cloudflare/r41-api/src/index.js:97`, `docs/00-ESPECIFICACAO-MESTRA.md:82`, `docs/00-ESPECIFICACAO-MESTRA.md:82`, `docs/00-ESPECIFICACAO-MESTRA.md:84`, `docs/01-IA-TERION-E-AUTORIDADE.md:17`, `docs/01-IA-TERION-E-AUTORIDADE.md:30`, `docs/01-IA-TERION-E-AUTORIDADE.md:183`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:381`
+- **Referências:** `app.js:613`, `app.js:1147`, `cloudflare/r41-api/src/entry.js:38`, `cloudflare/r41-api/src/index.js:97`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00006 — `/api/auth/login`
@@ -41,7 +41,7 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00008 — `/api/auth/me`
 
-- **Referências:** `app.js:3537`, `cloudflare/r41-api/src/entry.js:12`, `cloudflare/r41-api/src/index.js:101`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:75`
+- **Referências:** `app.js:3537`, `cloudflare/r41-api/src/entry.js:12`, `cloudflare/r41-api/src/index.js:101`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00009 — `/api/auth/recover`
@@ -76,7 +76,7 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00015 — `/api/online/action`
 
-- **Referências:** `app.js:5598`, `cloudflare/r41-api/src/index.js:125`, `docs/01-IA-TERION-E-AUTORIDADE.md:195`
+- **Referências:** `app.js:5598`, `cloudflare/r41-api/src/index.js:125`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00016 — `/api/online/create`
@@ -116,7 +116,7 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00023 — `/api/private/claim-leon`
 
-- **Referências:** `cloudflare/r41-api/src/entry.js:38`, `docs/01-IA-TERION-E-AUTORIDADE.md:164`, `r41-github-api.js:42`
+- **Referências:** `cloudflare/r41-api/src/entry.js:38`, `r41-github-api.js:42`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00024 — `/api/private/leon/load`
@@ -146,7 +146,7 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00029 — `/api/v84/world/event`
 
-- **Referências:** `app.js:3342`, `cloudflare/r41-api/src/entry.js:36`, `cloudflare/r41-api/src/index.js:130`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:80`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:308`, `docs/03-JOGABILIDADE-ACOES-MOVIMENTO-INTERACOES.md:509`
+- **Referências:** `app.js:3342`, `cloudflare/r41-api/src/entry.js:36`, `cloudflare/r41-api/src/index.js:130`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00030 — `/api/v84/world/savepoint`
@@ -156,6 +156,6 @@ Gerado em: `2026-08-19T19:37:12.455Z`
 
 ## API-00031 — `/api/v84/world/tick`
 
-- **Referências:** `cloudflare/r41-api/src/entry.js:36`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:80`, `docs/02-ARQUITETURA-API-PERSISTENCIA-ONLINE.md:298`, `docs/03-JOGABILIDADE-ACOES-MOVIMENTO-INTERACOES.md:509`
+- **Referências:** `cloudflare/r41-api/src/entry.js:36`
 - **Status:** `STATICALLY_TRACED`
 
