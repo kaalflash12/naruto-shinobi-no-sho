@@ -35,6 +35,8 @@ jobs:
           node --check tools/generate-technical-spec.mjs
           node --check tools/refine-technical-spec.mjs
           node --check tools/audit-documentation-coverage.mjs
+          node --check tools/build-final-canonical-spec.mjs
+          node --check tools/audit-final-canonical-spec.mjs
 
       - name: Generate exhaustive source inventory
         run: node tools/generate-technical-spec.mjs
@@ -45,7 +47,10 @@ jobs:
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
-      - name: Validate generated files and gates
+      - name: Build single canonical full specification
+        run: node tools/build-final-canonical-spec.mjs
+
+      - name: Validate generated files and static gates
         run: |
           test -s docs/generated/TECHNICAL-INVENTORY.json
           test -s docs/generated/00-INVENTORY-SUMMARY.md
@@ -60,9 +65,11 @@ jobs:
           test -s docs/generated/09-DOCUMENTATION-AUDIT.md
           test -s docs/generated/10-ASSET-REFERENCES.md
           test -s docs/generated/DOCUMENTATION-AUDIT.json
+          test -s docs/generated/NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md
+          test -s docs/generated/FINAL-CANONICAL-AUDIT.json
           node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
 
-      - name: Commit generated documentation
+      - name: Commit generated documentation and canonical report
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name 'github-actions[bot]'
@@ -71,6 +78,9 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate runtime-only semantic inventory'
+            git commit -m 'docs: regenerate canonical full specification'
             git push
           fi
+
+      - name: Enforce final canonical specification gate
+        run: node tools/audit-final-canonical-spec.mjs
