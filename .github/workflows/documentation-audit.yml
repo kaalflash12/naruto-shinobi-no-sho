@@ -41,6 +41,7 @@ jobs:
           node --check tools/filter-runtime-ui-actions.mjs
           node --check tools/ast-enrich-technical-spec.mjs
           node --check tools/ast-resolve-ui-dispatch.mjs
+          node --check tools/report-unresolved-ui-context.mjs
           node --check tools/audit-documentation-coverage.mjs
 
       - name: Generate repository inventory
@@ -61,18 +62,8 @@ jobs:
       - name: Resolve UI dispatch aliases switches prefixes sets and tables
         run: node tools/ast-resolve-ui-dispatch.mjs
 
-      - name: Report unresolved concrete UI mappings
-        run: |
-          node - <<'NODE'
-          const i=require('./docs/generated/TECHNICAL-INVENTORY.json');
-          const u=(i.uiActionResolvedCrosswalk||[]).filter(x=>!x.dynamicTemplate&&!x.handlerFunctionIds.length);
-          console.log('UNRESOLVED_CONCRETE_UI_COUNT='+u.length);
-          for(const x of u) console.log(JSON.stringify({id:x.id,action:x.action,status:x.status,sources:x.sources}));
-          console.log('UI_DISPATCH_RESOLUTION='+JSON.stringify(i.uiDispatchResolution));
-          console.log('UI_SOURCE_FILTER='+JSON.stringify(i.uiActionSourceFilter));
-          const esc=(i.functions||[]).find(f=>f.file==='app.js'&&f.name==='esc');
-          console.log('ESC_AST_SANITY='+JSON.stringify(esc?{id:esc.id,line:esc.line,endLine:esc.endLine,calls:esc.calls,handlers:esc.ast.handlerLiterals,bodySha:esc.ast.bodySha256}:null));
-          NODE
+      - name: Report unresolved UI source context
+        run: node tools/report-unresolved-ui-context.mjs
 
       - name: Audit AST documentation coverage
         run: node tools/audit-documentation-coverage.mjs
