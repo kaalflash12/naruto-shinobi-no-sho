@@ -1,0 +1,28 @@
+NARUTO SHINOBI NO SHO - registro de separacao
+Data: 2026-08-19T15:56:34
+
+Branches identificadas no repositorio Naruto Unison e removidas somente depois da validacao do novo repositorio:
+
+agent/r40-core-architecture
+agent/r41-full-materialization-run
+agent/r41-manifest-probe
+agent/r41-md-operacional
+backup-main-r35-20260819-134216
+backup-misturado-unison-shinobi-20260819
+chatgpt-fix20-windows-test
+chatgpt-fix21-exact-final
+chatgpt-fix22-atlas-login-test
+chatgpt-fix23-atlas-auto-test
+chatgpt-fix24-atlas-auth-scope-test
+chatgpt-fix25-atlas-session-api-test
+chatgpt-fix26-atlas-code-auto-test
+chatgpt-fix27-vercel-resume-test
+chatgpt-r34-asset-resolver-canonical
+chatgpt-r40-visual-semantic-rollout
+naruto-shinobi-no-sho
+r41-ci-base-20260819
+r41-cloudflare-mongodb-final-20260819
+r41-correcao-integral-20260819
+r41-production
+sns-implementation-v2
+sns-v41-gameplay-visual

@@ -1,0 +1,16 @@
+{
+  "build": "R41-CORRECAO-INTEGRAL-20260819",
+  "staticFilesMaterialized": 5399,
+  "discoveredPaths": 5402,
+  "missingHard": 0,
+  "ignoredDynamicTemplatePaths": 3,
+  "gm3Techniques": 2792,
+  "staticHostedBy": "Cloudflare Pages",
+  "apiBackend": "Cloudflare Workers + Durable Objects",
+  "persistentStorage": "MongoDB Atlas",
+  "aiRuntime": "Cloudflare Workers AI",
+  "mechanicalAuthority": "TERION 2D10 server-authoritative boundary",
+  "deployment": "Provisioned and live-tested by ATIVAR_R41_CLOUDFLARE_MONGODB.ps1 after official browser authentication",
+  "assetAudit": "tools/audit-r41-assets.mjs",
+  "note": "The three legacy missing paths are dynamic ${...} templates and are not literal files. User-provided semantic assets are overlaid by the Windows installer before the final audit and Pages deployment."
+}

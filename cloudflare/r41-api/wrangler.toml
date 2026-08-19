@@ -1,0 +1,19 @@
+name = "naruto-shinobi-r41-api"
+main = "src/entry.js"
+compatibility_date = "2026-08-19"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+MONGODB_DB = "naruto_shinobi_r41"
+ALLOWED_ORIGINS = "https://kaalflash12.github.io,https://naruto-shinobi-r41-kaalflash12.pages.dev"
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "GAME_ROOMS"
+class_name = "GameRoom"
+
+[exports.GameRoom]
+type = "durable-object"
+storage = "sqlite"
