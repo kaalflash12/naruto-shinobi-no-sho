@@ -24,15 +24,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Node 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Install pinned AST parser
         run: npm install --no-save --ignore-scripts acorn@8.15.0
-
       - name: Check documentation tools syntax
         run: |
           node --check tools/generate-technical-spec.mjs
@@ -41,42 +38,34 @@ jobs:
           node --check tools/filter-runtime-ui-actions.mjs
           node --check tools/ast-enrich-technical-spec.mjs
           node --check tools/ast-resolve-ui-dispatch.mjs
+          node --check tools/ast-resolve-selector-handlers.mjs
           node --check tools/run-ast-resolve-ui-dispatch-with-diagnostics.mjs
           node --check tools/report-unresolved-ui-context.mjs
           node --check tools/audit-documentation-coverage.mjs
           node --check tools/build-final-game-spec.mjs
           node --check tools/audit-final-game-spec.mjs
-
       - name: Generate repository inventory
         run: node tools/generate-technical-spec.mjs
-
       - name: Build exact AST function index
         run: node tools/ast-index-functions.mjs
-
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
-
       - name: Exclude non-executable UI action sources
         run: node tools/filter-runtime-ui-actions.mjs
-
       - name: Enrich exact AST behavior and base crosswalks
         run: node tools/ast-enrich-technical-spec.mjs
-
       - name: Resolve UI dispatch aliases switches prefixes sets and tables
         run: node tools/run-ast-resolve-ui-dispatch-with-diagnostics.mjs
-
+      - name: Resolve delegated selector handlers by AST
+        run: node tools/ast-resolve-selector-handlers.mjs
       - name: Report unresolved UI source context
         run: node tools/report-unresolved-ui-context.mjs
-
       - name: Audit AST documentation coverage
         run: node tools/audit-documentation-coverage.mjs
-
       - name: Build the single canonical full-game specification
         run: node tools/build-final-game-spec.mjs
-
       - name: Strictly audit the canonical full-game specification
         run: node tools/audit-final-game-spec.mjs
-
       - name: Preserve generated evidence even on failure
         if: always()
         uses: actions/upload-artifact@v4
@@ -86,7 +75,6 @@ jobs:
             docs/generated/**
           if-no-files-found: error
           retention-days: 7
-
       - name: Validate generated files and gates
         run: |
           for f in \
@@ -96,8 +84,9 @@ jobs:
             13-API-CONTRACT-EVIDENCE.md 14-PERSISTENCE-OPERATIONS.md 15-SCRIPT-RESPONSIBILITIES.md \
             16-MOVEMENT-FUNCTIONS.md 17-INTERACTION-MATRIX.md 18-AST-FUNCTION-INDEX.md 19-UNRESOLVED-UI-ACTIONS.md \
             20-UI-SOURCE-FILTER.md 21-UI-DISPATCH-RESOLUTION.md 22-UI-DISPATCHERS.md 23-UNRESOLVED-UI-ACTIONS-AST.md \
-            DOCUMENTATION-AUDIT.json NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md FINAL-SPEC-AUDIT.json; do \
-              test -s "docs/generated/$f"; \
+            24-UI-SELECTOR-HANDLERS.md DOCUMENTATION-AUDIT.json \
+            NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md FINAL-SPEC-AUDIT.json; do
+              test -s "docs/generated/$f"
           done
           node - <<'NODE'
           const base=require('./docs/generated/DOCUMENTATION-AUDIT.json');
@@ -107,7 +96,6 @@ jobs:
           if(final.gates.exactFunctionCode!=='PASS'||final.gates.allIdentifiersPresent!=='PASS'||final.gates.uiHandlerCompleteness!=='PASS') process.exit(1);
           console.log({base:base.status,final:final.status,coverage:final.coverage,spec:final.spec});
           NODE
-
       - name: Commit generated documentation
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
