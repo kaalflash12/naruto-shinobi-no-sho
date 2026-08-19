@@ -22,7 +22,8 @@ const functions=inv.functions||[],routes=inv.routes||[],models=inv.models||[],co
 const unresolved=(inv.uiActionResolvedCrosswalk||[]).filter(x=>!x.dynamicTemplate&&!x.handlerFunctionIds?.length);
 if(inv.astIndex?.parser!=='acorn')fail('parser AST canônico não é Acorn');
 if(Number(inv.astIndex?.parseFailures||0)!==0)fail('existem falhas AST');
-if(inv.uiDispatchResolution?.version!=='ast-dispatch-v4')fail('resolvedor UI final não é ast-dispatch-v4');
+if(inv.uiDispatchResolution?.version!=='ast-dispatch-v3')fail('resolvedor UI base não é ast-dispatch-v3');
+if(inv.uiSelectorResolution?.version!=='ast-selector-v1')fail('resolvedor de handlers por seletor não é ast-selector-v1');
 if(unresolved.length)fail('existem '+unresolved.length+' ações UI concretas sem handler/dispatcher: '+unresolved.map(x=>x.action).join(', '));
 for(const f of functions){req('FUNC-ID::'+f.id,'função '+f.id);const c=functionCode(f);if(c===null){fail('função sem span exato: '+f.id);continue;}req(hashBuf(Buffer.from(c)),'SHA função '+f.id);req('SOURCE-CODE::'+norm(f.file),'fonte integral da função '+f.id);req(fileHash(f.file),'SHA arquivo da função '+f.id);}
 for(const r of routes)req('API-ID::'+r.id,'API '+r.id);for(const m of models)req('AI-ID::'+m.id,'IA '+m.id);for(const c of collections)req('DB-ID::'+c.id,'DB '+c.id);for(const a of ui)req('UI-ID::'+a.id,'UI '+a.id);for(const e of events)req('EVENT-ID::'+e.id,'evento '+e.id);for(const m of moves)req('MOVE-FUNC-ID::'+(m.functionId||m.id||'SEM-ID'),'movimento');
