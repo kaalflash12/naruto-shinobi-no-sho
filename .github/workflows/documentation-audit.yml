@@ -34,6 +34,7 @@ jobs:
         run: |
           node --check tools/generate-technical-spec.mjs
           node --check tools/refine-technical-spec.mjs
+          node --check tools/enrich-technical-spec.mjs
           node --check tools/audit-documentation-coverage.mjs
 
       - name: Generate exhaustive source inventory
@@ -41,6 +42,9 @@ jobs:
 
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
+
+      - name: Enrich every function and operational crosswalk
+        run: node tools/enrich-technical-spec.mjs
 
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
@@ -59,8 +63,15 @@ jobs:
           test -s docs/generated/08-TRACEABILITY.md
           test -s docs/generated/09-DOCUMENTATION-AUDIT.md
           test -s docs/generated/10-ASSET-REFERENCES.md
+          test -s docs/generated/11-FUNCTION-BEHAVIORS.md
+          test -s docs/generated/12-UI-ACTION-CROSSWALK.md
+          test -s docs/generated/13-API-CONTRACT-EVIDENCE.md
+          test -s docs/generated/14-PERSISTENCE-OPERATIONS.md
+          test -s docs/generated/15-SCRIPT-RESPONSIBILITIES.md
+          test -s docs/generated/16-MOVEMENT-FUNCTIONS.md
+          test -s docs/generated/17-INTERACTION-MATRIX.md
           test -s docs/generated/DOCUMENTATION-AUDIT.json
-          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
+          node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_DOCUMENTATION'||r.gates.functionBehaviorDocumentation!=='PASS'||r.gates.interactionCrosswalkDocumentation!=='PASS'||r.gates.apiCrosswalkDocumentation!=='PASS'||r.gates.persistenceCrosswalkDocumentation!=='PASS'||r.gates.scriptResponsibilityDocumentation!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
 
       - name: Commit generated documentation
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -71,6 +82,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate runtime-only semantic inventory'
+            git commit -m 'docs: regenerate full operational technical documentation'
             git push
           fi
