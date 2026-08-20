@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-20T16:11:13.059Z",
+  "generatedAt": "2026-08-20T19:59:09.663Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5507,
-    "runtimeFiles": 64,
+    "files": 5510,
+    "runtimeFiles": 65,
     "assetFiles": 5425,
-    "textFiles": 80,
+    "textFiles": 83,
     "functions": 963,
     "routes": 31,
     "models": 2,
@@ -24,9 +24,9 @@
     "gameRuntimeFunctions": 883,
     "toolingFunctions": 80,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 70,
-    "gameRuntimeSourceFiles": 53,
-    "toolingSourceFiles": 17,
+    "sourceFiles": 73,
+    "gameRuntimeSourceFiles": 54,
+    "toolingSourceFiles": 19,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -66,9 +66,25 @@
       "asset": false
     },
     {
+      "path": ".github/workflows/live-backend-preflight-pr.yml",
+      "size": 1505,
+      "sha256": "808dea8981c0cfbaeccbf6bd832ef603f4f99f925f61bfdc790b4391ffd9ab73",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 1964,
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/windows-bootstrap-v4-validate.yml",
+      "size": 5232,
+      "sha256": "9f2b52a2fb8ae46f00c6cf861e0208c076b1f3ffbfa0adaff86e55f8df322faf",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43492,7 +43508,15 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 699,
-      "sha256": "922b3115f0fb0ec6626a9471a3e9740edca26ed755230bd23abd55bc37ddb0e5",
+      "sha256": "fe1d5b9f5988e08b241da0848b694852cfe61fcc608e3aa5fc79686d3f43256c",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "audit/LIVE-BACKEND.json",
+      "size": 413,
+      "sha256": "b078fbf50fedb8b27280d5a8a752e34a92e67609cca2335324f7b15edbabe046",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -230433,7 +230457,7 @@
       "storage": 14,
       "uiActions": 218,
       "events": 9,
-      "movement": 7962,
+      "movement": 7966,
       "assets": 15817,
       "environment": 59
     },
