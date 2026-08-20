@@ -21,9 +21,14 @@ jobs:
         run: |
           $ErrorActionPreference = "Stop"
           $workflow = [IO.File]::ReadAllText(".github/workflows/windows-backend-v4-exact.yml")
-          $m = [regex]::Match($workflow, "(?s)\$b64\s*=\s*@'\s*(.*?)\s*'@")
-          if (-not $m.Success) { throw "Nao consegui localizar o payload base64 da V4." }
-          $b64 = ($m.Groups[1].Value -replace '\s','')
+          $marker = '$b64 = @'''
+          $start = $workflow.IndexOf($marker, [StringComparison]::Ordinal)
+          if ($start -lt 0) { throw "Nao consegui localizar o inicio do payload base64 da V4." }
+          $bodyStart = $start + $marker.Length
+          $finish = $workflow.IndexOf("'@", $bodyStart, [StringComparison]::Ordinal)
+          if ($finish -lt 0) { throw "Nao consegui localizar o fim do payload base64 da V4." }
+          $b64 = ($workflow.Substring($bodyStart, $finish - $bodyStart) -replace '\s','')
+          if ([string]::IsNullOrWhiteSpace($b64)) { throw "Payload base64 V4 vazio." }
           $gzPath = Join-Path $env:RUNNER_TEMP "backend-v4-recovered.ps1.gz"
           $ps1Path = Join-Path $env:RUNNER_TEMP "ATIVAR_BACKEND_SHINOBI_SEM_INSTALAR_NADA_V4.ps1"
           [IO.File]::WriteAllBytes($gzPath, [Convert]::FromBase64String($b64))
