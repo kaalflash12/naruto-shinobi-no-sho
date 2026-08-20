@@ -42,7 +42,16 @@ jobs:
           } finally { $input.Dispose() }
           if (-not (Test-Path -LiteralPath $ps1Path -PathType Leaf)) { throw "V4 nao foi reconstruida." }
           $sha = (Get-FileHash -LiteralPath $ps1Path -Algorithm SHA256).Hash.ToLowerInvariant()
-          Write-Host "[VERIFIED] exact embedded V4 SHA256: $sha"
+          Write-Host "[VERIFIED] exact embedded V4 SHA256 before patch: $sha"
+
+          $text = [IO.File]::ReadAllText($ps1Path)
+          $needle = '[Parameter(Mandatory=$true)][string[]]$ArgumentList'
+          $replacement = '[Parameter(Mandatory=$true)][AllowEmptyCollection()][string[]]$ArgumentList'
+          if (-not $text.Contains($needle)) { throw "Nao encontrei o parametro ArgumentList obrigatorio para corrigir." }
+          $text = $text.Replace($needle,$replacement)
+          [IO.File]::WriteAllText($ps1Path,$text,(New-Object System.Text.UTF8Encoding($false)))
+          $patchedSha = (Get-FileHash -LiteralPath $ps1Path -Algorithm SHA256).Hash.ToLowerInvariant()
+          Write-Host "[VERIFIED] patched V4 SHA256: $patchedSha"
           "V4_PATH=$ps1Path" | Out-File -FilePath $env:GITHUB_ENV -Encoding ascii -Append
 
       - name: Windows PowerShell 5.1 parser gate
@@ -58,11 +67,19 @@ jobs:
           }
           Write-Host "[PASS] Windows PowerShell 5.1 parser: 0 errors"
 
-      - name: Execute exact V4 PreflightOnly
+      - name: Execute patched exact V4 PreflightOnly
         shell: powershell
         run: |
           $ErrorActionPreference = "Stop"
           & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $env:V4_PATH -PreflightOnly
           $code = $LASTEXITCODE
-          if ($code -ne 0) { throw "Exact V4 PreflightOnly failed with exit $code" }
-          Write-Host "[PASS] exact V4 PreflightOnly exit 0"
+          if ($code -ne 0) { throw "Patched exact V4 PreflightOnly failed with exit $code" }
+          Write-Host "[PASS] patched exact V4 PreflightOnly exit 0"
+
+      - name: Upload corrected V4 candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-backend-v4-windows-candidate
+          path: ${{ env.V4_PATH }}
+          if-no-files-found: error
