@@ -1,0 +1,265 @@
+name: Live Backend Deploy + E2E
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-backend-e2e.yml'
+      - 'cloudflare/r41-api/**'
+      - 'tools/live-worker-e2e.mjs'
+      - 'tools/browser-live-api.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shinobi-live-backend
+  cancel-in-progress: false
+
+jobs:
+  live-backend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+      LEON_PRIVATE_CODE: ${{ secrets.LEON_PRIVATE_CODE }}
+      LIVE_API_ORIGIN: ${{ vars.LIVE_API_ORIGIN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Worker dependencies only in CI
+        working-directory: cloudflare/r41-api
+        run: npm install --no-audit --no-fund
+
+      - name: Static Worker syntax gate
+        working-directory: cloudflare/r41-api
+        run: npm run check
+
+      - name: Wrangler dry-run gate
+        working-directory: cloudflare/r41-api
+        run: npx wrangler deploy --dry-run --outdir /tmp/shinobi-worker-dry
+
+      - name: Verify required GitHub secrets without exposing values
+        id: secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=()
+          for name in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID MONGODB_URI AUTH_SECRET; do
+            if [ -z "${!name:-}" ]; then
+              missing+=("$name")
+            fi
+          done
+          if [ "${#missing[@]}" -gt 0 ]; then
+            joined="$(IFS=,; echo "${missing[*]}")"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "missing=$joined" >> "$GITHUB_OUTPUT"
+            MISSING="$joined" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const missing = String(process.env.MISSING || '').split(',').filter(Boolean);
+          fs.mkdirSync('audit', { recursive: true });
+          fs.writeFileSync('audit/LIVE-BACKEND.json', JSON.stringify({
+            generatedAt: new Date().toISOString(),
+            status: 'BLOCKED_MISSING_GITHUB_SECRETS',
+            ok: false,
+            scope: 'CLOUDFLARE_WORKER_MONGODB_DURABLE_OBJECTS_LIVE',
+            missing,
+            failures: [`Secrets obrigatórios ausentes: ${missing.join(', ')}`]
+          }, null, 2) + '\n');
+          NODE
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "missing=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record blocked live evidence
+        if: steps.secrets.outputs.ready != 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/LIVE-BACKEND.json
+          if git diff --cached --quiet; then
+            echo "Blocked evidence unchanged."
+          else
+            git commit -m "test: record blocked live backend evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Stop if live credentials are unavailable
+        if: steps.secrets.outputs.ready != 'true'
+        run: |
+          echo "LIVE BACKEND BLOCKED. Missing: ${{ steps.secrets.outputs.missing }}"
+          exit 1
+
+      - name: Initial Worker deploy
+        if: steps.secrets.outputs.ready == 'true'
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee /tmp/shinobi-deploy-initial.log
+
+      - name: Configure Worker secrets from GitHub Secrets
+        if: steps.secrets.outputs.ready == 'true'
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI
+          printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET
+          if [ -n "${LEON_PRIVATE_CODE:-}" ]; then
+            printf '%s' "$LEON_PRIVATE_CODE" | npx wrangler secret put LEON_PRIVATE_CODE
+          fi
+
+      - name: Final Worker deploy and discover public URL
+        if: steps.secrets.outputs.ready == 'true'
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee /tmp/shinobi-deploy-final.log
+          if [ -n "${LIVE_API_ORIGIN:-}" ]; then
+            api="${LIVE_API_ORIGIN%/}"
+          else
+            api="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' /tmp/shinobi-deploy-final.log | tail -n 1 || true)"
+          fi
+          if [ -z "$api" ]; then
+            echo "Não foi possível descobrir a URL pública do Worker."
+            cat /tmp/shinobi-deploy-final.log
+            exit 1
+          fi
+          echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
+          echo "Worker URL: $api"
+
+      - name: Wait for configured live status
+        if: steps.secrets.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          ok=0
+          for i in $(seq 1 60); do
+            if body="$(curl -fsS --max-time 10 "$API_ORIGIN/api/status" 2>/dev/null)"; then
+              if BODY="$body" node --input-type=module <<'NODE'
+          const d = JSON.parse(process.env.BODY || '{}');
+          if (!(d.ok === true && d.configured === true && d.cloudSave === true && d.onlineRooms === true)) process.exit(1);
+          NODE
+              then
+                ok=1
+                break
+              fi
+            fi
+            sleep 3
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "Worker não ficou configurado a tempo."
+            curl -sS "$API_ORIGIN/api/status" || true
+            exit 1
+          fi
+
+      - name: Run live Worker MongoDB Durable Object E2E
+        if: steps.secrets.outputs.ready == 'true'
+        env:
+          LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
+        run: node tools/live-worker-e2e.mjs
+
+      - name: Install Playwright only in CI runner
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Prove public GitHub Pages to live Worker CORS
+        if: steps.secrets.outputs.ready == 'true'
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
+        run: node tools/browser-live-api.mjs
+
+      - name: Enforce live reports
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          node - <<'NODE'
+          const live=require('./audit/LIVE-BACKEND.json');
+          const browser=require('./audit/BROWSER-LIVE-API.json');
+          if(!live.ok || live.status!=='PASS_LIVE_BACKEND_E2E') throw new Error('LIVE-BACKEND sem PASS');
+          if(!browser.ok || browser.status!=='PASS_BROWSER_LIVE_API') throw new Error('BROWSER-LIVE-API sem PASS');
+          const required=[
+            'statusConfigured','registerTwoAccounts','authenticatedSessions','unauthorizedRejected',
+            'mongoSaveRoundTrip','slotListing','roomCreate','roomJoinSecondAccount','roomHeartbeat',
+            'roomMessaging','intentActionAccepted','clientMechanicalResultRejected','roomStateSynchronized',
+            'worldEventPersisted','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','sessionRevocation'
+          ];
+          for(const k of required) if(live.checks?.[k]!==true) throw new Error(`Gate live ausente: ${k}`);
+          console.log(live.status, browser.status);
+          NODE
+
+      - name: Bake verified Worker URL into the public game
+        if: steps.secrets.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p='r41-api-config.js';
+          const origin=String(process.env.API_ORIGIN||'').replace(/\/+$/g,'');
+          if(!origin.startsWith('https://')) throw new Error('API_ORIGIN inválido');
+          let s=fs.readFileSync(p,'utf8');
+          const before=s;
+          s=s.replace(/const baked = "[^"]*"; \/\/ preenchido automaticamente pelo instalador após o deploy/,
+            `const baked = ${JSON.stringify(origin)}; // preenchido automaticamente após deploy live verificado`);
+          if(s===before && !s.includes(`const baked = ${JSON.stringify(origin)};`)) {
+            throw new Error('Não consegui atualizar const baked em r41-api-config.js');
+          }
+          fs.writeFileSync(p,s);
+          NODE
+
+      - name: Upload live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-live-backend-evidence
+          path: |
+            audit/LIVE-BACKEND.json
+            audit/BROWSER-LIVE-API.json
+          if-no-files-found: warn
+
+      - name: Commit verified live evidence and baked API URL
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/LIVE-BACKEND.json audit/BROWSER-LIVE-API.json r41-api-config.js
+          if git diff --cached --quiet; then
+            echo "Live evidence unchanged."
+          else
+            git commit -m "test: record verified live backend and browser evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Commit failure evidence without false PASS
+        if: failure() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/LIVE-BACKEND.json audit/BROWSER-LIVE-API.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No failure evidence to commit."
+          else
+            git commit -m "test: record live backend failure evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
