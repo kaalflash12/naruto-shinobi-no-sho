@@ -41,7 +41,7 @@
     "examinador":"assets/r29/examiner.svg",
     "nukenin inimigo":"assets/r29/nukenin-inimigo.svg",
     "inimigo":"assets/r29/nukenin-inimigo.svg",
-    "mapa tatico":"assets/user-provided/maps/Mapa tático da vila ninja dourada.png"
+    "mapa tatico":"assets/user-provided/maps/Mapa tático da vila ninja dourada.webp"
   });
   const techniqueAliases={};
   for(const [id,file] of Object.entries(window.R41_USER_VISUALS?.techniques||{})) techniqueAliases[slug(id)]=file;
