@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "naruto-shinobi-no-sho-online-test",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-20",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "PUBLIC_GAME_URL": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
+    "ALLOWED_ORIGINS": "https://kaalflash12.github.io"
+  },
+  "d1_databases": [{"binding": "DB", "database_name": "sns-local-test", "migrations_dir": "migrations"}],
+  "durable_objects": {"bindings": [{"name": "GAME_ROOMS", "class_name": "GameRoom"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["GameRoom"]}]
+}
