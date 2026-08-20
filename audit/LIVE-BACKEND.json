@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T16:14:00.480Z",
+  "generatedAt": "2026-08-20T21:23:41.229Z",
   "status": "BLOCKED_MISSING_GITHUB_SECRETS",
   "ok": false,
   "scope": "CLOUDFLARE_WORKER_MONGODB_DURABLE_OBJECTS_LIVE",
