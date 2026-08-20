@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:42:36.436Z",
+  "generatedAt": "2026-08-20T22:45:54.133Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -67,8 +67,8 @@
     },
     {
       "path": ".github/workflows/supabase-live-e2e.yml",
-      "size": 3827,
-      "sha256": "e1e46a9959a44083813a29d2f3ac6c892868e0f0d6aec714e1612fabfec2275c",
+      "size": 4113,
+      "sha256": "25dcd59dd3b57d48a50d6201c354a12504dd3edca892fdb2f8b6d44b27caf6cf",
       "extension": ".yml",
       "runtime": false,
       "asset": false

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T22:42:40.978Z",
+  "generatedAt": "2026-08-20T22:45:58.960Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T22:42:36.436Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T22:45:54.133Z",
   "counts": {
     "functions": 1007,
     "functionsWithExactCode": 1007,
@@ -14073,8 +14073,8 @@
     },
     {
       "path": ".github/workflows/supabase-live-e2e.yml",
-      "size": 3827,
-      "sha256": "e1e46a9959a44083813a29d2f3ac6c892868e0f0d6aec714e1612fabfec2275c"
+      "size": 4113,
+      "sha256": "25dcd59dd3b57d48a50d6201c354a12504dd3edca892fdb2f8b6d44b27caf6cf"
     },
     {
       "path": "app.js",
