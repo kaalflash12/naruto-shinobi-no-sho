@@ -34,7 +34,9 @@ jobs:
         run: |
           node --check tools/generate-technical-spec.mjs
           node --check tools/refine-technical-spec.mjs
+          node --check tools/reconcile-asset-references.mjs
           node --check tools/audit-documentation-coverage.mjs
+          node --check tools/audit-operational-static-contracts.mjs
           node --check tools/build-final-canonical-spec.mjs
           node --check tools/audit-final-canonical-spec.mjs
 
@@ -44,11 +46,20 @@ jobs:
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
 
+      - name: Reconcile literal and dynamic asset references
+        run: node tools/reconcile-asset-references.mjs
+
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
 
+      - name: Enforce operational static contracts
+        run: node tools/audit-operational-static-contracts.mjs
+
       - name: Build single canonical full specification
         run: node tools/build-final-canonical-spec.mjs
+
+      - name: Enforce final canonical specification gate
+        run: node tools/audit-final-canonical-spec.mjs
 
       - name: Validate generated files and static gates
         run: |
@@ -65,9 +76,12 @@ jobs:
           test -s docs/generated/09-DOCUMENTATION-AUDIT.md
           test -s docs/generated/10-ASSET-REFERENCES.md
           test -s docs/generated/DOCUMENTATION-AUDIT.json
+          test -s docs/generated/OPERATIONAL-STATIC-AUDIT.json
           test -s docs/generated/NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md
           test -s docs/generated/FINAL-CANONICAL-AUDIT.json
           node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
+          node -e "const r=require('./docs/generated/OPERATIONAL-STATIC-AUDIT.json'); if(!r.ok||r.status!=='PASS_OPERATIONAL_STATIC_CONTRACTS') process.exit(1); console.log(r.status, r.gates)"
+          node -e "const r=require('./docs/generated/FINAL-CANONICAL-AUDIT.json'); if(!r.ok||r.status!=='PASS_FINAL_CANONICAL_SPEC') process.exit(1); console.log(r.status)"
 
       - name: Commit generated documentation and canonical report
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -78,9 +92,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
           else
-            git commit -m 'docs: regenerate canonical full specification'
+            git commit -m 'docs: regenerate canonical full specification after all gates'
             git push
           fi
-
-      - name: Enforce final canonical specification gate
-        run: node tools/audit-final-canonical-spec.mjs
