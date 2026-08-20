@@ -1,0 +1,115 @@
+name: Windows Bootstrap V4 Validate
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate PowerShell 5.1 native stderr wrapper against Atlas and Wrangler
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+          function Run-Capture {
+              param(
+                  [Parameter(Mandatory=$true)][string]$Exe,
+                  [Parameter(Mandatory=$true)][string[]]$ArgumentList,
+                  [string]$WorkingDirectory = '',
+                  [switch]$AllowFailure
+              )
+              if ($WorkingDirectory) { Push-Location $WorkingDirectory }
+              $oldEap = $ErrorActionPreference
+              try {
+                  $ErrorActionPreference = 'Continue'
+                  $lines = @(& $Exe @ArgumentList 2>&1)
+                  $code = $LASTEXITCODE
+                  $text = ($lines | ForEach-Object { [string]$_ }) -join "`n"
+              }
+              finally {
+                  $ErrorActionPreference = $oldEap
+                  if ($WorkingDirectory) { Pop-Location }
+              }
+              if (($code -ne 0) -and (-not $AllowFailure)) {
+                  throw "Falha exit ${code}: $Exe $($ArgumentList -join ' ')`n$text"
+              }
+              return [pscustomobject]@{ Code=$code; Text=$text; Lines=$lines }
+          }
+
+          $tmp = Join-Path $env:RUNNER_TEMP 'shinobi-bootstrap-v4'
+          New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+
+          $release = Invoke-RestMethod -UseBasicParsing -Headers @{ 'User-Agent'='Shinobi-Bootstrap-V4-CI' } -Uri 'https://api.github.com/repos/mongodb/mongodb-atlas-cli/releases/latest'
+          $asset = $release.assets | Where-Object { $_.name -match '(?i)windows.*(x86_64|x64).*\.zip$' } | Select-Object -First 1
+          if (-not $asset) { throw 'Atlas CLI Windows x64 ZIP not found' }
+          $zip = Join-Path $tmp 'atlas.zip'
+          Invoke-WebRequest -UseBasicParsing -Uri $asset.browser_download_url -OutFile $zip
+          Expand-Archive -LiteralPath $zip -DestinationPath (Join-Path $tmp 'atlas') -Force
+          $atlas = Get-ChildItem (Join-Path $tmp 'atlas') -Recurse -Filter atlas.exe -File | Select-Object -First 1 | ForEach-Object FullName
+          if (-not $atlas) { throw 'atlas.exe not found' }
+
+          $v = Run-Capture -Exe $atlas -ArgumentList @('--version')
+          if ($v.Code -ne 0) { throw 'atlas --version failed' }
+
+          foreach ($cmd in @(
+            @('auth','login','--help'),
+            @('auth','whoami','--help'),
+            @('organizations','list','--help'),
+            @('projects','create','--help'),
+            @('clusters','create','--help'),
+            @('clusters','connectionStrings','describe','--help'),
+            @('dbusers','create','--help'),
+            @('dbusers','update','--help'),
+            @('accessLists','create','--help')
+          )) {
+            $h = Run-Capture -Exe $atlas -ArgumentList $cmd -AllowFailure
+            if ($h.Code -ne 0) { throw "Atlas help failed: atlas $($cmd -join ' ')" }
+          }
+
+          # Reproduz exatamente o caso que quebrou no Windows PowerShell 5.1:
+          # stderr + exit code != 0 deve ser capturado, NAO virar excecao do wrapper.
+          $who = Run-Capture -Exe $atlas -ArgumentList @('auth','whoami') -AllowFailure
+          if ($who.Code -eq 0) {
+            Write-Host 'Atlas runner already authenticated; wrapper still valid.'
+          } else {
+            if ([string]::IsNullOrWhiteSpace($who.Text)) { throw 'Atlas unauthenticated failure had no captured output' }
+            Write-Host "PASS_ATLAS_UNAUTHENTICATED_CAPTURE exit=$($who.Code)"
+          }
+
+          $node = (Get-Command node.exe).Source
+          $npm = (Get-Command npm.cmd).Source
+          if (-not $node -or -not $npm) { throw 'Node/npm missing on runner' }
+
+          $worker = Join-Path $env:GITHUB_WORKSPACE 'cloudflare\r41-api'
+          Push-Location $worker
+          npm install --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { throw 'npm install failed' }
+          Pop-Location
+
+          function Wrangler-Capture {
+            param([string[]]$Arguments,[switch]$AllowFailure)
+            $all = @('exec','--yes','--package=wrangler@4.124.0','--','wrangler') + $Arguments
+            Run-Capture -Exe $npm -ArgumentList $all -WorkingDirectory $worker -AllowFailure:$AllowFailure
+          }
+
+          $dry = Wrangler-Capture -Arguments @('deploy','--dry-run','--outdir',(Join-Path $tmp 'dry'))
+          if ($dry.Code -ne 0) { throw "wrangler dry-run failed: $($dry.Text)" }
+
+          $cf = Wrangler-Capture -Arguments @('whoami') -AllowFailure
+          if ($cf.Code -ne 0) {
+            if ([string]::IsNullOrWhiteSpace($cf.Text)) { throw 'Wrangler unauthenticated failure had no captured output' }
+            Write-Host "PASS_WRANGLER_UNAUTHENTICATED_CAPTURE exit=$($cf.Code)"
+          }
+
+          Write-Host 'PASS_WINDOWS_POWERSHELL_51_NATIVE_WRAPPER'
