@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 20
     env:
       API_ORIGIN: https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_S9LtSpLhLKFOU9iSd8b4yQ_EziH1Arr
       PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
       REPORT_PATH: audit/SUPABASE-LIVE-E2E.json
       BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
@@ -61,7 +62,7 @@ jobs:
           if(!live.ok || live.status!=='PASS_SUPABASE_LIVE_E2E') throw new Error('Supabase live E2E sem PASS');
           if(!browser.ok || browser.status!=='PASS_BROWSER_LIVE_API') throw new Error('Browser live API sem PASS');
           const required=[
-            'statusConfigured','registerTwoAccounts','authenticatedSessions','unauthorizedRejected',
+            'statusConfigured','bootstrapPublic','registerTwoAccounts','authenticatedSessions','unauthorizedRejected',
             'saveLoadRoundTrip','kuraiPersisted','slotListing','roomCreate','roomJoinSecondAccount',
             'roomHeartbeat','roomMessaging','intentActionAccepted','clientMechanicalResultRejected',
             'roomStateSynchronized','worldTickPersisted','savePointPersisted','factsOnlyNarrator',
