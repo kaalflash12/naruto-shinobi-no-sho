@@ -1,0 +1,82 @@
+name: Windows Backend V4 PR Exact Preflight
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/windows-backend-v4-pr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-powershell-51:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Reconstruct exact V4 payload
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          $b64 = @'
+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
+'@
+          $gzPath = Join-Path $env:RUNNER_TEMP "backend-v4.ps1.gz"
+          $ps1Path = Join-Path $env:RUNNER_TEMP "ATIVAR_BACKEND_SHINOBI_SEM_INSTALAR_NADA_V4.ps1"
+          [IO.File]::WriteAllBytes($gzPath, [Convert]::FromBase64String(($b64 -replace '\s','')))
+          $input = [IO.File]::OpenRead($gzPath)
+          try {
+            $gzip = New-Object IO.Compression.GZipStream($input, [IO.Compression.CompressionMode]::Decompress)
+            try {
+              $output = [IO.File]::Create($ps1Path)
+              try { $gzip.CopyTo($output) } finally { $output.Dispose() }
+            } finally { $gzip.Dispose() }
+          } finally { $input.Dispose() }
+          $sha = (Get-FileHash -LiteralPath $ps1Path -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($sha -ne "ae95c5650441f6ce4e763eee821ad512fa48a9e0d551f8db2267904f05c1abe0") {
+            throw "SHA V4 divergente: $sha"
+          }
+          "V4_PATH=$ps1Path" | Out-File -FilePath $env:GITHUB_ENV -Encoding ascii -Append
+          Write-Host "[PASS] Exact V4 SHA256: $sha"
+
+      - name: Windows PowerShell 5.1 parser gate
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          Write-Host "PSEdition=$($PSVersionTable.PSEdition)"
+          Write-Host "PSVersion=$($PSVersionTable.PSVersion)"
+          if ($PSVersionTable.PSEdition -ne "Desktop") {
+            throw "Runner nao esta usando Windows PowerShell Desktop."
+          }
+          if ($PSVersionTable.PSVersion.Major -ne 5) {
+            throw "Esperado Windows PowerShell 5.x."
+          }
+          $tokens=$null
+          $errors=$null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            $env:V4_PATH,
+            [ref]$tokens,
+            [ref]$errors
+          ) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object {
+              Write-Host ("Linha {0}, coluna {1}: {2}" -f $_.Extent.StartLineNumber,$_.Extent.StartColumnNumber,$_.Message)
+            }
+            throw "Parser encontrou $($errors.Count) erro(s)."
+          }
+          Write-Host "[PASS] Windows PowerShell 5.1 parser: 0 erros"
+
+      - name: Execute exact V4 preflight on Windows
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $env:V4_PATH -PreflightOnly
+          $code=$LASTEXITCODE
+          if ($code -ne 0) {
+            throw "V4 preflight terminou com exit $code"
+          }
+          Write-Host "[PASS] Exact V4 PreflightOnly terminou exit 0"
