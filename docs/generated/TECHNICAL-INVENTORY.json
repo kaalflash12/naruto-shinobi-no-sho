@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T20:31:49.435Z",
+  "generatedAt": "2026-08-20T20:38:51.902Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -83,8 +83,8 @@
     },
     {
       "path": ".github/workflows/windows-backend-v4-exact.yml",
-      "size": 13661,
-      "sha256": "f5bc7c9e3071c6b3bbc4027bc6a3651a9c0bb57c0807717c3a2ad4359c288625",
+      "size": 13704,
+      "sha256": "f1b29e00e51fb2a50bcddd3c089a2f777cc5baa41fe710a5f3d5d2ef608018e1",
       "extension": ".yml",
       "runtime": false,
       "asset": false
