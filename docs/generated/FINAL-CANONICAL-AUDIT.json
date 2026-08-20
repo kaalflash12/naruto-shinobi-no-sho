@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-20T15:04:42.282Z",
+  "generatedAt": "2026-08-20T16:09:52.018Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T15:04:39.153Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T16:09:47.696Z",
   "counts": {
-    "functions": 955,
-    "functionsWithExactCode": 955,
+    "functions": 963,
+    "functionsWithExactCode": 963,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 215,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 64,
+    "sourceFiles": 69,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -7203,6 +7203,30 @@
     },
     {
       "id": "FUNC-00897",
+      "file": "tools/browser-live-api.mjs",
+      "line": 13,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "41e7fc2de7cb306f9660247aae60ebf1a968769fa0fe1c4f782cb6f6e21f41cc"
+    },
+    {
+      "id": "FUNC-00898",
+      "file": "tools/browser-smoke.mjs",
+      "line": 12,
+      "name": "fail",
+      "exactCode": true,
+      "snippetSha256": "72ce211928ab5ff30743f5f43df732e7e8daddb0114314313d20926e62c396c8"
+    },
+    {
+      "id": "FUNC-00899",
+      "file": "tools/browser-smoke.mjs",
+      "line": 13,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "509e76e876e78cd67cd4d30880479f900a750fb5b6efe854edcecda87fd92fee"
+    },
+    {
+      "id": "FUNC-00900",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 19,
       "name": "sha256",
@@ -7210,7 +7234,7 @@
       "snippetSha256": "c5243f8c16cd049c9775d6869b51e476657680832c3703b587622cc0fc49d2a8"
     },
     {
-      "id": "FUNC-00898",
+      "id": "FUNC-00901",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 20,
       "name": "norm",
@@ -7218,7 +7242,7 @@
       "snippetSha256": "2ccd9186abc95e2d911af6ef404a913c04ca34a6c6797bf99049459d2496d69b"
     },
     {
-      "id": "FUNC-00899",
+      "id": "FUNC-00902",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 21,
       "name": "isDocs",
@@ -7226,7 +7250,7 @@
       "snippetSha256": "3c4954c7b2d16facdff863cb08464ea0d4eca6f522fbcac4b99ee78b958d5dc7"
     },
     {
-      "id": "FUNC-00900",
+      "id": "FUNC-00903",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 22,
       "name": "isSource",
@@ -7234,7 +7258,7 @@
       "snippetSha256": "4b44ec8493b5546ddfaff99e084e189359aab202f7329102a719e080c660c8dd"
     },
     {
-      "id": "FUNC-00901",
+      "id": "FUNC-00904",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 23,
       "name": "esc",
@@ -7242,7 +7266,7 @@
       "snippetSha256": "aad3b493cd194614b553b94dd07c11aa100fd035ee7323e7bfdab681cbd23f6e"
     },
     {
-      "id": "FUNC-00902",
+      "id": "FUNC-00905",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 24,
       "name": "code",
@@ -7250,7 +7274,7 @@
       "snippetSha256": "28d1306471d924d011ea2e24f1c78c8f7abe16b14020d0dc920cb89d232d96e8"
     },
     {
-      "id": "FUNC-00903",
+      "id": "FUNC-00906",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 25,
       "name": "fence",
@@ -7258,7 +7282,7 @@
       "snippetSha256": "56ff7ee96d4482410e47fceb99a152c9eef5c7f6a9880e34acf9c53dfa9f6dcc"
     },
     {
-      "id": "FUNC-00904",
+      "id": "FUNC-00907",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 26,
       "name": "langFor",
@@ -7266,7 +7290,7 @@
       "snippetSha256": "90fa5b45ec6fd25bdefdc5873e35695cdb5a5ff02dbaed4420987b179e08600f"
     },
     {
-      "id": "FUNC-00905",
+      "id": "FUNC-00908",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 31,
       "name": "lineLocator",
@@ -7274,7 +7298,7 @@
       "snippetSha256": "722957f94f8c8c8949a1a26e76cd61a900473bc00b68c88236319d52fc6331de"
     },
     {
-      "id": "FUNC-00906",
+      "id": "FUNC-00909",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 41,
       "name": "blockEnd",
@@ -7282,7 +7306,7 @@
       "snippetSha256": "343b826db9de6d603a029a2405fb596642df85f8036dc622a90a4c73ab9e4796"
     },
     {
-      "id": "FUNC-00907",
+      "id": "FUNC-00910",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 62,
       "name": "snippetAt",
@@ -7290,7 +7314,7 @@
       "snippetSha256": "4a5e0b480203f90831e55875deb4956eacee4468299637fafaa469435c33827c"
     },
     {
-      "id": "FUNC-00908",
+      "id": "FUNC-00911",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 72,
       "name": "scanFunctions",
@@ -7298,7 +7322,7 @@
       "snippetSha256": "99f17597a43bd8d9b8e2c275ce58cbb57f5194c5cbabfe872511d54a9f7f711e"
     },
     {
-      "id": "FUNC-00909",
+      "id": "FUNC-00912",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 126,
       "name": "actionHandlerEvidence",
@@ -7306,7 +7330,7 @@
       "snippetSha256": "e2f7de9141a02077004539341cd457eb30404f691f6d8383e37c1681d0b4b5a0"
     },
     {
-      "id": "FUNC-00910",
+      "id": "FUNC-00913",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 175,
       "name": "gate",
@@ -7314,7 +7338,7 @@
       "snippetSha256": "7a34b7247dd8bfd87eca35b22257b7ad2d530ef5b9cad48b2f0ed418ea64e345"
     },
     {
-      "id": "FUNC-00911",
+      "id": "FUNC-00914",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 26,
       "name": "walk",
@@ -7322,7 +7346,7 @@
       "snippetSha256": "ca3fc5b1a46fb92ce6c67dbacd0331bfc837963615aee85c52ee29abc38357c8"
     },
     {
-      "id": "FUNC-00912",
+      "id": "FUNC-00915",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 40,
       "name": "reEsc",
@@ -7330,7 +7354,7 @@
       "snippetSha256": "cdee9ed3c15f8b59e80a881a7fb58e8c66e42003ec3ba5d12fd1e7d95b62d612"
     },
     {
-      "id": "FUNC-00913",
+      "id": "FUNC-00916",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 41,
       "name": "lineAt",
@@ -7338,7 +7362,7 @@
       "snippetSha256": "434873d358ff01f5b69c935070cf0e4e7ef98a693fb548a7244d1456d5b461bf"
     },
     {
-      "id": "FUNC-00914",
+      "id": "FUNC-00917",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 46,
       "name": "occurrences",
@@ -7346,7 +7370,7 @@
       "snippetSha256": "071f8021a9d0b06c90309ac9928b3713ad32b81f62acb42689efa0ae937e7e77"
     },
     {
-      "id": "FUNC-00915",
+      "id": "FUNC-00918",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 55,
       "name": "uniqEvidence",
@@ -7354,7 +7378,7 @@
       "snippetSha256": "9deef64b8ab3563a5bd8e191c8a431e55a2fd692db865c6110bf839e059dfecc"
     },
     {
-      "id": "FUNC-00916",
+      "id": "FUNC-00919",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 65,
       "name": "aliasesForDatasetAction",
@@ -7362,7 +7386,7 @@
       "snippetSha256": "626740b82ab4f0f4a9c68525175496ce8003c6c445552356f66744d07ef75c8b"
     },
     {
-      "id": "FUNC-00917",
+      "id": "FUNC-00920",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 73,
       "name": "handlerEvidence",
@@ -7370,7 +7394,7 @@
       "snippetSha256": "bff55ad6224fc93f44e3dd2b1107cf2fbaaf9f44fde50897cd427fe4a778b1f9"
     },
     {
-      "id": "FUNC-00918",
+      "id": "FUNC-00921",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -7378,7 +7402,7 @@
       "snippetSha256": "c57fffdc7797691b45d759cb834fc1f73980d1d9a0c0bc49129915c8657b5ca6"
     },
     {
-      "id": "FUNC-00919",
+      "id": "FUNC-00922",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -7386,7 +7410,7 @@
       "snippetSha256": "0a66889f8d5eb67c0269c19baa67ab12589a71368f246b1c7b52326abadfbf55"
     },
     {
-      "id": "FUNC-00920",
+      "id": "FUNC-00923",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -7394,7 +7418,7 @@
       "snippetSha256": "799ec4b33b4e660efee34e58db082d1adf32cb4aac04f34132a7cb1319c2624f"
     },
     {
-      "id": "FUNC-00921",
+      "id": "FUNC-00924",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -7402,7 +7426,7 @@
       "snippetSha256": "9218a43d85edba13b0f9b676813e0620f0052ed8a1ba4206a01147134aa01923"
     },
     {
-      "id": "FUNC-00922",
+      "id": "FUNC-00925",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -7410,7 +7434,7 @@
       "snippetSha256": "e3e7f45816dc8990d82def700b8e2d4309325552cbcc3f77a1d1bb0859a6d31b"
     },
     {
-      "id": "FUNC-00923",
+      "id": "FUNC-00926",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -7418,7 +7442,7 @@
       "snippetSha256": "0e2981d6e25c303083a87c12c2187f9b9a4f288549d4724ca8be10734b652cfc"
     },
     {
-      "id": "FUNC-00924",
+      "id": "FUNC-00927",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -7426,7 +7450,7 @@
       "snippetSha256": "babffc7bf704f00eba2c6ab4c6250bb2015aa4238760c4e4e51330ced292cd9a"
     },
     {
-      "id": "FUNC-00925",
+      "id": "FUNC-00928",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -7434,7 +7458,7 @@
       "snippetSha256": "ff8016c5597d2c29d13657ddf295f04858a51eeb9850d5226335fae750455df4"
     },
     {
-      "id": "FUNC-00926",
+      "id": "FUNC-00929",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -7442,7 +7466,7 @@
       "snippetSha256": "8fee23f2c6aa74391b3ba4cf6826c3d4370893c7b88658c2fdec97f3be69ef11"
     },
     {
-      "id": "FUNC-00927",
+      "id": "FUNC-00930",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -7450,7 +7474,7 @@
       "snippetSha256": "884ca1303e4e1f363aa1231e82d378ea58d1efdd33fd25123985077786c0937a"
     },
     {
-      "id": "FUNC-00928",
+      "id": "FUNC-00931",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -7458,7 +7482,7 @@
       "snippetSha256": "9393b8a4a93cfd1483e63b67a17e40f3d61a045fa1db7f916dabe2d518b1f3ad"
     },
     {
-      "id": "FUNC-00929",
+      "id": "FUNC-00932",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -7466,7 +7490,7 @@
       "snippetSha256": "3f16df07816c1423768a2f1502239c4c5f3b08160693183454bd9dc47c0d775a"
     },
     {
-      "id": "FUNC-00930",
+      "id": "FUNC-00933",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -7474,7 +7498,7 @@
       "snippetSha256": "b0d910fa0b88049df9573d519d450286bb27c73ff752f260ce1532ab4575dd7d"
     },
     {
-      "id": "FUNC-00931",
+      "id": "FUNC-00934",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -7482,7 +7506,7 @@
       "snippetSha256": "99bb39dc840adb06b077db80748f9152224a40991b2a470fef9cf9c84950c2c3"
     },
     {
-      "id": "FUNC-00932",
+      "id": "FUNC-00935",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -7490,7 +7514,7 @@
       "snippetSha256": "ddd677f234da1f2ac754a61f2d108785f6f82b10f4282b56a3a31d982327641f"
     },
     {
-      "id": "FUNC-00933",
+      "id": "FUNC-00936",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -7498,7 +7522,7 @@
       "snippetSha256": "230cb31829b04597cd35245e049981eb7d0fa0eeff8c9b2d77a707930afa5e48"
     },
     {
-      "id": "FUNC-00934",
+      "id": "FUNC-00937",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -7506,7 +7530,7 @@
       "snippetSha256": "071a8d4ab429c64787f1d965bbb24bf9711cd7b875be7716258fd511a0f818c3"
     },
     {
-      "id": "FUNC-00935",
+      "id": "FUNC-00938",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -7514,7 +7538,7 @@
       "snippetSha256": "fec850d99073347304a2a25a139d50ef6f7de8cf3c85e62aec1bdab11b4fb1e6"
     },
     {
-      "id": "FUNC-00936",
+      "id": "FUNC-00939",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -7522,7 +7546,7 @@
       "snippetSha256": "96fea54440f2794bef63aa540dd5f4299382ed6f59272158fb595cfec0ac70e5"
     },
     {
-      "id": "FUNC-00937",
+      "id": "FUNC-00940",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -7530,7 +7554,47 @@
       "snippetSha256": "2fd55c2f5561912786494c4cdec429ca700243d0778dfc6533a3649ba173d855"
     },
     {
-      "id": "FUNC-00938",
+      "id": "FUNC-00941",
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 11,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "ea36b4611bbc11020c4fe108e544316049598b1cb38359f1ddee0402db58c1b1"
+    },
+    {
+      "id": "FUNC-00942",
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 14,
+      "name": "record",
+      "exactCode": true,
+      "snippetSha256": "5a041446fd4d6d4978587e2d70ca1ee173c9ca50aa7f072abc8132e99ad51bc0"
+    },
+    {
+      "id": "FUNC-00943",
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 17,
+      "name": "request",
+      "exactCode": true,
+      "snippetSha256": "e1cc8c9732a02634badfdb787307a9f3fd396ddc44b8b93a932233397ffee57b"
+    },
+    {
+      "id": "FUNC-00944",
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 35,
+      "name": "safe",
+      "exactCode": true,
+      "snippetSha256": "6136abb932cba0386524871fc398379625aec10e4efa786eae3206d91534a82c"
+    },
+    {
+      "id": "FUNC-00945",
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 43,
+      "name": "writeReport",
+      "exactCode": true,
+      "snippetSha256": "aaeaab62b688666597633d91a6dc25fb583556a8f06153bc59d1349c200669be"
+    },
+    {
+      "id": "FUNC-00946",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -7538,7 +7602,7 @@
       "snippetSha256": "270a36f1ac366fd54aee4c814a9b931a37a548d40574448e32b7af7d6271ddb6"
     },
     {
-      "id": "FUNC-00939",
+      "id": "FUNC-00947",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -7546,7 +7610,7 @@
       "snippetSha256": "cc2e7fd87a3f722e08cb51c9a9600f839570cc344ec0b3b2d3782f38d5321434"
     },
     {
-      "id": "FUNC-00940",
+      "id": "FUNC-00948",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -7554,7 +7618,7 @@
       "snippetSha256": "b4527ad44292beb910119819146d8e181282d4f0f3ac80accfd02afcc749265a"
     },
     {
-      "id": "FUNC-00941",
+      "id": "FUNC-00949",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -7562,7 +7626,7 @@
       "snippetSha256": "83588246702d53ab5bcb3755651224a226bb4345aee08492ac0e8250cdbb1194"
     },
     {
-      "id": "FUNC-00942",
+      "id": "FUNC-00950",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -7570,7 +7634,7 @@
       "snippetSha256": "e40239a90ced31e11fede70b8891889b175025a2c263f77d931f5f696717817e"
     },
     {
-      "id": "FUNC-00943",
+      "id": "FUNC-00951",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -7578,7 +7642,7 @@
       "snippetSha256": "7e8b05ce7bb261c79ddf34629c3e7354a27cfdd3d2260b681c0df535a726f2f0"
     },
     {
-      "id": "FUNC-00944",
+      "id": "FUNC-00952",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -7586,7 +7650,7 @@
       "snippetSha256": "fbf329a30791bf80c08bf0adda1f2bad450a5b192e5c9f7e5385eb5484a35b53"
     },
     {
-      "id": "FUNC-00945",
+      "id": "FUNC-00953",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -7594,7 +7658,7 @@
       "snippetSha256": "7bf6f053cc437cd27de6673899ee48af1aeee57fff8536ad6d55ac94471ebe0e"
     },
     {
-      "id": "FUNC-00946",
+      "id": "FUNC-00954",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -7602,7 +7666,7 @@
       "snippetSha256": "f1c5a027b92429a95488b3772e50620ddd77c7e02fea93127fdf31a31c1e8d4e"
     },
     {
-      "id": "FUNC-00947",
+      "id": "FUNC-00955",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -7610,7 +7674,7 @@
       "snippetSha256": "0e5f2038da9627dbb85af00988a24dc6b255667428a4944f4ce03db98303dd8e"
     },
     {
-      "id": "FUNC-00948",
+      "id": "FUNC-00956",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -7618,7 +7682,7 @@
       "snippetSha256": "98b20216a2cd98b05a64052e9e12dfd52ee41ea6183b2da46e7e8230e5724c84"
     },
     {
-      "id": "FUNC-00949",
+      "id": "FUNC-00957",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -7626,7 +7690,7 @@
       "snippetSha256": "5b104cada4aea499f7da357ac1277854b76aa9440bae196fd7f1efec3307d23d"
     },
     {
-      "id": "FUNC-00950",
+      "id": "FUNC-00958",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -7634,7 +7698,7 @@
       "snippetSha256": "44b4e16d772e237ae59c446b8aeeb3aaec8cca1f79070d73ef71680d0bba18ad"
     },
     {
-      "id": "FUNC-00951",
+      "id": "FUNC-00959",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -7642,7 +7706,7 @@
       "snippetSha256": "a93d934114482fecc82835d2dffcc4b706803a2febb3f76f971d3bc5756c3de2"
     },
     {
-      "id": "FUNC-00952",
+      "id": "FUNC-00960",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -7650,7 +7714,7 @@
       "snippetSha256": "c09ba472890421886b92df9df74639951f1e9a7a257dc1b0dba48bc13e1e5c00"
     },
     {
-      "id": "FUNC-00953",
+      "id": "FUNC-00961",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -7658,7 +7722,7 @@
       "snippetSha256": "cb6d2af95ec49ebdc096c276b2338bbb0643be38c75563d45d806596ae4de719"
     },
     {
-      "id": "FUNC-00954",
+      "id": "FUNC-00962",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -7666,7 +7730,7 @@
       "snippetSha256": "492db4da37d1a69fdf7b52310f52d21098675d58637e563229a016c476a09e83"
     },
     {
-      "id": "FUNC-00955",
+      "id": "FUNC-00963",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
@@ -13641,6 +13705,11 @@
   ],
   "sourceFiles": [
     {
+      "path": ".github/workflows/browser-e2e.yml",
+      "size": 2396,
+      "sha256": "8f12d255c4e0656f770d6634dde041402400a811dea6e20a968967d39f8cabcd"
+    },
+    {
       "path": ".github/workflows/documentation-audit.yml",
       "size": 4399,
       "sha256": "8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6"
@@ -13654,6 +13723,11 @@
       "path": "app.js",
       "size": 1084160,
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
+    },
+    {
+      "path": "audit/BROWSER-SMOKE.json",
+      "size": 699,
+      "sha256": "922b3115f0fb0ec6626a9471a3e9740edca26ed755230bd23abd55bc37ddb0e5"
     },
     {
       "path": "cloudflare/r41-api/package.json",
@@ -13931,6 +14005,16 @@
       "sha256": "39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a"
     },
     {
+      "path": "tools/browser-live-api.mjs",
+      "size": 4497,
+      "sha256": "eabc139338b57ba78f6c03c4da780eddd442bf13f78d8686aef337e71fae10be"
+    },
+    {
+      "path": "tools/browser-smoke.mjs",
+      "size": 5680,
+      "sha256": "d734f963ccdfd7126952326a263a0475e82d598df5dee3c584d53848cc1e7de3"
+    },
+    {
       "path": "tools/build-final-canonical-spec.mjs",
       "size": 15497,
       "sha256": "5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba"
@@ -13944,6 +14028,11 @@
       "path": "tools/generate-technical-spec.mjs",
       "size": 14766,
       "sha256": "d0075077513909fb59405acf6a3d726f2d2b2f10edbe366fce90c54ea4b60275"
+    },
+    {
+      "path": "tools/live-worker-e2e.mjs",
+      "size": 10604,
+      "sha256": "a827e48b4312cef2791f6e0981dd7e3a10fb01e907aa015813283a3fafa78a27"
     },
     {
       "path": "tools/reconcile-asset-references.mjs",
