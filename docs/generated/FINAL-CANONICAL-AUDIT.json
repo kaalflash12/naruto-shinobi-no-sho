@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T20:40:59.093Z",
+  "generatedAt": "2026-08-20T20:43:53.060Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T20:40:54.573Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T20:43:49.002Z",
   "counts": {
     "functions": 963,
     "functionsWithExactCode": 963,
@@ -13736,8 +13736,8 @@
     },
     {
       "path": ".github/workflows/windows-bootstrap-v4-validate.yml",
-      "size": 13589,
-      "sha256": "fc38b53be141da0428e06ea747edce25426f32e55908164f1423a49bbdd1b0f6"
+      "size": 13587,
+      "sha256": "4904609c0acc127686ef9a31b46593a2499f1fc5aaaf368bf7e96e385f19ab74"
     },
     {
       "path": "app.js",

@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-20T20:40:54.573Z`
+Gerado em: `2026-08-20T20:43:49.002Z`
 
 ## API-00001 — `/api/account/delete`
 
