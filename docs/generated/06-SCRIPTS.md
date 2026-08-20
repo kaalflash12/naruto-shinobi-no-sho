@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-20T23:01:57.275Z`
+Gerado em: `2026-08-20T23:08:26.064Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -104,7 +104,7 @@ Gerado em: `2026-08-20T23:01:57.275Z`
 - `tools/audit-final-canonical-spec.mjs` — domínio `tooling` — 3143 bytes — SHA-256 `d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb`
 - `tools/audit-operational-static-contracts.mjs` — domínio `tooling` — 2954 bytes — SHA-256 `218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 4125 bytes — SHA-256 `39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a`
-- `tools/browser-live-api.mjs` — domínio `tooling` — 5197 bytes — SHA-256 `4ddc8ae2771d15e5cde5e2c1b6e8d56b30e4af454ece310ad4adbe6f55bd85c2`
+- `tools/browser-live-api.mjs` — domínio `tooling` — 5433 bytes — SHA-256 `809f476ec5997cbe8762e79c73268713f4afbf903fa4d2abba6df3d8a35bc724`
 - `tools/browser-smoke.mjs` — domínio `tooling` — 5680 bytes — SHA-256 `d734f963ccdfd7126952326a263a0475e82d598df5dee3c584d53848cc1e7de3`
 - `tools/build-final-canonical-spec.mjs` — domínio `tooling` — 15497 bytes — SHA-256 `5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba`
 - `tools/finalize-canonical-ui-trace.mjs` — domínio `tooling` — 9765 bytes — SHA-256 `b728c5b66e8f85aaaa803e93adf1a39033bd2901ffe45f48c80b11d96460d24c`
