@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-20T19:59:09.663Z",
+  "generatedAt": "2026-08-20T20:29:20.716Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5510,
+    "files": 5511,
     "runtimeFiles": 65,
     "assetFiles": 5425,
-    "textFiles": 83,
+    "textFiles": 84,
     "functions": 963,
     "routes": 31,
     "models": 2,
@@ -24,9 +24,9 @@
     "gameRuntimeFunctions": 883,
     "toolingFunctions": 80,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 73,
+    "sourceFiles": 74,
     "gameRuntimeSourceFiles": 54,
-    "toolingSourceFiles": 19,
+    "toolingSourceFiles": 20,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -77,6 +77,14 @@
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 1964,
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/windows-backend-v4-exact.yml",
+      "size": 13661,
+      "sha256": "f5bc7c9e3071c6b3bbc4027bc6a3651a9c0bb57c0807717c3a2ad4359c288625",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43508,7 +43516,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 699,
-      "sha256": "fe1d5b9f5988e08b241da0848b694852cfe61fcc608e3aa5fc79686d3f43256c",
+      "sha256": "b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c",
       "extension": ".json",
       "runtime": true,
       "asset": false

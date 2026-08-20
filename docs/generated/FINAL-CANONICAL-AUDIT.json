@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T19:59:13.942Z",
+  "generatedAt": "2026-08-20T20:29:24.961Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T19:59:09.663Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T20:29:20.716Z",
   "counts": {
     "functions": 963,
     "functionsWithExactCode": 963,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 215,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 73,
+    "sourceFiles": 74,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -13730,6 +13730,11 @@
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4"
     },
     {
+      "path": ".github/workflows/windows-backend-v4-exact.yml",
+      "size": 13661,
+      "sha256": "f5bc7c9e3071c6b3bbc4027bc6a3651a9c0bb57c0807717c3a2ad4359c288625"
+    },
+    {
       "path": ".github/workflows/windows-bootstrap-v4-validate.yml",
       "size": 5232,
       "sha256": "9f2b52a2fb8ae46f00c6cf861e0208c076b1f3ffbfa0adaff86e55f8df322faf"
@@ -13742,7 +13747,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 699,
-      "sha256": "fe1d5b9f5988e08b241da0848b694852cfe61fcc608e3aa5fc79686d3f43256c"
+      "sha256": "b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
