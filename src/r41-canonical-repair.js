@@ -39,12 +39,8 @@
     "motani":"assets/r40/story/vila_comerciante_icone.svg",
     "examiner":"assets/r29/examiner.svg",
     "examinador":"assets/r29/examiner.svg",
-    "dojutsu kugangan":"assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png",
-    "kugangan":"assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png",
     "nukenin inimigo":"assets/r29/nukenin-inimigo.svg",
     "inimigo":"assets/r29/nukenin-inimigo.svg",
-    "principal":"assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png",
-    "jutsus":"assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png",
     "mapa tatico":"assets/user-provided/maps/Mapa tático da vila ninja dourada.png"
   });
   const techniqueAliases={};
@@ -68,5 +64,5 @@
   window.R41_IMAGE_ALIASES=Object.assign({},window.R41_IMAGE_ALIASES||{},merged);
   window.R41ResolveImage=function(raw){return merged[slug(raw)]||window.R41_IMAGE_ALIASES?.[slug(raw)]||"";};
   window.R41ResolveImageStrict=window.R41ResolveImage;
-  window.__R41_CANONICAL_REPAIR_META__={build:"2026-08-19-integral",fallback:"disabled",aliases:Object.keys(merged).length,wrongPortraitTechniqueAliasesRemoved:true,userTechniqueAliases:Object.keys(techniqueAliases).length,userMapAliases:Object.keys(mapAliases).length};
+  window.__R41_CANONICAL_REPAIR_META__={build:"2026-08-19-integral",fallback:"disabled",aliases:Object.keys(merged).length,wrongPortraitTechniqueAliasesRemoved:true,referenceUiRuntimeAliasesRemoved:true,userTechniqueAliases:Object.keys(techniqueAliases).length,userMapAliases:Object.keys(mapAliases).length};
 })();
