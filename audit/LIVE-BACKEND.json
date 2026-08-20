@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-08-20T16:14:00.480Z",
+  "status": "BLOCKED_MISSING_GITHUB_SECRETS",
+  "ok": false,
+  "scope": "CLOUDFLARE_WORKER_MONGODB_DURABLE_OBJECTS_LIVE",
+  "missing": [
+    "CLOUDFLARE_API_TOKEN",
+    "CLOUDFLARE_ACCOUNT_ID",
+    "MONGODB_URI",
+    "AUTH_SECRET"
+  ],
+  "failures": [
+    "Secrets obrigatórios ausentes: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, MONGODB_URI, AUTH_SECRET"
+  ]
+}
