@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-20T22:37:28.260Z`
+Gerado em: `2026-08-20T22:42:36.436Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -43,7 +43,7 @@ Gerado em: `2026-08-20T22:37:28.260Z`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 2396 bytes — SHA-256 `8f12d255c4e0656f770d6634dde041402400a811dea6e20a968967d39f8cabcd`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 1964 bytes — SHA-256 `b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4`
-- `.github/workflows/supabase-live-e2e.yml` — domínio `tooling` — 3730 bytes — SHA-256 `81ad91b76c5532caea11a9e44211fca556137f1e30b11f5f726265761529be17`
+- `.github/workflows/supabase-live-e2e.yml` — domínio `tooling` — 3827 bytes — SHA-256 `e1e46a9959a44083813a29d2f3ac6c892868e0f0d6aec714e1612fabfec2275c`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 699 bytes — SHA-256 `b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c`
 - `cloudflare/oneclick-backend/package.json` — domínio `game-runtime` — 426 bytes — SHA-256 `ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2`
