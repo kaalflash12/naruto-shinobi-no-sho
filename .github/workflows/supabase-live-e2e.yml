@@ -1,3 +1,4 @@
+# diagnostic PR run: Edge v2 + publishable key
 name: Supabase Live Online E2E
 
 on:
