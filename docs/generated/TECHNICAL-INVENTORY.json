@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-20T16:09:47.696Z",
+  "generatedAt": "2026-08-20T16:11:13.059Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5506,
+    "files": 5507,
     "runtimeFiles": 64,
     "assetFiles": 5425,
-    "textFiles": 79,
+    "textFiles": 80,
     "functions": 963,
     "routes": 31,
     "models": 2,
@@ -24,9 +24,9 @@
     "gameRuntimeFunctions": 883,
     "toolingFunctions": 80,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 69,
+    "sourceFiles": 70,
     "gameRuntimeSourceFiles": 53,
-    "toolingSourceFiles": 16,
+    "toolingSourceFiles": 17,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -53,6 +53,14 @@
       "path": ".github/workflows/documentation-audit.yml",
       "size": 4399,
       "sha256": "8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/live-backend-e2e.yml",
+      "size": 10562,
+      "sha256": "212c7dc7f8b4c3cb748e750b80a2edeb0b2274b7c1fa45939e44d44f593b34b7",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -230427,7 +230435,7 @@
       "events": 9,
       "movement": 7962,
       "assets": 15817,
-      "environment": 56
+      "environment": 59
     },
     "after": {
       "functions": 963,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T16:09:52.018Z",
+  "generatedAt": "2026-08-20T16:11:17.688Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T16:09:47.696Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T16:11:13.059Z",
   "counts": {
     "functions": 963,
     "functionsWithExactCode": 963,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 215,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 69,
+    "sourceFiles": 70,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -13713,6 +13713,11 @@
       "path": ".github/workflows/documentation-audit.yml",
       "size": 4399,
       "sha256": "8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6"
+    },
+    {
+      "path": ".github/workflows/live-backend-e2e.yml",
+      "size": 10562,
+      "sha256": "212c7dc7f8b4c3cb748e750b80a2edeb0b2274b7c1fa45939e44d44f593b34b7"
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",

@@ -15,9 +15,9 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 69 |
+| sourceFiles | 70 |
 | gameRuntimeSourceFiles | 53 |
-| toolingSourceFiles | 16 |
+| toolingSourceFiles | 17 |
 | functions | 963 |
 | gameRuntimeFunctions | 883 |
 | toolingFunctions | 80 |

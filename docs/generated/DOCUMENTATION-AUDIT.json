@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-20T16:09:48.296Z",
+  "generatedAt": "2026-08-20T16:11:13.670Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura estatica: funcoes de toda fonte nao documental + semantica do jogo somente do runtime. Nao equivale a PASS de runtime, jogabilidade, visual ou E2E.",
   "discoveryMode": "runtime-semantics-plus-tooling-functions",
   "semanticDiscovery": "game-runtime-only",
   "staticCoverage": {
-    "sourceFiles": 69,
+    "sourceFiles": 70,
     "gameRuntimeSourceFiles": 53,
-    "toolingSourceFiles": 16,
+    "toolingSourceFiles": 17,
     "functions": 963,
     "gameRuntimeFunctions": 883,
     "toolingFunctions": 80,
