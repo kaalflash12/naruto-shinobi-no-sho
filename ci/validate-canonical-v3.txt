@@ -1,0 +1,2 @@
+Validação temporária do HEAD 21d43d1c345b7e468955f93de48ca8fdcd9db739.
+Não mesclar este arquivo.
