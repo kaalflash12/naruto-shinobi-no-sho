@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-20T21:15:25.281Z",
+  "generatedAt": "2026-08-20T22:31:38.509Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5520,
+    "files": 5515,
     "runtimeFiles": 69,
     "assetFiles": 5425,
-    "textFiles": 90,
-    "functions": 1003,
+    "textFiles": 85,
+    "functions": 1007,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -22,11 +22,11 @@
     "assetReferences": 15814,
     "missingLiteralAssetReferences": 0,
     "gameRuntimeFunctions": 919,
-    "toolingFunctions": 84,
+    "toolingFunctions": 88,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 80,
-    "gameRuntimeSourceFiles": 57,
-    "toolingSourceFiles": 23,
+    "sourceFiles": 75,
+    "gameRuntimeSourceFiles": 56,
+    "toolingSourceFiles": 19,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -58,30 +58,6 @@
       "asset": false
     },
     {
-      "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 10562,
-      "sha256": "212c7dc7f8b4c3cb748e750b80a2edeb0b2274b7c1fa45939e44d44f593b34b7",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
-      "path": ".github/workflows/live-backend-preflight-pr.yml",
-      "size": 1505,
-      "sha256": "808dea8981c0cfbaeccbf6bd832ef603f4f99f925f61bfdc790b4391ffd9ab73",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
-      "path": ".github/workflows/oneclick-d1-backend-e2e.yml",
-      "size": 2136,
-      "sha256": "7fb7183dc48a581bd7e4fdecb606472f6cd0a606e3b7242947b0d75cd7d272fb",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 1964,
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4",
@@ -91,24 +67,8 @@
     },
     {
       "path": ".github/workflows/supabase-live-e2e.yml",
-      "size": 1914,
-      "sha256": "5964d0e365954929c54e44cd02bf2c3a928b01d5af827d319c4bc1fec4d8d23f",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
-      "path": ".github/workflows/windows-backend-v4-exact.yml",
-      "size": 13704,
-      "sha256": "f1b29e00e51fb2a50bcddd3c089a2f777cc5baa41fe710a5f3d5d2ef608018e1",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
-      "path": ".github/workflows/windows-bootstrap-v4-validate.yml",
-      "size": 13587,
-      "sha256": "4904609c0acc127686ef9a31b46593a2499f1fc5aaaf368bf7e96e385f19ab74",
+      "size": 3730,
+      "sha256": "81ad91b76c5532caea11a9e44211fca556137f1e30b11f5f726265761529be17",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43538,14 +43498,6 @@
       "asset": false
     },
     {
-      "path": "audit/LIVE-BACKEND.json",
-      "size": 413,
-      "sha256": "b078fbf50fedb8b27280d5a8a752e34a92e67609cca2335324f7b15edbabe046",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
       "path": "audit/R41_CORRECAO_INTEGRAL_20260819.md",
       "size": 2042,
       "sha256": "2d3af5133044801a53a8b534cf43b783422ad8069d341e7016bbae53302bf667",
@@ -44115,8 +44067,8 @@
     },
     {
       "path": "tools/browser-live-api.mjs",
-      "size": 4497,
-      "sha256": "eabc139338b57ba78f6c03c4da780eddd442bf13f78d8686aef337e71fae10be",
+      "size": 4389,
+      "sha256": "9931737cf8161a6233432dd0f33e8d246c12f1f1dbfc5c0f9a7ff5c45663c320",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44149,6 +44101,14 @@
       "path": "tools/generate-technical-spec.mjs",
       "size": 14766,
       "sha256": "d0075077513909fb59405acf6a3d726f2d2b2f10edbe366fce90c54ea4b60275",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/live-supabase-e2e.mjs",
+      "size": 9167,
+      "sha256": "a4b55f380061bcf4b7ecf2784e16a7560aa2a3f67e6cff065a9efd7d7c822e0b",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -66817,10 +66777,10 @@
     },
     {
       "file": "tools/browser-live-api.mjs",
-      "line": 13,
+      "line": 10,
       "name": "assert",
       "kind": "declaration",
-      "params": "cond, msg",
+      "params": "cond,msg",
       "refs": {
         "routes": [],
         "collections": [],
@@ -67742,7 +67702,7 @@
       "domain": "tooling"
     },
     {
-      "file": "tools/live-worker-e2e.mjs",
+      "file": "tools/live-supabase-e2e.mjs",
       "line": 11,
       "name": "assert",
       "kind": "declaration",
@@ -67761,6 +67721,82 @@
       "domain": "tooling"
     },
     {
+      "file": "tools/live-supabase-e2e.mjs",
+      "line": 12,
+      "name": "pass",
+      "kind": "declaration",
+      "params": "name",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00978",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/live-supabase-e2e.mjs",
+      "line": 13,
+      "name": "request",
+      "kind": "declaration",
+      "params": "route, { method='POST', token='', body, expected=[200], originHeader='' }={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00979",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/live-supabase-e2e.mjs",
+      "line": 24,
+      "name": "write",
+      "kind": "declaration",
+      "params": "status,ok",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00980",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/live-worker-e2e.mjs",
+      "line": 11,
+      "name": "assert",
+      "kind": "declaration",
+      "params": "cond, msg",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00981",
+      "domain": "tooling"
+    },
+    {
       "file": "tools/live-worker-e2e.mjs",
       "line": 14,
       "name": "record",
@@ -67776,7 +67812,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00978",
+      "id": "FUNC-00982",
       "domain": "tooling"
     },
     {
@@ -67795,7 +67831,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00979",
+      "id": "FUNC-00983",
       "domain": "tooling"
     },
     {
@@ -67814,7 +67850,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00980",
+      "id": "FUNC-00984",
       "domain": "tooling"
     },
     {
@@ -67833,7 +67869,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00981",
+      "id": "FUNC-00985",
       "domain": "tooling"
     },
     {
@@ -67859,7 +67895,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-00982",
+      "id": "FUNC-00986",
       "domain": "tooling"
     },
     {
@@ -67885,7 +67921,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-00983",
+      "id": "FUNC-00987",
       "domain": "tooling"
     },
     {
@@ -67907,7 +67943,7 @@
         "norm",
         "isDynamic"
       ],
-      "id": "FUNC-00984",
+      "id": "FUNC-00988",
       "domain": "tooling"
     },
     {
@@ -67926,7 +67962,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00985",
+      "id": "FUNC-00989",
       "domain": "tooling"
     },
     {
@@ -67945,7 +67981,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00986",
+      "id": "FUNC-00990",
       "domain": "tooling"
     },
     {
@@ -67964,7 +68000,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00987",
+      "id": "FUNC-00991",
       "domain": "tooling"
     },
     {
@@ -67983,7 +68019,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00988",
+      "id": "FUNC-00992",
       "domain": "tooling"
     },
     {
@@ -68002,7 +68038,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00989",
+      "id": "FUNC-00993",
       "domain": "tooling"
     },
     {
@@ -68021,7 +68057,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00990",
+      "id": "FUNC-00994",
       "domain": "tooling"
     },
     {
@@ -68040,7 +68076,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00991",
+      "id": "FUNC-00995",
       "domain": "tooling"
     },
     {
@@ -68059,7 +68095,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00992",
+      "id": "FUNC-00996",
       "domain": "tooling"
     },
     {
@@ -68078,7 +68114,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00993",
+      "id": "FUNC-00997",
       "domain": "tooling"
     },
     {
@@ -68097,7 +68133,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00994",
+      "id": "FUNC-00998",
       "domain": "tooling"
     },
     {
@@ -68116,7 +68152,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00995",
+      "id": "FUNC-00999",
       "domain": "tooling"
     },
     {
@@ -68135,7 +68171,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00996",
+      "id": "FUNC-01000",
       "domain": "tooling"
     },
     {
@@ -68154,7 +68190,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00997",
+      "id": "FUNC-01001",
       "domain": "tooling"
     },
     {
@@ -68173,7 +68209,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00998",
+      "id": "FUNC-01002",
       "domain": "tooling"
     },
     {
@@ -68192,7 +68228,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00999",
+      "id": "FUNC-01003",
       "domain": "tooling"
     },
     {
@@ -68211,7 +68247,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01000",
+      "id": "FUNC-01004",
       "domain": "tooling"
     },
     {
@@ -68230,7 +68266,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01001",
+      "id": "FUNC-01005",
       "domain": "tooling"
     },
     {
@@ -68249,7 +68285,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01002",
+      "id": "FUNC-01006",
       "domain": "tooling"
     },
     {
@@ -68268,7 +68304,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01003",
+      "id": "FUNC-01007",
       "domain": "tooling"
     }
   ],
@@ -232072,23 +232108,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 919,
-      "tooling": 84,
+      "tooling": 88,
       "otherSource": 0
     },
     "before": {
-      "functions": 1003,
+      "functions": 1007,
       "routes": 31,
       "models": 3,
       "collections": 12,
       "storage": 14,
       "uiActions": 218,
       "events": 9,
-      "movement": 7974,
+      "movement": 7979,
       "assets": 15817,
-      "environment": 115
+      "environment": 114
     },
     "after": {
-      "functions": 1003,
+      "functions": 1007,
       "routes": 31,
       "models": 2,
       "collections": 11,
