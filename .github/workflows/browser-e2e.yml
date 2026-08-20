@@ -1,0 +1,73 @@
+name: Browser E2E
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'audit/BROWSER-SMOKE.json'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Playwright only in CI runner
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local HTTP game server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/shinobi-http.log 2>&1 &
+          echo $! > /tmp/shinobi-http.pid
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/shinobi-http.log
+          exit 1
+
+      - name: Run real Chromium smoke test
+        env:
+          BASE_URL: http://127.0.0.1:4173
+          BROWSER_REPORT: audit/BROWSER-SMOKE.json
+        run: node tools/browser-smoke.mjs
+
+      - name: Enforce browser report
+        run: |
+          test -s audit/BROWSER-SMOKE.json
+          node -e "const r=require('./audit/BROWSER-SMOKE.json'); if(!r.ok||r.status!=='PASS_BROWSER_SMOKE'||!r.checks.httpLoad||!r.checks.publicIdentity||!r.checks.r41RuntimeLoaded||!r.checks.localResetClickReload||!r.checks.runtimeRequests||!r.checks.pageExceptions) process.exit(1); console.log(r.status,r.checks,r.api)"
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-browser-smoke
+          path: audit/BROWSER-SMOKE.json
+          if-no-files-found: warn
+
+      - name: Commit browser evidence after successful main run
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/BROWSER-SMOKE.json
+          if git diff --cached --quiet; then
+            echo "Browser evidence unchanged."
+          else
+            git commit -m "test: record verified browser smoke evidence"
+            git push origin HEAD:main
+          fi
