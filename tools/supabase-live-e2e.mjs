@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const API_ORIGIN = String(process.env.API_ORIGIN || 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api').replace(/\/+$/g, '');
+const API_KEY = String(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_S9LtSpLhLKFOU9iSd8b4yQ_EziH1Arr').trim();
 const REPORT = process.env.REPORT_PATH || 'audit/SUPABASE-LIVE-E2E.json';
 const checks = {};
 const failures = [];
@@ -10,7 +11,7 @@ const evidence = {};
 function assert(value, message){ if(!value) throw new Error(message); }
 function pass(name, detail=true){ checks[name] = detail; }
 async function request(route,{method='POST',token='',body,expected=[200]}={}){
-  const headers={accept:'application/json'};
+  const headers={accept:'application/json',apikey:API_KEY};
   if(body!==undefined) headers['content-type']='application/json';
   if(token) headers.authorization=`Bearer ${token}`;
   const r=await fetch(`${API_ORIGIN}${route}`,{method,headers,body:body===undefined?undefined:JSON.stringify(body),redirect:'error'});
@@ -28,6 +29,7 @@ function write(status,ok){
 
 let tokenA='', tokenB='', slotId='';
 try{
+  assert(API_KEY.startsWith('sb_publishable_'),'publishable key Supabase ausente');
   const status=await request('/api/status',{method:'GET'});
   assert(status.data?.ok===true,'status.ok != true');
   assert(status.data?.configured===true,'backend não configurado');
@@ -35,6 +37,10 @@ try{
   assert(status.data?.onlineRooms===true,'onlineRooms != true');
   assert(status.data?.storage==='supabase-postgres',`storage inesperado: ${status.data?.storage}`);
   pass('statusConfigured'); evidence.status=status.data;
+
+  const bootstrap=await request('/api/v84/bootstrap',{method:'GET'});
+  assert(bootstrap.data?.ok===true,'bootstrap público falhou');
+  pass('bootstrapPublic');
 
   const suffix=`${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
   const password=`E2E_${suffix}_Aa9!`;
