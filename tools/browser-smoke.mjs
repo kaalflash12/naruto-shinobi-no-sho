@@ -51,10 +51,8 @@ try {
   }));
   assert(runtime.r41, 'window.__NARUTO_R41__ não foi inicializado');
   assert(runtime.reset && runtime.resetKeys, 'handler de reset local não foi carregado');
-  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB', `API build inesperado: ${runtime.apiBuild}`);
+  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE', `API build inesperado: ${runtime.apiBuild}`);
 
-  // Teste real do listener delegado de reset: cria uma chave de progresso local,
-  // dispara um botão data-action=reset, aceita o confirm e exige reload + remoção.
   await page.evaluate(() => {
     localStorage.setItem('sns-v841-account-save:e2e-browser:slot', 'e2e');
     const b = document.createElement('button');
@@ -87,7 +85,6 @@ try {
   if (pageErrors.length) fail(`Exceções JavaScript no navegador: ${pageErrors.join(' | ')}`);
   if (failedRuntimeRequests.length) fail(`Recursos JS/CSS/JSON falharam: ${JSON.stringify(failedRuntimeRequests)}`);
 
-  // Console errors ficam registrados; só bloqueamos padrões de erro fatal de runtime.
   const fatalConsole = consoleErrors.filter(x => /uncaught|referenceerror|syntaxerror|typeerror|failed to load module/i.test(x));
   if (fatalConsole.length) fail(`Console fatal: ${fatalConsole.join(' | ')}`);
 
