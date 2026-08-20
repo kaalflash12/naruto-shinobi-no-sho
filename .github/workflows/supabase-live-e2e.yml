@@ -8,13 +8,20 @@ on:
       - 'tools/supabase-live-e2e.mjs'
       - 'tools/browser-live-api.mjs'
       - '.github/workflows/supabase-live-e2e.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'r41-api-config.js'
+      - 'tools/supabase-live-e2e.mjs'
+      - 'tools/browser-live-api.mjs'
+      - '.github/workflows/supabase-live-e2e.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: shinobi-supabase-live-e2e
+  group: shinobi-supabase-live-e2e-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -85,7 +92,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Commit verified live evidence to main
-        if: success() && github.ref == 'refs/heads/main'
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
