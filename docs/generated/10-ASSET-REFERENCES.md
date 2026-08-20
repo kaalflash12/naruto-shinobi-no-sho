@@ -1,10 +1,23 @@
 # REFERÊNCIAS DE ASSETS
 
-Referências literais encontradas somente no runtime do jogo. A existência do caminho não prova adequação semântica da imagem.
+Auditoria reconciliada: referências dinâmicas/templates não são tratadas como arquivos físicos ausentes. Referências literais precisam existir no repositório.
 
-Gerado em: `2026-08-20T01:37:43.988Z`
+- Referências únicas: **5442**
+- Referências literais: **5422**
+- Referências dinâmicas/templates: **20**
+- Literais ausentes no overlay do usuário: **0**
+- Literais ausentes fora do overlay: **0**
+- Gate de caminhos: **PASS**
 
-## Ausentes
+## Ausentes — overlay do usuário
+
+Nenhuma referência literal ausente no overlay do usuário.
+
+## Ausentes — caminhos obrigatórios do repositório
+
+Nenhuma referência literal obrigatória ausente fora do overlay.
+
+## Referências dinâmicas/templates — não auditadas como arquivo físico literal
 
 - `assets/items_v7/${item.id}.svg` — `app.js:2999`
 - `assets/jutsus_v75/${j.id}.svg` — `app.js:1619`, `app.js:2998`
@@ -22,59 +35,12 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - `assets/ui_v8/events/cards/event_${String(index).padStart(2,` — `app.js:2110`
 - `assets/ui_v8/items/cards/item_${String(index).padStart(2,` — `app.js:2108`
 - `assets/ui_v8/techniques/cards/tech_${String(index).padStart(2,` — `app.js:2107`
-- `assets/user-provided/jutsu/chidori.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_domu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_doryou_dango.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_doryuu_taiga.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_doryuuheki.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_ganchurou.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/doton_shinju_zanshu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/fuuton_atsugai.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/fuuton_kamaitachi.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/fuuton_reppusho.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/genjutsu_kotoamatsukami.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/genjutsu_magen_kyoten_chiten.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/genjutsu_sharingan.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/genjutsu_tsukuyomi.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kamui.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/katon_goukakyuu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/katon_housenka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/katon_ryukafu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/katon_ryuuka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kirin.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kuchiyose_gamabunta.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kuchiyose_gamahiro.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kuchiyose_gamaken.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/kuchiyose_gamakichi.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/mangekyou_kamui.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/ninjutsu_medico_chakra_no_mesu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/ninjutsu_medico_iryo_ninjutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/ninjutsu_medico_saisei_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/ninjutsu_medico_seishin_chokei.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/raikiri.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/raiton_gian.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/raiton_kage_bunshin_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/raiton_raijuu_heki.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/suiton_suiryudan_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/suiton_suishoha_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/susanoo_perfeito.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/taijutsu_dynamic_entry.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/taijutsu_hakke_rokujuuyon_shou.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/taijutsu_kage_buyou.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/jutsu/taijutsu_konoha_renshu.jpg` — `data/r41-user-visuals.js:3`
-- `assets/user-provided/maps/Arena shinobi circular em planta baixa.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:44`
-- `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
 - `assets/v841/creator/layers/eyes/eyes_${String(idx(` — `app.js:5586`
 - `assets/v841/creator/layers/face/face_${String(idx(` — `app.js:5586`
 - `assets/v841/creator/layers/hair/hair_${String(idx(` — `app.js:5586`
 - `assets/v841/creator/layers/outfit/outfit_${String(idx(` — `app.js:5586`
 
-## Todas as referências únicas
+## Todas as referências literais
 
 - PASS_PATH `assets/enemies_v7/bandido_batedor.svg` — `app.js:1339`, `app.js:2187`
 - PASS_PATH `assets/enemies_v7/elite_espachim.svg` — `app.js:1339`, `app.js:1504`, `app.js:2187`, `app.js:3057`, `app.js:3233`, `app.js:3265`
@@ -93,7 +59,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/events_v74/pergaminho_mensageiro.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:7`
 - PASS_PATH `assets/events_v74/pergaminho.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:49`
 - PASS_PATH `assets/final_generated/mestre_dargan_saudacao.svg` — `src/r41-canonical-repair.js:37`
-- MISSING_PATH `assets/items_v7/${item.id}.svg` — `app.js:2999`
 - PASS_PATH `assets/items_v7/aian_nakkuru.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/items_v7/algemas.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/items_v7/antidoto.svg` — `data/v7-content.js:1`
@@ -179,7 +144,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/items_v7/unico_reliquia_trovao.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/items_v7/wakizashi.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/items_v7/yari.svg` — `data/v7-content.js:1`
-- MISSING_PATH `assets/jutsus_v75/${j.id}.svg` — `app.js:1619`, `app.js:2998`
 - PASS_PATH `assets/jutsus_v75/bunshin_kaiten_kakato_otoshi_i.svg` — `data/v83-integrated-config.js:22`
 - PASS_PATH `assets/jutsus_v75/bunshin_no_jutsu_i.svg` — `data/v83-integrated-config.js:20`
 - PASS_PATH `assets/jutsus_v75/chokugeki_raikou.svg` — `data/v83-integrated-config.js:26`
@@ -196,7 +160,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/jutsus_v75/raiton_raiden.svg` — `data/v83-integrated-config.js:27`
 - PASS_PATH `assets/jutsus_v75/tajuu_kage_bunshin_no_jutsu_i.svg` — `data/v83-integrated-config.js:23`
 - PASS_PATH `assets/jutsus_v75/tajuu_kage_bunshin_no_jutsu_ii.svg` — `data/v83-integrated-config.js:24`
-- MISSING_PATH `assets/leon_tech_v75/${n}.svg` — `app.js:1620`
 - PASS_PATH `assets/maps/akatsuki.jpg` — `data/conteudo-livros.js:25`
 - PASS_PATH `assets/maps/areia.jpg` — `data/conteudo-livros.js:19`
 - PASS_PATH `assets/maps/folha.jpg` — `data/conteudo-livros.js:18`, `styles.css:361`
@@ -217,14 +180,12 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/npcs_v7/nuvem_instrutor.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/npcs_v7/pedra_mestre.svg` — `data/v7-content.js:1`
 - PASS_PATH `assets/npcs_v7/som_contato.svg` — `data/v7-content.js:1`
-- MISSING_PATH `assets/original_v7/${pics[index%pics.length]}` — `app.js:1344`
 - PASS_PATH `assets/original_v7/layout_dojo_1.png` — `app.js:1339`, `app.js:1504`, `app.js:1506`, `app.js:3057`, `styles.css:377`
 - PASS_PATH `assets/original_v7/layout_topo_logado_icones_bag2.png` — `app.js:1271`
 - PASS_PATH `assets/original/avatares/layout_icon_vip_1747.jpg` — `data/v5-content.js:111`
 - PASS_PATH `assets/original/avatares/layout_icon_vip_1797.jpg` — `data/v5-content.js:112`
 - PASS_PATH `assets/original/avatares/layout_profile_7.png` — `data/v5-content.js:110`
 - PASS_PATH `assets/original/avatares/perfil_original.png` — `data/v5-content.js:109`
-- MISSING_PATH `assets/original/icones/${map[k]}` — `app.js:1190`
 - PASS_PATH `assets/original/ui/kunai.jpg` — `app.js:1271`
 - PASS_PATH `assets/original/ui/layout_bg_home.png` — `styles.css:83`
 - PASS_PATH `assets/original/ui/layout_cadastro_rapido.png` — `app.js:1232`
@@ -1721,7 +1682,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/r30/generated/ui/ui_10.webp` — `data/r30-assets.js:1`
 - PASS_PATH `assets/r30/generated/ui/ui_11.webp` — `data/r30-assets.js:1`
 - PASS_PATH `assets/r30/generated/ui/ui_12.webp` — `data/r30-assets.js:1`
-- MISSING_PATH `assets/r31/entities/` — `styles.css:383`, `styles.css:389`, `styles.css:390`, `styles.css:391`, `styles.css:398`, `styles.css:399`, `styles.css:406`, `styles.css:407`, `styles.css:408`, `styles.css:409`
 - PASS_PATH `assets/r31/entities/actions/0001-move.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1794`, `data/r31-assets.json:3803`
 - PASS_PATH `assets/r31/entities/actions/0002-defend.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1795`, `data/r31-assets.json:3804`
 - PASS_PATH `assets/r31/entities/actions/0003-attack.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1796`, `data/r31-assets.json:3805`
@@ -3395,14 +3355,11 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/r31/entities/villages/0006-chuva.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1657`, `data/r31-assets.json:3666`
 - PASS_PATH `assets/r31/entities/villages/0007-som.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1658`, `data/r31-assets.json:3667`
 - PASS_PATH `assets/r31/entities/villages/0008-errante.webp` — `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:1659`, `data/r31-assets.json:3668`
-- MISSING_PATH `assets/r31/items/${folder}/variant-${String(i).padStart(2,` — `app.js:4528`
 - PASS_PATH `assets/r31/items/flechas-shinobi/variant-00.png` — `app.js:4531`
 - PASS_PATH `assets/r31/items/marionete-karasu/variant-00.png` — `app.js:4532`
 - PASS_PATH `assets/r31/items/pilula-horengan/variant-00.png` — `app.js:4533`
 - PASS_PATH `assets/r31/items/pilula-karengan/variant-00.png` — `app.js:4534`
 - PASS_PATH `assets/r31/items/pilula-tongarashigan/variant-00.png` — `app.js:4535`
-- MISSING_PATH `assets/r40/atlas_sources` — `data/r31-assets.js:1`, `data/r31-assets.json:4083`
-- MISSING_PATH `assets/r40/atlas_verified` — `data/r31-assets.js:1`, `data/r31-assets.json:4082`
 - PASS_PATH `assets/r40/atlas_verified/a-quarto-raikage.webp` — `data/assets/asset-manifest.json:13`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:761`, `data/r31-assets.json:1851`, `data/r31-assets.json:2770`, `data/r31-assets.json:3860`, `data/r41-verified-visuals.js:1`
 - PASS_PATH `assets/r40/atlas_verified/akatsuchi.webp` — `data/assets/asset-manifest.json:29`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:763`, `data/r31-assets.json:1852`, `data/r31-assets.json:2772`, `data/r31-assets.json:3861`, `data/r41-verified-visuals.js:1`
 - PASS_PATH `assets/r40/atlas_verified/ameyuri-ringo.webp` — `data/assets/asset-manifest.json:45`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.js:1`, `data/r31-assets.json:764`, `data/r31-assets.json:1853`, `data/r31-assets.json:2773`, `data/r31-assets.json:3862`, `data/r41-verified-visuals.js:1`
@@ -3570,22 +3527,16 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/rpg_v75/shurado.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`
 - PASS_PATH `assets/rpg_v75/summon.svg` — `app.js:1689`, `app.js:1691`, `app.js:1692`
 - PASS_PATH `assets/rpg_v75/tendo.svg` — `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v75-content.js:1`, `data/v83-integrated-config.js:10`
-- MISSING_PATH `assets/ui_v8/${kind}/${String(index).padStart(2,` — `app.js:2105`
-- MISSING_PATH `assets/ui_v8/combat/actions/action_${String(index).padStart(2,` — `app.js:2109`
 - PASS_PATH `assets/ui_v8/combat/actions/action_06.jpg` — `app.js:2200`
-- MISSING_PATH `assets/ui_v8/creator/${kind}/${kind}_${String(index).padStart(2,` — `app.js:2106`
 - PASS_PATH `assets/ui_v8/creator/menu_cabelos.png` — `app.js:1950`
 - PASS_PATH `assets/ui_v8/creator/menu_trajes.png` — `app.js:1951`
 - PASS_PATH `assets/ui_v8/creator/roster_classes.png` — `app.js:1952`
-- MISSING_PATH `assets/ui_v8/creator/roster/roster_${String(n).padStart(2,` — `app.js:2615`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_01.jpg` — `app.js:2200`, `app.js:2208`, `app.js:2495`, `app.js:2672`, `app.js:2715`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_08.jpg` — `data/v83-integrated-config.js:51`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_09.jpg` — `data/v84-integrated-config.js:49`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_11.jpg` — `app.js:2200`, `app.js:2208`, `app.js:2495`, `app.js:2672`, `app.js:2715`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_12.jpg` — `data/v83-integrated-config.js:47`, `data/v84-integrated-config.js:23`
 - PASS_PATH `assets/ui_v8/creator/roster/roster_15.jpg` — `data/v83-integrated-config.js:52`
-- MISSING_PATH `assets/ui_v8/events/cards/event_${String(index).padStart(2,` — `app.js:2110`
-- MISSING_PATH `assets/ui_v8/items/cards/item_${String(index).padStart(2,` — `app.js:2108`
 - PASS_PATH `assets/ui_v8/items/cards/item_04.jpg` — `data/v83-integrated-config.js:38`
 - PASS_PATH `assets/ui_v8/items/cards/item_07.jpg` — `data/v83-integrated-config.js:40`
 - PASS_PATH `assets/ui_v8/items/cards/item_08.jpg` — `data/v83-integrated-config.js:41`
@@ -3597,7 +3548,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/ui_v8/special/kusenro_biju.jpg` — `app.js:2386`, `app.js:2399`, `app.js:2638`, `app.js:2743`, `data/v83-integrated-config.js:13`
 - PASS_PATH `assets/ui_v8/special/kusenro_hero.jpg` — `data/v83-integrated-config.js:9`
 - PASS_PATH `assets/ui_v8/special/suirin_hero.jpg` — `app.js:2390`, `app.js:2399`, `app.js:2432`, `app.js:2638`, `app.js:2743`, `data/v83-integrated-config.js:5`
-- MISSING_PATH `assets/ui_v8/techniques/cards/tech_${String(index).padStart(2,` — `app.js:2107`
 - PASS_PATH `assets/ui_v8/techniques/grade_tecnicas.png` — `app.js:1953`
 - PASS_PATH `assets/ui/avatar.png` — `app.js:782`, `app.js:934`, `app.js:987`, `app.js:996`, `app.js:1033`, `app.js:1057`, `app.js:1072`, `app.js:1150`, `app.js:1162`, `app.js:1167`, `app.js:1339`, `app.js:1811`, `app.js:1869`, `app.js:2201`, `app.js:2500`, `app.js:3239`, `app.js:3442`, `app.js:3670`, `app.js:5281`, `data/v5-content.js:108`
 - PASS_PATH `assets/ui/banner-akatsuki.jpg` — `data/conteudo-livros.js:25`
@@ -3608,53 +3558,53 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/ui/banner-pedra.jpg` — `data/conteudo-livros.js:21`, `data/conteudo-livros.js:24`
 - PASS_PATH `assets/ui/logo.png` — `index.html:1`
 - PASS_PATH `assets/ui/media-pendente.svg` — `app.js:3312`, `app.js:3316`, `app.js:3318`, `app.js:5576`, `src/r41-core-bundle.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/chidori.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_domu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_doryou_dango.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_doryuu_taiga.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_doryuuheki.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_ganchurou.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/doton_shinju_zanshu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/fuuton_atsugai.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/fuuton_kamaitachi.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/fuuton_reppusho.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/genjutsu_kotoamatsukami.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/genjutsu_magen_kyoten_chiten.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/genjutsu_sharingan.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/genjutsu_tsukuyomi.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kamui.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/katon_goukakyuu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/katon_housenka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/katon_ryukafu_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/katon_ryuuka_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kirin.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamabunta.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamahiro.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamaken.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/kuchiyose_gamakichi.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/mangekyou_kamui.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_chakra_no_mesu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_iryo_ninjutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_saisei_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/ninjutsu_medico_seishin_chokei.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/raikiri.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/raiton_gian.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/raiton_kage_bunshin_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/raiton_raijuu_heki.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/suiton_suiryudan_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/suiton_suishoha_no_jutsu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/susanoo_perfeito.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/taijutsu_dynamic_entry.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/taijutsu_hakke_rokujuuyon_shou.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/taijutsu_kage_buyou.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/jutsu/taijutsu_konoha_renshu.jpg` — `data/r41-user-visuals.js:3`
-- MISSING_PATH `assets/user-provided/maps/Arena shinobi circular em planta baixa.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:44`
-- MISSING_PATH `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/jutsu/chidori.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_domu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_doryou_dango.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_doryuu_taiga.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_doryuuheki.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_ganchurou.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/doton_shinju_zanshu_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/fuuton_atsugai.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/fuuton_kamaitachi.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/fuuton_reppusho.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/genjutsu_kotoamatsukami.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/genjutsu_magen_kyoten_chiten.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/genjutsu_sharingan.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/genjutsu_tsukuyomi.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kamui.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/katon_goukakyuu_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/katon_housenka_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/katon_ryukafu_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/katon_ryuuka_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kirin.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kuchiyose_gamabunta.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kuchiyose_gamahiro.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kuchiyose_gamaken.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/kuchiyose_gamakichi.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/mangekyou_kamui.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/ninjutsu_medico_chakra_no_mesu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/ninjutsu_medico_iryo_ninjutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/ninjutsu_medico_saisei_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/ninjutsu_medico_seishin_chokei.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/raikiri.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/raiton_gian.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/raiton_kage_bunshin_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/raiton_raijuu_heki.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/suiton_suiryudan_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/suiton_suishoha_no_jutsu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/susanoo_perfeito.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/taijutsu_dynamic_entry.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/taijutsu_hakke_rokujuuyon_shou.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/taijutsu_kage_buyou.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/jutsu/taijutsu_konoha_renshu.webp` — `data/r41-user-visuals.js:3`
+- PASS_PATH `assets/user-provided/maps/Arena shinobi circular em planta baixa.webp` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/maps/Campo shinobi na floresta escondida.webp` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/maps/Clareira ninja noturna para batalha tática.webp` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.webp` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/maps/Mapa tático da vila ninja dourada.webp` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:44`
+- PASS_PATH `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.webp` — `data/r41-user-visuals.js:4`
+- PASS_PATH `assets/user-provided/maps/Praça shinobi ao entardecer.webp` — `data/r41-user-visuals.js:4`
 - PASS_PATH `assets/v84/battlefields/arena_exame.png` — `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v84/battlefields/floresta_missao.png` — `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v84/battlefields/rua_vila.png` — `data/v84-integrated-config.js:79`, `data/v84-visual-manifest.js:1`
@@ -3816,7 +3766,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/v841/creationSteps/passo_7.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creationSteps/passo_8.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creationSteps/passo_9.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`, `data/v84-visual-manifest.js:1`
-- MISSING_PATH `assets/v841/creator/layers/eyes/eyes_${String(idx(` — `app.js:5586`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
@@ -3833,7 +3782,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/eyes/eyes_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
-- MISSING_PATH `assets/v841/creator/layers/face/face_${String(idx(` — `app.js:5586`
 - PASS_PATH `assets/v841/creator/layers/face/face_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/face/face_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/face/face_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
@@ -3850,7 +3798,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/v841/creator/layers/face/face_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/face/face_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/face/face_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
-- MISSING_PATH `assets/v841/creator/layers/hair/hair_${String(idx(` — `app.js:5586`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
@@ -3867,7 +3814,6 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_14.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_15.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/hair/hair_16.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
-- MISSING_PATH `assets/v841/creator/layers/outfit/outfit_${String(idx(` — `app.js:5586`
 - PASS_PATH `assets/v841/creator/layers/outfit/outfit_01.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/outfit/outfit_02.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v841/creator/layers/outfit/outfit_03.svg` — `data/r41-exact-visuals.js:1`, `data/v84-visual-manifest.js:1`

@@ -1,0 +1,154 @@
+{
+  "generatedAt": "2026-08-20T13:07:34.933Z",
+  "status": "PASS_OPERATIONAL_STATIC_CONTRACTS",
+  "ok": true,
+  "evidenceScope": "STATIC_ONLY",
+  "liveExecution": "UNVERIFIED",
+  "browserInteraction": "UNVERIFIED",
+  "workersLive": "UNVERIFIED",
+  "mongodbLive": "UNVERIFIED",
+  "gameplayE2E": "UNVERIFIED",
+  "gates": {
+    "assetPaths": "PASS",
+    "requiredRuntimeSymbols": "PASS",
+    "referenceUiNotUsedAsRuntimeArt": "PASS"
+  },
+  "assetAudit": {
+    "mode": "literal-vs-dynamic-reconciliation",
+    "dynamicReferencesIgnoredAsPhysicalFiles": true,
+    "uniqueReferences": 5442,
+    "literalReferences": 5422,
+    "dynamicReferences": 20,
+    "missingLiteralReferences": 0,
+    "missingExternalUserOverlayReferences": 0,
+    "missingHardAssetReferences": 0,
+    "status": "PASS"
+  },
+  "contracts": [
+    {
+      "id": "save_autosave",
+      "requiredSymbols": [
+        "r41ScheduleCloudSave",
+        "r41CloudFlush"
+      ],
+      "foundSymbols": [
+        "r41ScheduleCloudSave",
+        "r41CloudFlush"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "kurai_hud_resource",
+      "requiredSymbols": [
+        "kurai"
+      ],
+      "foundSymbols": [
+        "kurai"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "persistent_injuries",
+      "requiredSymbols": [
+        "r41ActiveInjuries",
+        "r41PersistentRecoveryCap"
+      ],
+      "foundSymbols": [
+        "r41ActiveInjuries",
+        "r41PersistentRecoveryCap"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "hospital_treatment",
+      "requiredSymbols": [
+        "r41HospitalPlan",
+        "r41HospitalTreat"
+      ],
+      "foundSymbols": [
+        "r41HospitalPlan",
+        "r41HospitalTreat"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "rest_consequences",
+      "requiredSymbols": [
+        "r27RestUnified"
+      ],
+      "foundSymbols": [
+        "r27RestUnified"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "world_tick",
+      "requiredSymbols": [
+        "v83WorldTick"
+      ],
+      "foundSymbols": [
+        "v83WorldTick"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "minigame_engine",
+      "requiredSymbols": [
+        "r41RecordMinigame",
+        "r41OpenMinigame"
+      ],
+      "foundSymbols": [
+        "r41RecordMinigame",
+        "r41OpenMinigame"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "mission_choice_resolution",
+      "requiredSymbols": [
+        "resolveMissionChoice"
+      ],
+      "foundSymbols": [
+        "resolveMissionChoice"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "combat_pipeline",
+      "requiredSymbols": [
+        "r41CombatSnapshot",
+        "r41CombatVisual"
+      ],
+      "foundSymbols": [
+        "r41CombatSnapshot",
+        "r41CombatVisual"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "online_intent_state",
+      "requiredSymbols": [
+        "r41OnlineAction",
+        "r41SendOnlineIntent"
+      ],
+      "foundSymbols": [
+        "r41OnlineAction",
+        "r41SendOnlineIntent"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "visual_state",
+      "requiredSymbols": [
+        "r41SetVisualState",
+        "r41AvatarComposite"
+      ],
+      "foundSymbols": [
+        "r41SetVisualState",
+        "r41AvatarComposite"
+      ],
+      "status": "PASS_STATIC_TRACE"
+    }
+  ],
+  "forbiddenRuntimeReferences": []
+}

@@ -2,7 +2,7 @@
 
 Ações e eventos detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-20T01:37:43.988Z`
+Gerado em: `2026-08-20T13:07:34.176Z`
 
 ## Ações
 
@@ -122,7 +122,7 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 - **UI-00114** `r41-activity` — `app.js:5594`, `app.js:5595`
 - **UI-00115** `r41-hospital-treat` — `app.js:5503`, `app.js:5505`
 - **UI-00116** `r41-online-intent` — `app.js:5604`, `app.js:5607`
-- **UI-00117** `reset` — `app.js:903`
+- **UI-00117** `reset` — `app.js:903`, `src/r41-local-reset-fix.js:4`, `src/r41-local-reset-fix.js:39`
 - **UI-00118** `rest` — `app.js:795`, `app.js:801`, `app.js:2673`
 - **UI-00119** `rinne-unlock` — `app.js:1855`
 - **UI-00120** `rpg-confirm-cost` — `app.js:1735`
@@ -228,7 +228,7 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 
 - **EVENT-00001** `beforeunload` — `app.js:5303`
 - **EVENT-00002** `change` — `app.js:1380`, `app.js:2932`
-- **EVENT-00003** `click` — `app.js:1356`, `app.js:1519`, `app.js:1883`, `app.js:1933`, `app.js:2073`, `app.js:2213`, `app.js:2517`, `app.js:2727`, `app.js:2926`, `app.js:3128`, `app.js:3360`, `app.js:3450`, `app.js:3612`, `app.js:3672`, `app.js:3787`, `app.js:3954`, `app.js:3974`, `app.js:4016`, `app.js:4104`, `app.js:4129`, `app.js:4152`, `app.js:4284`, `app.js:4395`, `app.js:4487`, `app.js:4847`, `app.js:5164`, `app.js:5168`, `app.js:5258`, `app.js:5389`, `app.js:5505`, `app.js:5529`, `app.js:5595`, `app.js:5607`
+- **EVENT-00003** `click` — `app.js:1356`, `app.js:1519`, `app.js:1883`, `app.js:1933`, `app.js:2073`, `app.js:2213`, `app.js:2517`, `app.js:2727`, `app.js:2926`, `app.js:3128`, `app.js:3360`, `app.js:3450`, `app.js:3612`, `app.js:3672`, `app.js:3787`, `app.js:3954`, `app.js:3974`, `app.js:4016`, `app.js:4104`, `app.js:4129`, `app.js:4152`, `app.js:4284`, `app.js:4395`, `app.js:4487`, `app.js:4847`, `app.js:5164`, `app.js:5168`, `app.js:5258`, `app.js:5389`, `app.js:5505`, `app.js:5529`, `app.js:5595`, `app.js:5607`, `src/r41-local-reset-fix.js:38`
 - **EVENT-00004** `DOMContentLoaded` — `src/r41-core-bundle.js:170`, `src/r41-final-ui-repair.js:21`
 - **EVENT-00005** `error` — `app.js:5278`, `app.js:5301`
 - **EVENT-00006** `input` — `app.js:1376`, `app.js:1882`, `app.js:2513`, `app.js:2726`, `app.js:3127`, `app.js:3359`

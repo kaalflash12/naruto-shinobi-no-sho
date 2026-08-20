@@ -15,23 +15,23 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 60 |
-| gameRuntimeSourceFiles | 51 |
-| toolingSourceFiles | 9 |
-| functions | 946 |
-| gameRuntimeFunctions | 881 |
-| toolingFunctions | 65 |
+| sourceFiles | 64 |
+| gameRuntimeSourceFiles | 52 |
+| toolingSourceFiles | 12 |
+| functions | 953 |
+| gameRuntimeFunctions | 883 |
+| toolingFunctions | 70 |
 | routes | 31 |
 | models | 2 |
 | collections | 11 |
-| storage | 10 |
+| storage | 11 |
 | uiActions | 217 |
 | events | 9 |
-| movementEvidence | 7824 |
-| scripts | 30 |
-| runtimeFiles | 57 |
+| movementEvidence | 7825 |
+| scripts | 31 |
+| runtimeFiles | 60 |
 | uniqueAssetReferences | 5442 |
-| missingLiteralAssetReferences | 67 |
+| missingLiteralAssetReferences | 0 |
 
 ## Gates
 
@@ -44,8 +44,4 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 - **mongodbLive:** UNVERIFIED
 - **gameplayE2E:** UNVERIFIED
 - **semanticCompleteness:** REQUIRES_TRACEABLE_EVIDENCE
-- **assetPathCompleteness:** FAIL_OR_EXTERNAL_OVERLAY_REQUIRED
-
-## Avisos
-
-- 67 referencias literais de assets nao materializadas; ver docs/generated/10-ASSET-REFERENCES.md e auditoria especifica de assets
+- **assetPathCompleteness:** PASS

@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-20T01:37:43.988Z`
+Gerado em: `2026-08-20T13:07:34.176Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -887,71 +887,78 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 | FUNC-00879 | função | `boot` | `src/r41-core-bundle.js:160` | game-runtime / STATICALLY_TRACED |
 | FUNC-00880 | função | `repair` | `src/r41-final-ui-repair.js:12` | game-runtime / STATICALLY_TRACED |
 | FUNC-00881 | função | `schedule` | `src/r41-final-ui-repair.js:19` | game-runtime / STATICALLY_TRACED |
-| FUNC-00882 | função | `fail` | `tools/audit-documentation-coverage.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-00883 | função | `warn` | `tools/audit-documentation-coverage.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-00884 | função | `exists` | `tools/audit-documentation-coverage.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-00885 | função | `norm` | `tools/audit-documentation-coverage.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-00886 | função | `isDoc` | `tools/audit-documentation-coverage.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-00887 | função | `isTooling` | `tools/audit-documentation-coverage.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-00888 | função | `isGameRuntime` | `tools/audit-documentation-coverage.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-00889 | função | `auditGameGrouped` | `tools/audit-documentation-coverage.mjs:77` | tooling / STATICALLY_TRACED |
-| FUNC-00890 | função | `sha256` | `tools/audit-final-canonical-spec.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-00891 | função | `walk` | `tools/audit-r41-assets.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-00892 | função | `cleanRef` | `tools/audit-r41-assets.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-00893 | função | `isDynamic` | `tools/audit-r41-assets.mjs:27` | tooling / STATICALLY_TRACED |
-| FUNC-00894 | função | `addRef` | `tools/audit-r41-assets.mjs:28` | tooling / STATICALLY_TRACED |
-| FUNC-00895 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-00896 | função | `norm` | `tools/build-final-canonical-spec.mjs:20` | tooling / STATICALLY_TRACED |
-| FUNC-00897 | função | `isDocs` | `tools/build-final-canonical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-00898 | função | `isSource` | `tools/build-final-canonical-spec.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-00899 | função | `esc` | `tools/build-final-canonical-spec.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-00900 | função | `code` | `tools/build-final-canonical-spec.mjs:24` | tooling / STATICALLY_TRACED |
-| FUNC-00901 | função | `fence` | `tools/build-final-canonical-spec.mjs:25` | tooling / STATICALLY_TRACED |
-| FUNC-00902 | função | `langFor` | `tools/build-final-canonical-spec.mjs:26` | tooling / STATICALLY_TRACED |
-| FUNC-00903 | função | `lineLocator` | `tools/build-final-canonical-spec.mjs:31` | tooling / STATICALLY_TRACED |
-| FUNC-00904 | função | `blockEnd` | `tools/build-final-canonical-spec.mjs:41` | tooling / STATICALLY_TRACED |
-| FUNC-00905 | função | `snippetAt` | `tools/build-final-canonical-spec.mjs:62` | tooling / STATICALLY_TRACED |
-| FUNC-00906 | função | `scanFunctions` | `tools/build-final-canonical-spec.mjs:72` | tooling / STATICALLY_TRACED |
-| FUNC-00907 | função | `actionHandlerEvidence` | `tools/build-final-canonical-spec.mjs:126` | tooling / STATICALLY_TRACED |
-| FUNC-00908 | função | `gate` | `tools/build-final-canonical-spec.mjs:175` | tooling / STATICALLY_TRACED |
-| FUNC-00909 | função | `px` | `tools/generate-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-00910 | função | `rel` | `tools/generate-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-00911 | função | `code` | `tools/generate-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-00912 | função | `clean` | `tools/generate-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-00913 | função | `uniq` | `tools/generate-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
-| FUNC-00914 | função | `ident` | `tools/generate-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-00915 | função | `hash` | `tools/generate-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-00916 | função | `walk` | `tools/generate-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-00917 | função | `lineLocator` | `tools/generate-technical-spec.mjs:32` | tooling / STATICALLY_TRACED |
-| FUNC-00918 | função | `readText` | `tools/generate-technical-spec.mjs:42` | tooling / STATICALLY_TRACED |
-| FUNC-00919 | função | `blockEnd` | `tools/generate-technical-spec.mjs:48` | tooling / STATICALLY_TRACED |
-| FUNC-00920 | função | `bodyAt` | `tools/generate-technical-spec.mjs:69` | tooling / STATICALLY_TRACED |
-| FUNC-00921 | função | `captures` | `tools/generate-technical-spec.mjs:75` | tooling / STATICALLY_TRACED |
-| FUNC-00922 | função | `refs` | `tools/generate-technical-spec.mjs:81` | tooling / STATICALLY_TRACED |
-| FUNC-00923 | função | `extractFunctions` | `tools/generate-technical-spec.mjs:99` | tooling / STATICALLY_TRACED |
-| FUNC-00924 | função | `add` | `tools/generate-technical-spec.mjs:149` | tooling / STATICALLY_TRACED |
-| FUNC-00925 | função | `grouped` | `tools/generate-technical-spec.mjs:163` | tooling / STATICALLY_TRACED |
-| FUNC-00926 | função | `header` | `tools/generate-technical-spec.mjs:216` | tooling / STATICALLY_TRACED |
-| FUNC-00927 | função | `sources` | `tools/generate-technical-spec.mjs:217` | tooling / STATICALLY_TRACED |
-| FUNC-00928 | função | `listCodes` | `tools/generate-technical-spec.mjs:218` | tooling / STATICALLY_TRACED |
-| FUNC-00929 | função | `norm` | `tools/reconcile-asset-references.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-00930 | função | `isDynamic` | `tools/reconcile-asset-references.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-00931 | função | `existsLiteral` | `tools/reconcile-asset-references.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-00932 | função | `code` | `tools/reconcile-asset-references.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-00933 | função | `srcs` | `tools/reconcile-asset-references.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-00934 | função | `norm` | `tools/refine-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-00935 | função | `hasSourceExt` | `tools/refine-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-00936 | função | `isDocumentation` | `tools/refine-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-00937 | função | `isTooling` | `tools/refine-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-00938 | função | `isSource` | `tools/refine-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
-| FUNC-00939 | função | `isGameRuntimeSource` | `tools/refine-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-00940 | função | `domainOf` | `tools/refine-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-00941 | função | `code` | `tools/refine-technical-spec.mjs:20` | tooling / STATICALLY_TRACED |
-| FUNC-00942 | função | `clean` | `tools/refine-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-00943 | função | `srcs` | `tools/refine-technical-spec.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-00944 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-00945 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
-| FUNC-00946 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-00882 | função | `localProgressKeys` | `src/r41-local-reset-fix.js:20` | game-runtime / STATICALLY_TRACED |
+| FUNC-00883 | função | `resetLocalProgress` | `src/r41-local-reset-fix.js:30` | game-runtime / STATICALLY_TRACED |
+| FUNC-00884 | função | `fail` | `tools/audit-documentation-coverage.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-00885 | função | `warn` | `tools/audit-documentation-coverage.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-00886 | função | `exists` | `tools/audit-documentation-coverage.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-00887 | função | `norm` | `tools/audit-documentation-coverage.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-00888 | função | `isDoc` | `tools/audit-documentation-coverage.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-00889 | função | `isTooling` | `tools/audit-documentation-coverage.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-00890 | função | `isGameRuntime` | `tools/audit-documentation-coverage.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-00891 | função | `auditGameGrouped` | `tools/audit-documentation-coverage.mjs:77` | tooling / STATICALLY_TRACED |
+| FUNC-00892 | função | `sha256` | `tools/audit-final-canonical-spec.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-00893 | função | `walk` | `tools/audit-r41-assets.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-00894 | função | `cleanRef` | `tools/audit-r41-assets.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-00895 | função | `isDynamic` | `tools/audit-r41-assets.mjs:31` | tooling / STATICALLY_TRACED |
+| FUNC-00896 | função | `addRef` | `tools/audit-r41-assets.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-00897 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-00898 | função | `norm` | `tools/build-final-canonical-spec.mjs:20` | tooling / STATICALLY_TRACED |
+| FUNC-00899 | função | `isDocs` | `tools/build-final-canonical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-00900 | função | `isSource` | `tools/build-final-canonical-spec.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-00901 | função | `esc` | `tools/build-final-canonical-spec.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-00902 | função | `code` | `tools/build-final-canonical-spec.mjs:24` | tooling / STATICALLY_TRACED |
+| FUNC-00903 | função | `fence` | `tools/build-final-canonical-spec.mjs:25` | tooling / STATICALLY_TRACED |
+| FUNC-00904 | função | `langFor` | `tools/build-final-canonical-spec.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-00905 | função | `lineLocator` | `tools/build-final-canonical-spec.mjs:31` | tooling / STATICALLY_TRACED |
+| FUNC-00906 | função | `blockEnd` | `tools/build-final-canonical-spec.mjs:41` | tooling / STATICALLY_TRACED |
+| FUNC-00907 | função | `snippetAt` | `tools/build-final-canonical-spec.mjs:62` | tooling / STATICALLY_TRACED |
+| FUNC-00908 | função | `scanFunctions` | `tools/build-final-canonical-spec.mjs:72` | tooling / STATICALLY_TRACED |
+| FUNC-00909 | função | `actionHandlerEvidence` | `tools/build-final-canonical-spec.mjs:126` | tooling / STATICALLY_TRACED |
+| FUNC-00910 | função | `gate` | `tools/build-final-canonical-spec.mjs:175` | tooling / STATICALLY_TRACED |
+| FUNC-00911 | função | `reEsc` | `tools/finalize-canonical-ui-trace.mjs:27` | tooling / STATICALLY_TRACED |
+| FUNC-00912 | função | `lineAt` | `tools/finalize-canonical-ui-trace.mjs:28` | tooling / STATICALLY_TRACED |
+| FUNC-00913 | função | `occurrences` | `tools/finalize-canonical-ui-trace.mjs:29` | tooling / STATICALLY_TRACED |
+| FUNC-00914 | função | `aliasesForDatasetAction` | `tools/finalize-canonical-ui-trace.mjs:31` | tooling / STATICALLY_TRACED |
+| FUNC-00915 | função | `delegatedEvidence` | `tools/finalize-canonical-ui-trace.mjs:38` | tooling / STATICALLY_TRACED |
+| FUNC-00916 | função | `px` | `tools/generate-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-00917 | função | `rel` | `tools/generate-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-00918 | função | `code` | `tools/generate-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-00919 | função | `clean` | `tools/generate-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-00920 | função | `uniq` | `tools/generate-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-00921 | função | `ident` | `tools/generate-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-00922 | função | `hash` | `tools/generate-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-00923 | função | `walk` | `tools/generate-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-00924 | função | `lineLocator` | `tools/generate-technical-spec.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-00925 | função | `readText` | `tools/generate-technical-spec.mjs:42` | tooling / STATICALLY_TRACED |
+| FUNC-00926 | função | `blockEnd` | `tools/generate-technical-spec.mjs:48` | tooling / STATICALLY_TRACED |
+| FUNC-00927 | função | `bodyAt` | `tools/generate-technical-spec.mjs:69` | tooling / STATICALLY_TRACED |
+| FUNC-00928 | função | `captures` | `tools/generate-technical-spec.mjs:75` | tooling / STATICALLY_TRACED |
+| FUNC-00929 | função | `refs` | `tools/generate-technical-spec.mjs:81` | tooling / STATICALLY_TRACED |
+| FUNC-00930 | função | `extractFunctions` | `tools/generate-technical-spec.mjs:99` | tooling / STATICALLY_TRACED |
+| FUNC-00931 | função | `add` | `tools/generate-technical-spec.mjs:149` | tooling / STATICALLY_TRACED |
+| FUNC-00932 | função | `grouped` | `tools/generate-technical-spec.mjs:163` | tooling / STATICALLY_TRACED |
+| FUNC-00933 | função | `header` | `tools/generate-technical-spec.mjs:216` | tooling / STATICALLY_TRACED |
+| FUNC-00934 | função | `sources` | `tools/generate-technical-spec.mjs:217` | tooling / STATICALLY_TRACED |
+| FUNC-00935 | função | `listCodes` | `tools/generate-technical-spec.mjs:218` | tooling / STATICALLY_TRACED |
+| FUNC-00936 | função | `norm` | `tools/reconcile-asset-references.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-00937 | função | `isDynamic` | `tools/reconcile-asset-references.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-00938 | função | `existsLiteral` | `tools/reconcile-asset-references.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-00939 | função | `code` | `tools/reconcile-asset-references.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-00940 | função | `srcs` | `tools/reconcile-asset-references.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-00941 | função | `norm` | `tools/refine-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-00942 | função | `hasSourceExt` | `tools/refine-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-00943 | função | `isDocumentation` | `tools/refine-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-00944 | função | `isTooling` | `tools/refine-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-00945 | função | `isSource` | `tools/refine-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-00946 | função | `isGameRuntimeSource` | `tools/refine-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-00947 | função | `domainOf` | `tools/refine-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-00948 | função | `code` | `tools/refine-technical-spec.mjs:20` | tooling / STATICALLY_TRACED |
+| FUNC-00949 | função | `clean` | `tools/refine-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-00950 | função | `srcs` | `tools/refine-technical-spec.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-00951 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-00952 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
+| FUNC-00953 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
 | API-00001 | API | `/api/account/delete` | `app.js:3544`, `cloudflare/r41-api/src/index.js:108` | game-runtime / STATICALLY_TRACED |
 | API-00002 | API | `/api/account/load` | `app.js:3512`, `app.js:3516`, `cloudflare/r41-api/src/index.js:107` | game-runtime / STATICALLY_TRACED |
 | API-00003 | API | `/api/account/save` | `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/r41-api/src/index.js:106` | game-runtime / STATICALLY_TRACED |
@@ -1112,7 +1119,7 @@ Gerado em: `2026-08-20T01:37:43.988Z`
 | UI-00114 | UI | `r41-activity` | `app.js:5594`, `app.js:5595` | game-runtime / STATICALLY_TRACED |
 | UI-00115 | UI | `r41-hospital-treat` | `app.js:5503`, `app.js:5505` | game-runtime / STATICALLY_TRACED |
 | UI-00116 | UI | `r41-online-intent` | `app.js:5604`, `app.js:5607` | game-runtime / STATICALLY_TRACED |
-| UI-00117 | UI | `reset` | `app.js:903` | game-runtime / STATICALLY_TRACED |
+| UI-00117 | UI | `reset` | `app.js:903`, `src/r41-local-reset-fix.js:4`, `src/r41-local-reset-fix.js:39` | game-runtime / STATICALLY_TRACED |
 | UI-00118 | UI | `rest` | `app.js:795`, `app.js:801`, `app.js:2673` | game-runtime / STATICALLY_TRACED |
 | UI-00119 | UI | `rinne-unlock` | `app.js:1855` | game-runtime / STATICALLY_TRACED |
 | UI-00120 | UI | `rpg-confirm-cost` | `app.js:1735` | game-runtime / STATICALLY_TRACED |
