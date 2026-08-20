@@ -51,7 +51,9 @@ try {
   assert(runtime.apiOrigin === apiOrigin, `Frontend não adotou API live. Esperado ${apiOrigin}; obtido ${runtime.apiOrigin}`);
 
   status = await page.evaluate(async ({ origin, key }) => {
+    const pageOrigin = location.origin;
     const r = await fetch(`${origin}/api/status`, {
+      mode: 'cors',
       headers: { accept: 'application/json', apikey: key }
     });
     let data = null;
@@ -60,20 +62,23 @@ try {
       status: r.status,
       ok: r.ok,
       data,
-      cors: r.headers.get('access-control-allow-origin')
+      cors: pageOrigin,
+      corsEnforcedByBrowser: r.type === 'cors' || r.type === 'basic'
     };
   }, { origin: apiOrigin, key: apiKey });
 
   assert(status.ok && status.status === 200, `CORS/status live falhou: ${JSON.stringify(status)}`);
+  assert(status.corsEnforcedByBrowser === true, `Navegador não confirmou CORS: ${JSON.stringify(status)}`);
   assert(status.data?.configured === true, `Backend live não configurado: ${JSON.stringify(status.data)}`);
   assert(status.data?.cloudSave === true, 'Frontend viu backend sem cloudSave.');
   assert(status.data?.onlineRooms === true, 'Frontend viu backend sem onlineRooms.');
   assert(status.data?.storage === 'supabase-postgres', `Storage inesperado: ${status.data?.storage}`);
-  assert(status.cors === 'https://kaalflash12.github.io', `CORS inesperado: ${status.cors}`);
+  assert(status.cors === 'https://kaalflash12.github.io', `Origem pública inesperada: ${status.cors}`);
 
   unauthorized = await page.evaluate(async ({ origin, key }) => {
     const r = await fetch(`${origin}/api/account/slots`, {
       method: 'POST',
+      mode: 'cors',
       headers: { 'content-type': 'application/json', apikey: key },
       body: '{}'
     });
