@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-19T21:05:27.699Z",
+  "generatedAt": "2026-08-20T01:37:43.988Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5448,
-    "runtimeFiles": 55,
+    "files": 5450,
+    "runtimeFiles": 57,
     "assetFiles": 5378,
-    "textFiles": 68,
-    "functions": 941,
+    "textFiles": 70,
+    "functions": 946,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -19,14 +19,14 @@
     "events": 9,
     "movementEvidence": 7824,
     "scriptTags": 30,
-    "assetReferences": 15818,
-    "missingLiteralAssetReferences": 70,
+    "assetReferences": 15814,
+    "missingLiteralAssetReferences": 67,
     "gameRuntimeFunctions": 881,
-    "toolingFunctions": 60,
-    "uniqueAssetReferences": 5445,
-    "sourceFiles": 58,
+    "toolingFunctions": 65,
+    "uniqueAssetReferences": 5442,
+    "sourceFiles": 60,
     "gameRuntimeSourceFiles": 51,
-    "toolingSourceFiles": 7
+    "toolingSourceFiles": 9
   },
   "files": [
     {
@@ -43535,8 +43535,8 @@
     },
     {
       "path": "src/r41-canonical-repair.js",
-      "size": 5111,
-      "sha256": "6a8319c89ee0d843e4284a58615badb59c934f4b5fcbc8299a79073b69965bf0",
+      "size": 4764,
+      "sha256": "f095ec4ca7ab77ff88422cac315073ffc5c18853ef95ace826bf62609eaa36c5",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -43582,6 +43582,14 @@
       "asset": false
     },
     {
+      "path": "tools/audit-operational-static-contracts.mjs",
+      "size": 2954,
+      "sha256": "218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "tools/audit-r41-assets.mjs",
       "size": 3591,
       "sha256": "a051ed61d92d4c5510eb4c1bedeb59ab58a1950024ba30bcfe970d12c6575bce",
@@ -43601,6 +43609,14 @@
       "path": "tools/generate-technical-spec.mjs",
       "size": 14766,
       "sha256": "d0075077513909fb59405acf6a3d726f2d2b2f10edbe366fce90c54ea4b60275",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/reconcile-asset-references.mjs",
+      "size": 4671,
+      "sha256": "50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -66025,6 +66041,118 @@
       "domain": "tooling"
     },
     {
+      "file": "tools/reconcile-asset-references.mjs",
+      "line": 11,
+      "name": "norm",
+      "kind": "arrow-one",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "test",
+        "isDynamic",
+        "code",
+        "get",
+        "existsLiteral",
+        "srcs"
+      ],
+      "id": "FUNC-00929",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/reconcile-asset-references.mjs",
+      "line": 12,
+      "name": "isDynamic",
+      "kind": "arrow-one",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "norm",
+        "test",
+        "code",
+        "get",
+        "existsLiteral",
+        "srcs"
+      ],
+      "id": "FUNC-00930",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/reconcile-asset-references.mjs",
+      "line": 16,
+      "name": "existsLiteral",
+      "kind": "arrow-one",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "norm",
+        "isDynamic"
+      ],
+      "id": "FUNC-00931",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/reconcile-asset-references.mjs",
+      "line": 21,
+      "name": "code",
+      "kind": "arrow-one",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00932",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/reconcile-asset-references.mjs",
+      "line": 22,
+      "name": "srcs",
+      "kind": "arrow-one",
+      "params": "refs",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00933",
+      "domain": "tooling"
+    },
+    {
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -66040,7 +66168,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00929",
+      "id": "FUNC-00934",
       "domain": "tooling"
     },
     {
@@ -66059,7 +66187,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00930",
+      "id": "FUNC-00935",
       "domain": "tooling"
     },
     {
@@ -66078,7 +66206,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00931",
+      "id": "FUNC-00936",
       "domain": "tooling"
     },
     {
@@ -66097,7 +66225,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00932",
+      "id": "FUNC-00937",
       "domain": "tooling"
     },
     {
@@ -66116,7 +66244,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00933",
+      "id": "FUNC-00938",
       "domain": "tooling"
     },
     {
@@ -66135,7 +66263,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00934",
+      "id": "FUNC-00939",
       "domain": "tooling"
     },
     {
@@ -66154,7 +66282,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00935",
+      "id": "FUNC-00940",
       "domain": "tooling"
     },
     {
@@ -66173,7 +66301,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00936",
+      "id": "FUNC-00941",
       "domain": "tooling"
     },
     {
@@ -66192,7 +66320,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00937",
+      "id": "FUNC-00942",
       "domain": "tooling"
     },
     {
@@ -66211,7 +66339,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00938",
+      "id": "FUNC-00943",
       "domain": "tooling"
     },
     {
@@ -66230,7 +66358,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00939",
+      "id": "FUNC-00944",
       "domain": "tooling"
     },
     {
@@ -66249,7 +66377,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00940",
+      "id": "FUNC-00945",
       "domain": "tooling"
     },
     {
@@ -66268,7 +66396,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00941",
+      "id": "FUNC-00946",
       "domain": "tooling"
     }
   ],
@@ -229024,169 +229152,141 @@
     {
       "file": "src/r41-canonical-repair.js",
       "line": 42,
-      "value": "assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png",
+      "value": "assets/r29/nukenin-inimigo.svg",
       "id": "ASSETREF-15795",
-      "exists": false
+      "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 43,
-      "value": "assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png",
+      "value": "assets/r29/nukenin-inimigo.svg",
       "id": "ASSETREF-15796",
-      "exists": false
+      "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 44,
-      "value": "assets/r29/nukenin-inimigo.svg",
-      "id": "ASSETREF-15797",
-      "exists": true
-    },
-    {
-      "file": "src/r41-canonical-repair.js",
-      "line": 45,
-      "value": "assets/r29/nukenin-inimigo.svg",
-      "id": "ASSETREF-15798",
-      "exists": true
-    },
-    {
-      "file": "src/r41-canonical-repair.js",
-      "line": 46,
-      "value": "assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png",
-      "id": "ASSETREF-15799",
-      "exists": false
-    },
-    {
-      "file": "src/r41-canonical-repair.js",
-      "line": 47,
-      "value": "assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png",
-      "id": "ASSETREF-15800",
-      "exists": false
-    },
-    {
-      "file": "src/r41-canonical-repair.js",
-      "line": 48,
       "value": "assets/user-provided/maps/Mapa tático da vila ninja dourada.png",
-      "id": "ASSETREF-15801",
+      "id": "ASSETREF-15797",
       "exists": false
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 3,
       "value": "assets/ui/media-pendente.svg",
-      "id": "ASSETREF-15802",
+      "id": "ASSETREF-15798",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 78,
       "value": "assets/original/ui/layout_home_1.jpg",
-      "id": "ASSETREF-15803",
+      "id": "ASSETREF-15799",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 83,
       "value": "assets/original/ui/layout_bg_home.png",
-      "id": "ASSETREF-15804",
+      "id": "ASSETREF-15800",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 184,
       "value": "assets/maps/world_v74.svg",
-      "id": "ASSETREF-15805",
+      "id": "ASSETREF-15801",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 307,
       "value": "assets/original/ui/layout_combate_bg_log.png",
-      "id": "ASSETREF-15806",
+      "id": "ASSETREF-15802",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 361,
       "value": "assets/maps/folha.jpg",
-      "id": "ASSETREF-15807",
+      "id": "ASSETREF-15803",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 377,
       "value": "assets/original_v7/layout_dojo_1.png",
-      "id": "ASSETREF-15808",
+      "id": "ASSETREF-15804",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 383,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15809",
+      "id": "ASSETREF-15805",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 389,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15810",
+      "id": "ASSETREF-15806",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 390,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15811",
+      "id": "ASSETREF-15807",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 391,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15812",
+      "id": "ASSETREF-15808",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 398,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15813",
+      "id": "ASSETREF-15809",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 399,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15814",
+      "id": "ASSETREF-15810",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 406,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15815",
+      "id": "ASSETREF-15811",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 407,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15816",
+      "id": "ASSETREF-15812",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 408,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15817",
+      "id": "ASSETREF-15813",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 409,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15818",
+      "id": "ASSETREF-15814",
       "exists": false
     }
   ],
@@ -229482,23 +229582,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 881,
-      "tooling": 60,
+      "tooling": 65,
       "otherSource": 0
     },
     "before": {
-      "functions": 941,
+      "functions": 946,
       "routes": 31,
       "models": 3,
       "collections": 12,
       "storage": 10,
       "uiActions": 217,
       "events": 9,
-      "movement": 7943,
-      "assets": 15819,
+      "movement": 7948,
+      "assets": 15817,
       "environment": 49
     },
     "after": {
-      "functions": 941,
+      "functions": 946,
       "routes": 31,
       "models": 2,
       "collections": 11,
@@ -229506,7 +229606,7 @@
       "uiActions": 217,
       "events": 9,
       "movement": 7824,
-      "assets": 15818,
+      "assets": 15814,
       "environment": 45
     }
   }

@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-19T21:05:27.699Z`
+Gerado em: `2026-08-20T01:37:43.988Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -87,13 +87,15 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-api-config.js` — domínio `game-runtime` — 624 bytes — SHA-256 `3e9dd2b867f3d95bf4c996c5e1034757eeea826e4212186a69c44dd50fa2b8c3`
 - `r41-github-api.js` — domínio `game-runtime` — 3714 bytes — SHA-256 `ad109be9a4e31cc867a34f84a119a86cdb3175a4c91803cc181d70abce0e89e6`
-- `src/r41-canonical-repair.js` — domínio `game-runtime` — 5111 bytes — SHA-256 `6a8319c89ee0d843e4284a58615badb59c934f4b5fcbc8299a79073b69965bf0`
+- `src/r41-canonical-repair.js` — domínio `game-runtime` — 4764 bytes — SHA-256 `f095ec4ca7ab77ff88422cac315073ffc5c18853ef95ace826bf62609eaa36c5`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
 - `src/r41-final-ui-repair.js` — domínio `game-runtime` — 2366 bytes — SHA-256 `caffe196b8abd33d0e6237ac2dcf3149a5fabd17c39276f7fbf8b523b1d7c619`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/audit-documentation-coverage.mjs` — domínio `tooling` — 9751 bytes — SHA-256 `baa239d16f0d0a1ec120fa19025a7454ac2cbfa509692945f5c4eaed8f436e35`
 - `tools/audit-final-canonical-spec.mjs` — domínio `tooling` — 3143 bytes — SHA-256 `d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb`
+- `tools/audit-operational-static-contracts.mjs` — domínio `tooling` — 2954 bytes — SHA-256 `218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 3591 bytes — SHA-256 `a051ed61d92d4c5510eb4c1bedeb59ab58a1950024ba30bcfe970d12c6575bce`
 - `tools/build-final-canonical-spec.mjs` — domínio `tooling` — 15497 bytes — SHA-256 `5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba`
 - `tools/generate-technical-spec.mjs` — domínio `tooling` — 14766 bytes — SHA-256 `d0075077513909fb59405acf6a3d726f2d2b2f10edbe366fce90c54ea4b60275`
+- `tools/reconcile-asset-references.mjs` — domínio `tooling` — 4671 bytes — SHA-256 `50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11`
 - `tools/refine-technical-spec.mjs` — domínio `tooling` — 12448 bytes — SHA-256 `b7e5f87f940c4634198739263635a951b4d0554a5b8bcdab72e7260a6709ff3c`

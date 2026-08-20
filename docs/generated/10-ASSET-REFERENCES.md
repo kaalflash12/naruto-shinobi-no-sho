@@ -2,7 +2,7 @@
 
 Referências literais encontradas somente no runtime do jogo. A existência do caminho não prova adequação semântica da imagem.
 
-Gerado em: `2026-08-19T21:05:27.699Z`
+Gerado em: `2026-08-20T01:37:43.988Z`
 
 ## Ausentes
 
@@ -66,12 +66,9 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
 - `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
 - `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:48`
+- `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:44`
 - `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
 - `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
-- `assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png` — `src/r41-canonical-repair.js:47`
-- `assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png` — `src/r41-canonical-repair.js:42`, `src/r41-canonical-repair.js:43`
-- `assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png` — `src/r41-canonical-repair.js:46`
 - `assets/v841/creator/layers/eyes/eyes_${String(idx(` — `app.js:5586`
 - `assets/v841/creator/layers/face/face_${String(idx(` — `app.js:5586`
 - `assets/v841/creator/layers/hair/hair_${String(idx(` — `app.js:5586`
@@ -1603,7 +1600,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - PASS_PATH `assets/r29/from_user/wind/wind_054_22.webp` — `data/r29-user-assets.js:1`
 - PASS_PATH `assets/r29/from_user/wind/wind_054_23.webp` — `data/r29-user-assets.js:1`
 - PASS_PATH `assets/r29/from_user/wind/wind_054_24.webp` — `data/r29-user-assets.js:1`
-- PASS_PATH `assets/r29/nukenin-inimigo.svg` — `src/r41-canonical-repair.js:44`, `src/r41-canonical-repair.js:45`
+- PASS_PATH `assets/r29/nukenin-inimigo.svg` — `src/r41-canonical-repair.js:42`, `src/r41-canonical-repair.js:43`
 - PASS_PATH `assets/r30/generated/aptidoes/aptidoes_01.webp` — `data/r30-assets.js:1`
 - PASS_PATH `assets/r30/generated/aptidoes/aptidoes_02.webp` — `data/r30-assets.js:1`
 - PASS_PATH `assets/r30/generated/aptidoes/aptidoes_03.webp` — `data/r30-assets.js:1`
@@ -3655,12 +3652,9 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - MISSING_PATH `assets/user-provided/maps/Campo shinobi na floresta escondida.png` — `data/r41-user-visuals.js:4`
 - MISSING_PATH `assets/user-provided/maps/Clareira ninja noturna para batalha tática.png` — `data/r41-user-visuals.js:4`
 - MISSING_PATH `assets/user-provided/maps/Covil shinobi subterrâneo com selos azuis.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:48`
+- MISSING_PATH `assets/user-provided/maps/Mapa tático da vila ninja dourada.png` — `data/r41-user-visuals.js:4`, `src/r41-canonical-repair.js:44`
 - MISSING_PATH `assets/user-provided/maps/Planta baixa do esconderijo shinobi subterrâneo.png` — `data/r41-user-visuals.js:4`
 - MISSING_PATH `assets/user-provided/maps/Praça shinobi ao entardecer.png` — `data/r41-user-visuals.js:4`
-- MISSING_PATH `assets/user-provided/reference-ui/Interface de Jutsus do Naruto Unison.png` — `src/r41-canonical-repair.js:47`
-- MISSING_PATH `assets/user-provided/reference-ui/Kūro - Olho cósmico, marca do vazio.png` — `src/r41-canonical-repair.js:42`, `src/r41-canonical-repair.js:43`
-- MISSING_PATH `assets/user-provided/reference-ui/Painel Completo de Naruto Shinobi no Sho.png` — `src/r41-canonical-repair.js:46`
 - PASS_PATH `assets/v84/battlefields/arena_exame.png` — `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v84/battlefields/floresta_missao.png` — `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/v84/battlefields/rua_vila.png` — `data/v84-integrated-config.js:79`, `data/v84-visual-manifest.js:1`

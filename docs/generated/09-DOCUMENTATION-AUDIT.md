@@ -15,12 +15,12 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 58 |
+| sourceFiles | 60 |
 | gameRuntimeSourceFiles | 51 |
-| toolingSourceFiles | 7 |
-| functions | 941 |
+| toolingSourceFiles | 9 |
+| functions | 946 |
 | gameRuntimeFunctions | 881 |
-| toolingFunctions | 60 |
+| toolingFunctions | 65 |
 | routes | 31 |
 | models | 2 |
 | collections | 11 |
@@ -29,9 +29,9 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 | events | 9 |
 | movementEvidence | 7824 |
 | scripts | 30 |
-| runtimeFiles | 55 |
-| uniqueAssetReferences | 5445 |
-| missingLiteralAssetReferences | 70 |
+| runtimeFiles | 57 |
+| uniqueAssetReferences | 5442 |
+| missingLiteralAssetReferences | 67 |
 
 ## Gates
 
@@ -48,4 +48,4 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 ## Avisos
 
-- 70 referencias literais de assets nao materializadas; ver docs/generated/10-ASSET-REFERENCES.md e auditoria especifica de assets
+- 67 referencias literais de assets nao materializadas; ver docs/generated/10-ASSET-REFERENCES.md e auditoria especifica de assets

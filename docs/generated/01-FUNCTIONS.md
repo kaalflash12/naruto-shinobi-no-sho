@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-19T21:05:27.699Z`
+Gerado em: `2026-08-20T01:37:43.988Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -14854,6 +14854,86 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 
 ## FUNC-00929 — `norm`
 
+- **Fonte:** `tools/reconcile-asset-references.mjs:11`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `value`
+- **Chamadas internas detectadas:** `test`, `isDynamic`, `code`, `get`, `existsLiteral`, `srcs`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00930 — `isDynamic`
+
+- **Fonte:** `tools/reconcile-asset-references.mjs:12`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `value`
+- **Chamadas internas detectadas:** `norm`, `test`, `code`, `get`, `existsLiteral`, `srcs`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00931 — `existsLiteral`
+
+- **Fonte:** `tools/reconcile-asset-references.mjs:16`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `value`
+- **Chamadas internas detectadas:** `norm`, `isDynamic`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00932 — `code`
+
+- **Fonte:** `tools/reconcile-asset-references.mjs:21`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `value`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00933 — `srcs`
+
+- **Fonte:** `tools/reconcile-asset-references.mjs:22`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `refs`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00934 — `norm`
+
 - **Fonte:** `tools/refine-technical-spec.mjs:13`
 - **Domínio:** `tooling`
 - **Forma:** arrow-one
@@ -14868,7 +14948,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00930 — `hasSourceExt`
+## FUNC-00935 — `hasSourceExt`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:14`
 - **Domínio:** `tooling`
@@ -14884,7 +14964,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00931 — `isDocumentation`
+## FUNC-00936 — `isDocumentation`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:15`
 - **Domínio:** `tooling`
@@ -14900,7 +14980,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00932 — `isTooling`
+## FUNC-00937 — `isTooling`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:16`
 - **Domínio:** `tooling`
@@ -14916,7 +14996,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00933 — `isSource`
+## FUNC-00938 — `isSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:17`
 - **Domínio:** `tooling`
@@ -14932,7 +15012,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00934 — `isGameRuntimeSource`
+## FUNC-00939 — `isGameRuntimeSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:18`
 - **Domínio:** `tooling`
@@ -14948,7 +15028,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00935 — `domainOf`
+## FUNC-00940 — `domainOf`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -14964,7 +15044,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00936 — `code`
+## FUNC-00941 — `code`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:20`
 - **Domínio:** `tooling`
@@ -14980,7 +15060,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00937 — `clean`
+## FUNC-00942 — `clean`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -14996,7 +15076,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00938 — `srcs`
+## FUNC-00943 — `srcs`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:22`
 - **Domínio:** `tooling`
@@ -15012,7 +15092,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00939 — `listCodes`
+## FUNC-00944 — `listCodes`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:23`
 - **Domínio:** `tooling`
@@ -15028,7 +15108,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00940 — `header`
+## FUNC-00945 — `header`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:24`
 - **Domínio:** `tooling`
@@ -15044,7 +15124,7 @@ Gerado em: `2026-08-19T21:05:27.699Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00941 — `filterGrouped`
+## FUNC-00946 — `filterGrouped`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:26`
 - **Domínio:** `tooling`
