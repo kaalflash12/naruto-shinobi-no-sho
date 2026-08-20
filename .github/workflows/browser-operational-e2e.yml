@@ -1,0 +1,61 @@
+name: Browser Operational E2E
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  operational:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Playwright only in CI
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Start local game HTTP server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/shinobi-operational-http.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/shinobi-operational-http.log
+          exit 1
+
+      - name: Run all real R41 minigames
+        env:
+          BASE_URL: http://127.0.0.1:4173
+          OPERATIONAL_BROWSER_REPORT: audit/BROWSER-OPERATIONAL-E2E.json
+        run: node tools/browser-operational-e2e.mjs
+
+      - name: Enforce operational report
+        run: |
+          node - <<'NODE'
+          const r=require('./audit/BROWSER-OPERATIONAL-E2E.json');
+          if(!r.ok || r.status!=='PASS_BROWSER_OPERATIONAL_E2E') throw new Error(JSON.stringify(r.failures));
+          if(r.expectedMinigames!==20 || r.testedMinigames!==20) throw new Error(`minigames ${r.testedMinigames}/20`);
+          for(const type of r.types) if(Number(r.stateEvidence?.byType?.[type]||0)<1) throw new Error(`not recorded: ${type}`);
+          console.log(r.status, `${r.testedMinigames}/20`);
+          NODE
+
+      - name: Upload operational evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-browser-operational-e2e
+          path: audit/BROWSER-OPERATIONAL-E2E.json
+          if-no-files-found: warn
