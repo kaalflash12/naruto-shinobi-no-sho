@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T23:08:30.488Z",
+  "generatedAt": "2026-08-20T23:10:48.095Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T23:08:26.064Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T23:10:43.560Z",
   "counts": {
     "functions": 1007,
     "functionsWithExactCode": 1007,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 215,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 75,
+    "sourceFiles": 77,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -14082,9 +14082,19 @@
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
     },
     {
+      "path": "audit/BROWSER-LIVE-API.json",
+      "size": 1598,
+      "sha256": "c2bb676be2e71360a1dd4eb292b05cfa4591f08d91f8d5ec4862b09deb059cc2"
+    },
+    {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 699,
       "sha256": "b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c"
+    },
+    {
+      "path": "audit/SUPABASE-LIVE-E2E.json",
+      "size": 1714,
+      "sha256": "35cecec22003bac385ce948726c51d07182f286f6b28e965077379a0db315eae"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -14383,8 +14393,8 @@
     },
     {
       "path": "tools/browser-smoke.mjs",
-      "size": 5680,
-      "sha256": "d734f963ccdfd7126952326a263a0475e82d598df5dee3c584d53848cc1e7de3"
+      "size": 5419,
+      "sha256": "bd9f5550ad177d24ee43c0cd7696f16ddd089aa485b15bb655b46fce42680a81"
     },
     {
       "path": "tools/build-final-canonical-spec.mjs",

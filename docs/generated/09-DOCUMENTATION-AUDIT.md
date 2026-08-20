@@ -15,8 +15,8 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 75 |
-| gameRuntimeSourceFiles | 56 |
+| sourceFiles | 77 |
+| gameRuntimeSourceFiles | 58 |
 | toolingSourceFiles | 19 |
 | functions | 1007 |
 | gameRuntimeFunctions | 919 |
@@ -29,7 +29,7 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 | events | 9 |
 | movementEvidence | 7832 |
 | scripts | 31 |
-| runtimeFiles | 69 |
+| runtimeFiles | 71 |
 | uniqueAssetReferences | 5442 |
 | missingLiteralAssetReferences | 0 |
 
