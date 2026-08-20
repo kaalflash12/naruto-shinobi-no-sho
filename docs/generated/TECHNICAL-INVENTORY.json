@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:45:54.133Z",
+  "generatedAt": "2026-08-20T23:01:57.275Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -44067,8 +44067,8 @@
     },
     {
       "path": "tools/browser-live-api.mjs",
-      "size": 4389,
-      "sha256": "9931737cf8161a6233432dd0f33e8d246c12f1f1dbfc5c0f9a7ff5c45663c320",
+      "size": 5197,
+      "sha256": "4ddc8ae2771d15e5cde5e2c1b6e8d56b30e4af454ece310ad4adbe6f55bd85c2",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -66777,10 +66777,10 @@
     },
     {
       "file": "tools/browser-live-api.mjs",
-      "line": 10,
+      "line": 13,
       "name": "assert",
       "kind": "declaration",
-      "params": "cond,msg",
+      "params": "cond, msg",
       "refs": {
         "routes": [],
         "collections": [],
@@ -232121,7 +232121,7 @@
       "events": 9,
       "movement": 7979,
       "assets": 15817,
-      "environment": 115
+      "environment": 116
     },
     "after": {
       "functions": 1007,

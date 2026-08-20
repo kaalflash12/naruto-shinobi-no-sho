@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-20T22:45:54.133Z`
+Gerado em: `2026-08-20T23:01:57.275Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -938,7 +938,7 @@ Gerado em: `2026-08-20T22:45:54.133Z`
 | FUNC-00930 | função | `cleanRef` | `tools/audit-r41-assets.mjs:26` | tooling / STATICALLY_TRACED |
 | FUNC-00931 | função | `isDynamic` | `tools/audit-r41-assets.mjs:31` | tooling / STATICALLY_TRACED |
 | FUNC-00932 | função | `addRef` | `tools/audit-r41-assets.mjs:32` | tooling / STATICALLY_TRACED |
-| FUNC-00933 | função | `assert` | `tools/browser-live-api.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-00933 | função | `assert` | `tools/browser-live-api.mjs:13` | tooling / STATICALLY_TRACED |
 | FUNC-00934 | função | `fail` | `tools/browser-smoke.mjs:12` | tooling / STATICALLY_TRACED |
 | FUNC-00935 | função | `assert` | `tools/browser-smoke.mjs:13` | tooling / STATICALLY_TRACED |
 | FUNC-00936 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |

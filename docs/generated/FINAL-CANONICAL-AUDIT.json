@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T22:45:58.960Z",
+  "generatedAt": "2026-08-20T23:02:00.605Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T22:45:54.133Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T23:01:57.275Z",
   "counts": {
     "functions": 1007,
     "functionsWithExactCode": 1007,
@@ -7492,10 +7492,10 @@
     {
       "id": "FUNC-00933",
       "file": "tools/browser-live-api.mjs",
-      "line": 10,
+      "line": 13,
       "name": "assert",
       "exactCode": true,
-      "snippetSha256": "22ce1dba3fcd8a8fec809ca8d05843221b349da7aed65bc72a67b72520573537"
+      "snippetSha256": "41e7fc2de7cb306f9660247aae60ebf1a968769fa0fe1c4f782cb6f6e21f41cc"
     },
     {
       "id": "FUNC-00934",
@@ -14378,8 +14378,8 @@
     },
     {
       "path": "tools/browser-live-api.mjs",
-      "size": 4389,
-      "sha256": "9931737cf8161a6233432dd0f33e8d246c12f1f1dbfc5c0f9a7ff5c45663c320"
+      "size": 5197,
+      "sha256": "4ddc8ae2771d15e5cde5e2c1b6e8d56b30e4af454ece310ad4adbe6f55bd85c2"
     },
     {
       "path": "tools/browser-smoke.mjs",
