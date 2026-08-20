@@ -8,7 +8,7 @@
     "docs:audit": "node tools/audit-documentation-coverage.mjs && node tools/audit-operational-static-contracts.mjs && node tools/finalize-canonical-ui-trace.mjs && node tools/audit-final-canonical-spec.mjs",
     "docs:check": "npm run docs:generate && npm run docs:audit",
     "check:assets": "node tools/audit-r41-assets.mjs",
-    "check:runtime": "node --check app.js && node --check src/r41-core-bundle.js && node --check src/r41-canonical-repair.js && node --check src/r41-final-ui-repair.js && node --check cloudflare/r41-api/src/index.js && node --check cloudflare/r41-api/src/entry.js",
+    "check:runtime": "node --check app.js && node --check src/r41-core-bundle.js && node --check src/r41-canonical-repair.js && node --check src/r41-local-reset-fix.js && node --check src/r41-final-ui-repair.js && node --check cloudflare/r41-api/src/index.js && node --check cloudflare/r41-api/src/entry.js",
     "check:all": "npm run check:runtime && npm run check:assets && npm run docs:check"
   },
   "dependencies": { "mongodb": "^6.18.0" }
