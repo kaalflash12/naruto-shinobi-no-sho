@@ -8,7 +8,11 @@ const allowUserOverlayMissing = process.env.R41_ALLOW_USER_OVERLAY_MISSING === '
 const scanExt = new Set(['.js','.mjs','.cjs','.html','.css','.json']);
 const quotedAsset = /['"`]((?:\.\/)?assets\/[^'"`?#\n\r]+?\.(?:png|jpe?g|webp|gif|svg|mp3|ogg|wav))(?=['"`?#])/gi;
 const cssAsset = /url\(\s*['" ]*((?:\.\/)?assets\/[^\)'"?#\n\r]+?\.(?:png|jpe?g|webp|gif|svg|mp3|ogg|wav))['" ]*\)/gi;
-const skipDirs = new Set(['node_modules','.git','audit']);
+
+// Este gate valida SOMENTE referencias que podem ser executadas/carregadas pelo jogo.
+// Documentacao gerada, ferramentas de auditoria e workflows podem preservar snapshots
+// historicos (.jpg/.png antigos) e nunca devem ser tratados como dependencias de runtime.
+const skipDirs = new Set(['node_modules','.git','audit','docs','tools','.github']);
 
 function walk(dir, files=[]){
   for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
@@ -34,8 +38,9 @@ function addRef(map,ref,source){
   map.set(r,rec);
 }
 
+const scannedFiles=walk(root);
 const refs=new Map();
-for(const file of walk(root)){
+for(const file of scannedFiles){
   let text='';
   try{text=fs.readFileSync(file,'utf8');}catch{continue;}
   for(const rx of [quotedAsset,cssAsset]){
@@ -56,10 +61,13 @@ const missing=rows.filter(x=>!x.exists);
 const overlayMissing=missing.filter(x=>x.userOverlay);
 const hardMissing=missing.filter(x=>!(allowUserOverlayMissing&&x.userOverlay));
 const report={
-  build:'R41-ASSET-AUDIT-20260819',
+  build:'R41-ASSET-AUDIT-20260820-RUNTIME-ONLY',
   generatedAt:new Date().toISOString(),
   root,
-  mode:allowUserOverlayMissing?'git-source-with-user-overlay-exemption':'strict-runtime',
+  mode:allowUserOverlayMissing?'runtime-source-with-user-overlay-exemption':'strict-runtime-source',
+  scanScope:'runtime-source-only',
+  excludedDirectories:[...skipDirs].sort(),
+  scannedFiles:scannedFiles.length,
   literalReferences:rows.length,
   existing:rows.length-missing.length,
   missingTotal:missing.length,
@@ -71,12 +79,12 @@ const report={
 };
 fs.mkdirSync(outDir,{recursive:true});
 fs.writeFileSync(outFile,JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({ok:report.ok,mode:report.mode,literalReferences:report.literalReferences,existing:report.existing,missingTotal:report.missingTotal,missingExternalUserOverlay:report.missingExternalUserOverlay,missingHard:report.missingHard,report:path.relative(root,outFile)},null,2));
+console.log(JSON.stringify({ok:report.ok,mode:report.mode,scanScope:report.scanScope,scannedFiles:report.scannedFiles,literalReferences:report.literalReferences,existing:report.existing,missingTotal:report.missingTotal,missingExternalUserOverlay:report.missingExternalUserOverlay,missingHard:report.missingHard,report:path.relative(root,outFile)},null,2));
 if(overlayMissing.length&&allowUserOverlayMissing){
   console.warn(`\n${overlayMissing.length} asset(s) do bundle externo assets-user-provided nao estao versionados no Git; o instalador deve injeta-los antes do gate estrito.`);
 }
 if(hardMissing.length){
-  console.error('\nReferencias literais realmente ausentes:');
+  console.error('\nReferencias literais realmente ausentes no runtime:');
   for(const x of hardMissing.slice(0,100)) console.error(`- ${x.path} <- ${x.sources.join(', ')}`);
   process.exitCode=1;
 }
