@@ -1,0 +1,59 @@
+name: Integridade do runtime
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runtime-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JavaScript syntax
+        run: npm run check:runtime
+
+      - name: Validate physical asset paths
+        run: npm run check:assets
+
+      - name: Validate public product identity
+        shell: bash
+        run: |
+          grep -F '<title>NARUTO SHINOBI NO SHO • TERION 2D10</title>' index.html
+          grep -F 'name = "naruto-shinobi-no-sho-api"' cloudflare/r41-api/wrangler.toml
+          grep -F 'MONGODB_DB = "naruto_shinobi_no_sho"' cloudflare/r41-api/wrangler.toml
+          ! grep -Eqi 'naruto[ -]?unison' index.html r41-api-config.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/index.js
+
+      - name: Validate anti-exploit gameplay contracts in source
+        shell: bash
+        run: |
+          grep -F "if(!long&&now-Number(rec.lastShortRestAbs||-999999)<60)" app.js
+          grep -F "if(long&&now-Number(rec.lastLongRestAbs||-999999)<480)" app.js
+          grep -F "const cap=r41PersistentRecoveryCap(c)" app.js
+          grep -F "c.kusenroChakra=before.kusenro" app.js
+          grep -F "if(c.kurai)c.kurai.chakra=before.kurai" app.js
+          grep -F "const gainXpR41Base=gainXp" app.js
+          grep -F "r41ScheduleCloudSave" app.js
+          grep -F "r41HospitalTreat" app.js
+          grep -F "r41OpenMinigame" app.js
+          grep -F "r41SendOnlineIntent" app.js
+          grep -F "CLIENT_MECHANICAL_RESULT_FORBIDDEN" cloudflare/r41-api/src/entry.js
+
+      - name: Validate full documentation and operational gates
+        run: npm run docs:check
