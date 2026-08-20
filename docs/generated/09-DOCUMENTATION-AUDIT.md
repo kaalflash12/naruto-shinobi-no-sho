@@ -18,9 +18,9 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 | sourceFiles | 64 |
 | gameRuntimeSourceFiles | 52 |
 | toolingSourceFiles | 12 |
-| functions | 953 |
+| functions | 955 |
 | gameRuntimeFunctions | 883 |
-| toolingFunctions | 70 |
+| toolingFunctions | 72 |
 | routes | 31 |
 | models | 2 |
 | collections | 11 |

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-20T13:07:38.265Z",
+  "generatedAt": "2026-08-20T15:04:42.282Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T13:07:34.176Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T15:04:39.153Z",
   "counts": {
-    "functions": 953,
-    "functionsWithExactCode": 953,
+    "functions": 955,
+    "functionsWithExactCode": 955,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -7316,45 +7316,61 @@
     {
       "id": "FUNC-00911",
       "file": "tools/finalize-canonical-ui-trace.mjs",
-      "line": 27,
+      "line": 26,
+      "name": "walk",
+      "exactCode": true,
+      "snippetSha256": "ca3fc5b1a46fb92ce6c67dbacd0331bfc837963615aee85c52ee29abc38357c8"
+    },
+    {
+      "id": "FUNC-00912",
+      "file": "tools/finalize-canonical-ui-trace.mjs",
+      "line": 40,
       "name": "reEsc",
       "exactCode": true,
       "snippetSha256": "cdee9ed3c15f8b59e80a881a7fb58e8c66e42003ec3ba5d12fd1e7d95b62d612"
     },
     {
-      "id": "FUNC-00912",
-      "file": "tools/finalize-canonical-ui-trace.mjs",
-      "line": 28,
-      "name": "lineAt",
-      "exactCode": true,
-      "snippetSha256": "009871d3489caf246743e7fb96e11acbf7d73986903ffcdae4fdffaec3af1532"
-    },
-    {
       "id": "FUNC-00913",
       "file": "tools/finalize-canonical-ui-trace.mjs",
-      "line": 29,
-      "name": "occurrences",
+      "line": 41,
+      "name": "lineAt",
       "exactCode": true,
-      "snippetSha256": "5c78786f828b08e5243b88f87b08684e72d81146c39e2085d99fb682ad670920"
+      "snippetSha256": "434873d358ff01f5b69c935070cf0e4e7ef98a693fb548a7244d1456d5b461bf"
     },
     {
       "id": "FUNC-00914",
       "file": "tools/finalize-canonical-ui-trace.mjs",
-      "line": 31,
-      "name": "aliasesForDatasetAction",
+      "line": 46,
+      "name": "occurrences",
       "exactCode": true,
-      "snippetSha256": "bdc3592b8fe9cb3196da562faebb2efce3b55d27d4f78d3be9d8aec0e1845542"
+      "snippetSha256": "071f8021a9d0b06c90309ac9928b3713ad32b81f62acb42689efa0ae937e7e77"
     },
     {
       "id": "FUNC-00915",
       "file": "tools/finalize-canonical-ui-trace.mjs",
-      "line": 38,
-      "name": "delegatedEvidence",
+      "line": 55,
+      "name": "uniqEvidence",
       "exactCode": true,
-      "snippetSha256": "0c798ca7bf5cd455f119789e47afafd87ee2e8d8de1f69d3b90dcdd4b1620f66"
+      "snippetSha256": "9deef64b8ab3563a5bd8e191c8a431e55a2fd692db865c6110bf839e059dfecc"
     },
     {
       "id": "FUNC-00916",
+      "file": "tools/finalize-canonical-ui-trace.mjs",
+      "line": 65,
+      "name": "aliasesForDatasetAction",
+      "exactCode": true,
+      "snippetSha256": "626740b82ab4f0f4a9c68525175496ce8003c6c445552356f66744d07ef75c8b"
+    },
+    {
+      "id": "FUNC-00917",
+      "file": "tools/finalize-canonical-ui-trace.mjs",
+      "line": 73,
+      "name": "handlerEvidence",
+      "exactCode": true,
+      "snippetSha256": "bff55ad6224fc93f44e3dd2b1107cf2fbaaf9f44fde50897cd427fe4a778b1f9"
+    },
+    {
+      "id": "FUNC-00918",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -7362,7 +7378,7 @@
       "snippetSha256": "c57fffdc7797691b45d759cb834fc1f73980d1d9a0c0bc49129915c8657b5ca6"
     },
     {
-      "id": "FUNC-00917",
+      "id": "FUNC-00919",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -7370,7 +7386,7 @@
       "snippetSha256": "0a66889f8d5eb67c0269c19baa67ab12589a71368f246b1c7b52326abadfbf55"
     },
     {
-      "id": "FUNC-00918",
+      "id": "FUNC-00920",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -7378,7 +7394,7 @@
       "snippetSha256": "799ec4b33b4e660efee34e58db082d1adf32cb4aac04f34132a7cb1319c2624f"
     },
     {
-      "id": "FUNC-00919",
+      "id": "FUNC-00921",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -7386,7 +7402,7 @@
       "snippetSha256": "9218a43d85edba13b0f9b676813e0620f0052ed8a1ba4206a01147134aa01923"
     },
     {
-      "id": "FUNC-00920",
+      "id": "FUNC-00922",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -7394,7 +7410,7 @@
       "snippetSha256": "e3e7f45816dc8990d82def700b8e2d4309325552cbcc3f77a1d1bb0859a6d31b"
     },
     {
-      "id": "FUNC-00921",
+      "id": "FUNC-00923",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -7402,7 +7418,7 @@
       "snippetSha256": "0e2981d6e25c303083a87c12c2187f9b9a4f288549d4724ca8be10734b652cfc"
     },
     {
-      "id": "FUNC-00922",
+      "id": "FUNC-00924",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -7410,7 +7426,7 @@
       "snippetSha256": "babffc7bf704f00eba2c6ab4c6250bb2015aa4238760c4e4e51330ced292cd9a"
     },
     {
-      "id": "FUNC-00923",
+      "id": "FUNC-00925",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -7418,7 +7434,7 @@
       "snippetSha256": "ff8016c5597d2c29d13657ddf295f04858a51eeb9850d5226335fae750455df4"
     },
     {
-      "id": "FUNC-00924",
+      "id": "FUNC-00926",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -7426,7 +7442,7 @@
       "snippetSha256": "8fee23f2c6aa74391b3ba4cf6826c3d4370893c7b88658c2fdec97f3be69ef11"
     },
     {
-      "id": "FUNC-00925",
+      "id": "FUNC-00927",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -7434,7 +7450,7 @@
       "snippetSha256": "884ca1303e4e1f363aa1231e82d378ea58d1efdd33fd25123985077786c0937a"
     },
     {
-      "id": "FUNC-00926",
+      "id": "FUNC-00928",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -7442,7 +7458,7 @@
       "snippetSha256": "9393b8a4a93cfd1483e63b67a17e40f3d61a045fa1db7f916dabe2d518b1f3ad"
     },
     {
-      "id": "FUNC-00927",
+      "id": "FUNC-00929",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -7450,7 +7466,7 @@
       "snippetSha256": "3f16df07816c1423768a2f1502239c4c5f3b08160693183454bd9dc47c0d775a"
     },
     {
-      "id": "FUNC-00928",
+      "id": "FUNC-00930",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -7458,7 +7474,7 @@
       "snippetSha256": "b0d910fa0b88049df9573d519d450286bb27c73ff752f260ce1532ab4575dd7d"
     },
     {
-      "id": "FUNC-00929",
+      "id": "FUNC-00931",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -7466,7 +7482,7 @@
       "snippetSha256": "99bb39dc840adb06b077db80748f9152224a40991b2a470fef9cf9c84950c2c3"
     },
     {
-      "id": "FUNC-00930",
+      "id": "FUNC-00932",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -7474,7 +7490,7 @@
       "snippetSha256": "ddd677f234da1f2ac754a61f2d108785f6f82b10f4282b56a3a31d982327641f"
     },
     {
-      "id": "FUNC-00931",
+      "id": "FUNC-00933",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -7482,7 +7498,7 @@
       "snippetSha256": "230cb31829b04597cd35245e049981eb7d0fa0eeff8c9b2d77a707930afa5e48"
     },
     {
-      "id": "FUNC-00932",
+      "id": "FUNC-00934",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -7490,7 +7506,7 @@
       "snippetSha256": "071a8d4ab429c64787f1d965bbb24bf9711cd7b875be7716258fd511a0f818c3"
     },
     {
-      "id": "FUNC-00933",
+      "id": "FUNC-00935",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -7498,7 +7514,7 @@
       "snippetSha256": "fec850d99073347304a2a25a139d50ef6f7de8cf3c85e62aec1bdab11b4fb1e6"
     },
     {
-      "id": "FUNC-00934",
+      "id": "FUNC-00936",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -7506,7 +7522,7 @@
       "snippetSha256": "96fea54440f2794bef63aa540dd5f4299382ed6f59272158fb595cfec0ac70e5"
     },
     {
-      "id": "FUNC-00935",
+      "id": "FUNC-00937",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -7514,7 +7530,7 @@
       "snippetSha256": "2fd55c2f5561912786494c4cdec429ca700243d0778dfc6533a3649ba173d855"
     },
     {
-      "id": "FUNC-00936",
+      "id": "FUNC-00938",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -7522,7 +7538,7 @@
       "snippetSha256": "270a36f1ac366fd54aee4c814a9b931a37a548d40574448e32b7af7d6271ddb6"
     },
     {
-      "id": "FUNC-00937",
+      "id": "FUNC-00939",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -7530,7 +7546,7 @@
       "snippetSha256": "cc2e7fd87a3f722e08cb51c9a9600f839570cc344ec0b3b2d3782f38d5321434"
     },
     {
-      "id": "FUNC-00938",
+      "id": "FUNC-00940",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -7538,7 +7554,7 @@
       "snippetSha256": "b4527ad44292beb910119819146d8e181282d4f0f3ac80accfd02afcc749265a"
     },
     {
-      "id": "FUNC-00939",
+      "id": "FUNC-00941",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -7546,7 +7562,7 @@
       "snippetSha256": "83588246702d53ab5bcb3755651224a226bb4345aee08492ac0e8250cdbb1194"
     },
     {
-      "id": "FUNC-00940",
+      "id": "FUNC-00942",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -7554,7 +7570,7 @@
       "snippetSha256": "e40239a90ced31e11fede70b8891889b175025a2c263f77d931f5f696717817e"
     },
     {
-      "id": "FUNC-00941",
+      "id": "FUNC-00943",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -7562,7 +7578,7 @@
       "snippetSha256": "7e8b05ce7bb261c79ddf34629c3e7354a27cfdd3d2260b681c0df535a726f2f0"
     },
     {
-      "id": "FUNC-00942",
+      "id": "FUNC-00944",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -7570,7 +7586,7 @@
       "snippetSha256": "fbf329a30791bf80c08bf0adda1f2bad450a5b192e5c9f7e5385eb5484a35b53"
     },
     {
-      "id": "FUNC-00943",
+      "id": "FUNC-00945",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -7578,7 +7594,7 @@
       "snippetSha256": "7bf6f053cc437cd27de6673899ee48af1aeee57fff8536ad6d55ac94471ebe0e"
     },
     {
-      "id": "FUNC-00944",
+      "id": "FUNC-00946",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -7586,7 +7602,7 @@
       "snippetSha256": "f1c5a027b92429a95488b3772e50620ddd77c7e02fea93127fdf31a31c1e8d4e"
     },
     {
-      "id": "FUNC-00945",
+      "id": "FUNC-00947",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -7594,7 +7610,7 @@
       "snippetSha256": "0e5f2038da9627dbb85af00988a24dc6b255667428a4944f4ce03db98303dd8e"
     },
     {
-      "id": "FUNC-00946",
+      "id": "FUNC-00948",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -7602,7 +7618,7 @@
       "snippetSha256": "98b20216a2cd98b05a64052e9e12dfd52ee41ea6183b2da46e7e8230e5724c84"
     },
     {
-      "id": "FUNC-00947",
+      "id": "FUNC-00949",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -7610,7 +7626,7 @@
       "snippetSha256": "5b104cada4aea499f7da357ac1277854b76aa9440bae196fd7f1efec3307d23d"
     },
     {
-      "id": "FUNC-00948",
+      "id": "FUNC-00950",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -7618,7 +7634,7 @@
       "snippetSha256": "44b4e16d772e237ae59c446b8aeeb3aaec8cca1f79070d73ef71680d0bba18ad"
     },
     {
-      "id": "FUNC-00949",
+      "id": "FUNC-00951",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -7626,7 +7642,7 @@
       "snippetSha256": "a93d934114482fecc82835d2dffcc4b706803a2febb3f76f971d3bc5756c3de2"
     },
     {
-      "id": "FUNC-00950",
+      "id": "FUNC-00952",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -7634,7 +7650,7 @@
       "snippetSha256": "c09ba472890421886b92df9df74639951f1e9a7a257dc1b0dba48bc13e1e5c00"
     },
     {
-      "id": "FUNC-00951",
+      "id": "FUNC-00953",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -7642,7 +7658,7 @@
       "snippetSha256": "cb6d2af95ec49ebdc096c276b2338bbb0643be38c75563d45d806596ae4de719"
     },
     {
-      "id": "FUNC-00952",
+      "id": "FUNC-00954",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -7650,7 +7666,7 @@
       "snippetSha256": "492db4da37d1a69fdf7b52310f52d21098675d58637e563229a016c476a09e83"
     },
     {
-      "id": "FUNC-00953",
+      "id": "FUNC-00955",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
@@ -7827,17 +7843,7 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 4483,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 4487,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
-          "line": 4492,
           "kind": "delegated-selector-handler"
         }
       ]
@@ -10062,11 +10068,6 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 3953,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 3954,
           "kind": "delegated-selector-handler"
         }
@@ -10272,11 +10273,6 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 3969,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 3974,
           "kind": "delegated-selector-handler"
         }
@@ -10300,11 +10296,6 @@
         }
       ],
       "evidence": [
-        {
-          "file": "app.js",
-          "line": 4011,
-          "kind": "delegated-selector-handler"
-        },
         {
           "file": "app.js",
           "line": 4016,
@@ -10390,11 +10381,6 @@
         }
       ],
       "evidence": [
-        {
-          "file": "app.js",
-          "line": 4147,
-          "kind": "delegated-selector-handler"
-        },
         {
           "file": "app.js",
           "line": 4152,
@@ -10677,32 +10663,7 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 5142,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
-          "line": 5149,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
-          "line": 5155,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
-          "line": 5156,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 5169,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
-          "line": 5180,
           "kind": "delegated-selector-handler"
         }
       ]
@@ -10812,11 +10773,6 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 5594,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 5595,
           "kind": "delegated-selector-handler"
         }
@@ -10842,11 +10798,6 @@
       "evidence": [
         {
           "file": "app.js",
-          "line": 5503,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "app.js",
           "line": 5505,
           "kind": "delegated-selector-handler"
         }
@@ -10870,11 +10821,6 @@
         }
       ],
       "evidence": [
-        {
-          "file": "app.js",
-          "line": 5604,
-          "kind": "delegated-selector-handler"
-        },
         {
           "file": "app.js",
           "line": 5607,
@@ -10907,27 +10853,7 @@
       "evidence": [
         {
           "file": "src/r41-local-reset-fix.js",
-          "line": 4,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "src/r41-local-reset-fix.js",
-          "line": 30,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "src/r41-local-reset-fix.js",
           "line": 39,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "src/r41-local-reset-fix.js",
-          "line": 43,
-          "kind": "delegated-selector-handler"
-        },
-        {
-          "file": "src/r41-local-reset-fix.js",
-          "line": 46,
           "kind": "delegated-selector-handler"
         }
       ]
@@ -13329,11 +13255,6 @@
           "file": "app.js",
           "line": 3129,
           "kind": "generic-data-action-dispatch:action"
-        },
-        {
-          "file": "app.js",
-          "line": 3129,
-          "kind": "explicit-event-branch"
         }
       ]
     },
@@ -14016,8 +13937,8 @@
     },
     {
       "path": "tools/finalize-canonical-ui-trace.mjs",
-      "size": 7821,
-      "sha256": "20b80571c2aefb0abf7807ff9ce9236bdb0c73530f7453f664c121ef9f2f495e"
+      "size": 9765,
+      "sha256": "b728c5b66e8f85aaaa803e93adf1a39033bd2901ffe45f48c80b11d96460d24c"
     },
     {
       "path": "tools/generate-technical-spec.mjs",
@@ -41167,5 +41088,5 @@
       "sha256": "62262db358ae908837ea520d40c4d64792f68f3f9f5fd44f531041be50762ff8"
     }
   ],
-  "uiHandlerResolution": "delegated-selector-and-generic-dispatch-evidence-v3"
+  "uiHandlerResolution": "executable-runtime-handler-evidence-v4"
 }
