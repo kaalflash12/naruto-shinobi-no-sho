@@ -1,0 +1,63 @@
+name: Windows Backend V4 Recovered Validate
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-2022
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Recover exact embedded V4 payload
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          $workflow = [IO.File]::ReadAllText(".github/workflows/windows-backend-v4-exact.yml")
+          $m = [regex]::Match($workflow, "(?s)\$b64\s*=\s*@'\s*(.*?)\s*'@")
+          if (-not $m.Success) { throw "Nao consegui localizar o payload base64 da V4." }
+          $b64 = ($m.Groups[1].Value -replace '\s','')
+          $gzPath = Join-Path $env:RUNNER_TEMP "backend-v4-recovered.ps1.gz"
+          $ps1Path = Join-Path $env:RUNNER_TEMP "ATIVAR_BACKEND_SHINOBI_SEM_INSTALAR_NADA_V4.ps1"
+          [IO.File]::WriteAllBytes($gzPath, [Convert]::FromBase64String($b64))
+          $input = [IO.File]::OpenRead($gzPath)
+          try {
+            $gzip = New-Object IO.Compression.GZipStream($input, [IO.Compression.CompressionMode]::Decompress)
+            try {
+              $output = [IO.File]::Create($ps1Path)
+              try { $gzip.CopyTo($output) } finally { $output.Dispose() }
+            } finally { $gzip.Dispose() }
+          } finally { $input.Dispose() }
+          if (-not (Test-Path -LiteralPath $ps1Path -PathType Leaf)) { throw "V4 nao foi reconstruida." }
+          $sha = (Get-FileHash -LiteralPath $ps1Path -Algorithm SHA256).Hash.ToLowerInvariant()
+          Write-Host "[VERIFIED] exact embedded V4 SHA256: $sha"
+          "V4_PATH=$ps1Path" | Out-File -FilePath $env:GITHUB_ENV -Encoding ascii -Append
+
+      - name: Windows PowerShell 5.1 parser gate
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile($env:V4_PATH,[ref]$tokens,[ref]$errors) | Out-Null
+          if ($errors -and $errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Host ("Line {0}, col {1}: {2}" -f $_.Extent.StartLineNumber,$_.Extent.StartColumnNumber,$_.Message) }
+            throw "PowerShell 5.1 parser found $($errors.Count) error(s)."
+          }
+          Write-Host "[PASS] Windows PowerShell 5.1 parser: 0 errors"
+
+      - name: Execute exact V4 PreflightOnly
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $env:V4_PATH -PreflightOnly
+          $code = $LASTEXITCODE
+          if ($code -ne 0) { throw "Exact V4 PreflightOnly failed with exit $code" }
+          Write-Host "[PASS] exact V4 PreflightOnly exit 0"
