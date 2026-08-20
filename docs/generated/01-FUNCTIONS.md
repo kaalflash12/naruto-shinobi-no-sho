@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-20T22:31:38.509Z`
+Gerado em: `2026-08-20T22:37:28.260Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -16054,7 +16054,7 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 
 ## FUNC-01004 — `assert`
 
-- **Fonte:** `tools/supabase-live-e2e.mjs:10`
+- **Fonte:** `tools/supabase-live-e2e.mjs:11`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `value, message`
@@ -16070,7 +16070,7 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 
 ## FUNC-01005 — `pass`
 
-- **Fonte:** `tools/supabase-live-e2e.mjs:11`
+- **Fonte:** `tools/supabase-live-e2e.mjs:12`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `name, detail=true`
@@ -16086,7 +16086,7 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 
 ## FUNC-01006 — `request`
 
-- **Fonte:** `tools/supabase-live-e2e.mjs:12`
+- **Fonte:** `tools/supabase-live-e2e.mjs:13`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `route,{method='POST',token='',body,expected=[200]}={}`
@@ -16102,7 +16102,7 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 
 ## FUNC-01007 — `write`
 
-- **Fonte:** `tools/supabase-live-e2e.mjs:22`
+- **Fonte:** `tools/supabase-live-e2e.mjs:23`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `status,ok`

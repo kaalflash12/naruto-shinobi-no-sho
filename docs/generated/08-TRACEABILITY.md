@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-20T22:31:38.509Z`
+Gerado em: `2026-08-20T22:37:28.260Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -1009,10 +1009,10 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 | FUNC-01001 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
 | FUNC-01002 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
 | FUNC-01003 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
-| FUNC-01004 | função | `assert` | `tools/supabase-live-e2e.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01005 | função | `pass` | `tools/supabase-live-e2e.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-01006 | função | `request` | `tools/supabase-live-e2e.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01007 | função | `write` | `tools/supabase-live-e2e.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-01004 | função | `assert` | `tools/supabase-live-e2e.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-01005 | função | `pass` | `tools/supabase-live-e2e.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01006 | função | `request` | `tools/supabase-live-e2e.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01007 | função | `write` | `tools/supabase-live-e2e.mjs:23` | tooling / STATICALLY_TRACED |
 | API-00001 | API | `/api/account/delete` | `app.js:3544`, `cloudflare/oneclick-backend/src/index.js:72`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/index.js:108` | game-runtime / STATICALLY_TRACED |
 | API-00002 | API | `/api/account/load` | `app.js:3512`, `app.js:3516`, `cloudflare/oneclick-backend/src/index.js:71`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:107` | game-runtime / STATICALLY_TRACED |
 | API-00003 | API | `/api/account/save` | `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/oneclick-backend/src/index.js:70`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:106` | game-runtime / STATICALLY_TRACED |

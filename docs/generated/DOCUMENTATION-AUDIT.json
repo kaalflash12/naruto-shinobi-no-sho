@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:31:39.132Z",
+  "generatedAt": "2026-08-20T22:37:28.867Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura estatica: funcoes de toda fonte nao documental + semantica do jogo somente do runtime. Nao equivale a PASS de runtime, jogabilidade, visual ou E2E.",

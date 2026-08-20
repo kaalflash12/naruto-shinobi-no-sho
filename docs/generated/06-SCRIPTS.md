@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-20T22:31:38.509Z`
+Gerado em: `2026-08-20T22:37:28.260Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -93,7 +93,7 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 - `package.json` — domínio `game-runtime` — 1106 bytes — SHA-256 `e7856d849611cc2f93c3c2183e734ba6489c5f0d8917ec1b01d4a5e1e69e5b46`
 - `r31.css` — domínio `game-runtime` — 6504 bytes — SHA-256 `9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
-- `r41-api-config.js` — domínio `game-runtime` — 640 bytes — SHA-256 `a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da`
+- `r41-api-config.js` — domínio `game-runtime` — 1950 bytes — SHA-256 `062c616dd566a52920a2b072e88fea7150e0008c9bb760bf1ba697c3a6299c2e`
 - `r41-github-api.js` — domínio `game-runtime` — 3714 bytes — SHA-256 `ad109be9a4e31cc867a34f84a119a86cdb3175a4c91803cc181d70abce0e89e6`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
@@ -114,4 +114,4 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 - `tools/reconcile-asset-references.mjs` — domínio `tooling` — 4671 bytes — SHA-256 `50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11`
 - `tools/refine-technical-spec.mjs` — domínio `tooling` — 12448 bytes — SHA-256 `b7e5f87f940c4634198739263635a951b4d0554a5b8bcdab72e7260a6709ff3c`
 - `tools/repair-canonical-markdown-after-trace.mjs` — domínio `tooling` — 4413 bytes — SHA-256 `b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586`
-- `tools/supabase-live-e2e.mjs` — domínio `tooling` — 8521 bytes — SHA-256 `57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724`
+- `tools/supabase-live-e2e.mjs` — domínio `tooling` — 8904 bytes — SHA-256 `0a09b2687aac54e7158479953f42935f68b9ae7c6091db909b9b68fb57978fe4`

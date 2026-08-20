@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T22:31:38.509Z",
+  "generatedAt": "2026-08-20T22:37:28.260Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -43971,8 +43971,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 640,
-      "sha256": "a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da",
+      "size": 1950,
+      "sha256": "062c616dd566a52920a2b072e88fea7150e0008c9bb760bf1ba697c3a6299c2e",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44147,8 +44147,8 @@
     },
     {
       "path": "tools/supabase-live-e2e.mjs",
-      "size": 8521,
-      "sha256": "57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724",
+      "size": 8904,
+      "sha256": "0a09b2687aac54e7158479953f42935f68b9ae7c6091db909b9b68fb57978fe4",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -68233,7 +68233,7 @@
     },
     {
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 10,
+      "line": 11,
       "name": "assert",
       "kind": "declaration",
       "params": "value, message",
@@ -68252,7 +68252,7 @@
     },
     {
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 11,
+      "line": 12,
       "name": "pass",
       "kind": "declaration",
       "params": "name, detail=true",
@@ -68271,7 +68271,7 @@
     },
     {
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 12,
+      "line": 13,
       "name": "request",
       "kind": "declaration",
       "params": "route,{method='POST',token='',body,expected=[200]}={}",
@@ -68290,7 +68290,7 @@
     },
     {
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 22,
+      "line": 23,
       "name": "write",
       "kind": "declaration",
       "params": "status,ok",
@@ -69397,7 +69397,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 8,
+      "line": 9,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-api-origin",
@@ -232121,7 +232121,7 @@
       "events": 9,
       "movement": 7979,
       "assets": 15817,
-      "environment": 114
+      "environment": 115
     },
     "after": {
       "functions": 1007,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T22:31:43.094Z",
+  "generatedAt": "2026-08-20T22:37:32.551Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T22:31:38.509Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T22:37:28.260Z",
   "counts": {
     "functions": 1007,
     "functionsWithExactCode": 1007,
@@ -8060,7 +8060,7 @@
     {
       "id": "FUNC-01004",
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 10,
+      "line": 11,
       "name": "assert",
       "exactCode": true,
       "snippetSha256": "6bb552dd57ee81e03d7bb075b55466a38e496f05489daa829126896558ae2c0b"
@@ -8068,7 +8068,7 @@
     {
       "id": "FUNC-01005",
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 11,
+      "line": 12,
       "name": "pass",
       "exactCode": true,
       "snippetSha256": "4ed6f4694daad5dbdf0d8d7117d9836af481c261a82d6f0343bc477ea8645446"
@@ -8076,7 +8076,7 @@
     {
       "id": "FUNC-01006",
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 12,
+      "line": 13,
       "name": "request",
       "exactCode": true,
       "snippetSha256": "660d5e8106dc451073aac423a5e273722d27efb890f265a87dc18ccf4a3b7006"
@@ -8084,7 +8084,7 @@
     {
       "id": "FUNC-01007",
       "file": "tools/supabase-live-e2e.mjs",
-      "line": 22,
+      "line": 23,
       "name": "write",
       "exactCode": true,
       "snippetSha256": "ba5b9d1f8a5ca268559deda5ff7428de8b118d950da51fea42ab3c8fa90042c5"
@@ -14323,8 +14323,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 640,
-      "sha256": "a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da"
+      "size": 1950,
+      "sha256": "062c616dd566a52920a2b072e88fea7150e0008c9bb760bf1ba697c3a6299c2e"
     },
     {
       "path": "r41-github-api.js",
@@ -14428,8 +14428,8 @@
     },
     {
       "path": "tools/supabase-live-e2e.mjs",
-      "size": 8521,
-      "sha256": "57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724"
+      "size": 8904,
+      "sha256": "0a09b2687aac54e7158479953f42935f68b9ae7c6091db909b9b68fb57978fe4"
     }
   ],
   "assetFiles": [

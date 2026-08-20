@@ -2,7 +2,7 @@
 
 Coleções MongoDB e storage do navegador detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-20T22:31:38.509Z`
+Gerado em: `2026-08-20T22:37:28.260Z`
 
 ## Coleções MongoDB
 
@@ -30,6 +30,6 @@ Gerado em: `2026-08-20T22:31:38.509Z`
 | STORE-00006 | localStorage | getItem | `sns-r34-client-errors` | `app.js:5638` |
 | STORE-00007 | localStorage | getItem | `sns-api-origin` | `r41-api-config.js:5` |
 | STORE-00008 | localStorage | getItem | `sns-r41-api-origin` | `r41-api-config.js:5` |
-| STORE-00009 | localStorage | setItem | `sns-api-origin` | `r41-api-config.js:8` |
+| STORE-00009 | localStorage | setItem | `sns-api-origin` | `r41-api-config.js:9` |
 | STORE-00010 | localStorage | getItem | `sns-r41-api-origin` | `r41-github-api.js:6` |
 | STORE-00011 | sessionStorage | getItem | `sns-v841-auth-token` | `r41-github-api.js:7` |
