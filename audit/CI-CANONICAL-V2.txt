@@ -1,0 +1,1 @@
+Temporary marker to trigger clean canonical-spec CI validation after delegated UI handler resolver fix.
