@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-20T20:43:53.060Z",
+  "generatedAt": "2026-08-20T21:13:37.558Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T20:43:49.002Z",
+  "sourceInventoryGeneratedAt": "2026-08-20T21:13:33.762Z",
   "counts": {
-    "functions": 963,
-    "functionsWithExactCode": 963,
+    "functions": 967,
+    "functionsWithExactCode": 967,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 215,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 74,
+    "sourceFiles": 77,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -7736,6 +7736,38 @@
       "name": "filterGrouped",
       "exactCode": true,
       "snippetSha256": "b72fc42bd955c0b3a8185bc89e009b789a1e501a5ee51403961a3ddf4891a1cc"
+    },
+    {
+      "id": "FUNC-00964",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 10,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "6bb552dd57ee81e03d7bb075b55466a38e496f05489daa829126896558ae2c0b"
+    },
+    {
+      "id": "FUNC-00965",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 11,
+      "name": "pass",
+      "exactCode": true,
+      "snippetSha256": "4ed6f4694daad5dbdf0d8d7117d9836af481c261a82d6f0343bc477ea8645446"
+    },
+    {
+      "id": "FUNC-00966",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 12,
+      "name": "request",
+      "exactCode": true,
+      "snippetSha256": "660d5e8106dc451073aac423a5e273722d27efb890f265a87dc18ccf4a3b7006"
+    },
+    {
+      "id": "FUNC-00967",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 22,
+      "name": "write",
+      "exactCode": true,
+      "snippetSha256": "ba5b9d1f8a5ca268559deda5ff7428de8b118d950da51fea42ab3c8fa90042c5"
     }
   ],
   "uiTraces": [
@@ -13730,6 +13762,11 @@
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4"
     },
     {
+      "path": ".github/workflows/supabase-live-e2e.yml",
+      "size": 1914,
+      "sha256": "5964d0e365954929c54e44cd02bf2c3a928b01d5af827d319c4bc1fec4d8d23f"
+    },
+    {
       "path": ".github/workflows/windows-backend-v4-exact.yml",
       "size": 13704,
       "sha256": "f1b29e00e51fb2a50bcddd3c089a2f777cc5baa41fe710a5f3d5d2ef608018e1"
@@ -13753,6 +13790,11 @@
       "path": "audit/LIVE-BACKEND.json",
       "size": 413,
       "sha256": "b078fbf50fedb8b27280d5a8a752e34a92e67609cca2335324f7b15edbabe046"
+    },
+    {
+      "path": "cloudflare/oneclick-backend/package.json",
+      "size": 426,
+      "sha256": "ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2"
     },
     {
       "path": "cloudflare/r41-api/package.json",
@@ -13976,8 +14018,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 639,
-      "sha256": "018cac7497e3b4fc053e360cbe993a72bea536ad7e6db8f2dd29605cd31ffcb7"
+      "size": 640,
+      "sha256": "a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da"
     },
     {
       "path": "r41-github-api.js",
@@ -14073,6 +14115,11 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586"
+    },
+    {
+      "path": "tools/supabase-live-e2e.mjs",
+      "size": 8521,
+      "sha256": "57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724"
     }
   ],
   "assetFiles": [

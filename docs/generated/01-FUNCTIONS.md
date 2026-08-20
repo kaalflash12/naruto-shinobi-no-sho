@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-20T20:43:49.002Z`
+Gerado em: `2026-08-20T21:13:33.762Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -15402,6 +15402,70 @@ Gerado em: `2026-08-20T20:43:49.002Z`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `items,predicate`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00964 — `assert`
+
+- **Fonte:** `tools/supabase-live-e2e.mjs:10`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `value, message`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00965 — `pass`
+
+- **Fonte:** `tools/supabase-live-e2e.mjs:11`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `name, detail=true`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00966 — `request`
+
+- **Fonte:** `tools/supabase-live-e2e.mjs:12`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `route,{method='POST',token='',body,expected=[200]}={}`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00967 — `write`
+
+- **Fonte:** `tools/supabase-live-e2e.mjs:22`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `status,ok`
 - **Chamadas internas detectadas:** —
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —

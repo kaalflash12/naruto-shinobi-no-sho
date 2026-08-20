@@ -2,7 +2,7 @@
 
 Ações e eventos detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-20T20:43:49.002Z`
+Gerado em: `2026-08-20T21:13:33.762Z`
 
 ## Ações
 

@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-20T20:43:49.002Z`
+Gerado em: `2026-08-20T21:13:33.762Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -969,6 +969,10 @@ Gerado em: `2026-08-20T20:43:49.002Z`
 | FUNC-00961 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
 | FUNC-00962 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
 | FUNC-00963 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-00964 | função | `assert` | `tools/supabase-live-e2e.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-00965 | função | `pass` | `tools/supabase-live-e2e.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-00966 | função | `request` | `tools/supabase-live-e2e.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-00967 | função | `write` | `tools/supabase-live-e2e.mjs:22` | tooling / STATICALLY_TRACED |
 | API-00001 | API | `/api/account/delete` | `app.js:3544`, `cloudflare/r41-api/src/index.js:108` | game-runtime / STATICALLY_TRACED |
 | API-00002 | API | `/api/account/load` | `app.js:3512`, `app.js:3516`, `cloudflare/r41-api/src/index.js:107` | game-runtime / STATICALLY_TRACED |
 | API-00003 | API | `/api/account/save` | `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/r41-api/src/index.js:106` | game-runtime / STATICALLY_TRACED |

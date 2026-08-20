@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-20T20:43:49.002Z`
+Gerado em: `2026-08-20T21:13:33.762Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -45,11 +45,13 @@ Gerado em: `2026-08-20T20:43:49.002Z`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 10562 bytes — SHA-256 `212c7dc7f8b4c3cb748e750b80a2edeb0b2274b7c1fa45939e44d44f593b34b7`
 - `.github/workflows/live-backend-preflight-pr.yml` — domínio `tooling` — 1505 bytes — SHA-256 `808dea8981c0cfbaeccbf6bd832ef603f4f99f925f61bfdc790b4391ffd9ab73`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 1964 bytes — SHA-256 `b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4`
+- `.github/workflows/supabase-live-e2e.yml` — domínio `tooling` — 1914 bytes — SHA-256 `5964d0e365954929c54e44cd02bf2c3a928b01d5af827d319c4bc1fec4d8d23f`
 - `.github/workflows/windows-backend-v4-exact.yml` — domínio `tooling` — 13704 bytes — SHA-256 `f1b29e00e51fb2a50bcddd3c089a2f777cc5baa41fe710a5f3d5d2ef608018e1`
 - `.github/workflows/windows-bootstrap-v4-validate.yml` — domínio `tooling` — 13587 bytes — SHA-256 `4904609c0acc127686ef9a31b46593a2499f1fc5aaaf368bf7e96e385f19ab74`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 699 bytes — SHA-256 `b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c`
 - `audit/LIVE-BACKEND.json` — domínio `game-runtime` — 413 bytes — SHA-256 `b078fbf50fedb8b27280d5a8a752e34a92e67609cca2335324f7b15edbabe046`
+- `cloudflare/oneclick-backend/package.json` — domínio `game-runtime` — 426 bytes — SHA-256 `ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2`
 - `cloudflare/r41-api/package.json` — domínio `game-runtime` — 358 bytes — SHA-256 `80557cdbfd5bbdaaee71deca25cff4a4659e80fe3b77e3d61bfd3b1dac59204f`
 - `cloudflare/r41-api/src/entry.js` — domínio `game-runtime` — 10660 bytes — SHA-256 `0748eedadc4cbe0181b0ffba3513cd8793ec19586f7ac559e489b5ed78b46a37`
 - `cloudflare/r41-api/src/index.js` — domínio `game-runtime` — 27910 bytes — SHA-256 `a7e4d6a44085a96644bc43c20cc32e4b1ccc24b74c60965a851a776ad214e8c4`
@@ -94,7 +96,7 @@ Gerado em: `2026-08-20T20:43:49.002Z`
 - `package.json` — domínio `game-runtime` — 1106 bytes — SHA-256 `e7856d849611cc2f93c3c2183e734ba6489c5f0d8917ec1b01d4a5e1e69e5b46`
 - `r31.css` — domínio `game-runtime` — 6504 bytes — SHA-256 `9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
-- `r41-api-config.js` — domínio `game-runtime` — 639 bytes — SHA-256 `018cac7497e3b4fc053e360cbe993a72bea536ad7e6db8f2dd29605cd31ffcb7`
+- `r41-api-config.js` — domínio `game-runtime` — 640 bytes — SHA-256 `a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da`
 - `r41-github-api.js` — domínio `game-runtime` — 3714 bytes — SHA-256 `ad109be9a4e31cc867a34f84a119a86cdb3175a4c91803cc181d70abce0e89e6`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
@@ -114,3 +116,4 @@ Gerado em: `2026-08-20T20:43:49.002Z`
 - `tools/reconcile-asset-references.mjs` — domínio `tooling` — 4671 bytes — SHA-256 `50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11`
 - `tools/refine-technical-spec.mjs` — domínio `tooling` — 12448 bytes — SHA-256 `b7e5f87f940c4634198739263635a951b4d0554a5b8bcdab72e7260a6709ff3c`
 - `tools/repair-canonical-markdown-after-trace.mjs` — domínio `tooling` — 4413 bytes — SHA-256 `b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586`
+- `tools/supabase-live-e2e.mjs` — domínio `tooling` — 8521 bytes — SHA-256 `57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724`

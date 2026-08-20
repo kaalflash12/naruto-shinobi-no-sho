@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-20T20:43:49.002Z",
+  "generatedAt": "2026-08-20T21:13:33.762Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5511,
-    "runtimeFiles": 65,
+    "files": 5516,
+    "runtimeFiles": 67,
     "assetFiles": 5425,
-    "textFiles": 84,
-    "functions": 963,
+    "textFiles": 87,
+    "functions": 967,
     "routes": 31,
     "models": 2,
     "collections": 11,
@@ -22,11 +22,11 @@
     "assetReferences": 15814,
     "missingLiteralAssetReferences": 0,
     "gameRuntimeFunctions": 883,
-    "toolingFunctions": 80,
+    "toolingFunctions": 84,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 74,
-    "gameRuntimeSourceFiles": 54,
-    "toolingSourceFiles": 20,
+    "sourceFiles": 77,
+    "gameRuntimeSourceFiles": 55,
+    "toolingSourceFiles": 22,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -77,6 +77,14 @@
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 1964,
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/supabase-live-e2e.yml",
+      "size": 1914,
+      "sha256": "5964d0e365954929c54e44cd02bf2c3a928b01d5af827d319c4bc1fec4d8d23f",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43546,6 +43554,30 @@
       "asset": false
     },
     {
+      "path": "cloudflare/oneclick-backend/migrations/0001_initial.sql",
+      "size": 3157,
+      "sha256": "0f9c58b70f28b1143b8c43d660753418427068f3bbb3e212e9b95fd7ea9e3fec",
+      "extension": ".sql",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": "cloudflare/oneclick-backend/package.json",
+      "size": 426,
+      "sha256": "ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "cloudflare/oneclick-backend/wrangler.jsonc",
+      "size": 726,
+      "sha256": "c70b38904a0db1ac8412c729518a48c08542f693b2b1f16c0e919afd0e087874",
+      "extension": ".jsonc",
+      "runtime": false,
+      "asset": false
+    },
+    {
       "path": "cloudflare/r41-api/package.json",
       "size": 358,
       "sha256": "80557cdbfd5bbdaaee71deca25cff4a4659e80fe3b77e3d61bfd3b1dac59204f",
@@ -43955,8 +43987,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 639,
-      "sha256": "018cac7497e3b4fc053e360cbe993a72bea536ad7e6db8f2dd29605cd31ffcb7",
+      "size": 640,
+      "sha256": "a5ed85549aed2a1c52ae5b54c6a54f9c3229c2399be9644ef1ca85664bccd7da",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44117,6 +44149,14 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/supabase-live-e2e.mjs",
+      "size": 8521,
+      "sha256": "57ca34d273be3544f57aa6dcaa939eff99dfb919b1eb75cf6fe7cb203b3a5724",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -67233,6 +67273,82 @@
       },
       "calls": [],
       "id": "FUNC-00963",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 10,
+      "name": "assert",
+      "kind": "declaration",
+      "params": "value, message",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00964",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 11,
+      "name": "pass",
+      "kind": "declaration",
+      "params": "name, detail=true",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00965",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 12,
+      "name": "request",
+      "kind": "declaration",
+      "params": "route,{method='POST',token='',body,expected=[200]}={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00966",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 22,
+      "name": "write",
+      "kind": "declaration",
+      "params": "status,ok",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00967",
       "domain": "tooling"
     }
   ],
@@ -230454,23 +230570,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 883,
-      "tooling": 80,
+      "tooling": 84,
       "otherSource": 0
     },
     "before": {
-      "functions": 963,
+      "functions": 967,
       "routes": 31,
       "models": 3,
       "collections": 12,
       "storage": 14,
       "uiActions": 218,
       "events": 9,
-      "movement": 7962,
+      "movement": 7967,
       "assets": 15817,
-      "environment": 59
+      "environment": 61
     },
     "after": {
-      "functions": 963,
+      "functions": 967,
       "routes": 31,
       "models": 2,
       "collections": 11,
