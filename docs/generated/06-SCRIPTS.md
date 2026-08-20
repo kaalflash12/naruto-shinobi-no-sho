@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-20T20:38:51.902Z`
+Gerado em: `2026-08-20T20:40:54.573Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -46,7 +46,7 @@ Gerado em: `2026-08-20T20:38:51.902Z`
 - `.github/workflows/live-backend-preflight-pr.yml` — domínio `tooling` — 1505 bytes — SHA-256 `808dea8981c0cfbaeccbf6bd832ef603f4f99f925f61bfdc790b4391ffd9ab73`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 1964 bytes — SHA-256 `b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4`
 - `.github/workflows/windows-backend-v4-exact.yml` — domínio `tooling` — 13704 bytes — SHA-256 `f1b29e00e51fb2a50bcddd3c089a2f777cc5baa41fe710a5f3d5d2ef608018e1`
-- `.github/workflows/windows-bootstrap-v4-validate.yml` — domínio `tooling` — 5232 bytes — SHA-256 `9f2b52a2fb8ae46f00c6cf861e0208c076b1f3ffbfa0adaff86e55f8df322faf`
+- `.github/workflows/windows-bootstrap-v4-validate.yml` — domínio `tooling` — 13589 bytes — SHA-256 `fc38b53be141da0428e06ea747edce25426f32e55908164f1423a49bbdd1b0f6`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 699 bytes — SHA-256 `b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c`
 - `audit/LIVE-BACKEND.json` — domínio `game-runtime` — 413 bytes — SHA-256 `b078fbf50fedb8b27280d5a8a752e34a92e67609cca2335324f7b15edbabe046`
