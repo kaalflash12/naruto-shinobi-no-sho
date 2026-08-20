@@ -6,22 +6,31 @@ on:
     paths:
       - 'r41-api-config.js'
       - 'tools/supabase-live-e2e.mjs'
+      - 'tools/browser-live-api.mjs'
       - '.github/workflows/supabase-live-e2e.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: shinobi-supabase-live-e2e
+  cancel-in-progress: false
 
 jobs:
   live-e2e:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 20
     env:
       API_ORIGIN: https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api
+      PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
       REPORT_PATH: audit/SUPABASE-LIVE-E2E.json
+      BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Node 24
         uses: actions/setup-node@v4
@@ -29,16 +38,28 @@ jobs:
           node-version: '24'
 
       - name: Check E2E syntax
-        run: node --check tools/supabase-live-e2e.mjs
+        run: |
+          node --check tools/supabase-live-e2e.mjs
+          node --check tools/browser-live-api.mjs
 
       - name: Run live auth save rooms TERION boundary E2E
         run: node tools/supabase-live-e2e.mjs
 
-      - name: Enforce PASS
+      - name: Install Chromium only on GitHub runner
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Run GitHub Pages to Supabase browser E2E
+        run: node tools/browser-live-api.mjs
+
+      - name: Enforce both live PASS reports
         run: |
           node - <<'NODE'
-          const r=require('./audit/SUPABASE-LIVE-E2E.json');
-          if(!r.ok || r.status!=='PASS_SUPABASE_LIVE_E2E') throw new Error('Supabase live E2E sem PASS');
+          const live=require('./audit/SUPABASE-LIVE-E2E.json');
+          const browser=require('./audit/BROWSER-LIVE-API.json');
+          if(!live.ok || live.status!=='PASS_SUPABASE_LIVE_E2E') throw new Error('Supabase live E2E sem PASS');
+          if(!browser.ok || browser.status!=='PASS_BROWSER_LIVE_API') throw new Error('Browser live API sem PASS');
           const required=[
             'statusConfigured','registerTwoAccounts','authenticatedSessions','unauthorizedRejected',
             'saveLoadRoundTrip','kuraiPersisted','slotListing','roomCreate','roomJoinSecondAccount',
@@ -46,8 +67,10 @@ jobs:
             'roomStateSynchronized','worldTickPersisted','savePointPersisted','factsOnlyNarrator',
             'saveCleanup','sessionRevocation'
           ];
-          for(const k of required) if(!r.checks?.[k]) throw new Error(`Gate ausente: ${k}`);
-          console.log(r.status);
+          for(const k of required) if(!live.checks?.[k]) throw new Error(`Gate ausente: ${k}`);
+          if(browser.backendStatus?.data?.storage!=='supabase-postgres') throw new Error('Browser não confirmou Supabase Postgres');
+          if(browser.backendStatus?.cors!=='https://kaalflash12.github.io') throw new Error('Browser não confirmou CORS GitHub Pages');
+          console.log(live.status, browser.status);
           NODE
 
       - name: Upload live evidence
@@ -55,5 +78,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: shinobi-supabase-live-e2e
-          path: audit/SUPABASE-LIVE-E2E.json
+          path: |
+            audit/SUPABASE-LIVE-E2E.json
+            audit/BROWSER-LIVE-API.json
           if-no-files-found: warn
+
+      - name: Commit verified live evidence to main
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/SUPABASE-LIVE-E2E.json audit/BROWSER-LIVE-API.json
+          if git diff --cached --quiet; then
+            echo "Live evidence unchanged."
+          else
+            git commit -m "test: record verified Supabase live online evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
