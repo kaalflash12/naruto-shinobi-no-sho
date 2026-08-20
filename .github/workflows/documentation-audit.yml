@@ -38,6 +38,8 @@ jobs:
           node --check tools/audit-documentation-coverage.mjs
           node --check tools/audit-operational-static-contracts.mjs
           node --check tools/build-final-canonical-spec.mjs
+          node --check tools/finalize-canonical-ui-trace.mjs
+          node --check tools/repair-canonical-markdown-after-trace.mjs
           node --check tools/audit-final-canonical-spec.mjs
 
       - name: Generate exhaustive source inventory
@@ -55,8 +57,11 @@ jobs:
       - name: Enforce operational static contracts
         run: node tools/audit-operational-static-contracts.mjs
 
-      - name: Build single canonical full specification
-        run: node tools/build-final-canonical-spec.mjs
+      - name: Build and resolve canonical full specification
+        run: node tools/finalize-canonical-ui-trace.mjs
+
+      - name: Restore complete canonical Markdown after trace resolution
+        run: node tools/repair-canonical-markdown-after-trace.mjs
 
       - name: Enforce final canonical specification gate
         run: node tools/audit-final-canonical-spec.mjs
