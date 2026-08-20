@@ -1,0 +1,1 @@
+Temporary CI validation marker for runtime-integrity after asset-audit scope fix.
