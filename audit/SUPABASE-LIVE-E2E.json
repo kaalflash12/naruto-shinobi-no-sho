@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-08-20T23:08:48.428Z",
+  "status": "PASS_SUPABASE_LIVE_E2E",
+  "ok": true,
+  "apiOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
+  "checks": {
+    "statusConfigured": true,
+    "bootstrapPublic": true,
+    "registerTwoAccounts": true,
+    "authenticatedSessions": true,
+    "unauthorizedRejected": true,
+    "saveLoadRoundTrip": true,
+    "kuraiPersisted": true,
+    "slotListing": true,
+    "roomCreate": true,
+    "roomJoinSecondAccount": true,
+    "roomHeartbeat": true,
+    "roomMessaging": true,
+    "intentActionAccepted": true,
+    "clientMechanicalResultRejected": true,
+    "roomStateSynchronized": true,
+    "worldTickPersisted": true,
+    "savePointPersisted": true,
+    "factsOnlyNarrator": true,
+    "saveCleanup": true,
+    "sessionRevocation": true
+  },
+  "evidence": {
+    "status": {
+      "ok": true,
+      "service": "shinobi-api",
+      "build": "NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-20260820-V3",
+      "game": "NARUTO SHINOBI NO SHO",
+      "enabled": true,
+      "configured": true,
+      "cloudSave": true,
+      "onlineRooms": true,
+      "rulesDatabase": true,
+      "storage": "supabase-postgres",
+      "realtime": "supabase-edge-http",
+      "backend": "shinobi-api-v3",
+      "onlineAuthority": "intent-only-boundary",
+      "routes": {
+        "auth": true,
+        "recovery": true,
+        "save": true,
+        "online": true,
+        "pvp": true,
+        "coop": true,
+        "world": true,
+        "ai": true
+      }
+    },
+    "accounts": [
+      "f1615891-63f6-482f-bd90-043876f15589",
+      "c256198f-be03-45b8-961c-41f2d4d6b324"
+    ],
+    "roomId": "room-799e3343-7bac-41ce-a1d6-22d72536ced1"
+  },
+  "failures": []
+}
