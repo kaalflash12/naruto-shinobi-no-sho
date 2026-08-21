@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-08-21T10:25:47.243Z",
+  "status": "PASS_FINAL_READINESS",
+  "ok": true,
+  "repository": "kaalflash12/naruto-shinobi-no-sho",
+  "publicGame": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
+  "backend": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
+  "stack": "GitHub Pages + Supabase Postgres + Supabase Edge Function",
+  "gates": {
+    "canonical": "PASS_FINAL_CANONICAL_SPEC",
+    "documentation": "PASS_STATIC_COVERAGE",
+    "operationalStatic": "PASS_OPERATIONAL_STATIC_CONTRACTS",
+    "assetPaths": "PASS",
+    "browserSmoke": "PASS_BROWSER_SMOKE",
+    "supabaseLive": "PASS_SUPABASE_LIVE_E2E",
+    "browserLive": "PASS_BROWSER_LIVE_API"
+  },
+  "coverage": {
+    "functions": 1007,
+    "functionsWithExactCode": 1007,
+    "concreteUIActions": 215,
+    "concreteUIActionsWithHandler": 215,
+    "unresolvedConcreteUIActions": 0,
+    "routes": 31,
+    "models": 2,
+    "collections": 11,
+    "assetFiles": 5425,
+    "uniqueAssetReferences": 5442,
+    "missingLiteralAssetReferences": 0
+  },
+  "operationalContracts": [
+    {
+      "id": "save_autosave",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "kurai_hud_resource",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "persistent_injuries",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "hospital_treatment",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "rest_consequences",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "world_tick",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "minigame_engine",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "mission_choice_resolution",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "combat_pipeline",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "online_intent_state",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "visual_state",
+      "status": "PASS_STATIC_TRACE"
+    }
+  ],
+  "liveChecks": {
+    "statusConfigured": true,
+    "bootstrapPublic": true,
+    "registerTwoAccounts": true,
+    "authenticatedSessions": true,
+    "unauthorizedRejected": true,
+    "saveLoadRoundTrip": true,
+    "kuraiPersisted": true,
+    "slotListing": true,
+    "roomCreate": true,
+    "roomJoinSecondAccount": true,
+    "roomHeartbeat": true,
+    "roomMessaging": true,
+    "intentActionAccepted": true,
+    "clientMechanicalResultRejected": true,
+    "roomStateSynchronized": true,
+    "worldTickPersisted": true,
+    "savePointPersisted": true,
+    "factsOnlyNarrator": true,
+    "saveCleanup": true,
+    "sessionRevocation": true
+  },
+  "failures": []
+}
