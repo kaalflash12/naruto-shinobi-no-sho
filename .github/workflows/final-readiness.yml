@@ -1,0 +1,73 @@
+name: Final Readiness
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/final-readiness.mjs'
+      - 'r41-api-config.js'
+      - 'audit/SUPABASE-LIVE-E2E.json'
+      - 'audit/BROWSER-LIVE-API.json'
+      - 'audit/BROWSER-SMOKE.json'
+      - 'docs/generated/FINAL-CANONICAL-AUDIT.json'
+      - 'docs/generated/DOCUMENTATION-AUDIT.json'
+      - 'docs/generated/OPERATIONAL-STATIC-AUDIT.json'
+      - '.github/workflows/final-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shinobi-final-readiness
+  cancel-in-progress: false
+
+jobs:
+  final-readiness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate gate syntax
+        run: node --check tools/final-readiness.mjs
+
+      - name: Run final all-systems gate
+        run: node tools/final-readiness.mjs
+
+      - name: Enforce PASS_FINAL_READINESS
+        run: |
+          node - <<'NODE'
+          const r = require('./audit/FINAL-READINESS.json');
+          if (!r.ok || r.status !== 'PASS_FINAL_READINESS') throw new Error(JSON.stringify(r.failures || []));
+          console.log(r.status);
+          NODE
+
+      - name: Upload final readiness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-final-readiness
+          path: audit/FINAL-READINESS.json
+          if-no-files-found: error
+
+      - name: Commit final readiness evidence
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/FINAL-READINESS.json
+          if git diff --cached --quiet; then
+            echo "Final readiness evidence unchanged."
+          else
+            git commit -m "test: record PASS_FINAL_READINESS"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
