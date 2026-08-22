@@ -52,13 +52,13 @@ jobs:
           test -s audit/BROWSER-SMOKE.json
           node -e "const r=require('./audit/BROWSER-SMOKE.json'); if(!r.ok||r.status!=='PASS_BROWSER_SMOKE'||!r.checks.httpLoad||!r.checks.publicIdentity||!r.checks.r41RuntimeLoaded||!r.checks.localResetClickReload||!r.checks.runtimeRequests||!r.checks.pageExceptions) process.exit(1); console.log(r.status,r.checks,r.api)"
 
-      - name: Run public Chromium gameplay E2E
+      - name: Run public Chromium gameplay E2E V2
         id: gameplay
         continue-on-error: true
         env:
           PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
-        run: node tools/browser-gameplay-e2e.mjs
+        run: node tools/browser-gameplay-e2e-v2.mjs
 
       - name: Upload browser evidence
         if: always()
