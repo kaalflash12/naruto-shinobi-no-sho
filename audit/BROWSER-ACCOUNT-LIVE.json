@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-08-22T17:54:35.366Z",
+  "generatedAt": "2026-08-22T19:23:43.405Z",
   "status": "FAIL_BROWSER_ACCOUNT_LIVE",
   "ok": false,
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
   "checks": {
     "publicAccountUiLoaded": true,
     "registerUi": true,
-    "sessionPersistsReload": true
+    "sessionPersistsReload": true,
+    "accountButtonVisibleAfterReload": true
   },
   "pageErrors": [],
   "consoleErrors": [],
   "failures": [
-    "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#sns-account-button')\n    - locator resolved to <button type=\"button\" data-online=\"1\" id=\"sns-account-button\" class=\"sns-account-btn\" data-testid=\"sns-account-button\" title=\"Conectado como ui_mt4ogemh29utd\">Conta: Browser E2E</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n\n    at /home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-account-live.mjs:17:44"
+    "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#sns-account-button')\n    - locator resolved to <button type=\"button\" data-online=\"1\" id=\"sns-account-button\" class=\"sns-account-btn\" data-testid=\"sns-account-button\" aria-label=\"Conta online: Browser E2E\" title=\"Conectado como ui_mt4rn1sbpkqpg\">Conta: Browser E2E</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n\n    at /home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-account-live.mjs:17:22"
   ]
 }
