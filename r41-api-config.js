@@ -4,17 +4,18 @@
   const fromQuery = String(params.get("api") || "").trim().replace(/\/+$/g, "");
   const fromStorage = String(localStorage.getItem("sns-api-origin") || localStorage.getItem("sns-r41-api-origin") || "").trim().replace(/\/+$/g, "");
   const baked = "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api";
+  const authBaked = "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth";
   const publishableKey = "sb_publishable_S9LtSpLhLKFOU9iSd8b4yQ_EziH1Arr";
   const origin = fromQuery || fromStorage || baked;
   if (fromQuery) localStorage.setItem("sns-api-origin", fromQuery);
 
   window.NARUTO_R41_API_ORIGIN = origin;
-  window.NARUTO_R41_API_BUILD = "NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE";
+  window.NARUTO_R41_AUTH_ORIGIN = authBaked;
+  window.NARUTO_R41_API_BUILD = "NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V1";
   window.NARUTO_R41_SUPABASE_PUBLISHABLE_KEY = publishableKey;
 
-  // Supabase Edge Gateway exige a chave publica do projeto. Ela nao e segredo:
-  // serve somente para identificar o projeto; dados continuam protegidos pela
-  // Edge Function + sessoes proprias do Shinobi + RLS sem acesso direto.
+  // A chave publishable identifica o projeto Supabase; nao concede acesso direto
+  // as tabelas SNS, que continuam protegidas por RLS e pela Edge Function.
   if (!window.__SNS_SUPABASE_FETCH_PATCHED__) {
     const nativeFetch = window.fetch.bind(window);
     window.fetch = function(input, init){
