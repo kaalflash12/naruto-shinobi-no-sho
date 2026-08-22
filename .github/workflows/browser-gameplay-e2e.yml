@@ -1,0 +1,81 @@
+name: Browser Gameplay E2E
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+      - 'assets/**'
+      - 'tools/browser-gameplay-e2e.mjs'
+      - '.github/workflows/browser-gameplay-e2e.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: browser-gameplay-e2e-main
+  cancel-in-progress: false
+
+jobs:
+  gameplay:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Wait for GitHub Pages deployment of this commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="${GITHUB_SHA}"
+          for i in $(seq 1 45); do
+            html="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/?gameplay-deploy-check='"$RANDOM" || true)"
+            js="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/app.js?gameplay-deploy-check='"$RANDOM" || true)"
+            if printf '%s' "$html" | grep -q 'NARUTO SHINOBI NO SHO' && printf '%s' "$js" | grep -q 'R41-MD-OPERACIONAL-APLICADO'; then
+              echo "Public site is responding with the expected R41 build."
+              break
+            fi
+            if [ "$i" = 45 ]; then
+              echo 'GitHub Pages did not expose the expected build in time.' >&2
+              exit 1
+            fi
+            sleep 4
+          done
+      - name: Run real Chromium gameplay E2E
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
+        run: node tools/browser-gameplay-e2e.mjs
+      - name: Commit gameplay evidence
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/BROWSER-GAMEPLAY-E2E.json
+          if git diff --cached --quiet; then
+            echo 'No gameplay report change.'
+            exit 0
+          fi
+          git commit -m 'test: record PASS_BROWSER_GAMEPLAY_E2E'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Upload gameplay evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-gameplay-e2e
+          path: audit/BROWSER-GAMEPLAY-E2E.json
+          if-no-files-found: ignore
