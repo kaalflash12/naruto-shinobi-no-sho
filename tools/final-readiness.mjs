@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
+const GATE_VERSION = 'ACCOUNT-INTEGRATED-V2';
 const readJson = p => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 const failures = [];
 const pass = (cond, msg) => { if (!cond) failures.push(msg); };
@@ -76,6 +77,7 @@ pass(apiConfig.includes('sb_publishable_'), 'publishable key Supabase ausente da
 
 const report = {
   generatedAt: new Date().toISOString(),
+  gateVersion: GATE_VERSION,
   status: failures.length ? 'FAIL_FINAL_READINESS' : 'PASS_FINAL_READINESS',
   ok: failures.length === 0,
   repository: 'kaalflash12/naruto-shinobi-no-sho',
