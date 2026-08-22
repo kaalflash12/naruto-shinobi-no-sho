@@ -11,6 +11,7 @@ on:
       - 'r41-github-api.js'
       - 'assets/**'
       - 'tools/browser-gameplay-e2e.mjs'
+      - 'tools/browser-gameplay-e2e-v2.mjs'
       - '.github/workflows/browser-gameplay-e2e.yml'
 
 permissions:
@@ -49,13 +50,13 @@ jobs:
           done
           echo 'Public R41 site did not respond in time.' >&2
           exit 1
-      - name: Run real Chromium gameplay E2E
+      - name: Run real Chromium gameplay E2E V2
         id: gameplay
         continue-on-error: true
         env:
           PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
-        run: node tools/browser-gameplay-e2e.mjs
+        run: node tools/browser-gameplay-e2e-v2.mjs
       - name: Commit gameplay evidence
         if: always()
         shell: bash
