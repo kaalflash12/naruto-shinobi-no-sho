@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-22T23:36:26.327Z",
+  "generatedAt": "2026-08-22T23:38:56.393Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt50o0s0p8wty",
-  "slotId": "gameplay-mt50o0s0",
-  "checks": {},
+  "temporaryAccount": "play_mt50rfxam18n2",
+  "slotId": "gameplay-mt50rfxa",
+  "checks": {
+    "temporaryAccountRegistered": true,
+    "temporaryAccountDeleted": true
+  },
   "contracts": [],
   "evidence": {},
   "pageErrors": [],
-  "consoleErrors": [
-    "Failed to load resource: the server responded with a status of 503 ()",
-    "cleanup: locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#sns-account-button')\n    - locator resolved to <button type=\"button\" data-online=\"1\" id=\"sns-account-button\" class=\"sns-account-btn\" data-testid=\"sns-account-button\" aria-label=\"Conta online: Gameplay E2E\" title=\"Conectado como play_mt50o0s0p8wty\">Conta: Gameplay E2E</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"sns-account-overlay\" class=\"sns-account-overlay\" data-testid=\"sns-account-panel\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
-  ],
+  "consoleErrors": [],
   "failures": [
-    "Error: registro não deixou sessão autenticada\n    at assert (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-gameplay-e2e.mjs:18:42)\n    at register (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-gameplay-e2e.mjs:102:3)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-gameplay-e2e.mjs:327:17"
+    "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('[data-screen=\"personagem\"]').first() to be visible\n\n    at navigate (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:68:104)\n    at testNormalGameplay (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:124:9)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:330:5"
   ]
 }
