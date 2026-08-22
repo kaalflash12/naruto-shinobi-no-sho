@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-08-22T19:32:51.494Z",
+  "generatedAt": "2026-08-22T19:36:31.891Z",
   "status": "PASS_ACCOUNT_LIVE_E2E",
   "ok": true,
   "authOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth",
   "apiOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
   "checks": {
     "authStatus": true,
+    "authV2LegacyBridge": true,
     "register": true,
     "meAfterRegister": true,
     "sharedSessionWithGameApi": true,
@@ -20,8 +21,18 @@
     "deletedAccountRejected": true
   },
   "evidence": {
+    "authStatus": {
+      "ok": true,
+      "service": "shinobi-auth",
+      "build": "NARUTO-SHINOBI-NO-SHO-AUTH-20260822-V2",
+      "customSessions": true,
+      "nativeEmailBridge": true,
+      "legacyUsernameBridge": true,
+      "usernameAccounts": true,
+      "recoveryCodes": true
+    },
     "account": {
-      "username": "acct_mt4rz461u731qx",
+      "username": "acct_mt4s3xwm64lkw2",
       "emailLinked": true
     }
   },
