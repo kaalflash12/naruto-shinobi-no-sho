@@ -6,8 +6,10 @@ on:
     paths:
       - 'app.js'
       - 'index.html'
+      - 'src/**'
       - 'data/**'
       - 'assets/**'
+      - 'content-packs/**'
       - 'tools/**'
       - 'audit/**'
       - '.github/workflows/integral-readiness.yml'
@@ -15,21 +17,42 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   integral-readiness:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
-      - name: Checkout
+      - name: Checkout writable head
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
       - name: Node 24
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Repair generated integral data
+        run: node tools/repair-integral.mjs
       - name: Run integral operational gate
+        id: integral
+        continue-on-error: true
         run: node tools/integral-readiness.mjs
+      - name: Commit generated repairs to branch
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/assets/asset-manifest.json data/aliases data/r38-master-2792.json data/external tools/importers content-packs audit/inventory
+          if git diff --cached --quiet; then
+            echo 'No generated repair changes.'
+          else
+            git commit -m 'fix(integral): materialize manifests aliases GM3 and reconciliation pipeline'
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
       - name: Upload integral evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -37,3 +60,6 @@ jobs:
           name: integral-readiness-evidence
           path: audit/INTEGRAL-READINESS.json
           if-no-files-found: error
+      - name: Enforce integral gate result
+        if: steps.integral.outcome != 'success'
+        run: exit 1
