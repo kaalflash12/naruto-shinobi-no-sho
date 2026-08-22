@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T22:33:17.104Z",
-  "startedAt": "2026-08-22T22:33:12.784Z",
-  "status": "FAIL_BROWSER_SMOKE",
-  "ok": false,
+  "generatedAt": "2026-08-22T22:35:33.334Z",
+  "startedAt": "2026-08-22T22:35:29.017Z",
+  "status": "PASS_BROWSER_SMOKE",
+  "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
   "baseURL": "http://127.0.0.1:4173",
   "checks": {
@@ -20,18 +20,16 @@
     "origin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
     "liveWorkerTested": false
   },
-  "failures": [
-    "API build inesperado: NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V2"
-  ],
+  "failures": [],
   "pageErrors": [],
   "consoleErrors": [
-    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
-    "Failed to load resource: net::ERR_FAILED",
-    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/status' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
-    "Failed to load resource: net::ERR_FAILED",
     "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/status' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
     "Failed to load resource: net::ERR_FAILED",
     "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
+    "Failed to load resource: net::ERR_FAILED",
+    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
+    "Failed to load resource: net::ERR_FAILED",
+    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/status' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
     "Failed to load resource: net::ERR_FAILED"
   ],
   "failedRuntimeRequests": []
