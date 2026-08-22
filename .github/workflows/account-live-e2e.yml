@@ -58,20 +58,20 @@ jobs:
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Wait for GitHub Pages to publish account UI
+      - name: Wait for GitHub Pages to publish account UI V2
         shell: bash
         run: |
           set -euo pipefail
           ok=0
           for i in $(seq 1 80); do
-            if curl -fsSL --max-time 15 "https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-account-ui.js?cb=$(date +%s)-$i" | grep -q 'ACCOUNT-UI-20260822-V1'; then
+            if curl -fsSL --max-time 15 "https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-account-ui.js?cb=$(date +%s)-$i" | grep -q 'ACCOUNT-UI-20260822-V2'; then
               ok=1
               break
             fi
             sleep 3
           done
           if [ "$ok" -ne 1 ]; then
-            echo 'GitHub Pages nao publicou r41-account-ui.js a tempo.'
+            echo 'GitHub Pages nao publicou r41-account-ui.js V2 a tempo.'
             exit 1
           fi
 
@@ -86,7 +86,7 @@ jobs:
           if(!a.ok || a.status!=='PASS_ACCOUNT_LIVE_E2E') throw new Error('backend account E2E sem PASS');
           if(!b.ok || b.status!=='PASS_BROWSER_ACCOUNT_LIVE') throw new Error('browser account E2E sem PASS');
           const backend=['authStatus','register','meAfterRegister','sharedSessionWithGameApi','logout','loginByUsername','rotateRecoveryCode','recoverPassword','oldPasswordRejected','loginByEmailAfterRecovery','saveSurvivesRelogin','deleteAccount','deletedAccountRejected'];
-          const browser=['publicAccountUiLoaded','registerUi','sessionPersistsReload','logoutUi','loginUi','deleteUi'];
+          const browser=['publicAccountUiLoaded','registerUi','sessionPersistsReload','accountButtonVisibleAfterReload','logoutUi','loginUi','deleteUi'];
           for(const k of backend)if(a.checks?.[k]!==true)throw new Error(`backend gate ausente: ${k}`);
           for(const k of browser)if(b.checks?.[k]!==true)throw new Error(`browser gate ausente: ${k}`);
           console.log(a.status,b.status);
