@@ -1,0 +1,10 @@
+{
+  "id": "minigames",
+  "version": "1.0.0",
+  "dependencies": [
+    "core-naruto"
+  ],
+  "assets": [],
+  "data": [],
+  "checksum": "generated-by-integrity-gate"
+}

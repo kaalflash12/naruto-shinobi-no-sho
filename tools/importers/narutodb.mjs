@@ -1,0 +1,1 @@
+import{fetchJson,writeRaw}from './_shared.mjs';let page=1,characters=[];for(;;){const d=await fetchJson('https://narutodb.xyz/api/character?page='+page+'&limit=100');const rows=d.characters||[];characters.push(...rows);if(!rows.length||characters.length>=Number(d.totalCharacters||0)||page>=50)break;page++;}console.log(writeRaw('narutodb',{characters,count:characters.length}));

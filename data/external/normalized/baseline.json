@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-08-22T20:04:59.358Z",
+  "canonicalAuthority": "NARUTO SHINOBI NO SHO",
+  "normalization": {
+    "canonicalId": "unicode-normalized lower snake_case",
+    "aliases": "source names resolve to SNS canonical ids",
+    "precedence": [
+      "validated-sns",
+      "approved-local",
+      "external-candidate"
+    ]
+  },
+  "sources": [
+    "narutodb",
+    "naruto-api",
+    "naruto-br-api",
+    "characters-api"
+  ]
+}

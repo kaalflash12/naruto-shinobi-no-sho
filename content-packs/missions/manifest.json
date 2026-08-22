@@ -1,0 +1,12 @@
+{
+  "id": "missions",
+  "version": "1.0.0",
+  "dependencies": [
+    "core-naruto"
+  ],
+  "assets": [],
+  "data": [
+    "data/r33-mission-scripts.js"
+  ],
+  "checksum": "generated-by-integrity-gate"
+}

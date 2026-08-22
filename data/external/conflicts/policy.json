@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-08-22T20:04:59.358Z",
+  "policy": "Every external conflict is explicit. Existing validated SNS values win unless manually approved.",
+  "statuses": [
+    "candidate",
+    "same",
+    "conflict",
+    "approved",
+    "rejected"
+  ],
+  "silentOverwrite": false
+}

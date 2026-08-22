@@ -1,0 +1,11 @@
+{
+  "id": "core-naruto",
+  "version": "1.0.0",
+  "dependencies": [],
+  "assets": [],
+  "data": [
+    "app.js",
+    "data/catalogo.json"
+  ],
+  "checksum": "generated-by-integrity-gate"
+}

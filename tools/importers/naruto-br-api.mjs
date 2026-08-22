@@ -1,0 +1,1 @@
+import{fetchJson,writeRaw}from './_shared.mjs';const d=await fetchJson('https://api.github.com/repos/WillianDDaniel/naruto-br-api');console.log(writeRaw('naruto-br-api',{repository:d.full_name,defaultBranch:d.default_branch,description:d.description,updatedAt:d.updated_at}));
