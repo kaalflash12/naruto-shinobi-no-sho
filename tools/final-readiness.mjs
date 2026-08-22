@@ -12,6 +12,8 @@ const documentation = readJson('docs/generated/DOCUMENTATION-AUDIT.json');
 const live = readJson('audit/SUPABASE-LIVE-E2E.json');
 const browserLive = readJson('audit/BROWSER-LIVE-API.json');
 const browserSmoke = readJson('audit/BROWSER-SMOKE.json');
+const accountLive = readJson('audit/ACCOUNT-LIVE-E2E.json');
+const browserAccount = readJson('audit/BROWSER-ACCOUNT-LIVE.json');
 const apiConfig = fs.readFileSync(path.join(ROOT, 'r41-api-config.js'), 'utf8');
 
 pass(canonical.ok === true && canonical.status === 'PASS_FINAL_CANONICAL_SPEC', 'canonical spec sem PASS_FINAL_CANONICAL_SPEC');
@@ -49,9 +51,27 @@ pass(browserLive.backendStatus?.corsEnforcedByBrowser === true, 'CORS não foi p
 pass(Array.isArray(browserLive.pageErrors) && browserLive.pageErrors.length === 0, 'browser live possui exceções JS');
 pass(Array.isArray(browserLive.failures) && browserLive.failures.length === 0, 'browser live possui falhas');
 
+pass(accountLive.ok === true && accountLive.status === 'PASS_ACCOUNT_LIVE_E2E', 'backend de contas live sem PASS');
+const accountRequired = [
+  'authStatus','authV2LegacyBridge','register','meAfterRegister','sharedSessionWithGameApi','logout',
+  'loginByUsername','rotateRecoveryCode','recoverPassword','oldPasswordRejected','loginByEmailAfterRecovery',
+  'saveSurvivesRelogin','deleteAccount','deletedAccountRejected'
+];
+for (const key of accountRequired) pass(accountLive.checks?.[key] === true, `gate de conta ausente: ${key}`);
+pass(accountLive.evidence?.authStatus?.build === 'NARUTO-SHINOBI-NO-SHO-AUTH-20260822-V2', 'backend de autenticação não confirmou build v2');
+pass(accountLive.evidence?.authStatus?.legacyUsernameBridge === true, 'ponte de contas antigas não confirmada pelo backend live');
+
+pass(browserAccount.ok === true && browserAccount.status === 'PASS_BROWSER_ACCOUNT_LIVE', 'browser de contas live sem PASS');
+const browserAccountRequired = ['publicAccountUiLoaded','registerUi','sessionPersistsReload','accountButtonVisibleAfterReload','logoutUi','loginUi','deleteUi'];
+for (const key of browserAccountRequired) pass(browserAccount.checks?.[key] === true, `gate browser de conta ausente: ${key}`);
+pass(Array.isArray(browserAccount.pageErrors) && browserAccount.pageErrors.length === 0, 'browser de contas possui exceções JS');
+pass(Array.isArray(browserAccount.failures) && browserAccount.failures.length === 0, 'browser de contas possui falhas');
+
 const expectedOrigin = 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api';
+const expectedAuthOrigin = 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth';
 pass(apiConfig.includes(`const baked = "${expectedOrigin}"`), 'r41-api-config não aponta para Supabase live');
-pass(apiConfig.includes('NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE'), 'identidade da API pública incorreta');
+pass(apiConfig.includes(`const authBaked = "${expectedAuthOrigin}"`), 'r41-api-config não aponta para shinobi-auth live');
+pass(apiConfig.includes('NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V2'), 'identidade/build da API pública de autenticação incorreta');
 pass(apiConfig.includes('sb_publishable_'), 'publishable key Supabase ausente da configuração pública');
 
 const report = {
@@ -61,7 +81,8 @@ const report = {
   repository: 'kaalflash12/naruto-shinobi-no-sho',
   publicGame: 'https://kaalflash12.github.io/naruto-shinobi-no-sho/',
   backend: expectedOrigin,
-  stack: 'GitHub Pages + Supabase Postgres + Supabase Edge Function',
+  authBackend: expectedAuthOrigin,
+  stack: 'GitHub Pages + Supabase Postgres + Supabase Edge Functions',
   gates: {
     canonical: canonical.status,
     documentation: documentation.status,
@@ -69,7 +90,9 @@ const report = {
     assetPaths: operational.assetAudit?.status,
     browserSmoke: browserSmoke.status,
     supabaseLive: live.status,
-    browserLive: browserLive.status
+    browserLive: browserLive.status,
+    accountLive: accountLive.status,
+    browserAccount: browserAccount.status
   },
   coverage: {
     functions: canonical.counts?.functions,
@@ -86,6 +109,8 @@ const report = {
   },
   operationalContracts: operational.contracts?.map(x => ({ id: x.id, status: x.status })) || [],
   liveChecks: live.checks || {},
+  accountChecks: accountLive.checks || {},
+  browserAccountChecks: browserAccount.checks || {},
   failures
 };
 
