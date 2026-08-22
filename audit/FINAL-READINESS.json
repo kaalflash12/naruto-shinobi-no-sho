@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-08-22T19:58:44.000Z",
+  "generatedAt": "2026-08-22T20:01:45.108Z",
+  "gateVersion": "ACCOUNT-INTEGRATED-V2",
   "status": "PASS_FINAL_READINESS",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
@@ -32,17 +33,50 @@
     "missingLiteralAssetReferences": 0
   },
   "operationalContracts": [
-    {"id":"save_autosave","status":"PASS_STATIC_TRACE"},
-    {"id":"kurai_hud_resource","status":"PASS_STATIC_TRACE"},
-    {"id":"persistent_injuries","status":"PASS_STATIC_TRACE"},
-    {"id":"hospital_treatment","status":"PASS_STATIC_TRACE"},
-    {"id":"rest_consequences","status":"PASS_STATIC_TRACE"},
-    {"id":"world_tick","status":"PASS_STATIC_TRACE"},
-    {"id":"minigame_engine","status":"PASS_STATIC_TRACE"},
-    {"id":"mission_choice_resolution","status":"PASS_STATIC_TRACE"},
-    {"id":"combat_pipeline","status":"PASS_STATIC_TRACE"},
-    {"id":"online_intent_state","status":"PASS_STATIC_TRACE"},
-    {"id":"visual_state","status":"PASS_STATIC_TRACE"}
+    {
+      "id": "save_autosave",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "kurai_hud_resource",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "persistent_injuries",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "hospital_treatment",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "rest_consequences",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "world_tick",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "minigame_engine",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "mission_choice_resolution",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "combat_pipeline",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "online_intent_state",
+      "status": "PASS_STATIC_TRACE"
+    },
+    {
+      "id": "visual_state",
+      "status": "PASS_STATIC_TRACE"
+    }
   ],
   "liveChecks": {
     "statusConfigured": true,
