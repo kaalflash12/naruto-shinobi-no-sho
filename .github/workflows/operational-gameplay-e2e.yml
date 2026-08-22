@@ -1,0 +1,52 @@
+name: Operational Gameplay E2E
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/browser-operational-probe.mjs'
+      - 'tools/browser-operational-gameplay.mjs'
+      - '.github/workflows/operational-gameplay-e2e.yml'
+      - 'app.js'
+      - 'src/**'
+      - 'data/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  operational-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Playwright in CI only
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Probe public gameplay runtime
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          OPERATIONAL_PROBE_REPORT: audit/BROWSER-OPERATIONAL-PROBE.json
+        run: node tools/browser-operational-probe.mjs
+
+      - name: Show probe summary
+        if: always()
+        run: cat audit/BROWSER-OPERATIONAL-PROBE.json || true
+
+      - name: Upload probe evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: operational-gameplay-probe
+          path: audit/BROWSER-OPERATIONAL-PROBE.json
+          if-no-files-found: error
