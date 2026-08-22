@@ -51,7 +51,7 @@ try {
   }));
   assert(runtime.r41, 'window.__NARUTO_R41__ não foi inicializado');
   assert(runtime.reset && runtime.resetKeys, 'handler de reset local não foi carregado');
-  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE', `API build inesperado: ${runtime.apiBuild}`);
+  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V2', `API build inesperado: ${runtime.apiBuild}`);
 
   await page.evaluate(() => {
     localStorage.setItem('sns-v841-account-save:e2e-browser:slot', 'e2e');
