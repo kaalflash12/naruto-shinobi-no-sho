@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-08-22T17:53:30.460Z",
+  "status": "PASS_ACCOUNT_LIVE_E2E",
+  "ok": true,
+  "authOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth",
+  "apiOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
+  "checks": {
+    "authStatus": true,
+    "register": true,
+    "meAfterRegister": true,
+    "sharedSessionWithGameApi": true,
+    "logout": true,
+    "loginByUsername": true,
+    "rotateRecoveryCode": true,
+    "recoverPassword": true,
+    "oldPasswordRejected": true,
+    "loginByEmailAfterRecovery": true,
+    "saveSurvivesRelogin": true,
+    "deleteAccount": true,
+    "deletedAccountRejected": true
+  },
+  "evidence": {
+    "account": {
+      "username": "acct_mt4of7uf6ll93u",
+      "emailLinked": true
+    }
+  },
+  "failures": []
+}
