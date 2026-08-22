@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-08-22T19:32:32.289Z",
+  "generatedAt": "2026-08-22T19:58:44.000Z",
   "status": "PASS_FINAL_READINESS",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "publicGame": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
   "backend": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
-  "stack": "GitHub Pages + Supabase Postgres + Supabase Edge Function",
+  "authBackend": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth",
+  "stack": "GitHub Pages + Supabase Postgres + Supabase Edge Functions",
   "gates": {
     "canonical": "PASS_FINAL_CANONICAL_SPEC",
     "documentation": "PASS_STATIC_COVERAGE",
@@ -13,7 +14,9 @@
     "assetPaths": "PASS",
     "browserSmoke": "PASS_BROWSER_SMOKE",
     "supabaseLive": "PASS_SUPABASE_LIVE_E2E",
-    "browserLive": "PASS_BROWSER_LIVE_API"
+    "browserLive": "PASS_BROWSER_LIVE_API",
+    "accountLive": "PASS_ACCOUNT_LIVE_E2E",
+    "browserAccount": "PASS_BROWSER_ACCOUNT_LIVE"
   },
   "coverage": {
     "functions": 1007,
@@ -29,50 +32,17 @@
     "missingLiteralAssetReferences": 0
   },
   "operationalContracts": [
-    {
-      "id": "save_autosave",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "kurai_hud_resource",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "persistent_injuries",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "hospital_treatment",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "rest_consequences",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "world_tick",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "minigame_engine",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "mission_choice_resolution",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "combat_pipeline",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "online_intent_state",
-      "status": "PASS_STATIC_TRACE"
-    },
-    {
-      "id": "visual_state",
-      "status": "PASS_STATIC_TRACE"
-    }
+    {"id":"save_autosave","status":"PASS_STATIC_TRACE"},
+    {"id":"kurai_hud_resource","status":"PASS_STATIC_TRACE"},
+    {"id":"persistent_injuries","status":"PASS_STATIC_TRACE"},
+    {"id":"hospital_treatment","status":"PASS_STATIC_TRACE"},
+    {"id":"rest_consequences","status":"PASS_STATIC_TRACE"},
+    {"id":"world_tick","status":"PASS_STATIC_TRACE"},
+    {"id":"minigame_engine","status":"PASS_STATIC_TRACE"},
+    {"id":"mission_choice_resolution","status":"PASS_STATIC_TRACE"},
+    {"id":"combat_pipeline","status":"PASS_STATIC_TRACE"},
+    {"id":"online_intent_state","status":"PASS_STATIC_TRACE"},
+    {"id":"visual_state","status":"PASS_STATIC_TRACE"}
   ],
   "liveChecks": {
     "statusConfigured": true,
@@ -95,6 +65,31 @@
     "factsOnlyNarrator": true,
     "saveCleanup": true,
     "sessionRevocation": true
+  },
+  "accountChecks": {
+    "authStatus": true,
+    "authV2LegacyBridge": true,
+    "register": true,
+    "meAfterRegister": true,
+    "sharedSessionWithGameApi": true,
+    "logout": true,
+    "loginByUsername": true,
+    "rotateRecoveryCode": true,
+    "recoverPassword": true,
+    "oldPasswordRejected": true,
+    "loginByEmailAfterRecovery": true,
+    "saveSurvivesRelogin": true,
+    "deleteAccount": true,
+    "deletedAccountRejected": true
+  },
+  "browserAccountChecks": {
+    "publicAccountUiLoaded": true,
+    "registerUi": true,
+    "sessionPersistsReload": true,
+    "accountButtonVisibleAfterReload": true,
+    "logoutUi": true,
+    "loginUi": true,
+    "deleteUi": true
   },
   "failures": []
 }
