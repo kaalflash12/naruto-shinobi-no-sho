@@ -1,0 +1,39 @@
+name: Integral Readiness
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/**'
+      - 'assets/**'
+      - 'tools/**'
+      - 'audit/**'
+      - '.github/workflows/integral-readiness.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integral-readiness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run integral operational gate
+        run: node tools/integral-readiness.mjs
+      - name: Upload integral evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integral-readiness-evidence
+          path: audit/INTEGRAL-READINESS.json
+          if-no-files-found: error
