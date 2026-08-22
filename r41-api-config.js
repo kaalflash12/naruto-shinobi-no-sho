@@ -11,7 +11,7 @@
 
   window.NARUTO_R41_API_ORIGIN = origin;
   window.NARUTO_R41_AUTH_ORIGIN = authBaked;
-  window.NARUTO_R41_API_BUILD = "NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V1";
+  window.NARUTO_R41_API_BUILD = "NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V2";
   window.NARUTO_R41_SUPABASE_PUBLISHABLE_KEY = publishableKey;
 
   // A chave publishable identifica o projeto Supabase; nao concede acesso direto
