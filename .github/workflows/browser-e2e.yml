@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'audit/BROWSER-SMOKE.json'
+      - 'audit/BROWSER-GAMEPLAY-E2E.json'
   pull_request:
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ permissions:
 jobs:
   browser:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,28 +47,47 @@ jobs:
           BROWSER_REPORT: audit/BROWSER-SMOKE.json
         run: node tools/browser-smoke.mjs
 
-      - name: Enforce browser report
+      - name: Enforce browser smoke report
         run: |
           test -s audit/BROWSER-SMOKE.json
           node -e "const r=require('./audit/BROWSER-SMOKE.json'); if(!r.ok||r.status!=='PASS_BROWSER_SMOKE'||!r.checks.httpLoad||!r.checks.publicIdentity||!r.checks.r41RuntimeLoaded||!r.checks.localResetClickReload||!r.checks.runtimeRequests||!r.checks.pageExceptions) process.exit(1); console.log(r.status,r.checks,r.api)"
+
+      - name: Run public Chromium gameplay E2E
+        id: gameplay
+        continue-on-error: true
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
+        run: node tools/browser-gameplay-e2e.mjs
 
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: shinobi-browser-smoke
-          path: audit/BROWSER-SMOKE.json
+          name: shinobi-browser-e2e
+          path: |
+            audit/BROWSER-SMOKE.json
+            audit/BROWSER-GAMEPLAY-E2E.json
           if-no-files-found: warn
 
-      - name: Commit browser evidence after successful main run
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: Commit browser evidence on main
+        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add audit/BROWSER-SMOKE.json
+          if [ -f audit/BROWSER-GAMEPLAY-E2E.json ]; then git add audit/BROWSER-GAMEPLAY-E2E.json; fi
           if git diff --cached --quiet; then
             echo "Browser evidence unchanged."
           else
-            git commit -m "test: record verified browser smoke evidence"
+            status="$(node -e "try{const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'NO_GAMEPLAY_REPORT')}catch{process.stdout.write('NO_GAMEPLAY_REPORT')}")"
+            git commit -m "test: browser evidence ${status}"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      - name: Enforce gameplay report
+        if: always()
+        run: |
+          test -s audit/BROWSER-GAMEPLAY-E2E.json
+          node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json'); if(!r.ok||r.status!=='PASS_BROWSER_GAMEPLAY_E2E'||!r.checks.allOperationalContractsGameplayE2E) { console.error(r.failures); process.exit(1); } console.log(r.status,r.contracts.map(x=>x.id+':'+x.status));"
