@@ -9,6 +9,8 @@ on:
       - 'audit/SUPABASE-LIVE-E2E.json'
       - 'audit/BROWSER-LIVE-API.json'
       - 'audit/BROWSER-SMOKE.json'
+      - 'audit/ACCOUNT-LIVE-E2E.json'
+      - 'audit/BROWSER-ACCOUNT-LIVE.json'
       - 'docs/generated/FINAL-CANONICAL-AUDIT.json'
       - 'docs/generated/DOCUMENTATION-AUDIT.json'
       - 'docs/generated/OPERATIONAL-STATIC-AUDIT.json'
@@ -40,7 +42,7 @@ jobs:
       - name: Validate gate syntax
         run: node --check tools/final-readiness.mjs
 
-      - name: Run final all-systems gate
+      - name: Run final all-systems gate including accounts
         run: node tools/final-readiness.mjs
 
       - name: Enforce PASS_FINAL_READINESS
@@ -48,7 +50,9 @@ jobs:
           node - <<'NODE'
           const r = require('./audit/FINAL-READINESS.json');
           if (!r.ok || r.status !== 'PASS_FINAL_READINESS') throw new Error(JSON.stringify(r.failures || []));
-          console.log(r.status);
+          if (r.gates?.accountLive !== 'PASS_ACCOUNT_LIVE_E2E') throw new Error('accountLive sem PASS');
+          if (r.gates?.browserAccount !== 'PASS_BROWSER_ACCOUNT_LIVE') throw new Error('browserAccount sem PASS');
+          console.log(r.status, r.gates.accountLive, r.gates.browserAccount);
           NODE
 
       - name: Upload final readiness evidence
@@ -67,7 +71,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Final readiness evidence unchanged."
           else
-            git commit -m "test: record PASS_FINAL_READINESS"
+            git commit -m "test: record PASS_FINAL_READINESS including accounts"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
