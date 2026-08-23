@@ -3,8 +3,8 @@ import base, { GameRoom } from "./entry.js";
 import { resolveTerionIntent, hasClientResult, stripClientMechanical } from "./terion-mechanics.js";
 export { GameRoom };
 
-const BUILD="R41-AUTHORITATIVE-TERION-20260823-V3";
-let client=null,clientUri="",emailIndexPromise=null;
+const BUILD="R41-AUTHORITATIVE-TERION-20260823-V4";
+let client=null,clientUri="",authorityIndexesPromise=null;
 
 function originHeaders(req,env){
   const origin=req.headers.get("origin")||"";
@@ -17,15 +17,49 @@ function json(req,env,status,data){return new Response(JSON.stringify(data),{sta
 async function body(req){try{return await req.clone().json();}catch{return{};}}
 async function db(env){
   if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");
-  if(!client||clientUri!==env.MONGODB_URI){clientUri=env.MONGODB_URI;client=new MongoClient(env.MONGODB_URI,{maxPoolSize:4,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();emailIndexPromise=null;}
+  if(!client||clientUri!==env.MONGODB_URI){clientUri=env.MONGODB_URI;client=new MongoClient(env.MONGODB_URI,{maxPoolSize:4,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();authorityIndexesPromise=null;}
   const out=client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");
-  if(!emailIndexPromise)emailIndexPromise=out.collection("users").createIndex({emailLower:1},{unique:true,sparse:true,name:"uq_email"}).catch(e=>{emailIndexPromise=null;throw e;});
-  await emailIndexPromise;return out;
+  if(!authorityIndexesPromise)authorityIndexesPromise=Promise.all([
+    out.collection("users").createIndex({emailLower:1},{unique:true,sparse:true,name:"uq_email"}),
+    out.collection("mechanical_profiles").createIndex({userId:1},{unique:true,name:"uq_mechanical_profile_user"}),
+    out.collection("mechanical_profiles").createIndex({updatedAt:-1},{name:"ix_mechanical_profile_updated"})
+  ]).catch(e=>{authorityIndexesPromise=null;throw e;});
+  await authorityIndexesPromise;return out;
 }
 function validEmail(value){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value||"").trim());}
 function copyRequest(req,url,data){const headers=new Headers(req.headers);headers.set("content-type","application/json");return new Request(url,{method:req.method,headers,body:JSON.stringify(data)});}
 function oid(value){try{return new ObjectId(String(value));}catch{return null;}}
 function text(value,max=120){return String(value??"").trim().slice(0,max);}
+function finite(value,fallback=0){const n=Number(value);return Number.isFinite(n)?n:fallback;}
+function cloneBounded(value,depth=0){
+  if(depth>8)return null;
+  if(value===null||value===undefined||typeof value==="string"||typeof value==="boolean")return value;
+  if(typeof value==="number")return Number.isFinite(value)?value:0;
+  if(Array.isArray(value))return value.slice(0,100).map(v=>cloneBounded(v,depth+1));
+  if(typeof value!=="object")return String(value).slice(0,300);
+  const out={};for(const [k,v] of Object.entries(value).slice(0,100))out[String(k).slice(0,80)]=cloneBounded(v,depth+1);return out;
+}
+function mechanicalCharacterSnapshot(character={}){
+  const out={};
+  for(const key of ["name","nome","level","nivel","attributes","atributos","stats","status","sheet","ficha","specialProfile","privateCharacter","clan","cla","graduation","graduacao","hp","pv","maxHp","maxPv","chakra","maxChakra","stamina","maxStamina"]){
+    if(character[key]!==undefined)out[key]=cloneBounded(character[key]);
+  }
+  const level=Math.max(1,Math.floor(finite(character.level??character.nivel,1)));
+  out.level=level;
+  return out;
+}
+function mechanicalProfileFromSave(saveData={},source={}){
+  const character=saveData?.character&&typeof saveData.character==="object"&&!Array.isArray(saveData.character)?mechanicalCharacterSnapshot(saveData.character):null;
+  if(!character)return null;
+  return {character,totalXp:Math.max(0,Math.floor(finite(saveData?.stats?.totalXp??saveData?.stats?.xp??saveData?.character?.xp,0))),baselineSource:text(source.type||"latest-save-at-first-authority-use",80),baselineSlotId:text(source.slotId||"",100),locked:true,version:1};
+}
+async function seedMechanicalProfile(store,userId,saveData,source={}){
+  const userObjectId=oid(userId),snapshot=mechanicalProfileFromSave(saveData,source);if(!userObjectId||!snapshot)return null;
+  const now=new Date();
+  await store.collection("mechanical_profiles").updateOne({userId:userObjectId},{$setOnInsert:{userId:userObjectId,...snapshot,createdAt:now,updatedAt:now}},{upsert:true});
+  return store.collection("mechanical_profiles").findOne({userId:userObjectId});
+}
+async function lockedMechanicalProfile(store,userId){const userObjectId=oid(userId);return userObjectId?store.collection("mechanical_profiles").findOne({userId:userObjectId}):null;}
 async function account(req,env,ctx){
   const u=new URL(req.url);u.pathname="/api/auth/me";u.search="";
   const r=await base.fetch(new Request(u.toString(),{method:"POST",headers:req.headers}),env,ctx),d=await r.clone().json().catch(()=>({}));
@@ -64,19 +98,15 @@ async function emailAwareAuth(req,env,ctx,path){
 }
 
 async function trustedCharacter(store,userId){
+  const locked=await lockedMechanicalProfile(store,userId);if(locked?.character)return locked.character;
   const userObjectId=oid(userId);if(!userObjectId)return null;
-  const save=await store.collection("saves").findOne({userId:userObjectId},{sort:{updatedAt:-1},projection:{"data.character":1,slotId:1,updatedAt:1}});
-  const character=save?.data?.character;
-  return character&&typeof character==="object"&&!Array.isArray(character)?character:null;
+  const save=await store.collection("saves").findOne({userId:userObjectId},{sort:{updatedAt:-1},projection:{data:1,slotId:1,updatedAt:1}});
+  if(!save?.data?.character)return null;
+  const seeded=await seedMechanicalProfile(store,userId,save.data,{type:"latest-save-at-first-authority-use",slotId:save.slotId});
+  return seeded?.character||null;
 }
 function publicCharacterSnapshot(character={},acct={},trusted=false){
-  const out={
-    name:text(character.name||character.nome||acct.displayName||acct.username||"Shinobi",80),
-    avatar:text(character.avatar||character.portrait||"",320),
-    graduation:text(character.graduation||character.graduacao||"",80),
-    clan:text(character.clan||character.cla||"",80),
-    role:text(acct.role||"player",32)
-  };
+  const out={name:text(character.name||character.nome||acct.displayName||acct.username||"Shinobi",80),avatar:text(character.avatar||character.portrait||"",320),graduation:text(character.graduation||character.graduacao||"",80),clan:text(character.clan||character.cla||"",80),role:text(acct.role||"player",32)};
   if(trusted){const lv=Number(character.level??character.nivel);if(Number.isFinite(lv))out.level=Math.max(1,Math.floor(lv));}
   return out;
 }
@@ -88,89 +118,63 @@ async function authoritativeMembership(req,env,ctx,path){
   if(trusted)safe.character=publicCharacterSnapshot(trusted,me,true);
   else if(/\/(create|join)$/.test(path))safe.character=publicCharacterSnapshot(payload.character||{},me,false);
   else delete safe.character;
-  delete safe.userId;
-  delete safe.role;
+  delete safe.userId;delete safe.role;
   return base.fetch(copyRequest(req,req.url,safe),env,ctx);
 }
 async function roomSnapshot(req,env,ctx,roomId){
-  const u=new URL(req.url);u.pathname="/api/online/room";u.search="";
-  const headers=new Headers(req.headers);headers.set("content-type","application/json");
-  const r=await base.fetch(new Request(u.toString(),{method:"POST",headers,body:JSON.stringify({roomId})}),env,ctx),data=await r.clone().json().catch(()=>({}));
-  return {response:r,data};
+  const u=new URL(req.url);u.pathname="/api/online/room";u.search="";const headers=new Headers(req.headers);headers.set("content-type","application/json");
+  const r=await base.fetch(new Request(u.toString(),{method:"POST",headers,body:JSON.stringify({roomId})}),env,ctx),data=await r.clone().json().catch(()=>({}));return {response:r,data};
 }
 function actionType(envelope){return String(envelope?.type||envelope?.action||envelope?.intent||"action").trim().toLowerCase().slice(0,80)||"action";}
 function serverActionType(envelope){
   const raw=`${text(envelope?.text,500)} ${text(envelope?.description||envelope?.descricao,500)} ${text(envelope?.type||envelope?.action||envelope?.intent,80)}`.toLowerCase();
-  if(/bloque|block/.test(raw))return "block";
-  if(/defend|defesa|defender|esquiv|dodge/.test(raw))return "defend";
-  if(/investig|examinar|analisar|procurar pista/.test(raw))return "investigate";
-  if(/perceb|observar|vigiar|detectar|sentir/.test(raw))return "perceive";
-  if(/persuad|convenc|negoci|intimid|convers|social/.test(raw))return "social";
-  if(/mover|moviment|correr|saltar|escalar|move/.test(raw))return "move";
-  if(/jutsu|t[eé]cnica|atac|golpe|attack/.test(raw))return "jutsu";
-  return actionType(envelope)==="intent"?"action":actionType(envelope);
+  if(/bloque|block/.test(raw))return "block";if(/defend|defesa|defender|esquiv|dodge/.test(raw))return "defend";if(/investig|examinar|analisar|procurar pista/.test(raw))return "investigate";if(/perceb|observar|vigiar|detectar|sentir/.test(raw))return "perceive";if(/persuad|convenc|negoci|intimid|convers|social/.test(raw))return "social";if(/mover|moviment|correr|saltar|escalar|move/.test(raw))return "move";if(/jutsu|t[eé]cnica|atac|golpe|attack/.test(raw))return "jutsu";return actionType(envelope)==="intent"?"action":actionType(envelope);
 }
 async function authoritativeAction(req,env,ctx){
-  if(req.method!=="POST")return json(req,env,405,{ok:false,error:"METHOD_NOT_ALLOWED"});
-  if(!env.MONGODB_URI||!env.AUTH_SECRET||!env.GAME_ROOMS)return base.fetch(req,env,ctx);
-  const payload=await body(req),roomId=String(payload.roomId||"").trim(),envelope=payload.action??payload;
-  if(!roomId)return json(req,env,400,{ok:false,error:"ROOM_ID_REQUIRED"});
+  if(req.method!=="POST")return json(req,env,405,{ok:false,error:"METHOD_NOT_ALLOWED"});if(!env.MONGODB_URI||!env.AUTH_SECRET||!env.GAME_ROOMS)return base.fetch(req,env,ctx);
+  const payload=await body(req),roomId=String(payload.roomId||"").trim(),envelope=payload.action??payload;if(!roomId)return json(req,env,400,{ok:false,error:"ROOM_ID_REQUIRED"});
   if(hasClientResult(envelope))return json(req,env,400,{ok:false,error:"CLIENT_MECHANICAL_RESULT_FORBIDDEN",rule:"client sends intent only; TERION result is generated server-side"});
-  const rawType=actionType(envelope);
-  if(/grant|award|give.?xp|set.?level|admin/i.test(rawType))return json(req,env,400,{ok:false,error:"CLIENT_AUTHORITY_FORBIDDEN"});
-  const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});
-  const snap=await roomSnapshot(req,env,ctx,roomId);if(!snap.response.ok)return snap.response;
-  const members=Array.isArray(snap.data?.members)?snap.data.members:[];
-  if(!members.some(x=>String(x.userId)===String(me.id)))return json(req,env,403,{ok:false,error:"ROOM_MEMBERSHIP_REQUIRED"});
-  const store=await db(env),character=await trustedCharacter(store,me.id);
-  if(!character)return json(req,env,409,{ok:false,error:"AUTHORITATIVE_CHARACTER_SAVE_REQUIRED",rule:"online TERION mechanics require a server-side MongoDB save"});
-  const type=serverActionType(envelope);
-  const mechanicalResult=resolveTerionIntent({intent:{type,difficulty:"normal"},character});
-  const serverEnvelope={...envelope,mechanicalResult};
-  const stub=env.GAME_ROOMS.getByName(roomId);
-  const internal=await stub.fetch("https://room.internal/action",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({...payload,userId:String(me.id),action:serverEnvelope})});
-  const data=await internal.clone().json().catch(()=>({}));
-  if(!internal.ok)return json(req,env,internal.status,data);
-  data.mechanicalResult=mechanicalResult;
-  if(data.event)data.event={...data.event,mechanicalResult};
-  return json(req,env,internal.status,data);
+  const rawType=actionType(envelope);if(/grant|award|give.?xp|set.?level|admin/i.test(rawType))return json(req,env,400,{ok:false,error:"CLIENT_AUTHORITY_FORBIDDEN"});
+  const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});const snap=await roomSnapshot(req,env,ctx,roomId);if(!snap.response.ok)return snap.response;
+  const members=Array.isArray(snap.data?.members)?snap.data.members:[];if(!members.some(x=>String(x.userId)===String(me.id)))return json(req,env,403,{ok:false,error:"ROOM_MEMBERSHIP_REQUIRED"});
+  const store=await db(env),character=await trustedCharacter(store,me.id);if(!character)return json(req,env,409,{ok:false,error:"AUTHORITATIVE_CHARACTER_SAVE_REQUIRED",rule:"online TERION mechanics require a locked MongoDB mechanical baseline"});
+  const type=serverActionType(envelope),mechanicalResult=resolveTerionIntent({intent:{type,difficulty:"normal"},character}),serverEnvelope={...envelope,mechanicalResult};
+  const stub=env.GAME_ROOMS.getByName(roomId),internal=await stub.fetch("https://room.internal/action",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({...payload,userId:String(me.id),action:serverEnvelope})});
+  const data=await internal.clone().json().catch(()=>({}));if(!internal.ok)return json(req,env,internal.status,data);data.mechanicalResult=mechanicalResult;if(data.event)data.event={...data.event,mechanicalResult};return json(req,env,internal.status,data);
 }
 async function authoritativeWorld(req,env,ctx,path){
-  if(!["/api/v84/world/event","/api/v84/world/savepoint"].includes(path))return null;
-  if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);
-  const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});
-  const payload=await body(req),safe={...payload};
-  delete safe.userId;
-  if(path==="/api/v84/world/event"){
-    safe.detail=stripClientMechanical(payload.detail||{});
-    return base.fetch(copyRequest(req,req.url,safe),env,ctx);
-  }
-  const store=await db(env),character=await trustedCharacter(store,me.id);
-  safe.changes=Array.isArray(payload.changes)?payload.changes.slice(-100).map(x=>stripClientMechanical(x)).filter(x=>x!==null&&x!==undefined):[];
-  if(character)safe.character=character;else delete safe.character;
-  return base.fetch(copyRequest(req,req.url,safe),env,ctx);
+  if(!["/api/v84/world/event","/api/v84/world/savepoint"].includes(path))return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);
+  const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});const payload=await body(req),safe={...payload};delete safe.userId;
+  if(path==="/api/v84/world/event"){safe.detail=stripClientMechanical(payload.detail||{});return base.fetch(copyRequest(req,req.url,safe),env,ctx);}
+  const store=await db(env),character=await trustedCharacter(store,me.id);safe.changes=Array.isArray(payload.changes)?payload.changes.slice(-100).map(x=>stripClientMechanical(x)).filter(x=>x!==null&&x!==undefined):[];if(character)safe.character=character;else delete safe.character;return base.fetch(copyRequest(req,req.url,safe),env,ctx);
+}
+async function authoritativeLeaderboard(req,env,ctx,path){
+  if(path!=="/api/leaderboard")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});
+  const store=await db(env),profiles=await store.collection("mechanical_profiles").find({locked:true}).sort({updatedAt:-1}).limit(300).toArray(),ids=profiles.map(p=>p.userId),users=ids.length?await store.collection("users").find({_id:{$in:ids}},{projection:{username:1,displayName:1}}).toArray():[],names=new Map(users.map(u=>[String(u._id),u]));
+  const leaderboard=profiles.map(p=>{const u=names.get(String(p.userId)),c=p.character||{};return{username:u?.username||"shinobi",displayName:u?.displayName||u?.username||"Shinobi",name:c.name||c.nome||null,level:Math.max(1,Math.floor(finite(c.level??c.nivel,1))),xp:Math.max(0,Math.floor(finite(p.totalXp,0))),avatar:c.avatar||c.portrait||"",authority:"locked-mechanical-profile"};}).sort((a,b)=>b.level-a.level||b.xp-a.xp).slice(0,50);
+  return json(req,env,200,{ok:true,leaderboard,authority:"mechanical_profiles",clientSaveRankIgnored:true});
+}
+async function authoritativeAccountDelete(req,env,ctx,path){
+  if(path!=="/api/auth/delete-account")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx);const res=await base.fetch(req,env,ctx);if(res.ok&&me?.id){const store=await db(env),userObjectId=oid(me.id);if(userObjectId)await store.collection("mechanical_profiles").deleteMany({userId:userObjectId});}return res;
 }
 async function status(req,env,ctx){
   const res=await base.fetch(req,env,ctx);let data;try{data=await res.clone().json();}catch{return res;}
-  data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoSave=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMongo=true;data.emailLogin=true;data.buildAuthority=BUILD;
-  data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,emailLogin:true};
+  data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoProfile=true;data.mechanicalBaselineSeededFromLatestSave=true;data.clientAutosaveCannotOverwriteMechanicalProfile=true;data.leaderboardUsesMechanicalProfiles=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMongo=true;data.emailLogin=true;data.buildAuthority=BUILD;
+  data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,authoritativeMechanicalProfile:true,authoritativeLeaderboard:true,emailLogin:true};
   return new Response(JSON.stringify(data),{status:res.status,statusText:res.statusText,headers:originHeaders(req,env)});
 }
 
-export default {
-  async fetch(req,env,ctx){
-    try{
-      const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";
-      if(path==="/"||path==="/api/status")return status(req,env,ctx);
-      if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));
-      const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;
-      const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;
-      if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);
-      const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;
-      return base.fetch(req,env,ctx);
-    }catch(e){
-      console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);
-      return json(req,env,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});
-    }
-  }
-};
+export default {async fetch(req,env,ctx){
+  try{
+    const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";
+    if(path==="/"||path==="/api/status")return status(req,env,ctx);
+    if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));
+    const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;
+    const deletion=await authoritativeAccountDelete(req,env,ctx,path);if(deletion)return deletion;
+    const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;
+    if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);
+    const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;
+    const leaderboard=await authoritativeLeaderboard(req,env,ctx,path);if(leaderboard)return leaderboard;
+    return base.fetch(req,env,ctx);
+  }catch(e){console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);return json(req,env,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});}
+}};
