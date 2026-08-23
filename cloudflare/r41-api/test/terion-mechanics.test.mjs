@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { canonicalAttribute, characterModifier, classifyTerionRoll, resolveTerionIntent, hasClientResult } from '../src/terion-mechanics.js';
+import { canonicalAttribute, characterModifier, classifyTerionRoll, resolveTerionIntent, hasClientResult, stripClientMechanical } from '../src/terion-mechanics.js';
 
 assert.equal(canonicalAttribute('', 'attack'), 'tecnica');
 assert.equal(canonicalAttribute('corpo', 'attack'), 'corpo');
@@ -43,5 +43,21 @@ const forged=[
   {type:'intent',payload:{nested:{nested:{resultado:'sucesso'}}}}
 ];
 for(const payload of forged)assert.equal(hasClientResult(payload),true,`estado mecânico forjado não bloqueado: ${JSON.stringify(payload)}`);
+
+const sanitized=stripClientMechanical({
+  label:'Cena avançou',
+  scene:'m1',
+  nested:{note:'ok',hp:999,condição:'removida',targetId:'npc-1'},
+  list:[{text:'movimento',damage:999},{text:'diálogo',speaker:'npc'}],
+  recompensa:{xp:9999},
+  progress:100
+});
+assert.deepEqual(sanitized,{
+  label:'Cena avançou',
+  scene:'m1',
+  nested:{note:'ok',targetId:'npc-1'},
+  list:[{text:'movimento'},{text:'diálogo',speaker:'npc'}]
+});
+assert.equal(hasClientResult(sanitized),false);
 
 console.log('PASS_TERION_SERVER_AUTHORITY_UNIT');
