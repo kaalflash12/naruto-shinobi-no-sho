@@ -58,11 +58,18 @@ jobs:
           grep -F "CLIENT_MECHANICAL_RESULT_FORBIDDEN" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "resolveTerionIntent" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "trustedCharacter" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanical_profiles" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "seedMechanicalProfile" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "lockedMechanicalProfile" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "delete safe.character" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "AUTHORITATIVE_CHARACTER_SAVE_REQUIRED" cloudflare/r41-api/src/entry-authoritative.js
           grep -F 'difficulty:"normal"' cloudflare/r41-api/src/entry-authoritative.js
           grep -F "clientRoomCharacterIgnored=true" cloudflare/r41-api/src/entry-authoritative.js
-          grep -F "mechanicsReadFromMongoSave=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanicsReadFromMongoProfile=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "clientAutosaveCannotOverwriteMechanicalProfile=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "leaderboardUsesMechanicalProfiles=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "authoritativeLeaderboard" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "clientSaveRankIgnored:true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "authoritativeWorld" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "stripClientMechanical" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "worldMechanicalPayloadSanitized=true" cloudflare/r41-api/src/entry-authoritative.js
