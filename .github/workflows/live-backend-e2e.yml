@@ -11,6 +11,10 @@ on:
       - 'tools/browser-live-api.mjs'
       - 'r41-api-config.js'
       - 'r41-github-api.js'
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/live-backend-probe'
 
 permissions:
   contents: write
