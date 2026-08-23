@@ -55,25 +55,38 @@ jobs:
           grep -F "r41HospitalTreat" app.js
           grep -F "r41OpenMinigame" app.js
           grep -F "r41SendOnlineIntent" app.js
+          grep -F 'R41-AUTHORITATIVE-TERION-20260823-V6' cloudflare/r41-api/src/entry-authoritative.js
           grep -F "CLIENT_MECHANICAL_RESULT_FORBIDDEN" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "resolveTerionIntent" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "trustedProfile" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "trustedCharacter" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "mechanical_profiles" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "profileKeyFor" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "matchingSave" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "seedMechanicalProfile" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "lockedMechanicalProfile" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'createIndex({userId:1,profileKey:1},{unique:true,name:"uq_mechanical_profile_user_key"})' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'dropIndex("uq_mechanical_profile_user")' cloudflare/r41-api/src/entry-authoritative.js
           grep -F "delete safe.character" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "AUTHORITATIVE_CHARACTER_SAVE_REQUIRED" cloudflare/r41-api/src/entry-authoritative.js
           grep -F 'difficulty:"normal"' cloudflare/r41-api/src/entry-authoritative.js
           grep -F "clientRoomCharacterIgnored=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "mechanicsReadFromMongoProfile=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanicalProfilesPerCharacter=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanicalProfileIndexMigrationV6=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanicalBaselineSeededFromMatchingSave=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "clientAutosaveCannotOverwriteMechanicalProfile=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "leaderboardUsesMechanicalProfiles=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "profilesPerCharacter:true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "authoritativeLeaderboard" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "clientSaveRankIgnored:true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "authoritativeSlotDelete" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "mechanicalProfileSlotCleanup=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "slotDeleteCleansMechanicalProfile=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "authoritativeWorld" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "stripClientMechanical" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "worldMechanicalPayloadSanitized=true" cloudflare/r41-api/src/entry-authoritative.js
-          grep -F "worldSavepointCharacterFromMongo=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "worldSavepointCharacterFromMechanicalProfile=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "authoritativeWorldPersistence:true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "room.internal/action" cloudflare/r41-api/src/entry-authoritative.js
           grep -F '"hp","pv","health","chakra"' cloudflare/r41-api/src/terion-mechanics.js
