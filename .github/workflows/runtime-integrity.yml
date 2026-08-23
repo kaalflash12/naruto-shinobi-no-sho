@@ -63,9 +63,15 @@ jobs:
           grep -F 'difficulty:"normal"' cloudflare/r41-api/src/entry-authoritative.js
           grep -F "clientRoomCharacterIgnored=true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "mechanicsReadFromMongoSave=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "authoritativeWorld" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "stripClientMechanical" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "worldMechanicalPayloadSanitized=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "worldSavepointCharacterFromMongo=true" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "authoritativeWorldPersistence:true" cloudflare/r41-api/src/entry-authoritative.js
           grep -F "room.internal/action" cloudflare/r41-api/src/entry-authoritative.js
           grep -F '"hp","pv","health","chakra"' cloudflare/r41-api/src/terion-mechanics.js
           grep -F '"stats","attributes","atributos","inventory","inventario"' cloudflare/r41-api/src/terion-mechanics.js
+          grep -F "export function stripClientMechanical" cloudflare/r41-api/src/terion-mechanics.js
           grep -F "PASS_TERION_SERVER_AUTHORITY_UNIT" cloudflare/r41-api/test/terion-mechanics.test.mjs
 
       - name: Validate full documentation and operational gates
