@@ -1,9 +1,9 @@
 import { MongoClient, ObjectId } from "mongodb";
 import base, { GameRoom } from "./entry.js";
-import { resolveTerionIntent, hasClientResult } from "./terion-mechanics.js";
+import { resolveTerionIntent, hasClientResult, stripClientMechanical } from "./terion-mechanics.js";
 export { GameRoom };
 
-const BUILD="R41-AUTHORITATIVE-TERION-20260823-V2";
+const BUILD="R41-AUTHORITATIVE-TERION-20260823-V3";
 let client=null,clientUri="",emailIndexPromise=null;
 
 function originHeaders(req,env){
@@ -124,7 +124,6 @@ async function authoritativeAction(req,env,ctx){
   if(!members.some(x=>String(x.userId)===String(me.id)))return json(req,env,403,{ok:false,error:"ROOM_MEMBERSHIP_REQUIRED"});
   const store=await db(env),character=await trustedCharacter(store,me.id);
   if(!character)return json(req,env,409,{ok:false,error:"AUTHORITATIVE_CHARACTER_SAVE_REQUIRED",rule:"online TERION mechanics require a server-side MongoDB save"});
-  // Tipo é classificado no servidor; difficulty/attribute/result do cliente NÃO são repassados.
   const type=serverActionType(envelope);
   const mechanicalResult=resolveTerionIntent({intent:{type,difficulty:"normal"},character});
   const serverEnvelope={...envelope,mechanicalResult};
@@ -136,10 +135,25 @@ async function authoritativeAction(req,env,ctx){
   if(data.event)data.event={...data.event,mechanicalResult};
   return json(req,env,internal.status,data);
 }
+async function authoritativeWorld(req,env,ctx,path){
+  if(!["/api/v84/world/event","/api/v84/world/savepoint"].includes(path))return null;
+  if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);
+  const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});
+  const payload=await body(req),safe={...payload};
+  delete safe.userId;
+  if(path==="/api/v84/world/event"){
+    safe.detail=stripClientMechanical(payload.detail||{});
+    return base.fetch(copyRequest(req,req.url,safe),env,ctx);
+  }
+  const store=await db(env),character=await trustedCharacter(store,me.id);
+  safe.changes=Array.isArray(payload.changes)?payload.changes.slice(-100).map(x=>stripClientMechanical(x)).filter(x=>x!==null&&x!==undefined):[];
+  if(character)safe.character=character;else delete safe.character;
+  return base.fetch(copyRequest(req,req.url,safe),env,ctx);
+}
 async function status(req,env,ctx){
   const res=await base.fetch(req,env,ctx);let data;try{data=await res.clone().json();}catch{return res;}
-  data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoSave=true;data.emailLogin=true;data.buildAuthority=BUILD;
-  data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,emailLogin:true};
+  data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoSave=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMongo=true;data.emailLogin=true;data.buildAuthority=BUILD;
+  data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,emailLogin:true};
   return new Response(JSON.stringify(data),{status:res.status,statusText:res.statusText,headers:originHeaders(req,env)});
 }
 
@@ -152,6 +166,7 @@ export default {
       const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;
       const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;
       if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);
+      const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;
       return base.fetch(req,env,ctx);
     }catch(e){
       console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);
