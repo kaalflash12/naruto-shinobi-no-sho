@@ -52,8 +52,30 @@ jobs:
           test -s audit/BROWSER-SMOKE.json
           node -e "const r=require('./audit/BROWSER-SMOKE.json'); if(!r.ok||r.status!=='PASS_BROWSER_SMOKE'||!r.checks.httpLoad||!r.checks.publicIdentity||!r.checks.r41RuntimeLoaded||!r.checks.localResetClickReload||!r.checks.runtimeRequests||!r.checks.pageExceptions) process.exit(1); console.log(r.status,r.checks,r.api)"
 
+      - name: Preflight public Cloudflare backend
+        id: backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          cfg="$(curl -fsSL --max-time 20 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?browser-e2e-preflight='"$RANDOM" || true)"
+          result="$(API_CONFIG="$cfg" node --input-type=module <<'NODE'
+          const cfg=String(process.env.API_CONFIG||'');
+          const origin=(cfg.match(/const baked = \"([^\"]*)\"/)?.[1]||'').trim().replace(/\/+$/g,'');
+          const build=(cfg.match(/window\.NARUTO_R41_API_BUILD = \"([^\"]+)\"/)?.[1]||'');
+          const ready=/^https:\/\//.test(origin)&&build==='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB';
+          process.stdout.write(JSON.stringify({ready,origin,build}));
+          NODE
+          )"
+          echo "$result"
+          ready="$(RESULT="$result" node -e "const r=JSON.parse(process.env.RESULT);process.stdout.write(r.ready?'true':'false')")"
+          echo "ready=$ready" >> "$GITHUB_OUTPUT"
+          if [ "$ready" != "true" ]; then
+            echo 'Public gameplay E2E blocked because Cloudflare Worker URL is not configured yet.' >&2
+          fi
+
       - name: Run public Chromium gameplay E2E V2
         id: gameplay
+        if: steps.backend.outputs.ready == 'true'
         continue-on-error: true
         env:
           PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
@@ -70,24 +92,45 @@ jobs:
             audit/BROWSER-GAMEPLAY-E2E.json
           if-no-files-found: warn
 
-      - name: Commit browser evidence on main
+      - name: Commit only PASS browser evidence on main
         if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add audit/BROWSER-SMOKE.json
-          if [ -f audit/BROWSER-GAMEPLAY-E2E.json ]; then git add audit/BROWSER-GAMEPLAY-E2E.json; fi
+
+          if [ -f audit/BROWSER-SMOKE.json ]; then
+            smoke="$(node -e "const r=require('./audit/BROWSER-SMOKE.json');process.stdout.write(r.status||'UNKNOWN')")"
+            if [ "$smoke" = "PASS_BROWSER_SMOKE" ]; then git add audit/BROWSER-SMOKE.json; fi
+          fi
+
+          if [ -f audit/BROWSER-GAMEPLAY-E2E.json ]; then
+            gameplay="$(node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'UNKNOWN')")"
+            if [ "$gameplay" = "PASS_BROWSER_GAMEPLAY_E2E" ]; then
+              git add audit/BROWSER-GAMEPLAY-E2E.json
+            else
+              git restore --staged audit/BROWSER-GAMEPLAY-E2E.json 2>/dev/null || true
+              git checkout -- audit/BROWSER-GAMEPLAY-E2E.json 2>/dev/null || true
+              echo "Not committing non-PASS gameplay evidence: $gameplay"
+            fi
+          fi
+
           if git diff --cached --quiet; then
-            echo "Browser evidence unchanged."
+            echo "No PASS browser evidence change to commit."
           else
-            status="$(node -e "try{const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'NO_GAMEPLAY_REPORT')}catch{process.stdout.write('NO_GAMEPLAY_REPORT')}")"
-            git commit -m "test: browser evidence ${status}"
+            git commit -m "test: record PASS browser evidence"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
 
       - name: Enforce gameplay report
         if: always()
+        shell: bash
         run: |
+          if [ "${{ steps.backend.outputs.ready }}" != "true" ]; then
+            echo 'BACKEND_NOT_DEPLOYED: public Cloudflare Worker URL is not configured.' >&2
+            exit 1
+          fi
           test -s audit/BROWSER-GAMEPLAY-E2E.json
           node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json'); if(!r.ok||r.status!=='PASS_BROWSER_GAMEPLAY_E2E'||!r.checks.allOperationalContractsGameplayE2E) { console.error(r.failures); process.exit(1); } console.log(r.status,r.contracts.map(x=>x.id+':'+x.status));"
