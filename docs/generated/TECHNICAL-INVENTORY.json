@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T12:59:56.231Z",
+  "generatedAt": "2026-08-23T13:01:30.700Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -43532,7 +43532,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 759,
-      "sha256": "5b39b32da4941d247917cc79446a94e661008930e2c86d86d3125a2e1f5b2e89",
+      "sha256": "702ae721a4012b76a37dfa0761db31c49a2c9735eeff68b11e6b69ce0e46e80c",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44123,8 +44123,8 @@
     },
     {
       "path": "tools/audit-documentation-coverage.mjs",
-      "size": 11483,
-      "sha256": "cbe5c94ea0e721a4508bf807a85dc2ba90a2ae596daf0076d27ee33516d50c6b",
+      "size": 11936,
+      "sha256": "f8eeb1f0e902b6f167500534dac6412ba07b23c61c4f5470bc367622dc036afe",
       "extension": ".mjs",
       "runtime": true,
       "asset": false

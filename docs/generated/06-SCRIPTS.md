@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-23T12:59:56.231Z`
+Gerado em: `2026-08-23T13:01:30.700Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -52,7 +52,7 @@ Gerado em: `2026-08-23T12:59:56.231Z`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 3971 bytes — SHA-256 `395c6058ac27cc445a54c4f72a4d80372301937576251282acefd612d01d403c`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-GAMEPLAY-E2E.json` — domínio `game-runtime` — 779 bytes — SHA-256 `7049d39628192cd8b30d38e76c18484ebb9f664f415ee2c38054bca3701679b7`
-- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `5b39b32da4941d247917cc79446a94e661008930e2c86d86d3125a2e1f5b2e89`
+- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `702ae721a4012b76a37dfa0761db31c49a2c9735eeff68b11e6b69ce0e46e80c`
 - `cloudflare/oneclick-backend/package.json` — domínio `game-runtime` — 426 bytes — SHA-256 `ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2`
 - `cloudflare/oneclick-backend/src/index.js` — domínio `game-runtime` — 30353 bytes — SHA-256 `09fe58d5b5893e81768c29ecd74043bda80ff6ca28639c048fe81019eb664df2`
 - `cloudflare/oneclick-backend/test/local-e2e.mjs` — domínio `game-runtime` — 4619 bytes — SHA-256 `26add25c775c9090492466118aa2650f6f004832f74a377603946a61bde51221`
@@ -113,7 +113,7 @@ Gerado em: `2026-08-23T12:59:56.231Z`
 - `src/r41-local-reset-fix.js` — domínio `game-runtime` — 1605 bytes — SHA-256 `6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/account-live-e2e.mjs` — domínio `tooling` — 4937 bytes — SHA-256 `e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7`
-- `tools/audit-documentation-coverage.mjs` — domínio `tooling` — 11483 bytes — SHA-256 `cbe5c94ea0e721a4508bf807a85dc2ba90a2ae596daf0076d27ee33516d50c6b`
+- `tools/audit-documentation-coverage.mjs` — domínio `tooling` — 11936 bytes — SHA-256 `f8eeb1f0e902b6f167500534dac6412ba07b23c61c4f5470bc367622dc036afe`
 - `tools/audit-final-canonical-spec.mjs` — domínio `tooling` — 3143 bytes — SHA-256 `d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb`
 - `tools/audit-operational-static-contracts.mjs` — domínio `tooling` — 2954 bytes — SHA-256 `218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 4125 bytes — SHA-256 `39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a`
