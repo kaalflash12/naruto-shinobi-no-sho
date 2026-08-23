@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-23T01:46:42.052Z",
-  "startedAt": "2026-08-23T01:46:36.874Z",
+  "generatedAt": "2026-08-23T01:49:17.021Z",
+  "startedAt": "2026-08-23T01:49:12.036Z",
   "status": "PASS_BROWSER_SMOKE",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
@@ -23,9 +23,9 @@
   "failures": [],
   "pageErrors": [],
   "consoleErrors": [
-    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
-    "Failed to load resource: net::ERR_FAILED",
     "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/status' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
+    "Failed to load resource: net::ERR_FAILED",
+    "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
     "Failed to load resource: net::ERR_FAILED",
     "Access to fetch at 'https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api/api/v84/bootstrap' from origin 'http://127.0.0.1:4173' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'null' that is not equal to the supplied origin. Have the server send the header with a valid value.",
     "Failed to load resource: net::ERR_FAILED",
