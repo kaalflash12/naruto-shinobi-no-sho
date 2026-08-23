@@ -4,6 +4,8 @@ Status: **PASS_STATIC_COVERAGE**
 
 Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `docs/`, `tools/` e `.github/` não podem criar IA/rotas/DB/UI/movimento fictícios.
 
+Worker entry selecionado: `cloudflare/r41-api/src/entry-authoritative.js`.
+
 `PASS_STATIC_COVERAGE` não equivale a teste vivo.
 
 ## Modelos de IA detectados no runtime
@@ -15,11 +17,11 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 88 |
-| gameRuntimeSourceFiles | 61 |
+| sourceFiles | 89 |
+| gameRuntimeSourceFiles | 62 |
 | toolingSourceFiles | 27 |
-| functions | 1073 |
-| gameRuntimeFunctions | 965 |
+| functions | 1087 |
+| gameRuntimeFunctions | 979 |
 | toolingFunctions | 108 |
 | routes | 33 |
 | models | 2 |
@@ -27,9 +29,9 @@ Funções: `all-source-except-docs`. Semântica de jogo: `game-runtime-only`. `d
 | storage | 12 |
 | uiActions | 221 |
 | events | 11 |
-| movementEvidence | 7840 |
+| movementEvidence | 7841 |
 | scripts | 33 |
-| runtimeFiles | 78 |
+| runtimeFiles | 79 |
 | uniqueAssetReferences | 5442 |
 | missingLiteralAssetReferences | 0 |
 
