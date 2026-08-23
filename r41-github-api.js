@@ -13,19 +13,23 @@
   }
   function token(){
     const persistent = localStorage.getItem(TOKEN_KEY) || "";
-    const legacy = sessionStorage.getItem(TOKEN_KEY) || "";
-    if(!persistent && legacy){
-      localStorage.setItem(TOKEN_KEY, legacy);
-      sessionStorage.removeItem(TOKEN_KEY);
-      return legacy;
+    const session = sessionStorage.getItem(TOKEN_KEY) || "";
+    const resolved = persistent || session;
+    if(resolved){
+      if(persistent !== resolved)localStorage.setItem(TOKEN_KEY,resolved);
+      if(session !== resolved)sessionStorage.setItem(TOKEN_KEY,resolved);
     }
-    return persistent;
+    return resolved;
   }
   function setToken(value){
     const t=String(value||"").trim();
-    if(t)localStorage.setItem(TOKEN_KEY,t);
-    else localStorage.removeItem(TOKEN_KEY);
-    sessionStorage.removeItem(TOKEN_KEY);
+    if(t){
+      localStorage.setItem(TOKEN_KEY,t);
+      sessionStorage.setItem(TOKEN_KEY,t);
+    }else{
+      localStorage.removeItem(TOKEN_KEY);
+      sessionStorage.removeItem(TOKEN_KEY);
+    }
   }
   function captureClaim(){
     try{
@@ -160,8 +164,12 @@
     }
   };
 
+  // Sincroniza imediatamente antes de app.js executar. Isso mantém compatibilidade
+  // com o restoreAuth legado do runtime, que ainda lê sessionStorage.
+  token();
+
   window.__R41_GITHUB_API__={
-    build:"NARUTO-SHINOBI-NO-SHO-SUPABASE-AUTH-20260822",
+    build:"NARUTO-SHINOBI-NO-SHO-SUPABASE-AUTH-20260822-SYNC",
     get apiOrigin(){return apiOrigin();},
     get authOrigin(){return authOrigin();},
     backend:"supabase-edge-postgres",
