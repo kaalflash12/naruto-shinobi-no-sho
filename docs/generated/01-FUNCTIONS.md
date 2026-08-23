@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-23T12:56:23.512Z`
+Gerado em: `2026-08-23T12:58:28.254Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -13460,9 +13460,25 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00842 — `status`
+## FUNC-00842 — `authoritativeWorld`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:139`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:138`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `req,env,ctx,path`
+- **Chamadas internas detectadas:** `fetch`, `account`, `json`, `body`, `stripClientMechanical`, `copyRequest`, `db`, `trustedCharacter`
+- **Rotas referidas:** `/api/v84/world/event`, `/api/v84/world/savepoint`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** `MONGODB_URI`, `AUTH_SECRET`
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00843 — `status`
+
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:153`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx`
@@ -13476,13 +13492,13 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00843 — `fetch`
+## FUNC-00844 — `fetch`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:147`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:161`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `req,env,ctx`
-- **Chamadas internas detectadas:** `status`, `augmentAccountEmail`, `emailAwareAuth`, `authoritativeMembership`, `test`, `authoritativeAction`, `json`
+- **Chamadas internas detectadas:** `status`, `augmentAccountEmail`, `emailAwareAuth`, `authoritativeMembership`, `test`, `authoritativeAction`, `authoritativeWorld`, `json`
 - **Rotas referidas:** `/api/status`, `/api/auth/me`, `/api/online/action`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -13492,7 +13508,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00844 — `safeEqual`
+## FUNC-00845 — `safeEqual`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:11`
 - **Domínio:** `game-runtime`
@@ -13508,7 +13524,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00845 — `b64url`
+## FUNC-00846 — `b64url`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:12`
 - **Domínio:** `game-runtime`
@@ -13524,7 +13540,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00846 — `randomBytes`
+## FUNC-00847 — `randomBytes`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:13`
 - **Domínio:** `game-runtime`
@@ -13540,7 +13556,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00847 — `randomSecret`
+## FUNC-00848 — `randomSecret`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:14`
 - **Domínio:** `game-runtime`
@@ -13556,7 +13572,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00848 — `hashPassword`
+## FUNC-00849 — `hashPassword`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:15`
 - **Domínio:** `game-runtime`
@@ -13572,7 +13588,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00849 — `cors`
+## FUNC-00850 — `cors`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:16`
 - **Domínio:** `game-runtime`
@@ -13588,7 +13604,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00850 — `json`
+## FUNC-00851 — `json`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:17`
 - **Domínio:** `game-runtime`
@@ -13604,7 +13620,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00851 — `fingerprint`
+## FUNC-00852 — `fingerprint`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:18`
 - **Domínio:** `game-runtime`
@@ -13620,7 +13636,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00852 — `guardDb`
+## FUNC-00853 — `guardDb`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:19`
 - **Domínio:** `game-runtime`
@@ -13636,7 +13652,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00853 — `currentAccount`
+## FUNC-00854 — `currentAccount`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:20`
 - **Domínio:** `game-runtime`
@@ -13652,7 +13668,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00854 — `rememberMembership`
+## FUNC-00855 — `rememberMembership`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:21`
 - **Domínio:** `game-runtime`
@@ -13668,7 +13684,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00855 — `hasMembership`
+## FUNC-00856 — `hasMembership`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:22`
 - **Domínio:** `game-runtime`
@@ -13684,7 +13700,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00856 — `touchMembership`
+## FUNC-00857 — `touchMembership`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:23`
 - **Domínio:** `game-runtime`
@@ -13700,7 +13716,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00857 — `mechanicalClaim`
+## FUNC-00858 — `mechanicalClaim`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:26`
 - **Domínio:** `game-runtime`
@@ -13716,7 +13732,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00858 — `actionType`
+## FUNC-00859 — `actionType`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:27`
 - **Domínio:** `game-runtime`
@@ -13732,7 +13748,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00859 — `actionLooksLikeOutcome`
+## FUNC-00860 — `actionLooksLikeOutcome`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:28`
 - **Domínio:** `game-runtime`
@@ -13748,7 +13764,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00860 — `guardedOnline`
+## FUNC-00861 — `guardedOnline`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:30`
 - **Domínio:** `game-runtime`
@@ -13764,7 +13780,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00861 — `remapIdentifier`
+## FUNC-00862 — `remapIdentifier`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:50`
 - **Domínio:** `game-runtime`
@@ -13780,7 +13796,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00862 — `accountExtension`
+## FUNC-00863 — `accountExtension`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:58`
 - **Domínio:** `game-runtime`
@@ -13796,7 +13812,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00863 — `claimLeon`
+## FUNC-00864 — `claimLeon`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:85`
 - **Domínio:** `game-runtime`
@@ -13812,7 +13828,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00864 — `aiRoute`
+## FUNC-00865 — `aiRoute`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:106`
 - **Domínio:** `game-runtime`
@@ -13828,7 +13844,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00865 — `statusRoute`
+## FUNC-00866 — `statusRoute`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:115`
 - **Domínio:** `game-runtime`
@@ -13844,7 +13860,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00866 — `mapWorldTick`
+## FUNC-00867 — `mapWorldTick`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:125`
 - **Domínio:** `game-runtime`
@@ -13860,7 +13876,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00867 — `fetch`
+## FUNC-00868 — `fetch`
 
 - **Fonte:** `cloudflare/r41-api/src/entry.js:133`
 - **Domínio:** `game-runtime`
@@ -13876,7 +13892,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00868 — `b64url`
+## FUNC-00869 — `b64url`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:13`
 - **Domínio:** `game-runtime`
@@ -13892,7 +13908,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00869 — `unb64url`
+## FUNC-00870 — `unb64url`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:14`
 - **Domínio:** `game-runtime`
@@ -13908,7 +13924,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00870 — `hmac`
+## FUNC-00871 — `hmac`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:15`
 - **Domínio:** `game-runtime`
@@ -13924,7 +13940,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00871 — `timingSafe`
+## FUNC-00872 — `timingSafe`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:16`
 - **Domínio:** `game-runtime`
@@ -13940,7 +13956,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00872 — `hashPassword`
+## FUNC-00873 — `hashPassword`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:17`
 - **Domínio:** `game-runtime`
@@ -13956,7 +13972,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00873 — `randomBytes`
+## FUNC-00874 — `randomBytes`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:18`
 - **Domínio:** `game-runtime`
@@ -13972,7 +13988,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00874 — `randomSecret`
+## FUNC-00875 — `randomSecret`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:19`
 - **Domínio:** `game-runtime`
@@ -13988,7 +14004,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00875 — `norm`
+## FUNC-00876 — `norm`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:20`
 - **Domínio:** `game-runtime`
@@ -14004,7 +14020,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00876 — `cleanText`
+## FUNC-00877 — `cleanText`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:21`
 - **Domínio:** `game-runtime`
@@ -14020,7 +14036,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00877 — `bearer`
+## FUNC-00878 — `bearer`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:22`
 - **Domínio:** `game-runtime`
@@ -14036,7 +14052,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00878 — `plainId`
+## FUNC-00879 — `plainId`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:23`
 - **Domínio:** `game-runtime`
@@ -14052,7 +14068,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00879 — `safeAccount`
+## FUNC-00880 — `safeAccount`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:24`
 - **Domínio:** `game-runtime`
@@ -14068,7 +14084,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00880 — `cors`
+## FUNC-00881 — `cors`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:25`
 - **Domínio:** `game-runtime`
@@ -14084,7 +14100,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00881 — `reply`
+## FUNC-00882 — `reply`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:26`
 - **Domínio:** `game-runtime`
@@ -14100,7 +14116,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00882 — `bodyJson`
+## FUNC-00883 — `bodyJson`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:27`
 - **Domínio:** `game-runtime`
@@ -14116,7 +14132,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00883 — `toObjectId`
+## FUNC-00884 — `toObjectId`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:28`
 - **Domínio:** `game-runtime`
@@ -14132,7 +14148,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00884 — `nowIso`
+## FUNC-00885 — `nowIso`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:29`
 - **Domínio:** `game-runtime`
@@ -14148,7 +14164,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00885 — `roomId`
+## FUNC-00886 — `roomId`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:30`
 - **Domínio:** `game-runtime`
@@ -14164,7 +14180,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00886 — `mongo`
+## FUNC-00887 — `mongo`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:32`
 - **Domínio:** `game-runtime`
@@ -14180,7 +14196,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00887 — `ensureIndexes`
+## FUNC-00888 — `ensureIndexes`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:37`
 - **Domínio:** `game-runtime`
@@ -14196,7 +14212,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00888 — `issueToken`
+## FUNC-00889 — `issueToken`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:54`
 - **Domínio:** `game-runtime`
@@ -14212,7 +14228,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00889 — `verifyToken`
+## FUNC-00890 — `verifyToken`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:55`
 - **Domínio:** `game-runtime`
@@ -14228,7 +14244,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00890 — `requireUser`
+## FUNC-00891 — `requireUser`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:56`
 - **Domínio:** `game-runtime`
@@ -14244,7 +14260,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00891 — `revokeCurrent`
+## FUNC-00892 — `revokeCurrent`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:57`
 - **Domínio:** `game-runtime`
@@ -14260,7 +14276,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00892 — `slotSummary`
+## FUNC-00893 — `slotSummary`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:58`
 - **Domínio:** `game-runtime`
@@ -14276,7 +14292,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00893 — `clampSaveForStorage`
+## FUNC-00894 — `clampSaveForStorage`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:59`
 - **Domínio:** `game-runtime`
@@ -14292,7 +14308,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00894 — `audit`
+## FUNC-00895 — `audit`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:60`
 - **Domínio:** `game-runtime`
@@ -14308,7 +14324,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00895 — `constructor`
+## FUNC-00896 — `constructor`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:63`
 - **Domínio:** `game-runtime`
@@ -14324,7 +14340,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00896 — `read`
+## FUNC-00897 — `read`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:64`
 - **Domínio:** `game-runtime`
@@ -14340,7 +14356,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00897 — `write`
+## FUNC-00898 — `write`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:65`
 - **Domínio:** `game-runtime`
@@ -14356,7 +14372,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00898 — `liveMembers`
+## FUNC-00899 — `liveMembers`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:66`
 - **Domínio:** `game-runtime`
@@ -14372,7 +14388,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00899 — `fetch`
+## FUNC-00900 — `fetch`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:67`
 - **Domínio:** `game-runtime`
@@ -14388,7 +14404,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00900 — `roomCall`
+## FUNC-00901 — `roomCall`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:81`
 - **Domínio:** `game-runtime`
@@ -14404,7 +14420,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00901 — `roomJson`
+## FUNC-00902 — `roomJson`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:82`
 - **Domínio:** `game-runtime`
@@ -14420,7 +14436,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00902 — `aiRoute`
+## FUNC-00903 — `aiRoute`
 
 - **Fonte:** `cloudflare/r41-api/src/index.js:84`
 - **Domínio:** `game-runtime`
@@ -14436,9 +14452,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00903 — `num`
+## FUNC-00904 — `num`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:5`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:14`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow
 - **Parâmetros:** `v,f=0`
@@ -14452,9 +14468,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00904 — `clamp`
+## FUNC-00905 — `clamp`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:6`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:15`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow
 - **Parâmetros:** `v,min,max`
@@ -14468,9 +14484,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00905 — `canonicalAttribute`
+## FUNC-00906 — `canonicalAttribute`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:8`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:17`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `requested, actionType`
@@ -14484,9 +14500,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00906 — `characterModifier`
+## FUNC-00907 — `characterModifier`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:14`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:23`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `character={},attribute="tecnica"`
@@ -14500,9 +14516,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00907 — `serverDifficulty`
+## FUNC-00908 — `serverDifficulty`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:25`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:34`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `intent={}`
@@ -14516,9 +14532,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00908 — `classifyTerionRoll`
+## FUNC-00909 — `classifyTerionRoll`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:31`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:40`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `hope,doom,modifier,dc`
@@ -14532,9 +14548,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00909 — `d10`
+## FUNC-00910 — `d10`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:39`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:48`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `random=Math.random`
@@ -14548,9 +14564,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00910 — `resolveTerionIntent`
+## FUNC-00911 — `resolveTerionIntent`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:41`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:50`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `{intent={},character={},random=Math.random}={}`
@@ -14564,9 +14580,9 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00911 — `mechanicalKey`
+## FUNC-00912 — `mechanicalKey`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:51`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:60`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `key`
@@ -14580,12 +14596,12 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00912 — `hasClientResult`
+## FUNC-00913 — `blockedClientKey`
 
-- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:55`
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:63`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
-- **Parâmetros:** `payload`
+- **Parâmetros:** `key`
 - **Chamadas internas detectadas:** `mechanicalKey`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
@@ -14596,7 +14612,39 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00913 — `trainer`
+## FUNC-00914 — `hasClientResult`
+
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:65`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `payload`
+- **Chamadas internas detectadas:** `blockedClientKey`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00915 — `stripClientMechanical`
+
+- **Fonte:** `cloudflare/r41-api/src/terion-mechanics.js:79`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `value,depth=0`
+- **Chamadas internas detectadas:** `blockedClientKey`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00916 — `trainer`
 
 - **Fonte:** `data/v84-integrated-config.js:4`
 - **Domínio:** `game-runtime`
@@ -14612,7 +14660,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00914 — `openOnce`
+## FUNC-00917 — `openOnce`
 
 - **Fonte:** `r41-account-deeplink-fix.js:9`
 - **Domínio:** `game-runtime`
@@ -14628,7 +14676,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00915 — `esc`
+## FUNC-00918 — `esc`
 
 - **Fonte:** `r41-account-ui.js:5`
 - **Domínio:** `game-runtime`
@@ -14644,7 +14692,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00916 — `errorText`
+## FUNC-00919 — `errorText`
 
 - **Fonte:** `r41-account-ui.js:6`
 - **Domínio:** `game-runtime`
@@ -14660,7 +14708,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00917 — `style`
+## FUNC-00920 — `style`
 
 - **Fonte:** `r41-account-ui.js:7`
 - **Domínio:** `game-runtime`
@@ -14676,7 +14724,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00918 — `ensureButton`
+## FUNC-00921 — `ensureButton`
 
 - **Fonte:** `r41-account-ui.js:16`
 - **Domínio:** `game-runtime`
@@ -14692,7 +14740,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00919 — `updateButton`
+## FUNC-00922 — `updateButton`
 
 - **Fonte:** `r41-account-ui.js:22`
 - **Domínio:** `game-runtime`
@@ -14708,7 +14756,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00920 — `field`
+## FUNC-00923 — `field`
 
 - **Fonte:** `r41-account-ui.js:23`
 - **Domínio:** `game-runtime`
@@ -14724,7 +14772,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00921 — `tabs`
+## FUNC-00924 — `tabs`
 
 - **Fonte:** `r41-account-ui.js:24`
 - **Domínio:** `game-runtime`
@@ -14740,7 +14788,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00922 — `unauthBody`
+## FUNC-00925 — `unauthBody`
 
 - **Fonte:** `r41-account-ui.js:25`
 - **Domínio:** `game-runtime`
@@ -14756,7 +14804,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00923 — `authBody`
+## FUNC-00926 — `authBody`
 
 - **Fonte:** `r41-account-ui.js:26`
 - **Domínio:** `game-runtime`
@@ -14772,7 +14820,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `recovery-code`, `logout`, `delete-account`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00924 — `render`
+## FUNC-00927 — `render`
 
 - **Fonte:** `r41-account-ui.js:27`
 - **Domínio:** `game-runtime`
@@ -14788,7 +14836,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `close`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00925 — `values`
+## FUNC-00928 — `values`
 
 - **Fonte:** `r41-account-ui.js:28`
 - **Domínio:** `game-runtime`
@@ -14804,7 +14852,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00926 — `submitLogin`
+## FUNC-00929 — `submitLogin`
 
 - **Fonte:** `r41-account-ui.js:29`
 - **Domínio:** `game-runtime`
@@ -14820,7 +14868,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00927 — `submitRegister`
+## FUNC-00930 — `submitRegister`
 
 - **Fonte:** `r41-account-ui.js:30`
 - **Domínio:** `game-runtime`
@@ -14836,7 +14884,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00928 — `submitRecover`
+## FUNC-00931 — `submitRecover`
 
 - **Fonte:** `r41-account-ui.js:31`
 - **Domínio:** `game-runtime`
@@ -14852,7 +14900,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00929 — `logout`
+## FUNC-00932 — `logout`
 
 - **Fonte:** `r41-account-ui.js:32`
 - **Domínio:** `game-runtime`
@@ -14868,7 +14916,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00930 — `newRecoveryCode`
+## FUNC-00933 — `newRecoveryCode`
 
 - **Fonte:** `r41-account-ui.js:33`
 - **Domínio:** `game-runtime`
@@ -14884,7 +14932,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00931 — `deleteAccount`
+## FUNC-00934 — `deleteAccount`
 
 - **Fonte:** `r41-account-ui.js:34`
 - **Domínio:** `game-runtime`
@@ -14900,7 +14948,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00932 — `close`
+## FUNC-00935 — `close`
 
 - **Fonte:** `r41-account-ui.js:35`
 - **Domínio:** `game-runtime`
@@ -14916,7 +14964,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00933 — `open`
+## FUNC-00936 — `open`
 
 - **Fonte:** `r41-account-ui.js:35`
 - **Domínio:** `game-runtime`
@@ -14932,7 +14980,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00934 — `boot`
+## FUNC-00937 — `boot`
 
 - **Fonte:** `r41-account-ui.js:37`
 - **Domínio:** `game-runtime`
@@ -14948,7 +14996,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00935 — `apiOrigin`
+## FUNC-00938 — `apiOrigin`
 
 - **Fonte:** `r41-github-api.js:8`
 - **Domínio:** `game-runtime`
@@ -14964,7 +15012,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00936 — `token`
+## FUNC-00939 — `token`
 
 - **Fonte:** `r41-github-api.js:11`
 - **Domínio:** `game-runtime`
@@ -14980,7 +15028,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00937 — `setToken`
+## FUNC-00940 — `setToken`
 
 - **Fonte:** `r41-github-api.js:21`
 - **Domínio:** `game-runtime`
@@ -14996,7 +15044,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00938 — `captureClaim`
+## FUNC-00941 — `captureClaim`
 
 - **Fonte:** `r41-github-api.js:31`
 - **Domínio:** `game-runtime`
@@ -15012,7 +15060,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00939 — `mapTarget`
+## FUNC-00942 — `mapTarget`
 
 - **Fonte:** `r41-github-api.js:43`
 - **Domínio:** `game-runtime`
@@ -15028,7 +15076,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00940 — `withAuth`
+## FUNC-00943 — `withAuth`
 
 - **Fonte:** `r41-github-api.js:55`
 - **Domínio:** `game-runtime`
@@ -15044,7 +15092,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00941 — `applyLeonClaim`
+## FUNC-00944 — `applyLeonClaim`
 
 - **Fonte:** `r41-github-api.js:65`
 - **Domínio:** `game-runtime`
@@ -15060,7 +15108,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00942 — `request`
+## FUNC-00945 — `request`
 
 - **Fonte:** `r41-github-api.js:111`
 - **Domínio:** `game-runtime`
@@ -15076,7 +15124,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00943 — `register`
+## FUNC-00946 — `register`
 
 - **Fonte:** `r41-github-api.js:128`
 - **Domínio:** `game-runtime`
@@ -15092,7 +15140,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00944 — `login`
+## FUNC-00947 — `login`
 
 - **Fonte:** `r41-github-api.js:135`
 - **Domínio:** `game-runtime`
@@ -15108,7 +15156,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00945 — `me`
+## FUNC-00948 — `me`
 
 - **Fonte:** `r41-github-api.js:142`
 - **Domínio:** `game-runtime`
@@ -15124,7 +15172,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00946 — `logout`
+## FUNC-00949 — `logout`
 
 - **Fonte:** `r41-github-api.js:153`
 - **Domínio:** `game-runtime`
@@ -15140,7 +15188,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00947 — `recover`
+## FUNC-00950 — `recover`
 
 - **Fonte:** `r41-github-api.js:160`
 - **Domínio:** `game-runtime`
@@ -15156,7 +15204,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00948 — `generateRecoveryCode`
+## FUNC-00951 — `generateRecoveryCode`
 
 - **Fonte:** `r41-github-api.js:164`
 - **Domínio:** `game-runtime`
@@ -15172,7 +15220,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00949 — `deleteAccount`
+## FUNC-00952 — `deleteAccount`
 
 - **Fonte:** `r41-github-api.js:167`
 - **Domínio:** `game-runtime`
@@ -15188,7 +15236,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00950 — `slug`
+## FUNC-00953 — `slug`
 
 - **Fonte:** `src/r41-canonical-repair.js:28`
 - **Domínio:** `game-runtime`
@@ -15204,7 +15252,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00951 — `normalize`
+## FUNC-00954 — `normalize`
 
 - **Fonte:** `src/r41-core-bundle.js:5`
 - **Domínio:** `game-runtime`
@@ -15220,7 +15268,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00952 — `getJson`
+## FUNC-00955 — `getJson`
 
 - **Fonte:** `src/r41-core-bundle.js:6`
 - **Domínio:** `game-runtime`
@@ -15236,7 +15284,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00953 — `indexManifest`
+## FUNC-00956 — `indexManifest`
 
 - **Fonte:** `src/r41-core-bundle.js:7`
 - **Domínio:** `game-runtime`
@@ -15252,7 +15300,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00954 — `init`
+## FUNC-00957 — `init`
 
 - **Fonte:** `src/r41-core-bundle.js:14`
 - **Domínio:** `game-runtime`
@@ -15268,7 +15316,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00955 — `resolve`
+## FUNC-00958 — `resolve`
 
 - **Fonte:** `src/r41-core-bundle.js:25`
 - **Domínio:** `game-runtime`
@@ -15284,7 +15332,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00956 — `auditKnown`
+## FUNC-00959 — `auditKnown`
 
 - **Fonte:** `src/r41-core-bundle.js:42`
 - **Domínio:** `game-runtime`
@@ -15300,7 +15348,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00957 — `normalize`
+## FUNC-00960 — `normalize`
 
 - **Fonte:** `src/r41-core-bundle.js:51`
 - **Domínio:** `game-runtime`
@@ -15316,7 +15364,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00958 — `fromCombatResult`
+## FUNC-00961 — `fromCombatResult`
 
 - **Fonte:** `src/r41-core-bundle.js:52`
 - **Domínio:** `game-runtime`
@@ -15332,7 +15380,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00959 — `validateEvent`
+## FUNC-00962 — `validateEvent`
 
 - **Fonte:** `src/r41-core-bundle.js:63`
 - **Domínio:** `game-runtime`
@@ -15348,7 +15396,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00960 — `clone`
+## FUNC-00963 — `clone`
 
 - **Fonte:** `src/r41-core-bundle.js:70`
 - **Domínio:** `game-runtime`
@@ -15364,7 +15412,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00961 — `ensure`
+## FUNC-00964 — `ensure`
 
 - **Fonte:** `src/r41-core-bundle.js:71`
 - **Domínio:** `game-runtime`
@@ -15380,7 +15428,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00962 — `apply`
+## FUNC-00965 — `apply`
 
 - **Fonte:** `src/r41-core-bundle.js:72`
 - **Domínio:** `game-runtime`
@@ -15396,7 +15444,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00963 — `validate`
+## FUNC-00966 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:73`
 - **Domínio:** `game-runtime`
@@ -15412,7 +15460,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00964 — `fromResult`
+## FUNC-00967 — `fromResult`
 
 - **Fonte:** `src/r41-core-bundle.js:78`
 - **Domínio:** `game-runtime`
@@ -15428,7 +15476,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00965 — `validate`
+## FUNC-00968 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:79`
 - **Domínio:** `game-runtime`
@@ -15444,7 +15492,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00966 — `norm`
+## FUNC-00969 — `norm`
 
 - **Fonte:** `src/r41-core-bundle.js:84`
 - **Domínio:** `game-runtime`
@@ -15460,7 +15508,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00967 — `kindOf`
+## FUNC-00970 — `kindOf`
 
 - **Fonte:** `src/r41-core-bundle.js:85`
 - **Domínio:** `game-runtime`
@@ -15476,7 +15524,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00968 — `apply`
+## FUNC-00971 — `apply`
 
 - **Fonte:** `src/r41-core-bundle.js:86`
 - **Domínio:** `game-runtime`
@@ -15492,7 +15540,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00969 — `validate`
+## FUNC-00972 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:87`
 - **Domínio:** `game-runtime`
@@ -15508,7 +15556,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00970 — `norm`
+## FUNC-00973 — `norm`
 
 - **Fonte:** `src/r41-core-bundle.js:94`
 - **Domínio:** `game-runtime`
@@ -15524,7 +15572,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00971 — `register`
+## FUNC-00974 — `register`
 
 - **Fonte:** `src/r41-core-bundle.js:95`
 - **Domínio:** `game-runtime`
@@ -15540,7 +15588,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00972 — `get`
+## FUNC-00975 — `get`
 
 - **Fonte:** `src/r41-core-bundle.js:96`
 - **Domínio:** `game-runtime`
@@ -15556,7 +15604,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00973 — `infer`
+## FUNC-00976 — `infer`
 
 - **Fonte:** `src/r41-core-bundle.js:97`
 - **Domínio:** `game-runtime`
@@ -15572,7 +15620,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00974 — `clamp`
+## FUNC-00977 — `clamp`
 
 - **Fonte:** `src/r41-core-bundle.js:115`
 - **Domínio:** `game-runtime`
@@ -15588,7 +15636,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00975 — `normalizeResult`
+## FUNC-00978 — `normalizeResult`
 
 - **Fonte:** `src/r41-core-bundle.js:116`
 - **Domínio:** `game-runtime`
@@ -15604,7 +15652,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00976 — `terionModifier`
+## FUNC-00979 — `terionModifier`
 
 - **Fonte:** `src/r41-core-bundle.js:120`
 - **Domínio:** `game-runtime`
@@ -15620,7 +15668,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00977 — `trainingResult`
+## FUNC-00980 — `trainingResult`
 
 - **Fonte:** `src/r41-core-bundle.js:126`
 - **Domínio:** `game-runtime`
@@ -15636,7 +15684,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00978 — `normalizeScene`
+## FUNC-00981 — `normalizeScene`
 
 - **Fonte:** `src/r41-core-bundle.js:137`
 - **Domínio:** `game-runtime`
@@ -15652,7 +15700,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00979 — `fromMissionStage`
+## FUNC-00982 — `fromMissionStage`
 
 - **Fonte:** `src/r41-core-bundle.js:141`
 - **Domínio:** `game-runtime`
@@ -15668,7 +15716,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00980 — `shouldSave`
+## FUNC-00983 — `shouldSave`
 
 - **Fonte:** `src/r41-core-bundle.js:149`
 - **Domínio:** `game-runtime`
@@ -15684,7 +15732,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00981 — `record`
+## FUNC-00984 — `record`
 
 - **Fonte:** `src/r41-core-bundle.js:150`
 - **Domínio:** `game-runtime`
@@ -15700,7 +15748,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00982 — `boot`
+## FUNC-00985 — `boot`
 
 - **Fonte:** `src/r41-core-bundle.js:160`
 - **Domínio:** `game-runtime`
@@ -15716,7 +15764,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00983 — `repair`
+## FUNC-00986 — `repair`
 
 - **Fonte:** `src/r41-final-ui-repair.js:12`
 - **Domínio:** `game-runtime`
@@ -15732,7 +15780,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00984 — `schedule`
+## FUNC-00987 — `schedule`
 
 - **Fonte:** `src/r41-final-ui-repair.js:19`
 - **Domínio:** `game-runtime`
@@ -15748,7 +15796,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00985 — `localProgressKeys`
+## FUNC-00988 — `localProgressKeys`
 
 - **Fonte:** `src/r41-local-reset-fix.js:20`
 - **Domínio:** `game-runtime`
@@ -15764,7 +15812,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00986 — `resetLocalProgress`
+## FUNC-00989 — `resetLocalProgress`
 
 - **Fonte:** `src/r41-local-reset-fix.js:30`
 - **Domínio:** `game-runtime`
@@ -15780,7 +15828,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00987 — `ok`
+## FUNC-00990 — `ok`
 
 - **Fonte:** `tools/account-live-e2e.mjs:11`
 - **Domínio:** `tooling`
@@ -15796,7 +15844,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00988 — `call`
+## FUNC-00991 — `call`
 
 - **Fonte:** `tools/account-live-e2e.mjs:12`
 - **Domínio:** `tooling`
@@ -15812,7 +15860,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00989 — `write`
+## FUNC-00992 — `write`
 
 - **Fonte:** `tools/account-live-e2e.mjs:21`
 - **Domínio:** `tooling`
@@ -15828,7 +15876,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00990 — `fail`
+## FUNC-00993 — `fail`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:10`
 - **Domínio:** `tooling`
@@ -15844,7 +15892,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00991 — `warn`
+## FUNC-00994 — `warn`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:11`
 - **Domínio:** `tooling`
@@ -15860,7 +15908,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00992 — `exists`
+## FUNC-00995 — `exists`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:12`
 - **Domínio:** `tooling`
@@ -15876,7 +15924,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00993 — `norm`
+## FUNC-00996 — `norm`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:13`
 - **Domínio:** `tooling`
@@ -15892,7 +15940,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00994 — `isDoc`
+## FUNC-00997 — `isDoc`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:14`
 - **Domínio:** `tooling`
@@ -15908,7 +15956,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00995 — `isTooling`
+## FUNC-00998 — `isTooling`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:15`
 - **Domínio:** `tooling`
@@ -15924,7 +15972,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00996 — `isGameRuntime`
+## FUNC-00999 — `isGameRuntime`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:16`
 - **Domínio:** `tooling`
@@ -15940,7 +15988,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00997 — `auditGameGrouped`
+## FUNC-01000 — `auditGameGrouped`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:61`
 - **Domínio:** `tooling`
@@ -15956,7 +16004,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00998 — `sha256`
+## FUNC-01001 — `sha256`
 
 - **Fonte:** `tools/audit-final-canonical-spec.mjs:10`
 - **Domínio:** `tooling`
@@ -15972,7 +16020,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00999 — `walk`
+## FUNC-01002 — `walk`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:17`
 - **Domínio:** `tooling`
@@ -15988,7 +16036,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01000 — `cleanRef`
+## FUNC-01003 — `cleanRef`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:26`
 - **Domínio:** `tooling`
@@ -16004,7 +16052,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01001 — `isDynamic`
+## FUNC-01004 — `isDynamic`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:31`
 - **Domínio:** `tooling`
@@ -16020,7 +16068,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01002 — `addRef`
+## FUNC-01005 — `addRef`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:32`
 - **Domínio:** `tooling`
@@ -16036,7 +16084,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01003 — `assert`
+## FUNC-01006 — `assert`
 
 - **Fonte:** `tools/browser-account-live.mjs:10`
 - **Domínio:** `tooling`
@@ -16052,7 +16100,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01004 — `readSaveV2`
+## FUNC-01007 — `readSaveV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:16`
 - **Domínio:** `tooling`
@@ -16068,7 +16116,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01005 — `tryParse`
+## FUNC-01008 — `tryParse`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:18`
 - **Domínio:** `tooling`
@@ -16084,7 +16132,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01006 — `registerV2`
+## FUNC-01009 — `registerV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:48`
 - **Domínio:** `tooling`
@@ -16100,7 +16148,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `auth-mode`, `auth-submit`, `account-new`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01007 — `seedNormalV2`
+## FUNC-01010 — `seedNormalV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:66`
 - **Domínio:** `tooling`
@@ -16116,7 +16164,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01008 — `navigateV2`
+## FUNC-01011 — `navigateV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:165`
 - **Domínio:** `tooling`
@@ -16132,7 +16180,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01009 — `seedNormalV3`
+## FUNC-01012 — `seedNormalV3`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v3.mjs:10`
 - **Domínio:** `tooling`
@@ -16148,7 +16196,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01010 — `assert`
+## FUNC-01013 — `assert`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:18`
 - **Domínio:** `tooling`
@@ -16164,7 +16212,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01011 — `pass`
+## FUNC-01014 — `pass`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:19`
 - **Domínio:** `tooling`
@@ -16180,7 +16228,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01012 — `contract`
+## FUNC-01015 — `contract`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:20`
 - **Domínio:** `tooling`
@@ -16196,7 +16244,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01013 — `sleep`
+## FUNC-01016 — `sleep`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:21`
 - **Domínio:** `tooling`
@@ -16212,7 +16260,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01014 — `normalFixture`
+## FUNC-01017 — `normalFixture`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:23`
 - **Domínio:** `tooling`
@@ -16228,7 +16276,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01015 — `leonFixture`
+## FUNC-01018 — `leonFixture`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:55`
 - **Domínio:** `tooling`
@@ -16244,7 +16292,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01016 — `readSave`
+## FUNC-01019 — `readSave`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:65`
 - **Domínio:** `tooling`
@@ -16260,7 +16308,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01017 — `r41State`
+## FUNC-01020 — `r41State`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:66`
 - **Domínio:** `tooling`
@@ -16276,7 +16324,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01018 — `masterState`
+## FUNC-01021 — `masterState`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:67`
 - **Domínio:** `tooling`
@@ -16292,7 +16340,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01019 — `navigate`
+## FUNC-01022 — `navigate`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:68`
 - **Domínio:** `tooling`
@@ -16308,7 +16356,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01020 — `playVisibleMinigame`
+## FUNC-01023 — `playVisibleMinigame`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:70`
 - **Domínio:** `tooling`
@@ -16324,7 +16372,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01021 — `register`
+## FUNC-01024 — `register`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:89`
 - **Domínio:** `tooling`
@@ -16340,7 +16388,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01022 — `seedNormal`
+## FUNC-01025 — `seedNormal`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:107`
 - **Domínio:** `tooling`
@@ -16356,7 +16404,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01023 — `testNormalGameplay`
+## FUNC-01026 — `testNormalGameplay`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:118`
 - **Domínio:** `tooling`
@@ -16372,7 +16420,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `map-hotspot`, `map-enter`, `r41-hospital-treat`, `r27-rest`, `r41-activity`, `start-battle`, `basic-attack`, `end-battle`, `start-mission`, `r382-board-tab`, `mission-route`, `mission-choice`, `r32-resume-mission`, `online-create`, `r41-online-intent`, `online-leave`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01024 — `testKurai`
+## FUNC-01027 — `testKurai`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:283`
 - **Domínio:** `tooling`
@@ -16388,7 +16436,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `kurai-mode`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01025 — `cleanupAccount`
+## FUNC-01028 — `cleanupAccount`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:308`
 - **Domínio:** `tooling`
@@ -16404,7 +16452,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `delete-account`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01026 — `assert`
+## FUNC-01029 — `assert`
 
 - **Fonte:** `tools/browser-live-api.mjs:10`
 - **Domínio:** `tooling`
@@ -16420,7 +16468,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01027 — `fail`
+## FUNC-01030 — `fail`
 
 - **Fonte:** `tools/browser-smoke.mjs:12`
 - **Domínio:** `tooling`
@@ -16436,7 +16484,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01028 — `assert`
+## FUNC-01031 — `assert`
 
 - **Fonte:** `tools/browser-smoke.mjs:13`
 - **Domínio:** `tooling`
@@ -16452,7 +16500,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01029 — `sha256`
+## FUNC-01032 — `sha256`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -16468,7 +16516,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01030 — `norm`
+## FUNC-01033 — `norm`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:20`
 - **Domínio:** `tooling`
@@ -16484,7 +16532,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01031 — `isDocs`
+## FUNC-01034 — `isDocs`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -16500,7 +16548,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01032 — `isSource`
+## FUNC-01035 — `isSource`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:22`
 - **Domínio:** `tooling`
@@ -16516,7 +16564,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01033 — `esc`
+## FUNC-01036 — `esc`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:23`
 - **Domínio:** `tooling`
@@ -16532,7 +16580,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01034 — `code`
+## FUNC-01037 — `code`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:24`
 - **Domínio:** `tooling`
@@ -16548,7 +16596,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01035 — `fence`
+## FUNC-01038 — `fence`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:25`
 - **Domínio:** `tooling`
@@ -16564,7 +16612,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01036 — `langFor`
+## FUNC-01039 — `langFor`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:26`
 - **Domínio:** `tooling`
@@ -16580,7 +16628,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01037 — `lineLocator`
+## FUNC-01040 — `lineLocator`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:31`
 - **Domínio:** `tooling`
@@ -16596,7 +16644,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01038 — `blockEnd`
+## FUNC-01041 — `blockEnd`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:41`
 - **Domínio:** `tooling`
@@ -16612,7 +16660,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01039 — `snippetAt`
+## FUNC-01042 — `snippetAt`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:62`
 - **Domínio:** `tooling`
@@ -16628,7 +16676,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01040 — `scanFunctions`
+## FUNC-01043 — `scanFunctions`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:72`
 - **Domínio:** `tooling`
@@ -16644,7 +16692,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01041 — `actionHandlerEvidence`
+## FUNC-01044 — `actionHandlerEvidence`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:126`
 - **Domínio:** `tooling`
@@ -16660,7 +16708,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01042 — `gate`
+## FUNC-01045 — `gate`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:175`
 - **Domínio:** `tooling`
@@ -16676,7 +16724,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01043 — `pass`
+## FUNC-01046 — `pass`
 
 - **Fonte:** `tools/final-readiness.mjs:7`
 - **Domínio:** `tooling`
@@ -16692,7 +16740,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01044 — `readJson`
+## FUNC-01047 — `readJson`
 
 - **Fonte:** `tools/final-readiness.mjs:8`
 - **Domínio:** `tooling`
@@ -16708,7 +16756,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01045 — `walk`
+## FUNC-01048 — `walk`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:26`
 - **Domínio:** `tooling`
@@ -16724,7 +16772,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01046 — `reEsc`
+## FUNC-01049 — `reEsc`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:40`
 - **Domínio:** `tooling`
@@ -16740,7 +16788,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01047 — `lineAt`
+## FUNC-01050 — `lineAt`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:41`
 - **Domínio:** `tooling`
@@ -16756,7 +16804,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01048 — `occurrences`
+## FUNC-01051 — `occurrences`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:46`
 - **Domínio:** `tooling`
@@ -16772,7 +16820,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01049 — `uniqEvidence`
+## FUNC-01052 — `uniqEvidence`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:55`
 - **Domínio:** `tooling`
@@ -16788,7 +16836,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01050 — `aliasesForDatasetAction`
+## FUNC-01053 — `aliasesForDatasetAction`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:65`
 - **Domínio:** `tooling`
@@ -16804,7 +16852,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01051 — `handlerEvidence`
+## FUNC-01054 — `handlerEvidence`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:73`
 - **Domínio:** `tooling`
@@ -16820,7 +16868,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** `${value}`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01052 — `px`
+## FUNC-01055 — `px`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:13`
 - **Domínio:** `tooling`
@@ -16836,7 +16884,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01053 — `rel`
+## FUNC-01056 — `rel`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:14`
 - **Domínio:** `tooling`
@@ -16852,7 +16900,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01054 — `code`
+## FUNC-01057 — `code`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:15`
 - **Domínio:** `tooling`
@@ -16868,7 +16916,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01055 — `clean`
+## FUNC-01058 — `clean`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:16`
 - **Domínio:** `tooling`
@@ -16884,7 +16932,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01056 — `uniq`
+## FUNC-01059 — `uniq`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:17`
 - **Domínio:** `tooling`
@@ -16900,7 +16948,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01057 — `ident`
+## FUNC-01060 — `ident`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:18`
 - **Domínio:** `tooling`
@@ -16916,7 +16964,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01058 — `hash`
+## FUNC-01061 — `hash`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -16932,7 +16980,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01059 — `walk`
+## FUNC-01062 — `walk`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -16948,7 +16996,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01060 — `lineLocator`
+## FUNC-01063 — `lineLocator`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:32`
 - **Domínio:** `tooling`
@@ -16964,7 +17012,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01061 — `readText`
+## FUNC-01064 — `readText`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:42`
 - **Domínio:** `tooling`
@@ -16980,7 +17028,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01062 — `blockEnd`
+## FUNC-01065 — `blockEnd`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:48`
 - **Domínio:** `tooling`
@@ -16996,7 +17044,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01063 — `bodyAt`
+## FUNC-01066 — `bodyAt`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:69`
 - **Domínio:** `tooling`
@@ -17012,7 +17060,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01064 — `captures`
+## FUNC-01067 — `captures`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:75`
 - **Domínio:** `tooling`
@@ -17028,7 +17076,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01065 — `refs`
+## FUNC-01068 — `refs`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:81`
 - **Domínio:** `tooling`
@@ -17044,7 +17092,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01066 — `extractFunctions`
+## FUNC-01069 — `extractFunctions`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:99`
 - **Domínio:** `tooling`
@@ -17060,7 +17108,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01067 — `add`
+## FUNC-01070 — `add`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:149`
 - **Domínio:** `tooling`
@@ -17076,7 +17124,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01068 — `grouped`
+## FUNC-01071 — `grouped`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:163`
 - **Domínio:** `tooling`
@@ -17092,7 +17140,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01069 — `header`
+## FUNC-01072 — `header`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:216`
 - **Domínio:** `tooling`
@@ -17108,7 +17156,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01070 — `sources`
+## FUNC-01073 — `sources`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:217`
 - **Domínio:** `tooling`
@@ -17124,7 +17172,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01071 — `listCodes`
+## FUNC-01074 — `listCodes`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:218`
 - **Domínio:** `tooling`
@@ -17140,7 +17188,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01072 — `assert`
+## FUNC-01075 — `assert`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:11`
 - **Domínio:** `tooling`
@@ -17156,7 +17204,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01073 — `record`
+## FUNC-01076 — `record`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:14`
 - **Domínio:** `tooling`
@@ -17172,7 +17220,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01074 — `request`
+## FUNC-01077 — `request`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:17`
 - **Domínio:** `tooling`
@@ -17188,7 +17236,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01075 — `safe`
+## FUNC-01078 — `safe`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:35`
 - **Domínio:** `tooling`
@@ -17204,7 +17252,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01076 — `writeReport`
+## FUNC-01079 — `writeReport`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:43`
 - **Domínio:** `tooling`
@@ -17220,7 +17268,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01077 — `norm`
+## FUNC-01080 — `norm`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:11`
 - **Domínio:** `tooling`
@@ -17236,7 +17284,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01078 — `isDynamic`
+## FUNC-01081 — `isDynamic`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:12`
 - **Domínio:** `tooling`
@@ -17252,7 +17300,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01079 — `existsLiteral`
+## FUNC-01082 — `existsLiteral`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:16`
 - **Domínio:** `tooling`
@@ -17268,7 +17316,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01080 — `code`
+## FUNC-01083 — `code`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:21`
 - **Domínio:** `tooling`
@@ -17284,7 +17332,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01081 — `srcs`
+## FUNC-01084 — `srcs`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:22`
 - **Domínio:** `tooling`
@@ -17300,7 +17348,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01082 — `norm`
+## FUNC-01085 — `norm`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:13`
 - **Domínio:** `tooling`
@@ -17316,7 +17364,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01083 — `hasSourceExt`
+## FUNC-01086 — `hasSourceExt`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:14`
 - **Domínio:** `tooling`
@@ -17332,7 +17380,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01084 — `isDocumentation`
+## FUNC-01087 — `isDocumentation`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:15`
 - **Domínio:** `tooling`
@@ -17348,7 +17396,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01085 — `isTooling`
+## FUNC-01088 — `isTooling`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:16`
 - **Domínio:** `tooling`
@@ -17364,7 +17412,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01086 — `isSource`
+## FUNC-01089 — `isSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:17`
 - **Domínio:** `tooling`
@@ -17380,7 +17428,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01087 — `isGameRuntimeSource`
+## FUNC-01090 — `isGameRuntimeSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:18`
 - **Domínio:** `tooling`
@@ -17396,7 +17444,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01088 — `domainOf`
+## FUNC-01091 — `domainOf`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -17412,7 +17460,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01089 — `code`
+## FUNC-01092 — `code`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:20`
 - **Domínio:** `tooling`
@@ -17428,7 +17476,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01090 — `clean`
+## FUNC-01093 — `clean`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -17444,7 +17492,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01091 — `srcs`
+## FUNC-01094 — `srcs`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:22`
 - **Domínio:** `tooling`
@@ -17460,7 +17508,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01092 — `listCodes`
+## FUNC-01095 — `listCodes`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:23`
 - **Domínio:** `tooling`
@@ -17476,7 +17524,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01093 — `header`
+## FUNC-01096 — `header`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:24`
 - **Domínio:** `tooling`
@@ -17492,7 +17540,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01094 — `filterGrouped`
+## FUNC-01097 — `filterGrouped`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:26`
 - **Domínio:** `tooling`

@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-23T12:56:23.512Z`
+Gerado em: `2026-08-23T12:58:28.254Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -46,7 +46,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 
 ## API-00009 — `/api/auth/me`
 
-- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:30`, `cloudflare/r41-api/src/entry-authoritative.js:151`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144`
+- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:30`, `cloudflare/r41-api/src/entry-authoritative.js:165`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00010 — `/api/auth/recover`
@@ -86,7 +86,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 
 ## API-00017 — `/api/online/action`
 
-- **Referências:** `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:154`, `cloudflare/r41-api/src/index.js:125`
+- **Referências:** `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:168`, `cloudflare/r41-api/src/index.js:125`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00018 — `/api/online/create`
@@ -146,7 +146,7 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 
 ## API-00029 — `/api/status`
 
-- **Referências:** `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:150`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89`
+- **Referências:** `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:164`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00030 — `/api/v84/bootstrap`
@@ -156,12 +156,12 @@ Gerado em: `2026-08-23T12:56:23.512Z`
 
 ## API-00031 — `/api/v84/world/event`
 
-- **Referências:** `app.js:3342`, `cloudflare/oneclick-backend/src/index.js:89`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry.js:128`, `cloudflare/r41-api/src/index.js:130`
+- **Referências:** `app.js:3342`, `cloudflare/oneclick-backend/src/index.js:89`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:139`, `cloudflare/r41-api/src/entry-authoritative.js:144`, `cloudflare/r41-api/src/entry.js:128`, `cloudflare/r41-api/src/index.js:130`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00032 — `/api/v84/world/savepoint`
 
-- **Referências:** `app.js:3344`, `cloudflare/oneclick-backend/src/index.js:90`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/index.js:131`
+- **Referências:** `app.js:3344`, `cloudflare/oneclick-backend/src/index.js:90`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:139`, `cloudflare/r41-api/src/index.js:131`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00033 — `/api/v84/world/tick`
