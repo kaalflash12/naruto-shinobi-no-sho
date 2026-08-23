@@ -2,7 +2,7 @@
 
 Coleções MongoDB e storage do navegador detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-23T12:58:28.254Z`
+Gerado em: `2026-08-23T12:59:56.231Z`
 
 ## Coleções MongoDB
 

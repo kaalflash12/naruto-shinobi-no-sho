@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-23T12:58:28.254Z`
+Gerado em: `2026-08-23T12:59:56.231Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -49,7 +49,7 @@ Gerado em: `2026-08-23T12:58:28.254Z`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3097 bytes — SHA-256 `a36786ece900c13a39cd911603c8495430a0b03c8180ad6e48e28a62f4d15be0`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 11425 bytes — SHA-256 `eafba4deef2fc9f55f7e14bd498513efcb2b6b0661f8bd28717a96793d07526c`
 - `.github/workflows/one-shot-terion-authority.yml` — domínio `tooling` — 6191 bytes — SHA-256 `626915f9d67570722ef3c145112860549c95c98b8f12a33beefaf5eef9534eac`
-- `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 3389 bytes — SHA-256 `906018c3e33a7922dc0ef647b8b4f8825ff4523a68dd60994078eaf8801a8150`
+- `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 3971 bytes — SHA-256 `395c6058ac27cc445a54c4f72a4d80372301937576251282acefd612d01d403c`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-GAMEPLAY-E2E.json` — domínio `game-runtime` — 779 bytes — SHA-256 `7049d39628192cd8b30d38e76c18484ebb9f664f415ee2c38054bca3701679b7`
 - `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `5b39b32da4941d247917cc79446a94e661008930e2c86d86d3125a2e1f5b2e89`

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T12:58:28.254Z",
+  "generatedAt": "2026-08-23T12:59:56.231Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -99,8 +99,8 @@
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
-      "size": 3389,
-      "sha256": "906018c3e33a7922dc0ef647b8b4f8825ff4523a68dd60994078eaf8801a8150",
+      "size": 3971,
+      "sha256": "395c6058ac27cc445a54c4f72a4d80372301937576251282acefd612d01d403c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
