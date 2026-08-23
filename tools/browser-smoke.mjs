@@ -20,15 +20,11 @@ page.on('pageerror', err => pageErrors.push(String(err?.stack || err?.message ||
 page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
 page.on('requestfailed', req => {
   const url = req.url();
-  if (url.startsWith(baseURL) && /\.(?:js|css|json)(?:\?|$)/i.test(url)) {
-    failedRuntimeRequests.push({ url, error: req.failure()?.errorText || 'request failed' });
-  }
+  if (url.startsWith(baseURL) && /\.(?:js|css|json)(?:\?|$)/i.test(url)) failedRuntimeRequests.push({ url, error: req.failure()?.errorText || 'request failed' });
 });
 page.on('response', response => {
   const url = response.url();
-  if (url.startsWith(baseURL) && response.status() >= 400 && /\.(?:js|css|json)(?:\?|$)/i.test(url)) {
-    failedRuntimeRequests.push({ url, status: response.status() });
-  }
+  if (url.startsWith(baseURL) && response.status() >= 400 && /\.(?:js|css|json)(?:\?|$)/i.test(url)) failedRuntimeRequests.push({ url, status: response.status() });
 });
 
 try {
@@ -38,7 +34,6 @@ try {
 
   const title = await page.title();
   assert(title === 'NARUTO SHINOBI NO SHO • TERION 2D10', `Título inesperado: ${title}`);
-
   const brand = (await page.locator('.brand').innerText().catch(() => '')).trim();
   assert(/NARUTO SHINOBI NO SHO/i.test(brand), `Brand principal ausente: ${brand}`);
 
@@ -47,11 +42,13 @@ try {
     reset: typeof window.__SNS_LOCAL_RESET__?.run === 'function',
     resetKeys: typeof window.__SNS_LOCAL_RESET__?.keys === 'function',
     apiBuild: window.NARUTO_R41_API_BUILD || '',
-    apiOrigin: window.NARUTO_R41_API_ORIGIN || ''
+    apiOrigin: window.NARUTO_R41_API_ORIGIN || '',
+    backend: window.__R41_GITHUB_API__?.backend || ''
   }));
   assert(runtime.r41, 'window.__NARUTO_R41__ não foi inicializado');
   assert(runtime.reset && runtime.resetKeys, 'handler de reset local não foi carregado');
-  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-ONLINE-AUTH-V2', `API build inesperado: ${runtime.apiBuild}`);
+  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB', `API build inesperado: ${runtime.apiBuild}`);
+  assert(runtime.backend === (runtime.apiOrigin ? 'cloudflare-mongodb-durable-objects' : 'unconfigured'), `backend runtime inesperado: ${runtime.backend}`);
 
   await page.evaluate(() => {
     localStorage.setItem('sns-v841-account-save:e2e-browser:slot', 'e2e');
@@ -84,17 +81,14 @@ try {
 
   if (pageErrors.length) fail(`Exceções JavaScript no navegador: ${pageErrors.join(' | ')}`);
   if (failedRuntimeRequests.length) fail(`Recursos JS/CSS/JSON falharam: ${JSON.stringify(failedRuntimeRequests)}`);
-
   const fatalConsole = consoleErrors.filter(x => /uncaught|referenceerror|syntaxerror|typeerror|failed to load module/i.test(x));
   if (fatalConsole.length) fail(`Console fatal: ${fatalConsole.join(' | ')}`);
 
   const report = {
-    generatedAt: new Date().toISOString(),
-    startedAt,
+    generatedAt: new Date().toISOString(), startedAt,
     status: failures.length ? 'FAIL_BROWSER_SMOKE' : 'PASS_BROWSER_SMOKE',
     ok: failures.length === 0,
-    scope: 'LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS',
-    baseURL,
+    scope: 'LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS', baseURL,
     checks: {
       httpLoad: response?.ok() === true,
       publicIdentity: title === 'NARUTO SHINOBI NO SHO • TERION 2D10' && /NARUTO SHINOBI NO SHO/i.test(brand),
@@ -102,18 +96,11 @@ try {
       localResetHandlerLoaded: runtime.reset && runtime.resetKeys,
       localResetClickReload: afterReset.key === null && afterReset.resetLoaded,
       runtimeRequests: failedRuntimeRequests.length === 0,
-      pageExceptions: pageErrors.length === 0
+      pageExceptions: pageErrors.length === 0,
+      backendIdentity: runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB'
     },
-    api: {
-      build: runtime.apiBuild,
-      originConfigured: !!runtime.apiOrigin,
-      origin: runtime.apiOrigin || null,
-      liveWorkerTested: false
-    },
-    failures,
-    pageErrors,
-    consoleErrors: consoleErrors.slice(0, 50),
-    failedRuntimeRequests
+    api: { build: runtime.apiBuild, backend: runtime.backend, originConfigured: !!runtime.apiOrigin, origin: runtime.apiOrigin || null, liveWorkerTested: false },
+    failures,pageErrors,consoleErrors: consoleErrors.slice(0, 50),failedRuntimeRequests
   };
 
   fs.mkdirSync(new URL('../audit/', import.meta.url), { recursive: true });
