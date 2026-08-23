@@ -8,7 +8,8 @@ let client=null,clientUri="",emailIndexPromise=null;
 
 function originHeaders(req,env){
   const origin=req.headers.get("origin")||"";
-  const allowed=String(env.ALLOWED_ORIGINS||env.ALLOWED_ORIGIN||"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean);
+  const configured=String(env.ALLOWED_ORIGINS||env.ALLOWED_ORIGIN||"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean);
+  const allowed=[...new Set([...configured,"http://localhost:8000","http://127.0.0.1:8000","http://localhost:8787","http://127.0.0.1:8787"])];
   const selected=allowed.includes(origin)?origin:(!origin?(allowed[0]||"*"):"null");
   return {"content-type":"application/json; charset=utf-8","access-control-allow-origin":selected,"access-control-allow-methods":"GET,POST,PUT,PATCH,DELETE,OPTIONS","access-control-allow-headers":"authorization,content-type,x-r41-revision","cache-control":"no-store","vary":"origin"};
 }
@@ -36,6 +37,7 @@ async function augmentAccountEmail(req,env,res){
 }
 async function emailAwareAuth(req,env,ctx,path){
   if(req.method!=="POST"||!["/api/auth/register","/api/auth/login","/api/auth/recover"].includes(path))return null;
+  if(!env.MONGODB_URI)return base.fetch(req,env,ctx);
   const payload=await body(req),store=await db(env);
   if(path==="/api/auth/register"){
     const email=String(payload.email||"").trim().toLowerCase();
@@ -67,6 +69,7 @@ async function roomSnapshot(req,env,ctx,roomId){
 function actionType(envelope){return String(envelope?.type||envelope?.action||envelope?.intent||"action").trim().toLowerCase().slice(0,80)||"action";}
 async function authoritativeAction(req,env,ctx){
   if(req.method!=="POST")return json(req,env,405,{ok:false,error:"METHOD_NOT_ALLOWED"});
+  if(!env.MONGODB_URI||!env.AUTH_SECRET||!env.GAME_ROOMS)return base.fetch(req,env,ctx);
   const payload=await body(req),roomId=String(payload.roomId||"").trim(),envelope=payload.action??payload;
   if(!roomId)return json(req,env,400,{ok:false,error:"ROOM_ID_REQUIRED"});
   if(hasClientResult(envelope))return json(req,env,400,{ok:false,error:"CLIENT_MECHANICAL_RESULT_FORBIDDEN",rule:"client sends intent only; TERION result is generated server-side"});
@@ -99,6 +102,7 @@ export default {
   async fetch(req,env,ctx){
     const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";
     if(path==="/"||path==="/api/status")return status(req,env,ctx);
+    if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));
     const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;
     if(path==="/api/online/action")return authoritativeAction(req,env,ctx);
     return base.fetch(req,env,ctx);
