@@ -96,7 +96,12 @@ if(selectedEntry===entryAuthoritative){
   if(!/resolveTerionIntent/.test(e))fail('entry-authoritative.js nao chama resolveTerionIntent');
   if(!/hasClientResult/.test(e))fail('entry-authoritative.js nao rejeita resultado mecanico do cliente');
   if(!/client sends intent only; TERION result is generated server-side/.test(e))fail('entry-authoritative.js nao declara fronteira de autoridade server-side');
-  if(!/intent:\{type\}/.test(e))fail('entry-authoritative.js deve sanitizar intent mecanico para type antes de resolver TERION');
+  if(!/intent:\{type,difficulty:["']normal["']\}/.test(e))fail('entry-authoritative.js deve montar intent TERION server-side com tipo classificado e dificuldade normal');
+  if(!/serverActionType/.test(e))fail('entry-authoritative.js nao classifica o tipo mecanico no servidor');
+  if(!/trustedCharacter/.test(e))fail('entry-authoritative.js nao carrega ficha mecanica do MongoDB');
+  if(!/AUTHORITATIVE_CHARACTER_SAVE_REQUIRED/.test(e))fail('entry-authoritative.js nao exige save autoritativo para mecanica online');
+  if(!/delete safe\.character/.test(e))fail('entry-authoritative.js ainda permite heartbeat substituir ficha mecanica da sala');
+  if(!/clientRoomCharacterIgnored=true/.test(e)||!/mechanicsReadFromMongoSave=true/.test(e))fail('entry-authoritative.js nao anuncia a fronteira Mongo-backed de personagem');
   if(!/mechanicalResult/.test(e)||!/room\.internal\/action/.test(e))fail('entry-authoritative.js nao persiste resultado TERION via Durable Object');
   if(!/emailLogin=true/.test(e))fail('entry-authoritative.js nao anuncia login por email');
 }
