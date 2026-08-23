@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-23T10:41:14.044Z",
-  "startedAt": "2026-08-23T10:41:09.942Z",
-  "status": "FAIL_BROWSER_SMOKE",
-  "ok": false,
+  "generatedAt": "2026-08-23T10:43:42.064Z",
+  "startedAt": "2026-08-23T10:43:37.000Z",
+  "status": "PASS_BROWSER_SMOKE",
+  "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
   "baseURL": "http://127.0.0.1:4173",
   "checks": {
@@ -12,17 +12,17 @@
     "localResetHandlerLoaded": true,
     "localResetClickReload": true,
     "runtimeRequests": true,
-    "pageExceptions": true
+    "pageExceptions": true,
+    "backendIdentity": true
   },
   "api": {
     "build": "NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB",
+    "backend": "unconfigured",
     "originConfigured": false,
     "origin": null,
     "liveWorkerTested": false
   },
-  "failures": [
-    "API build inesperado: NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB"
-  ],
+  "failures": [],
   "pageErrors": [],
   "consoleErrors": [],
   "failedRuntimeRequests": []
