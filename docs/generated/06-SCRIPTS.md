@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-23T13:08:50.447Z`
+Gerado em: `2026-08-23T13:11:41.150Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -52,12 +52,12 @@ Gerado em: `2026-08-23T13:08:50.447Z`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 4645 bytes — SHA-256 `9c7e75267f2aef91cc92634751837dd6190890c843c13c50e756bee7fb3aa5ba`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-GAMEPLAY-E2E.json` — domínio `game-runtime` — 779 bytes — SHA-256 `7049d39628192cd8b30d38e76c18484ebb9f664f415ee2c38054bca3701679b7`
-- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `1b0abc122efecf85fb1de9b166e8c39b50d82a6ea9563957a22157844061d535`
+- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `74d985a1a8b2779105b7508180a5fbdca5db98a4c3e31122fab69ec595e421fc`
 - `cloudflare/oneclick-backend/package.json` — domínio `game-runtime` — 426 bytes — SHA-256 `ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2`
 - `cloudflare/oneclick-backend/src/index.js` — domínio `game-runtime` — 30353 bytes — SHA-256 `09fe58d5b5893e81768c29ecd74043bda80ff6ca28639c048fe81019eb664df2`
 - `cloudflare/oneclick-backend/test/local-e2e.mjs` — domínio `game-runtime` — 4619 bytes — SHA-256 `26add25c775c9090492466118aa2650f6f004832f74a377603946a61bde51221`
 - `cloudflare/r41-api/package.json` — domínio `game-runtime` — 492 bytes — SHA-256 `863bc59f7c5f3bd93eab8281efa3b2ef9439673d97af472e6202c2fc74b207b6`
-- `cloudflare/r41-api/src/entry-authoritative.js` — domínio `game-runtime` — 17073 bytes — SHA-256 `564aa0fe5e4c5f6aae12b24b02055dd6f911674b75b2915b4d7a18938f0d4ca1`
+- `cloudflare/r41-api/src/entry-authoritative.js` — domínio `game-runtime` — 20234 bytes — SHA-256 `1adeef4f9439579da64b132badb28b4ad9b3c0769205b84b2f9cca3cf76e5e8b`
 - `cloudflare/r41-api/src/entry.js` — domínio `game-runtime` — 14173 bytes — SHA-256 `6eb0e3ce5e05445a593af9913a2c819dde387678b4b0eb2926a192eab00d7947`
 - `cloudflare/r41-api/src/index.js` — domínio `game-runtime` — 27910 bytes — SHA-256 `a7e4d6a44085a96644bc43c20cc32e4b1ccc24b74c60965a851a776ad214e8c4`
 - `cloudflare/r41-api/src/terion-mechanics.js` — domínio `game-runtime` — 5469 bytes — SHA-256 `3fcc0d19df10fbbef766f7f1c90d609eaff47d5cae5b98d8e3b41bd160e4ab3d`

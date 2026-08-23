@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T13:08:51.065Z",
+  "generatedAt": "2026-08-23T13:11:41.765Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura estatica: funcoes de toda fonte nao documental + semantica do jogo somente do runtime. Nao equivale a PASS de runtime, jogabilidade, visual ou E2E.",
@@ -9,8 +9,8 @@
     "sourceFiles": 89,
     "gameRuntimeSourceFiles": 62,
     "toolingSourceFiles": 27,
-    "functions": 1104,
-    "gameRuntimeFunctions": 996,
+    "functions": 1108,
+    "gameRuntimeFunctions": 1000,
     "toolingFunctions": 108,
     "routes": 33,
     "models": 2,

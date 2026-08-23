@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-23T13:08:55.087Z",
+  "generatedAt": "2026-08-23T13:11:45.792Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-23T13:08:50.447Z",
+  "sourceInventoryGeneratedAt": "2026-08-23T13:11:41.150Z",
   "counts": {
-    "functions": 1104,
-    "functionsWithExactCode": 1104,
+    "functions": 1108,
+    "functionsWithExactCode": 1108,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -6645,204 +6645,236 @@
       "id": "FUNC-00827",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 18,
-      "name": "db",
-      "exactCode": true,
-      "snippetSha256": "288d256abb9213bde56f10cff8a6554ab68819eee34fa2b86036010fe5ba1f91"
-    },
-    {
-      "id": "FUNC-00828",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 29,
-      "name": "validEmail",
-      "exactCode": true,
-      "snippetSha256": "8e9e678db54912fa1f1066e4995788d2a087ffcca77d3acf920be97528a29e2e"
-    },
-    {
-      "id": "FUNC-00829",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 30,
-      "name": "copyRequest",
-      "exactCode": true,
-      "snippetSha256": "0d808a4c072b3a9ea33465ad12f71738acec698b5f0fbeac9d7add03b12054ec"
-    },
-    {
-      "id": "FUNC-00830",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 31,
       "name": "oid",
       "exactCode": true,
       "snippetSha256": "58884e477512e452bb37e5eb06b0d732c430bfc9d690edaf9a251ae6c2b7dcfd"
     },
     {
-      "id": "FUNC-00831",
+      "id": "FUNC-00828",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 32,
+      "line": 19,
       "name": "text",
       "exactCode": true,
       "snippetSha256": "bd93f6c15edb19437a844b66501925c811928035b8cffc58cd5f3909346be8c9"
     },
     {
-      "id": "FUNC-00832",
+      "id": "FUNC-00829",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 33,
+      "line": 20,
       "name": "finite",
       "exactCode": true,
       "snippetSha256": "38d51fd23975d015e86547b45ee0340f68133ca9bb0fb9f8597c0c1a4f32ce42"
     },
     {
+      "id": "FUNC-00830",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 21,
+      "name": "validEmail",
+      "exactCode": true,
+      "snippetSha256": "8e9e678db54912fa1f1066e4995788d2a087ffcca77d3acf920be97528a29e2e"
+    },
+    {
+      "id": "FUNC-00831",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 22,
+      "name": "copyRequest",
+      "exactCode": true,
+      "snippetSha256": "0d808a4c072b3a9ea33465ad12f71738acec698b5f0fbeac9d7add03b12054ec"
+    },
+    {
+      "id": "FUNC-00832",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 23,
+      "name": "ensureAuthorityIndexes",
+      "exactCode": true,
+      "snippetSha256": "e508ce14e8e7246f1524ba286d164cc81e4e6a774100b8e891784cba200e4ae6"
+    },
+    {
       "id": "FUNC-00833",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 34,
-      "name": "cloneBounded",
+      "line": 37,
+      "name": "db",
       "exactCode": true,
-      "snippetSha256": "d8b079b97db8d34617494ef9263854d4a02d0cdd20ba9e448db8f563074fb3ad"
+      "snippetSha256": "ec274953bcf2cb4a10040c7fbc3bc81c109c43d76ab191e6a133888ab3536a9c"
     },
     {
       "id": "FUNC-00834",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 42,
+      "name": "cloneBounded",
+      "exactCode": true,
+      "snippetSha256": "3418d5c5dcad230c2e01dfb057159399be0f8ca19e2e718ee09f75b36e69070a"
+    },
+    {
+      "id": "FUNC-00835",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 47,
       "name": "mechanicalCharacterSnapshot",
       "exactCode": true,
       "snippetSha256": "315350d890f05de104bb654143d69f0c6f66a708043306be91fa86190406da7d"
     },
     {
-      "id": "FUNC-00835",
+      "id": "FUNC-00836",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 51,
+      "line": 52,
+      "name": "profileKeyFor",
+      "exactCode": true,
+      "snippetSha256": "48e8110bc40eb62dfab9998823d0a1198370b2a5160089b72789230744580464"
+    },
+    {
+      "id": "FUNC-00837",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 56,
       "name": "mechanicalProfileFromSave",
       "exactCode": true,
       "snippetSha256": "e2ac67ce5890de785165f4f8a6e3d8df7ec5eff16683a2e18af5f083a6ff3e35"
     },
     {
-      "id": "FUNC-00836",
+      "id": "FUNC-00838",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 56,
+      "line": 61,
       "name": "seedMechanicalProfile",
       "exactCode": true,
       "snippetSha256": "346bd787d06dd67fea94c066534e3f3562b89b950ca23e1af76e6e55c7cecf7c"
     },
     {
-      "id": "FUNC-00837",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 62,
-      "name": "lockedMechanicalProfile",
-      "exactCode": true,
-      "snippetSha256": "e6fe9c69fa6d5405f46b5e61b858162429801c4574af9a059b71c934a1c8350e"
-    },
-    {
-      "id": "FUNC-00838",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 63,
-      "name": "account",
-      "exactCode": true,
-      "snippetSha256": "fbc93d50bcd23ed82a2cb439de35a086fff77c30edcfb6555adc67cd4f0b7a26"
-    },
-    {
       "id": "FUNC-00839",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 68,
-      "name": "augmentAccountEmail",
+      "line": 66,
+      "name": "lockedMechanicalProfile",
       "exactCode": true,
-      "snippetSha256": "cefb16070916ec774d24925e960e5c035f7d62beab45ece5bf728b582d003c7b"
+      "snippetSha256": "1cec3327b8e02e9765edb18b76eabf8bef00bbdeed580f45734ecf8e11a3e13b"
     },
     {
       "id": "FUNC-00840",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 74,
-      "name": "emailAwareAuth",
+      "name": "matchingSave",
       "exactCode": true,
-      "snippetSha256": "7d5cca63d186eee48455a5de5263033e37f02f40d72996e7fee1dedfa27cac0f"
+      "snippetSha256": "c383d15ba1b4f731a43266d7424bb215a92168576d601827077bdd277a270b11"
     },
     {
       "id": "FUNC-00841",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 100,
-      "name": "trustedCharacter",
+      "line": 81,
+      "name": "trustedProfile",
       "exactCode": true,
-      "snippetSha256": "9740b0d748c0f5a3b6bcb7822761c9d6b7bb2e9e93bc89d336e1641ff65325dd"
+      "snippetSha256": "1c409655d3b7d21de9757cb631064c0526cec351f4e2f7ef96706009237b712c"
     },
     {
       "id": "FUNC-00842",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 108,
+      "line": 85,
+      "name": "trustedCharacter",
+      "exactCode": true,
+      "snippetSha256": "76d37721afb31b41fa940c9d05d70ec233edab2699e75fdc8a36878817f191f8"
+    },
+    {
+      "id": "FUNC-00843",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 86,
+      "name": "account",
+      "exactCode": true,
+      "snippetSha256": "199ac913527f4dddf867b2ece1c973d6d2f436a6ee5fde1a454cf1a890fff453"
+    },
+    {
+      "id": "FUNC-00844",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 87,
+      "name": "augmentAccountEmail",
+      "exactCode": true,
+      "snippetSha256": "9d6df0ff0c044236bdb47c5e14366b372eab83c059192b8c3ed9db13683ed777"
+    },
+    {
+      "id": "FUNC-00845",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 88,
+      "name": "emailAwareAuth",
+      "exactCode": true,
+      "snippetSha256": "5978d03c21f79f3ef6359bbe0d2b482aa1353f3fab58ecc032d6433d049b199f"
+    },
+    {
+      "id": "FUNC-00846",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 99,
       "name": "publicCharacterSnapshot",
       "exactCode": true,
       "snippetSha256": "899ceb6e0c69bed6baf38ddcacc4d16e0fcee5162460ecb41bdbf61ea04be64a"
     },
     {
-      "id": "FUNC-00843",
+      "id": "FUNC-00847",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 113,
+      "line": 100,
       "name": "authoritativeMembership",
       "exactCode": true,
-      "snippetSha256": "372020dd7502c7505d69b6136d9e703e745010fc69789caf2e5c638bc873991f"
+      "snippetSha256": "3e2fc596c82a86de3009b76ccba9cdd9cee45bba73a6f6f9b0540c6d584f5354"
     },
     {
-      "id": "FUNC-00844",
+      "id": "FUNC-00848",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 124,
+      "line": 105,
       "name": "roomSnapshot",
       "exactCode": true,
-      "snippetSha256": "655c501c772ed1488e5356127abf13653e420332987bec90b8c25eec969d0518"
+      "snippetSha256": "292163d3ba5e2b49b3580581d56dcb48cfbfae527d4e7022c5eaf02e4ff77123"
     },
     {
-      "id": "FUNC-00845",
+      "id": "FUNC-00849",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 128,
+      "line": 106,
       "name": "actionType",
       "exactCode": true,
       "snippetSha256": "0ddf6dc735dc2232d870ac792538318d8bc0e1417dc162352bf5251060a2a87b"
     },
     {
-      "id": "FUNC-00846",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 129,
-      "name": "serverActionType",
-      "exactCode": true,
-      "snippetSha256": "08e24e9fab69ec06ae5a6d2ba61a863581958a799f84899afbfbce85042bb63a"
-    },
-    {
-      "id": "FUNC-00847",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 133,
-      "name": "authoritativeAction",
-      "exactCode": true,
-      "snippetSha256": "f0ae486931d5d517700acb9536e46a1cefdc48c8c0128ce4bc4c864694391cd1"
-    },
-    {
-      "id": "FUNC-00848",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 145,
-      "name": "authoritativeWorld",
-      "exactCode": true,
-      "snippetSha256": "43db313eced550a48b183a202d948a6e9a5760146d441bcba45981fd9f015d17"
-    },
-    {
-      "id": "FUNC-00849",
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 151,
-      "name": "authoritativeLeaderboard",
-      "exactCode": true,
-      "snippetSha256": "a25ac4b94c1fee88a67e9f20aa2889aaeb842ffe64544cb64a8a6061c1298dbf"
-    },
-    {
       "id": "FUNC-00850",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 157,
-      "name": "authoritativeAccountDelete",
+      "line": 107,
+      "name": "serverActionType",
       "exactCode": true,
-      "snippetSha256": "9cd61c6e75efef1d6cda02a84c48fa54124427c13a0d6d345e6db97315060a78"
+      "snippetSha256": "17210c5370abf74d0062297c976aaec5e0b48d23c47c3bfd4ca8e312fc1e6233"
     },
     {
       "id": "FUNC-00851",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 160,
-      "name": "status",
+      "line": 108,
+      "name": "authoritativeAction",
       "exactCode": true,
-      "snippetSha256": "c32a60d8041aeab2550fcf45a4f8a8b10e74e4b5d4d4ca78ecfdf0ffbc424977"
+      "snippetSha256": "c652c22a372941a2e9755fba3ac18b73d4a9acc730ae784761da265e64657f79"
     },
     {
       "id": "FUNC-00852",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 116,
+      "name": "authoritativeWorld",
+      "exactCode": true,
+      "snippetSha256": "a924404bb93aed62fb4b4bfe7bdcad3d903272efdb96ff3665f98efc3771e225"
+    },
+    {
+      "id": "FUNC-00853",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 121,
+      "name": "authoritativeLeaderboard",
+      "exactCode": true,
+      "snippetSha256": "a80ed5cc75813c7df441c92763da7735616aa68777c8ab37307e570f92e04b5b"
+    },
+    {
+      "id": "FUNC-00854",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 125,
+      "name": "authoritativeAccountDelete",
+      "exactCode": true,
+      "snippetSha256": "da8f93b9bbd5e679d71619b254c8457ddfdc3b101a6e986a013ccd36450dc09d"
+    },
+    {
+      "id": "FUNC-00855",
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 126,
+      "name": "status",
+      "exactCode": true,
+      "snippetSha256": "5840b152e7cdc45a651faef36141ec39d512cd38225278655edc6dc6d438732a"
+    },
+    {
+      "id": "FUNC-00856",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 11,
       "name": "safeEqual",
@@ -6850,7 +6882,7 @@
       "snippetSha256": "e33f03019beeec52633556ab43ca42b898e675d6e2df58638a26bfd8f002186f"
     },
     {
-      "id": "FUNC-00853",
+      "id": "FUNC-00857",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 12,
       "name": "b64url",
@@ -6858,7 +6890,7 @@
       "snippetSha256": "c9486c69db78eb85b95d574d9a1e30c18356617771d56c0379bf947c8429c950"
     },
     {
-      "id": "FUNC-00854",
+      "id": "FUNC-00858",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 13,
       "name": "randomBytes",
@@ -6866,7 +6898,7 @@
       "snippetSha256": "4d127eac9c926422b45c1c51b52954a757ec5e0ad98babbdeed7e8d9c47abfd3"
     },
     {
-      "id": "FUNC-00855",
+      "id": "FUNC-00859",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 14,
       "name": "randomSecret",
@@ -6874,7 +6906,7 @@
       "snippetSha256": "bed5ad4b5199bf84cc04c0423f666e5396851b6b1a6dbd4b7f7149ebb1e8a6cd"
     },
     {
-      "id": "FUNC-00856",
+      "id": "FUNC-00860",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 15,
       "name": "hashPassword",
@@ -6882,7 +6914,7 @@
       "snippetSha256": "43fcc8c1c0eb4f9ba1473d8b98a0745c10622017f8dea152a749ca2326014781"
     },
     {
-      "id": "FUNC-00857",
+      "id": "FUNC-00861",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 16,
       "name": "cors",
@@ -6890,7 +6922,7 @@
       "snippetSha256": "6773d99674a09570b0b19cb3457474808c1419ff3ae5e5594149bb1d67ab93aa"
     },
     {
-      "id": "FUNC-00858",
+      "id": "FUNC-00862",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 17,
       "name": "json",
@@ -6898,7 +6930,7 @@
       "snippetSha256": "69317aa34e62a7e592bb4e136b0552b247adece56603ba079947e7c40e77a383"
     },
     {
-      "id": "FUNC-00859",
+      "id": "FUNC-00863",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 18,
       "name": "fingerprint",
@@ -6906,7 +6938,7 @@
       "snippetSha256": "004972ac321e9d57946e9edd285c082266fb05d56bf95c4196764c0206c600a9"
     },
     {
-      "id": "FUNC-00860",
+      "id": "FUNC-00864",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 19,
       "name": "guardDb",
@@ -6914,7 +6946,7 @@
       "snippetSha256": "14837b4238b00b333ebd52578cfe8e67bf448792b8eaa0a7e2ca8aa9f438827e"
     },
     {
-      "id": "FUNC-00861",
+      "id": "FUNC-00865",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 20,
       "name": "currentAccount",
@@ -6922,7 +6954,7 @@
       "snippetSha256": "9781d8178277eb74dac12e1259ede53045390ced415822f2bb623b7e9e1579b3"
     },
     {
-      "id": "FUNC-00862",
+      "id": "FUNC-00866",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 21,
       "name": "rememberMembership",
@@ -6930,7 +6962,7 @@
       "snippetSha256": "13e165badb38fe019aa8b73fa1a9c6fba82c349375c5cbd7bf8212e08e6ba5c7"
     },
     {
-      "id": "FUNC-00863",
+      "id": "FUNC-00867",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 22,
       "name": "hasMembership",
@@ -6938,7 +6970,7 @@
       "snippetSha256": "2cfda08c95ffeb3f2e40fafc70c7982f446a9627c6933ceeb589ebe643fd91b8"
     },
     {
-      "id": "FUNC-00864",
+      "id": "FUNC-00868",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 23,
       "name": "touchMembership",
@@ -6946,7 +6978,7 @@
       "snippetSha256": "0388486e313914ba3b877a44248a7ab3cb3fcf7e0100f0f00d58c5ce030a18d9"
     },
     {
-      "id": "FUNC-00865",
+      "id": "FUNC-00869",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 26,
       "name": "mechanicalClaim",
@@ -6954,7 +6986,7 @@
       "snippetSha256": "93c6071bec54db8c6c54ca0da5a846661d49c7853095fec6e3eb96a6b937f5a5"
     },
     {
-      "id": "FUNC-00866",
+      "id": "FUNC-00870",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 27,
       "name": "actionType",
@@ -6962,7 +6994,7 @@
       "snippetSha256": "4778ecfbebb74ba4249f427ebb514630c1349c18ac59aa842e06ebac0050875d"
     },
     {
-      "id": "FUNC-00867",
+      "id": "FUNC-00871",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 28,
       "name": "actionLooksLikeOutcome",
@@ -6970,7 +7002,7 @@
       "snippetSha256": "eff2d445be246f19fd8569dca9a508dee6d97ab67570a1a9e902a80d4017eb12"
     },
     {
-      "id": "FUNC-00868",
+      "id": "FUNC-00872",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 30,
       "name": "guardedOnline",
@@ -6978,7 +7010,7 @@
       "snippetSha256": "d367a4590e8dbbdfa49d9eac7b57c501994afad42c7f00afac824a7aaa11f340"
     },
     {
-      "id": "FUNC-00869",
+      "id": "FUNC-00873",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 50,
       "name": "remapIdentifier",
@@ -6986,7 +7018,7 @@
       "snippetSha256": "cf289a0ceeec240caa2e5f5c0bc1c274176d836bf6a6fe7f06d5685187f4562e"
     },
     {
-      "id": "FUNC-00870",
+      "id": "FUNC-00874",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 58,
       "name": "accountExtension",
@@ -6994,7 +7026,7 @@
       "snippetSha256": "85ccfd0e10b3fc000b552d9bb474ba1224d05116d81a8deae78350722f218af3"
     },
     {
-      "id": "FUNC-00871",
+      "id": "FUNC-00875",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 85,
       "name": "claimLeon",
@@ -7002,7 +7034,7 @@
       "snippetSha256": "863db85cdb23adad1303de0a457d211fd130272401284027c50a98730facb9a9"
     },
     {
-      "id": "FUNC-00872",
+      "id": "FUNC-00876",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 106,
       "name": "aiRoute",
@@ -7010,7 +7042,7 @@
       "snippetSha256": "9a2f473cf6bf75f59eab149803311d00827a1754b02ecc58a5c5ee4b664908c6"
     },
     {
-      "id": "FUNC-00873",
+      "id": "FUNC-00877",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 115,
       "name": "statusRoute",
@@ -7018,7 +7050,7 @@
       "snippetSha256": "af89dcae40aa98a6ce5d969cd6295e6092523f25736fe7a547110bb2c2ba36bd"
     },
     {
-      "id": "FUNC-00874",
+      "id": "FUNC-00878",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 125,
       "name": "mapWorldTick",
@@ -7026,7 +7058,7 @@
       "snippetSha256": "11d31d7bdbd34d5578c47a6408a78b3ab2d91c84f6d705509275aeb085458ea4"
     },
     {
-      "id": "FUNC-00875",
+      "id": "FUNC-00879",
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 133,
       "name": "fetch",
@@ -7034,7 +7066,7 @@
       "snippetSha256": "efe4e5b2086b6944f10519cdd8333fa09a1544bcb0d24d3afdc4685c0888a566"
     },
     {
-      "id": "FUNC-00876",
+      "id": "FUNC-00880",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 13,
       "name": "b64url",
@@ -7042,7 +7074,7 @@
       "snippetSha256": "931a6b82ccdac9d3221022d50800d1c78b0059cb58dfd88a9ec42004c5650e9e"
     },
     {
-      "id": "FUNC-00877",
+      "id": "FUNC-00881",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 14,
       "name": "unb64url",
@@ -7050,7 +7082,7 @@
       "snippetSha256": "f68be87cfa2d5155a00c7c5531ff762e384644e5d0149028270415185ce915ed"
     },
     {
-      "id": "FUNC-00878",
+      "id": "FUNC-00882",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 15,
       "name": "hmac",
@@ -7058,7 +7090,7 @@
       "snippetSha256": "6725ee2afaa5c22a8088b968743b625751fdffe756573dbeb79a540b900f8f4e"
     },
     {
-      "id": "FUNC-00879",
+      "id": "FUNC-00883",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 16,
       "name": "timingSafe",
@@ -7066,7 +7098,7 @@
       "snippetSha256": "8e4402de89e73ef64b51a944d83a6cf7cd09508d1bfba9077fe54dda946501d5"
     },
     {
-      "id": "FUNC-00880",
+      "id": "FUNC-00884",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 17,
       "name": "hashPassword",
@@ -7074,7 +7106,7 @@
       "snippetSha256": "8a9639c55701c51af4a55620458a16b52b1ddbf35e1b2f2a12b3f80c27e0a0a6"
     },
     {
-      "id": "FUNC-00881",
+      "id": "FUNC-00885",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 18,
       "name": "randomBytes",
@@ -7082,7 +7114,7 @@
       "snippetSha256": "4d127eac9c926422b45c1c51b52954a757ec5e0ad98babbdeed7e8d9c47abfd3"
     },
     {
-      "id": "FUNC-00882",
+      "id": "FUNC-00886",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 19,
       "name": "randomSecret",
@@ -7090,7 +7122,7 @@
       "snippetSha256": "bed5ad4b5199bf84cc04c0423f666e5396851b6b1a6dbd4b7f7149ebb1e8a6cd"
     },
     {
-      "id": "FUNC-00883",
+      "id": "FUNC-00887",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 20,
       "name": "norm",
@@ -7098,7 +7130,7 @@
       "snippetSha256": "a7aafc73cd3ee429ab19d4ebab02676f38e90203338ff8ad086fccdc661c8ea4"
     },
     {
-      "id": "FUNC-00884",
+      "id": "FUNC-00888",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 21,
       "name": "cleanText",
@@ -7106,7 +7138,7 @@
       "snippetSha256": "7b7fedcf932ca3b9e78246eb2e2a9fe083b8622f1711b9b4e56c6e4838760938"
     },
     {
-      "id": "FUNC-00885",
+      "id": "FUNC-00889",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 22,
       "name": "bearer",
@@ -7114,7 +7146,7 @@
       "snippetSha256": "6070e20a271e0ad3debabe3595d484e3efd021d1d88769b66d13bc6a24c95885"
     },
     {
-      "id": "FUNC-00886",
+      "id": "FUNC-00890",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 23,
       "name": "plainId",
@@ -7122,7 +7154,7 @@
       "snippetSha256": "e8538cd4adceae663e2e8f35abb942df136fd70d889c56185261397ed00dde81"
     },
     {
-      "id": "FUNC-00887",
+      "id": "FUNC-00891",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 24,
       "name": "safeAccount",
@@ -7130,7 +7162,7 @@
       "snippetSha256": "6ad2f3299579c517b40b8a0354299cf6086c3700d276ab456f0dce6e7a4b7064"
     },
     {
-      "id": "FUNC-00888",
+      "id": "FUNC-00892",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 25,
       "name": "cors",
@@ -7138,7 +7170,7 @@
       "snippetSha256": "e46aa5958dbedf3152078946fbdb7bea4f1e04d86ccadb02af4d76db0be78e86"
     },
     {
-      "id": "FUNC-00889",
+      "id": "FUNC-00893",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 26,
       "name": "reply",
@@ -7146,7 +7178,7 @@
       "snippetSha256": "4436bbdd8b8817e1d1ddca752302e80cf8373addb36891f28ec4cb8ec8a698e4"
     },
     {
-      "id": "FUNC-00890",
+      "id": "FUNC-00894",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 27,
       "name": "bodyJson",
@@ -7154,7 +7186,7 @@
       "snippetSha256": "bead784c6bb81ce68aa5a251e74db0f12dee38e28e341322309bb6fd5fc38869"
     },
     {
-      "id": "FUNC-00891",
+      "id": "FUNC-00895",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 28,
       "name": "toObjectId",
@@ -7162,7 +7194,7 @@
       "snippetSha256": "c5e34aacbc91e8dfe5e6340329760bee6c8484f0a5ccdd85838b6cdb20e5dc05"
     },
     {
-      "id": "FUNC-00892",
+      "id": "FUNC-00896",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 29,
       "name": "nowIso",
@@ -7170,7 +7202,7 @@
       "snippetSha256": "40facaae392090321d5f6e7efce06aebd3d8e477230b99e6a10391c487a0d177"
     },
     {
-      "id": "FUNC-00893",
+      "id": "FUNC-00897",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 30,
       "name": "roomId",
@@ -7178,7 +7210,7 @@
       "snippetSha256": "47384b8f92d0172bc68f3a5f3a0ed30898cd4b5647ccf95e12ad8455ad924894"
     },
     {
-      "id": "FUNC-00894",
+      "id": "FUNC-00898",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 32,
       "name": "mongo",
@@ -7186,7 +7218,7 @@
       "snippetSha256": "55311770d4e08ebd19f33d434fe4e75e25267c45fe8245a33d87c47488add31a"
     },
     {
-      "id": "FUNC-00895",
+      "id": "FUNC-00899",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 37,
       "name": "ensureIndexes",
@@ -7194,7 +7226,7 @@
       "snippetSha256": "06902f9a533958cb4c1557d6a03423b0fe0c1d901a4bac2c8909e4850f1ed66f"
     },
     {
-      "id": "FUNC-00896",
+      "id": "FUNC-00900",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 54,
       "name": "issueToken",
@@ -7202,7 +7234,7 @@
       "snippetSha256": "7f150ef272f67a470928324f23b30e0c8f9bdd1920f85f343df6716924fff42d"
     },
     {
-      "id": "FUNC-00897",
+      "id": "FUNC-00901",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 55,
       "name": "verifyToken",
@@ -7210,7 +7242,7 @@
       "snippetSha256": "afdb50059d789adbe87f4568567c02b6cd6e6a7f84c9de665df2a3cd1438b127"
     },
     {
-      "id": "FUNC-00898",
+      "id": "FUNC-00902",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 56,
       "name": "requireUser",
@@ -7218,7 +7250,7 @@
       "snippetSha256": "e9f83b1b2f7b96bb5a8a5134f241f466a5ad0a2b1743cfac20d67a8c01a29871"
     },
     {
-      "id": "FUNC-00899",
+      "id": "FUNC-00903",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 57,
       "name": "revokeCurrent",
@@ -7226,7 +7258,7 @@
       "snippetSha256": "5e45fa6748fc66c4d258c73b31f151c080d7a7da044c59e537991f52f251f5f8"
     },
     {
-      "id": "FUNC-00900",
+      "id": "FUNC-00904",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 58,
       "name": "slotSummary",
@@ -7234,7 +7266,7 @@
       "snippetSha256": "5c72ee5c07eefa69f67431d3bf5d11f5d9ca7782fef8bb199809803bc0b01965"
     },
     {
-      "id": "FUNC-00901",
+      "id": "FUNC-00905",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 59,
       "name": "clampSaveForStorage",
@@ -7242,7 +7274,7 @@
       "snippetSha256": "0ca60c69946c5cf1cbc0a22004efd6f755b556e504c39c08d19f8bef54a34f05"
     },
     {
-      "id": "FUNC-00902",
+      "id": "FUNC-00906",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 60,
       "name": "audit",
@@ -7250,7 +7282,7 @@
       "snippetSha256": "6facc5090d411e54c523e75a57b9743d599a78a9d1cdae60340fd89500966256"
     },
     {
-      "id": "FUNC-00903",
+      "id": "FUNC-00907",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 63,
       "name": "constructor",
@@ -7258,7 +7290,7 @@
       "snippetSha256": "facef9879f1c6b14fa33b11a3e87cf5be83b7dca0c2922e850ad2501de2b53c5"
     },
     {
-      "id": "FUNC-00904",
+      "id": "FUNC-00908",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 64,
       "name": "read",
@@ -7266,7 +7298,7 @@
       "snippetSha256": "c1e7e4439dfaa804453bcf25c63b9192a09b574c853b777b64d2eeb2502c64f8"
     },
     {
-      "id": "FUNC-00905",
+      "id": "FUNC-00909",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 65,
       "name": "write",
@@ -7274,7 +7306,7 @@
       "snippetSha256": "df1b94bf5e4698215c9d768a3e78ffeb17f76a8e8114fb0ecdb8fa7dd482343e"
     },
     {
-      "id": "FUNC-00906",
+      "id": "FUNC-00910",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 66,
       "name": "liveMembers",
@@ -7282,7 +7314,7 @@
       "snippetSha256": "979c1eb477a1d70ac6b2066d87d9d8808beca78a32f3c17ca175e8b66edb7b15"
     },
     {
-      "id": "FUNC-00907",
+      "id": "FUNC-00911",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 67,
       "name": "fetch",
@@ -7290,7 +7322,7 @@
       "snippetSha256": "7502423a7852618436d28d9e665a45519f3f1d985d1a69f6fd2d0840bfd82324"
     },
     {
-      "id": "FUNC-00908",
+      "id": "FUNC-00912",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 81,
       "name": "roomCall",
@@ -7298,7 +7330,7 @@
       "snippetSha256": "2c1a5fcf02c6b37f4faa10506f01b22cb57e5011ca4e3369530a8bf791dd3c1a"
     },
     {
-      "id": "FUNC-00909",
+      "id": "FUNC-00913",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 82,
       "name": "roomJson",
@@ -7306,7 +7338,7 @@
       "snippetSha256": "45aad32e88467e34e46c1c5a36821061ef0b1b5d20170e37976e8c75d57d6bec"
     },
     {
-      "id": "FUNC-00910",
+      "id": "FUNC-00914",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 84,
       "name": "aiRoute",
@@ -7314,7 +7346,7 @@
       "snippetSha256": "6f004a7748be907f0f5fd62610077521d106c854266ba9eb8a16d20555e69f73"
     },
     {
-      "id": "FUNC-00911",
+      "id": "FUNC-00915",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 14,
       "name": "num",
@@ -7322,7 +7354,7 @@
       "snippetSha256": "37210dcc69d919b3e1f8dc97c6f09e056cdc534a21bce6eea77ed7c91c614ec1"
     },
     {
-      "id": "FUNC-00912",
+      "id": "FUNC-00916",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 15,
       "name": "clamp",
@@ -7330,7 +7362,7 @@
       "snippetSha256": "085faecfe7a85ecf8e3f0c3268bfa6c45f1c4fe979d9a65fa057d0106a3ec285"
     },
     {
-      "id": "FUNC-00913",
+      "id": "FUNC-00917",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 17,
       "name": "canonicalAttribute",
@@ -7338,7 +7370,7 @@
       "snippetSha256": "44206d5a06514b29540a2533a90befab77c9bf2399769bf3855331eb2e2a1707"
     },
     {
-      "id": "FUNC-00914",
+      "id": "FUNC-00918",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 23,
       "name": "characterModifier",
@@ -7346,7 +7378,7 @@
       "snippetSha256": "dcd81bd5f0f22288fc5ebfd5e33ceb24742e2404f91d2c420c1a6043d3408fce"
     },
     {
-      "id": "FUNC-00915",
+      "id": "FUNC-00919",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 34,
       "name": "serverDifficulty",
@@ -7354,7 +7386,7 @@
       "snippetSha256": "4f7031452526f03ec8fcc886f76f16d0c89bba97b17e5a1c2276225082b06e8b"
     },
     {
-      "id": "FUNC-00916",
+      "id": "FUNC-00920",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 40,
       "name": "classifyTerionRoll",
@@ -7362,7 +7394,7 @@
       "snippetSha256": "044def7f333939db9aeee3f29b6e1da78f4b56bb6082f580842663677bebdeee"
     },
     {
-      "id": "FUNC-00917",
+      "id": "FUNC-00921",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 48,
       "name": "d10",
@@ -7370,7 +7402,7 @@
       "snippetSha256": "d20e6e5293ca15f6f7d7665376afd1e725abb80bd3df300d23c6a4e7da25800b"
     },
     {
-      "id": "FUNC-00918",
+      "id": "FUNC-00922",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 50,
       "name": "resolveTerionIntent",
@@ -7378,7 +7410,7 @@
       "snippetSha256": "20a969c5b3a1b8735daf3b70cc26d4d90b33d4336de476cd081b94655898c70d"
     },
     {
-      "id": "FUNC-00919",
+      "id": "FUNC-00923",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 60,
       "name": "mechanicalKey",
@@ -7386,7 +7418,7 @@
       "snippetSha256": "1685c3f3ae5d3f20eeff919df8a400383a2e6812f3f75bf57883714742c6c1c5"
     },
     {
-      "id": "FUNC-00920",
+      "id": "FUNC-00924",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 63,
       "name": "blockedClientKey",
@@ -7394,7 +7426,7 @@
       "snippetSha256": "92500a5df4acc80cd201d2e4d8f8a5bb586a7e84a757c3f337f59399c81ac607"
     },
     {
-      "id": "FUNC-00921",
+      "id": "FUNC-00925",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 65,
       "name": "hasClientResult",
@@ -7402,7 +7434,7 @@
       "snippetSha256": "2e01200d97516b92a996c256cd088193cd0b0bc6e9b7ce69fd921aa7accb0c14"
     },
     {
-      "id": "FUNC-00922",
+      "id": "FUNC-00926",
       "file": "cloudflare/r41-api/src/terion-mechanics.js",
       "line": 79,
       "name": "stripClientMechanical",
@@ -7410,7 +7442,7 @@
       "snippetSha256": "1a82dae2ec71ddb75aa6b3311c1d17b1b7a727533a0aaeea42abe6e67c21f809"
     },
     {
-      "id": "FUNC-00923",
+      "id": "FUNC-00927",
       "file": "data/v84-integrated-config.js",
       "line": 4,
       "name": "trainer",
@@ -7418,7 +7450,7 @@
       "snippetSha256": "b0fda8d03510792097bba46870371c8ec1fa21089ebf5f6462159bb4e6a9f645"
     },
     {
-      "id": "FUNC-00924",
+      "id": "FUNC-00928",
       "file": "r41-account-deeplink-fix.js",
       "line": 9,
       "name": "openOnce",
@@ -7426,7 +7458,7 @@
       "snippetSha256": "e023f462cf60486a84b09228adc2ef58535d3d325d5717113e01dd6007fe86e7"
     },
     {
-      "id": "FUNC-00925",
+      "id": "FUNC-00929",
       "file": "r41-account-ui.js",
       "line": 5,
       "name": "esc",
@@ -7434,7 +7466,7 @@
       "snippetSha256": "2504538cb912c6069018c51b72d268ff38e5e2f691f93b17de187183a93a44b0"
     },
     {
-      "id": "FUNC-00926",
+      "id": "FUNC-00930",
       "file": "r41-account-ui.js",
       "line": 6,
       "name": "errorText",
@@ -7442,7 +7474,7 @@
       "snippetSha256": "19b14fddad8722072990e536e0212de4dc0f6e69d093e16cd715d24bae611f1c"
     },
     {
-      "id": "FUNC-00927",
+      "id": "FUNC-00931",
       "file": "r41-account-ui.js",
       "line": 7,
       "name": "style",
@@ -7450,7 +7482,7 @@
       "snippetSha256": "941516e8e1aeac431cbce93f106cab8cd7297b5bfab1f1f0db1396e954accd75"
     },
     {
-      "id": "FUNC-00928",
+      "id": "FUNC-00932",
       "file": "r41-account-ui.js",
       "line": 16,
       "name": "ensureButton",
@@ -7458,7 +7490,7 @@
       "snippetSha256": "af45dfdbf206db45089fec6d8dab455f241be70b9499a7841d162d7d849e3114"
     },
     {
-      "id": "FUNC-00929",
+      "id": "FUNC-00933",
       "file": "r41-account-ui.js",
       "line": 22,
       "name": "updateButton",
@@ -7466,7 +7498,7 @@
       "snippetSha256": "45eb114cf85a0221d188f86947fa0b3a8f79bc715a453ed56dbb3d57fd21e91f"
     },
     {
-      "id": "FUNC-00930",
+      "id": "FUNC-00934",
       "file": "r41-account-ui.js",
       "line": 23,
       "name": "field",
@@ -7474,7 +7506,7 @@
       "snippetSha256": "fe8e1c13ff41df62fe71733c1a08c961a4deecad8b6fce6cbcc9e953fc12468b"
     },
     {
-      "id": "FUNC-00931",
+      "id": "FUNC-00935",
       "file": "r41-account-ui.js",
       "line": 24,
       "name": "tabs",
@@ -7482,7 +7514,7 @@
       "snippetSha256": "54ef605150cde182ecfaa6f24b59db9f16e63e04041bcf763a59b16a7cf778ca"
     },
     {
-      "id": "FUNC-00932",
+      "id": "FUNC-00936",
       "file": "r41-account-ui.js",
       "line": 25,
       "name": "unauthBody",
@@ -7490,7 +7522,7 @@
       "snippetSha256": "2a55fff20f54c83f2fac47862c3c90131e234e2f231d5936b3035d643f191b4f"
     },
     {
-      "id": "FUNC-00933",
+      "id": "FUNC-00937",
       "file": "r41-account-ui.js",
       "line": 26,
       "name": "authBody",
@@ -7498,7 +7530,7 @@
       "snippetSha256": "02963bdd53c3c730fc0bcdf00a200b06b050e00ca5500d843b7b79b469cc57c0"
     },
     {
-      "id": "FUNC-00934",
+      "id": "FUNC-00938",
       "file": "r41-account-ui.js",
       "line": 27,
       "name": "render",
@@ -7506,7 +7538,7 @@
       "snippetSha256": "c1c0b46fd17de3036039184f78f14d46fd841b447376b6eeac9c13effd67a2e1"
     },
     {
-      "id": "FUNC-00935",
+      "id": "FUNC-00939",
       "file": "r41-account-ui.js",
       "line": 28,
       "name": "values",
@@ -7514,7 +7546,7 @@
       "snippetSha256": "9da84f8d8a4107bee39bb6bbb2133533eea2e8f1dd7287c83b50800a18daf991"
     },
     {
-      "id": "FUNC-00936",
+      "id": "FUNC-00940",
       "file": "r41-account-ui.js",
       "line": 29,
       "name": "submitLogin",
@@ -7522,7 +7554,7 @@
       "snippetSha256": "2ec1500e6fb33ab8d9797eba85ac2989759fbaa64eda18f64afa39d8c3017fbf"
     },
     {
-      "id": "FUNC-00937",
+      "id": "FUNC-00941",
       "file": "r41-account-ui.js",
       "line": 30,
       "name": "submitRegister",
@@ -7530,7 +7562,7 @@
       "snippetSha256": "540680679e40ee789ea68ac8adc7bf91a144f0626bdc81868a323f7142638ee2"
     },
     {
-      "id": "FUNC-00938",
+      "id": "FUNC-00942",
       "file": "r41-account-ui.js",
       "line": 31,
       "name": "submitRecover",
@@ -7538,7 +7570,7 @@
       "snippetSha256": "79a15b636f71d2b5cba05533bd658a9ceabcb1d94ca5159bf5648512f1d28306"
     },
     {
-      "id": "FUNC-00939",
+      "id": "FUNC-00943",
       "file": "r41-account-ui.js",
       "line": 32,
       "name": "logout",
@@ -7546,7 +7578,7 @@
       "snippetSha256": "3f03dabb75d39488610dedd111371992db007a01e3b64339530175c9ccb9e71b"
     },
     {
-      "id": "FUNC-00940",
+      "id": "FUNC-00944",
       "file": "r41-account-ui.js",
       "line": 33,
       "name": "newRecoveryCode",
@@ -7554,7 +7586,7 @@
       "snippetSha256": "dc13fa350e06872fa7b6b2df632628453ac49dbe6eeda14a8e06687ac7cdc076"
     },
     {
-      "id": "FUNC-00941",
+      "id": "FUNC-00945",
       "file": "r41-account-ui.js",
       "line": 34,
       "name": "deleteAccount",
@@ -7562,7 +7594,7 @@
       "snippetSha256": "9baf1040beafaa9b4bf690b82633c2c168a527b05c1f5597a614226790f56fa2"
     },
     {
-      "id": "FUNC-00942",
+      "id": "FUNC-00946",
       "file": "r41-account-ui.js",
       "line": 35,
       "name": "close",
@@ -7570,7 +7602,7 @@
       "snippetSha256": "d7b58032d86d9a4ed317ea1358de45ccf558eb620d4fbc14cb78b43f03819132"
     },
     {
-      "id": "FUNC-00943",
+      "id": "FUNC-00947",
       "file": "r41-account-ui.js",
       "line": 35,
       "name": "open",
@@ -7578,7 +7610,7 @@
       "snippetSha256": "74ce5ec7a059319f86b9292fed4cd7a16e572686eaf092edba747915d79a7959"
     },
     {
-      "id": "FUNC-00944",
+      "id": "FUNC-00948",
       "file": "r41-account-ui.js",
       "line": 37,
       "name": "boot",
@@ -7586,7 +7618,7 @@
       "snippetSha256": "35898b769c07e955fcd05a9d1f0b94ba898ff9f6b170c9c6fb16e3c011dbd69d"
     },
     {
-      "id": "FUNC-00945",
+      "id": "FUNC-00949",
       "file": "r41-github-api.js",
       "line": 8,
       "name": "apiOrigin",
@@ -7594,7 +7626,7 @@
       "snippetSha256": "1c53b1280b90e5dcab93a61033150e13ae5505bf656015b67d83e3a639c87ddf"
     },
     {
-      "id": "FUNC-00946",
+      "id": "FUNC-00950",
       "file": "r41-github-api.js",
       "line": 11,
       "name": "token",
@@ -7602,7 +7634,7 @@
       "snippetSha256": "ad28f0352eee7ef27f53df8fc9547d5ea668f74b958ba5d762d63f30c18c7136"
     },
     {
-      "id": "FUNC-00947",
+      "id": "FUNC-00951",
       "file": "r41-github-api.js",
       "line": 21,
       "name": "setToken",
@@ -7610,7 +7642,7 @@
       "snippetSha256": "0220cfcd075e9641f74d35de677ecbd4e500b6c0de4700213ea3e612a0affc65"
     },
     {
-      "id": "FUNC-00948",
+      "id": "FUNC-00952",
       "file": "r41-github-api.js",
       "line": 31,
       "name": "captureClaim",
@@ -7618,7 +7650,7 @@
       "snippetSha256": "0bb128e1a9cf1bee95a0c02fcc8bc1f70a5e187f69e3f91dea586aff3724f4b6"
     },
     {
-      "id": "FUNC-00949",
+      "id": "FUNC-00953",
       "file": "r41-github-api.js",
       "line": 43,
       "name": "mapTarget",
@@ -7626,7 +7658,7 @@
       "snippetSha256": "e4b46d708f9d284a63b5da0319c395a2f7d59987765de8c6a3084c3e5d28dd20"
     },
     {
-      "id": "FUNC-00950",
+      "id": "FUNC-00954",
       "file": "r41-github-api.js",
       "line": 55,
       "name": "withAuth",
@@ -7634,7 +7666,7 @@
       "snippetSha256": "e64b4fccccf3faa3df30e468d3f1439b6063ff6ef6d0bc566070eed82d0479e9"
     },
     {
-      "id": "FUNC-00951",
+      "id": "FUNC-00955",
       "file": "r41-github-api.js",
       "line": 65,
       "name": "applyLeonClaim",
@@ -7642,7 +7674,7 @@
       "snippetSha256": "f97b5abb57eaf57b470abf102a9d9bacfc07c2b06a37f88d00541ec39ba89585"
     },
     {
-      "id": "FUNC-00952",
+      "id": "FUNC-00956",
       "file": "r41-github-api.js",
       "line": 111,
       "name": "request",
@@ -7650,7 +7682,7 @@
       "snippetSha256": "b3212c65731a9067e4a72e9591554976ac8525d1af98612f9d8a50da5f9f37de"
     },
     {
-      "id": "FUNC-00953",
+      "id": "FUNC-00957",
       "file": "r41-github-api.js",
       "line": 128,
       "name": "register",
@@ -7658,7 +7690,7 @@
       "snippetSha256": "a1c53f40ce1bf1c63d7fa314eb0bf9f6355ffc710641b272fb483546d9cf2e2f"
     },
     {
-      "id": "FUNC-00954",
+      "id": "FUNC-00958",
       "file": "r41-github-api.js",
       "line": 135,
       "name": "login",
@@ -7666,7 +7698,7 @@
       "snippetSha256": "e2df627247661d2ee788c1be5a82599d89f8fa08941aec14b65d23a6a65127a1"
     },
     {
-      "id": "FUNC-00955",
+      "id": "FUNC-00959",
       "file": "r41-github-api.js",
       "line": 142,
       "name": "me",
@@ -7674,7 +7706,7 @@
       "snippetSha256": "c85b3a701b7d007b71a357b20dceffde33304a19e63a2241382bc827a1d7ccfe"
     },
     {
-      "id": "FUNC-00956",
+      "id": "FUNC-00960",
       "file": "r41-github-api.js",
       "line": 153,
       "name": "logout",
@@ -7682,7 +7714,7 @@
       "snippetSha256": "aedd64b0dcd2f1ac9e73c9a7ab42a1dcceb06954ff9062a13e262ae1c6b1b849"
     },
     {
-      "id": "FUNC-00957",
+      "id": "FUNC-00961",
       "file": "r41-github-api.js",
       "line": 160,
       "name": "recover",
@@ -7690,7 +7722,7 @@
       "snippetSha256": "17075b3aeb4dad1d07d68c2bf5cbcd12d79a43ea3fb3c2d83e05028a4ced241b"
     },
     {
-      "id": "FUNC-00958",
+      "id": "FUNC-00962",
       "file": "r41-github-api.js",
       "line": 164,
       "name": "generateRecoveryCode",
@@ -7698,7 +7730,7 @@
       "snippetSha256": "3a8719c3345b59c6b356cc38191ff3e786da12d88792438977f5805f69f58f74"
     },
     {
-      "id": "FUNC-00959",
+      "id": "FUNC-00963",
       "file": "r41-github-api.js",
       "line": 167,
       "name": "deleteAccount",
@@ -7706,7 +7738,7 @@
       "snippetSha256": "652c3d919d472f3ed101e96c29692747f2b6ca8f2d6ac8cdef3d09c40dfdeee6"
     },
     {
-      "id": "FUNC-00960",
+      "id": "FUNC-00964",
       "file": "src/r41-canonical-repair.js",
       "line": 28,
       "name": "slug",
@@ -7714,7 +7746,7 @@
       "snippetSha256": "0847592ed1e7f86531623d70ad47e136bda743f008928ec0a829b1d87c8f0ff6"
     },
     {
-      "id": "FUNC-00961",
+      "id": "FUNC-00965",
       "file": "src/r41-core-bundle.js",
       "line": 5,
       "name": "normalize",
@@ -7722,7 +7754,7 @@
       "snippetSha256": "6dd41f17c5120124df267598c304a6d003d3b500870f404b19e7ce6a17f1b5b6"
     },
     {
-      "id": "FUNC-00962",
+      "id": "FUNC-00966",
       "file": "src/r41-core-bundle.js",
       "line": 6,
       "name": "getJson",
@@ -7730,7 +7762,7 @@
       "snippetSha256": "7a7994ff43e5f5b034f84e98dbf6d9143eb8488264cf69c0b4aaf7914fd69702"
     },
     {
-      "id": "FUNC-00963",
+      "id": "FUNC-00967",
       "file": "src/r41-core-bundle.js",
       "line": 7,
       "name": "indexManifest",
@@ -7738,7 +7770,7 @@
       "snippetSha256": "887369df369757345cab791bc7059c069103e4e05a06c0076079d8e15912350c"
     },
     {
-      "id": "FUNC-00964",
+      "id": "FUNC-00968",
       "file": "src/r41-core-bundle.js",
       "line": 14,
       "name": "init",
@@ -7746,7 +7778,7 @@
       "snippetSha256": "9df847229abd2ef655c0a54c2697404979d396d7e97c082c425890eb4e42dde3"
     },
     {
-      "id": "FUNC-00965",
+      "id": "FUNC-00969",
       "file": "src/r41-core-bundle.js",
       "line": 25,
       "name": "resolve",
@@ -7754,7 +7786,7 @@
       "snippetSha256": "8563374b75404931f0c03325b52d4e9f22f550a1764f9850efc9d97c413c9a71"
     },
     {
-      "id": "FUNC-00966",
+      "id": "FUNC-00970",
       "file": "src/r41-core-bundle.js",
       "line": 42,
       "name": "auditKnown",
@@ -7762,7 +7794,7 @@
       "snippetSha256": "45b342bf02880f6ffc6f400e912efc9c8288560a6dc5e32cc3148a7e98f54a67"
     },
     {
-      "id": "FUNC-00967",
+      "id": "FUNC-00971",
       "file": "src/r41-core-bundle.js",
       "line": 51,
       "name": "normalize",
@@ -7770,7 +7802,7 @@
       "snippetSha256": "038f2573e3ea767739c7baa417ea3ad861bbe7ecbeb907a2a27575f56da0f683"
     },
     {
-      "id": "FUNC-00968",
+      "id": "FUNC-00972",
       "file": "src/r41-core-bundle.js",
       "line": 52,
       "name": "fromCombatResult",
@@ -7778,7 +7810,7 @@
       "snippetSha256": "20410149d40046e6dbc16e5ac0196e2a19be40780d94816ca15d31eb0bbd35a8"
     },
     {
-      "id": "FUNC-00969",
+      "id": "FUNC-00973",
       "file": "src/r41-core-bundle.js",
       "line": 63,
       "name": "validateEvent",
@@ -7786,7 +7818,7 @@
       "snippetSha256": "13e0f0dbcadacd3c3d5ba0f8266f2cea52a5b90014753e91dc0a10afc94ec9ff"
     },
     {
-      "id": "FUNC-00970",
+      "id": "FUNC-00974",
       "file": "src/r41-core-bundle.js",
       "line": 70,
       "name": "clone",
@@ -7794,7 +7826,7 @@
       "snippetSha256": "4e36cb9b4c31a4bfb93be77ebd1b8378eb88a0e628bca553fa8e40ee6610c21b"
     },
     {
-      "id": "FUNC-00971",
+      "id": "FUNC-00975",
       "file": "src/r41-core-bundle.js",
       "line": 71,
       "name": "ensure",
@@ -7802,7 +7834,7 @@
       "snippetSha256": "f53d8bc43c6ae95cfee5344c7c4462e5eb471ed5e1fcf48f437f72695358d05f"
     },
     {
-      "id": "FUNC-00972",
+      "id": "FUNC-00976",
       "file": "src/r41-core-bundle.js",
       "line": 72,
       "name": "apply",
@@ -7810,7 +7842,7 @@
       "snippetSha256": "f5afc930f0eb562d911a81fc806c3b58c2aec048c320036933af3e9af2d64725"
     },
     {
-      "id": "FUNC-00973",
+      "id": "FUNC-00977",
       "file": "src/r41-core-bundle.js",
       "line": 73,
       "name": "validate",
@@ -7818,7 +7850,7 @@
       "snippetSha256": "6c02ced4ea18f6442c5a098e3aeb856d856fa2844203c98e8537278b1ca41e3e"
     },
     {
-      "id": "FUNC-00974",
+      "id": "FUNC-00978",
       "file": "src/r41-core-bundle.js",
       "line": 78,
       "name": "fromResult",
@@ -7826,7 +7858,7 @@
       "snippetSha256": "8b71c38524f860ffbd9eb67ad1d47bbeeda62d852ca665d5b366dbc2a1265835"
     },
     {
-      "id": "FUNC-00975",
+      "id": "FUNC-00979",
       "file": "src/r41-core-bundle.js",
       "line": 79,
       "name": "validate",
@@ -7834,7 +7866,7 @@
       "snippetSha256": "0fc55274eb2364aa2f121f7db817c5e131e09951ea8c42397da77d889c873777"
     },
     {
-      "id": "FUNC-00976",
+      "id": "FUNC-00980",
       "file": "src/r41-core-bundle.js",
       "line": 84,
       "name": "norm",
@@ -7842,7 +7874,7 @@
       "snippetSha256": "51a460bb581a634fe2728f8abc7fdbfb35c7971801cf54168bece6cd8c008925"
     },
     {
-      "id": "FUNC-00977",
+      "id": "FUNC-00981",
       "file": "src/r41-core-bundle.js",
       "line": 85,
       "name": "kindOf",
@@ -7850,7 +7882,7 @@
       "snippetSha256": "f47ace7ace8a704a7a7e9f8afd54f0ee141ae39b7663c3bc2d824c1f9866d181"
     },
     {
-      "id": "FUNC-00978",
+      "id": "FUNC-00982",
       "file": "src/r41-core-bundle.js",
       "line": 86,
       "name": "apply",
@@ -7858,7 +7890,7 @@
       "snippetSha256": "85d11b680fd70c7a1b5b2285d8908f37faea5c75a5596d5318e1794fc916b32c"
     },
     {
-      "id": "FUNC-00979",
+      "id": "FUNC-00983",
       "file": "src/r41-core-bundle.js",
       "line": 87,
       "name": "validate",
@@ -7866,7 +7898,7 @@
       "snippetSha256": "a9d27f4db3016c2d16ee8ad99f93cc017a83e5d473279006260bb1713067e1db"
     },
     {
-      "id": "FUNC-00980",
+      "id": "FUNC-00984",
       "file": "src/r41-core-bundle.js",
       "line": 94,
       "name": "norm",
@@ -7874,7 +7906,7 @@
       "snippetSha256": "3d6eb3e6780c26beb2e1685d0029280e3ab0bad4a93574782906fbe2c9556e5f"
     },
     {
-      "id": "FUNC-00981",
+      "id": "FUNC-00985",
       "file": "src/r41-core-bundle.js",
       "line": 95,
       "name": "register",
@@ -7882,7 +7914,7 @@
       "snippetSha256": "5a1c935142787f603420d7c9249cb517359c05ea09c568cfd195d6ca4dc3ca88"
     },
     {
-      "id": "FUNC-00982",
+      "id": "FUNC-00986",
       "file": "src/r41-core-bundle.js",
       "line": 96,
       "name": "get",
@@ -7890,7 +7922,7 @@
       "snippetSha256": "073ca5d248600ec57f592ebf11f1c2c4960c2ab75013bb1b6f3986a12f3e8d8f"
     },
     {
-      "id": "FUNC-00983",
+      "id": "FUNC-00987",
       "file": "src/r41-core-bundle.js",
       "line": 97,
       "name": "infer",
@@ -7898,7 +7930,7 @@
       "snippetSha256": "8604594e159b4ff761ca3de8718706f8e30e3b5677409772ffe4065db323b216"
     },
     {
-      "id": "FUNC-00984",
+      "id": "FUNC-00988",
       "file": "src/r41-core-bundle.js",
       "line": 115,
       "name": "clamp",
@@ -7906,7 +7938,7 @@
       "snippetSha256": "1d07ad3d2dfd260e8ff6f805824b5922a2102e97b728d1f017f554870832881d"
     },
     {
-      "id": "FUNC-00985",
+      "id": "FUNC-00989",
       "file": "src/r41-core-bundle.js",
       "line": 116,
       "name": "normalizeResult",
@@ -7914,7 +7946,7 @@
       "snippetSha256": "e7d0723c5730177ef8e3ac15726691bd21afbbc78fa432b81cb3f059b179bd7b"
     },
     {
-      "id": "FUNC-00986",
+      "id": "FUNC-00990",
       "file": "src/r41-core-bundle.js",
       "line": 120,
       "name": "terionModifier",
@@ -7922,7 +7954,7 @@
       "snippetSha256": "8fb6dd7efe4e50a3b64bcea2cf2b3bd2a88a0bcae4bb62f9f8cb9a05056d2a4a"
     },
     {
-      "id": "FUNC-00987",
+      "id": "FUNC-00991",
       "file": "src/r41-core-bundle.js",
       "line": 126,
       "name": "trainingResult",
@@ -7930,7 +7962,7 @@
       "snippetSha256": "79efcc43ce8664ea2de4e3f8db1505d819bb8b7a2f5e51f17996a1e25c6c62df"
     },
     {
-      "id": "FUNC-00988",
+      "id": "FUNC-00992",
       "file": "src/r41-core-bundle.js",
       "line": 137,
       "name": "normalizeScene",
@@ -7938,7 +7970,7 @@
       "snippetSha256": "6bdff95f2ed67731c303886682dc3f49fed4e070b005cbe2a61c1a5f52046203"
     },
     {
-      "id": "FUNC-00989",
+      "id": "FUNC-00993",
       "file": "src/r41-core-bundle.js",
       "line": 141,
       "name": "fromMissionStage",
@@ -7946,7 +7978,7 @@
       "snippetSha256": "3e52d8a77207406865e8d2490a7ce60ce83c7d12d714df4c94ccb1080d28f590"
     },
     {
-      "id": "FUNC-00990",
+      "id": "FUNC-00994",
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "name": "shouldSave",
@@ -7954,7 +7986,7 @@
       "snippetSha256": "b736a0c6188132f8e27cab86c1210c81627fe21341e47324f04e7ac88b5f139e"
     },
     {
-      "id": "FUNC-00991",
+      "id": "FUNC-00995",
       "file": "src/r41-core-bundle.js",
       "line": 150,
       "name": "record",
@@ -7962,7 +7994,7 @@
       "snippetSha256": "b977631057c71e96026ea030cfdb603f40731a43c03c396908b596a5fef79dc6"
     },
     {
-      "id": "FUNC-00992",
+      "id": "FUNC-00996",
       "file": "src/r41-core-bundle.js",
       "line": 160,
       "name": "boot",
@@ -7970,7 +8002,7 @@
       "snippetSha256": "0a8de18ec4c4292540f274dbdb93c147847be2c76b6dc6348c31df6220b47057"
     },
     {
-      "id": "FUNC-00993",
+      "id": "FUNC-00997",
       "file": "src/r41-final-ui-repair.js",
       "line": 12,
       "name": "repair",
@@ -7978,7 +8010,7 @@
       "snippetSha256": "d42bf6704d17176a1069dbd4cc575497cb538b42661aa5d910213864fd2df8d9"
     },
     {
-      "id": "FUNC-00994",
+      "id": "FUNC-00998",
       "file": "src/r41-final-ui-repair.js",
       "line": 19,
       "name": "schedule",
@@ -7986,7 +8018,7 @@
       "snippetSha256": "44db8f00acb8e8933d2df936abff25d209b6050f8e0d0079827ee31154f2cbc5"
     },
     {
-      "id": "FUNC-00995",
+      "id": "FUNC-00999",
       "file": "src/r41-local-reset-fix.js",
       "line": 20,
       "name": "localProgressKeys",
@@ -7994,7 +8026,7 @@
       "snippetSha256": "5f087f02f12b601808e4e9215f8fd8b47f2c95ea7a37d30fc3270feb713404dc"
     },
     {
-      "id": "FUNC-00996",
+      "id": "FUNC-01000",
       "file": "src/r41-local-reset-fix.js",
       "line": 30,
       "name": "resetLocalProgress",
@@ -8002,7 +8034,7 @@
       "snippetSha256": "a4b960c4ad74b25b7318a802d4d51a5272d3c089620f13201ccf1ba83ae36c30"
     },
     {
-      "id": "FUNC-00997",
+      "id": "FUNC-01001",
       "file": "tools/account-live-e2e.mjs",
       "line": 11,
       "name": "ok",
@@ -8010,7 +8042,7 @@
       "snippetSha256": "2480f67baf19c60e6d5ccde202c6373716bca88e519c8e1c4ce0879f89305621"
     },
     {
-      "id": "FUNC-00998",
+      "id": "FUNC-01002",
       "file": "tools/account-live-e2e.mjs",
       "line": 12,
       "name": "call",
@@ -8018,7 +8050,7 @@
       "snippetSha256": "c19ccebc9dcbcd33e1aad893c815c64e8b46d4a72a5b4ada2a0fd0a39882c39f"
     },
     {
-      "id": "FUNC-00999",
+      "id": "FUNC-01003",
       "file": "tools/account-live-e2e.mjs",
       "line": 21,
       "name": "write",
@@ -8026,7 +8058,7 @@
       "snippetSha256": "866b401c7b4bb72c7f70d95a1d60a5f650a8eecc4a15400ace5bbfc6db8f9591"
     },
     {
-      "id": "FUNC-01000",
+      "id": "FUNC-01004",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 10,
       "name": "fail",
@@ -8034,7 +8066,7 @@
       "snippetSha256": "6c2b35a86131dbede601be653141baa9f8c1eab819923d4c1afa90d79cc014f6"
     },
     {
-      "id": "FUNC-01001",
+      "id": "FUNC-01005",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 11,
       "name": "warn",
@@ -8042,7 +8074,7 @@
       "snippetSha256": "6a8bc0ff60f7e54e0dc9ce4f4b29edcc4b4fe81dca032276b8bb20905bb6608d"
     },
     {
-      "id": "FUNC-01002",
+      "id": "FUNC-01006",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 12,
       "name": "exists",
@@ -8050,7 +8082,7 @@
       "snippetSha256": "c3acd1964731b2a33910f6dbab97485999d3bf9b4de82f1f107a3046f552e94f"
     },
     {
-      "id": "FUNC-01003",
+      "id": "FUNC-01007",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 13,
       "name": "norm",
@@ -8058,7 +8090,7 @@
       "snippetSha256": "bc10945d647e71124b51b7493a416d55abb40f0a84f7e1e598159a768a6cb007"
     },
     {
-      "id": "FUNC-01004",
+      "id": "FUNC-01008",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 14,
       "name": "isDoc",
@@ -8066,7 +8098,7 @@
       "snippetSha256": "5f14da79dd70f5694a255bcc70ee18dff89ca9fb43d869e5be037812888e3e61"
     },
     {
-      "id": "FUNC-01005",
+      "id": "FUNC-01009",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 15,
       "name": "isTooling",
@@ -8074,7 +8106,7 @@
       "snippetSha256": "8c90956c3ca415cffd14897cac6fd7b9d496dea7b52d73d9e89cdb4d076863f8"
     },
     {
-      "id": "FUNC-01006",
+      "id": "FUNC-01010",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 16,
       "name": "isGameRuntime",
@@ -8082,7 +8114,7 @@
       "snippetSha256": "447e4a355f1c9b50470e80a3ac594224ad5ec0f5a8b73e11f547538ea4f5f2ec"
     },
     {
-      "id": "FUNC-01007",
+      "id": "FUNC-01011",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 37,
       "name": "auditGameGrouped",
@@ -8090,7 +8122,7 @@
       "snippetSha256": "51f774c3118003d322c53c27d2066e99c761a2b80d622db2e98555e49650d49d"
     },
     {
-      "id": "FUNC-01008",
+      "id": "FUNC-01012",
       "file": "tools/audit-final-canonical-spec.mjs",
       "line": 10,
       "name": "sha256",
@@ -8098,7 +8130,7 @@
       "snippetSha256": "f4e2734367abd3bf52abf00f9e96f35a4499e564384650e7883d3ad093dad3ab"
     },
     {
-      "id": "FUNC-01009",
+      "id": "FUNC-01013",
       "file": "tools/audit-r41-assets.mjs",
       "line": 17,
       "name": "walk",
@@ -8106,7 +8138,7 @@
       "snippetSha256": "dc21b42e8560d6199daa333f65f311a638ef236cc7c3ad5c4b8be80e84cf4a9c"
     },
     {
-      "id": "FUNC-01010",
+      "id": "FUNC-01014",
       "file": "tools/audit-r41-assets.mjs",
       "line": 26,
       "name": "cleanRef",
@@ -8114,7 +8146,7 @@
       "snippetSha256": "455b2bb062a25575bfd9d39d1e49f72bc211f98bc6f7f1c5f9f556be1fb62f4b"
     },
     {
-      "id": "FUNC-01011",
+      "id": "FUNC-01015",
       "file": "tools/audit-r41-assets.mjs",
       "line": 31,
       "name": "isDynamic",
@@ -8122,7 +8154,7 @@
       "snippetSha256": "53ff41ef167971abf3cb09b06b33e8d991d18ce484a177ee3647aa46376bbc17"
     },
     {
-      "id": "FUNC-01012",
+      "id": "FUNC-01016",
       "file": "tools/audit-r41-assets.mjs",
       "line": 32,
       "name": "addRef",
@@ -8130,7 +8162,7 @@
       "snippetSha256": "a0a5576a0bc895bbafc14ee085e6b25ae56364418f7680cb34048aa25b5446fe"
     },
     {
-      "id": "FUNC-01013",
+      "id": "FUNC-01017",
       "file": "tools/browser-account-live.mjs",
       "line": 10,
       "name": "assert",
@@ -8138,7 +8170,7 @@
       "snippetSha256": "5c0f4891d1b23701201f80cee72ae83329485db49cbdf91f159561c2853e6028"
     },
     {
-      "id": "FUNC-01014",
+      "id": "FUNC-01018",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 16,
       "name": "readSaveV2",
@@ -8146,7 +8178,7 @@
       "snippetSha256": "56d33e2db18bc77d14946b2845c6f9b1082a6010cac8b7c38ed3124b2818f3d2"
     },
     {
-      "id": "FUNC-01015",
+      "id": "FUNC-01019",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 18,
       "name": "tryParse",
@@ -8154,7 +8186,7 @@
       "snippetSha256": "33c0800735418e38822ddfd82b8f28e8767a338edf0c03905831815dda5e8c90"
     },
     {
-      "id": "FUNC-01016",
+      "id": "FUNC-01020",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 48,
       "name": "registerV2",
@@ -8162,7 +8194,7 @@
       "snippetSha256": "1c54e4146bc89d28d3ce6b15791a64815e718fd9c215dbd98ae6d293a1c3eb3b"
     },
     {
-      "id": "FUNC-01017",
+      "id": "FUNC-01021",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 66,
       "name": "seedNormalV2",
@@ -8170,7 +8202,7 @@
       "snippetSha256": "166fb9c942363f90a647aa2b12efd9b6d85529c8dffae57fc7eea26894c2a732"
     },
     {
-      "id": "FUNC-01018",
+      "id": "FUNC-01022",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 165,
       "name": "navigateV2",
@@ -8178,7 +8210,7 @@
       "snippetSha256": "c17dccaef36467d950c708e005fa8e3e34825d5eeffb82b264a72fc397daa6d7"
     },
     {
-      "id": "FUNC-01019",
+      "id": "FUNC-01023",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 10,
       "name": "seedNormalV3",
@@ -8186,7 +8218,7 @@
       "snippetSha256": "9fd248be9dbf5602d5fc022636f695a38a1c15824a4ef97824a7912e0411140f"
     },
     {
-      "id": "FUNC-01020",
+      "id": "FUNC-01024",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 18,
       "name": "assert",
@@ -8194,7 +8226,7 @@
       "snippetSha256": "5c0f4891d1b23701201f80cee72ae83329485db49cbdf91f159561c2853e6028"
     },
     {
-      "id": "FUNC-01021",
+      "id": "FUNC-01025",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 19,
       "name": "pass",
@@ -8202,7 +8234,7 @@
       "snippetSha256": "cdfc156248a0098d1a842ca3a5ebfef42d79ae6f983f783ab5b84da60935b118"
     },
     {
-      "id": "FUNC-01022",
+      "id": "FUNC-01026",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 20,
       "name": "contract",
@@ -8210,7 +8242,7 @@
       "snippetSha256": "70f52eda1fba4da1ab280262bd9d614f2d604e0e2de4adbedd5fb5067acd6fbd"
     },
     {
-      "id": "FUNC-01023",
+      "id": "FUNC-01027",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 21,
       "name": "sleep",
@@ -8218,7 +8250,7 @@
       "snippetSha256": "4df12355ca44f32a2330cb8c52e865f0aa0c031910b7f3959124b8fadece0a55"
     },
     {
-      "id": "FUNC-01024",
+      "id": "FUNC-01028",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 23,
       "name": "normalFixture",
@@ -8226,7 +8258,7 @@
       "snippetSha256": "e434555df7dfba066f7162d1fb04cd7a50a6574402ed6daf330ecadb9f961b49"
     },
     {
-      "id": "FUNC-01025",
+      "id": "FUNC-01029",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 55,
       "name": "leonFixture",
@@ -8234,7 +8266,7 @@
       "snippetSha256": "ecaef66e4504a61c49ccfa4d06bb2c5dff8eb253135fd6f9191d512a96087ba2"
     },
     {
-      "id": "FUNC-01026",
+      "id": "FUNC-01030",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 65,
       "name": "readSave",
@@ -8242,7 +8274,7 @@
       "snippetSha256": "1f70cf84dad3dcc2cd30bf8b56d0a5675a9ba9abc2e0138a102f96aa8cfc9fcf"
     },
     {
-      "id": "FUNC-01027",
+      "id": "FUNC-01031",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 66,
       "name": "r41State",
@@ -8250,7 +8282,7 @@
       "snippetSha256": "d6c1ade168ceac8224636fdb0166ca71c01ad79fb1d2eb703937f0f899a6f13b"
     },
     {
-      "id": "FUNC-01028",
+      "id": "FUNC-01032",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 67,
       "name": "masterState",
@@ -8258,7 +8290,7 @@
       "snippetSha256": "41428bf5987c28599dc6d34cae24a8c534d506b6083c28991bea0fb66f31a88c"
     },
     {
-      "id": "FUNC-01029",
+      "id": "FUNC-01033",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 68,
       "name": "navigate",
@@ -8266,7 +8298,7 @@
       "snippetSha256": "0b81a73e899fe3ed4dc519387a7f2fdb3b7310afdc96352f93be17aee8d88152"
     },
     {
-      "id": "FUNC-01030",
+      "id": "FUNC-01034",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 70,
       "name": "playVisibleMinigame",
@@ -8274,7 +8306,7 @@
       "snippetSha256": "d17161d23e8867fbfe81d6f6a7b6e2f04b8072ed74ac93c9b9a295599c215f4a"
     },
     {
-      "id": "FUNC-01031",
+      "id": "FUNC-01035",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 89,
       "name": "register",
@@ -8282,7 +8314,7 @@
       "snippetSha256": "767eab804d2ae3fda1b8b789415d6e1afaebf2cc36aae6e4615e7802eab7b457"
     },
     {
-      "id": "FUNC-01032",
+      "id": "FUNC-01036",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 107,
       "name": "seedNormal",
@@ -8290,7 +8322,7 @@
       "snippetSha256": "bf33e4112967cb902b3fd6f0f1fdb8c279751cbea3518f33ef6f6e683ca2fb11"
     },
     {
-      "id": "FUNC-01033",
+      "id": "FUNC-01037",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 118,
       "name": "testNormalGameplay",
@@ -8298,7 +8330,7 @@
       "snippetSha256": "4fa59f2ea4f42ea211ab8e5107583e1be1e72cc4414c76daa5ced555f1ce8abe"
     },
     {
-      "id": "FUNC-01034",
+      "id": "FUNC-01038",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 283,
       "name": "testKurai",
@@ -8306,7 +8338,7 @@
       "snippetSha256": "bfd62ccf3cc642f24a76380fbfe62cd746d817ca380f988dbcda14ad472e6634"
     },
     {
-      "id": "FUNC-01035",
+      "id": "FUNC-01039",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 308,
       "name": "cleanupAccount",
@@ -8314,7 +8346,7 @@
       "snippetSha256": "d1b419b304571c7d224a4d0523e396f08d02b5727eda1346e5c0e1fcef5b47c0"
     },
     {
-      "id": "FUNC-01036",
+      "id": "FUNC-01040",
       "file": "tools/browser-live-api.mjs",
       "line": 10,
       "name": "assert",
@@ -8322,7 +8354,7 @@
       "snippetSha256": "22ce1dba3fcd8a8fec809ca8d05843221b349da7aed65bc72a67b72520573537"
     },
     {
-      "id": "FUNC-01037",
+      "id": "FUNC-01041",
       "file": "tools/browser-smoke.mjs",
       "line": 12,
       "name": "fail",
@@ -8330,7 +8362,7 @@
       "snippetSha256": "72ce211928ab5ff30743f5f43df732e7e8daddb0114314313d20926e62c396c8"
     },
     {
-      "id": "FUNC-01038",
+      "id": "FUNC-01042",
       "file": "tools/browser-smoke.mjs",
       "line": 13,
       "name": "assert",
@@ -8338,7 +8370,7 @@
       "snippetSha256": "509e76e876e78cd67cd4d30880479f900a750fb5b6efe854edcecda87fd92fee"
     },
     {
-      "id": "FUNC-01039",
+      "id": "FUNC-01043",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 19,
       "name": "sha256",
@@ -8346,7 +8378,7 @@
       "snippetSha256": "c5243f8c16cd049c9775d6869b51e476657680832c3703b587622cc0fc49d2a8"
     },
     {
-      "id": "FUNC-01040",
+      "id": "FUNC-01044",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 20,
       "name": "norm",
@@ -8354,7 +8386,7 @@
       "snippetSha256": "2ccd9186abc95e2d911af6ef404a913c04ca34a6c6797bf99049459d2496d69b"
     },
     {
-      "id": "FUNC-01041",
+      "id": "FUNC-01045",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 21,
       "name": "isDocs",
@@ -8362,7 +8394,7 @@
       "snippetSha256": "3c4954c7b2d16facdff863cb08464ea0d4eca6f522fbcac4b99ee78b958d5dc7"
     },
     {
-      "id": "FUNC-01042",
+      "id": "FUNC-01046",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 22,
       "name": "isSource",
@@ -8370,7 +8402,7 @@
       "snippetSha256": "4b44ec8493b5546ddfaff99e084e189359aab202f7329102a719e080c660c8dd"
     },
     {
-      "id": "FUNC-01043",
+      "id": "FUNC-01047",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 23,
       "name": "esc",
@@ -8378,7 +8410,7 @@
       "snippetSha256": "aad3b493cd194614b553b94dd07c11aa100fd035ee7323e7bfdab681cbd23f6e"
     },
     {
-      "id": "FUNC-01044",
+      "id": "FUNC-01048",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 24,
       "name": "code",
@@ -8386,7 +8418,7 @@
       "snippetSha256": "28d1306471d924d011ea2e24f1c78c8f7abe16b14020d0dc920cb89d232d96e8"
     },
     {
-      "id": "FUNC-01045",
+      "id": "FUNC-01049",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 25,
       "name": "fence",
@@ -8394,7 +8426,7 @@
       "snippetSha256": "56ff7ee96d4482410e47fceb99a152c9eef5c7f6a9880e34acf9c53dfa9f6dcc"
     },
     {
-      "id": "FUNC-01046",
+      "id": "FUNC-01050",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 26,
       "name": "langFor",
@@ -8402,7 +8434,7 @@
       "snippetSha256": "90fa5b45ec6fd25bdefdc5873e35695cdb5a5ff02dbaed4420987b179e08600f"
     },
     {
-      "id": "FUNC-01047",
+      "id": "FUNC-01051",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 31,
       "name": "lineLocator",
@@ -8410,7 +8442,7 @@
       "snippetSha256": "722957f94f8c8c8949a1a26e76cd61a900473bc00b68c88236319d52fc6331de"
     },
     {
-      "id": "FUNC-01048",
+      "id": "FUNC-01052",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 41,
       "name": "blockEnd",
@@ -8418,7 +8450,7 @@
       "snippetSha256": "343b826db9de6d603a029a2405fb596642df85f8036dc622a90a4c73ab9e4796"
     },
     {
-      "id": "FUNC-01049",
+      "id": "FUNC-01053",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 62,
       "name": "snippetAt",
@@ -8426,7 +8458,7 @@
       "snippetSha256": "4a5e0b480203f90831e55875deb4956eacee4468299637fafaa469435c33827c"
     },
     {
-      "id": "FUNC-01050",
+      "id": "FUNC-01054",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 72,
       "name": "scanFunctions",
@@ -8434,7 +8466,7 @@
       "snippetSha256": "99f17597a43bd8d9b8e2c275ce58cbb57f5194c5cbabfe872511d54a9f7f711e"
     },
     {
-      "id": "FUNC-01051",
+      "id": "FUNC-01055",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 126,
       "name": "actionHandlerEvidence",
@@ -8442,7 +8474,7 @@
       "snippetSha256": "e2f7de9141a02077004539341cd457eb30404f691f6d8383e37c1681d0b4b5a0"
     },
     {
-      "id": "FUNC-01052",
+      "id": "FUNC-01056",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 175,
       "name": "gate",
@@ -8450,7 +8482,7 @@
       "snippetSha256": "7a34b7247dd8bfd87eca35b22257b7ad2d530ef5b9cad48b2f0ed418ea64e345"
     },
     {
-      "id": "FUNC-01053",
+      "id": "FUNC-01057",
       "file": "tools/final-readiness.mjs",
       "line": 7,
       "name": "pass",
@@ -8458,7 +8490,7 @@
       "snippetSha256": "88f78ca4a334388e7395f40fad32760b7a079f962a588759a61290a5372e0d74"
     },
     {
-      "id": "FUNC-01054",
+      "id": "FUNC-01058",
       "file": "tools/final-readiness.mjs",
       "line": 8,
       "name": "readJson",
@@ -8466,7 +8498,7 @@
       "snippetSha256": "88925c9f2cc13e4b835f481dcb7298c004c9ab4c29247e7626ca28cdbf1dff39"
     },
     {
-      "id": "FUNC-01055",
+      "id": "FUNC-01059",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 26,
       "name": "walk",
@@ -8474,7 +8506,7 @@
       "snippetSha256": "ca3fc5b1a46fb92ce6c67dbacd0331bfc837963615aee85c52ee29abc38357c8"
     },
     {
-      "id": "FUNC-01056",
+      "id": "FUNC-01060",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 40,
       "name": "reEsc",
@@ -8482,7 +8514,7 @@
       "snippetSha256": "cdee9ed3c15f8b59e80a881a7fb58e8c66e42003ec3ba5d12fd1e7d95b62d612"
     },
     {
-      "id": "FUNC-01057",
+      "id": "FUNC-01061",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 41,
       "name": "lineAt",
@@ -8490,7 +8522,7 @@
       "snippetSha256": "434873d358ff01f5b69c935070cf0e4e7ef98a693fb548a7244d1456d5b461bf"
     },
     {
-      "id": "FUNC-01058",
+      "id": "FUNC-01062",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 46,
       "name": "occurrences",
@@ -8498,7 +8530,7 @@
       "snippetSha256": "071f8021a9d0b06c90309ac9928b3713ad32b81f62acb42689efa0ae937e7e77"
     },
     {
-      "id": "FUNC-01059",
+      "id": "FUNC-01063",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 55,
       "name": "uniqEvidence",
@@ -8506,7 +8538,7 @@
       "snippetSha256": "9deef64b8ab3563a5bd8e191c8a431e55a2fd692db865c6110bf839e059dfecc"
     },
     {
-      "id": "FUNC-01060",
+      "id": "FUNC-01064",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 65,
       "name": "aliasesForDatasetAction",
@@ -8514,7 +8546,7 @@
       "snippetSha256": "626740b82ab4f0f4a9c68525175496ce8003c6c445552356f66744d07ef75c8b"
     },
     {
-      "id": "FUNC-01061",
+      "id": "FUNC-01065",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 73,
       "name": "handlerEvidence",
@@ -8522,7 +8554,7 @@
       "snippetSha256": "bff55ad6224fc93f44e3dd2b1107cf2fbaaf9f44fde50897cd427fe4a778b1f9"
     },
     {
-      "id": "FUNC-01062",
+      "id": "FUNC-01066",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -8530,7 +8562,7 @@
       "snippetSha256": "c57fffdc7797691b45d759cb834fc1f73980d1d9a0c0bc49129915c8657b5ca6"
     },
     {
-      "id": "FUNC-01063",
+      "id": "FUNC-01067",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -8538,7 +8570,7 @@
       "snippetSha256": "0a66889f8d5eb67c0269c19baa67ab12589a71368f246b1c7b52326abadfbf55"
     },
     {
-      "id": "FUNC-01064",
+      "id": "FUNC-01068",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -8546,7 +8578,7 @@
       "snippetSha256": "799ec4b33b4e660efee34e58db082d1adf32cb4aac04f34132a7cb1319c2624f"
     },
     {
-      "id": "FUNC-01065",
+      "id": "FUNC-01069",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -8554,7 +8586,7 @@
       "snippetSha256": "9218a43d85edba13b0f9b676813e0620f0052ed8a1ba4206a01147134aa01923"
     },
     {
-      "id": "FUNC-01066",
+      "id": "FUNC-01070",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -8562,7 +8594,7 @@
       "snippetSha256": "e3e7f45816dc8990d82def700b8e2d4309325552cbcc3f77a1d1bb0859a6d31b"
     },
     {
-      "id": "FUNC-01067",
+      "id": "FUNC-01071",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -8570,7 +8602,7 @@
       "snippetSha256": "0e2981d6e25c303083a87c12c2187f9b9a4f288549d4724ca8be10734b652cfc"
     },
     {
-      "id": "FUNC-01068",
+      "id": "FUNC-01072",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -8578,7 +8610,7 @@
       "snippetSha256": "babffc7bf704f00eba2c6ab4c6250bb2015aa4238760c4e4e51330ced292cd9a"
     },
     {
-      "id": "FUNC-01069",
+      "id": "FUNC-01073",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -8586,7 +8618,7 @@
       "snippetSha256": "ff8016c5597d2c29d13657ddf295f04858a51eeb9850d5226335fae750455df4"
     },
     {
-      "id": "FUNC-01070",
+      "id": "FUNC-01074",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -8594,7 +8626,7 @@
       "snippetSha256": "8fee23f2c6aa74391b3ba4cf6826c3d4370893c7b88658c2fdec97f3be69ef11"
     },
     {
-      "id": "FUNC-01071",
+      "id": "FUNC-01075",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -8602,7 +8634,7 @@
       "snippetSha256": "884ca1303e4e1f363aa1231e82d378ea58d1efdd33fd25123985077786c0937a"
     },
     {
-      "id": "FUNC-01072",
+      "id": "FUNC-01076",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -8610,7 +8642,7 @@
       "snippetSha256": "9393b8a4a93cfd1483e63b67a17e40f3d61a045fa1db7f916dabe2d518b1f3ad"
     },
     {
-      "id": "FUNC-01073",
+      "id": "FUNC-01077",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -8618,7 +8650,7 @@
       "snippetSha256": "3f16df07816c1423768a2f1502239c4c5f3b08160693183454bd9dc47c0d775a"
     },
     {
-      "id": "FUNC-01074",
+      "id": "FUNC-01078",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -8626,7 +8658,7 @@
       "snippetSha256": "b0d910fa0b88049df9573d519d450286bb27c73ff752f260ce1532ab4575dd7d"
     },
     {
-      "id": "FUNC-01075",
+      "id": "FUNC-01079",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -8634,7 +8666,7 @@
       "snippetSha256": "99bb39dc840adb06b077db80748f9152224a40991b2a470fef9cf9c84950c2c3"
     },
     {
-      "id": "FUNC-01076",
+      "id": "FUNC-01080",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -8642,7 +8674,7 @@
       "snippetSha256": "ddd677f234da1f2ac754a61f2d108785f6f82b10f4282b56a3a31d982327641f"
     },
     {
-      "id": "FUNC-01077",
+      "id": "FUNC-01081",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -8650,7 +8682,7 @@
       "snippetSha256": "230cb31829b04597cd35245e049981eb7d0fa0eeff8c9b2d77a707930afa5e48"
     },
     {
-      "id": "FUNC-01078",
+      "id": "FUNC-01082",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -8658,7 +8690,7 @@
       "snippetSha256": "071a8d4ab429c64787f1d965bbb24bf9711cd7b875be7716258fd511a0f818c3"
     },
     {
-      "id": "FUNC-01079",
+      "id": "FUNC-01083",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -8666,7 +8698,7 @@
       "snippetSha256": "fec850d99073347304a2a25a139d50ef6f7de8cf3c85e62aec1bdab11b4fb1e6"
     },
     {
-      "id": "FUNC-01080",
+      "id": "FUNC-01084",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -8674,7 +8706,7 @@
       "snippetSha256": "96fea54440f2794bef63aa540dd5f4299382ed6f59272158fb595cfec0ac70e5"
     },
     {
-      "id": "FUNC-01081",
+      "id": "FUNC-01085",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -8682,7 +8714,7 @@
       "snippetSha256": "2fd55c2f5561912786494c4cdec429ca700243d0778dfc6533a3649ba173d855"
     },
     {
-      "id": "FUNC-01082",
+      "id": "FUNC-01086",
       "file": "tools/live-worker-e2e.mjs",
       "line": 11,
       "name": "assert",
@@ -8690,7 +8722,7 @@
       "snippetSha256": "c813900bc6a35a642af90f88ee0c7d62dbe435c66a00d8d20e27b557120de798"
     },
     {
-      "id": "FUNC-01083",
+      "id": "FUNC-01087",
       "file": "tools/live-worker-e2e.mjs",
       "line": 12,
       "name": "record",
@@ -8698,7 +8730,7 @@
       "snippetSha256": "6334724c43d57eceb19d350af9f853cc1ae4d89587cdfe75958066698f7faf67"
     },
     {
-      "id": "FUNC-01084",
+      "id": "FUNC-01088",
       "file": "tools/live-worker-e2e.mjs",
       "line": 13,
       "name": "request",
@@ -8706,7 +8738,7 @@
       "snippetSha256": "e1cc8c9732a02634badfdb787307a9f3fd396ddc44b8b93a932233397ffee57b"
     },
     {
-      "id": "FUNC-01085",
+      "id": "FUNC-01089",
       "file": "tools/live-worker-e2e.mjs",
       "line": 23,
       "name": "safe",
@@ -8714,7 +8746,7 @@
       "snippetSha256": "354f6bb2be38523cb4f3e26a405be4e46c6c533e518a3d04363fe5a549abf6a0"
     },
     {
-      "id": "FUNC-01086",
+      "id": "FUNC-01090",
       "file": "tools/live-worker-e2e.mjs",
       "line": 29,
       "name": "writeReport",
@@ -8722,7 +8754,7 @@
       "snippetSha256": "51926032bfeebe08f3b0b1f6e3683a6b1acac16c978eccb8158428313fa6d671"
     },
     {
-      "id": "FUNC-01087",
+      "id": "FUNC-01091",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -8730,7 +8762,7 @@
       "snippetSha256": "270a36f1ac366fd54aee4c814a9b931a37a548d40574448e32b7af7d6271ddb6"
     },
     {
-      "id": "FUNC-01088",
+      "id": "FUNC-01092",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -8738,7 +8770,7 @@
       "snippetSha256": "cc2e7fd87a3f722e08cb51c9a9600f839570cc344ec0b3b2d3782f38d5321434"
     },
     {
-      "id": "FUNC-01089",
+      "id": "FUNC-01093",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -8746,7 +8778,7 @@
       "snippetSha256": "b4527ad44292beb910119819146d8e181282d4f0f3ac80accfd02afcc749265a"
     },
     {
-      "id": "FUNC-01090",
+      "id": "FUNC-01094",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -8754,7 +8786,7 @@
       "snippetSha256": "83588246702d53ab5bcb3755651224a226bb4345aee08492ac0e8250cdbb1194"
     },
     {
-      "id": "FUNC-01091",
+      "id": "FUNC-01095",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -8762,7 +8794,7 @@
       "snippetSha256": "e40239a90ced31e11fede70b8891889b175025a2c263f77d931f5f696717817e"
     },
     {
-      "id": "FUNC-01092",
+      "id": "FUNC-01096",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -8770,7 +8802,7 @@
       "snippetSha256": "7e8b05ce7bb261c79ddf34629c3e7354a27cfdd3d2260b681c0df535a726f2f0"
     },
     {
-      "id": "FUNC-01093",
+      "id": "FUNC-01097",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -8778,7 +8810,7 @@
       "snippetSha256": "fbf329a30791bf80c08bf0adda1f2bad450a5b192e5c9f7e5385eb5484a35b53"
     },
     {
-      "id": "FUNC-01094",
+      "id": "FUNC-01098",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -8786,7 +8818,7 @@
       "snippetSha256": "7bf6f053cc437cd27de6673899ee48af1aeee57fff8536ad6d55ac94471ebe0e"
     },
     {
-      "id": "FUNC-01095",
+      "id": "FUNC-01099",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -8794,7 +8826,7 @@
       "snippetSha256": "f1c5a027b92429a95488b3772e50620ddd77c7e02fea93127fdf31a31c1e8d4e"
     },
     {
-      "id": "FUNC-01096",
+      "id": "FUNC-01100",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -8802,7 +8834,7 @@
       "snippetSha256": "0e5f2038da9627dbb85af00988a24dc6b255667428a4944f4ce03db98303dd8e"
     },
     {
-      "id": "FUNC-01097",
+      "id": "FUNC-01101",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -8810,7 +8842,7 @@
       "snippetSha256": "98b20216a2cd98b05a64052e9e12dfd52ee41ea6183b2da46e7e8230e5724c84"
     },
     {
-      "id": "FUNC-01098",
+      "id": "FUNC-01102",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -8818,7 +8850,7 @@
       "snippetSha256": "5b104cada4aea499f7da357ac1277854b76aa9440bae196fd7f1efec3307d23d"
     },
     {
-      "id": "FUNC-01099",
+      "id": "FUNC-01103",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -8826,7 +8858,7 @@
       "snippetSha256": "44b4e16d772e237ae59c446b8aeeb3aaec8cca1f79070d73ef71680d0bba18ad"
     },
     {
-      "id": "FUNC-01100",
+      "id": "FUNC-01104",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -8834,7 +8866,7 @@
       "snippetSha256": "a93d934114482fecc82835d2dffcc4b706803a2febb3f76f971d3bc5756c3de2"
     },
     {
-      "id": "FUNC-01101",
+      "id": "FUNC-01105",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -8842,7 +8874,7 @@
       "snippetSha256": "c09ba472890421886b92df9df74639951f1e9a7a257dc1b0dba48bc13e1e5c00"
     },
     {
-      "id": "FUNC-01102",
+      "id": "FUNC-01106",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -8850,7 +8882,7 @@
       "snippetSha256": "cb6d2af95ec49ebdc096c276b2338bbb0643be38c75563d45d806596ae4de719"
     },
     {
-      "id": "FUNC-01103",
+      "id": "FUNC-01107",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -8858,7 +8890,7 @@
       "snippetSha256": "492db4da37d1a69fdf7b52310f52d21098675d58637e563229a016c476a09e83"
     },
     {
-      "id": "FUNC-01104",
+      "id": "FUNC-01108",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
@@ -14975,7 +15007,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 759,
-      "sha256": "1b0abc122efecf85fb1de9b166e8c39b50d82a6ea9563957a22157844061d535"
+      "sha256": "74d985a1a8b2779105b7508180a5fbdca5db98a4c3e31122fab69ec595e421fc"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -14999,8 +15031,8 @@
     },
     {
       "path": "cloudflare/r41-api/src/entry-authoritative.js",
-      "size": 17073,
-      "sha256": "564aa0fe5e4c5f6aae12b24b02055dd6f911674b75b2915b4d7a18938f0d4ca1"
+      "size": 20234,
+      "sha256": "1adeef4f9439579da64b132badb28b4ad9b3c0769205b84b2f9cca3cf76e5e8b"
     },
     {
       "path": "cloudflare/r41-api/src/entry.js",

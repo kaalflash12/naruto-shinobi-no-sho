@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T13:08:50.447Z",
+  "generatedAt": "2026-08-23T13:11:41.150Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -10,7 +10,7 @@
     "runtimeFiles": 79,
     "assetFiles": 5425,
     "textFiles": 99,
-    "functions": 1104,
+    "functions": 1108,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -21,7 +21,7 @@
     "scriptTags": 33,
     "assetReferences": 15814,
     "missingLiteralAssetReferences": 0,
-    "gameRuntimeFunctions": 996,
+    "gameRuntimeFunctions": 1000,
     "toolingFunctions": 108,
     "uniqueAssetReferences": 5442,
     "sourceFiles": 89,
@@ -43532,7 +43532,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 759,
-      "sha256": "1b0abc122efecf85fb1de9b166e8c39b50d82a6ea9563957a22157844061d535",
+      "sha256": "74d985a1a8b2779105b7508180a5fbdca5db98a4c3e31122fab69ec595e421fc",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43611,8 +43611,8 @@
     },
     {
       "path": "cloudflare/r41-api/src/entry-authoritative.js",
-      "size": 17073,
-      "sha256": "564aa0fe5e4c5f6aae12b24b02055dd6f911674b75b2915b4d7a18938f0d4ca1",
+      "size": 20234,
+      "sha256": "1adeef4f9439579da64b132badb28b4ad9b3c0769205b84b2f9cca3cf76e5e8b",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -64607,32 +64607,7 @@
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 18,
-      "name": "db",
-      "kind": "declaration",
-      "params": "env",
-      "refs": {
-        "routes": [],
-        "collections": [
-          "users",
-          "mechanical_profiles"
-        ],
-        "models": [],
-        "storageKeys": [],
-        "env": [
-          "MONGODB_URI",
-          "MONGODB_DB"
-        ],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
-      "id": "FUNC-00827",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 29,
-      "name": "validEmail",
+      "name": "oid",
       "kind": "declaration",
       "params": "value",
       "refs": {
@@ -64644,18 +64619,35 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [
-        "test"
-      ],
+      "calls": [],
+      "id": "FUNC-00827",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 19,
+      "name": "text",
+      "kind": "declaration",
+      "params": "value,max=120",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
       "id": "FUNC-00828",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 30,
-      "name": "copyRequest",
+      "line": 20,
+      "name": "finite",
       "kind": "declaration",
-      "params": "req,url,data",
+      "params": "value,fallback=0",
       "refs": {
         "routes": [],
         "collections": [],
@@ -64671,8 +64663,8 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 31,
-      "name": "oid",
+      "line": 21,
+      "name": "validEmail",
       "kind": "declaration",
       "params": "value",
       "refs": {
@@ -64684,16 +64676,18 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "test"
+      ],
       "id": "FUNC-00830",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 32,
-      "name": "text",
+      "line": 22,
+      "name": "copyRequest",
       "kind": "declaration",
-      "params": "value,max=120",
+      "params": "req,url,data",
       "refs": {
         "routes": [],
         "collections": [],
@@ -64709,13 +64703,16 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 33,
-      "name": "finite",
+      "line": 23,
+      "name": "ensureAuthorityIndexes",
       "kind": "declaration",
-      "params": "value,fallback=0",
+      "params": "store",
       "refs": {
         "routes": [],
-        "collections": [],
+        "collections": [
+          "mechanical_profiles",
+          "users"
+        ],
         "models": [],
         "storageKeys": [],
         "env": [],
@@ -64728,29 +64725,34 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 34,
-      "name": "cloneBounded",
+      "line": 37,
+      "name": "db",
       "kind": "declaration",
-      "params": "value,depth=0",
+      "params": "env",
       "refs": {
         "routes": [],
         "collections": [],
         "models": [],
         "storageKeys": [],
-        "env": [],
+        "env": [
+          "MONGODB_URI",
+          "MONGODB_DB"
+        ],
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "ensureAuthorityIndexes"
+      ],
       "id": "FUNC-00833",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 42,
-      "name": "mechanicalCharacterSnapshot",
+      "name": "cloneBounded",
       "kind": "declaration",
-      "params": "character={}",
+      "params": "value,depth=0",
       "refs": {
         "routes": [],
         "collections": [],
@@ -64766,10 +64768,10 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 51,
-      "name": "mechanicalProfileFromSave",
+      "line": 47,
+      "name": "mechanicalCharacterSnapshot",
       "kind": "declaration",
-      "params": "saveData={},source={}",
+      "params": "character={}",
       "refs": {
         "routes": [],
         "collections": [],
@@ -64785,10 +64787,10 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 56,
-      "name": "seedMechanicalProfile",
+      "line": 52,
+      "name": "profileKeyFor",
       "kind": "declaration",
-      "params": "store,userId,saveData,source={}",
+      "params": "saveData={},source={}",
       "refs": {
         "routes": [],
         "collections": [],
@@ -64804,30 +64806,121 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 62,
-      "name": "lockedMechanicalProfile",
+      "line": 56,
+      "name": "mechanicalProfileFromSave",
       "kind": "declaration",
-      "params": "store,userId",
+      "params": "saveData={},source={}",
       "refs": {
         "routes": [],
-        "collections": [
-          "mechanical_profiles"
-        ],
+        "collections": [],
         "models": [],
         "storageKeys": [],
         "env": [],
         "domIds": [],
         "actions": []
       },
-      "calls": [
-        "oid"
-      ],
+      "calls": [],
       "id": "FUNC-00837",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 63,
+      "line": 61,
+      "name": "seedMechanicalProfile",
+      "kind": "declaration",
+      "params": "store,userId,saveData,source={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00838",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 66,
+      "name": "lockedMechanicalProfile",
+      "kind": "declaration",
+      "params": "store,userId,selector={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00839",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 74,
+      "name": "matchingSave",
+      "kind": "declaration",
+      "params": "store,userId,selector={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00840",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 81,
+      "name": "trustedProfile",
+      "kind": "declaration",
+      "params": "store,userId,selector={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00841",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 85,
+      "name": "trustedCharacter",
+      "kind": "declaration",
+      "params": "store,userId,selector={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00842",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 86,
       "name": "account",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -64847,12 +64940,12 @@
         "clone",
         "json"
       ],
-      "id": "FUNC-00838",
+      "id": "FUNC-00843",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 68,
+      "line": 87,
       "name": "augmentAccountEmail",
       "kind": "declaration",
       "params": "req,env,res",
@@ -64873,12 +64966,12 @@
         "db",
         "originHeaders"
       ],
-      "id": "FUNC-00839",
+      "id": "FUNC-00844",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 74,
+      "line": 88,
       "name": "emailAwareAuth",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -64910,37 +65003,12 @@
         "clone",
         "originHeaders"
       ],
-      "id": "FUNC-00840",
+      "id": "FUNC-00845",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 100,
-      "name": "trustedCharacter",
-      "kind": "declaration",
-      "params": "store,userId",
-      "refs": {
-        "routes": [],
-        "collections": [
-          "saves"
-        ],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [
-        "lockedMechanicalProfile",
-        "oid",
-        "seedMechanicalProfile"
-      ],
-      "id": "FUNC-00841",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 108,
+      "line": 99,
       "name": "publicCharacterSnapshot",
       "kind": "declaration",
       "params": "character={},acct={},trusted=false",
@@ -64954,12 +65022,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00842",
+      "id": "FUNC-00846",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 113,
+      "line": 100,
       "name": "authoritativeMembership",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -64987,12 +65055,12 @@
         "publicCharacterSnapshot",
         "copyRequest"
       ],
-      "id": "FUNC-00843",
+      "id": "FUNC-00847",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 124,
+      "line": 105,
       "name": "roomSnapshot",
       "kind": "declaration",
       "params": "req,env,ctx,roomId",
@@ -65012,12 +65080,12 @@
         "clone",
         "json"
       ],
-      "id": "FUNC-00844",
+      "id": "FUNC-00848",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 128,
+      "line": 106,
       "name": "actionType",
       "kind": "declaration",
       "params": "envelope",
@@ -65031,12 +65099,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00845",
+      "id": "FUNC-00849",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 129,
+      "line": 107,
       "name": "serverActionType",
       "kind": "declaration",
       "params": "envelope",
@@ -65054,12 +65122,12 @@
         "test",
         "actionType"
       ],
-      "id": "FUNC-00846",
+      "id": "FUNC-00850",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 133,
+      "line": 108,
       "name": "authoritativeAction",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -65086,17 +65154,17 @@
         "account",
         "roomSnapshot",
         "db",
-        "trustedCharacter",
+        "trustedProfile",
         "serverActionType",
         "resolveTerionIntent",
         "clone"
       ],
-      "id": "FUNC-00847",
+      "id": "FUNC-00851",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 145,
+      "line": 116,
       "name": "authoritativeWorld",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -65123,14 +65191,14 @@
         "stripClientMechanical",
         "copyRequest",
         "db",
-        "trustedCharacter"
+        "trustedProfile"
       ],
-      "id": "FUNC-00848",
+      "id": "FUNC-00852",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 151,
+      "line": 121,
       "name": "authoritativeLeaderboard",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -65156,15 +65224,16 @@
         "account",
         "json",
         "db",
+        "values",
         "get",
         "finite"
       ],
-      "id": "FUNC-00849",
+      "id": "FUNC-00853",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 157,
+      "line": 125,
       "name": "authoritativeAccountDelete",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -65190,12 +65259,12 @@
         "db",
         "oid"
       ],
-      "id": "FUNC-00850",
+      "id": "FUNC-00854",
       "domain": "game-runtime"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 160,
+      "line": 126,
       "name": "status",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -65214,7 +65283,7 @@
         "json",
         "originHeaders"
       ],
-      "id": "FUNC-00851",
+      "id": "FUNC-00855",
       "domain": "game-runtime"
     },
     {
@@ -65233,7 +65302,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00852",
+      "id": "FUNC-00856",
       "domain": "game-runtime"
     },
     {
@@ -65308,7 +65377,7 @@
         "statusRoute",
         "mapWorldTick"
       ],
-      "id": "FUNC-00853",
+      "id": "FUNC-00857",
       "domain": "game-runtime"
     },
     {
@@ -65327,7 +65396,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00854",
+      "id": "FUNC-00858",
       "domain": "game-runtime"
     },
     {
@@ -65349,7 +65418,7 @@
         "b64url",
         "randomBytes"
       ],
-      "id": "FUNC-00855",
+      "id": "FUNC-00859",
       "domain": "game-runtime"
     },
     {
@@ -65370,7 +65439,7 @@
       "calls": [
         "b64url"
       ],
-      "id": "FUNC-00856",
+      "id": "FUNC-00860",
       "domain": "game-runtime"
     },
     {
@@ -65394,7 +65463,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00857",
+      "id": "FUNC-00861",
       "domain": "game-runtime"
     },
     {
@@ -65415,7 +65484,7 @@
       "calls": [
         "cors"
       ],
-      "id": "FUNC-00858",
+      "id": "FUNC-00862",
       "domain": "game-runtime"
     },
     {
@@ -65434,7 +65503,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00859",
+      "id": "FUNC-00863",
       "domain": "game-runtime"
     },
     {
@@ -65460,7 +65529,7 @@
       "calls": [
         "db"
       ],
-      "id": "FUNC-00860",
+      "id": "FUNC-00864",
       "domain": "game-runtime"
     },
     {
@@ -65484,7 +65553,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00861",
+      "id": "FUNC-00865",
       "domain": "game-runtime"
     },
     {
@@ -65507,7 +65576,7 @@
       "calls": [
         "guardDb"
       ],
-      "id": "FUNC-00862",
+      "id": "FUNC-00866",
       "domain": "game-runtime"
     },
     {
@@ -65530,7 +65599,7 @@
       "calls": [
         "guardDb"
       ],
-      "id": "FUNC-00863",
+      "id": "FUNC-00867",
       "domain": "game-runtime"
     },
     {
@@ -65553,7 +65622,7 @@
       "calls": [
         "guardDb"
       ],
-      "id": "FUNC-00864",
+      "id": "FUNC-00868",
       "domain": "game-runtime"
     },
     {
@@ -65574,7 +65643,7 @@
       "calls": [
         "test"
       ],
-      "id": "FUNC-00865",
+      "id": "FUNC-00869",
       "domain": "game-runtime"
     },
     {
@@ -65593,7 +65662,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00866",
+      "id": "FUNC-00870",
       "domain": "game-runtime"
     },
     {
@@ -65616,7 +65685,7 @@
         "mechanicalClaim",
         "test"
       ],
-      "id": "FUNC-00867",
+      "id": "FUNC-00871",
       "domain": "game-runtime"
     },
     {
@@ -65647,7 +65716,7 @@
         "actionLooksLikeOutcome",
         "touchMembership"
       ],
-      "id": "FUNC-00868",
+      "id": "FUNC-00872",
       "domain": "game-runtime"
     },
     {
@@ -65672,7 +65741,7 @@
         "clone",
         "json"
       ],
-      "id": "FUNC-00869",
+      "id": "FUNC-00873",
       "domain": "game-runtime"
     },
     {
@@ -65711,7 +65780,7 @@
         "hashPassword",
         "b64url"
       ],
-      "id": "FUNC-00870",
+      "id": "FUNC-00874",
       "domain": "game-runtime"
     },
     {
@@ -65744,7 +65813,7 @@
         "guardDb",
         "fingerprint"
       ],
-      "id": "FUNC-00871",
+      "id": "FUNC-00875",
       "domain": "game-runtime"
     },
     {
@@ -65768,7 +65837,7 @@
         "json",
         "clone"
       ],
-      "id": "FUNC-00872",
+      "id": "FUNC-00876",
       "domain": "game-runtime"
     },
     {
@@ -65795,7 +65864,7 @@
         "json",
         "cors"
       ],
-      "id": "FUNC-00873",
+      "id": "FUNC-00877",
       "domain": "game-runtime"
     },
     {
@@ -65820,7 +65889,7 @@
         "clone",
         "json"
       ],
-      "id": "FUNC-00874",
+      "id": "FUNC-00878",
       "domain": "game-runtime"
     },
     {
@@ -65853,7 +65922,7 @@
         "guardedOnline",
         "mapWorldTick"
       ],
-      "id": "FUNC-00875",
+      "id": "FUNC-00879",
       "domain": "game-runtime"
     },
     {
@@ -65963,7 +66032,7 @@
         "roomJson",
         "aiRoute"
       ],
-      "id": "FUNC-00876",
+      "id": "FUNC-00880",
       "domain": "game-runtime"
     },
     {
@@ -65982,7 +66051,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00877",
+      "id": "FUNC-00881",
       "domain": "game-runtime"
     },
     {
@@ -66001,7 +66070,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00878",
+      "id": "FUNC-00882",
       "domain": "game-runtime"
     },
     {
@@ -66020,7 +66089,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00879",
+      "id": "FUNC-00883",
       "domain": "game-runtime"
     },
     {
@@ -66041,7 +66110,7 @@
       "calls": [
         "b64url"
       ],
-      "id": "FUNC-00880",
+      "id": "FUNC-00884",
       "domain": "game-runtime"
     },
     {
@@ -66060,7 +66129,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00881",
+      "id": "FUNC-00885",
       "domain": "game-runtime"
     },
     {
@@ -66082,7 +66151,7 @@
         "b64url",
         "randomBytes"
       ],
-      "id": "FUNC-00882",
+      "id": "FUNC-00886",
       "domain": "game-runtime"
     },
     {
@@ -66101,7 +66170,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00883",
+      "id": "FUNC-00887",
       "domain": "game-runtime"
     },
     {
@@ -66122,7 +66191,7 @@
       "calls": [
         "norm"
       ],
-      "id": "FUNC-00884",
+      "id": "FUNC-00888",
       "domain": "game-runtime"
     },
     {
@@ -66144,7 +66213,7 @@
         "get",
         "test"
       ],
-      "id": "FUNC-00885",
+      "id": "FUNC-00889",
       "domain": "game-runtime"
     },
     {
@@ -66163,7 +66232,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00886",
+      "id": "FUNC-00890",
       "domain": "game-runtime"
     },
     {
@@ -66184,7 +66253,7 @@
       "calls": [
         "plainId"
       ],
-      "id": "FUNC-00887",
+      "id": "FUNC-00891",
       "domain": "game-runtime"
     },
     {
@@ -66208,7 +66277,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00888",
+      "id": "FUNC-00892",
       "domain": "game-runtime"
     },
     {
@@ -66227,7 +66296,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00889",
+      "id": "FUNC-00893",
       "domain": "game-runtime"
     },
     {
@@ -66248,7 +66317,7 @@
       "calls": [
         "json"
       ],
-      "id": "FUNC-00890",
+      "id": "FUNC-00894",
       "domain": "game-runtime"
     },
     {
@@ -66267,7 +66336,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00891",
+      "id": "FUNC-00895",
       "domain": "game-runtime"
     },
     {
@@ -66286,7 +66355,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00892",
+      "id": "FUNC-00896",
       "domain": "game-runtime"
     },
     {
@@ -66305,7 +66374,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00893",
+      "id": "FUNC-00897",
       "domain": "game-runtime"
     },
     {
@@ -66329,7 +66398,7 @@
       "calls": [
         "db"
       ],
-      "id": "FUNC-00894",
+      "id": "FUNC-00898",
       "domain": "game-runtime"
     },
     {
@@ -66358,7 +66427,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00895",
+      "id": "FUNC-00899",
       "domain": "game-runtime"
     },
     {
@@ -66385,7 +66454,7 @@
         "plainId",
         "hmac"
       ],
-      "id": "FUNC-00896",
+      "id": "FUNC-00900",
       "domain": "game-runtime"
     },
     {
@@ -66415,7 +66484,7 @@
         "unb64url",
         "toObjectId"
       ],
-      "id": "FUNC-00897",
+      "id": "FUNC-00901",
       "domain": "game-runtime"
     },
     {
@@ -66437,7 +66506,7 @@
         "verifyToken",
         "bearer"
       ],
-      "id": "FUNC-00898",
+      "id": "FUNC-00902",
       "domain": "game-runtime"
     },
     {
@@ -66461,7 +66530,7 @@
         "bearer",
         "unb64url"
       ],
-      "id": "FUNC-00899",
+      "id": "FUNC-00903",
       "domain": "game-runtime"
     },
     {
@@ -66480,7 +66549,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00900",
+      "id": "FUNC-00904",
       "domain": "game-runtime"
     },
     {
@@ -66499,7 +66568,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00901",
+      "id": "FUNC-00905",
       "domain": "game-runtime"
     },
     {
@@ -66518,7 +66587,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00902",
+      "id": "FUNC-00906",
       "domain": "game-runtime"
     },
     {
@@ -66537,7 +66606,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00903",
+      "id": "FUNC-00907",
       "domain": "game-runtime"
     },
     {
@@ -66558,7 +66627,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00904",
+      "id": "FUNC-00908",
       "domain": "game-runtime"
     },
     {
@@ -66579,7 +66648,7 @@
       "calls": [
         "nowIso"
       ],
-      "id": "FUNC-00905",
+      "id": "FUNC-00909",
       "domain": "game-runtime"
     },
     {
@@ -66600,7 +66669,7 @@
       "calls": [
         "values"
       ],
-      "id": "FUNC-00906",
+      "id": "FUNC-00910",
       "domain": "game-runtime"
     },
     {
@@ -66628,7 +66697,7 @@
         "get",
         "test"
       ],
-      "id": "FUNC-00907",
+      "id": "FUNC-00911",
       "domain": "game-runtime"
     },
     {
@@ -66647,7 +66716,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00908",
+      "id": "FUNC-00912",
       "domain": "game-runtime"
     },
     {
@@ -66666,7 +66735,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00909",
+      "id": "FUNC-00913",
       "domain": "game-runtime"
     },
     {
@@ -66692,7 +66761,7 @@
         "reply",
         "bodyJson"
       ],
-      "id": "FUNC-00910",
+      "id": "FUNC-00914",
       "domain": "game-runtime"
     },
     {
@@ -66711,7 +66780,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00911",
+      "id": "FUNC-00915",
       "domain": "game-runtime"
     },
     {
@@ -66730,7 +66799,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00912",
+      "id": "FUNC-00916",
       "domain": "game-runtime"
     },
     {
@@ -66749,7 +66818,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00913",
+      "id": "FUNC-00917",
       "domain": "game-runtime"
     },
     {
@@ -66768,7 +66837,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00914",
+      "id": "FUNC-00918",
       "domain": "game-runtime"
     },
     {
@@ -66787,7 +66856,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00915",
+      "id": "FUNC-00919",
       "domain": "game-runtime"
     },
     {
@@ -66806,7 +66875,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00916",
+      "id": "FUNC-00920",
       "domain": "game-runtime"
     },
     {
@@ -66828,7 +66897,7 @@
         "clamp",
         "num"
       ],
-      "id": "FUNC-00917",
+      "id": "FUNC-00921",
       "domain": "game-runtime"
     },
     {
@@ -66847,7 +66916,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00918",
+      "id": "FUNC-00922",
       "domain": "game-runtime"
     },
     {
@@ -66868,7 +66937,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00919",
+      "id": "FUNC-00923",
       "domain": "game-runtime"
     },
     {
@@ -66889,7 +66958,7 @@
       "calls": [
         "mechanicalKey"
       ],
-      "id": "FUNC-00920",
+      "id": "FUNC-00924",
       "domain": "game-runtime"
     },
     {
@@ -66910,7 +66979,7 @@
       "calls": [
         "blockedClientKey"
       ],
-      "id": "FUNC-00921",
+      "id": "FUNC-00925",
       "domain": "game-runtime"
     },
     {
@@ -66931,7 +67000,7 @@
       "calls": [
         "blockedClientKey"
       ],
-      "id": "FUNC-00922",
+      "id": "FUNC-00926",
       "domain": "game-runtime"
     },
     {
@@ -66950,7 +67019,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00923",
+      "id": "FUNC-00927",
       "domain": "game-runtime"
     },
     {
@@ -66971,7 +67040,7 @@
       "calls": [
         "open"
       ],
-      "id": "FUNC-00924",
+      "id": "FUNC-00928",
       "domain": "game-runtime"
     },
     {
@@ -66990,7 +67059,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00925",
+      "id": "FUNC-00929",
       "domain": "game-runtime"
     },
     {
@@ -67009,7 +67078,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00926",
+      "id": "FUNC-00930",
       "domain": "game-runtime"
     },
     {
@@ -67030,7 +67099,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00927",
+      "id": "FUNC-00931",
       "domain": "game-runtime"
     },
     {
@@ -67053,7 +67122,7 @@
       "calls": [
         "open"
       ],
-      "id": "FUNC-00928",
+      "id": "FUNC-00932",
       "domain": "game-runtime"
     },
     {
@@ -67074,7 +67143,7 @@
       "calls": [
         "ensureButton"
       ],
-      "id": "FUNC-00929",
+      "id": "FUNC-00933",
       "domain": "game-runtime"
     },
     {
@@ -67095,7 +67164,7 @@
       "calls": [
         "esc"
       ],
-      "id": "FUNC-00930",
+      "id": "FUNC-00934",
       "domain": "game-runtime"
     },
     {
@@ -67114,7 +67183,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00931",
+      "id": "FUNC-00935",
       "domain": "game-runtime"
     },
     {
@@ -67136,7 +67205,7 @@
         "tabs",
         "field"
       ],
-      "id": "FUNC-00932",
+      "id": "FUNC-00936",
       "domain": "game-runtime"
     },
     {
@@ -67161,7 +67230,7 @@
       "calls": [
         "esc"
       ],
-      "id": "FUNC-00933",
+      "id": "FUNC-00937",
       "domain": "game-runtime"
     },
     {
@@ -67189,7 +67258,7 @@
         "authBody",
         "unauthBody"
       ],
-      "id": "FUNC-00934",
+      "id": "FUNC-00938",
       "domain": "game-runtime"
     },
     {
@@ -67208,7 +67277,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00935",
+      "id": "FUNC-00939",
       "domain": "game-runtime"
     },
     {
@@ -67233,7 +67302,7 @@
         "errorText",
         "updateButton"
       ],
-      "id": "FUNC-00936",
+      "id": "FUNC-00940",
       "domain": "game-runtime"
     },
     {
@@ -67258,7 +67327,7 @@
         "errorText",
         "updateButton"
       ],
-      "id": "FUNC-00937",
+      "id": "FUNC-00941",
       "domain": "game-runtime"
     },
     {
@@ -67282,7 +67351,7 @@
         "recover",
         "errorText"
       ],
-      "id": "FUNC-00938",
+      "id": "FUNC-00942",
       "domain": "game-runtime"
     },
     {
@@ -67305,7 +67374,7 @@
         "errorText",
         "updateButton"
       ],
-      "id": "FUNC-00939",
+      "id": "FUNC-00943",
       "domain": "game-runtime"
     },
     {
@@ -67328,7 +67397,7 @@
         "render",
         "errorText"
       ],
-      "id": "FUNC-00940",
+      "id": "FUNC-00944",
       "domain": "game-runtime"
     },
     {
@@ -67351,7 +67420,7 @@
         "errorText",
         "updateButton"
       ],
-      "id": "FUNC-00941",
+      "id": "FUNC-00945",
       "domain": "game-runtime"
     },
     {
@@ -67372,7 +67441,7 @@
       "calls": [
         "render"
       ],
-      "id": "FUNC-00942",
+      "id": "FUNC-00946",
       "domain": "game-runtime"
     },
     {
@@ -67393,7 +67462,7 @@
       "calls": [
         "render"
       ],
-      "id": "FUNC-00943",
+      "id": "FUNC-00947",
       "domain": "game-runtime"
     },
     {
@@ -67418,7 +67487,7 @@
         "get",
         "open"
       ],
-      "id": "FUNC-00944",
+      "id": "FUNC-00948",
       "domain": "game-runtime"
     },
     {
@@ -67440,7 +67509,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00945",
+      "id": "FUNC-00949",
       "domain": "game-runtime"
     },
     {
@@ -67459,7 +67528,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00946",
+      "id": "FUNC-00950",
       "domain": "game-runtime"
     },
     {
@@ -67478,7 +67547,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00947",
+      "id": "FUNC-00951",
       "domain": "game-runtime"
     },
     {
@@ -67499,7 +67568,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00948",
+      "id": "FUNC-00952",
       "domain": "game-runtime"
     },
     {
@@ -67520,7 +67589,7 @@
       "calls": [
         "apiOrigin"
       ],
-      "id": "FUNC-00949",
+      "id": "FUNC-00953",
       "domain": "game-runtime"
     },
     {
@@ -67541,7 +67610,7 @@
       "calls": [
         "token"
       ],
-      "id": "FUNC-00950",
+      "id": "FUNC-00954",
       "domain": "game-runtime"
     },
     {
@@ -67568,7 +67637,7 @@
         "json",
         "apiOrigin"
       ],
-      "id": "FUNC-00951",
+      "id": "FUNC-00955",
       "domain": "game-runtime"
     },
     {
@@ -67590,7 +67659,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00952",
+      "id": "FUNC-00956",
       "domain": "game-runtime"
     },
     {
@@ -67614,7 +67683,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00953",
+      "id": "FUNC-00957",
       "domain": "game-runtime"
     },
     {
@@ -67638,7 +67707,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00954",
+      "id": "FUNC-00958",
       "domain": "game-runtime"
     },
     {
@@ -67663,7 +67732,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00955",
+      "id": "FUNC-00959",
       "domain": "game-runtime"
     },
     {
@@ -67688,7 +67757,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00956",
+      "id": "FUNC-00960",
       "domain": "game-runtime"
     },
     {
@@ -67711,7 +67780,7 @@
       "calls": [
         "request"
       ],
-      "id": "FUNC-00957",
+      "id": "FUNC-00961",
       "domain": "game-runtime"
     },
     {
@@ -67734,7 +67803,7 @@
       "calls": [
         "request"
       ],
-      "id": "FUNC-00958",
+      "id": "FUNC-00962",
       "domain": "game-runtime"
     },
     {
@@ -67758,7 +67827,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00959",
+      "id": "FUNC-00963",
       "domain": "game-runtime"
     },
     {
@@ -67779,7 +67848,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00960",
+      "id": "FUNC-00964",
       "domain": "game-runtime"
     },
     {
@@ -67801,7 +67870,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00961",
+      "id": "FUNC-00965",
       "domain": "game-runtime"
     },
     {
@@ -67823,7 +67892,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00962",
+      "id": "FUNC-00966",
       "domain": "game-runtime"
     },
     {
@@ -67845,7 +67914,7 @@
         "normalize",
         "get"
       ],
-      "id": "FUNC-00963",
+      "id": "FUNC-00967",
       "domain": "game-runtime"
     },
     {
@@ -67868,7 +67937,7 @@
         "indexManifest",
         "normalize"
       ],
-      "id": "FUNC-00964",
+      "id": "FUNC-00968",
       "domain": "game-runtime"
     },
     {
@@ -67891,7 +67960,7 @@
         "get",
         "warn"
       ],
-      "id": "FUNC-00965",
+      "id": "FUNC-00969",
       "domain": "game-runtime"
     },
     {
@@ -67910,7 +67979,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00966",
+      "id": "FUNC-00970",
       "domain": "game-runtime"
     },
     {
@@ -67929,7 +67998,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00967",
+      "id": "FUNC-00971",
       "domain": "game-runtime"
     },
     {
@@ -67948,7 +68017,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00968",
+      "id": "FUNC-00972",
       "domain": "game-runtime"
     },
     {
@@ -67969,7 +68038,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00969",
+      "id": "FUNC-00973",
       "domain": "game-runtime"
     },
     {
@@ -67988,7 +68057,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00970",
+      "id": "FUNC-00974",
       "domain": "game-runtime"
     },
     {
@@ -68007,7 +68076,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00971",
+      "id": "FUNC-00975",
       "domain": "game-runtime"
     },
     {
@@ -68026,7 +68095,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00972",
+      "id": "FUNC-00976",
       "domain": "game-runtime"
     },
     {
@@ -68045,7 +68114,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00973",
+      "id": "FUNC-00977",
       "domain": "game-runtime"
     },
     {
@@ -68064,7 +68133,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00974",
+      "id": "FUNC-00978",
       "domain": "game-runtime"
     },
     {
@@ -68083,7 +68152,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00975",
+      "id": "FUNC-00979",
       "domain": "game-runtime"
     },
     {
@@ -68102,7 +68171,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00976",
+      "id": "FUNC-00980",
       "domain": "game-runtime"
     },
     {
@@ -68121,7 +68190,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00977",
+      "id": "FUNC-00981",
       "domain": "game-runtime"
     },
     {
@@ -68140,7 +68209,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00978",
+      "id": "FUNC-00982",
       "domain": "game-runtime"
     },
     {
@@ -68159,7 +68228,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00979",
+      "id": "FUNC-00983",
       "domain": "game-runtime"
     },
     {
@@ -68180,7 +68249,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00980",
+      "id": "FUNC-00984",
       "domain": "game-runtime"
     },
     {
@@ -68202,7 +68271,7 @@
         "norm",
         "get"
       ],
-      "id": "FUNC-00981",
+      "id": "FUNC-00985",
       "domain": "game-runtime"
     },
     {
@@ -68223,7 +68292,7 @@
       "calls": [
         "norm"
       ],
-      "id": "FUNC-00982",
+      "id": "FUNC-00986",
       "domain": "game-runtime"
     },
     {
@@ -68242,7 +68311,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00983",
+      "id": "FUNC-00987",
       "domain": "game-runtime"
     },
     {
@@ -68261,7 +68330,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00984",
+      "id": "FUNC-00988",
       "domain": "game-runtime"
     },
     {
@@ -68280,7 +68349,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00985",
+      "id": "FUNC-00989",
       "domain": "game-runtime"
     },
     {
@@ -68301,7 +68370,7 @@
       "calls": [
         "normalizeResult"
       ],
-      "id": "FUNC-00986",
+      "id": "FUNC-00990",
       "domain": "game-runtime"
     },
     {
@@ -68320,7 +68389,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00987",
+      "id": "FUNC-00991",
       "domain": "game-runtime"
     },
     {
@@ -68339,7 +68408,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00988",
+      "id": "FUNC-00992",
       "domain": "game-runtime"
     },
     {
@@ -68358,7 +68427,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00989",
+      "id": "FUNC-00993",
       "domain": "game-runtime"
     },
     {
@@ -68377,7 +68446,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00990",
+      "id": "FUNC-00994",
       "domain": "game-runtime"
     },
     {
@@ -68396,7 +68465,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00991",
+      "id": "FUNC-00995",
       "domain": "game-runtime"
     },
     {
@@ -68415,7 +68484,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00992",
+      "id": "FUNC-00996",
       "domain": "game-runtime"
     },
     {
@@ -68434,7 +68503,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00993",
+      "id": "FUNC-00997",
       "domain": "game-runtime"
     },
     {
@@ -68455,7 +68524,7 @@
       "calls": [
         "repair"
       ],
-      "id": "FUNC-00994",
+      "id": "FUNC-00998",
       "domain": "game-runtime"
     },
     {
@@ -68474,7 +68543,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00995",
+      "id": "FUNC-00999",
       "domain": "game-runtime"
     },
     {
@@ -68495,7 +68564,7 @@
       "calls": [
         "localProgressKeys"
       ],
-      "id": "FUNC-00996",
+      "id": "FUNC-01000",
       "domain": "game-runtime"
     },
     {
@@ -68514,7 +68583,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00997",
+      "id": "FUNC-01001",
       "domain": "tooling"
     },
     {
@@ -68533,7 +68602,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00998",
+      "id": "FUNC-01002",
       "domain": "tooling"
     },
     {
@@ -68552,7 +68621,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00999",
+      "id": "FUNC-01003",
       "domain": "tooling"
     },
     {
@@ -68571,7 +68640,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01000",
+      "id": "FUNC-01004",
       "domain": "tooling"
     },
     {
@@ -68590,7 +68659,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01001",
+      "id": "FUNC-01005",
       "domain": "tooling"
     },
     {
@@ -68609,7 +68678,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01002",
+      "id": "FUNC-01006",
       "domain": "tooling"
     },
     {
@@ -68628,7 +68697,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01003",
+      "id": "FUNC-01007",
       "domain": "tooling"
     },
     {
@@ -68647,7 +68716,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01004",
+      "id": "FUNC-01008",
       "domain": "tooling"
     },
     {
@@ -68666,7 +68735,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01005",
+      "id": "FUNC-01009",
       "domain": "tooling"
     },
     {
@@ -68685,7 +68754,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01006",
+      "id": "FUNC-01010",
       "domain": "tooling"
     },
     {
@@ -68707,7 +68776,7 @@
         "fail",
         "isGameRuntime"
       ],
-      "id": "FUNC-01007",
+      "id": "FUNC-01011",
       "domain": "tooling"
     },
     {
@@ -68726,7 +68795,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01008",
+      "id": "FUNC-01012",
       "domain": "tooling"
     },
     {
@@ -68745,7 +68814,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01009",
+      "id": "FUNC-01013",
       "domain": "tooling"
     },
     {
@@ -68764,7 +68833,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01010",
+      "id": "FUNC-01014",
       "domain": "tooling"
     },
     {
@@ -68791,7 +68860,7 @@
         "values",
         "warn"
       ],
-      "id": "FUNC-01011",
+      "id": "FUNC-01015",
       "domain": "tooling"
     },
     {
@@ -68814,7 +68883,7 @@
         "isDynamic",
         "get"
       ],
-      "id": "FUNC-01012",
+      "id": "FUNC-01016",
       "domain": "tooling"
     },
     {
@@ -68833,7 +68902,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01013",
+      "id": "FUNC-01017",
       "domain": "tooling"
     },
     {
@@ -68854,7 +68923,7 @@
       "calls": [
         "tryParse"
       ],
-      "id": "FUNC-01014",
+      "id": "FUNC-01018",
       "domain": "tooling"
     },
     {
@@ -68873,7 +68942,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01015",
+      "id": "FUNC-01019",
       "domain": "tooling"
     },
     {
@@ -68904,7 +68973,7 @@
         "count",
         "pass"
       ],
-      "id": "FUNC-01016",
+      "id": "FUNC-01020",
       "domain": "tooling"
     },
     {
@@ -68937,7 +69006,7 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01017",
+      "id": "FUNC-01021",
       "domain": "tooling"
     },
     {
@@ -68964,7 +69033,7 @@
         "assert",
         "test"
       ],
-      "id": "FUNC-01018",
+      "id": "FUNC-01022",
       "domain": "tooling"
     },
     {
@@ -68999,7 +69068,7 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01019",
+      "id": "FUNC-01023",
       "domain": "tooling"
     },
     {
@@ -69018,7 +69087,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01020",
+      "id": "FUNC-01024",
       "domain": "tooling"
     },
     {
@@ -69037,7 +69106,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01021",
+      "id": "FUNC-01025",
       "domain": "tooling"
     },
     {
@@ -69056,7 +69125,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01022",
+      "id": "FUNC-01026",
       "domain": "tooling"
     },
     {
@@ -69075,7 +69144,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01023",
+      "id": "FUNC-01027",
       "domain": "tooling"
     },
     {
@@ -69094,7 +69163,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01024",
+      "id": "FUNC-01028",
       "domain": "tooling"
     },
     {
@@ -69113,7 +69182,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01025",
+      "id": "FUNC-01029",
       "domain": "tooling"
     },
     {
@@ -69132,7 +69201,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01026",
+      "id": "FUNC-01030",
       "domain": "tooling"
     },
     {
@@ -69151,7 +69220,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01027",
+      "id": "FUNC-01031",
       "domain": "tooling"
     },
     {
@@ -69172,7 +69241,7 @@
       "calls": [
         "readSave"
       ],
-      "id": "FUNC-01028",
+      "id": "FUNC-01032",
       "domain": "tooling"
     },
     {
@@ -69191,7 +69260,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01029",
+      "id": "FUNC-01033",
       "domain": "tooling"
     },
     {
@@ -69212,7 +69281,7 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01030",
+      "id": "FUNC-01034",
       "domain": "tooling"
     },
     {
@@ -69238,7 +69307,7 @@
         "status",
         "pass"
       ],
-      "id": "FUNC-01031",
+      "id": "FUNC-01035",
       "domain": "tooling"
     },
     {
@@ -69261,7 +69330,7 @@
         "readSave",
         "assert"
       ],
-      "id": "FUNC-01032",
+      "id": "FUNC-01036",
       "domain": "tooling"
     },
     {
@@ -69313,7 +69382,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-01033",
+      "id": "FUNC-01037",
       "domain": "tooling"
     },
     {
@@ -69341,7 +69410,7 @@
         "test",
         "close"
       ],
-      "id": "FUNC-01034",
+      "id": "FUNC-01038",
       "domain": "tooling"
     },
     {
@@ -69364,7 +69433,7 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01035",
+      "id": "FUNC-01039",
       "domain": "tooling"
     },
     {
@@ -69383,7 +69452,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01036",
+      "id": "FUNC-01040",
       "domain": "tooling"
     },
     {
@@ -69402,7 +69471,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01037",
+      "id": "FUNC-01041",
       "domain": "tooling"
     },
     {
@@ -69423,7 +69492,7 @@
       "calls": [
         "fail"
       ],
-      "id": "FUNC-01038",
+      "id": "FUNC-01042",
       "domain": "tooling"
     },
     {
@@ -69442,7 +69511,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01039",
+      "id": "FUNC-01043",
       "domain": "tooling"
     },
     {
@@ -69461,7 +69530,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01040",
+      "id": "FUNC-01044",
       "domain": "tooling"
     },
     {
@@ -69480,7 +69549,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01041",
+      "id": "FUNC-01045",
       "domain": "tooling"
     },
     {
@@ -69499,7 +69568,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01042",
+      "id": "FUNC-01046",
       "domain": "tooling"
     },
     {
@@ -69518,7 +69587,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01043",
+      "id": "FUNC-01047",
       "domain": "tooling"
     },
     {
@@ -69537,7 +69606,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01044",
+      "id": "FUNC-01048",
       "domain": "tooling"
     },
     {
@@ -69556,7 +69625,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01045",
+      "id": "FUNC-01049",
       "domain": "tooling"
     },
     {
@@ -69575,7 +69644,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01046",
+      "id": "FUNC-01050",
       "domain": "tooling"
     },
     {
@@ -69594,7 +69663,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01047",
+      "id": "FUNC-01051",
       "domain": "tooling"
     },
     {
@@ -69613,7 +69682,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01048",
+      "id": "FUNC-01052",
       "domain": "tooling"
     },
     {
@@ -69634,7 +69703,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01049",
+      "id": "FUNC-01053",
       "domain": "tooling"
     },
     {
@@ -69668,7 +69737,7 @@
         "fence",
         "langFor"
       ],
-      "id": "FUNC-01050",
+      "id": "FUNC-01054",
       "domain": "tooling"
     },
     {
@@ -69687,7 +69756,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01051",
+      "id": "FUNC-01055",
       "domain": "tooling"
     },
     {
@@ -69706,7 +69775,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01052",
+      "id": "FUNC-01056",
       "domain": "tooling"
     },
     {
@@ -69725,7 +69794,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01053",
+      "id": "FUNC-01057",
       "domain": "tooling"
     },
     {
@@ -69744,7 +69813,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01054",
+      "id": "FUNC-01058",
       "domain": "tooling"
     },
     {
@@ -69765,7 +69834,7 @@
       "calls": [
         "test"
       ],
-      "id": "FUNC-01055",
+      "id": "FUNC-01059",
       "domain": "tooling"
     },
     {
@@ -69784,7 +69853,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01056",
+      "id": "FUNC-01060",
       "domain": "tooling"
     },
     {
@@ -69803,7 +69872,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01057",
+      "id": "FUNC-01061",
       "domain": "tooling"
     },
     {
@@ -69822,7 +69891,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01058",
+      "id": "FUNC-01062",
       "domain": "tooling"
     },
     {
@@ -69843,7 +69912,7 @@
       "calls": [
         "add"
       ],
-      "id": "FUNC-01059",
+      "id": "FUNC-01063",
       "domain": "tooling"
     },
     {
@@ -69862,7 +69931,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01060",
+      "id": "FUNC-01064",
       "domain": "tooling"
     },
     {
@@ -69890,7 +69959,7 @@
         "aliasesForDatasetAction",
         "uniqEvidence"
       ],
-      "id": "FUNC-01061",
+      "id": "FUNC-01065",
       "domain": "tooling"
     },
     {
@@ -69912,7 +69981,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01062",
+      "id": "FUNC-01066",
       "domain": "tooling"
     },
     {
@@ -69933,7 +70002,7 @@
       "calls": [
         "walk"
       ],
-      "id": "FUNC-01063",
+      "id": "FUNC-01067",
       "domain": "tooling"
     },
     {
@@ -69955,7 +70024,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01064",
+      "id": "FUNC-01068",
       "domain": "tooling"
     },
     {
@@ -69977,7 +70046,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01065",
+      "id": "FUNC-01069",
       "domain": "tooling"
     },
     {
@@ -69999,7 +70068,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01066",
+      "id": "FUNC-01070",
       "domain": "tooling"
     },
     {
@@ -70021,7 +70090,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01067",
+      "id": "FUNC-01071",
       "domain": "tooling"
     },
     {
@@ -70043,7 +70112,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01068",
+      "id": "FUNC-01072",
       "domain": "tooling"
     },
     {
@@ -70064,7 +70133,7 @@
       "calls": [
         "rel"
       ],
-      "id": "FUNC-01069",
+      "id": "FUNC-01073",
       "domain": "tooling"
     },
     {
@@ -70083,7 +70152,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01070",
+      "id": "FUNC-01074",
       "domain": "tooling"
     },
     {
@@ -70102,7 +70171,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01071",
+      "id": "FUNC-01075",
       "domain": "tooling"
     },
     {
@@ -70121,7 +70190,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01072",
+      "id": "FUNC-01076",
       "domain": "tooling"
     },
     {
@@ -70142,7 +70211,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01073",
+      "id": "FUNC-01077",
       "domain": "tooling"
     },
     {
@@ -70163,7 +70232,7 @@
       "calls": [
         "uniq"
       ],
-      "id": "FUNC-01074",
+      "id": "FUNC-01078",
       "domain": "tooling"
     },
     {
@@ -70185,7 +70254,7 @@
         "captures",
         "uniq"
       ],
-      "id": "FUNC-01075",
+      "id": "FUNC-01079",
       "domain": "tooling"
     },
     {
@@ -70224,7 +70293,7 @@
         "sources",
         "listCodes"
       ],
-      "id": "FUNC-01076",
+      "id": "FUNC-01080",
       "domain": "tooling"
     },
     {
@@ -70245,7 +70314,7 @@
       "calls": [
         "lineAt"
       ],
-      "id": "FUNC-01077",
+      "id": "FUNC-01081",
       "domain": "tooling"
     },
     {
@@ -70267,7 +70336,7 @@
         "get",
         "ident"
       ],
-      "id": "FUNC-01078",
+      "id": "FUNC-01082",
       "domain": "tooling"
     },
     {
@@ -70288,7 +70357,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01079",
+      "id": "FUNC-01083",
       "domain": "tooling"
     },
     {
@@ -70309,7 +70378,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01080",
+      "id": "FUNC-01084",
       "domain": "tooling"
     },
     {
@@ -70328,7 +70397,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01081",
+      "id": "FUNC-01085",
       "domain": "tooling"
     },
     {
@@ -70347,7 +70416,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01082",
+      "id": "FUNC-01086",
       "domain": "tooling"
     },
     {
@@ -70366,7 +70435,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01083",
+      "id": "FUNC-01087",
       "domain": "tooling"
     },
     {
@@ -70385,7 +70454,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01084",
+      "id": "FUNC-01088",
       "domain": "tooling"
     },
     {
@@ -70404,7 +70473,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01085",
+      "id": "FUNC-01089",
       "domain": "tooling"
     },
     {
@@ -70423,7 +70492,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01086",
+      "id": "FUNC-01090",
       "domain": "tooling"
     },
     {
@@ -70450,7 +70519,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01087",
+      "id": "FUNC-01091",
       "domain": "tooling"
     },
     {
@@ -70477,7 +70546,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01088",
+      "id": "FUNC-01092",
       "domain": "tooling"
     },
     {
@@ -70499,7 +70568,7 @@
         "norm",
         "isDynamic"
       ],
-      "id": "FUNC-01089",
+      "id": "FUNC-01093",
       "domain": "tooling"
     },
     {
@@ -70518,7 +70587,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01090",
+      "id": "FUNC-01094",
       "domain": "tooling"
     },
     {
@@ -70537,7 +70606,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01091",
+      "id": "FUNC-01095",
       "domain": "tooling"
     },
     {
@@ -70556,7 +70625,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01092",
+      "id": "FUNC-01096",
       "domain": "tooling"
     },
     {
@@ -70575,7 +70644,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01093",
+      "id": "FUNC-01097",
       "domain": "tooling"
     },
     {
@@ -70594,7 +70663,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01094",
+      "id": "FUNC-01098",
       "domain": "tooling"
     },
     {
@@ -70613,7 +70682,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01095",
+      "id": "FUNC-01099",
       "domain": "tooling"
     },
     {
@@ -70632,7 +70701,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01096",
+      "id": "FUNC-01100",
       "domain": "tooling"
     },
     {
@@ -70651,7 +70720,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01097",
+      "id": "FUNC-01101",
       "domain": "tooling"
     },
     {
@@ -70670,7 +70739,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01098",
+      "id": "FUNC-01102",
       "domain": "tooling"
     },
     {
@@ -70689,7 +70758,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01099",
+      "id": "FUNC-01103",
       "domain": "tooling"
     },
     {
@@ -70708,7 +70777,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01100",
+      "id": "FUNC-01104",
       "domain": "tooling"
     },
     {
@@ -70727,7 +70796,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01101",
+      "id": "FUNC-01105",
       "domain": "tooling"
     },
     {
@@ -70746,7 +70815,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01102",
+      "id": "FUNC-01106",
       "domain": "tooling"
     },
     {
@@ -70765,7 +70834,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01103",
+      "id": "FUNC-01107",
       "domain": "tooling"
     },
     {
@@ -70784,7 +70853,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01104",
+      "id": "FUNC-01108",
       "domain": "tooling"
     }
   ],
@@ -70921,7 +70990,7 @@
       "sources": [
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 158
+          "line": 125
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -70947,7 +71016,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 75
+          "line": 89
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71023,11 +71092,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 64
+          "line": 86
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 171
+          "line": 128
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71053,7 +71122,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 75
+          "line": 89
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71109,11 +71178,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 75
+          "line": 89
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 78
+          "line": 90
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71189,7 +71258,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 152
+          "line": 122
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71219,7 +71288,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 175
+          "line": 128
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71355,7 +71424,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 125
+          "line": 105
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71475,7 +71544,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 170
+          "line": 128
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71531,11 +71600,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 146
+          "line": 117
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 148
+          "line": 118
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71565,7 +71634,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 146
+          "line": 117
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71685,31 +71754,27 @@
       "sources": [
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 24
-        },
-        {
-          "file": "cloudflare/r41-api/src/entry-authoritative.js",
           "line": 25
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 59
+          "line": 63
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 60
+          "line": 64
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 62
+          "line": 67
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 153
+          "line": 122
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 158
+          "line": 125
         }
       ]
     },
@@ -71823,7 +71888,7 @@
       "sources": [
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 103
+          "line": 75
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71919,19 +71984,15 @@
       "sources": [
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 23
+          "line": 29
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 71
+          "line": 87
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 81
-        },
-        {
-          "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 86
+          "line": 91
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
@@ -71939,7 +72000,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 153
+          "line": 96
+        },
+        {
+          "file": "cloudflare/r41-api/src/entry-authoritative.js",
+          "line": 122
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -79537,32 +79602,32 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 38,
-      "text": "if(Array.isArray(value))return value.slice(0,100).map(v=>cloneBounded(v,depth+1));",
+      "line": 44,
+      "text": "if(Array.isArray(value))return value.slice(0,100).map(v=>cloneBounded(v,depth+1));if(typeof value!==\"object\")return String(value).slice(0,300);",
       "id": "MOVE-00531"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 131,
-      "text": "if(/bloque\\|block/.test(raw))return \"block\";if(/defend\\|defesa\\|defender\\|esquiv\\|dodge/.test(raw))return \"defend\";if(/investig\\|examinar\\|analisar\\|procurar pista/.test(raw))return \"investigate\";if(/perceb\\|observar\\|vigiar\\|detectar\\|sentir/.test(raw))return \"perceive\";if(/persuad\\|convenc\\|negoci\\|intimid\\|convers\\|social/.test(raw))return \"social\";if(/mover\\|moviment\\|correr\\|saltar\\|escalar\\|move/.test(raw))return \"move\";if(/jutsu\\|t[eé]cnica\\|atac\\|golpe\\|attack/.test(raw))return \"jutsu\";r",
+      "line": 107,
+      "text": "function serverActionType(envelope){const raw=`${text(envelope?.text,500)} ${text(envelope?.description\\|\\|envelope?.descricao,500)} ${text(envelope?.type\\|\\|envelope?.action\\|\\|envelope?.intent,80)}`.toLowerCase();if(/bloque\\|block/.test(raw))return \"block\";if(/defend\\|defesa\\|defender\\|esquiv\\|dodge/.test(raw))return \"defend\";if(/investig\\|examinar\\|analisar\\|procurar pista/.test(raw))return \"investigate\";if(/perceb\\|observar\\|vigiar\\|detectar\\|sentir/.test(raw))return \"perceive\";if(/persuad\\|",
       "id": "MOVE-00532"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 149,
-      "text": "const store=await db(env),character=await trustedCharacter(store,me.id);safe.changes=Array.isArray(payload.changes)?payload.changes.slice(-100).map(x=>stripClientMechanical(x)).filter(x=>x!==null&&x!==undefined):[];if(character)safe.character=character;else delete safe.character;return base.fetch(copyRequest(req,req.url,safe),env,ctx);",
+      "line": 119,
+      "text": "const store=await db(env),profile=await trustedProfile(store,me.id,{playerId:payload.playerId,campaignId:payload.campaignId}),character=profile?.character;safe.changes=Array.isArray(payload.changes)?payload.changes.slice(-100).map(x=>stripClientMechanical(x)).filter(x=>x!==null&&x!==undefined):[];if(character)safe.character=character;else delete safe.character;return base.fetch(copyRequest(req,req.url,safe),env,ctx);",
       "id": "MOVE-00533"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 153,
-      "text": "const store=await db(env),profiles=await store.collection(\"mechanical_profiles\").find({locked:true}).sort({updatedAt:-1}).limit(300).toArray(),ids=profiles.map(p=>p.userId),users=ids.length?await store.collection(\"users\").find({_id:{$in:ids}},{projection:{username:1,displayName:1}}).toArray():[],names=new Map(users.map(u=>[String(u._id),u]));",
+      "line": 122,
+      "text": "if(path!==\"/api/leaderboard\")return null;if(!env.MONGODB_URI\\|\\|!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:\"UNAUTHORIZED\"});const store=await db(env),profiles=await store.collection(\"mechanical_profiles\").find({locked:true}).sort({updatedAt:-1}).limit(500).toArray(),ids=[...new Map(profiles.map(p=>[String(p.userId),p.userId])).values()],users=ids.length?await store.collection(\"users\").find({_id:{$in:ids}},{pr",
       "id": "MOVE-00534"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 154,
-      "text": "const leaderboard=profiles.map(p=>{const u=names.get(String(p.userId)),c=p.character\\|\\|{};return{username:u?.username\\|\\|\"shinobi\",displayName:u?.displayName\\|\\|u?.username\\|\\|\"Shinobi\",name:c.name\\|\\|c.nome\\|\\|null,level:Math.max(1,Math.floor(finite(c.level??c.nivel,1))),xp:Math.max(0,Math.floor(finite(p.totalXp,0))),avatar:c.avatar\\|\\|c.portrait\\|\\|\"\",authority:\"locked-mechanical-profile\"};}).sort((a,b)=>b.level-a.level\\|\\|b.xp-a.xp).slice(0,50);",
+      "line": 123,
+      "text": "const leaderboard=profiles.map(p=>{const u=names.get(String(p.userId)),c=p.character\\|\\|{};return{username:u?.username\\|\\|\"shinobi\",displayName:u?.displayName\\|\\|u?.username\\|\\|\"Shinobi\",profileKey:p.profileKey\\|\\|\"legacy\",playerId:p.playerId\\|\\|null,name:c.name\\|\\|c.nome\\|\\|null,level:Math.max(1,Math.floor(finite(c.level??c.nivel,1))),xp:Math.max(0,Math.floor(finite(p.totalXp,0))),avatar:c.avatar\\|\\|c.portrait\\|\\|\"\",authority:\"locked-mechanical-profile\"};}).sort((a,b)=>b.level-a.level\\|\\|b.xp-a",
       "id": "MOVE-00535"
     },
     {
@@ -234761,115 +234826,115 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 19,
+      "line": 38,
       "value": "MONGODB_URI",
       "id": "ENV-00057"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 20,
+      "line": 39,
       "value": "MONGODB_URI",
       "id": "ENV-00058"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 20,
+      "line": 39,
       "value": "MONGODB_URI",
       "id": "ENV-00059"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 20,
+      "line": 39,
       "value": "MONGODB_URI",
       "id": "ENV-00060"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 21,
+      "line": 40,
       "value": "MONGODB_DB",
       "id": "ENV-00061"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 76,
+      "line": 89,
       "value": "MONGODB_URI",
       "id": "ENV-00062"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 115,
+      "line": 101,
       "value": "MONGODB_URI",
       "id": "ENV-00063"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 115,
+      "line": 101,
       "value": "AUTH_SECRET",
       "id": "ENV-00064"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 115,
+      "line": 101,
       "value": "GAME_ROOMS",
       "id": "ENV-00065"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 134,
+      "line": 109,
       "value": "MONGODB_URI",
       "id": "ENV-00066"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 134,
+      "line": 109,
       "value": "AUTH_SECRET",
       "id": "ENV-00067"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 134,
+      "line": 109,
       "value": "GAME_ROOMS",
       "id": "ENV-00068"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 142,
+      "line": 113,
       "value": "GAME_ROOMS",
       "id": "ENV-00069"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 146,
+      "line": 117,
       "value": "MONGODB_URI",
       "id": "ENV-00070"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 146,
+      "line": 117,
       "value": "AUTH_SECRET",
       "id": "ENV-00071"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 152,
+      "line": 122,
       "value": "MONGODB_URI",
       "id": "ENV-00072"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 152,
+      "line": 122,
       "value": "AUTH_SECRET",
       "id": "ENV-00073"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 158,
+      "line": 125,
       "value": "MONGODB_URI",
       "id": "ENV-00074"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 158,
+      "line": 125,
       "value": "AUTH_SECRET",
       "id": "ENV-00075"
     },
@@ -235163,12 +235228,12 @@
     "excludedDocumentation": true,
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
-      "gameRuntime": 996,
+      "gameRuntime": 1000,
       "tooling": 108,
       "otherSource": 0
     },
     "before": {
-      "functions": 1104,
+      "functions": 1108,
       "routes": 33,
       "models": 3,
       "collections": 13,
@@ -235180,7 +235245,7 @@
       "environment": 146
     },
     "after": {
-      "functions": 1104,
+      "functions": 1108,
       "routes": 33,
       "models": 2,
       "collections": 12,
