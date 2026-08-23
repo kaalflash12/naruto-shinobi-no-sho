@@ -1,17 +1,19 @@
 {
-  "generatedAt": "2026-08-23T11:00:05.213Z",
+  "generatedAt": "2026-08-23T11:14:18.849Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt5p3bi2v5ptw",
-  "slotId": "gameplay-mt5p3bi2",
+  "temporaryAccount": "play_mt5plm18d7fy0",
+  "slotId": "gameplay-mt5plm18",
   "checks": {},
   "contracts": [],
   "evidence": {},
   "pageErrors": [],
-  "consoleErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 ()"
+  ],
   "failures": [
-    "page.waitForFunction: Timeout 30000ms exceeded.\n    at register (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787482773757.mjs:150:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787482773757.mjs:465:17"
+    "page.waitForFunction: Timeout 30000ms exceeded.\n    at register (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787483627206.mjs:150:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787483627206.mjs:465:17"
   ]
 }
