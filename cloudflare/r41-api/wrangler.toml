@@ -1,5 +1,5 @@
 name = "naruto-shinobi-no-sho-api"
-main = "src/entry.js"
+main = "src/entry-authoritative.js"
 compatibility_date = "2026-08-19"
 compatibility_flags = ["nodejs_compat"]
 
