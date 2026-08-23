@@ -21,6 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Probe canonical creation source
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const s=fs.readFileSync('app.js','utf8');
+          const names=['defaultState','recalc','createCharacter','newCreationDraft','creationAttrSpent','creationSocialSpent','creationSkillSpent','creationPowerSpent','initialSkillBase','creationSkillTotal','creationSkillAvailable','creationCombatTotal','creationAptitudeAvailable','validateCreationStep','changeCreationAttr','changeCreationCombat','normalizeCombatBaseDraft','changeCreationSkill','toggleCreationAptitude','changeCreationPower','r25CoreDefaults','r25CoreSpent','r25CoreFromLegacy','r25ChangeCoreAttr','r25CoreResourcePreview','r25ApplyCoreResources'];
+          for(const name of names){
+            let i=s.indexOf(`function ${name}`);
+            if(i<0)i=s.indexOf(`const ${name}=`);
+            if(i<0)i=s.indexOf(`let ${name}=`);
+            if(i<0){console.log(`\n===== ${name}: NOT FOUND =====`);continue;}
+            let candidates=[s.indexOf('\nfunction ',i+10),s.indexOf('\nconst ',i+10),s.indexOf('\nlet ',i+10)].filter(x=>x>i);
+            let end=candidates.length?Math.min(...candidates):Math.min(s.length,i+12000);
+            if(end-i>12000)end=i+12000;
+            console.log(`\n===== ${name} @ ${i} =====\n${s.slice(i,end)}\n===== END ${name} =====`);
+          }
+          NODE
+          exit 1
+
       - name: Node 24
         uses: actions/setup-node@v4
         with:
