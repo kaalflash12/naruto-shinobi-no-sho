@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-23T02:08:01.895Z",
+  "generatedAt": "2026-08-23T02:10:20.805Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt563g0d6x6nv",
-  "slotId": "gameplay-mt563g0d",
+  "temporaryAccount": "play_mt566gyecwkdf",
+  "slotId": "gameplay-mt566gye",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -21,6 +21,6 @@
     "Failed to load resource: the server responded with a status of 404 ()"
   ],
   "failures": [
-    "ReferenceError: localStorage is not defined\n    at seedNormal (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450866888.mjs:233:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450866888.mjs:450:5"
+    "Error: fixture da conta nao carregou no runtime local; character=null\n    at assert (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787451008110.mjs:18:42)\n    at seedNormal (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787451008110.mjs:221:3)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787451008110.mjs:436:5"
   ]
 }
