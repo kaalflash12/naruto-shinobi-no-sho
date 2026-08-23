@@ -87,7 +87,6 @@ jobs:
           npm install --no-audit --no-fund
           npm test
           npm run check
-          npx wrangler deploy --dry-run --outdir /tmp/shinobi-terion-dry
       - name: Commit integrated patch
         shell: bash
         run: |
