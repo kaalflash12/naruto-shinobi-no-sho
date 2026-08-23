@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-22T23:38:56.393Z",
+  "generatedAt": "2026-08-23T01:31:56.817Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt50rfxam18n2",
-  "slotId": "gameplay-mt50rfxa",
+  "temporaryAccount": "play_mt54t6blaanz8",
+  "slotId": "gameplay-mt54t6bl",
   "checks": {
     "temporaryAccountRegistered": true,
     "temporaryAccountDeleted": true
@@ -15,6 +15,6 @@
   "pageErrors": [],
   "consoleErrors": [],
   "failures": [
-    "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('[data-screen=\"personagem\"]').first() to be visible\n\n    at navigate (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:68:104)\n    at testNormalGameplay (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:124:9)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787441908837.mjs:330:5"
+    "Error: data-screen personagem não existe no DOM\n    at assert (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787448708159.mjs:18:42)\n    at navigate (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787448708159.mjs:68:150)\n    at async testNormalGameplay (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787448708159.mjs:124:3)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787448708159.mjs:330:5"
   ]
 }
