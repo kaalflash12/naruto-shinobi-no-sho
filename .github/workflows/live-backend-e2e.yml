@@ -55,7 +55,8 @@ jobs:
           grep -q 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
           grep -q 'cloudflare-mongodb-durable-objects' r41-github-api.js
           grep -q 'main = "src/entry-authoritative.js"' cloudflare/r41-api/wrangler.toml
-          echo 'PASS_BACKEND_IDENTITY_CLOUDFLARE_MONGODB'
+          grep -q 'R41-AUTHORITATIVE-TERION-20260823-V6' cloudflare/r41-api/src/entry-authoritative.js
+          echo 'PASS_BACKEND_IDENTITY_CLOUDFLARE_MONGODB_V6'
 
       - name: Verify Cloudflare token
         shell: bash
@@ -142,7 +143,7 @@ jobs:
           echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
           echo "Worker URL: $api"
 
-      - name: Wait for configured authoritative Worker V4
+      - name: Wait for configured authoritative Worker V6
         shell: bash
         run: |
           set -euo pipefail
@@ -151,12 +152,21 @@ jobs:
             body="$(curl -fsS --max-time 10 "$API_ORIGIN/api/status" 2>/dev/null || true)"
             if BODY="$body" node --input-type=module <<'NODE'
           const d=JSON.parse(process.env.BODY||'{}');
-          if(!(d.ok===true&&d.configured===true&&d.cloudSave===true&&d.onlineRooms===true&&d.storage==='mongodb-atlas'&&d.realtime==='cloudflare-durable-objects'&&d.serverMechanicalResolution===true&&d.clientDifficultyIgnored===true&&d.clientRoomCharacterIgnored===true&&d.mechanicsReadFromMongoProfile===true&&d.clientAutosaveCannotOverwriteMechanicalProfile===true&&d.leaderboardUsesMechanicalProfiles===true&&d.worldMechanicalPayloadSanitized===true))process.exit(1);
+          if(!(
+            d.ok===true&&d.configured===true&&d.cloudSave===true&&d.onlineRooms===true&&
+            d.storage==='mongodb-atlas'&&d.realtime==='cloudflare-durable-objects'&&
+            d.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'&&
+            d.serverMechanicalResolution===true&&d.clientDifficultyIgnored===true&&d.clientRoomCharacterIgnored===true&&
+            d.mechanicsReadFromMongoProfile===true&&d.mechanicalProfilesPerCharacter===true&&d.mechanicalProfileIndexMigrationV6===true&&
+            d.mechanicalBaselineSeededFromMatchingSave===true&&d.clientAutosaveCannotOverwriteMechanicalProfile===true&&
+            d.leaderboardUsesMechanicalProfiles===true&&d.slotDeleteCleansMechanicalProfile===true&&
+            d.worldMechanicalPayloadSanitized===true&&d.worldSavepointCharacterFromMechanicalProfile===true
+          ))process.exit(1);
           NODE
             then ok=1; break; fi
             sleep 3
           done
-          test "$ok" -eq 1 || { echo 'Worker autoritativo Cloudflare + MongoDB V4 não ficou READY.' >&2; exit 1; }
+          test "$ok" -eq 1 || { echo 'Worker autoritativo Cloudflare + MongoDB V6 não ficou READY.' >&2; exit 1; }
 
       - name: Run MongoDB + Durable Objects live E2E
         env:
@@ -181,13 +191,15 @@ jobs:
           if(!live.ok||live.status!=='PASS_LIVE_BACKEND_E2E')throw new Error('LIVE-BACKEND sem PASS');
           if(!browser.ok||browser.status!=='PASS_BROWSER_LIVE_API')throw new Error('BROWSER-LIVE-API sem PASS');
           const required=[
-            'statusConfigured','authoritativeBoundariesAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected','mongoSaveRoundTrip','slotListing',
-            'roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging',
-            'intentActionAccepted','terionUsesLockedMechanicalProfile','clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave',
-            'worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'
+            'statusConfigured','authoritativeBoundariesAdvertised','v6PerCharacterAuthorityAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected',
+            'mongoSaveRoundTrip','multipleCharacterSlotsPersisted','slotListing','roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','multipleMechanicalProfilesSameAccount','profileSelectorMatchesPlayerAndCampaign',
+            'continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging','intentActionAccepted','terionUsesLockedMechanicalProfile','terionSelectsCorrectProfilePerCharacter',
+            'clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave','leaderboardSeparatesCharacters',
+            'worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','slotDeleteCleansOnlyMatchingMechanicalProfile',
+            'sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'
           ];
           for(const k of required)if(live.checks?.[k]!==true)throw new Error(`Gate live ausente: ${k}`);
-          console.log('PASS_CLOUDFLARE_MONGODB_LIVE_V4',live.status,browser.status);
+          console.log('PASS_CLOUDFLARE_MONGODB_LIVE_V6',live.status,browser.status);
           NODE
 
       - name: Bake verified Worker URL into public game
