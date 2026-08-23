@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
+// Diagnóstico PR: mesmo gate de produção, sem alterar a mecânica do jogo.
 // Adapta o E2E operacional à arquitetura atual de conta obrigatória V8.4.1.
 // O teste continua usando somente UI/API públicas reais.
 const sourcePath = path.resolve('tools/browser-gameplay-e2e.mjs');
