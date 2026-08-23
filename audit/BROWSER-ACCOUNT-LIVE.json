@@ -1,18 +1,14 @@
 {
-  "generatedAt": "2026-08-22T19:37:04.448Z",
-  "status": "PASS_BROWSER_ACCOUNT_LIVE",
-  "ok": true,
+  "generatedAt": "2026-08-23T10:38:07.733Z",
+  "status": "FAIL_BROWSER_ACCOUNT_LIVE",
+  "ok": false,
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
   "checks": {
-    "publicAccountUiLoaded": true,
-    "registerUi": true,
-    "sessionPersistsReload": true,
-    "accountButtonVisibleAfterReload": true,
-    "logoutUi": true,
-    "loginUi": true,
-    "deleteUi": true
+    "publicAccountUiLoaded": true
   },
   "pageErrors": [],
   "consoleErrors": [],
-  "failures": []
+  "failures": [
+    "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-testid=\"sns-account-authenticated\"]') to be visible\n\n    at /home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/tools/browser-account-live.mjs:15:421"
+  ]
 }
