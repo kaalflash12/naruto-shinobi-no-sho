@@ -3,7 +3,7 @@ import base, { GameRoom } from "./entry.js";
 import { resolveTerionIntent, hasClientResult, stripClientMechanical } from "./terion-mechanics.js";
 export { GameRoom };
 
-const BUILD="R41-AUTHORITATIVE-TERION-20260823-V5";
+const BUILD="R41-AUTHORITATIVE-TERION-20260823-V6";
 let client=null,clientUri="",authorityIndexesPromise=null;
 
 function originHeaders(req,env){
@@ -25,11 +25,13 @@ async function ensureAuthorityIndexes(store){
     const profiles=store.collection("mechanical_profiles");
     try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}
     await profiles.updateMany({profileKey:{$exists:false}},{$set:{profileKey:"legacy",migration:"v4-single-profile"}});
+    await profiles.updateMany({slotId:{$exists:false},baselineSlotId:{$type:"string"}},[{$set:{slotId:"$baselineSlotId"}}]);
     await Promise.all([
       store.collection("users").createIndex({emailLower:1},{unique:true,sparse:true,name:"uq_email"}),
       profiles.createIndex({userId:1,profileKey:1},{unique:true,name:"uq_mechanical_profile_user_key"}),
       profiles.createIndex({userId:1,updatedAt:-1},{name:"ix_mechanical_profile_user_updated"}),
-      profiles.createIndex({playerId:1},{sparse:true,name:"ix_mechanical_profile_player"})
+      profiles.createIndex({playerId:1},{sparse:true,name:"ix_mechanical_profile_player"}),
+      profiles.createIndex({userId:1,slotId:1},{sparse:true,name:"ix_mechanical_profile_slot"})
     ]);
   })().catch(e=>{authorityIndexesPromise=null;throw e;});
   await authorityIndexesPromise;
@@ -46,7 +48,7 @@ function cloneBounded(value,depth=0){
 }
 function mechanicalCharacterSnapshot(character={}){
   const out={};
-  for(const key of ["name","nome","level","nivel","attributes","atributos","stats","status","sheet","ficha","specialProfile","privateCharacter","clan","cla","graduation","graduacao","hp","pv","maxHp","maxPv","chakra","maxChakra","stamina","maxStamina"]){if(character[key]!==undefined)out[key]=cloneBounded(character[key]);}
+  for(const key of ["name","nome","avatar","portrait","level","nivel","attributes","atributos","stats","status","sheet","ficha","specialProfile","privateCharacter","clan","cla","graduation","graduacao","hp","pv","maxHp","maxPv","chakra","maxChakra","stamina","maxStamina"]){if(character[key]!==undefined)out[key]=cloneBounded(character[key]);}
   out.level=Math.max(1,Math.floor(finite(character.level??character.nivel,1)));return out;
 }
 function profileKeyFor(saveData={},source={}){
@@ -122,7 +124,11 @@ async function authoritativeLeaderboard(req,env,ctx,path){
   if(path!=="/api/leaderboard")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});const store=await db(env),profiles=await store.collection("mechanical_profiles").find({locked:true}).sort({updatedAt:-1}).limit(500).toArray(),ids=[...new Map(profiles.map(p=>[String(p.userId),p.userId])).values()],users=ids.length?await store.collection("users").find({_id:{$in:ids}},{projection:{username:1,displayName:1}}).toArray():[],names=new Map(users.map(u=>[String(u._id),u]));
   const leaderboard=profiles.map(p=>{const u=names.get(String(p.userId)),c=p.character||{};return{username:u?.username||"shinobi",displayName:u?.displayName||u?.username||"Shinobi",profileKey:p.profileKey||"legacy",playerId:p.playerId||null,name:c.name||c.nome||null,level:Math.max(1,Math.floor(finite(c.level??c.nivel,1))),xp:Math.max(0,Math.floor(finite(p.totalXp,0))),avatar:c.avatar||c.portrait||"",authority:"locked-mechanical-profile"};}).sort((a,b)=>b.level-a.level||b.xp-a.xp).slice(0,50);return json(req,env,200,{ok:true,leaderboard,authority:"mechanical_profiles",profilesPerCharacter:true,clientSaveRankIgnored:true});
 }
+async function authoritativeSlotDelete(req,env,ctx,path){
+  if(path!=="/api/account/delete")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx);if(!me)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});const payload=await body(req),slotId=text(payload.slotId||"",100);if(!slotId)return base.fetch(req,env,ctx);
+  const store=await db(env),userObjectId=oid(me.id),res=await base.fetch(req,env,ctx);if(res.ok&&userObjectId){const removed=await store.collection("mechanical_profiles").deleteMany({userId:userObjectId,$or:[{slotId},{profileKey:`slot:${slotId}`},{baselineSlotId:slotId}]});let data;try{data=await res.clone().json();}catch{return res;}data.mechanicalProfilesDeleted=Number(removed.deletedCount||0);data.mechanicalProfileSlotCleanup=true;return json(req,env,res.status,data);}return res;
+}
 async function authoritativeAccountDelete(req,env,ctx,path){if(path!=="/api/auth/delete-account")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx),res=await base.fetch(req,env,ctx);if(res.ok&&me?.id){const store=await db(env),userObjectId=oid(me.id);if(userObjectId)await store.collection("mechanical_profiles").deleteMany({userId:userObjectId});}return res;}
-async function status(req,env,ctx){const res=await base.fetch(req,env,ctx);let data;try{data=await res.clone().json();}catch{return res;}data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoProfile=true;data.mechanicalProfilesPerCharacter=true;data.mechanicalProfileIndexMigrationV5=true;data.mechanicalBaselineSeededFromLatestSave=true;data.clientAutosaveCannotOverwriteMechanicalProfile=true;data.leaderboardUsesMechanicalProfiles=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMongo=true;data.emailLogin=true;data.buildAuthority=BUILD;data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,authoritativeMechanicalProfile:true,authoritativeLeaderboard:true,emailLogin:true};return new Response(JSON.stringify(data),{status:res.status,statusText:res.statusText,headers:originHeaders(req,env)});}
+async function status(req,env,ctx){const res=await base.fetch(req,env,ctx);let data;try{data=await res.clone().json();}catch{return res;}data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoProfile=true;data.mechanicalProfilesPerCharacter=true;data.mechanicalProfileIndexMigrationV6=true;data.mechanicalBaselineSeededFromMatchingSave=true;data.clientAutosaveCannotOverwriteMechanicalProfile=true;data.leaderboardUsesMechanicalProfiles=true;data.slotDeleteCleansMechanicalProfile=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMechanicalProfile=true;data.emailLogin=true;data.buildAuthority=BUILD;data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,authoritativeMechanicalProfile:true,authoritativeLeaderboard:true,authoritativeSlotDelete:true,emailLogin:true};return new Response(JSON.stringify(data),{status:res.status,statusText:res.statusText,headers:originHeaders(req,env)});}
 
-export default {async fetch(req,env,ctx){try{const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";if(path==="/"||path==="/api/status")return status(req,env,ctx);if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;const deletion=await authoritativeAccountDelete(req,env,ctx,path);if(deletion)return deletion;const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;const leaderboard=await authoritativeLeaderboard(req,env,ctx,path);if(leaderboard)return leaderboard;return base.fetch(req,env,ctx);}catch(e){console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);return json(req,env,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});}}};
+export default {async fetch(req,env,ctx){try{const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";if(path==="/"||path==="/api/status")return status(req,env,ctx);if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;const deletion=await authoritativeAccountDelete(req,env,ctx,path);if(deletion)return deletion;const slotDelete=await authoritativeSlotDelete(req,env,ctx,path);if(slotDelete)return slotDelete;const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;const leaderboard=await authoritativeLeaderboard(req,env,ctx,path);if(leaderboard)return leaderboard;return base.fetch(req,env,ctx);}catch(e){console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);return json(req,env,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});}}};
