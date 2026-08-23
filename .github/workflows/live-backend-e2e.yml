@@ -55,6 +55,51 @@ jobs:
           grep -q 'cloudflare-mongodb-durable-objects' r41-github-api.js
           echo 'PASS_BACKEND_IDENTITY_CLOUDFLARE_MONGODB'
 
+      - name: Verify Cloudflare token
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p audit
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({
+            generatedAt:new Date().toISOString(),
+            status:'BLOCKED_MISSING_CLOUDFLARE_TOKEN',
+            ok:false,
+            scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',
+            missing:['CLOUDFLARE_API_TOKEN'],
+            failures:['GitHub Actions secret CLOUDFLARE_API_TOKEN ausente.']
+          },null,2)+'\n');
+          NODE
+            echo 'CLOUDFLARE_API_TOKEN ausente.' >&2
+            exit 1
+          fi
+
+      - name: Resolve Cloudflare account automatically
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+            echo "Using configured Cloudflare account ID."
+            exit 0
+          fi
+          response="$(curl -fsS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' https://api.cloudflare.com/client/v4/accounts)"
+          account="$(ACCOUNT_JSON="$response" node --input-type=module <<'NODE'
+          const data=JSON.parse(process.env.ACCOUNT_JSON||'{}');
+          const rows=Array.isArray(data.result)?data.result:[];
+          if(data.success!==true)process.exit(2);
+          if(rows.length!==1){
+            console.error(`Expected exactly one Cloudflare account, found ${rows.length}.`);
+            process.exit(3);
+          }
+          process.stdout.write(String(rows[0].id||''));
+          NODE
+          )"
+          test -n "$account" || { echo 'Cloudflare account ID could not be resolved.' >&2; exit 1; }
+          echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
+          echo 'Cloudflare account ID resolved from API token.'
+
       - name: Install Worker dependencies only in CI
         working-directory: cloudflare/r41-api
         run: npm install --no-audit --no-fund
@@ -67,65 +112,66 @@ jobs:
         working-directory: cloudflare/r41-api
         run: npx wrangler deploy --dry-run --outdir /tmp/shinobi-worker-dry
 
-      - name: Verify required live credentials
-        id: credentials
-        shell: bash
-        run: |
-          set -euo pipefail
-          missing=()
-          for name in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID MONGODB_URI AUTH_SECRET; do
-            if [ -z "${!name:-}" ]; then missing+=("$name"); fi
-          done
-          if [ "${#missing[@]}" -gt 0 ]; then
-            joined="$(IFS=,; echo "${missing[*]}")"
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "missing=$joined" >> "$GITHUB_OUTPUT"
-            mkdir -p audit
-            MISSING="$joined" node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const missing=String(process.env.MISSING||'').split(',').filter(Boolean);
-          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({
-            generatedAt:new Date().toISOString(),
-            status:'BLOCKED_MISSING_GITHUB_SECRETS',
-            ok:false,
-            scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',
-            missing,
-            failures:[`GitHub Actions secrets obrigatórios ausentes: ${missing.join(', ')}`]
-          },null,2)+'\n');
-          NODE
-          else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-            echo "missing=" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Stop when credentials are unavailable
-        if: steps.credentials.outputs.ready != 'true'
-        run: |
-          echo "LIVE BACKEND BLOCKED: ${{ steps.credentials.outputs.missing }}" >&2
-          exit 1
-
       - name: Initial Worker deploy
-        if: steps.credentials.outputs.ready == 'true'
         working-directory: cloudflare/r41-api
         shell: bash
         run: |
           set -euo pipefail
           npx wrangler deploy 2>&1 | tee /tmp/shinobi-deploy-initial.log
 
-      - name: Configure Worker secrets
-        if: steps.credentials.outputs.ready == 'true'
+      - name: Reuse or configure Worker secrets
         working-directory: cloudflare/r41-api
         shell: bash
         run: |
           set -euo pipefail
-          printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI
-          printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET
+          secret_json="$(npx wrangler secret list --format json)"
+          has_mongo="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='MONGODB_URI')?'true':'false')")"
+          has_auth="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='AUTH_SECRET')?'true':'false')")"
+
+          if [ -n "${MONGODB_URI:-}" ]; then
+            printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI
+            has_mongo=true
+          fi
+
+          if [ "$has_mongo" != "true" ]; then
+            cd ../..
+            mkdir -p audit
+            node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({
+            generatedAt:new Date().toISOString(),
+            status:'BLOCKED_MONGODB_URI_NOT_CONFIGURED',
+            ok:false,
+            scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',
+            missing:['MONGODB_URI'],
+            failures:['MONGODB_URI não existe nem como GitHub Actions secret nem como secret já persistido no Worker Cloudflare.']
+          },null,2)+'\n');
+          NODE
+            echo 'MONGODB_URI ausente no GitHub e no Worker.' >&2
+            exit 1
+          fi
+
+          if [ -n "${AUTH_SECRET:-}" ]; then
+            printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET
+            has_auth=true
+          elif [ "$has_auth" != "true" ]; then
+            generated_auth="$(openssl rand -hex 48)"
+            printf '%s' "$generated_auth" | npx wrangler secret put AUTH_SECRET
+            unset generated_auth
+            has_auth=true
+            echo 'AUTH_SECRET generated once and persisted only as a Cloudflare Worker secret.'
+          else
+            echo 'Existing AUTH_SECRET preserved in Cloudflare.'
+          fi
+
           if [ -n "${LEON_PRIVATE_CODE:-}" ]; then
             printf '%s' "$LEON_PRIVATE_CODE" | npx wrangler secret put LEON_PRIVATE_CODE
           fi
 
+          test "$has_mongo" = "true"
+          test "$has_auth" = "true"
+
       - name: Final Worker deploy and discover URL
-        if: steps.credentials.outputs.ready == 'true'
         working-directory: cloudflare/r41-api
         shell: bash
         run: |
@@ -141,7 +187,6 @@ jobs:
           echo "Worker URL: $api"
 
       - name: Wait for configured Worker
-        if: steps.credentials.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -158,26 +203,22 @@ jobs:
           test "$ok" -eq 1 || { echo 'Worker Cloudflare + MongoDB não ficou READY.' >&2; exit 1; }
 
       - name: Run MongoDB + Durable Objects live E2E
-        if: steps.credentials.outputs.ready == 'true'
         env:
           LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
         run: node tools/live-worker-e2e.mjs
 
       - name: Install Chromium only in GitHub runner
-        if: steps.credentials.outputs.ready == 'true'
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
 
       - name: Prove GitHub Pages to Worker live
-        if: steps.credentials.outputs.ready == 'true'
         env:
           PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
           BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
         run: node tools/browser-live-api.mjs
 
       - name: Enforce live backend contracts
-        if: steps.credentials.outputs.ready == 'true'
         run: |
           node - <<'NODE'
           const live=require('./audit/LIVE-BACKEND.json');
@@ -190,7 +231,6 @@ jobs:
           NODE
 
       - name: Bake verified Worker URL into public game
-        if: steps.credentials.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
