@@ -6,10 +6,7 @@
   const TOKEN_KEY = "sns-v841-auth-token";
 
   function apiOrigin(){
-    return String(window.NARUTO_R41_API_ORIGIN || localStorage.getItem("sns-r41-api-origin") || "").replace(/\/+$/g,"");
-  }
-  function authOrigin(){
-    return String(window.NARUTO_R41_AUTH_ORIGIN || "").replace(/\/+$/g,"") || apiOrigin();
+    return String(window.NARUTO_R41_API_ORIGIN || localStorage.getItem("sns-api-origin") || localStorage.getItem("sns-r41-api-origin") || "").replace(/\/+$/g,"");
   }
   function token(){
     const persistent = localStorage.getItem(TOKEN_KEY) || "";
@@ -44,21 +41,17 @@
   captureClaim();
 
   function mapTarget(raw){
-    if(raw.startsWith("/api/auth/")){
-      const origin=authOrigin();
-      if(!origin)throw new Error("R41_AUTH_ORIGIN_NOT_CONFIGURED");
-      return {url:origin+raw,api:true,route:raw,auth:true};
-    }
     if(raw.startsWith("/api/")){
       const origin=apiOrigin();
       if(!origin)throw new Error("R41_API_ORIGIN_NOT_CONFIGURED");
-      return {url:origin+raw,api:true,route:raw,auth:false};
+      return {url:origin+raw,api:true,route:raw};
     }
     if(raw.startsWith("/assets/")||raw.startsWith("/data/")||raw.startsWith("/_r40/")||raw.startsWith("/src/")){
-      return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:"",auth:false};
+      return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:""};
     }
-    return {url:raw,api:false,route:"",auth:false};
+    return {url:raw,api:false,route:""};
   }
+
   function withAuth(init,api){
     if(!api)return init;
     const out={...(init||{})};
@@ -68,13 +61,17 @@
     out.headers=headers;
     return out;
   }
+
   async function applyLeonClaim(response,mapped){
     if(!mapped.api||!response.ok||!["/api/auth/login","/api/auth/register"].includes(mapped.route))return response;
     const claim=sessionStorage.getItem(CLAIM_KEY)||"";
     if(!claim)return response;
     let data;try{data=await response.clone().json();}catch{return response;}
     if(!data?.ok||!data?.token||!data?.account)return response;
-    if(data.account.role==="leon"){sessionStorage.removeItem(CLAIM_KEY);return response;}
+    if(data.account.role==="leon"){
+      sessionStorage.removeItem(CLAIM_KEY);
+      return response;
+    }
     try{
       const origin=apiOrigin();
       const claimed=await transportFetch(origin+"/api/private/claim-leon",{
@@ -86,14 +83,18 @@
       if(!claimed.ok||!c.ok)return response;
       data.account=Object.assign({},data.account,{role:"leon"});
       sessionStorage.removeItem(CLAIM_KEY);
-      const headers=new Headers(response.headers);headers.set("content-type","application/json; charset=utf-8");
+      const headers=new Headers(response.headers);
+      headers.set("content-type","application/json; charset=utf-8");
       return new Response(JSON.stringify(data),{status:response.status,statusText:response.statusText,headers});
-    }catch{return response;}
+    }catch{
+      return response;
+    }
   }
 
   window.fetch=async function(input,init){
     const raw=typeof input==="string"?input:(input&&input.url?input.url:String(input));
-    let mapped;try{mapped=mapTarget(raw);}catch(err){return Promise.reject(err);}
+    let mapped;
+    try{mapped=mapTarget(raw);}catch(err){return Promise.reject(err);}
     let response;
     if(typeof input==="string"){
       response=await transportFetch(mapped.url,withAuth(init,mapped.api));
@@ -114,7 +115,9 @@
     const data=await res.json().catch(()=>({ok:false,error:"INVALID_JSON"}));
     if(!res.ok){
       const err=new Error(data?.error||`HTTP_${res.status}`);
-      err.status=res.status;err.data=data;throw err;
+      err.status=res.status;
+      err.data=data;
+      throw err;
     }
     return data;
   }
@@ -139,7 +142,10 @@
       if(!token())return {ok:false,error:"UNAUTHORIZED",account:null};
       try{return await request("/api/auth/me",undefined,"GET");}
       catch(err){
-        if(err.status===401){setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}
+        if(err.status===401){
+          setToken("");
+          window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));
+        }
         throw err;
       }
     },
@@ -164,15 +170,13 @@
     }
   };
 
-  // Sincroniza imediatamente antes de app.js executar. Isso mantém compatibilidade
-  // com o restoreAuth legado do runtime, que ainda lê sessionStorage.
   token();
 
   window.__R41_GITHUB_API__={
-    build:"NARUTO-SHINOBI-NO-SHO-SUPABASE-AUTH-20260822-SYNC",
+    build:"R41-CLOUDFLARE-MONGODB-INTEGRAL-20260823",
     get apiOrigin(){return apiOrigin();},
-    get authOrigin(){return authOrigin();},
-    backend:"supabase-edge-postgres",
+    get authOrigin(){return apiOrigin();},
+    get backend(){return apiOrigin()?"cloudflare-mongodb-durable-objects":"unconfigured";},
     sameOriginStatic:true,
     leonClaimPending:()=>!!sessionStorage.getItem(CLAIM_KEY)
   };
