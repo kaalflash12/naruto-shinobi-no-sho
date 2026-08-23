@@ -45,13 +45,32 @@ export function resolveTerionIntent({intent={},character={},random=Math.random}=
   const difficulty=serverDifficulty(intent);
   const hope=d10(random),doom=d10(random);
   const result=classifyTerionRoll(hope,doom,modifier.total,difficulty.dc);
-  return {authority:"server",system:"TERION_2D10",version:"server-authoritative-v1",actionType,attribute,difficulty:difficulty.key,dc:difficulty.dc,dice:{hope,doom},modifier,total:result.total,outcome:result.outcome,success:result.success};
+  return {authority:"server",system:"TERION_2D10",version:"server-authoritative-v2",actionType,attribute,difficulty:difficulty.key,dc:difficulty.dc,dice:{hope,doom},modifier,total:result.total,outcome:result.outcome,success:result.success};
+}
+
+function mechanicalKey(key){
+  return String(key||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]/g,"");
 }
 
 export function hasClientResult(payload){
   if(!payload||typeof payload!=="object")return false;
-  const blocked=new Set(["damage","damagedealt","xp","rewards","reward","cooldown","cooldowns","mechanicalresult","combatoutcome","roll","rollresult","dice","total","success","critical","outcome","serverresult"]);
+  const blocked=new Set([
+    "damage","damagedealt","dano","hp","pv","health","chakra","stamina","vigor","xp","experience","experiencia",
+    "level","nivel","reward","rewards","recompensa","recompensas","ryo","ryos","success","sucesso","result","resultado",
+    "roll","rolls","rollresult","rolagem","rolagens","dice","dados","total","critical","critico","critica","hit","acerto",
+    "miss","falha","ko","dead","death","morte","heal","healing","cura","condition","conditions","condicao","condicoes",
+    "resource","resources","recurso","recursos","stats","attributes","atributos","inventory","inventario","equipment","equipamento",
+    "unlock","desbloqueio","progress","progresso","cost","custo","cooldown","cooldowns","mechanicalresult","combatoutcome","serverresult",
+    "modifier","modificador","dc","cd"
+  ]);
   const stack=[payload];let seen=0;
-  while(stack.length&&seen<500){const current=stack.pop();seen++;if(!current||typeof current!=="object")continue;for(const [key,value] of Object.entries(current)){if(blocked.has(String(key).toLowerCase().replace(/[^a-z]/g,"")))return true;if(value&&typeof value==="object")stack.push(value);}}
+  while(stack.length&&seen<1000){
+    const current=stack.pop();seen++;
+    if(!current||typeof current!=="object")continue;
+    for(const [key,value] of Object.entries(current)){
+      if(blocked.has(mechanicalKey(key)))return true;
+      if(value&&typeof value==="object")stack.push(value);
+    }
+  }
   return false;
 }
