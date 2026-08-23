@@ -13,6 +13,38 @@ const newToken = "const token=await page.evaluate(()=>String(sessionStorage.getI
 if (!patched.includes(oldToken)) throw new Error('GAMEPLAY_E2E_V2_PATCH_TARGET_MISSING: token legacy não encontrado');
 patched = patched.replace(oldToken, newToken);
 
+async function readSaveV2(page){
+  return page.evaluate(({legacyKey,prefix,slot,activeKey})=>{
+    const tryParse=raw=>{try{return raw?JSON.parse(raw):null}catch{return null}};
+    const active=localStorage.getItem(activeKey)||'';
+    const wanted=[String(slot||''),String(active||'')].filter(Boolean);
+    for(const id of wanted){
+      for(let i=0;i<localStorage.length;i++){
+        const key=localStorage.key(i)||'';
+        if(key.startsWith(prefix)&&key.endsWith(`:${id}`)){
+          const parsed=tryParse(localStorage.getItem(key));
+          if(parsed)return parsed;
+        }
+      }
+    }
+    const accountSaves=[];
+    for(let i=0;i<localStorage.length;i++){
+      const key=localStorage.key(i)||'';
+      if(key.startsWith(prefix)){
+        const parsed=tryParse(localStorage.getItem(key));
+        if(parsed)accountSaves.push(parsed);
+      }
+    }
+    if(accountSaves.length===1)return accountSaves[0];
+    return tryParse(localStorage.getItem(legacyKey));
+  },{
+    legacyKey:SAVE_KEY,
+    prefix:'sns-v841-account-save:',
+    slot:SLOT_ID,
+    activeKey:ACTIVE_SLOT_KEY
+  });
+}
+
 async function registerV2(page){
   const resp=await page.goto(`${site}?gameplay-auth=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});
   assert(resp?.ok(),`site HTTP ${resp?.status()}`);
@@ -151,6 +183,10 @@ async function navigateV2(page,screen){
     assert(/Ficha Shinobi|Leon Kosmo/i.test(h),`navegação personagem não abriu a ficha; h1=${h}`);
   }
 }
+
+const readSaveLine=/async function readSave\(page\)\{[^\n]+\}/;
+if(!readSaveLine.test(patched))throw new Error('GAMEPLAY_E2E_V2_READSAVE_PATCH_TARGET_MISSING');
+patched=patched.replace(readSaveLine,readSaveV2.toString().replace('readSaveV2','readSave'));
 
 const registerBlock=/async function register\(page\)\{[\s\S]*?\n\}\n\nasync function seedNormal/;
 if(!registerBlock.test(patched))throw new Error('GAMEPLAY_E2E_V2_REGISTER_BLOCK_MISSING');
