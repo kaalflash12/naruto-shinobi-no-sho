@@ -1,0 +1,129 @@
+name: Account Live E2E - Cloudflare MongoDB
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+      - 'r41-account-ui.js'
+      - 'cloudflare/r41-api/**'
+      - 'index.html'
+      - 'tools/account-live-e2e.mjs'
+      - 'tools/browser-account-live.mjs'
+      - '.github/workflows/account-live-e2e.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shinobi-account-live-e2e
+  cancel-in-progress: true
+
+jobs:
+  account-live:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      LIVE_API_ORIGIN: ${{ vars.LIVE_API_ORIGIN }}
+      PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+      ACCOUNT_REPORT: audit/ACCOUNT-LIVE-E2E.json
+      BROWSER_ACCOUNT_REPORT: audit/BROWSER-ACCOUNT-LIVE.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve verified Cloudflare Worker URL
+        shell: bash
+        run: |
+          set -euo pipefail
+          api="${LIVE_API_ORIGIN:-}"
+          if [ -z "$api" ]; then
+            api="$(node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const s=fs.readFileSync('r41-api-config.js','utf8');
+          const m=s.match(/const baked\s*=\s*"([^"]*)"/);
+          process.stdout.write(String(m?.[1]||''));
+          NODE
+          )"
+          fi
+          api="${api%/}"
+          if [[ ! "$api" =~ ^https:// ]]; then
+            echo 'Cloudflare Worker live ainda nao configurado. Defina LIVE_API_ORIGIN ou deixe o deploy live gravar const baked.'
+            exit 1
+          fi
+          if [[ "$api" == *supabase* ]]; then
+            echo 'FAIL: Supabase e proibido neste projeto.'
+            exit 1
+          fi
+          echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
+          echo "Worker: $api"
+
+      - name: Syntax gates
+        run: |
+          node --check r41-api-config.js
+          node --check r41-github-api.js
+          node --check r41-account-ui.js
+          node --check cloudflare/r41-api/src/index.js
+          node --check cloudflare/r41-api/src/entry.js
+          node --check tools/account-live-e2e.mjs
+          node --check tools/browser-account-live.mjs
+
+      - name: Backend account lifecycle live
+        run: node tools/account-live-e2e.mjs
+
+      - name: Install Chromium in GitHub runner only
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Browser account lifecycle on public site
+        run: node tools/browser-account-live.mjs
+
+      - name: Enforce Cloudflare MongoDB account PASS reports
+        run: |
+          node - <<'NODE'
+          const a=require('./audit/ACCOUNT-LIVE-E2E.json');
+          const b=require('./audit/BROWSER-ACCOUNT-LIVE.json');
+          if(!a.ok || a.status!=='PASS_ACCOUNT_LIVE_E2E') throw new Error('backend account E2E sem PASS');
+          if(!b.ok || b.status!=='PASS_BROWSER_ACCOUNT_LIVE') throw new Error('browser account E2E sem PASS');
+          if(a.backend!=='cloudflare-workers-mongodb-atlas') throw new Error('backend de conta nao e Cloudflare/MongoDB');
+          const backend=['apiOriginConfigured','backendStatus','mongodbAtlas','durableObjects','register','meAfterRegister','saveMongo','logout','loginByUsername','rotateRecoveryCode','recoverPassword','oldPasswordRejected','loginAfterRecovery','saveSurvivesRelogin','deleteSave','deleteAccount','deletedAccountRejected'];
+          const browser=['publicAccountUiLoaded','cloudflareBackendSelected','registerUi','sessionPersistsReload','accountButtonVisibleAfterReload','logoutUi','loginUi','deleteUi'];
+          for(const k of backend)if(a.checks?.[k]!==true)throw new Error(`backend gate ausente: ${k}`);
+          for(const k of browser)if(b.checks?.[k]!==true)throw new Error(`browser gate ausente: ${k}`);
+          console.log(a.status,b.status);
+          NODE
+
+      - name: Upload account evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shinobi-account-cloudflare-mongodb-evidence
+          path: |
+            audit/ACCOUNT-LIVE-E2E.json
+            audit/BROWSER-ACCOUNT-LIVE.json
+          if-no-files-found: warn
+
+      - name: Commit account evidence
+        if: always() && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audit/ACCOUNT-LIVE-E2E.json audit/BROWSER-ACCOUNT-LIVE.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'No account evidence changes.'
+          else
+            git commit -m 'test(auth): record Cloudflare MongoDB account evidence'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
