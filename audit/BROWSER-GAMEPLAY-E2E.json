@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-23T01:49:54.511Z",
+  "generatedAt": "2026-08-23T01:59:36.681Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt55fnqhkb4ko",
-  "slotId": "gameplay-mt55fnqh",
+  "temporaryAccount": "play_mt55s1tfb47ag",
+  "slotId": "gameplay-mt55s1tf",
   "checks": {
     "temporaryAccountRegistered": true,
     "temporaryAccountDeleted": true
@@ -13,10 +13,8 @@
   "contracts": [],
   "evidence": {},
   "pageErrors": [],
-  "consoleErrors": [
-    "Failed to load resource: the server responded with a status of 503 ()"
-  ],
+  "consoleErrors": [],
   "failures": [
-    "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-action=\"account-load\"][data-id=\"gameplay-mt55fnqh\"]') to be visible\n\n    at seedNormal (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787449757175.mjs:142:20)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787449757175.mjs:361:5"
+    "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-action=\"account-load\"][data-id=\"gameplay-mt55s1tf\"]') to be visible\n\n    at seedNormal (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450335411.mjs:142:20)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450335411.mjs:361:5"
   ]
 }
