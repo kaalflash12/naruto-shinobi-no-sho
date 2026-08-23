@@ -37,8 +37,10 @@ jobs:
         run: |
           grep -F '<title>NARUTO SHINOBI NO SHO • TERION 2D10</title>' index.html
           grep -F 'name = "naruto-shinobi-no-sho-api"' cloudflare/r41-api/wrangler.toml
+          grep -F 'main = "src/entry-authoritative.js"' cloudflare/r41-api/wrangler.toml
           grep -F 'MONGODB_DB = "naruto_shinobi_no_sho"' cloudflare/r41-api/wrangler.toml
-          ! grep -Eqi 'naruto[ -]?unison' index.html r41-api-config.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/index.js
+          ! grep -Eqi 'naruto[ -]?unison' index.html r41-api-config.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/src/index.js
+          ! grep -Eqi 'supabase|vercel' r41-api-config.js r41-github-api.js r41-account-ui.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/src/index.js
 
       - name: Validate anti-exploit gameplay contracts in source
         shell: bash
@@ -53,7 +55,11 @@ jobs:
           grep -F "r41HospitalTreat" app.js
           grep -F "r41OpenMinigame" app.js
           grep -F "r41SendOnlineIntent" app.js
-          grep -F "CLIENT_MECHANICAL_RESULT_FORBIDDEN" cloudflare/r41-api/src/entry.js
+          grep -F "CLIENT_MECHANICAL_RESULT_FORBIDDEN" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "resolveTerionIntent" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "intent:{type}" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "room.internal/action" cloudflare/r41-api/src/entry-authoritative.js
+          grep -F "PASS_TERION_SERVER_AUTHORITY_UNIT" cloudflare/r41-api/test/terion-mechanics.test.mjs
 
       - name: Validate full documentation and operational gates
         run: npm run docs:check
