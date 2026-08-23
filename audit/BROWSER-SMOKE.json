@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-23T10:37:25.228Z",
-  "startedAt": "2026-08-23T10:37:20.925Z",
+  "generatedAt": "2026-08-23T10:38:59.960Z",
+  "startedAt": "2026-08-23T10:38:55.689Z",
   "status": "FAIL_BROWSER_SMOKE",
   "ok": false,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
