@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-23T01:59:36.681Z",
+  "generatedAt": "2026-08-23T02:02:52.439Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt55s1tfb47ag",
-  "slotId": "gameplay-mt55s1tf",
+  "temporaryAccount": "play_mt55w7q4lcaql",
+  "slotId": "gameplay-mt55w7q4",
   "checks": {
     "temporaryAccountRegistered": true,
+    "cloudFixtureSaved": true,
+    "cloudFixtureListed": true,
     "temporaryAccountDeleted": true
   },
   "contracts": [],
@@ -15,6 +17,6 @@
   "pageErrors": [],
   "consoleErrors": [],
   "failures": [
-    "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-action=\"account-load\"][data-id=\"gameplay-mt55s1tf\"]') to be visible\n\n    at seedNormal (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450335411.mjs:142:20)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450335411.mjs:361:5"
+    "Error: ACCOUNT_SLOT_NOT_RENDERED gameplay-mt55w7q4: {\"slot\":\"gameplay-mt55w7q4\",\"title\":\"NARUTO SHINOBI NO SHO • TERION 2D10\",\"r41\":\"R41-MD-OPERACIONAL-APLICADO-2026-08-17\",\"auth\":true,\"mainNav\":\"\",\"screen\":\"◉\\nSHINOBI NO SHO\\nR40\\nTERION 2D10\\nEntre no seu\\nmundo shinobi.\\n\\nCampanhas separadas por conta, personagens persistentes, mundo vivo, missões, combate tático e Mestre IA sob controle do motor.\\n\\nNaruto Uzumaki\\nKONOHA\\nSasuke Uchiha\\nUCHIHA\\nSakura Haruno\\nKUNOICHI\\nKakashi Hatake\\nJŌNIN\\nGaara\\nSUNA\\n2D10 UNIFICADO\\nSAVE POR CONTA\\nNPCS COM ROTINA\\nCAMPO 12×12\\nACESSO SEGURO\\nContinuar campanha\\nR40\\nEntrar\\nCriar conta\\n\\nEntre para acessar somente os personagens e saves desta conta.\\n\\nUSUÁRIO\\nSENHA\\nEntrar na campanha\\nSeus saves permanecem isolados por conta.\\nLeon continua privado e não aparece na seleção pública.\",\"controls\":[{\"tag\":\"BUTTON\",\"action\":\"save\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"💾 Salvar agora\"},{\"tag\":\"BUTTON\",\"action\":\"toggle-menu\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"☰\"},{\"tag\":\"BUTTON\",\"action\":\"fullscreen\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"⛶\"},{\"tag\":\"BUTTON\",\"action\":\"auth-mode\",\"id\":\"login\",\"slotId\":null,\"slot\":null,\"text\":\"Entrar\"},{\"tag\":\"BUTTON\",\"action\":\"auth-mode\",\"id\":\"register\",\"slotId\":null,\"slot\":null,\"text\":\"Criar conta\"},{\"tag\":\"BUTTON\",\"action\":\"auth-submit\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"Entrar na campanha\"},{\"tag\":\"BUTTON\",\"action\":null,\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"Conta: Gameplay E2E\"}]}\n    at seedNormal (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450529574.mjs:216:11)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450529574.mjs:450:5"
   ]
 }
