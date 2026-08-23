@@ -1,0 +1,48 @@
+name: TERION Authority Diagnostic
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  terion:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Simulate integration patch
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p='cloudflare/r41-api/src/index.js';
+          let s=fs.readFileSync(p,'utf8');
+          const imp='import { resolveTerionIntent, hasClientResult } from "./terion-mechanics.js";';
+          if(!s.includes(imp))s=s.replace('import { MongoClient, ObjectId } from "mongodb";','import { MongoClient, ObjectId } from "mongodb";\n'+imp);
+          const re=/    if\(action==="action"\)\{[^\n]*\}\n/;
+          if(!re.test(s))throw new Error('ACTION_HANDLER_PATTERN_NOT_FOUND');
+          s=s.replace(re,`    if(action==="action"){
+            const envelope=b.action??b;
+            const type=cleanText(envelope?.type||envelope?.action||"action",80);
+            const forbidden=/grant|award|give.?xp|set.?level|admin/i.test(type);
+            if(forbidden)return new Response(JSON.stringify({ok:false,error:"CLIENT_AUTHORITY_FORBIDDEN"}),{status:400,headers:JSON_HEADERS});
+            if(hasClientResult(envelope))return new Response(JSON.stringify({ok:false,error:"CLIENT_MECHANICAL_RESULT_FORBIDDEN"}),{status:400,headers:JSON_HEADERS});
+            const member=room.members?.[b.userId]||{};
+            const mechanicalResult=resolveTerionIntent({intent:envelope,character:member.character||{}});
+            const ev={id:crypto.randomUUID(),userId:b.userId,playerId:b.playerId||"",type,payload:envelope,mechanicalResult,createdAt:nowIso()};
+            room.actions.push(ev);room.actions=room.actions.slice(-200);await this.write(room);
+            return Response.json({ok:true,accepted:true,event:ev,mechanicalResult,serverTime:nowIso()});
+          }
+`);
+          fs.writeFileSync(p,s);
+          NODE
+      - name: Unit and syntax gates
+        working-directory: cloudflare/r41-api
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
