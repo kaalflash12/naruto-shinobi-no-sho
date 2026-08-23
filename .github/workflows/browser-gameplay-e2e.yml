@@ -13,12 +13,23 @@ on:
       - 'tools/browser-gameplay-e2e.mjs'
       - 'tools/browser-gameplay-e2e-v2.mjs'
       - '.github/workflows/browser-gameplay-e2e.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+      - 'assets/**'
+      - 'tools/browser-gameplay-e2e.mjs'
+      - 'tools/browser-gameplay-e2e-v2.mjs'
+      - '.github/workflows/browser-gameplay-e2e.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: browser-gameplay-e2e-main
+  group: browser-gameplay-e2e-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -58,7 +69,7 @@ jobs:
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
         run: node tools/browser-gameplay-e2e-v2.mjs
       - name: Commit gameplay evidence
-        if: always()
+        if: always() && github.event_name == 'push'
         shell: bash
         run: |
           set -euo pipefail
