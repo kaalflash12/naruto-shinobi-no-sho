@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-20T23:10:48.095Z",
+  "generatedAt": "2026-08-23T12:31:22.024Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-20T23:10:43.560Z",
+  "sourceInventoryGeneratedAt": "2026-08-23T12:31:17.299Z",
   "counts": {
-    "functions": 1007,
-    "functionsWithExactCode": 1007,
-    "routes": 31,
+    "functions": 1073,
+    "functionsWithExactCode": 1073,
+    "routes": 33,
     "models": 2,
     "collections": 11,
-    "uiActions": 217,
-    "concreteUIActions": 215,
+    "uiActions": 221,
+    "concreteUIActions": 219,
     "dynamicUIActionTemplates": 2,
-    "concreteUIActionsWithHandler": 215,
+    "concreteUIActionsWithHandler": 219,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 77,
+    "sourceFiles": 88,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -6620,7 +6620,7 @@
     {
       "id": "FUNC-00824",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 7,
+      "line": 11,
       "name": "safeEqual",
       "exactCode": true,
       "snippetSha256": "e33f03019beeec52633556ab43ca42b898e675d6e2df58638a26bfd8f002186f"
@@ -6628,133 +6628,189 @@
     {
       "id": "FUNC-00825",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 8,
+      "line": 12,
+      "name": "b64url",
+      "exactCode": true,
+      "snippetSha256": "c9486c69db78eb85b95d574d9a1e30c18356617771d56c0379bf947c8429c950"
+    },
+    {
+      "id": "FUNC-00826",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 13,
+      "name": "randomBytes",
+      "exactCode": true,
+      "snippetSha256": "4d127eac9c926422b45c1c51b52954a757ec5e0ad98babbdeed7e8d9c47abfd3"
+    },
+    {
+      "id": "FUNC-00827",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 14,
+      "name": "randomSecret",
+      "exactCode": true,
+      "snippetSha256": "bed5ad4b5199bf84cc04c0423f666e5396851b6b1a6dbd4b7f7149ebb1e8a6cd"
+    },
+    {
+      "id": "FUNC-00828",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 15,
+      "name": "hashPassword",
+      "exactCode": true,
+      "snippetSha256": "43fcc8c1c0eb4f9ba1473d8b98a0745c10622017f8dea152a749ca2326014781"
+    },
+    {
+      "id": "FUNC-00829",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 16,
       "name": "cors",
       "exactCode": true,
       "snippetSha256": "6773d99674a09570b0b19cb3457474808c1419ff3ae5e5594149bb1d67ab93aa"
     },
     {
-      "id": "FUNC-00826",
+      "id": "FUNC-00830",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 9,
+      "line": 17,
       "name": "json",
       "exactCode": true,
       "snippetSha256": "69317aa34e62a7e592bb4e136b0552b247adece56603ba079947e7c40e77a383"
     },
     {
-      "id": "FUNC-00827",
+      "id": "FUNC-00831",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 10,
+      "line": 18,
       "name": "fingerprint",
       "exactCode": true,
-      "snippetSha256": "9385e6cb848424342b13c6725be33fcb9019f37790bb1932dfbd9e234f28f0b8"
+      "snippetSha256": "004972ac321e9d57946e9edd285c082266fb05d56bf95c4196764c0206c600a9"
     },
     {
-      "id": "FUNC-00828",
+      "id": "FUNC-00832",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 11,
+      "line": 19,
       "name": "guardDb",
       "exactCode": true,
       "snippetSha256": "14837b4238b00b333ebd52578cfe8e67bf448792b8eaa0a7e2ca8aa9f438827e"
     },
     {
-      "id": "FUNC-00829",
+      "id": "FUNC-00833",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 12,
+      "line": 20,
       "name": "currentAccount",
       "exactCode": true,
       "snippetSha256": "9781d8178277eb74dac12e1259ede53045390ced415822f2bb623b7e9e1579b3"
     },
     {
-      "id": "FUNC-00830",
+      "id": "FUNC-00834",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 13,
+      "line": 21,
       "name": "rememberMembership",
       "exactCode": true,
       "snippetSha256": "13e165badb38fe019aa8b73fa1a9c6fba82c349375c5cbd7bf8212e08e6ba5c7"
     },
     {
-      "id": "FUNC-00831",
+      "id": "FUNC-00835",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 14,
+      "line": 22,
       "name": "hasMembership",
       "exactCode": true,
       "snippetSha256": "2cfda08c95ffeb3f2e40fafc70c7982f446a9627c6933ceeb589ebe643fd91b8"
     },
     {
-      "id": "FUNC-00832",
+      "id": "FUNC-00836",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 15,
+      "line": 23,
       "name": "touchMembership",
       "exactCode": true,
       "snippetSha256": "0388486e313914ba3b877a44248a7ab3cb3fcf7e0100f0f00d58c5ce030a18d9"
     },
     {
-      "id": "FUNC-00833",
+      "id": "FUNC-00837",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 17,
+      "line": 26,
       "name": "mechanicalClaim",
       "exactCode": true,
       "snippetSha256": "93c6071bec54db8c6c54ca0da5a846661d49c7853095fec6e3eb96a6b937f5a5"
     },
     {
-      "id": "FUNC-00834",
+      "id": "FUNC-00838",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 18,
+      "line": 27,
       "name": "actionType",
       "exactCode": true,
       "snippetSha256": "4778ecfbebb74ba4249f427ebb514630c1349c18ac59aa842e06ebac0050875d"
     },
     {
-      "id": "FUNC-00835",
+      "id": "FUNC-00839",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 19,
+      "line": 28,
       "name": "actionLooksLikeOutcome",
       "exactCode": true,
       "snippetSha256": "eff2d445be246f19fd8569dca9a508dee6d97ab67570a1a9e902a80d4017eb12"
     },
     {
-      "id": "FUNC-00836",
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 20,
-      "name": "guardedOnline",
-      "exactCode": true,
-      "snippetSha256": "4bd0f2a1457bee6707534aef808927f805f0ffa36e5e1795ce3279b4efd3500d"
-    },
-    {
-      "id": "FUNC-00837",
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 31,
-      "name": "claimLeon",
-      "exactCode": true,
-      "snippetSha256": "8e68779a38a5f8d41b7085a6eb6c0350e0ba2ab21f4a49da39e00b195b210776"
-    },
-    {
-      "id": "FUNC-00838",
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 34,
-      "name": "aiRoute",
-      "exactCode": true,
-      "snippetSha256": "0be2417f5fe89495d920dbe72f3cfdcbe16aa84074597c73e73d41cc40d46d2a"
-    },
-    {
-      "id": "FUNC-00839",
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 35,
-      "name": "statusRoute",
-      "exactCode": true,
-      "snippetSha256": "b96a20bd2ef29df3aa29d509dd57aff07bcfd906131bc39c00250c72e0d0d4d6"
-    },
-    {
       "id": "FUNC-00840",
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 36,
-      "name": "mapWorldTick",
+      "line": 30,
+      "name": "guardedOnline",
       "exactCode": true,
-      "snippetSha256": "263c9fcb6b29a08061752f06e327ebd7bc3e33d899c02a1bca56b98ae2e8186e"
+      "snippetSha256": "d367a4590e8dbbdfa49d9eac7b57c501994afad42c7f00afac824a7aaa11f340"
     },
     {
       "id": "FUNC-00841",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 50,
+      "name": "remapIdentifier",
+      "exactCode": true,
+      "snippetSha256": "cf289a0ceeec240caa2e5f5c0bc1c274176d836bf6a6fe7f06d5685187f4562e"
+    },
+    {
+      "id": "FUNC-00842",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 58,
+      "name": "accountExtension",
+      "exactCode": true,
+      "snippetSha256": "85ccfd0e10b3fc000b552d9bb474ba1224d05116d81a8deae78350722f218af3"
+    },
+    {
+      "id": "FUNC-00843",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 85,
+      "name": "claimLeon",
+      "exactCode": true,
+      "snippetSha256": "863db85cdb23adad1303de0a457d211fd130272401284027c50a98730facb9a9"
+    },
+    {
+      "id": "FUNC-00844",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 106,
+      "name": "aiRoute",
+      "exactCode": true,
+      "snippetSha256": "9a2f473cf6bf75f59eab149803311d00827a1754b02ecc58a5c5ee4b664908c6"
+    },
+    {
+      "id": "FUNC-00845",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 115,
+      "name": "statusRoute",
+      "exactCode": true,
+      "snippetSha256": "af89dcae40aa98a6ce5d969cd6295e6092523f25736fe7a547110bb2c2ba36bd"
+    },
+    {
+      "id": "FUNC-00846",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 125,
+      "name": "mapWorldTick",
+      "exactCode": true,
+      "snippetSha256": "11d31d7bdbd34d5578c47a6408a78b3ab2d91c84f6d705509275aeb085458ea4"
+    },
+    {
+      "id": "FUNC-00847",
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 133,
+      "name": "fetch",
+      "exactCode": true,
+      "snippetSha256": "efe4e5b2086b6944f10519cdd8333fa09a1544bcb0d24d3afdc4685c0888a566"
+    },
+    {
+      "id": "FUNC-00848",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 13,
       "name": "b64url",
@@ -6762,7 +6818,7 @@
       "snippetSha256": "931a6b82ccdac9d3221022d50800d1c78b0059cb58dfd88a9ec42004c5650e9e"
     },
     {
-      "id": "FUNC-00842",
+      "id": "FUNC-00849",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 14,
       "name": "unb64url",
@@ -6770,7 +6826,7 @@
       "snippetSha256": "f68be87cfa2d5155a00c7c5531ff762e384644e5d0149028270415185ce915ed"
     },
     {
-      "id": "FUNC-00843",
+      "id": "FUNC-00850",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 15,
       "name": "hmac",
@@ -6778,7 +6834,7 @@
       "snippetSha256": "6725ee2afaa5c22a8088b968743b625751fdffe756573dbeb79a540b900f8f4e"
     },
     {
-      "id": "FUNC-00844",
+      "id": "FUNC-00851",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 16,
       "name": "timingSafe",
@@ -6786,7 +6842,7 @@
       "snippetSha256": "8e4402de89e73ef64b51a944d83a6cf7cd09508d1bfba9077fe54dda946501d5"
     },
     {
-      "id": "FUNC-00845",
+      "id": "FUNC-00852",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 17,
       "name": "hashPassword",
@@ -6794,7 +6850,7 @@
       "snippetSha256": "8a9639c55701c51af4a55620458a16b52b1ddbf35e1b2f2a12b3f80c27e0a0a6"
     },
     {
-      "id": "FUNC-00846",
+      "id": "FUNC-00853",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 18,
       "name": "randomBytes",
@@ -6802,7 +6858,7 @@
       "snippetSha256": "4d127eac9c926422b45c1c51b52954a757ec5e0ad98babbdeed7e8d9c47abfd3"
     },
     {
-      "id": "FUNC-00847",
+      "id": "FUNC-00854",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 19,
       "name": "randomSecret",
@@ -6810,7 +6866,7 @@
       "snippetSha256": "bed5ad4b5199bf84cc04c0423f666e5396851b6b1a6dbd4b7f7149ebb1e8a6cd"
     },
     {
-      "id": "FUNC-00848",
+      "id": "FUNC-00855",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 20,
       "name": "norm",
@@ -6818,7 +6874,7 @@
       "snippetSha256": "a7aafc73cd3ee429ab19d4ebab02676f38e90203338ff8ad086fccdc661c8ea4"
     },
     {
-      "id": "FUNC-00849",
+      "id": "FUNC-00856",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 21,
       "name": "cleanText",
@@ -6826,7 +6882,7 @@
       "snippetSha256": "7b7fedcf932ca3b9e78246eb2e2a9fe083b8622f1711b9b4e56c6e4838760938"
     },
     {
-      "id": "FUNC-00850",
+      "id": "FUNC-00857",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 22,
       "name": "bearer",
@@ -6834,7 +6890,7 @@
       "snippetSha256": "6070e20a271e0ad3debabe3595d484e3efd021d1d88769b66d13bc6a24c95885"
     },
     {
-      "id": "FUNC-00851",
+      "id": "FUNC-00858",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 23,
       "name": "plainId",
@@ -6842,7 +6898,7 @@
       "snippetSha256": "e8538cd4adceae663e2e8f35abb942df136fd70d889c56185261397ed00dde81"
     },
     {
-      "id": "FUNC-00852",
+      "id": "FUNC-00859",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 24,
       "name": "safeAccount",
@@ -6850,7 +6906,7 @@
       "snippetSha256": "6ad2f3299579c517b40b8a0354299cf6086c3700d276ab456f0dce6e7a4b7064"
     },
     {
-      "id": "FUNC-00853",
+      "id": "FUNC-00860",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 25,
       "name": "cors",
@@ -6858,7 +6914,7 @@
       "snippetSha256": "e46aa5958dbedf3152078946fbdb7bea4f1e04d86ccadb02af4d76db0be78e86"
     },
     {
-      "id": "FUNC-00854",
+      "id": "FUNC-00861",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 26,
       "name": "reply",
@@ -6866,7 +6922,7 @@
       "snippetSha256": "4436bbdd8b8817e1d1ddca752302e80cf8373addb36891f28ec4cb8ec8a698e4"
     },
     {
-      "id": "FUNC-00855",
+      "id": "FUNC-00862",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 27,
       "name": "bodyJson",
@@ -6874,7 +6930,7 @@
       "snippetSha256": "bead784c6bb81ce68aa5a251e74db0f12dee38e28e341322309bb6fd5fc38869"
     },
     {
-      "id": "FUNC-00856",
+      "id": "FUNC-00863",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 28,
       "name": "toObjectId",
@@ -6882,7 +6938,7 @@
       "snippetSha256": "c5e34aacbc91e8dfe5e6340329760bee6c8484f0a5ccdd85838b6cdb20e5dc05"
     },
     {
-      "id": "FUNC-00857",
+      "id": "FUNC-00864",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 29,
       "name": "nowIso",
@@ -6890,7 +6946,7 @@
       "snippetSha256": "40facaae392090321d5f6e7efce06aebd3d8e477230b99e6a10391c487a0d177"
     },
     {
-      "id": "FUNC-00858",
+      "id": "FUNC-00865",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 30,
       "name": "roomId",
@@ -6898,7 +6954,7 @@
       "snippetSha256": "47384b8f92d0172bc68f3a5f3a0ed30898cd4b5647ccf95e12ad8455ad924894"
     },
     {
-      "id": "FUNC-00859",
+      "id": "FUNC-00866",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 32,
       "name": "mongo",
@@ -6906,7 +6962,7 @@
       "snippetSha256": "55311770d4e08ebd19f33d434fe4e75e25267c45fe8245a33d87c47488add31a"
     },
     {
-      "id": "FUNC-00860",
+      "id": "FUNC-00867",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 37,
       "name": "ensureIndexes",
@@ -6914,7 +6970,7 @@
       "snippetSha256": "06902f9a533958cb4c1557d6a03423b0fe0c1d901a4bac2c8909e4850f1ed66f"
     },
     {
-      "id": "FUNC-00861",
+      "id": "FUNC-00868",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 54,
       "name": "issueToken",
@@ -6922,7 +6978,7 @@
       "snippetSha256": "7f150ef272f67a470928324f23b30e0c8f9bdd1920f85f343df6716924fff42d"
     },
     {
-      "id": "FUNC-00862",
+      "id": "FUNC-00869",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 55,
       "name": "verifyToken",
@@ -6930,7 +6986,7 @@
       "snippetSha256": "afdb50059d789adbe87f4568567c02b6cd6e6a7f84c9de665df2a3cd1438b127"
     },
     {
-      "id": "FUNC-00863",
+      "id": "FUNC-00870",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 56,
       "name": "requireUser",
@@ -6938,7 +6994,7 @@
       "snippetSha256": "e9f83b1b2f7b96bb5a8a5134f241f466a5ad0a2b1743cfac20d67a8c01a29871"
     },
     {
-      "id": "FUNC-00864",
+      "id": "FUNC-00871",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 57,
       "name": "revokeCurrent",
@@ -6946,7 +7002,7 @@
       "snippetSha256": "5e45fa6748fc66c4d258c73b31f151c080d7a7da044c59e537991f52f251f5f8"
     },
     {
-      "id": "FUNC-00865",
+      "id": "FUNC-00872",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 58,
       "name": "slotSummary",
@@ -6954,7 +7010,7 @@
       "snippetSha256": "5c72ee5c07eefa69f67431d3bf5d11f5d9ca7782fef8bb199809803bc0b01965"
     },
     {
-      "id": "FUNC-00866",
+      "id": "FUNC-00873",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 59,
       "name": "clampSaveForStorage",
@@ -6962,7 +7018,7 @@
       "snippetSha256": "0ca60c69946c5cf1cbc0a22004efd6f755b556e504c39c08d19f8bef54a34f05"
     },
     {
-      "id": "FUNC-00867",
+      "id": "FUNC-00874",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 60,
       "name": "audit",
@@ -6970,7 +7026,7 @@
       "snippetSha256": "6facc5090d411e54c523e75a57b9743d599a78a9d1cdae60340fd89500966256"
     },
     {
-      "id": "FUNC-00868",
+      "id": "FUNC-00875",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 63,
       "name": "constructor",
@@ -6978,7 +7034,7 @@
       "snippetSha256": "facef9879f1c6b14fa33b11a3e87cf5be83b7dca0c2922e850ad2501de2b53c5"
     },
     {
-      "id": "FUNC-00869",
+      "id": "FUNC-00876",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 64,
       "name": "read",
@@ -6986,7 +7042,7 @@
       "snippetSha256": "c1e7e4439dfaa804453bcf25c63b9192a09b574c853b777b64d2eeb2502c64f8"
     },
     {
-      "id": "FUNC-00870",
+      "id": "FUNC-00877",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 65,
       "name": "write",
@@ -6994,7 +7050,7 @@
       "snippetSha256": "df1b94bf5e4698215c9d768a3e78ffeb17f76a8e8114fb0ecdb8fa7dd482343e"
     },
     {
-      "id": "FUNC-00871",
+      "id": "FUNC-00878",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 66,
       "name": "liveMembers",
@@ -7002,7 +7058,7 @@
       "snippetSha256": "979c1eb477a1d70ac6b2066d87d9d8808beca78a32f3c17ca175e8b66edb7b15"
     },
     {
-      "id": "FUNC-00872",
+      "id": "FUNC-00879",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 67,
       "name": "fetch",
@@ -7010,7 +7066,7 @@
       "snippetSha256": "7502423a7852618436d28d9e665a45519f3f1d985d1a69f6fd2d0840bfd82324"
     },
     {
-      "id": "FUNC-00873",
+      "id": "FUNC-00880",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 81,
       "name": "roomCall",
@@ -7018,7 +7074,7 @@
       "snippetSha256": "2c1a5fcf02c6b37f4faa10506f01b22cb57e5011ca4e3369530a8bf791dd3c1a"
     },
     {
-      "id": "FUNC-00874",
+      "id": "FUNC-00881",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 82,
       "name": "roomJson",
@@ -7026,7 +7082,7 @@
       "snippetSha256": "45aad32e88467e34e46c1c5a36821061ef0b1b5d20170e37976e8c75d57d6bec"
     },
     {
-      "id": "FUNC-00875",
+      "id": "FUNC-00882",
       "file": "cloudflare/r41-api/src/index.js",
       "line": 84,
       "name": "aiRoute",
@@ -7034,7 +7090,79 @@
       "snippetSha256": "6f004a7748be907f0f5fd62610077521d106c854266ba9eb8a16d20555e69f73"
     },
     {
-      "id": "FUNC-00876",
+      "id": "FUNC-00883",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 5,
+      "name": "num",
+      "exactCode": true,
+      "snippetSha256": "37210dcc69d919b3e1f8dc97c6f09e056cdc534a21bce6eea77ed7c91c614ec1"
+    },
+    {
+      "id": "FUNC-00884",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 6,
+      "name": "clamp",
+      "exactCode": true,
+      "snippetSha256": "085faecfe7a85ecf8e3f0c3268bfa6c45f1c4fe979d9a65fa057d0106a3ec285"
+    },
+    {
+      "id": "FUNC-00885",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 8,
+      "name": "canonicalAttribute",
+      "exactCode": true,
+      "snippetSha256": "44206d5a06514b29540a2533a90befab77c9bf2399769bf3855331eb2e2a1707"
+    },
+    {
+      "id": "FUNC-00886",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 14,
+      "name": "characterModifier",
+      "exactCode": true,
+      "snippetSha256": "dcd81bd5f0f22288fc5ebfd5e33ceb24742e2404f91d2c420c1a6043d3408fce"
+    },
+    {
+      "id": "FUNC-00887",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 25,
+      "name": "serverDifficulty",
+      "exactCode": true,
+      "snippetSha256": "4f7031452526f03ec8fcc886f76f16d0c89bba97b17e5a1c2276225082b06e8b"
+    },
+    {
+      "id": "FUNC-00888",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 31,
+      "name": "classifyTerionRoll",
+      "exactCode": true,
+      "snippetSha256": "044def7f333939db9aeee3f29b6e1da78f4b56bb6082f580842663677bebdeee"
+    },
+    {
+      "id": "FUNC-00889",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 39,
+      "name": "d10",
+      "exactCode": true,
+      "snippetSha256": "d20e6e5293ca15f6f7d7665376afd1e725abb80bd3df300d23c6a4e7da25800b"
+    },
+    {
+      "id": "FUNC-00890",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 41,
+      "name": "resolveTerionIntent",
+      "exactCode": true,
+      "snippetSha256": "20a969c5b3a1b8735daf3b70cc26d4d90b33d4336de476cd081b94655898c70d"
+    },
+    {
+      "id": "FUNC-00891",
+      "file": "cloudflare/r41-api/src/terion-mechanics.js",
+      "line": 51,
+      "name": "hasClientResult",
+      "exactCode": true,
+      "snippetSha256": "dfe1c3e073560f955dd6e67cd824d16b0514daf883f41a833cf36d2f2c8322af"
+    },
+    {
+      "id": "FUNC-00892",
       "file": "data/v84-integrated-config.js",
       "line": 4,
       "name": "trainer",
@@ -7042,55 +7170,295 @@
       "snippetSha256": "b0fda8d03510792097bba46870371c8ec1fa21089ebf5f6462159bb4e6a9f645"
     },
     {
-      "id": "FUNC-00877",
-      "file": "r41-github-api.js",
+      "id": "FUNC-00893",
+      "file": "r41-account-deeplink-fix.js",
+      "line": 9,
+      "name": "openOnce",
+      "exactCode": true,
+      "snippetSha256": "e023f462cf60486a84b09228adc2ef58535d3d325d5717113e01dd6007fe86e7"
+    },
+    {
+      "id": "FUNC-00894",
+      "file": "r41-account-ui.js",
+      "line": 5,
+      "name": "esc",
+      "exactCode": true,
+      "snippetSha256": "2504538cb912c6069018c51b72d268ff38e5e2f691f93b17de187183a93a44b0"
+    },
+    {
+      "id": "FUNC-00895",
+      "file": "r41-account-ui.js",
       "line": 6,
-      "name": "apiOrigin",
+      "name": "errorText",
       "exactCode": true,
-      "snippetSha256": "a7e7340e31b49537a8a90b2d296f9eb1d93173bc46209d52e0504b36f08297c7"
+      "snippetSha256": "19b14fddad8722072990e536e0212de4dc0f6e69d093e16cd715d24bae611f1c"
     },
     {
-      "id": "FUNC-00878",
-      "file": "r41-github-api.js",
+      "id": "FUNC-00896",
+      "file": "r41-account-ui.js",
       "line": 7,
-      "name": "token",
+      "name": "style",
       "exactCode": true,
-      "snippetSha256": "bc174d09a1073c1b9e26a3138f2ac9b6a5f5b2bb2c60b957785d23461927b656"
+      "snippetSha256": "941516e8e1aeac431cbce93f106cab8cd7297b5bfab1f1f0db1396e954accd75"
     },
     {
-      "id": "FUNC-00879",
+      "id": "FUNC-00897",
+      "file": "r41-account-ui.js",
+      "line": 16,
+      "name": "ensureButton",
+      "exactCode": true,
+      "snippetSha256": "af45dfdbf206db45089fec6d8dab455f241be70b9499a7841d162d7d849e3114"
+    },
+    {
+      "id": "FUNC-00898",
+      "file": "r41-account-ui.js",
+      "line": 22,
+      "name": "updateButton",
+      "exactCode": true,
+      "snippetSha256": "45eb114cf85a0221d188f86947fa0b3a8f79bc715a453ed56dbb3d57fd21e91f"
+    },
+    {
+      "id": "FUNC-00899",
+      "file": "r41-account-ui.js",
+      "line": 23,
+      "name": "field",
+      "exactCode": true,
+      "snippetSha256": "fe8e1c13ff41df62fe71733c1a08c961a4deecad8b6fce6cbcc9e953fc12468b"
+    },
+    {
+      "id": "FUNC-00900",
+      "file": "r41-account-ui.js",
+      "line": 24,
+      "name": "tabs",
+      "exactCode": true,
+      "snippetSha256": "54ef605150cde182ecfaa6f24b59db9f16e63e04041bcf763a59b16a7cf778ca"
+    },
+    {
+      "id": "FUNC-00901",
+      "file": "r41-account-ui.js",
+      "line": 25,
+      "name": "unauthBody",
+      "exactCode": true,
+      "snippetSha256": "2a55fff20f54c83f2fac47862c3c90131e234e2f231d5936b3035d643f191b4f"
+    },
+    {
+      "id": "FUNC-00902",
+      "file": "r41-account-ui.js",
+      "line": 26,
+      "name": "authBody",
+      "exactCode": true,
+      "snippetSha256": "02963bdd53c3c730fc0bcdf00a200b06b050e00ca5500d843b7b79b469cc57c0"
+    },
+    {
+      "id": "FUNC-00903",
+      "file": "r41-account-ui.js",
+      "line": 27,
+      "name": "render",
+      "exactCode": true,
+      "snippetSha256": "c1c0b46fd17de3036039184f78f14d46fd841b447376b6eeac9c13effd67a2e1"
+    },
+    {
+      "id": "FUNC-00904",
+      "file": "r41-account-ui.js",
+      "line": 28,
+      "name": "values",
+      "exactCode": true,
+      "snippetSha256": "9da84f8d8a4107bee39bb6bbb2133533eea2e8f1dd7287c83b50800a18daf991"
+    },
+    {
+      "id": "FUNC-00905",
+      "file": "r41-account-ui.js",
+      "line": 29,
+      "name": "submitLogin",
+      "exactCode": true,
+      "snippetSha256": "2ec1500e6fb33ab8d9797eba85ac2989759fbaa64eda18f64afa39d8c3017fbf"
+    },
+    {
+      "id": "FUNC-00906",
+      "file": "r41-account-ui.js",
+      "line": 30,
+      "name": "submitRegister",
+      "exactCode": true,
+      "snippetSha256": "540680679e40ee789ea68ac8adc7bf91a144f0626bdc81868a323f7142638ee2"
+    },
+    {
+      "id": "FUNC-00907",
+      "file": "r41-account-ui.js",
+      "line": 31,
+      "name": "submitRecover",
+      "exactCode": true,
+      "snippetSha256": "79a15b636f71d2b5cba05533bd658a9ceabcb1d94ca5159bf5648512f1d28306"
+    },
+    {
+      "id": "FUNC-00908",
+      "file": "r41-account-ui.js",
+      "line": 32,
+      "name": "logout",
+      "exactCode": true,
+      "snippetSha256": "3f03dabb75d39488610dedd111371992db007a01e3b64339530175c9ccb9e71b"
+    },
+    {
+      "id": "FUNC-00909",
+      "file": "r41-account-ui.js",
+      "line": 33,
+      "name": "newRecoveryCode",
+      "exactCode": true,
+      "snippetSha256": "dc13fa350e06872fa7b6b2df632628453ac49dbe6eeda14a8e06687ac7cdc076"
+    },
+    {
+      "id": "FUNC-00910",
+      "file": "r41-account-ui.js",
+      "line": 34,
+      "name": "deleteAccount",
+      "exactCode": true,
+      "snippetSha256": "9baf1040beafaa9b4bf690b82633c2c168a527b05c1f5597a614226790f56fa2"
+    },
+    {
+      "id": "FUNC-00911",
+      "file": "r41-account-ui.js",
+      "line": 35,
+      "name": "close",
+      "exactCode": true,
+      "snippetSha256": "d7b58032d86d9a4ed317ea1358de45ccf558eb620d4fbc14cb78b43f03819132"
+    },
+    {
+      "id": "FUNC-00912",
+      "file": "r41-account-ui.js",
+      "line": 35,
+      "name": "open",
+      "exactCode": true,
+      "snippetSha256": "74ce5ec7a059319f86b9292fed4cd7a16e572686eaf092edba747915d79a7959"
+    },
+    {
+      "id": "FUNC-00913",
+      "file": "r41-account-ui.js",
+      "line": 37,
+      "name": "boot",
+      "exactCode": true,
+      "snippetSha256": "35898b769c07e955fcd05a9d1f0b94ba898ff9f6b170c9c6fb16e3c011dbd69d"
+    },
+    {
+      "id": "FUNC-00914",
       "file": "r41-github-api.js",
       "line": 8,
+      "name": "apiOrigin",
+      "exactCode": true,
+      "snippetSha256": "1c53b1280b90e5dcab93a61033150e13ae5505bf656015b67d83e3a639c87ddf"
+    },
+    {
+      "id": "FUNC-00915",
+      "file": "r41-github-api.js",
+      "line": 11,
+      "name": "token",
+      "exactCode": true,
+      "snippetSha256": "ad28f0352eee7ef27f53df8fc9547d5ea668f74b958ba5d762d63f30c18c7136"
+    },
+    {
+      "id": "FUNC-00916",
+      "file": "r41-github-api.js",
+      "line": 21,
+      "name": "setToken",
+      "exactCode": true,
+      "snippetSha256": "0220cfcd075e9641f74d35de677ecbd4e500b6c0de4700213ea3e612a0affc65"
+    },
+    {
+      "id": "FUNC-00917",
+      "file": "r41-github-api.js",
+      "line": 31,
       "name": "captureClaim",
       "exactCode": true,
-      "snippetSha256": "d2179bcaeb8805346fc3a68f6064f189091eb66fae6359e6e61c98e869d8df09"
+      "snippetSha256": "0bb128e1a9cf1bee95a0c02fcc8bc1f70a5e187f69e3f91dea586aff3724f4b6"
     },
     {
-      "id": "FUNC-00880",
+      "id": "FUNC-00918",
       "file": "r41-github-api.js",
-      "line": 15,
+      "line": 43,
       "name": "mapTarget",
       "exactCode": true,
-      "snippetSha256": "53d76543ecfa06b1a86bf0cab2c4107caad6d948eb23db2bfdd5f3fe54b2cc36"
+      "snippetSha256": "e4b46d708f9d284a63b5da0319c395a2f7d59987765de8c6a3084c3e5d28dd20"
     },
     {
-      "id": "FUNC-00881",
+      "id": "FUNC-00919",
       "file": "r41-github-api.js",
-      "line": 24,
+      "line": 55,
       "name": "withAuth",
       "exactCode": true,
       "snippetSha256": "e64b4fccccf3faa3df30e468d3f1439b6063ff6ef6d0bc566070eed82d0479e9"
     },
     {
-      "id": "FUNC-00882",
+      "id": "FUNC-00920",
       "file": "r41-github-api.js",
-      "line": 33,
+      "line": 65,
       "name": "applyLeonClaim",
       "exactCode": true,
-      "snippetSha256": "d84f59374acbabdc35924a2f37abc3beefd3f78b8e329396f29b8773858cfb67"
+      "snippetSha256": "f97b5abb57eaf57b470abf102a9d9bacfc07c2b06a37f88d00541ec39ba89585"
     },
     {
-      "id": "FUNC-00883",
+      "id": "FUNC-00921",
+      "file": "r41-github-api.js",
+      "line": 111,
+      "name": "request",
+      "exactCode": true,
+      "snippetSha256": "b3212c65731a9067e4a72e9591554976ac8525d1af98612f9d8a50da5f9f37de"
+    },
+    {
+      "id": "FUNC-00922",
+      "file": "r41-github-api.js",
+      "line": 128,
+      "name": "register",
+      "exactCode": true,
+      "snippetSha256": "a1c53f40ce1bf1c63d7fa314eb0bf9f6355ffc710641b272fb483546d9cf2e2f"
+    },
+    {
+      "id": "FUNC-00923",
+      "file": "r41-github-api.js",
+      "line": 135,
+      "name": "login",
+      "exactCode": true,
+      "snippetSha256": "e2df627247661d2ee788c1be5a82599d89f8fa08941aec14b65d23a6a65127a1"
+    },
+    {
+      "id": "FUNC-00924",
+      "file": "r41-github-api.js",
+      "line": 142,
+      "name": "me",
+      "exactCode": true,
+      "snippetSha256": "c85b3a701b7d007b71a357b20dceffde33304a19e63a2241382bc827a1d7ccfe"
+    },
+    {
+      "id": "FUNC-00925",
+      "file": "r41-github-api.js",
+      "line": 153,
+      "name": "logout",
+      "exactCode": true,
+      "snippetSha256": "aedd64b0dcd2f1ac9e73c9a7ab42a1dcceb06954ff9062a13e262ae1c6b1b849"
+    },
+    {
+      "id": "FUNC-00926",
+      "file": "r41-github-api.js",
+      "line": 160,
+      "name": "recover",
+      "exactCode": true,
+      "snippetSha256": "17075b3aeb4dad1d07d68c2bf5cbcd12d79a43ea3fb3c2d83e05028a4ced241b"
+    },
+    {
+      "id": "FUNC-00927",
+      "file": "r41-github-api.js",
+      "line": 164,
+      "name": "generateRecoveryCode",
+      "exactCode": true,
+      "snippetSha256": "3a8719c3345b59c6b356cc38191ff3e786da12d88792438977f5805f69f58f74"
+    },
+    {
+      "id": "FUNC-00928",
+      "file": "r41-github-api.js",
+      "line": 167,
+      "name": "deleteAccount",
+      "exactCode": true,
+      "snippetSha256": "652c3d919d472f3ed101e96c29692747f2b6ca8f2d6ac8cdef3d09c40dfdeee6"
+    },
+    {
+      "id": "FUNC-00929",
       "file": "src/r41-canonical-repair.js",
       "line": 28,
       "name": "slug",
@@ -7098,7 +7466,7 @@
       "snippetSha256": "0847592ed1e7f86531623d70ad47e136bda743f008928ec0a829b1d87c8f0ff6"
     },
     {
-      "id": "FUNC-00884",
+      "id": "FUNC-00930",
       "file": "src/r41-core-bundle.js",
       "line": 5,
       "name": "normalize",
@@ -7106,7 +7474,7 @@
       "snippetSha256": "6dd41f17c5120124df267598c304a6d003d3b500870f404b19e7ce6a17f1b5b6"
     },
     {
-      "id": "FUNC-00885",
+      "id": "FUNC-00931",
       "file": "src/r41-core-bundle.js",
       "line": 6,
       "name": "getJson",
@@ -7114,7 +7482,7 @@
       "snippetSha256": "7a7994ff43e5f5b034f84e98dbf6d9143eb8488264cf69c0b4aaf7914fd69702"
     },
     {
-      "id": "FUNC-00886",
+      "id": "FUNC-00932",
       "file": "src/r41-core-bundle.js",
       "line": 7,
       "name": "indexManifest",
@@ -7122,7 +7490,7 @@
       "snippetSha256": "887369df369757345cab791bc7059c069103e4e05a06c0076079d8e15912350c"
     },
     {
-      "id": "FUNC-00887",
+      "id": "FUNC-00933",
       "file": "src/r41-core-bundle.js",
       "line": 14,
       "name": "init",
@@ -7130,7 +7498,7 @@
       "snippetSha256": "9df847229abd2ef655c0a54c2697404979d396d7e97c082c425890eb4e42dde3"
     },
     {
-      "id": "FUNC-00888",
+      "id": "FUNC-00934",
       "file": "src/r41-core-bundle.js",
       "line": 25,
       "name": "resolve",
@@ -7138,7 +7506,7 @@
       "snippetSha256": "8563374b75404931f0c03325b52d4e9f22f550a1764f9850efc9d97c413c9a71"
     },
     {
-      "id": "FUNC-00889",
+      "id": "FUNC-00935",
       "file": "src/r41-core-bundle.js",
       "line": 42,
       "name": "auditKnown",
@@ -7146,7 +7514,7 @@
       "snippetSha256": "45b342bf02880f6ffc6f400e912efc9c8288560a6dc5e32cc3148a7e98f54a67"
     },
     {
-      "id": "FUNC-00890",
+      "id": "FUNC-00936",
       "file": "src/r41-core-bundle.js",
       "line": 51,
       "name": "normalize",
@@ -7154,7 +7522,7 @@
       "snippetSha256": "038f2573e3ea767739c7baa417ea3ad861bbe7ecbeb907a2a27575f56da0f683"
     },
     {
-      "id": "FUNC-00891",
+      "id": "FUNC-00937",
       "file": "src/r41-core-bundle.js",
       "line": 52,
       "name": "fromCombatResult",
@@ -7162,7 +7530,7 @@
       "snippetSha256": "20410149d40046e6dbc16e5ac0196e2a19be40780d94816ca15d31eb0bbd35a8"
     },
     {
-      "id": "FUNC-00892",
+      "id": "FUNC-00938",
       "file": "src/r41-core-bundle.js",
       "line": 63,
       "name": "validateEvent",
@@ -7170,7 +7538,7 @@
       "snippetSha256": "13e0f0dbcadacd3c3d5ba0f8266f2cea52a5b90014753e91dc0a10afc94ec9ff"
     },
     {
-      "id": "FUNC-00893",
+      "id": "FUNC-00939",
       "file": "src/r41-core-bundle.js",
       "line": 70,
       "name": "clone",
@@ -7178,7 +7546,7 @@
       "snippetSha256": "4e36cb9b4c31a4bfb93be77ebd1b8378eb88a0e628bca553fa8e40ee6610c21b"
     },
     {
-      "id": "FUNC-00894",
+      "id": "FUNC-00940",
       "file": "src/r41-core-bundle.js",
       "line": 71,
       "name": "ensure",
@@ -7186,7 +7554,7 @@
       "snippetSha256": "f53d8bc43c6ae95cfee5344c7c4462e5eb471ed5e1fcf48f437f72695358d05f"
     },
     {
-      "id": "FUNC-00895",
+      "id": "FUNC-00941",
       "file": "src/r41-core-bundle.js",
       "line": 72,
       "name": "apply",
@@ -7194,7 +7562,7 @@
       "snippetSha256": "f5afc930f0eb562d911a81fc806c3b58c2aec048c320036933af3e9af2d64725"
     },
     {
-      "id": "FUNC-00896",
+      "id": "FUNC-00942",
       "file": "src/r41-core-bundle.js",
       "line": 73,
       "name": "validate",
@@ -7202,7 +7570,7 @@
       "snippetSha256": "6c02ced4ea18f6442c5a098e3aeb856d856fa2844203c98e8537278b1ca41e3e"
     },
     {
-      "id": "FUNC-00897",
+      "id": "FUNC-00943",
       "file": "src/r41-core-bundle.js",
       "line": 78,
       "name": "fromResult",
@@ -7210,7 +7578,7 @@
       "snippetSha256": "8b71c38524f860ffbd9eb67ad1d47bbeeda62d852ca665d5b366dbc2a1265835"
     },
     {
-      "id": "FUNC-00898",
+      "id": "FUNC-00944",
       "file": "src/r41-core-bundle.js",
       "line": 79,
       "name": "validate",
@@ -7218,7 +7586,7 @@
       "snippetSha256": "0fc55274eb2364aa2f121f7db817c5e131e09951ea8c42397da77d889c873777"
     },
     {
-      "id": "FUNC-00899",
+      "id": "FUNC-00945",
       "file": "src/r41-core-bundle.js",
       "line": 84,
       "name": "norm",
@@ -7226,7 +7594,7 @@
       "snippetSha256": "51a460bb581a634fe2728f8abc7fdbfb35c7971801cf54168bece6cd8c008925"
     },
     {
-      "id": "FUNC-00900",
+      "id": "FUNC-00946",
       "file": "src/r41-core-bundle.js",
       "line": 85,
       "name": "kindOf",
@@ -7234,7 +7602,7 @@
       "snippetSha256": "f47ace7ace8a704a7a7e9f8afd54f0ee141ae39b7663c3bc2d824c1f9866d181"
     },
     {
-      "id": "FUNC-00901",
+      "id": "FUNC-00947",
       "file": "src/r41-core-bundle.js",
       "line": 86,
       "name": "apply",
@@ -7242,7 +7610,7 @@
       "snippetSha256": "85d11b680fd70c7a1b5b2285d8908f37faea5c75a5596d5318e1794fc916b32c"
     },
     {
-      "id": "FUNC-00902",
+      "id": "FUNC-00948",
       "file": "src/r41-core-bundle.js",
       "line": 87,
       "name": "validate",
@@ -7250,7 +7618,7 @@
       "snippetSha256": "a9d27f4db3016c2d16ee8ad99f93cc017a83e5d473279006260bb1713067e1db"
     },
     {
-      "id": "FUNC-00903",
+      "id": "FUNC-00949",
       "file": "src/r41-core-bundle.js",
       "line": 94,
       "name": "norm",
@@ -7258,7 +7626,7 @@
       "snippetSha256": "3d6eb3e6780c26beb2e1685d0029280e3ab0bad4a93574782906fbe2c9556e5f"
     },
     {
-      "id": "FUNC-00904",
+      "id": "FUNC-00950",
       "file": "src/r41-core-bundle.js",
       "line": 95,
       "name": "register",
@@ -7266,7 +7634,7 @@
       "snippetSha256": "5a1c935142787f603420d7c9249cb517359c05ea09c568cfd195d6ca4dc3ca88"
     },
     {
-      "id": "FUNC-00905",
+      "id": "FUNC-00951",
       "file": "src/r41-core-bundle.js",
       "line": 96,
       "name": "get",
@@ -7274,7 +7642,7 @@
       "snippetSha256": "073ca5d248600ec57f592ebf11f1c2c4960c2ab75013bb1b6f3986a12f3e8d8f"
     },
     {
-      "id": "FUNC-00906",
+      "id": "FUNC-00952",
       "file": "src/r41-core-bundle.js",
       "line": 97,
       "name": "infer",
@@ -7282,7 +7650,7 @@
       "snippetSha256": "8604594e159b4ff761ca3de8718706f8e30e3b5677409772ffe4065db323b216"
     },
     {
-      "id": "FUNC-00907",
+      "id": "FUNC-00953",
       "file": "src/r41-core-bundle.js",
       "line": 115,
       "name": "clamp",
@@ -7290,7 +7658,7 @@
       "snippetSha256": "1d07ad3d2dfd260e8ff6f805824b5922a2102e97b728d1f017f554870832881d"
     },
     {
-      "id": "FUNC-00908",
+      "id": "FUNC-00954",
       "file": "src/r41-core-bundle.js",
       "line": 116,
       "name": "normalizeResult",
@@ -7298,7 +7666,7 @@
       "snippetSha256": "e7d0723c5730177ef8e3ac15726691bd21afbbc78fa432b81cb3f059b179bd7b"
     },
     {
-      "id": "FUNC-00909",
+      "id": "FUNC-00955",
       "file": "src/r41-core-bundle.js",
       "line": 120,
       "name": "terionModifier",
@@ -7306,7 +7674,7 @@
       "snippetSha256": "8fb6dd7efe4e50a3b64bcea2cf2b3bd2a88a0bcae4bb62f9f8cb9a05056d2a4a"
     },
     {
-      "id": "FUNC-00910",
+      "id": "FUNC-00956",
       "file": "src/r41-core-bundle.js",
       "line": 126,
       "name": "trainingResult",
@@ -7314,7 +7682,7 @@
       "snippetSha256": "79efcc43ce8664ea2de4e3f8db1505d819bb8b7a2f5e51f17996a1e25c6c62df"
     },
     {
-      "id": "FUNC-00911",
+      "id": "FUNC-00957",
       "file": "src/r41-core-bundle.js",
       "line": 137,
       "name": "normalizeScene",
@@ -7322,7 +7690,7 @@
       "snippetSha256": "6bdff95f2ed67731c303886682dc3f49fed4e070b005cbe2a61c1a5f52046203"
     },
     {
-      "id": "FUNC-00912",
+      "id": "FUNC-00958",
       "file": "src/r41-core-bundle.js",
       "line": 141,
       "name": "fromMissionStage",
@@ -7330,7 +7698,7 @@
       "snippetSha256": "3e52d8a77207406865e8d2490a7ce60ce83c7d12d714df4c94ccb1080d28f590"
     },
     {
-      "id": "FUNC-00913",
+      "id": "FUNC-00959",
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "name": "shouldSave",
@@ -7338,7 +7706,7 @@
       "snippetSha256": "b736a0c6188132f8e27cab86c1210c81627fe21341e47324f04e7ac88b5f139e"
     },
     {
-      "id": "FUNC-00914",
+      "id": "FUNC-00960",
       "file": "src/r41-core-bundle.js",
       "line": 150,
       "name": "record",
@@ -7346,7 +7714,7 @@
       "snippetSha256": "b977631057c71e96026ea030cfdb603f40731a43c03c396908b596a5fef79dc6"
     },
     {
-      "id": "FUNC-00915",
+      "id": "FUNC-00961",
       "file": "src/r41-core-bundle.js",
       "line": 160,
       "name": "boot",
@@ -7354,7 +7722,7 @@
       "snippetSha256": "0a8de18ec4c4292540f274dbdb93c147847be2c76b6dc6348c31df6220b47057"
     },
     {
-      "id": "FUNC-00916",
+      "id": "FUNC-00962",
       "file": "src/r41-final-ui-repair.js",
       "line": 12,
       "name": "repair",
@@ -7362,7 +7730,7 @@
       "snippetSha256": "d42bf6704d17176a1069dbd4cc575497cb538b42661aa5d910213864fd2df8d9"
     },
     {
-      "id": "FUNC-00917",
+      "id": "FUNC-00963",
       "file": "src/r41-final-ui-repair.js",
       "line": 19,
       "name": "schedule",
@@ -7370,7 +7738,7 @@
       "snippetSha256": "44db8f00acb8e8933d2df936abff25d209b6050f8e0d0079827ee31154f2cbc5"
     },
     {
-      "id": "FUNC-00918",
+      "id": "FUNC-00964",
       "file": "src/r41-local-reset-fix.js",
       "line": 20,
       "name": "localProgressKeys",
@@ -7378,7 +7746,7 @@
       "snippetSha256": "5f087f02f12b601808e4e9215f8fd8b47f2c95ea7a37d30fc3270feb713404dc"
     },
     {
-      "id": "FUNC-00919",
+      "id": "FUNC-00965",
       "file": "src/r41-local-reset-fix.js",
       "line": 30,
       "name": "resetLocalProgress",
@@ -7386,7 +7754,31 @@
       "snippetSha256": "a4b960c4ad74b25b7318a802d4d51a5272d3c089620f13201ccf1ba83ae36c30"
     },
     {
-      "id": "FUNC-00920",
+      "id": "FUNC-00966",
+      "file": "tools/account-live-e2e.mjs",
+      "line": 11,
+      "name": "ok",
+      "exactCode": true,
+      "snippetSha256": "2480f67baf19c60e6d5ccde202c6373716bca88e519c8e1c4ce0879f89305621"
+    },
+    {
+      "id": "FUNC-00967",
+      "file": "tools/account-live-e2e.mjs",
+      "line": 12,
+      "name": "call",
+      "exactCode": true,
+      "snippetSha256": "c19ccebc9dcbcd33e1aad893c815c64e8b46d4a72a5b4ada2a0fd0a39882c39f"
+    },
+    {
+      "id": "FUNC-00968",
+      "file": "tools/account-live-e2e.mjs",
+      "line": 21,
+      "name": "write",
+      "exactCode": true,
+      "snippetSha256": "866b401c7b4bb72c7f70d95a1d60a5f650a8eecc4a15400ace5bbfc6db8f9591"
+    },
+    {
+      "id": "FUNC-00969",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 10,
       "name": "fail",
@@ -7394,7 +7786,7 @@
       "snippetSha256": "6c2b35a86131dbede601be653141baa9f8c1eab819923d4c1afa90d79cc014f6"
     },
     {
-      "id": "FUNC-00921",
+      "id": "FUNC-00970",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 11,
       "name": "warn",
@@ -7402,7 +7794,7 @@
       "snippetSha256": "6a8bc0ff60f7e54e0dc9ce4f4b29edcc4b4fe81dca032276b8bb20905bb6608d"
     },
     {
-      "id": "FUNC-00922",
+      "id": "FUNC-00971",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 12,
       "name": "exists",
@@ -7410,7 +7802,7 @@
       "snippetSha256": "c3acd1964731b2a33910f6dbab97485999d3bf9b4de82f1f107a3046f552e94f"
     },
     {
-      "id": "FUNC-00923",
+      "id": "FUNC-00972",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 13,
       "name": "norm",
@@ -7418,7 +7810,7 @@
       "snippetSha256": "bc10945d647e71124b51b7493a416d55abb40f0a84f7e1e598159a768a6cb007"
     },
     {
-      "id": "FUNC-00924",
+      "id": "FUNC-00973",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 14,
       "name": "isDoc",
@@ -7426,7 +7818,7 @@
       "snippetSha256": "5f14da79dd70f5694a255bcc70ee18dff89ca9fb43d869e5be037812888e3e61"
     },
     {
-      "id": "FUNC-00925",
+      "id": "FUNC-00974",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 15,
       "name": "isTooling",
@@ -7434,7 +7826,7 @@
       "snippetSha256": "8c90956c3ca415cffd14897cac6fd7b9d496dea7b52d73d9e89cdb4d076863f8"
     },
     {
-      "id": "FUNC-00926",
+      "id": "FUNC-00975",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 16,
       "name": "isGameRuntime",
@@ -7442,7 +7834,7 @@
       "snippetSha256": "447e4a355f1c9b50470e80a3ac594224ad5ec0f5a8b73e11f547538ea4f5f2ec"
     },
     {
-      "id": "FUNC-00927",
+      "id": "FUNC-00976",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 77,
       "name": "auditGameGrouped",
@@ -7450,7 +7842,7 @@
       "snippetSha256": "1e911ec54a692a91ea569b3d624fb624bdeb241f9d4c2a230c8a275a4349233b"
     },
     {
-      "id": "FUNC-00928",
+      "id": "FUNC-00977",
       "file": "tools/audit-final-canonical-spec.mjs",
       "line": 10,
       "name": "sha256",
@@ -7458,7 +7850,7 @@
       "snippetSha256": "f4e2734367abd3bf52abf00f9e96f35a4499e564384650e7883d3ad093dad3ab"
     },
     {
-      "id": "FUNC-00929",
+      "id": "FUNC-00978",
       "file": "tools/audit-r41-assets.mjs",
       "line": 17,
       "name": "walk",
@@ -7466,7 +7858,7 @@
       "snippetSha256": "dc21b42e8560d6199daa333f65f311a638ef236cc7c3ad5c4b8be80e84cf4a9c"
     },
     {
-      "id": "FUNC-00930",
+      "id": "FUNC-00979",
       "file": "tools/audit-r41-assets.mjs",
       "line": 26,
       "name": "cleanRef",
@@ -7474,7 +7866,7 @@
       "snippetSha256": "455b2bb062a25575bfd9d39d1e49f72bc211f98bc6f7f1c5f9f556be1fb62f4b"
     },
     {
-      "id": "FUNC-00931",
+      "id": "FUNC-00980",
       "file": "tools/audit-r41-assets.mjs",
       "line": 31,
       "name": "isDynamic",
@@ -7482,7 +7874,7 @@
       "snippetSha256": "53ff41ef167971abf3cb09b06b33e8d991d18ce484a177ee3647aa46376bbc17"
     },
     {
-      "id": "FUNC-00932",
+      "id": "FUNC-00981",
       "file": "tools/audit-r41-assets.mjs",
       "line": 32,
       "name": "addRef",
@@ -7490,15 +7882,199 @@
       "snippetSha256": "a0a5576a0bc895bbafc14ee085e6b25ae56364418f7680cb34048aa25b5446fe"
     },
     {
-      "id": "FUNC-00933",
-      "file": "tools/browser-live-api.mjs",
-      "line": 13,
+      "id": "FUNC-00982",
+      "file": "tools/browser-account-live.mjs",
+      "line": 10,
       "name": "assert",
       "exactCode": true,
-      "snippetSha256": "41e7fc2de7cb306f9660247aae60ebf1a968769fa0fe1c4f782cb6f6e21f41cc"
+      "snippetSha256": "5c0f4891d1b23701201f80cee72ae83329485db49cbdf91f159561c2853e6028"
     },
     {
-      "id": "FUNC-00934",
+      "id": "FUNC-00983",
+      "file": "tools/browser-gameplay-e2e-v2.mjs",
+      "line": 16,
+      "name": "readSaveV2",
+      "exactCode": true,
+      "snippetSha256": "56d33e2db18bc77d14946b2845c6f9b1082a6010cac8b7c38ed3124b2818f3d2"
+    },
+    {
+      "id": "FUNC-00984",
+      "file": "tools/browser-gameplay-e2e-v2.mjs",
+      "line": 18,
+      "name": "tryParse",
+      "exactCode": true,
+      "snippetSha256": "33c0800735418e38822ddfd82b8f28e8767a338edf0c03905831815dda5e8c90"
+    },
+    {
+      "id": "FUNC-00985",
+      "file": "tools/browser-gameplay-e2e-v2.mjs",
+      "line": 48,
+      "name": "registerV2",
+      "exactCode": true,
+      "snippetSha256": "1c54e4146bc89d28d3ce6b15791a64815e718fd9c215dbd98ae6d293a1c3eb3b"
+    },
+    {
+      "id": "FUNC-00986",
+      "file": "tools/browser-gameplay-e2e-v2.mjs",
+      "line": 66,
+      "name": "seedNormalV2",
+      "exactCode": true,
+      "snippetSha256": "166fb9c942363f90a647aa2b12efd9b6d85529c8dffae57fc7eea26894c2a732"
+    },
+    {
+      "id": "FUNC-00987",
+      "file": "tools/browser-gameplay-e2e-v2.mjs",
+      "line": 165,
+      "name": "navigateV2",
+      "exactCode": true,
+      "snippetSha256": "c17dccaef36467d950c708e005fa8e3e34825d5eeffb82b264a72fc397daa6d7"
+    },
+    {
+      "id": "FUNC-00988",
+      "file": "tools/browser-gameplay-e2e-v3.mjs",
+      "line": 10,
+      "name": "seedNormalV3",
+      "exactCode": true,
+      "snippetSha256": "9fd248be9dbf5602d5fc022636f695a38a1c15824a4ef97824a7912e0411140f"
+    },
+    {
+      "id": "FUNC-00989",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 18,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "5c0f4891d1b23701201f80cee72ae83329485db49cbdf91f159561c2853e6028"
+    },
+    {
+      "id": "FUNC-00990",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 19,
+      "name": "pass",
+      "exactCode": true,
+      "snippetSha256": "cdfc156248a0098d1a842ca3a5ebfef42d79ae6f983f783ab5b84da60935b118"
+    },
+    {
+      "id": "FUNC-00991",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 20,
+      "name": "contract",
+      "exactCode": true,
+      "snippetSha256": "70f52eda1fba4da1ab280262bd9d614f2d604e0e2de4adbedd5fb5067acd6fbd"
+    },
+    {
+      "id": "FUNC-00992",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 21,
+      "name": "sleep",
+      "exactCode": true,
+      "snippetSha256": "4df12355ca44f32a2330cb8c52e865f0aa0c031910b7f3959124b8fadece0a55"
+    },
+    {
+      "id": "FUNC-00993",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 23,
+      "name": "normalFixture",
+      "exactCode": true,
+      "snippetSha256": "e434555df7dfba066f7162d1fb04cd7a50a6574402ed6daf330ecadb9f961b49"
+    },
+    {
+      "id": "FUNC-00994",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 55,
+      "name": "leonFixture",
+      "exactCode": true,
+      "snippetSha256": "ecaef66e4504a61c49ccfa4d06bb2c5dff8eb253135fd6f9191d512a96087ba2"
+    },
+    {
+      "id": "FUNC-00995",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 65,
+      "name": "readSave",
+      "exactCode": true,
+      "snippetSha256": "1f70cf84dad3dcc2cd30bf8b56d0a5675a9ba9abc2e0138a102f96aa8cfc9fcf"
+    },
+    {
+      "id": "FUNC-00996",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 66,
+      "name": "r41State",
+      "exactCode": true,
+      "snippetSha256": "d6c1ade168ceac8224636fdb0166ca71c01ad79fb1d2eb703937f0f899a6f13b"
+    },
+    {
+      "id": "FUNC-00997",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 67,
+      "name": "masterState",
+      "exactCode": true,
+      "snippetSha256": "41428bf5987c28599dc6d34cae24a8c534d506b6083c28991bea0fb66f31a88c"
+    },
+    {
+      "id": "FUNC-00998",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 68,
+      "name": "navigate",
+      "exactCode": true,
+      "snippetSha256": "0b81a73e899fe3ed4dc519387a7f2fdb3b7310afdc96352f93be17aee8d88152"
+    },
+    {
+      "id": "FUNC-00999",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 70,
+      "name": "playVisibleMinigame",
+      "exactCode": true,
+      "snippetSha256": "d17161d23e8867fbfe81d6f6a7b6e2f04b8072ed74ac93c9b9a295599c215f4a"
+    },
+    {
+      "id": "FUNC-01000",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 89,
+      "name": "register",
+      "exactCode": true,
+      "snippetSha256": "767eab804d2ae3fda1b8b789415d6e1afaebf2cc36aae6e4615e7802eab7b457"
+    },
+    {
+      "id": "FUNC-01001",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 107,
+      "name": "seedNormal",
+      "exactCode": true,
+      "snippetSha256": "bf33e4112967cb902b3fd6f0f1fdb8c279751cbea3518f33ef6f6e683ca2fb11"
+    },
+    {
+      "id": "FUNC-01002",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 118,
+      "name": "testNormalGameplay",
+      "exactCode": true,
+      "snippetSha256": "4fa59f2ea4f42ea211ab8e5107583e1be1e72cc4414c76daa5ced555f1ce8abe"
+    },
+    {
+      "id": "FUNC-01003",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 283,
+      "name": "testKurai",
+      "exactCode": true,
+      "snippetSha256": "bfd62ccf3cc642f24a76380fbfe62cd746d817ca380f988dbcda14ad472e6634"
+    },
+    {
+      "id": "FUNC-01004",
+      "file": "tools/browser-gameplay-e2e.mjs",
+      "line": 308,
+      "name": "cleanupAccount",
+      "exactCode": true,
+      "snippetSha256": "d1b419b304571c7d224a4d0523e396f08d02b5727eda1346e5c0e1fcef5b47c0"
+    },
+    {
+      "id": "FUNC-01005",
+      "file": "tools/browser-live-api.mjs",
+      "line": 10,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "22ce1dba3fcd8a8fec809ca8d05843221b349da7aed65bc72a67b72520573537"
+    },
+    {
+      "id": "FUNC-01006",
       "file": "tools/browser-smoke.mjs",
       "line": 12,
       "name": "fail",
@@ -7506,7 +8082,7 @@
       "snippetSha256": "72ce211928ab5ff30743f5f43df732e7e8daddb0114314313d20926e62c396c8"
     },
     {
-      "id": "FUNC-00935",
+      "id": "FUNC-01007",
       "file": "tools/browser-smoke.mjs",
       "line": 13,
       "name": "assert",
@@ -7514,7 +8090,7 @@
       "snippetSha256": "509e76e876e78cd67cd4d30880479f900a750fb5b6efe854edcecda87fd92fee"
     },
     {
-      "id": "FUNC-00936",
+      "id": "FUNC-01008",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 19,
       "name": "sha256",
@@ -7522,7 +8098,7 @@
       "snippetSha256": "c5243f8c16cd049c9775d6869b51e476657680832c3703b587622cc0fc49d2a8"
     },
     {
-      "id": "FUNC-00937",
+      "id": "FUNC-01009",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 20,
       "name": "norm",
@@ -7530,7 +8106,7 @@
       "snippetSha256": "2ccd9186abc95e2d911af6ef404a913c04ca34a6c6797bf99049459d2496d69b"
     },
     {
-      "id": "FUNC-00938",
+      "id": "FUNC-01010",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 21,
       "name": "isDocs",
@@ -7538,7 +8114,7 @@
       "snippetSha256": "3c4954c7b2d16facdff863cb08464ea0d4eca6f522fbcac4b99ee78b958d5dc7"
     },
     {
-      "id": "FUNC-00939",
+      "id": "FUNC-01011",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 22,
       "name": "isSource",
@@ -7546,7 +8122,7 @@
       "snippetSha256": "4b44ec8493b5546ddfaff99e084e189359aab202f7329102a719e080c660c8dd"
     },
     {
-      "id": "FUNC-00940",
+      "id": "FUNC-01012",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 23,
       "name": "esc",
@@ -7554,7 +8130,7 @@
       "snippetSha256": "aad3b493cd194614b553b94dd07c11aa100fd035ee7323e7bfdab681cbd23f6e"
     },
     {
-      "id": "FUNC-00941",
+      "id": "FUNC-01013",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 24,
       "name": "code",
@@ -7562,7 +8138,7 @@
       "snippetSha256": "28d1306471d924d011ea2e24f1c78c8f7abe16b14020d0dc920cb89d232d96e8"
     },
     {
-      "id": "FUNC-00942",
+      "id": "FUNC-01014",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 25,
       "name": "fence",
@@ -7570,7 +8146,7 @@
       "snippetSha256": "56ff7ee96d4482410e47fceb99a152c9eef5c7f6a9880e34acf9c53dfa9f6dcc"
     },
     {
-      "id": "FUNC-00943",
+      "id": "FUNC-01015",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 26,
       "name": "langFor",
@@ -7578,7 +8154,7 @@
       "snippetSha256": "90fa5b45ec6fd25bdefdc5873e35695cdb5a5ff02dbaed4420987b179e08600f"
     },
     {
-      "id": "FUNC-00944",
+      "id": "FUNC-01016",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 31,
       "name": "lineLocator",
@@ -7586,7 +8162,7 @@
       "snippetSha256": "722957f94f8c8c8949a1a26e76cd61a900473bc00b68c88236319d52fc6331de"
     },
     {
-      "id": "FUNC-00945",
+      "id": "FUNC-01017",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 41,
       "name": "blockEnd",
@@ -7594,7 +8170,7 @@
       "snippetSha256": "343b826db9de6d603a029a2405fb596642df85f8036dc622a90a4c73ab9e4796"
     },
     {
-      "id": "FUNC-00946",
+      "id": "FUNC-01018",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 62,
       "name": "snippetAt",
@@ -7602,7 +8178,7 @@
       "snippetSha256": "4a5e0b480203f90831e55875deb4956eacee4468299637fafaa469435c33827c"
     },
     {
-      "id": "FUNC-00947",
+      "id": "FUNC-01019",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 72,
       "name": "scanFunctions",
@@ -7610,7 +8186,7 @@
       "snippetSha256": "99f17597a43bd8d9b8e2c275ce58cbb57f5194c5cbabfe872511d54a9f7f711e"
     },
     {
-      "id": "FUNC-00948",
+      "id": "FUNC-01020",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 126,
       "name": "actionHandlerEvidence",
@@ -7618,7 +8194,7 @@
       "snippetSha256": "e2f7de9141a02077004539341cd457eb30404f691f6d8383e37c1681d0b4b5a0"
     },
     {
-      "id": "FUNC-00949",
+      "id": "FUNC-01021",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 175,
       "name": "gate",
@@ -7626,7 +8202,23 @@
       "snippetSha256": "7a34b7247dd8bfd87eca35b22257b7ad2d530ef5b9cad48b2f0ed418ea64e345"
     },
     {
-      "id": "FUNC-00950",
+      "id": "FUNC-01022",
+      "file": "tools/final-readiness.mjs",
+      "line": 7,
+      "name": "pass",
+      "exactCode": true,
+      "snippetSha256": "88f78ca4a334388e7395f40fad32760b7a079f962a588759a61290a5372e0d74"
+    },
+    {
+      "id": "FUNC-01023",
+      "file": "tools/final-readiness.mjs",
+      "line": 8,
+      "name": "readJson",
+      "exactCode": true,
+      "snippetSha256": "88925c9f2cc13e4b835f481dcb7298c004c9ab4c29247e7626ca28cdbf1dff39"
+    },
+    {
+      "id": "FUNC-01024",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 26,
       "name": "walk",
@@ -7634,7 +8226,7 @@
       "snippetSha256": "ca3fc5b1a46fb92ce6c67dbacd0331bfc837963615aee85c52ee29abc38357c8"
     },
     {
-      "id": "FUNC-00951",
+      "id": "FUNC-01025",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 40,
       "name": "reEsc",
@@ -7642,7 +8234,7 @@
       "snippetSha256": "cdee9ed3c15f8b59e80a881a7fb58e8c66e42003ec3ba5d12fd1e7d95b62d612"
     },
     {
-      "id": "FUNC-00952",
+      "id": "FUNC-01026",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 41,
       "name": "lineAt",
@@ -7650,7 +8242,7 @@
       "snippetSha256": "434873d358ff01f5b69c935070cf0e4e7ef98a693fb548a7244d1456d5b461bf"
     },
     {
-      "id": "FUNC-00953",
+      "id": "FUNC-01027",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 46,
       "name": "occurrences",
@@ -7658,7 +8250,7 @@
       "snippetSha256": "071f8021a9d0b06c90309ac9928b3713ad32b81f62acb42689efa0ae937e7e77"
     },
     {
-      "id": "FUNC-00954",
+      "id": "FUNC-01028",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 55,
       "name": "uniqEvidence",
@@ -7666,7 +8258,7 @@
       "snippetSha256": "9deef64b8ab3563a5bd8e191c8a431e55a2fd692db865c6110bf839e059dfecc"
     },
     {
-      "id": "FUNC-00955",
+      "id": "FUNC-01029",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 65,
       "name": "aliasesForDatasetAction",
@@ -7674,7 +8266,7 @@
       "snippetSha256": "626740b82ab4f0f4a9c68525175496ce8003c6c445552356f66744d07ef75c8b"
     },
     {
-      "id": "FUNC-00956",
+      "id": "FUNC-01030",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 73,
       "name": "handlerEvidence",
@@ -7682,7 +8274,7 @@
       "snippetSha256": "bff55ad6224fc93f44e3dd2b1107cf2fbaaf9f44fde50897cd427fe4a778b1f9"
     },
     {
-      "id": "FUNC-00957",
+      "id": "FUNC-01031",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -7690,7 +8282,7 @@
       "snippetSha256": "c57fffdc7797691b45d759cb834fc1f73980d1d9a0c0bc49129915c8657b5ca6"
     },
     {
-      "id": "FUNC-00958",
+      "id": "FUNC-01032",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -7698,7 +8290,7 @@
       "snippetSha256": "0a66889f8d5eb67c0269c19baa67ab12589a71368f246b1c7b52326abadfbf55"
     },
     {
-      "id": "FUNC-00959",
+      "id": "FUNC-01033",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -7706,7 +8298,7 @@
       "snippetSha256": "799ec4b33b4e660efee34e58db082d1adf32cb4aac04f34132a7cb1319c2624f"
     },
     {
-      "id": "FUNC-00960",
+      "id": "FUNC-01034",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -7714,7 +8306,7 @@
       "snippetSha256": "9218a43d85edba13b0f9b676813e0620f0052ed8a1ba4206a01147134aa01923"
     },
     {
-      "id": "FUNC-00961",
+      "id": "FUNC-01035",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -7722,7 +8314,7 @@
       "snippetSha256": "e3e7f45816dc8990d82def700b8e2d4309325552cbcc3f77a1d1bb0859a6d31b"
     },
     {
-      "id": "FUNC-00962",
+      "id": "FUNC-01036",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -7730,7 +8322,7 @@
       "snippetSha256": "0e2981d6e25c303083a87c12c2187f9b9a4f288549d4724ca8be10734b652cfc"
     },
     {
-      "id": "FUNC-00963",
+      "id": "FUNC-01037",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -7738,7 +8330,7 @@
       "snippetSha256": "babffc7bf704f00eba2c6ab4c6250bb2015aa4238760c4e4e51330ced292cd9a"
     },
     {
-      "id": "FUNC-00964",
+      "id": "FUNC-01038",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -7746,7 +8338,7 @@
       "snippetSha256": "ff8016c5597d2c29d13657ddf295f04858a51eeb9850d5226335fae750455df4"
     },
     {
-      "id": "FUNC-00965",
+      "id": "FUNC-01039",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -7754,7 +8346,7 @@
       "snippetSha256": "8fee23f2c6aa74391b3ba4cf6826c3d4370893c7b88658c2fdec97f3be69ef11"
     },
     {
-      "id": "FUNC-00966",
+      "id": "FUNC-01040",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -7762,7 +8354,7 @@
       "snippetSha256": "884ca1303e4e1f363aa1231e82d378ea58d1efdd33fd25123985077786c0937a"
     },
     {
-      "id": "FUNC-00967",
+      "id": "FUNC-01041",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -7770,7 +8362,7 @@
       "snippetSha256": "9393b8a4a93cfd1483e63b67a17e40f3d61a045fa1db7f916dabe2d518b1f3ad"
     },
     {
-      "id": "FUNC-00968",
+      "id": "FUNC-01042",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -7778,7 +8370,7 @@
       "snippetSha256": "3f16df07816c1423768a2f1502239c4c5f3b08160693183454bd9dc47c0d775a"
     },
     {
-      "id": "FUNC-00969",
+      "id": "FUNC-01043",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -7786,7 +8378,7 @@
       "snippetSha256": "b0d910fa0b88049df9573d519d450286bb27c73ff752f260ce1532ab4575dd7d"
     },
     {
-      "id": "FUNC-00970",
+      "id": "FUNC-01044",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -7794,7 +8386,7 @@
       "snippetSha256": "99bb39dc840adb06b077db80748f9152224a40991b2a470fef9cf9c84950c2c3"
     },
     {
-      "id": "FUNC-00971",
+      "id": "FUNC-01045",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -7802,7 +8394,7 @@
       "snippetSha256": "ddd677f234da1f2ac754a61f2d108785f6f82b10f4282b56a3a31d982327641f"
     },
     {
-      "id": "FUNC-00972",
+      "id": "FUNC-01046",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -7810,7 +8402,7 @@
       "snippetSha256": "230cb31829b04597cd35245e049981eb7d0fa0eeff8c9b2d77a707930afa5e48"
     },
     {
-      "id": "FUNC-00973",
+      "id": "FUNC-01047",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -7818,7 +8410,7 @@
       "snippetSha256": "071a8d4ab429c64787f1d965bbb24bf9711cd7b875be7716258fd511a0f818c3"
     },
     {
-      "id": "FUNC-00974",
+      "id": "FUNC-01048",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -7826,7 +8418,7 @@
       "snippetSha256": "fec850d99073347304a2a25a139d50ef6f7de8cf3c85e62aec1bdab11b4fb1e6"
     },
     {
-      "id": "FUNC-00975",
+      "id": "FUNC-01049",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -7834,7 +8426,7 @@
       "snippetSha256": "96fea54440f2794bef63aa540dd5f4299382ed6f59272158fb595cfec0ac70e5"
     },
     {
-      "id": "FUNC-00976",
+      "id": "FUNC-01050",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -7842,39 +8434,7 @@
       "snippetSha256": "2fd55c2f5561912786494c4cdec429ca700243d0778dfc6533a3649ba173d855"
     },
     {
-      "id": "FUNC-00977",
-      "file": "tools/live-supabase-e2e.mjs",
-      "line": 11,
-      "name": "assert",
-      "exactCode": true,
-      "snippetSha256": "c813900bc6a35a642af90f88ee0c7d62dbe435c66a00d8d20e27b557120de798"
-    },
-    {
-      "id": "FUNC-00978",
-      "file": "tools/live-supabase-e2e.mjs",
-      "line": 12,
-      "name": "pass",
-      "exactCode": true,
-      "snippetSha256": "6326c02f4db8704479b6dd69e54f2749571507edb5c66b37f25f4b914448a709"
-    },
-    {
-      "id": "FUNC-00979",
-      "file": "tools/live-supabase-e2e.mjs",
-      "line": 13,
-      "name": "request",
-      "exactCode": true,
-      "snippetSha256": "d9e7eae3cd821a13c5c2327c74884d2288e0864c277e146db1e4d00dd3f2d460"
-    },
-    {
-      "id": "FUNC-00980",
-      "file": "tools/live-supabase-e2e.mjs",
-      "line": 24,
-      "name": "write",
-      "exactCode": true,
-      "snippetSha256": "e8fb296b6f41f1eb4b08675f54da29ced6fa9d5209d7f003be23f2d8b81bc317"
-    },
-    {
-      "id": "FUNC-00981",
+      "id": "FUNC-01051",
       "file": "tools/live-worker-e2e.mjs",
       "line": 11,
       "name": "assert",
@@ -7882,7 +8442,7 @@
       "snippetSha256": "ea36b4611bbc11020c4fe108e544316049598b1cb38359f1ddee0402db58c1b1"
     },
     {
-      "id": "FUNC-00982",
+      "id": "FUNC-01052",
       "file": "tools/live-worker-e2e.mjs",
       "line": 14,
       "name": "record",
@@ -7890,7 +8450,7 @@
       "snippetSha256": "5a041446fd4d6d4978587e2d70ca1ee173c9ca50aa7f072abc8132e99ad51bc0"
     },
     {
-      "id": "FUNC-00983",
+      "id": "FUNC-01053",
       "file": "tools/live-worker-e2e.mjs",
       "line": 17,
       "name": "request",
@@ -7898,7 +8458,7 @@
       "snippetSha256": "e1cc8c9732a02634badfdb787307a9f3fd396ddc44b8b93a932233397ffee57b"
     },
     {
-      "id": "FUNC-00984",
+      "id": "FUNC-01054",
       "file": "tools/live-worker-e2e.mjs",
       "line": 35,
       "name": "safe",
@@ -7906,7 +8466,7 @@
       "snippetSha256": "6136abb932cba0386524871fc398379625aec10e4efa786eae3206d91534a82c"
     },
     {
-      "id": "FUNC-00985",
+      "id": "FUNC-01055",
       "file": "tools/live-worker-e2e.mjs",
       "line": 43,
       "name": "writeReport",
@@ -7914,7 +8474,7 @@
       "snippetSha256": "aaeaab62b688666597633d91a6dc25fb583556a8f06153bc59d1349c200669be"
     },
     {
-      "id": "FUNC-00986",
+      "id": "FUNC-01056",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -7922,7 +8482,7 @@
       "snippetSha256": "270a36f1ac366fd54aee4c814a9b931a37a548d40574448e32b7af7d6271ddb6"
     },
     {
-      "id": "FUNC-00987",
+      "id": "FUNC-01057",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -7930,7 +8490,7 @@
       "snippetSha256": "cc2e7fd87a3f722e08cb51c9a9600f839570cc344ec0b3b2d3782f38d5321434"
     },
     {
-      "id": "FUNC-00988",
+      "id": "FUNC-01058",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -7938,7 +8498,7 @@
       "snippetSha256": "b4527ad44292beb910119819146d8e181282d4f0f3ac80accfd02afcc749265a"
     },
     {
-      "id": "FUNC-00989",
+      "id": "FUNC-01059",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -7946,7 +8506,7 @@
       "snippetSha256": "83588246702d53ab5bcb3755651224a226bb4345aee08492ac0e8250cdbb1194"
     },
     {
-      "id": "FUNC-00990",
+      "id": "FUNC-01060",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -7954,7 +8514,7 @@
       "snippetSha256": "e40239a90ced31e11fede70b8891889b175025a2c263f77d931f5f696717817e"
     },
     {
-      "id": "FUNC-00991",
+      "id": "FUNC-01061",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -7962,7 +8522,7 @@
       "snippetSha256": "7e8b05ce7bb261c79ddf34629c3e7354a27cfdd3d2260b681c0df535a726f2f0"
     },
     {
-      "id": "FUNC-00992",
+      "id": "FUNC-01062",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -7970,7 +8530,7 @@
       "snippetSha256": "fbf329a30791bf80c08bf0adda1f2bad450a5b192e5c9f7e5385eb5484a35b53"
     },
     {
-      "id": "FUNC-00993",
+      "id": "FUNC-01063",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -7978,7 +8538,7 @@
       "snippetSha256": "7bf6f053cc437cd27de6673899ee48af1aeee57fff8536ad6d55ac94471ebe0e"
     },
     {
-      "id": "FUNC-00994",
+      "id": "FUNC-01064",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -7986,7 +8546,7 @@
       "snippetSha256": "f1c5a027b92429a95488b3772e50620ddd77c7e02fea93127fdf31a31c1e8d4e"
     },
     {
-      "id": "FUNC-00995",
+      "id": "FUNC-01065",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -7994,7 +8554,7 @@
       "snippetSha256": "0e5f2038da9627dbb85af00988a24dc6b255667428a4944f4ce03db98303dd8e"
     },
     {
-      "id": "FUNC-00996",
+      "id": "FUNC-01066",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -8002,7 +8562,7 @@
       "snippetSha256": "98b20216a2cd98b05a64052e9e12dfd52ee41ea6183b2da46e7e8230e5724c84"
     },
     {
-      "id": "FUNC-00997",
+      "id": "FUNC-01067",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -8010,7 +8570,7 @@
       "snippetSha256": "5b104cada4aea499f7da357ac1277854b76aa9440bae196fd7f1efec3307d23d"
     },
     {
-      "id": "FUNC-00998",
+      "id": "FUNC-01068",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -8018,7 +8578,7 @@
       "snippetSha256": "44b4e16d772e237ae59c446b8aeeb3aaec8cca1f79070d73ef71680d0bba18ad"
     },
     {
-      "id": "FUNC-00999",
+      "id": "FUNC-01069",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -8026,7 +8586,7 @@
       "snippetSha256": "a93d934114482fecc82835d2dffcc4b706803a2febb3f76f971d3bc5756c3de2"
     },
     {
-      "id": "FUNC-01000",
+      "id": "FUNC-01070",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -8034,7 +8594,7 @@
       "snippetSha256": "c09ba472890421886b92df9df74639951f1e9a7a257dc1b0dba48bc13e1e5c00"
     },
     {
-      "id": "FUNC-01001",
+      "id": "FUNC-01071",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -8042,7 +8602,7 @@
       "snippetSha256": "cb6d2af95ec49ebdc096c276b2338bbb0643be38c75563d45d806596ae4de719"
     },
     {
-      "id": "FUNC-01002",
+      "id": "FUNC-01072",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -8050,44 +8610,12 @@
       "snippetSha256": "492db4da37d1a69fdf7b52310f52d21098675d58637e563229a016c476a09e83"
     },
     {
-      "id": "FUNC-01003",
+      "id": "FUNC-01073",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
       "exactCode": true,
       "snippetSha256": "b72fc42bd955c0b3a8185bc89e009b789a1e501a5ee51403961a3ddf4891a1cc"
-    },
-    {
-      "id": "FUNC-01004",
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 11,
-      "name": "assert",
-      "exactCode": true,
-      "snippetSha256": "6bb552dd57ee81e03d7bb075b55466a38e496f05489daa829126896558ae2c0b"
-    },
-    {
-      "id": "FUNC-01005",
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 12,
-      "name": "pass",
-      "exactCode": true,
-      "snippetSha256": "4ed6f4694daad5dbdf0d8d7117d9836af481c261a82d6f0343bc477ea8645446"
-    },
-    {
-      "id": "FUNC-01006",
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 13,
-      "name": "request",
-      "exactCode": true,
-      "snippetSha256": "660d5e8106dc451073aac423a5e273722d27efb890f265a87dc18ccf4a3b7006"
-    },
-    {
-      "id": "FUNC-01007",
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 23,
-      "name": "write",
-      "exactCode": true,
-      "snippetSha256": "ba5b9d1f8a5ca268559deda5ff7428de8b118d950da51fea42ab3c8fa90042c5"
     }
   ],
   "uiTraces": [
@@ -8786,6 +9314,36 @@
     },
     {
       "id": "UI-00026",
+      "value": "close",
+      "dynamic": false,
+      "status": "HANDLER_TRACED",
+      "sources": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 27,
+          "kind": "action"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 35,
+          "kind": "explicit-branch"
+        },
+        {
+          "file": "r41-account-ui.js",
+          "line": 36,
+          "kind": "explicit-branch"
+        },
+        {
+          "file": "r41-account-ui.js",
+          "line": 38,
+          "kind": "explicit-branch"
+        }
+      ]
+    },
+    {
+      "id": "UI-00027",
       "value": "close-modal",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -8855,7 +9413,7 @@
       ]
     },
     {
-      "id": "UI-00027",
+      "id": "UI-00028",
       "value": "cloud-load",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -8885,7 +9443,7 @@
       ]
     },
     {
-      "id": "UI-00028",
+      "id": "UI-00029",
       "value": "cloud-load-code",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -8905,7 +9463,7 @@
       ]
     },
     {
-      "id": "UI-00029",
+      "id": "UI-00030",
       "value": "cloud-save",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -8950,7 +9508,7 @@
       ]
     },
     {
-      "id": "UI-00030",
+      "id": "UI-00031",
       "value": "create-aptitude",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -8980,7 +9538,7 @@
       ]
     },
     {
-      "id": "UI-00031",
+      "id": "UI-00032",
       "value": "create-attr",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9015,7 +9573,7 @@
       ]
     },
     {
-      "id": "UI-00032",
+      "id": "UI-00033",
       "value": "create-avatar",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9045,7 +9603,7 @@
       ]
     },
     {
-      "id": "UI-00033",
+      "id": "UI-00034",
       "value": "create-character",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9080,7 +9638,7 @@
       ]
     },
     {
-      "id": "UI-00034",
+      "id": "UI-00035",
       "value": "create-class",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9105,7 +9663,7 @@
       ]
     },
     {
-      "id": "UI-00035",
+      "id": "UI-00036",
       "value": "create-combat",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9140,7 +9698,7 @@
       ]
     },
     {
-      "id": "UI-00036",
+      "id": "UI-00037",
       "value": "create-element",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9165,7 +9723,7 @@
       ]
     },
     {
-      "id": "UI-00037",
+      "id": "UI-00038",
       "value": "create-extra-aptitude",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9190,7 +9748,7 @@
       ]
     },
     {
-      "id": "UI-00038",
+      "id": "UI-00039",
       "value": "create-item",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9225,7 +9783,7 @@
       ]
     },
     {
-      "id": "UI-00039",
+      "id": "UI-00040",
       "value": "create-next",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9250,7 +9808,7 @@
       ]
     },
     {
-      "id": "UI-00040",
+      "id": "UI-00041",
       "value": "create-origin",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9290,7 +9848,7 @@
       ]
     },
     {
-      "id": "UI-00041",
+      "id": "UI-00042",
       "value": "create-power",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9320,7 +9878,7 @@
       ]
     },
     {
-      "id": "UI-00042",
+      "id": "UI-00043",
       "value": "create-prev",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9345,7 +9903,7 @@
       ]
     },
     {
-      "id": "UI-00043",
+      "id": "UI-00044",
       "value": "create-profession",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9375,7 +9933,7 @@
       ]
     },
     {
-      "id": "UI-00044",
+      "id": "UI-00045",
       "value": "create-skill",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9415,7 +9973,7 @@
       ]
     },
     {
-      "id": "UI-00045",
+      "id": "UI-00046",
       "value": "create-social",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9450,7 +10008,7 @@
       ]
     },
     {
-      "id": "UI-00046",
+      "id": "UI-00047",
       "value": "creation-jump",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9470,7 +10028,7 @@
       ]
     },
     {
-      "id": "UI-00047",
+      "id": "UI-00048",
       "value": "daily",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9490,7 +10048,7 @@
       ]
     },
     {
-      "id": "UI-00048",
+      "id": "UI-00049",
       "value": "defend",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9535,7 +10093,27 @@
       ]
     },
     {
-      "id": "UI-00049",
+      "id": "UI-00050",
+      "value": "delete-account",
+      "dynamic": false,
+      "status": "HANDLER_TRACED",
+      "sources": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 26,
+          "kind": "action"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 36,
+          "kind": "explicit-branch"
+        }
+      ]
+    },
+    {
+      "id": "UI-00051",
       "value": "delete-slot",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9560,7 +10138,7 @@
       ]
     },
     {
-      "id": "UI-00050",
+      "id": "UI-00052",
       "value": "dojo-duel",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9600,7 +10178,7 @@
       ]
     },
     {
-      "id": "UI-00051",
+      "id": "UI-00053",
       "value": "edit-sheet",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9620,7 +10198,7 @@
       ]
     },
     {
-      "id": "UI-00052",
+      "id": "UI-00054",
       "value": "encyclopedia-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9650,7 +10228,7 @@
       ]
     },
     {
-      "id": "UI-00053",
+      "id": "UI-00055",
       "value": "end-battle",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9680,7 +10258,7 @@
       ]
     },
     {
-      "id": "UI-00054",
+      "id": "UI-00056",
       "value": "equip-armor",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9710,7 +10288,7 @@
       ]
     },
     {
-      "id": "UI-00055",
+      "id": "UI-00057",
       "value": "equip-weapon",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9740,7 +10318,7 @@
       ]
     },
     {
-      "id": "UI-00056",
+      "id": "UI-00058",
       "value": "event-close",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9760,7 +10338,7 @@
       ]
     },
     {
-      "id": "UI-00057",
+      "id": "UI-00059",
       "value": "event-open",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9785,7 +10363,7 @@
       ]
     },
     {
-      "id": "UI-00058",
+      "id": "UI-00060",
       "value": "event-step",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9805,7 +10383,7 @@
       ]
     },
     {
-      "id": "UI-00059",
+      "id": "UI-00061",
       "value": "export",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9835,7 +10413,7 @@
       ]
     },
     {
-      "id": "UI-00060",
+      "id": "UI-00062",
       "value": "fullscreen",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9855,7 +10433,7 @@
       ]
     },
     {
-      "id": "UI-00061",
+      "id": "UI-00063",
       "value": "hospital-heal",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9875,7 +10453,7 @@
       ]
     },
     {
-      "id": "UI-00062",
+      "id": "UI-00064",
       "value": "inventory-filter",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9895,7 +10473,7 @@
       ]
     },
     {
-      "id": "UI-00063",
+      "id": "UI-00065",
       "value": "kurai-mode",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9930,7 +10508,7 @@
       ]
     },
     {
-      "id": "UI-00064",
+      "id": "UI-00066",
       "value": "learn-jutsu",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9950,7 +10528,7 @@
       ]
     },
     {
-      "id": "UI-00065",
+      "id": "UI-00067",
       "value": "leon-dojo",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -9980,7 +10558,7 @@
       ]
     },
     {
-      "id": "UI-00066",
+      "id": "UI-00068",
       "value": "load-slot",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10005,7 +10583,27 @@
       ]
     },
     {
-      "id": "UI-00067",
+      "id": "UI-00069",
+      "value": "logout",
+      "dynamic": false,
+      "status": "HANDLER_TRACED",
+      "sources": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 26,
+          "kind": "action"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 36,
+          "kind": "explicit-branch"
+        }
+      ]
+    },
+    {
+      "id": "UI-00070",
       "value": "map-enter",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10030,7 +10628,7 @@
       ]
     },
     {
-      "id": "UI-00068",
+      "id": "UI-00071",
       "value": "map-hotspot",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10065,7 +10663,7 @@
       ]
     },
     {
-      "id": "UI-00069",
+      "id": "UI-00072",
       "value": "map-mode",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10120,7 +10718,7 @@
       ]
     },
     {
-      "id": "UI-00070",
+      "id": "UI-00073",
       "value": "mission-choice",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10155,7 +10753,7 @@
       ]
     },
     {
-      "id": "UI-00071",
+      "id": "UI-00074",
       "value": "mission-route",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10175,7 +10773,7 @@
       ]
     },
     {
-      "id": "UI-00072",
+      "id": "UI-00075",
       "value": "narrate-mission",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10205,7 +10803,7 @@
       ]
     },
     {
-      "id": "UI-00073",
+      "id": "UI-00076",
       "value": "new-character",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10235,7 +10833,7 @@
       ]
     },
     {
-      "id": "UI-00074",
+      "id": "UI-00077",
       "value": "npc-talk",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10260,7 +10858,7 @@
       ]
     },
     {
-      "id": "UI-00075",
+      "id": "UI-00078",
       "value": "online-create",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10280,7 +10878,7 @@
       ]
     },
     {
-      "id": "UI-00076",
+      "id": "UI-00079",
       "value": "online-join",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10300,7 +10898,7 @@
       ]
     },
     {
-      "id": "UI-00077",
+      "id": "UI-00080",
       "value": "online-leave",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10320,7 +10918,7 @@
       ]
     },
     {
-      "id": "UI-00078",
+      "id": "UI-00081",
       "value": "online-refresh",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10340,7 +10938,7 @@
       ]
     },
     {
-      "id": "UI-00079",
+      "id": "UI-00082",
       "value": "online-send",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10360,7 +10958,7 @@
       ]
     },
     {
-      "id": "UI-00080",
+      "id": "UI-00083",
       "value": "private-login",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10390,7 +10988,7 @@
       ]
     },
     {
-      "id": "UI-00081",
+      "id": "UI-00084",
       "value": "r25-core-attr",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10420,7 +11018,7 @@
       ]
     },
     {
-      "id": "UI-00082",
+      "id": "UI-00085",
       "value": "r25-mentor",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10440,7 +11038,7 @@
       ]
     },
     {
-      "id": "UI-00083",
+      "id": "UI-00086",
       "value": "r25-rest",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10465,7 +11063,7 @@
       ]
     },
     {
-      "id": "UI-00084",
+      "id": "UI-00087",
       "value": "r27-dojo-practice",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10490,7 +11088,7 @@
       ]
     },
     {
-      "id": "UI-00085",
+      "id": "UI-00088",
       "value": "r27-duel-action",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10520,7 +11118,7 @@
       ]
     },
     {
-      "id": "UI-00086",
+      "id": "UI-00089",
       "value": "r27-duel-active",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10540,7 +11138,7 @@
       ]
     },
     {
-      "id": "UI-00087",
+      "id": "UI-00090",
       "value": "r27-duel-ai",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10560,7 +11158,7 @@
       ]
     },
     {
-      "id": "UI-00088",
+      "id": "UI-00091",
       "value": "r27-duel-filter",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10580,7 +11178,7 @@
       ]
     },
     {
-      "id": "UI-00089",
+      "id": "UI-00092",
       "value": "r27-duel-reset",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10600,7 +11198,7 @@
       ]
     },
     {
-      "id": "UI-00090",
+      "id": "UI-00093",
       "value": "r27-duel-select",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10625,7 +11223,7 @@
       ]
     },
     {
-      "id": "UI-00091",
+      "id": "UI-00094",
       "value": "r27-duel-start",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10645,7 +11243,7 @@
       ]
     },
     {
-      "id": "UI-00092",
+      "id": "UI-00095",
       "value": "r27-duel-target",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10665,7 +11263,7 @@
       ]
     },
     {
-      "id": "UI-00093",
+      "id": "UI-00096",
       "value": "r27-rest",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10695,7 +11293,7 @@
       ]
     },
     {
-      "id": "UI-00094",
+      "id": "UI-00097",
       "value": "r27-social-talk",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10720,7 +11318,7 @@
       ]
     },
     {
-      "id": "UI-00095",
+      "id": "UI-00098",
       "value": "r27-story-abandon",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10740,7 +11338,7 @@
       ]
     },
     {
-      "id": "UI-00096",
+      "id": "UI-00099",
       "value": "r27-story-choice",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10760,7 +11358,7 @@
       ]
     },
     {
-      "id": "UI-00097",
+      "id": "UI-00100",
       "value": "r27-story-start",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10780,7 +11378,7 @@
       ]
     },
     {
-      "id": "UI-00098",
+      "id": "UI-00101",
       "value": "r27-system-audit",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10805,7 +11403,7 @@
       ]
     },
     {
-      "id": "UI-00099",
+      "id": "UI-00102",
       "value": "r27-target-enemy",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10830,7 +11428,7 @@
       ]
     },
     {
-      "id": "UI-00100",
+      "id": "UI-00103",
       "value": "r29-rank-review",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10850,7 +11448,7 @@
       ]
     },
     {
-      "id": "UI-00101",
+      "id": "UI-00104",
       "value": "r31-mentor-session",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10870,7 +11468,7 @@
       ]
     },
     {
-      "id": "UI-00102",
+      "id": "UI-00105",
       "value": "r31-opportunity",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10895,7 +11493,7 @@
       ]
     },
     {
-      "id": "UI-00103",
+      "id": "UI-00106",
       "value": "r31-party-action",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10915,7 +11513,7 @@
       ]
     },
     {
-      "id": "UI-00104",
+      "id": "UI-00107",
       "value": "r31-party-toggle",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10935,7 +11533,7 @@
       ]
     },
     {
-      "id": "UI-00105",
+      "id": "UI-00108",
       "value": "r31-random-battle",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10955,7 +11553,7 @@
       ]
     },
     {
-      "id": "UI-00106",
+      "id": "UI-00109",
       "value": "r31-tech-category",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -10975,7 +11573,7 @@
       ]
     },
     {
-      "id": "UI-00107",
+      "id": "UI-00110",
       "value": "r31-tech-state",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11005,7 +11603,7 @@
       ]
     },
     {
-      "id": "UI-00108",
+      "id": "UI-00111",
       "value": "r31-train-technique",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11035,7 +11633,7 @@
       ]
     },
     {
-      "id": "UI-00109",
+      "id": "UI-00112",
       "value": "r32-resume-mission",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11085,7 +11683,7 @@
       ]
     },
     {
-      "id": "UI-00110",
+      "id": "UI-00113",
       "value": "r382-board-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11110,7 +11708,7 @@
       ]
     },
     {
-      "id": "UI-00111",
+      "id": "UI-00114",
       "value": "r382-mission-free-action",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11130,7 +11728,7 @@
       ]
     },
     {
-      "id": "UI-00112",
+      "id": "UI-00115",
       "value": "r382-narrate-arc",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11150,7 +11748,7 @@
       ]
     },
     {
-      "id": "UI-00113",
+      "id": "UI-00116",
       "value": "r382-select-arc",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11170,7 +11768,7 @@
       ]
     },
     {
-      "id": "UI-00114",
+      "id": "UI-00117",
       "value": "r41-activity",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11195,7 +11793,7 @@
       ]
     },
     {
-      "id": "UI-00115",
+      "id": "UI-00118",
       "value": "r41-hospital-treat",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11220,7 +11818,7 @@
       ]
     },
     {
-      "id": "UI-00116",
+      "id": "UI-00119",
       "value": "r41-online-intent",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11245,7 +11843,27 @@
       ]
     },
     {
-      "id": "UI-00117",
+      "id": "UI-00120",
+      "value": "recovery-code",
+      "dynamic": false,
+      "status": "HANDLER_TRACED",
+      "sources": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 26,
+          "kind": "action"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "r41-account-ui.js",
+          "line": 36,
+          "kind": "explicit-branch"
+        }
+      ]
+    },
+    {
+      "id": "UI-00121",
       "value": "reset",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11275,7 +11893,7 @@
       ]
     },
     {
-      "id": "UI-00118",
+      "id": "UI-00122",
       "value": "rest",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11325,7 +11943,7 @@
       ]
     },
     {
-      "id": "UI-00119",
+      "id": "UI-00123",
       "value": "rinne-unlock",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11345,7 +11963,7 @@
       ]
     },
     {
-      "id": "UI-00120",
+      "id": "UI-00124",
       "value": "rpg-confirm-cost",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11365,7 +11983,7 @@
       ]
     },
     {
-      "id": "UI-00121",
+      "id": "UI-00125",
       "value": "rpg-continue",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11395,7 +12013,7 @@
       ]
     },
     {
-      "id": "UI-00122",
+      "id": "UI-00126",
       "value": "rpg-option",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11425,7 +12043,7 @@
       ]
     },
     {
-      "id": "UI-00123",
+      "id": "UI-00127",
       "value": "rpg-resource",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11450,7 +12068,7 @@
       ]
     },
     {
-      "id": "UI-00124",
+      "id": "UI-00128",
       "value": "rpg-roll",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11525,7 +12143,7 @@
       ]
     },
     {
-      "id": "UI-00125",
+      "id": "UI-00129",
       "value": "rpg-select",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11545,7 +12163,7 @@
       ]
     },
     {
-      "id": "UI-00126",
+      "id": "UI-00130",
       "value": "rpg-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11570,7 +12188,7 @@
       ]
     },
     {
-      "id": "UI-00127",
+      "id": "UI-00131",
       "value": "rpg-use",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11620,7 +12238,7 @@
       ]
     },
     {
-      "id": "UI-00128",
+      "id": "UI-00132",
       "value": "save",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11720,7 +12338,7 @@
       ]
     },
     {
-      "id": "UI-00129",
+      "id": "UI-00133",
       "value": "save-sheet",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11740,7 +12358,7 @@
       ]
     },
     {
-      "id": "UI-00130",
+      "id": "UI-00134",
       "value": "set-defense",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11785,7 +12403,7 @@
       ]
     },
     {
-      "id": "UI-00131",
+      "id": "UI-00135",
       "value": "sheet-attr",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11810,7 +12428,7 @@
       ]
     },
     {
-      "id": "UI-00132",
+      "id": "UI-00136",
       "value": "sheet-skill",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11835,7 +12453,7 @@
       ]
     },
     {
-      "id": "UI-00133",
+      "id": "UI-00137",
       "value": "shop-buy",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11860,7 +12478,7 @@
       ]
     },
     {
-      "id": "UI-00134",
+      "id": "UI-00138",
       "value": "shop-buy-qty",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11885,7 +12503,7 @@
       ]
     },
     {
-      "id": "UI-00135",
+      "id": "UI-00139",
       "value": "shop-category",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11910,7 +12528,7 @@
       ]
     },
     {
-      "id": "UI-00136",
+      "id": "UI-00140",
       "value": "shop-mode",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11945,7 +12563,7 @@
       ]
     },
     {
-      "id": "UI-00137",
+      "id": "UI-00141",
       "value": "shop-qty",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -11980,7 +12598,7 @@
       ]
     },
     {
-      "id": "UI-00138",
+      "id": "UI-00142",
       "value": "shop-sell",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12000,7 +12618,7 @@
       ]
     },
     {
-      "id": "UI-00139",
+      "id": "UI-00143",
       "value": "shop-sell-qty",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12020,7 +12638,7 @@
       ]
     },
     {
-      "id": "UI-00140",
+      "id": "UI-00144",
       "value": "shop-vendor",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12060,7 +12678,7 @@
       ]
     },
     {
-      "id": "UI-00141",
+      "id": "UI-00145",
       "value": "show-more-jutsu",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12085,7 +12703,7 @@
       ]
     },
     {
-      "id": "UI-00142",
+      "id": "UI-00146",
       "value": "show-more-mission",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12110,7 +12728,7 @@
       ]
     },
     {
-      "id": "UI-00143",
+      "id": "UI-00147",
       "value": "skill-up",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12130,7 +12748,7 @@
       ]
     },
     {
-      "id": "UI-00144",
+      "id": "UI-00148",
       "value": "start-battle",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12175,7 +12793,7 @@
       ]
     },
     {
-      "id": "UI-00145",
+      "id": "UI-00149",
       "value": "start-mission",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12225,7 +12843,7 @@
       ]
     },
     {
-      "id": "UI-00146",
+      "id": "UI-00150",
       "value": "tactical-move",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12265,7 +12883,7 @@
       ]
     },
     {
-      "id": "UI-00147",
+      "id": "UI-00151",
       "value": "toggle-menu",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12285,7 +12903,7 @@
       ]
     },
     {
-      "id": "UI-00148",
+      "id": "UI-00152",
       "value": "train",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12330,7 +12948,7 @@
       ]
     },
     {
-      "id": "UI-00149",
+      "id": "UI-00153",
       "value": "use-item",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12360,7 +12978,7 @@
       ]
     },
     {
-      "id": "UI-00150",
+      "id": "UI-00154",
       "value": "v8-battle-ai",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12385,7 +13003,7 @@
       ]
     },
     {
-      "id": "UI-00151",
+      "id": "UI-00155",
       "value": "v8-leon-basic",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12410,7 +13028,7 @@
       ]
     },
     {
-      "id": "UI-00152",
+      "id": "UI-00156",
       "value": "v8-leon-defend",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12435,7 +13053,7 @@
       ]
     },
     {
-      "id": "UI-00153",
+      "id": "UI-00157",
       "value": "v8-leon-dodge",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12460,7 +13078,7 @@
       ]
     },
     {
-      "id": "UI-00154",
+      "id": "UI-00158",
       "value": "v8-leon-exit",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12485,7 +13103,7 @@
       ]
     },
     {
-      "id": "UI-00155",
+      "id": "UI-00159",
       "value": "v8-leon-flee",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12510,7 +13128,7 @@
       ]
     },
     {
-      "id": "UI-00156",
+      "id": "UI-00160",
       "value": "v8-leon-focus",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12535,7 +13153,7 @@
       ]
     },
     {
-      "id": "UI-00157",
+      "id": "UI-00161",
       "value": "v8-leon-move",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12565,7 +13183,7 @@
       ]
     },
     {
-      "id": "UI-00158",
+      "id": "UI-00162",
       "value": "v8-leon-tech",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12600,7 +13218,7 @@
       ]
     },
     {
-      "id": "UI-00159",
+      "id": "UI-00163",
       "value": "v8-leon-tech-confirm",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12620,7 +13238,7 @@
       ]
     },
     {
-      "id": "UI-00160",
+      "id": "UI-00164",
       "value": "v8-open-ai-train",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12645,7 +13263,7 @@
       ]
     },
     {
-      "id": "UI-00161",
+      "id": "UI-00165",
       "value": "v8-start-leon",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12690,7 +13308,7 @@
       ]
     },
     {
-      "id": "UI-00162",
+      "id": "UI-00166",
       "value": "v8-visual",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12730,7 +13348,7 @@
       ]
     },
     {
-      "id": "UI-00163",
+      "id": "UI-00167",
       "value": "v8-xp-table",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12755,7 +13373,7 @@
       ]
     },
     {
-      "id": "UI-00164",
+      "id": "UI-00168",
       "value": "v81-ai-progression",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12780,7 +13398,7 @@
       ]
     },
     {
-      "id": "UI-00165",
+      "id": "UI-00169",
       "value": "v81-cap-open",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12805,7 +13423,7 @@
       ]
     },
     {
-      "id": "UI-00166",
+      "id": "UI-00170",
       "value": "v81-codex-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12855,7 +13473,7 @@
       ]
     },
     {
-      "id": "UI-00167",
+      "id": "UI-00171",
       "value": "v81-combat-filter",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12875,7 +13493,7 @@
       ]
     },
     {
-      "id": "UI-00168",
+      "id": "UI-00172",
       "value": "v81-grim-filter",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12905,7 +13523,7 @@
       ]
     },
     {
-      "id": "UI-00169",
+      "id": "UI-00173",
       "value": "v81-refresh-ai",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12930,7 +13548,7 @@
       ]
     },
     {
-      "id": "UI-00170",
+      "id": "UI-00174",
       "value": "v82-ai-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12950,7 +13568,7 @@
       ]
     },
     {
-      "id": "UI-00171",
+      "id": "UI-00175",
       "value": "v82-basic-melee",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12970,7 +13588,7 @@
       ]
     },
     {
-      "id": "UI-00172",
+      "id": "UI-00176",
       "value": "v82-basic-ranged",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -12990,7 +13608,7 @@
       ]
     },
     {
-      "id": "UI-00173",
+      "id": "UI-00177",
       "value": "v82-codex",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13035,7 +13653,7 @@
       ]
     },
     {
-      "id": "UI-00174",
+      "id": "UI-00178",
       "value": "v82-npc-narrate",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13060,7 +13678,7 @@
       ]
     },
     {
-      "id": "UI-00175",
+      "id": "UI-00179",
       "value": "v82-npc-train",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13080,7 +13698,7 @@
       ]
     },
     {
-      "id": "UI-00176",
+      "id": "UI-00180",
       "value": "v82-open-resource",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13125,7 +13743,7 @@
       ]
     },
     {
-      "id": "UI-00177",
+      "id": "UI-00181",
       "value": "v82-practice-skill",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13145,7 +13763,7 @@
       ]
     },
     {
-      "id": "UI-00178",
+      "id": "UI-00182",
       "value": "v82-practice-tech",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13170,7 +13788,7 @@
       ]
     },
     {
-      "id": "UI-00179",
+      "id": "UI-00183",
       "value": "v82-select-action",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13200,7 +13818,7 @@
       ]
     },
     {
-      "id": "UI-00180",
+      "id": "UI-00184",
       "value": "v82-start-elite",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13220,7 +13838,7 @@
       ]
     },
     {
-      "id": "UI-00181",
+      "id": "UI-00185",
       "value": "v82-tech-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13245,7 +13863,7 @@
       ]
     },
     {
-      "id": "UI-00182",
+      "id": "UI-00186",
       "value": "v82-train-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13265,7 +13883,7 @@
       ]
     },
     {
-      "id": "UI-00183",
+      "id": "UI-00187",
       "value": "v82-train-tech",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13295,7 +13913,7 @@
       ]
     },
     {
-      "id": "UI-00184",
+      "id": "UI-00188",
       "value": "v82-use-outside",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13320,7 +13938,7 @@
       ]
     },
     {
-      "id": "UI-00185",
+      "id": "UI-00189",
       "value": "v821-load-leon",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13340,7 +13958,7 @@
       ]
     },
     {
-      "id": "UI-00186",
+      "id": "UI-00190",
       "value": "v821-reset-leon",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13360,7 +13978,7 @@
       ]
     },
     {
-      "id": "UI-00187",
+      "id": "UI-00191",
       "value": "v83-cap-open",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13380,7 +13998,7 @@
       ]
     },
     {
-      "id": "UI-00188",
+      "id": "UI-00192",
       "value": "v83-codex-more",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13400,7 +14018,7 @@
       ]
     },
     {
-      "id": "UI-00189",
+      "id": "UI-00193",
       "value": "v83-codex-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13420,7 +14038,7 @@
       ]
     },
     {
-      "id": "UI-00190",
+      "id": "UI-00194",
       "value": "v83-mission-training",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13440,7 +14058,7 @@
       ]
     },
     {
-      "id": "UI-00191",
+      "id": "UI-00195",
       "value": "v83-practice-owned",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13460,7 +14078,7 @@
       ]
     },
     {
-      "id": "UI-00192",
+      "id": "UI-00196",
       "value": "v83-practice-skill",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13480,7 +14098,7 @@
       ]
     },
     {
-      "id": "UI-00193",
+      "id": "UI-00197",
       "value": "v83-project-final",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13500,7 +14118,7 @@
       ]
     },
     {
-      "id": "UI-00194",
+      "id": "UI-00198",
       "value": "v83-project-session",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13520,7 +14138,7 @@
       ]
     },
     {
-      "id": "UI-00195",
+      "id": "UI-00199",
       "value": "v83-resolve-mission-event",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13540,7 +14158,7 @@
       ]
     },
     {
-      "id": "UI-00196",
+      "id": "UI-00200",
       "value": "v83-start-dojo",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13565,7 +14183,7 @@
       ]
     },
     {
-      "id": "UI-00197",
+      "id": "UI-00201",
       "value": "v83-start-project",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13585,7 +14203,7 @@
       ]
     },
     {
-      "id": "UI-00198",
+      "id": "UI-00202",
       "value": "v83-tech-category",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13610,7 +14228,7 @@
       ]
     },
     {
-      "id": "UI-00199",
+      "id": "UI-00203",
       "value": "v83-tech-state",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13630,7 +14248,7 @@
       ]
     },
     {
-      "id": "UI-00200",
+      "id": "UI-00204",
       "value": "v83-train-tab",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13650,7 +14268,7 @@
       ]
     },
     {
-      "id": "UI-00201",
+      "id": "UI-00205",
       "value": "v83-use-tech",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13675,7 +14293,7 @@
       ]
     },
     {
-      "id": "UI-00202",
+      "id": "UI-00206",
       "value": "v84-cell",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13695,7 +14313,7 @@
       ]
     },
     {
-      "id": "UI-00203",
+      "id": "UI-00207",
       "value": "v84-character-preset",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13715,7 +14333,7 @@
       ]
     },
     {
-      "id": "UI-00204",
+      "id": "UI-00208",
       "value": "v84-field-preset",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13735,7 +14353,7 @@
       ]
     },
     {
-      "id": "UI-00205",
+      "id": "UI-00209",
       "value": "v84-grid-toggle",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13755,7 +14373,7 @@
       ]
     },
     {
-      "id": "UI-00206",
+      "id": "UI-00210",
       "value": "v84-kb-more",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13775,7 +14393,7 @@
       ]
     },
     {
-      "id": "UI-00207",
+      "id": "UI-00211",
       "value": "v84-kb-type",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13795,7 +14413,7 @@
       ]
     },
     {
-      "id": "UI-00208",
+      "id": "UI-00212",
       "value": "v84-map-tool",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13825,7 +14443,7 @@
       ]
     },
     {
-      "id": "UI-00209",
+      "id": "UI-00213",
       "value": "v84-npc-more",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13850,7 +14468,7 @@
       ]
     },
     {
-      "id": "UI-00210",
+      "id": "UI-00214",
       "value": "v84-open-kb",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13870,7 +14488,7 @@
       ]
     },
     {
-      "id": "UI-00211",
+      "id": "UI-00215",
       "value": "v84-open-npc",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13915,7 +14533,7 @@
       ]
     },
     {
-      "id": "UI-00212",
+      "id": "UI-00216",
       "value": "v84-stage-field",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13935,7 +14553,7 @@
       ]
     },
     {
-      "id": "UI-00213",
+      "id": "UI-00217",
       "value": "v84-token",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13955,7 +14573,7 @@
       ]
     },
     {
-      "id": "UI-00214",
+      "id": "UI-00218",
       "value": "v841-atlas-more",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -13980,7 +14598,7 @@
       ]
     },
     {
-      "id": "UI-00215",
+      "id": "UI-00219",
       "value": "v841-atlas-type",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -14005,7 +14623,7 @@
       ]
     },
     {
-      "id": "UI-00216",
+      "id": "UI-00220",
       "value": "world-select",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -14030,7 +14648,7 @@
       ]
     },
     {
-      "id": "UI-00217",
+      "id": "UI-00221",
       "value": "world-travel",
       "dynamic": false,
       "status": "HANDLER_TRACED",
@@ -14057,9 +14675,19 @@
   ],
   "sourceFiles": [
     {
+      "path": ".github/workflows/account-live-e2e.yml",
+      "size": 5027,
+      "sha256": "dc5c86a4d3a60afbc57bdd38f14bb6a9960f57bfab79ce78860fb04b23aa82f8"
+    },
+    {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 2396,
-      "sha256": "8f12d255c4e0656f770d6634dde041402400a811dea6e20a968967d39f8cabcd"
+      "size": 5598,
+      "sha256": "6fcfd06f457612eb37a32ebb43bd56fbb80ecc8dc49fbda1e28fcfd7dd37c9cb"
+    },
+    {
+      "path": ".github/workflows/browser-gameplay-e2e.yml",
+      "size": 6859,
+      "sha256": "6654ff587166e20f7b7d431e363608aa0adeb1b1bad1c32653966fb9388cde90"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
@@ -14067,14 +14695,24 @@
       "sha256": "8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6"
     },
     {
+      "path": ".github/workflows/final-readiness.yml",
+      "size": 3097,
+      "sha256": "a36786ece900c13a39cd911603c8495430a0b03c8180ad6e48e28a62f4d15be0"
+    },
+    {
+      "path": ".github/workflows/live-backend-e2e.yml",
+      "size": 11425,
+      "sha256": "eafba4deef2fc9f55f7e14bd498513efcb2b6b0661f8bd28717a96793d07526c"
+    },
+    {
+      "path": ".github/workflows/one-shot-terion-authority.yml",
+      "size": 6191,
+      "sha256": "626915f9d67570722ef3c145112860549c95c98b8f12a33beefaf5eef9534eac"
+    },
+    {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 1964,
       "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4"
-    },
-    {
-      "path": ".github/workflows/supabase-live-e2e.yml",
-      "size": 4113,
-      "sha256": "25dcd59dd3b57d48a50d6201c354a12504dd3edca892fdb2f8b6d44b27caf6cf"
     },
     {
       "path": "app.js",
@@ -14082,19 +14720,14 @@
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
     },
     {
-      "path": "audit/BROWSER-LIVE-API.json",
-      "size": 1598,
-      "sha256": "c2bb676be2e71360a1dd4eb292b05cfa4591f08d91f8d5ec4862b09deb059cc2"
+      "path": "audit/BROWSER-GAMEPLAY-E2E.json",
+      "size": 779,
+      "sha256": "7049d39628192cd8b30d38e76c18484ebb9f664f415ee2c38054bca3701679b7"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
-      "size": 699,
-      "sha256": "b6b6aa764913df446048f3e88ef3de36e5f89a99c2ef5bc855d00f5649bb2f7c"
-    },
-    {
-      "path": "audit/SUPABASE-LIVE-E2E.json",
-      "size": 1714,
-      "sha256": "35cecec22003bac385ce948726c51d07182f286f6b28e965077379a0db315eae"
+      "size": 759,
+      "sha256": "55f94066be331af74d06b0db6cf58f5f08446ab07428236a2f8d28d36932406a"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -14113,18 +14746,28 @@
     },
     {
       "path": "cloudflare/r41-api/package.json",
-      "size": 358,
-      "sha256": "80557cdbfd5bbdaaee71deca25cff4a4659e80fe3b77e3d61bfd3b1dac59204f"
+      "size": 449,
+      "sha256": "2a5320b2ba99a8f15d2f6d38b63ebfdef983ccbd88aab13542b8c96eb27d8d97"
     },
     {
       "path": "cloudflare/r41-api/src/entry.js",
-      "size": 10660,
-      "sha256": "0748eedadc4cbe0181b0ffba3513cd8793ec19586f7ac559e489b5ed78b46a37"
+      "size": 14173,
+      "sha256": "6eb0e3ce5e05445a593af9913a2c819dde387678b4b0eb2926a192eab00d7947"
     },
     {
       "path": "cloudflare/r41-api/src/index.js",
       "size": 27910,
       "sha256": "a7e4d6a44085a96644bc43c20cc32e4b1ccc24b74c60965a851a776ad214e8c4"
+    },
+    {
+      "path": "cloudflare/r41-api/src/terion-mechanics.js",
+      "size": 4160,
+      "sha256": "d98c2decc0de416b3d737b90f74104ec5876721573ddf5e0ca0e90fc9d40d312"
+    },
+    {
+      "path": "cloudflare/r41-api/test/terion-mechanics.test.mjs",
+      "size": 1584,
+      "sha256": "4cd30d169a831c5bd73589c510cba6b8429aaf05eca218fbaefc7b2d7a59fed3"
     },
     {
       "path": "cloudflare/r41-api/wrangler.toml",
@@ -14313,8 +14956,8 @@
     },
     {
       "path": "index.html",
-      "size": 3554,
-      "sha256": "173ef872dc4d15192668e68abb8315790c2f12093a1c0400c1531830e8b70e23"
+      "size": 3711,
+      "sha256": "b3eb157b506978ce164e9f3f7e4a5f66cda53dfbf2bc11d5553a7bf3953f09fb"
     },
     {
       "path": "package.json",
@@ -14332,14 +14975,24 @@
       "sha256": "7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2"
     },
     {
+      "path": "r41-account-deeplink-fix.js",
+      "size": 587,
+      "sha256": "656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2"
+    },
+    {
+      "path": "r41-account-ui.js",
+      "size": 12242,
+      "sha256": "a19b31871cd677b30e881b3728e2e304d4a4adcd63be611b80534a4d9e90dcab"
+    },
+    {
       "path": "r41-api-config.js",
-      "size": 1950,
-      "sha256": "062c616dd566a52920a2b072e88fea7150e0008c9bb760bf1ba697c3a6299c2e"
+      "size": 729,
+      "sha256": "6b1837639df2886d142cbe559edbd57ae3354ead5b92b5a22f7ed185a286cdec"
     },
     {
       "path": "r41-github-api.js",
-      "size": 3714,
-      "sha256": "ad109be9a4e31cc867a34f84a119a86cdb3175a4c91803cc181d70abce0e89e6"
+      "size": 7052,
+      "sha256": "bd3dd0a77e0587f7cc8f8951cff67ed8ba0e39670909d1b501b7033fe00f5056"
     },
     {
       "path": "src/r41-canonical-repair.js",
@@ -14367,6 +15020,11 @@
       "sha256": "6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab"
     },
     {
+      "path": "tools/account-live-e2e.mjs",
+      "size": 4937,
+      "sha256": "e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7"
+    },
+    {
       "path": "tools/audit-documentation-coverage.mjs",
       "size": 9751,
       "sha256": "baa239d16f0d0a1ec120fa19025a7454ac2cbfa509692945f5c4eaed8f436e35"
@@ -14387,19 +15045,44 @@
       "sha256": "39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a"
     },
     {
+      "path": "tools/browser-account-live.mjs",
+      "size": 4464,
+      "sha256": "9389b1454b69d2f33a4303fd4613182d459c8d160d82e081ea223f14969bbe96"
+    },
+    {
+      "path": "tools/browser-gameplay-e2e-v2.mjs",
+      "size": 9066,
+      "sha256": "1e4f4da345fd560b253054e35b81fa9ce99932b5ee497806512e788d92476a12"
+    },
+    {
+      "path": "tools/browser-gameplay-e2e-v3.mjs",
+      "size": 5034,
+      "sha256": "2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa"
+    },
+    {
+      "path": "tools/browser-gameplay-e2e.mjs",
+      "size": 24505,
+      "sha256": "3b71f9eef487aea41b1232571fb54caa259739640355d801899fe46fbeb2c0ea"
+    },
+    {
       "path": "tools/browser-live-api.mjs",
-      "size": 5433,
-      "sha256": "809f476ec5997cbe8762e79c73268713f4afbf903fa4d2abba6df3d8a35bc724"
+      "size": 4729,
+      "sha256": "67e1046f218c44eae5491df38caf52f820cf097ecb4eaa5b861283cca6a2b8f2"
     },
     {
       "path": "tools/browser-smoke.mjs",
-      "size": 5419,
-      "sha256": "bd9f5550ad177d24ee43c0cd7696f16ddd089aa485b15bb655b46fce42680a81"
+      "size": 5675,
+      "sha256": "b8475ddc66c704f9c4d77a9ca53f8d040aa43b18c775552c439b9c066250dd60"
     },
     {
       "path": "tools/build-final-canonical-spec.mjs",
       "size": 15497,
       "sha256": "5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba"
+    },
+    {
+      "path": "tools/final-readiness.mjs",
+      "size": 9243,
+      "sha256": "bd66e89c794d7caa4d80f8cdc49ec930ee51e1051000208aa006c666fa183f3f"
     },
     {
       "path": "tools/finalize-canonical-ui-trace.mjs",
@@ -14410,11 +15093,6 @@
       "path": "tools/generate-technical-spec.mjs",
       "size": 14766,
       "sha256": "d0075077513909fb59405acf6a3d726f2d2b2f10edbe366fce90c54ea4b60275"
-    },
-    {
-      "path": "tools/live-supabase-e2e.mjs",
-      "size": 9167,
-      "sha256": "a4b55f380061bcf4b7ecf2784e16a7560aa2a3f67e6cff065a9efd7d7c822e0b"
     },
     {
       "path": "tools/live-worker-e2e.mjs",
@@ -14435,11 +15113,6 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586"
-    },
-    {
-      "path": "tools/supabase-live-e2e.mjs",
-      "size": 8904,
-      "sha256": "0a09b2687aac54e7158479953f42935f68b9ae7c6091db909b9b68fb57978fe4"
     }
   ],
   "assetFiles": [
