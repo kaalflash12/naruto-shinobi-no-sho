@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT=process.cwd();
-const GATE_VERSION='CLOUDFLARE-MONGODB-INTEGRATED-V3';
+const GATE_VERSION='CLOUDFLARE-MONGODB-INTEGRATED-V4';
 const failures=[];
 const pass=(cond,msg)=>{if(!cond)failures.push(msg);};
 function readJson(p){
@@ -17,6 +17,8 @@ const operational=readJson('docs/generated/OPERATIONAL-STATIC-AUDIT.json');
 const documentation=readJson('docs/generated/DOCUMENTATION-AUDIT.json');
 const live=readJson('audit/LIVE-BACKEND.json');
 const browserLive=readJson('audit/BROWSER-LIVE-API.json');
+const accountLive=readJson('audit/ACCOUNT-LIVE-E2E.json');
+const browserAccount=readJson('audit/BROWSER-ACCOUNT-LIVE.json');
 const browserSmoke=readJson('audit/BROWSER-SMOKE.json');
 const gameplay=readJson('audit/BROWSER-GAMEPLAY-E2E.json');
 const apiConfig=fs.readFileSync(path.join(ROOT,'r41-api-config.js'),'utf8');
@@ -59,6 +61,18 @@ pass(browserLive.backendStatus?.cors==='https://kaalflash12.github.io','CORS Git
 pass(Array.isArray(browserLive.pageErrors)&&browserLive.pageErrors.length===0,'browser live possui exceções JS');
 pass(Array.isArray(browserLive.failures)&&browserLive.failures.length===0,'browser live possui falhas');
 
+pass(accountLive.ok===true&&accountLive.status==='PASS_ACCOUNT_LIVE_E2E','contas Cloudflare/MongoDB sem PASS_ACCOUNT_LIVE_E2E');
+pass(accountLive.backend==='cloudflare-workers-mongodb-atlas','evidência de conta não usa Cloudflare/MongoDB Atlas');
+const accountRequired=['apiOriginConfigured','backendStatus','mongodbAtlas','durableObjects','register','meAfterRegister','saveMongo','logout','loginByUsername','rotateRecoveryCode','recoverPassword','oldPasswordRejected','loginAfterRecovery','saveSurvivesRelogin','deleteSave','deleteAccount','deletedAccountRejected'];
+for(const key of accountRequired)pass(accountLive.checks?.[key]===true,`gate de conta Cloudflare/MongoDB ausente: ${key}`);
+
+pass(browserAccount.ok===true&&browserAccount.status==='PASS_BROWSER_ACCOUNT_LIVE','browser de conta Cloudflare/MongoDB sem PASS');
+pass(browserAccount.backend==='cloudflare-workers-mongodb-atlas','browser de conta não confirmou Cloudflare/MongoDB Atlas');
+const browserAccountRequired=['publicAccountUiLoaded','cloudflareBackendSelected','registerUi','sessionPersistsReload','accountButtonVisibleAfterReload','logoutUi','loginUi','deleteUi'];
+for(const key of browserAccountRequired)pass(browserAccount.checks?.[key]===true,`gate browser de conta ausente: ${key}`);
+pass(Array.isArray(browserAccount.pageErrors)&&browserAccount.pageErrors.length===0,'browser de conta possui exceções JS');
+pass(Array.isArray(browserAccount.failures)&&browserAccount.failures.length===0,'browser de conta possui falhas');
+
 pass(gameplay.ok===true&&gameplay.status==='PASS_BROWSER_GAMEPLAY_E2E','gameplay Chromium E2E sem PASS');
 pass(Array.isArray(gameplay.contracts)&&gameplay.contracts.length>=11,'gameplay E2E não cobriu os contratos exigidos');
 pass(Array.isArray(gameplay.contracts)&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E'),'há contrato gameplay sem PASS_GAMEPLAY_E2E');
@@ -70,7 +84,8 @@ pass(!/vercel/i.test(apiConfig),'r41-api-config ainda contém Vercel');
 pass(apiConfig.includes('NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB'),'identidade Cloudflare+MongoDB ausente da configuração');
 const baked=apiConfig.match(/const baked = "([^"]*)"/)?.[1]||'';
 pass(/^https:\/\/[^/]+\.workers\.dev$/i.test(baked),'Worker verificado ainda não foi gravado em r41-api-config.js');
-pass(!/supabase-edge-postgres/i.test(githubApi),'r41-github-api ainda identifica Supabase');
+pass(!/supabase/i.test(githubApi),'r41-github-api ainda contém Supabase');
+pass(!/vercel/i.test(githubApi),'r41-github-api ainda contém Vercel');
 pass(githubApi.includes('cloudflare-mongodb-durable-objects'),'r41-github-api não identifica Cloudflare+MongoDB+Durable Objects');
 
 const report={
@@ -83,7 +98,8 @@ const report={
   gates:{
     canonical:canonical.status||null,documentation:documentation.status||null,operationalStatic:operational.status||null,
     assetPaths:operational.assetAudit?.status||null,browserSmoke:browserSmoke.status||null,
-    liveBackend:live.status||null,browserLive:browserLive.status||null,gameplay:gameplay.status||null
+    liveBackend:live.status||null,browserLive:browserLive.status||null,
+    accountLive:accountLive.status||null,browserAccount:browserAccount.status||null,gameplay:gameplay.status||null
   },
   coverage:{
     functions:canonical.counts?.functions,functionsWithExactCode:canonical.counts?.functionsWithExactCode,
@@ -93,7 +109,7 @@ const report={
     uniqueAssetReferences:documentation.staticCoverage?.uniqueAssetReferences,
     missingLiteralAssetReferences:documentation.staticCoverage?.missingLiteralAssetReferences
   },
-  liveChecks:live.checks||{},gameplayContracts:gameplay.contracts||[],failures
+  liveChecks:live.checks||{},accountChecks:accountLive.checks||{},browserAccountChecks:browserAccount.checks||{},gameplayContracts:gameplay.contracts||[],failures
 };
 
 fs.mkdirSync(path.join(ROOT,'audit'),{recursive:true});
