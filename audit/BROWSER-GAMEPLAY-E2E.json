@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-23T02:02:52.439Z",
+  "generatedAt": "2026-08-23T02:08:01.895Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt55w7q4lcaql",
-  "slotId": "gameplay-mt55w7q4",
+  "temporaryAccount": "play_mt563g0d6x6nv",
+  "slotId": "gameplay-mt563g0d",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,8 +15,12 @@
   "contracts": [],
   "evidence": {},
   "pageErrors": [],
-  "consoleErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
   "failures": [
-    "Error: ACCOUNT_SLOT_NOT_RENDERED gameplay-mt55w7q4: {\"slot\":\"gameplay-mt55w7q4\",\"title\":\"NARUTO SHINOBI NO SHO • TERION 2D10\",\"r41\":\"R41-MD-OPERACIONAL-APLICADO-2026-08-17\",\"auth\":true,\"mainNav\":\"\",\"screen\":\"◉\\nSHINOBI NO SHO\\nR40\\nTERION 2D10\\nEntre no seu\\nmundo shinobi.\\n\\nCampanhas separadas por conta, personagens persistentes, mundo vivo, missões, combate tático e Mestre IA sob controle do motor.\\n\\nNaruto Uzumaki\\nKONOHA\\nSasuke Uchiha\\nUCHIHA\\nSakura Haruno\\nKUNOICHI\\nKakashi Hatake\\nJŌNIN\\nGaara\\nSUNA\\n2D10 UNIFICADO\\nSAVE POR CONTA\\nNPCS COM ROTINA\\nCAMPO 12×12\\nACESSO SEGURO\\nContinuar campanha\\nR40\\nEntrar\\nCriar conta\\n\\nEntre para acessar somente os personagens e saves desta conta.\\n\\nUSUÁRIO\\nSENHA\\nEntrar na campanha\\nSeus saves permanecem isolados por conta.\\nLeon continua privado e não aparece na seleção pública.\",\"controls\":[{\"tag\":\"BUTTON\",\"action\":\"save\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"💾 Salvar agora\"},{\"tag\":\"BUTTON\",\"action\":\"toggle-menu\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"☰\"},{\"tag\":\"BUTTON\",\"action\":\"fullscreen\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"⛶\"},{\"tag\":\"BUTTON\",\"action\":\"auth-mode\",\"id\":\"login\",\"slotId\":null,\"slot\":null,\"text\":\"Entrar\"},{\"tag\":\"BUTTON\",\"action\":\"auth-mode\",\"id\":\"register\",\"slotId\":null,\"slot\":null,\"text\":\"Criar conta\"},{\"tag\":\"BUTTON\",\"action\":\"auth-submit\",\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"Entrar na campanha\"},{\"tag\":\"BUTTON\",\"action\":null,\"id\":null,\"slotId\":null,\"slot\":null,\"text\":\"Conta: Gameplay E2E\"}]}\n    at seedNormal (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450529574.mjs:216:11)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450529574.mjs:450:5"
+    "ReferenceError: localStorage is not defined\n    at seedNormal (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450866888.mjs:233:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787450866888.mjs:450:5"
   ]
 }
