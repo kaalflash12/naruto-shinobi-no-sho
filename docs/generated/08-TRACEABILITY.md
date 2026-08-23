@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-23T13:11:41.150Z`
+Gerado em: `2026-08-23T20:01:16.411Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -838,327 +838,328 @@ Gerado em: `2026-08-23T13:11:41.150Z`
 | FUNC-00830 | função | `validEmail` | `cloudflare/r41-api/src/entry-authoritative.js:21` | game-runtime / STATICALLY_TRACED |
 | FUNC-00831 | função | `copyRequest` | `cloudflare/r41-api/src/entry-authoritative.js:22` | game-runtime / STATICALLY_TRACED |
 | FUNC-00832 | função | `ensureAuthorityIndexes` | `cloudflare/r41-api/src/entry-authoritative.js:23` | game-runtime / STATICALLY_TRACED |
-| FUNC-00833 | função | `db` | `cloudflare/r41-api/src/entry-authoritative.js:37` | game-runtime / STATICALLY_TRACED |
-| FUNC-00834 | função | `cloneBounded` | `cloudflare/r41-api/src/entry-authoritative.js:42` | game-runtime / STATICALLY_TRACED |
-| FUNC-00835 | função | `mechanicalCharacterSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:47` | game-runtime / STATICALLY_TRACED |
-| FUNC-00836 | função | `profileKeyFor` | `cloudflare/r41-api/src/entry-authoritative.js:52` | game-runtime / STATICALLY_TRACED |
-| FUNC-00837 | função | `mechanicalProfileFromSave` | `cloudflare/r41-api/src/entry-authoritative.js:56` | game-runtime / STATICALLY_TRACED |
-| FUNC-00838 | função | `seedMechanicalProfile` | `cloudflare/r41-api/src/entry-authoritative.js:61` | game-runtime / STATICALLY_TRACED |
-| FUNC-00839 | função | `lockedMechanicalProfile` | `cloudflare/r41-api/src/entry-authoritative.js:66` | game-runtime / STATICALLY_TRACED |
-| FUNC-00840 | função | `matchingSave` | `cloudflare/r41-api/src/entry-authoritative.js:74` | game-runtime / STATICALLY_TRACED |
-| FUNC-00841 | função | `trustedProfile` | `cloudflare/r41-api/src/entry-authoritative.js:81` | game-runtime / STATICALLY_TRACED |
-| FUNC-00842 | função | `trustedCharacter` | `cloudflare/r41-api/src/entry-authoritative.js:85` | game-runtime / STATICALLY_TRACED |
-| FUNC-00843 | função | `account` | `cloudflare/r41-api/src/entry-authoritative.js:86` | game-runtime / STATICALLY_TRACED |
-| FUNC-00844 | função | `augmentAccountEmail` | `cloudflare/r41-api/src/entry-authoritative.js:87` | game-runtime / STATICALLY_TRACED |
-| FUNC-00845 | função | `emailAwareAuth` | `cloudflare/r41-api/src/entry-authoritative.js:88` | game-runtime / STATICALLY_TRACED |
-| FUNC-00846 | função | `publicCharacterSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:99` | game-runtime / STATICALLY_TRACED |
-| FUNC-00847 | função | `authoritativeMembership` | `cloudflare/r41-api/src/entry-authoritative.js:100` | game-runtime / STATICALLY_TRACED |
-| FUNC-00848 | função | `roomSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:105` | game-runtime / STATICALLY_TRACED |
-| FUNC-00849 | função | `actionType` | `cloudflare/r41-api/src/entry-authoritative.js:106` | game-runtime / STATICALLY_TRACED |
-| FUNC-00850 | função | `serverActionType` | `cloudflare/r41-api/src/entry-authoritative.js:107` | game-runtime / STATICALLY_TRACED |
-| FUNC-00851 | função | `authoritativeAction` | `cloudflare/r41-api/src/entry-authoritative.js:108` | game-runtime / STATICALLY_TRACED |
-| FUNC-00852 | função | `authoritativeWorld` | `cloudflare/r41-api/src/entry-authoritative.js:116` | game-runtime / STATICALLY_TRACED |
-| FUNC-00853 | função | `authoritativeLeaderboard` | `cloudflare/r41-api/src/entry-authoritative.js:121` | game-runtime / STATICALLY_TRACED |
-| FUNC-00854 | função | `authoritativeAccountDelete` | `cloudflare/r41-api/src/entry-authoritative.js:125` | game-runtime / STATICALLY_TRACED |
-| FUNC-00855 | função | `status` | `cloudflare/r41-api/src/entry-authoritative.js:126` | game-runtime / STATICALLY_TRACED |
-| FUNC-00856 | função | `safeEqual` | `cloudflare/r41-api/src/entry.js:11` | game-runtime / STATICALLY_TRACED |
-| FUNC-00857 | função | `b64url` | `cloudflare/r41-api/src/entry.js:12` | game-runtime / STATICALLY_TRACED |
-| FUNC-00858 | função | `randomBytes` | `cloudflare/r41-api/src/entry.js:13` | game-runtime / STATICALLY_TRACED |
-| FUNC-00859 | função | `randomSecret` | `cloudflare/r41-api/src/entry.js:14` | game-runtime / STATICALLY_TRACED |
-| FUNC-00860 | função | `hashPassword` | `cloudflare/r41-api/src/entry.js:15` | game-runtime / STATICALLY_TRACED |
-| FUNC-00861 | função | `cors` | `cloudflare/r41-api/src/entry.js:16` | game-runtime / STATICALLY_TRACED |
-| FUNC-00862 | função | `json` | `cloudflare/r41-api/src/entry.js:17` | game-runtime / STATICALLY_TRACED |
-| FUNC-00863 | função | `fingerprint` | `cloudflare/r41-api/src/entry.js:18` | game-runtime / STATICALLY_TRACED |
-| FUNC-00864 | função | `guardDb` | `cloudflare/r41-api/src/entry.js:19` | game-runtime / STATICALLY_TRACED |
-| FUNC-00865 | função | `currentAccount` | `cloudflare/r41-api/src/entry.js:20` | game-runtime / STATICALLY_TRACED |
-| FUNC-00866 | função | `rememberMembership` | `cloudflare/r41-api/src/entry.js:21` | game-runtime / STATICALLY_TRACED |
-| FUNC-00867 | função | `hasMembership` | `cloudflare/r41-api/src/entry.js:22` | game-runtime / STATICALLY_TRACED |
-| FUNC-00868 | função | `touchMembership` | `cloudflare/r41-api/src/entry.js:23` | game-runtime / STATICALLY_TRACED |
-| FUNC-00869 | função | `mechanicalClaim` | `cloudflare/r41-api/src/entry.js:26` | game-runtime / STATICALLY_TRACED |
-| FUNC-00870 | função | `actionType` | `cloudflare/r41-api/src/entry.js:27` | game-runtime / STATICALLY_TRACED |
-| FUNC-00871 | função | `actionLooksLikeOutcome` | `cloudflare/r41-api/src/entry.js:28` | game-runtime / STATICALLY_TRACED |
-| FUNC-00872 | função | `guardedOnline` | `cloudflare/r41-api/src/entry.js:30` | game-runtime / STATICALLY_TRACED |
-| FUNC-00873 | função | `remapIdentifier` | `cloudflare/r41-api/src/entry.js:50` | game-runtime / STATICALLY_TRACED |
-| FUNC-00874 | função | `accountExtension` | `cloudflare/r41-api/src/entry.js:58` | game-runtime / STATICALLY_TRACED |
-| FUNC-00875 | função | `claimLeon` | `cloudflare/r41-api/src/entry.js:85` | game-runtime / STATICALLY_TRACED |
-| FUNC-00876 | função | `aiRoute` | `cloudflare/r41-api/src/entry.js:106` | game-runtime / STATICALLY_TRACED |
-| FUNC-00877 | função | `statusRoute` | `cloudflare/r41-api/src/entry.js:115` | game-runtime / STATICALLY_TRACED |
-| FUNC-00878 | função | `mapWorldTick` | `cloudflare/r41-api/src/entry.js:125` | game-runtime / STATICALLY_TRACED |
-| FUNC-00879 | função | `fetch` | `cloudflare/r41-api/src/entry.js:133` | game-runtime / STATICALLY_TRACED |
-| FUNC-00880 | função | `b64url` | `cloudflare/r41-api/src/index.js:13` | game-runtime / STATICALLY_TRACED |
-| FUNC-00881 | função | `unb64url` | `cloudflare/r41-api/src/index.js:14` | game-runtime / STATICALLY_TRACED |
-| FUNC-00882 | função | `hmac` | `cloudflare/r41-api/src/index.js:15` | game-runtime / STATICALLY_TRACED |
-| FUNC-00883 | função | `timingSafe` | `cloudflare/r41-api/src/index.js:16` | game-runtime / STATICALLY_TRACED |
-| FUNC-00884 | função | `hashPassword` | `cloudflare/r41-api/src/index.js:17` | game-runtime / STATICALLY_TRACED |
-| FUNC-00885 | função | `randomBytes` | `cloudflare/r41-api/src/index.js:18` | game-runtime / STATICALLY_TRACED |
-| FUNC-00886 | função | `randomSecret` | `cloudflare/r41-api/src/index.js:19` | game-runtime / STATICALLY_TRACED |
-| FUNC-00887 | função | `norm` | `cloudflare/r41-api/src/index.js:20` | game-runtime / STATICALLY_TRACED |
-| FUNC-00888 | função | `cleanText` | `cloudflare/r41-api/src/index.js:21` | game-runtime / STATICALLY_TRACED |
-| FUNC-00889 | função | `bearer` | `cloudflare/r41-api/src/index.js:22` | game-runtime / STATICALLY_TRACED |
-| FUNC-00890 | função | `plainId` | `cloudflare/r41-api/src/index.js:23` | game-runtime / STATICALLY_TRACED |
-| FUNC-00891 | função | `safeAccount` | `cloudflare/r41-api/src/index.js:24` | game-runtime / STATICALLY_TRACED |
-| FUNC-00892 | função | `cors` | `cloudflare/r41-api/src/index.js:25` | game-runtime / STATICALLY_TRACED |
-| FUNC-00893 | função | `reply` | `cloudflare/r41-api/src/index.js:26` | game-runtime / STATICALLY_TRACED |
-| FUNC-00894 | função | `bodyJson` | `cloudflare/r41-api/src/index.js:27` | game-runtime / STATICALLY_TRACED |
-| FUNC-00895 | função | `toObjectId` | `cloudflare/r41-api/src/index.js:28` | game-runtime / STATICALLY_TRACED |
-| FUNC-00896 | função | `nowIso` | `cloudflare/r41-api/src/index.js:29` | game-runtime / STATICALLY_TRACED |
-| FUNC-00897 | função | `roomId` | `cloudflare/r41-api/src/index.js:30` | game-runtime / STATICALLY_TRACED |
-| FUNC-00898 | função | `mongo` | `cloudflare/r41-api/src/index.js:32` | game-runtime / STATICALLY_TRACED |
-| FUNC-00899 | função | `ensureIndexes` | `cloudflare/r41-api/src/index.js:37` | game-runtime / STATICALLY_TRACED |
-| FUNC-00900 | função | `issueToken` | `cloudflare/r41-api/src/index.js:54` | game-runtime / STATICALLY_TRACED |
-| FUNC-00901 | função | `verifyToken` | `cloudflare/r41-api/src/index.js:55` | game-runtime / STATICALLY_TRACED |
-| FUNC-00902 | função | `requireUser` | `cloudflare/r41-api/src/index.js:56` | game-runtime / STATICALLY_TRACED |
-| FUNC-00903 | função | `revokeCurrent` | `cloudflare/r41-api/src/index.js:57` | game-runtime / STATICALLY_TRACED |
-| FUNC-00904 | função | `slotSummary` | `cloudflare/r41-api/src/index.js:58` | game-runtime / STATICALLY_TRACED |
-| FUNC-00905 | função | `clampSaveForStorage` | `cloudflare/r41-api/src/index.js:59` | game-runtime / STATICALLY_TRACED |
-| FUNC-00906 | função | `audit` | `cloudflare/r41-api/src/index.js:60` | game-runtime / STATICALLY_TRACED |
-| FUNC-00907 | função | `constructor` | `cloudflare/r41-api/src/index.js:63` | game-runtime / STATICALLY_TRACED |
-| FUNC-00908 | função | `read` | `cloudflare/r41-api/src/index.js:64` | game-runtime / STATICALLY_TRACED |
-| FUNC-00909 | função | `write` | `cloudflare/r41-api/src/index.js:65` | game-runtime / STATICALLY_TRACED |
-| FUNC-00910 | função | `liveMembers` | `cloudflare/r41-api/src/index.js:66` | game-runtime / STATICALLY_TRACED |
-| FUNC-00911 | função | `fetch` | `cloudflare/r41-api/src/index.js:67` | game-runtime / STATICALLY_TRACED |
-| FUNC-00912 | função | `roomCall` | `cloudflare/r41-api/src/index.js:81` | game-runtime / STATICALLY_TRACED |
-| FUNC-00913 | função | `roomJson` | `cloudflare/r41-api/src/index.js:82` | game-runtime / STATICALLY_TRACED |
-| FUNC-00914 | função | `aiRoute` | `cloudflare/r41-api/src/index.js:84` | game-runtime / STATICALLY_TRACED |
-| FUNC-00915 | função | `num` | `cloudflare/r41-api/src/terion-mechanics.js:14` | game-runtime / STATICALLY_TRACED |
-| FUNC-00916 | função | `clamp` | `cloudflare/r41-api/src/terion-mechanics.js:15` | game-runtime / STATICALLY_TRACED |
-| FUNC-00917 | função | `canonicalAttribute` | `cloudflare/r41-api/src/terion-mechanics.js:17` | game-runtime / STATICALLY_TRACED |
-| FUNC-00918 | função | `characterModifier` | `cloudflare/r41-api/src/terion-mechanics.js:23` | game-runtime / STATICALLY_TRACED |
-| FUNC-00919 | função | `serverDifficulty` | `cloudflare/r41-api/src/terion-mechanics.js:34` | game-runtime / STATICALLY_TRACED |
-| FUNC-00920 | função | `classifyTerionRoll` | `cloudflare/r41-api/src/terion-mechanics.js:40` | game-runtime / STATICALLY_TRACED |
-| FUNC-00921 | função | `d10` | `cloudflare/r41-api/src/terion-mechanics.js:48` | game-runtime / STATICALLY_TRACED |
-| FUNC-00922 | função | `resolveTerionIntent` | `cloudflare/r41-api/src/terion-mechanics.js:50` | game-runtime / STATICALLY_TRACED |
-| FUNC-00923 | função | `mechanicalKey` | `cloudflare/r41-api/src/terion-mechanics.js:60` | game-runtime / STATICALLY_TRACED |
-| FUNC-00924 | função | `blockedClientKey` | `cloudflare/r41-api/src/terion-mechanics.js:63` | game-runtime / STATICALLY_TRACED |
-| FUNC-00925 | função | `hasClientResult` | `cloudflare/r41-api/src/terion-mechanics.js:65` | game-runtime / STATICALLY_TRACED |
-| FUNC-00926 | função | `stripClientMechanical` | `cloudflare/r41-api/src/terion-mechanics.js:79` | game-runtime / STATICALLY_TRACED |
-| FUNC-00927 | função | `trainer` | `data/v84-integrated-config.js:4` | game-runtime / STATICALLY_TRACED |
-| FUNC-00928 | função | `openOnce` | `r41-account-deeplink-fix.js:9` | game-runtime / STATICALLY_TRACED |
-| FUNC-00929 | função | `esc` | `r41-account-ui.js:5` | game-runtime / STATICALLY_TRACED |
-| FUNC-00930 | função | `errorText` | `r41-account-ui.js:6` | game-runtime / STATICALLY_TRACED |
-| FUNC-00931 | função | `style` | `r41-account-ui.js:7` | game-runtime / STATICALLY_TRACED |
-| FUNC-00932 | função | `ensureButton` | `r41-account-ui.js:16` | game-runtime / STATICALLY_TRACED |
-| FUNC-00933 | função | `updateButton` | `r41-account-ui.js:22` | game-runtime / STATICALLY_TRACED |
-| FUNC-00934 | função | `field` | `r41-account-ui.js:23` | game-runtime / STATICALLY_TRACED |
-| FUNC-00935 | função | `tabs` | `r41-account-ui.js:24` | game-runtime / STATICALLY_TRACED |
-| FUNC-00936 | função | `unauthBody` | `r41-account-ui.js:25` | game-runtime / STATICALLY_TRACED |
-| FUNC-00937 | função | `authBody` | `r41-account-ui.js:26` | game-runtime / STATICALLY_TRACED |
-| FUNC-00938 | função | `render` | `r41-account-ui.js:27` | game-runtime / STATICALLY_TRACED |
-| FUNC-00939 | função | `values` | `r41-account-ui.js:28` | game-runtime / STATICALLY_TRACED |
-| FUNC-00940 | função | `submitLogin` | `r41-account-ui.js:29` | game-runtime / STATICALLY_TRACED |
-| FUNC-00941 | função | `submitRegister` | `r41-account-ui.js:30` | game-runtime / STATICALLY_TRACED |
-| FUNC-00942 | função | `submitRecover` | `r41-account-ui.js:31` | game-runtime / STATICALLY_TRACED |
-| FUNC-00943 | função | `logout` | `r41-account-ui.js:32` | game-runtime / STATICALLY_TRACED |
-| FUNC-00944 | função | `newRecoveryCode` | `r41-account-ui.js:33` | game-runtime / STATICALLY_TRACED |
-| FUNC-00945 | função | `deleteAccount` | `r41-account-ui.js:34` | game-runtime / STATICALLY_TRACED |
-| FUNC-00946 | função | `close` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
-| FUNC-00947 | função | `open` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
-| FUNC-00948 | função | `boot` | `r41-account-ui.js:37` | game-runtime / STATICALLY_TRACED |
-| FUNC-00949 | função | `apiOrigin` | `r41-github-api.js:8` | game-runtime / STATICALLY_TRACED |
-| FUNC-00950 | função | `token` | `r41-github-api.js:11` | game-runtime / STATICALLY_TRACED |
-| FUNC-00951 | função | `setToken` | `r41-github-api.js:21` | game-runtime / STATICALLY_TRACED |
-| FUNC-00952 | função | `captureClaim` | `r41-github-api.js:31` | game-runtime / STATICALLY_TRACED |
-| FUNC-00953 | função | `mapTarget` | `r41-github-api.js:43` | game-runtime / STATICALLY_TRACED |
-| FUNC-00954 | função | `withAuth` | `r41-github-api.js:55` | game-runtime / STATICALLY_TRACED |
-| FUNC-00955 | função | `applyLeonClaim` | `r41-github-api.js:65` | game-runtime / STATICALLY_TRACED |
-| FUNC-00956 | função | `request` | `r41-github-api.js:111` | game-runtime / STATICALLY_TRACED |
-| FUNC-00957 | função | `register` | `r41-github-api.js:128` | game-runtime / STATICALLY_TRACED |
-| FUNC-00958 | função | `login` | `r41-github-api.js:135` | game-runtime / STATICALLY_TRACED |
-| FUNC-00959 | função | `me` | `r41-github-api.js:142` | game-runtime / STATICALLY_TRACED |
-| FUNC-00960 | função | `logout` | `r41-github-api.js:153` | game-runtime / STATICALLY_TRACED |
-| FUNC-00961 | função | `recover` | `r41-github-api.js:160` | game-runtime / STATICALLY_TRACED |
-| FUNC-00962 | função | `generateRecoveryCode` | `r41-github-api.js:164` | game-runtime / STATICALLY_TRACED |
-| FUNC-00963 | função | `deleteAccount` | `r41-github-api.js:167` | game-runtime / STATICALLY_TRACED |
-| FUNC-00964 | função | `slug` | `src/r41-canonical-repair.js:28` | game-runtime / STATICALLY_TRACED |
-| FUNC-00965 | função | `normalize` | `src/r41-core-bundle.js:5` | game-runtime / STATICALLY_TRACED |
-| FUNC-00966 | função | `getJson` | `src/r41-core-bundle.js:6` | game-runtime / STATICALLY_TRACED |
-| FUNC-00967 | função | `indexManifest` | `src/r41-core-bundle.js:7` | game-runtime / STATICALLY_TRACED |
-| FUNC-00968 | função | `init` | `src/r41-core-bundle.js:14` | game-runtime / STATICALLY_TRACED |
-| FUNC-00969 | função | `resolve` | `src/r41-core-bundle.js:25` | game-runtime / STATICALLY_TRACED |
-| FUNC-00970 | função | `auditKnown` | `src/r41-core-bundle.js:42` | game-runtime / STATICALLY_TRACED |
-| FUNC-00971 | função | `normalize` | `src/r41-core-bundle.js:51` | game-runtime / STATICALLY_TRACED |
-| FUNC-00972 | função | `fromCombatResult` | `src/r41-core-bundle.js:52` | game-runtime / STATICALLY_TRACED |
-| FUNC-00973 | função | `validateEvent` | `src/r41-core-bundle.js:63` | game-runtime / STATICALLY_TRACED |
-| FUNC-00974 | função | `clone` | `src/r41-core-bundle.js:70` | game-runtime / STATICALLY_TRACED |
-| FUNC-00975 | função | `ensure` | `src/r41-core-bundle.js:71` | game-runtime / STATICALLY_TRACED |
-| FUNC-00976 | função | `apply` | `src/r41-core-bundle.js:72` | game-runtime / STATICALLY_TRACED |
-| FUNC-00977 | função | `validate` | `src/r41-core-bundle.js:73` | game-runtime / STATICALLY_TRACED |
-| FUNC-00978 | função | `fromResult` | `src/r41-core-bundle.js:78` | game-runtime / STATICALLY_TRACED |
-| FUNC-00979 | função | `validate` | `src/r41-core-bundle.js:79` | game-runtime / STATICALLY_TRACED |
-| FUNC-00980 | função | `norm` | `src/r41-core-bundle.js:84` | game-runtime / STATICALLY_TRACED |
-| FUNC-00981 | função | `kindOf` | `src/r41-core-bundle.js:85` | game-runtime / STATICALLY_TRACED |
-| FUNC-00982 | função | `apply` | `src/r41-core-bundle.js:86` | game-runtime / STATICALLY_TRACED |
-| FUNC-00983 | função | `validate` | `src/r41-core-bundle.js:87` | game-runtime / STATICALLY_TRACED |
-| FUNC-00984 | função | `norm` | `src/r41-core-bundle.js:94` | game-runtime / STATICALLY_TRACED |
-| FUNC-00985 | função | `register` | `src/r41-core-bundle.js:95` | game-runtime / STATICALLY_TRACED |
-| FUNC-00986 | função | `get` | `src/r41-core-bundle.js:96` | game-runtime / STATICALLY_TRACED |
-| FUNC-00987 | função | `infer` | `src/r41-core-bundle.js:97` | game-runtime / STATICALLY_TRACED |
-| FUNC-00988 | função | `clamp` | `src/r41-core-bundle.js:115` | game-runtime / STATICALLY_TRACED |
-| FUNC-00989 | função | `normalizeResult` | `src/r41-core-bundle.js:116` | game-runtime / STATICALLY_TRACED |
-| FUNC-00990 | função | `terionModifier` | `src/r41-core-bundle.js:120` | game-runtime / STATICALLY_TRACED |
-| FUNC-00991 | função | `trainingResult` | `src/r41-core-bundle.js:126` | game-runtime / STATICALLY_TRACED |
-| FUNC-00992 | função | `normalizeScene` | `src/r41-core-bundle.js:137` | game-runtime / STATICALLY_TRACED |
-| FUNC-00993 | função | `fromMissionStage` | `src/r41-core-bundle.js:141` | game-runtime / STATICALLY_TRACED |
-| FUNC-00994 | função | `shouldSave` | `src/r41-core-bundle.js:149` | game-runtime / STATICALLY_TRACED |
-| FUNC-00995 | função | `record` | `src/r41-core-bundle.js:150` | game-runtime / STATICALLY_TRACED |
-| FUNC-00996 | função | `boot` | `src/r41-core-bundle.js:160` | game-runtime / STATICALLY_TRACED |
-| FUNC-00997 | função | `repair` | `src/r41-final-ui-repair.js:12` | game-runtime / STATICALLY_TRACED |
-| FUNC-00998 | função | `schedule` | `src/r41-final-ui-repair.js:19` | game-runtime / STATICALLY_TRACED |
-| FUNC-00999 | função | `localProgressKeys` | `src/r41-local-reset-fix.js:20` | game-runtime / STATICALLY_TRACED |
-| FUNC-01000 | função | `resetLocalProgress` | `src/r41-local-reset-fix.js:30` | game-runtime / STATICALLY_TRACED |
-| FUNC-01001 | função | `ok` | `tools/account-live-e2e.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-01002 | função | `call` | `tools/account-live-e2e.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01003 | função | `write` | `tools/account-live-e2e.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01004 | função | `fail` | `tools/audit-documentation-coverage.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01005 | função | `warn` | `tools/audit-documentation-coverage.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-01006 | função | `exists` | `tools/audit-documentation-coverage.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01007 | função | `norm` | `tools/audit-documentation-coverage.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-01008 | função | `isDoc` | `tools/audit-documentation-coverage.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-01009 | função | `isTooling` | `tools/audit-documentation-coverage.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-01010 | função | `isGameRuntime` | `tools/audit-documentation-coverage.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-01011 | função | `auditGameGrouped` | `tools/audit-documentation-coverage.mjs:37` | tooling / STATICALLY_TRACED |
-| FUNC-01012 | função | `sha256` | `tools/audit-final-canonical-spec.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01013 | função | `walk` | `tools/audit-r41-assets.mjs:17` | tooling / STATICALLY_TRACED |
-| FUNC-01014 | função | `cleanRef` | `tools/audit-r41-assets.mjs:26` | tooling / STATICALLY_TRACED |
-| FUNC-01015 | função | `isDynamic` | `tools/audit-r41-assets.mjs:31` | tooling / STATICALLY_TRACED |
-| FUNC-01016 | função | `addRef` | `tools/audit-r41-assets.mjs:32` | tooling / STATICALLY_TRACED |
-| FUNC-01017 | função | `assert` | `tools/browser-account-live.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01018 | função | `readSaveV2` | `tools/browser-gameplay-e2e-v2.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-01019 | função | `tryParse` | `tools/browser-gameplay-e2e-v2.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-01020 | função | `registerV2` | `tools/browser-gameplay-e2e-v2.mjs:48` | tooling / STATICALLY_TRACED |
-| FUNC-01021 | função | `seedNormalV2` | `tools/browser-gameplay-e2e-v2.mjs:66` | tooling / STATICALLY_TRACED |
-| FUNC-01022 | função | `navigateV2` | `tools/browser-gameplay-e2e-v2.mjs:165` | tooling / STATICALLY_TRACED |
-| FUNC-01023 | função | `seedNormalV3` | `tools/browser-gameplay-e2e-v3.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01024 | função | `assert` | `tools/browser-gameplay-e2e.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-01025 | função | `pass` | `tools/browser-gameplay-e2e.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-01026 | função | `contract` | `tools/browser-gameplay-e2e.mjs:20` | tooling / STATICALLY_TRACED |
-| FUNC-01027 | função | `sleep` | `tools/browser-gameplay-e2e.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01028 | função | `normalFixture` | `tools/browser-gameplay-e2e.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-01029 | função | `leonFixture` | `tools/browser-gameplay-e2e.mjs:55` | tooling / STATICALLY_TRACED |
-| FUNC-01030 | função | `readSave` | `tools/browser-gameplay-e2e.mjs:65` | tooling / STATICALLY_TRACED |
-| FUNC-01031 | função | `r41State` | `tools/browser-gameplay-e2e.mjs:66` | tooling / STATICALLY_TRACED |
-| FUNC-01032 | função | `masterState` | `tools/browser-gameplay-e2e.mjs:67` | tooling / STATICALLY_TRACED |
-| FUNC-01033 | função | `navigate` | `tools/browser-gameplay-e2e.mjs:68` | tooling / STATICALLY_TRACED |
-| FUNC-01034 | função | `playVisibleMinigame` | `tools/browser-gameplay-e2e.mjs:70` | tooling / STATICALLY_TRACED |
-| FUNC-01035 | função | `register` | `tools/browser-gameplay-e2e.mjs:89` | tooling / STATICALLY_TRACED |
-| FUNC-01036 | função | `seedNormal` | `tools/browser-gameplay-e2e.mjs:107` | tooling / STATICALLY_TRACED |
-| FUNC-01037 | função | `testNormalGameplay` | `tools/browser-gameplay-e2e.mjs:118` | tooling / STATICALLY_TRACED |
-| FUNC-01038 | função | `testKurai` | `tools/browser-gameplay-e2e.mjs:283` | tooling / STATICALLY_TRACED |
-| FUNC-01039 | função | `cleanupAccount` | `tools/browser-gameplay-e2e.mjs:308` | tooling / STATICALLY_TRACED |
-| FUNC-01040 | função | `assert` | `tools/browser-live-api.mjs:10` | tooling / STATICALLY_TRACED |
-| FUNC-01041 | função | `fail` | `tools/browser-smoke.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01042 | função | `assert` | `tools/browser-smoke.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-01043 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-01044 | função | `norm` | `tools/build-final-canonical-spec.mjs:20` | tooling / STATICALLY_TRACED |
-| FUNC-01045 | função | `isDocs` | `tools/build-final-canonical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01046 | função | `isSource` | `tools/build-final-canonical-spec.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-01047 | função | `esc` | `tools/build-final-canonical-spec.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-01048 | função | `code` | `tools/build-final-canonical-spec.mjs:24` | tooling / STATICALLY_TRACED |
-| FUNC-01049 | função | `fence` | `tools/build-final-canonical-spec.mjs:25` | tooling / STATICALLY_TRACED |
-| FUNC-01050 | função | `langFor` | `tools/build-final-canonical-spec.mjs:26` | tooling / STATICALLY_TRACED |
-| FUNC-01051 | função | `lineLocator` | `tools/build-final-canonical-spec.mjs:31` | tooling / STATICALLY_TRACED |
-| FUNC-01052 | função | `blockEnd` | `tools/build-final-canonical-spec.mjs:41` | tooling / STATICALLY_TRACED |
-| FUNC-01053 | função | `snippetAt` | `tools/build-final-canonical-spec.mjs:62` | tooling / STATICALLY_TRACED |
-| FUNC-01054 | função | `scanFunctions` | `tools/build-final-canonical-spec.mjs:72` | tooling / STATICALLY_TRACED |
-| FUNC-01055 | função | `actionHandlerEvidence` | `tools/build-final-canonical-spec.mjs:126` | tooling / STATICALLY_TRACED |
-| FUNC-01056 | função | `gate` | `tools/build-final-canonical-spec.mjs:175` | tooling / STATICALLY_TRACED |
-| FUNC-01057 | função | `pass` | `tools/final-readiness.mjs:7` | tooling / STATICALLY_TRACED |
-| FUNC-01058 | função | `readJson` | `tools/final-readiness.mjs:8` | tooling / STATICALLY_TRACED |
-| FUNC-01059 | função | `walk` | `tools/finalize-canonical-ui-trace.mjs:26` | tooling / STATICALLY_TRACED |
-| FUNC-01060 | função | `reEsc` | `tools/finalize-canonical-ui-trace.mjs:40` | tooling / STATICALLY_TRACED |
-| FUNC-01061 | função | `lineAt` | `tools/finalize-canonical-ui-trace.mjs:41` | tooling / STATICALLY_TRACED |
-| FUNC-01062 | função | `occurrences` | `tools/finalize-canonical-ui-trace.mjs:46` | tooling / STATICALLY_TRACED |
-| FUNC-01063 | função | `uniqEvidence` | `tools/finalize-canonical-ui-trace.mjs:55` | tooling / STATICALLY_TRACED |
-| FUNC-01064 | função | `aliasesForDatasetAction` | `tools/finalize-canonical-ui-trace.mjs:65` | tooling / STATICALLY_TRACED |
-| FUNC-01065 | função | `handlerEvidence` | `tools/finalize-canonical-ui-trace.mjs:73` | tooling / STATICALLY_TRACED |
-| FUNC-01066 | função | `px` | `tools/generate-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-01067 | função | `rel` | `tools/generate-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-01068 | função | `code` | `tools/generate-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-01069 | função | `clean` | `tools/generate-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-01070 | função | `uniq` | `tools/generate-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
-| FUNC-01071 | função | `ident` | `tools/generate-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-01072 | função | `hash` | `tools/generate-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-01073 | função | `walk` | `tools/generate-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01074 | função | `lineLocator` | `tools/generate-technical-spec.mjs:32` | tooling / STATICALLY_TRACED |
-| FUNC-01075 | função | `readText` | `tools/generate-technical-spec.mjs:42` | tooling / STATICALLY_TRACED |
-| FUNC-01076 | função | `blockEnd` | `tools/generate-technical-spec.mjs:48` | tooling / STATICALLY_TRACED |
-| FUNC-01077 | função | `bodyAt` | `tools/generate-technical-spec.mjs:69` | tooling / STATICALLY_TRACED |
-| FUNC-01078 | função | `captures` | `tools/generate-technical-spec.mjs:75` | tooling / STATICALLY_TRACED |
-| FUNC-01079 | função | `refs` | `tools/generate-technical-spec.mjs:81` | tooling / STATICALLY_TRACED |
-| FUNC-01080 | função | `extractFunctions` | `tools/generate-technical-spec.mjs:99` | tooling / STATICALLY_TRACED |
-| FUNC-01081 | função | `add` | `tools/generate-technical-spec.mjs:149` | tooling / STATICALLY_TRACED |
-| FUNC-01082 | função | `grouped` | `tools/generate-technical-spec.mjs:163` | tooling / STATICALLY_TRACED |
-| FUNC-01083 | função | `header` | `tools/generate-technical-spec.mjs:216` | tooling / STATICALLY_TRACED |
-| FUNC-01084 | função | `sources` | `tools/generate-technical-spec.mjs:217` | tooling / STATICALLY_TRACED |
-| FUNC-01085 | função | `listCodes` | `tools/generate-technical-spec.mjs:218` | tooling / STATICALLY_TRACED |
-| FUNC-01086 | função | `assert` | `tools/live-worker-e2e.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-01087 | função | `record` | `tools/live-worker-e2e.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01088 | função | `request` | `tools/live-worker-e2e.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-01089 | função | `safe` | `tools/live-worker-e2e.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-01090 | função | `writeReport` | `tools/live-worker-e2e.mjs:29` | tooling / STATICALLY_TRACED |
-| FUNC-01091 | função | `norm` | `tools/reconcile-asset-references.mjs:11` | tooling / STATICALLY_TRACED |
-| FUNC-01092 | função | `isDynamic` | `tools/reconcile-asset-references.mjs:12` | tooling / STATICALLY_TRACED |
-| FUNC-01093 | função | `existsLiteral` | `tools/reconcile-asset-references.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-01094 | função | `code` | `tools/reconcile-asset-references.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01095 | função | `srcs` | `tools/reconcile-asset-references.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-01096 | função | `norm` | `tools/refine-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
-| FUNC-01097 | função | `hasSourceExt` | `tools/refine-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
-| FUNC-01098 | função | `isDocumentation` | `tools/refine-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
-| FUNC-01099 | função | `isTooling` | `tools/refine-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
-| FUNC-01100 | função | `isSource` | `tools/refine-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
-| FUNC-01101 | função | `isGameRuntimeSource` | `tools/refine-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
-| FUNC-01102 | função | `domainOf` | `tools/refine-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
-| FUNC-01103 | função | `code` | `tools/refine-technical-spec.mjs:20` | tooling / STATICALLY_TRACED |
-| FUNC-01104 | função | `clean` | `tools/refine-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
-| FUNC-01105 | função | `srcs` | `tools/refine-technical-spec.mjs:22` | tooling / STATICALLY_TRACED |
-| FUNC-01106 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
-| FUNC-01107 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
-| FUNC-01108 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
-| API-00001 | API | `/api/account/delete` | `app.js:3544`, `cloudflare/oneclick-backend/src/index.js:72`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/index.js:108` | game-runtime / STATICALLY_TRACED |
+| FUNC-00833 | função | `db` | `cloudflare/r41-api/src/entry-authoritative.js:39` | game-runtime / STATICALLY_TRACED |
+| FUNC-00834 | função | `cloneBounded` | `cloudflare/r41-api/src/entry-authoritative.js:44` | game-runtime / STATICALLY_TRACED |
+| FUNC-00835 | função | `mechanicalCharacterSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:49` | game-runtime / STATICALLY_TRACED |
+| FUNC-00836 | função | `profileKeyFor` | `cloudflare/r41-api/src/entry-authoritative.js:54` | game-runtime / STATICALLY_TRACED |
+| FUNC-00837 | função | `mechanicalProfileFromSave` | `cloudflare/r41-api/src/entry-authoritative.js:58` | game-runtime / STATICALLY_TRACED |
+| FUNC-00838 | função | `seedMechanicalProfile` | `cloudflare/r41-api/src/entry-authoritative.js:63` | game-runtime / STATICALLY_TRACED |
+| FUNC-00839 | função | `lockedMechanicalProfile` | `cloudflare/r41-api/src/entry-authoritative.js:68` | game-runtime / STATICALLY_TRACED |
+| FUNC-00840 | função | `matchingSave` | `cloudflare/r41-api/src/entry-authoritative.js:76` | game-runtime / STATICALLY_TRACED |
+| FUNC-00841 | função | `trustedProfile` | `cloudflare/r41-api/src/entry-authoritative.js:83` | game-runtime / STATICALLY_TRACED |
+| FUNC-00842 | função | `trustedCharacter` | `cloudflare/r41-api/src/entry-authoritative.js:87` | game-runtime / STATICALLY_TRACED |
+| FUNC-00843 | função | `account` | `cloudflare/r41-api/src/entry-authoritative.js:88` | game-runtime / STATICALLY_TRACED |
+| FUNC-00844 | função | `augmentAccountEmail` | `cloudflare/r41-api/src/entry-authoritative.js:89` | game-runtime / STATICALLY_TRACED |
+| FUNC-00845 | função | `emailAwareAuth` | `cloudflare/r41-api/src/entry-authoritative.js:90` | game-runtime / STATICALLY_TRACED |
+| FUNC-00846 | função | `publicCharacterSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:101` | game-runtime / STATICALLY_TRACED |
+| FUNC-00847 | função | `authoritativeMembership` | `cloudflare/r41-api/src/entry-authoritative.js:102` | game-runtime / STATICALLY_TRACED |
+| FUNC-00848 | função | `roomSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:107` | game-runtime / STATICALLY_TRACED |
+| FUNC-00849 | função | `actionType` | `cloudflare/r41-api/src/entry-authoritative.js:108` | game-runtime / STATICALLY_TRACED |
+| FUNC-00850 | função | `serverActionType` | `cloudflare/r41-api/src/entry-authoritative.js:109` | game-runtime / STATICALLY_TRACED |
+| FUNC-00851 | função | `authoritativeAction` | `cloudflare/r41-api/src/entry-authoritative.js:110` | game-runtime / STATICALLY_TRACED |
+| FUNC-00852 | função | `authoritativeWorld` | `cloudflare/r41-api/src/entry-authoritative.js:118` | game-runtime / STATICALLY_TRACED |
+| FUNC-00853 | função | `authoritativeLeaderboard` | `cloudflare/r41-api/src/entry-authoritative.js:123` | game-runtime / STATICALLY_TRACED |
+| FUNC-00854 | função | `authoritativeSlotDelete` | `cloudflare/r41-api/src/entry-authoritative.js:127` | game-runtime / STATICALLY_TRACED |
+| FUNC-00855 | função | `authoritativeAccountDelete` | `cloudflare/r41-api/src/entry-authoritative.js:131` | game-runtime / STATICALLY_TRACED |
+| FUNC-00856 | função | `status` | `cloudflare/r41-api/src/entry-authoritative.js:132` | game-runtime / STATICALLY_TRACED |
+| FUNC-00857 | função | `safeEqual` | `cloudflare/r41-api/src/entry.js:11` | game-runtime / STATICALLY_TRACED |
+| FUNC-00858 | função | `b64url` | `cloudflare/r41-api/src/entry.js:12` | game-runtime / STATICALLY_TRACED |
+| FUNC-00859 | função | `randomBytes` | `cloudflare/r41-api/src/entry.js:13` | game-runtime / STATICALLY_TRACED |
+| FUNC-00860 | função | `randomSecret` | `cloudflare/r41-api/src/entry.js:14` | game-runtime / STATICALLY_TRACED |
+| FUNC-00861 | função | `hashPassword` | `cloudflare/r41-api/src/entry.js:15` | game-runtime / STATICALLY_TRACED |
+| FUNC-00862 | função | `cors` | `cloudflare/r41-api/src/entry.js:16` | game-runtime / STATICALLY_TRACED |
+| FUNC-00863 | função | `json` | `cloudflare/r41-api/src/entry.js:17` | game-runtime / STATICALLY_TRACED |
+| FUNC-00864 | função | `fingerprint` | `cloudflare/r41-api/src/entry.js:18` | game-runtime / STATICALLY_TRACED |
+| FUNC-00865 | função | `guardDb` | `cloudflare/r41-api/src/entry.js:19` | game-runtime / STATICALLY_TRACED |
+| FUNC-00866 | função | `currentAccount` | `cloudflare/r41-api/src/entry.js:20` | game-runtime / STATICALLY_TRACED |
+| FUNC-00867 | função | `rememberMembership` | `cloudflare/r41-api/src/entry.js:21` | game-runtime / STATICALLY_TRACED |
+| FUNC-00868 | função | `hasMembership` | `cloudflare/r41-api/src/entry.js:22` | game-runtime / STATICALLY_TRACED |
+| FUNC-00869 | função | `touchMembership` | `cloudflare/r41-api/src/entry.js:23` | game-runtime / STATICALLY_TRACED |
+| FUNC-00870 | função | `mechanicalClaim` | `cloudflare/r41-api/src/entry.js:26` | game-runtime / STATICALLY_TRACED |
+| FUNC-00871 | função | `actionType` | `cloudflare/r41-api/src/entry.js:27` | game-runtime / STATICALLY_TRACED |
+| FUNC-00872 | função | `actionLooksLikeOutcome` | `cloudflare/r41-api/src/entry.js:28` | game-runtime / STATICALLY_TRACED |
+| FUNC-00873 | função | `guardedOnline` | `cloudflare/r41-api/src/entry.js:30` | game-runtime / STATICALLY_TRACED |
+| FUNC-00874 | função | `remapIdentifier` | `cloudflare/r41-api/src/entry.js:50` | game-runtime / STATICALLY_TRACED |
+| FUNC-00875 | função | `accountExtension` | `cloudflare/r41-api/src/entry.js:58` | game-runtime / STATICALLY_TRACED |
+| FUNC-00876 | função | `claimLeon` | `cloudflare/r41-api/src/entry.js:85` | game-runtime / STATICALLY_TRACED |
+| FUNC-00877 | função | `aiRoute` | `cloudflare/r41-api/src/entry.js:106` | game-runtime / STATICALLY_TRACED |
+| FUNC-00878 | função | `statusRoute` | `cloudflare/r41-api/src/entry.js:115` | game-runtime / STATICALLY_TRACED |
+| FUNC-00879 | função | `mapWorldTick` | `cloudflare/r41-api/src/entry.js:125` | game-runtime / STATICALLY_TRACED |
+| FUNC-00880 | função | `fetch` | `cloudflare/r41-api/src/entry.js:133` | game-runtime / STATICALLY_TRACED |
+| FUNC-00881 | função | `b64url` | `cloudflare/r41-api/src/index.js:13` | game-runtime / STATICALLY_TRACED |
+| FUNC-00882 | função | `unb64url` | `cloudflare/r41-api/src/index.js:14` | game-runtime / STATICALLY_TRACED |
+| FUNC-00883 | função | `hmac` | `cloudflare/r41-api/src/index.js:15` | game-runtime / STATICALLY_TRACED |
+| FUNC-00884 | função | `timingSafe` | `cloudflare/r41-api/src/index.js:16` | game-runtime / STATICALLY_TRACED |
+| FUNC-00885 | função | `hashPassword` | `cloudflare/r41-api/src/index.js:17` | game-runtime / STATICALLY_TRACED |
+| FUNC-00886 | função | `randomBytes` | `cloudflare/r41-api/src/index.js:18` | game-runtime / STATICALLY_TRACED |
+| FUNC-00887 | função | `randomSecret` | `cloudflare/r41-api/src/index.js:19` | game-runtime / STATICALLY_TRACED |
+| FUNC-00888 | função | `norm` | `cloudflare/r41-api/src/index.js:20` | game-runtime / STATICALLY_TRACED |
+| FUNC-00889 | função | `cleanText` | `cloudflare/r41-api/src/index.js:21` | game-runtime / STATICALLY_TRACED |
+| FUNC-00890 | função | `bearer` | `cloudflare/r41-api/src/index.js:22` | game-runtime / STATICALLY_TRACED |
+| FUNC-00891 | função | `plainId` | `cloudflare/r41-api/src/index.js:23` | game-runtime / STATICALLY_TRACED |
+| FUNC-00892 | função | `safeAccount` | `cloudflare/r41-api/src/index.js:24` | game-runtime / STATICALLY_TRACED |
+| FUNC-00893 | função | `cors` | `cloudflare/r41-api/src/index.js:25` | game-runtime / STATICALLY_TRACED |
+| FUNC-00894 | função | `reply` | `cloudflare/r41-api/src/index.js:26` | game-runtime / STATICALLY_TRACED |
+| FUNC-00895 | função | `bodyJson` | `cloudflare/r41-api/src/index.js:27` | game-runtime / STATICALLY_TRACED |
+| FUNC-00896 | função | `toObjectId` | `cloudflare/r41-api/src/index.js:28` | game-runtime / STATICALLY_TRACED |
+| FUNC-00897 | função | `nowIso` | `cloudflare/r41-api/src/index.js:29` | game-runtime / STATICALLY_TRACED |
+| FUNC-00898 | função | `roomId` | `cloudflare/r41-api/src/index.js:30` | game-runtime / STATICALLY_TRACED |
+| FUNC-00899 | função | `mongo` | `cloudflare/r41-api/src/index.js:32` | game-runtime / STATICALLY_TRACED |
+| FUNC-00900 | função | `ensureIndexes` | `cloudflare/r41-api/src/index.js:37` | game-runtime / STATICALLY_TRACED |
+| FUNC-00901 | função | `issueToken` | `cloudflare/r41-api/src/index.js:54` | game-runtime / STATICALLY_TRACED |
+| FUNC-00902 | função | `verifyToken` | `cloudflare/r41-api/src/index.js:55` | game-runtime / STATICALLY_TRACED |
+| FUNC-00903 | função | `requireUser` | `cloudflare/r41-api/src/index.js:56` | game-runtime / STATICALLY_TRACED |
+| FUNC-00904 | função | `revokeCurrent` | `cloudflare/r41-api/src/index.js:57` | game-runtime / STATICALLY_TRACED |
+| FUNC-00905 | função | `slotSummary` | `cloudflare/r41-api/src/index.js:58` | game-runtime / STATICALLY_TRACED |
+| FUNC-00906 | função | `clampSaveForStorage` | `cloudflare/r41-api/src/index.js:59` | game-runtime / STATICALLY_TRACED |
+| FUNC-00907 | função | `audit` | `cloudflare/r41-api/src/index.js:60` | game-runtime / STATICALLY_TRACED |
+| FUNC-00908 | função | `constructor` | `cloudflare/r41-api/src/index.js:63` | game-runtime / STATICALLY_TRACED |
+| FUNC-00909 | função | `read` | `cloudflare/r41-api/src/index.js:64` | game-runtime / STATICALLY_TRACED |
+| FUNC-00910 | função | `write` | `cloudflare/r41-api/src/index.js:65` | game-runtime / STATICALLY_TRACED |
+| FUNC-00911 | função | `liveMembers` | `cloudflare/r41-api/src/index.js:66` | game-runtime / STATICALLY_TRACED |
+| FUNC-00912 | função | `fetch` | `cloudflare/r41-api/src/index.js:67` | game-runtime / STATICALLY_TRACED |
+| FUNC-00913 | função | `roomCall` | `cloudflare/r41-api/src/index.js:81` | game-runtime / STATICALLY_TRACED |
+| FUNC-00914 | função | `roomJson` | `cloudflare/r41-api/src/index.js:82` | game-runtime / STATICALLY_TRACED |
+| FUNC-00915 | função | `aiRoute` | `cloudflare/r41-api/src/index.js:84` | game-runtime / STATICALLY_TRACED |
+| FUNC-00916 | função | `num` | `cloudflare/r41-api/src/terion-mechanics.js:14` | game-runtime / STATICALLY_TRACED |
+| FUNC-00917 | função | `clamp` | `cloudflare/r41-api/src/terion-mechanics.js:15` | game-runtime / STATICALLY_TRACED |
+| FUNC-00918 | função | `canonicalAttribute` | `cloudflare/r41-api/src/terion-mechanics.js:17` | game-runtime / STATICALLY_TRACED |
+| FUNC-00919 | função | `characterModifier` | `cloudflare/r41-api/src/terion-mechanics.js:23` | game-runtime / STATICALLY_TRACED |
+| FUNC-00920 | função | `serverDifficulty` | `cloudflare/r41-api/src/terion-mechanics.js:34` | game-runtime / STATICALLY_TRACED |
+| FUNC-00921 | função | `classifyTerionRoll` | `cloudflare/r41-api/src/terion-mechanics.js:40` | game-runtime / STATICALLY_TRACED |
+| FUNC-00922 | função | `d10` | `cloudflare/r41-api/src/terion-mechanics.js:48` | game-runtime / STATICALLY_TRACED |
+| FUNC-00923 | função | `resolveTerionIntent` | `cloudflare/r41-api/src/terion-mechanics.js:50` | game-runtime / STATICALLY_TRACED |
+| FUNC-00924 | função | `mechanicalKey` | `cloudflare/r41-api/src/terion-mechanics.js:60` | game-runtime / STATICALLY_TRACED |
+| FUNC-00925 | função | `blockedClientKey` | `cloudflare/r41-api/src/terion-mechanics.js:63` | game-runtime / STATICALLY_TRACED |
+| FUNC-00926 | função | `hasClientResult` | `cloudflare/r41-api/src/terion-mechanics.js:65` | game-runtime / STATICALLY_TRACED |
+| FUNC-00927 | função | `stripClientMechanical` | `cloudflare/r41-api/src/terion-mechanics.js:79` | game-runtime / STATICALLY_TRACED |
+| FUNC-00928 | função | `trainer` | `data/v84-integrated-config.js:4` | game-runtime / STATICALLY_TRACED |
+| FUNC-00929 | função | `openOnce` | `r41-account-deeplink-fix.js:9` | game-runtime / STATICALLY_TRACED |
+| FUNC-00930 | função | `esc` | `r41-account-ui.js:5` | game-runtime / STATICALLY_TRACED |
+| FUNC-00931 | função | `errorText` | `r41-account-ui.js:6` | game-runtime / STATICALLY_TRACED |
+| FUNC-00932 | função | `style` | `r41-account-ui.js:7` | game-runtime / STATICALLY_TRACED |
+| FUNC-00933 | função | `ensureButton` | `r41-account-ui.js:16` | game-runtime / STATICALLY_TRACED |
+| FUNC-00934 | função | `updateButton` | `r41-account-ui.js:22` | game-runtime / STATICALLY_TRACED |
+| FUNC-00935 | função | `field` | `r41-account-ui.js:23` | game-runtime / STATICALLY_TRACED |
+| FUNC-00936 | função | `tabs` | `r41-account-ui.js:24` | game-runtime / STATICALLY_TRACED |
+| FUNC-00937 | função | `unauthBody` | `r41-account-ui.js:25` | game-runtime / STATICALLY_TRACED |
+| FUNC-00938 | função | `authBody` | `r41-account-ui.js:26` | game-runtime / STATICALLY_TRACED |
+| FUNC-00939 | função | `render` | `r41-account-ui.js:27` | game-runtime / STATICALLY_TRACED |
+| FUNC-00940 | função | `values` | `r41-account-ui.js:28` | game-runtime / STATICALLY_TRACED |
+| FUNC-00941 | função | `submitLogin` | `r41-account-ui.js:29` | game-runtime / STATICALLY_TRACED |
+| FUNC-00942 | função | `submitRegister` | `r41-account-ui.js:30` | game-runtime / STATICALLY_TRACED |
+| FUNC-00943 | função | `submitRecover` | `r41-account-ui.js:31` | game-runtime / STATICALLY_TRACED |
+| FUNC-00944 | função | `logout` | `r41-account-ui.js:32` | game-runtime / STATICALLY_TRACED |
+| FUNC-00945 | função | `newRecoveryCode` | `r41-account-ui.js:33` | game-runtime / STATICALLY_TRACED |
+| FUNC-00946 | função | `deleteAccount` | `r41-account-ui.js:34` | game-runtime / STATICALLY_TRACED |
+| FUNC-00947 | função | `close` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
+| FUNC-00948 | função | `open` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
+| FUNC-00949 | função | `boot` | `r41-account-ui.js:37` | game-runtime / STATICALLY_TRACED |
+| FUNC-00950 | função | `apiOrigin` | `r41-github-api.js:8` | game-runtime / STATICALLY_TRACED |
+| FUNC-00951 | função | `token` | `r41-github-api.js:11` | game-runtime / STATICALLY_TRACED |
+| FUNC-00952 | função | `setToken` | `r41-github-api.js:21` | game-runtime / STATICALLY_TRACED |
+| FUNC-00953 | função | `captureClaim` | `r41-github-api.js:31` | game-runtime / STATICALLY_TRACED |
+| FUNC-00954 | função | `mapTarget` | `r41-github-api.js:43` | game-runtime / STATICALLY_TRACED |
+| FUNC-00955 | função | `withAuth` | `r41-github-api.js:55` | game-runtime / STATICALLY_TRACED |
+| FUNC-00956 | função | `applyLeonClaim` | `r41-github-api.js:65` | game-runtime / STATICALLY_TRACED |
+| FUNC-00957 | função | `request` | `r41-github-api.js:111` | game-runtime / STATICALLY_TRACED |
+| FUNC-00958 | função | `register` | `r41-github-api.js:128` | game-runtime / STATICALLY_TRACED |
+| FUNC-00959 | função | `login` | `r41-github-api.js:135` | game-runtime / STATICALLY_TRACED |
+| FUNC-00960 | função | `me` | `r41-github-api.js:142` | game-runtime / STATICALLY_TRACED |
+| FUNC-00961 | função | `logout` | `r41-github-api.js:153` | game-runtime / STATICALLY_TRACED |
+| FUNC-00962 | função | `recover` | `r41-github-api.js:160` | game-runtime / STATICALLY_TRACED |
+| FUNC-00963 | função | `generateRecoveryCode` | `r41-github-api.js:164` | game-runtime / STATICALLY_TRACED |
+| FUNC-00964 | função | `deleteAccount` | `r41-github-api.js:167` | game-runtime / STATICALLY_TRACED |
+| FUNC-00965 | função | `slug` | `src/r41-canonical-repair.js:28` | game-runtime / STATICALLY_TRACED |
+| FUNC-00966 | função | `normalize` | `src/r41-core-bundle.js:5` | game-runtime / STATICALLY_TRACED |
+| FUNC-00967 | função | `getJson` | `src/r41-core-bundle.js:6` | game-runtime / STATICALLY_TRACED |
+| FUNC-00968 | função | `indexManifest` | `src/r41-core-bundle.js:7` | game-runtime / STATICALLY_TRACED |
+| FUNC-00969 | função | `init` | `src/r41-core-bundle.js:14` | game-runtime / STATICALLY_TRACED |
+| FUNC-00970 | função | `resolve` | `src/r41-core-bundle.js:25` | game-runtime / STATICALLY_TRACED |
+| FUNC-00971 | função | `auditKnown` | `src/r41-core-bundle.js:42` | game-runtime / STATICALLY_TRACED |
+| FUNC-00972 | função | `normalize` | `src/r41-core-bundle.js:51` | game-runtime / STATICALLY_TRACED |
+| FUNC-00973 | função | `fromCombatResult` | `src/r41-core-bundle.js:52` | game-runtime / STATICALLY_TRACED |
+| FUNC-00974 | função | `validateEvent` | `src/r41-core-bundle.js:63` | game-runtime / STATICALLY_TRACED |
+| FUNC-00975 | função | `clone` | `src/r41-core-bundle.js:70` | game-runtime / STATICALLY_TRACED |
+| FUNC-00976 | função | `ensure` | `src/r41-core-bundle.js:71` | game-runtime / STATICALLY_TRACED |
+| FUNC-00977 | função | `apply` | `src/r41-core-bundle.js:72` | game-runtime / STATICALLY_TRACED |
+| FUNC-00978 | função | `validate` | `src/r41-core-bundle.js:73` | game-runtime / STATICALLY_TRACED |
+| FUNC-00979 | função | `fromResult` | `src/r41-core-bundle.js:78` | game-runtime / STATICALLY_TRACED |
+| FUNC-00980 | função | `validate` | `src/r41-core-bundle.js:79` | game-runtime / STATICALLY_TRACED |
+| FUNC-00981 | função | `norm` | `src/r41-core-bundle.js:84` | game-runtime / STATICALLY_TRACED |
+| FUNC-00982 | função | `kindOf` | `src/r41-core-bundle.js:85` | game-runtime / STATICALLY_TRACED |
+| FUNC-00983 | função | `apply` | `src/r41-core-bundle.js:86` | game-runtime / STATICALLY_TRACED |
+| FUNC-00984 | função | `validate` | `src/r41-core-bundle.js:87` | game-runtime / STATICALLY_TRACED |
+| FUNC-00985 | função | `norm` | `src/r41-core-bundle.js:94` | game-runtime / STATICALLY_TRACED |
+| FUNC-00986 | função | `register` | `src/r41-core-bundle.js:95` | game-runtime / STATICALLY_TRACED |
+| FUNC-00987 | função | `get` | `src/r41-core-bundle.js:96` | game-runtime / STATICALLY_TRACED |
+| FUNC-00988 | função | `infer` | `src/r41-core-bundle.js:97` | game-runtime / STATICALLY_TRACED |
+| FUNC-00989 | função | `clamp` | `src/r41-core-bundle.js:115` | game-runtime / STATICALLY_TRACED |
+| FUNC-00990 | função | `normalizeResult` | `src/r41-core-bundle.js:116` | game-runtime / STATICALLY_TRACED |
+| FUNC-00991 | função | `terionModifier` | `src/r41-core-bundle.js:120` | game-runtime / STATICALLY_TRACED |
+| FUNC-00992 | função | `trainingResult` | `src/r41-core-bundle.js:126` | game-runtime / STATICALLY_TRACED |
+| FUNC-00993 | função | `normalizeScene` | `src/r41-core-bundle.js:137` | game-runtime / STATICALLY_TRACED |
+| FUNC-00994 | função | `fromMissionStage` | `src/r41-core-bundle.js:141` | game-runtime / STATICALLY_TRACED |
+| FUNC-00995 | função | `shouldSave` | `src/r41-core-bundle.js:149` | game-runtime / STATICALLY_TRACED |
+| FUNC-00996 | função | `record` | `src/r41-core-bundle.js:150` | game-runtime / STATICALLY_TRACED |
+| FUNC-00997 | função | `boot` | `src/r41-core-bundle.js:160` | game-runtime / STATICALLY_TRACED |
+| FUNC-00998 | função | `repair` | `src/r41-final-ui-repair.js:12` | game-runtime / STATICALLY_TRACED |
+| FUNC-00999 | função | `schedule` | `src/r41-final-ui-repair.js:19` | game-runtime / STATICALLY_TRACED |
+| FUNC-01000 | função | `localProgressKeys` | `src/r41-local-reset-fix.js:20` | game-runtime / STATICALLY_TRACED |
+| FUNC-01001 | função | `resetLocalProgress` | `src/r41-local-reset-fix.js:30` | game-runtime / STATICALLY_TRACED |
+| FUNC-01002 | função | `ok` | `tools/account-live-e2e.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-01003 | função | `call` | `tools/account-live-e2e.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01004 | função | `write` | `tools/account-live-e2e.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01005 | função | `fail` | `tools/audit-documentation-coverage.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01006 | função | `warn` | `tools/audit-documentation-coverage.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-01007 | função | `exists` | `tools/audit-documentation-coverage.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01008 | função | `norm` | `tools/audit-documentation-coverage.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01009 | função | `isDoc` | `tools/audit-documentation-coverage.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-01010 | função | `isTooling` | `tools/audit-documentation-coverage.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-01011 | função | `isGameRuntime` | `tools/audit-documentation-coverage.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-01012 | função | `auditGameGrouped` | `tools/audit-documentation-coverage.mjs:37` | tooling / STATICALLY_TRACED |
+| FUNC-01013 | função | `sha256` | `tools/audit-final-canonical-spec.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01014 | função | `walk` | `tools/audit-r41-assets.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-01015 | função | `cleanRef` | `tools/audit-r41-assets.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-01016 | função | `isDynamic` | `tools/audit-r41-assets.mjs:31` | tooling / STATICALLY_TRACED |
+| FUNC-01017 | função | `addRef` | `tools/audit-r41-assets.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-01018 | função | `assert` | `tools/browser-account-live.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01019 | função | `readSaveV2` | `tools/browser-gameplay-e2e-v2.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-01020 | função | `tryParse` | `tools/browser-gameplay-e2e-v2.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-01021 | função | `registerV2` | `tools/browser-gameplay-e2e-v2.mjs:48` | tooling / STATICALLY_TRACED |
+| FUNC-01022 | função | `seedNormalV2` | `tools/browser-gameplay-e2e-v2.mjs:66` | tooling / STATICALLY_TRACED |
+| FUNC-01023 | função | `navigateV2` | `tools/browser-gameplay-e2e-v2.mjs:165` | tooling / STATICALLY_TRACED |
+| FUNC-01024 | função | `seedNormalV3` | `tools/browser-gameplay-e2e-v3.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01025 | função | `assert` | `tools/browser-gameplay-e2e.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-01026 | função | `pass` | `tools/browser-gameplay-e2e.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-01027 | função | `contract` | `tools/browser-gameplay-e2e.mjs:20` | tooling / STATICALLY_TRACED |
+| FUNC-01028 | função | `sleep` | `tools/browser-gameplay-e2e.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01029 | função | `normalFixture` | `tools/browser-gameplay-e2e.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-01030 | função | `leonFixture` | `tools/browser-gameplay-e2e.mjs:55` | tooling / STATICALLY_TRACED |
+| FUNC-01031 | função | `readSave` | `tools/browser-gameplay-e2e.mjs:65` | tooling / STATICALLY_TRACED |
+| FUNC-01032 | função | `r41State` | `tools/browser-gameplay-e2e.mjs:66` | tooling / STATICALLY_TRACED |
+| FUNC-01033 | função | `masterState` | `tools/browser-gameplay-e2e.mjs:67` | tooling / STATICALLY_TRACED |
+| FUNC-01034 | função | `navigate` | `tools/browser-gameplay-e2e.mjs:68` | tooling / STATICALLY_TRACED |
+| FUNC-01035 | função | `playVisibleMinigame` | `tools/browser-gameplay-e2e.mjs:70` | tooling / STATICALLY_TRACED |
+| FUNC-01036 | função | `register` | `tools/browser-gameplay-e2e.mjs:89` | tooling / STATICALLY_TRACED |
+| FUNC-01037 | função | `seedNormal` | `tools/browser-gameplay-e2e.mjs:107` | tooling / STATICALLY_TRACED |
+| FUNC-01038 | função | `testNormalGameplay` | `tools/browser-gameplay-e2e.mjs:118` | tooling / STATICALLY_TRACED |
+| FUNC-01039 | função | `testKurai` | `tools/browser-gameplay-e2e.mjs:283` | tooling / STATICALLY_TRACED |
+| FUNC-01040 | função | `cleanupAccount` | `tools/browser-gameplay-e2e.mjs:308` | tooling / STATICALLY_TRACED |
+| FUNC-01041 | função | `assert` | `tools/browser-live-api.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01042 | função | `fail` | `tools/browser-smoke.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01043 | função | `assert` | `tools/browser-smoke.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01044 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-01045 | função | `norm` | `tools/build-final-canonical-spec.mjs:20` | tooling / STATICALLY_TRACED |
+| FUNC-01046 | função | `isDocs` | `tools/build-final-canonical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01047 | função | `isSource` | `tools/build-final-canonical-spec.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-01048 | função | `esc` | `tools/build-final-canonical-spec.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-01049 | função | `code` | `tools/build-final-canonical-spec.mjs:24` | tooling / STATICALLY_TRACED |
+| FUNC-01050 | função | `fence` | `tools/build-final-canonical-spec.mjs:25` | tooling / STATICALLY_TRACED |
+| FUNC-01051 | função | `langFor` | `tools/build-final-canonical-spec.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-01052 | função | `lineLocator` | `tools/build-final-canonical-spec.mjs:31` | tooling / STATICALLY_TRACED |
+| FUNC-01053 | função | `blockEnd` | `tools/build-final-canonical-spec.mjs:41` | tooling / STATICALLY_TRACED |
+| FUNC-01054 | função | `snippetAt` | `tools/build-final-canonical-spec.mjs:62` | tooling / STATICALLY_TRACED |
+| FUNC-01055 | função | `scanFunctions` | `tools/build-final-canonical-spec.mjs:72` | tooling / STATICALLY_TRACED |
+| FUNC-01056 | função | `actionHandlerEvidence` | `tools/build-final-canonical-spec.mjs:126` | tooling / STATICALLY_TRACED |
+| FUNC-01057 | função | `gate` | `tools/build-final-canonical-spec.mjs:175` | tooling / STATICALLY_TRACED |
+| FUNC-01058 | função | `pass` | `tools/final-readiness.mjs:7` | tooling / STATICALLY_TRACED |
+| FUNC-01059 | função | `readJson` | `tools/final-readiness.mjs:8` | tooling / STATICALLY_TRACED |
+| FUNC-01060 | função | `walk` | `tools/finalize-canonical-ui-trace.mjs:26` | tooling / STATICALLY_TRACED |
+| FUNC-01061 | função | `reEsc` | `tools/finalize-canonical-ui-trace.mjs:40` | tooling / STATICALLY_TRACED |
+| FUNC-01062 | função | `lineAt` | `tools/finalize-canonical-ui-trace.mjs:41` | tooling / STATICALLY_TRACED |
+| FUNC-01063 | função | `occurrences` | `tools/finalize-canonical-ui-trace.mjs:46` | tooling / STATICALLY_TRACED |
+| FUNC-01064 | função | `uniqEvidence` | `tools/finalize-canonical-ui-trace.mjs:55` | tooling / STATICALLY_TRACED |
+| FUNC-01065 | função | `aliasesForDatasetAction` | `tools/finalize-canonical-ui-trace.mjs:65` | tooling / STATICALLY_TRACED |
+| FUNC-01066 | função | `handlerEvidence` | `tools/finalize-canonical-ui-trace.mjs:73` | tooling / STATICALLY_TRACED |
+| FUNC-01067 | função | `px` | `tools/generate-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01068 | função | `rel` | `tools/generate-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-01069 | função | `code` | `tools/generate-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-01070 | função | `clean` | `tools/generate-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-01071 | função | `uniq` | `tools/generate-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-01072 | função | `ident` | `tools/generate-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-01073 | função | `hash` | `tools/generate-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-01074 | função | `walk` | `tools/generate-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01075 | função | `lineLocator` | `tools/generate-technical-spec.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-01076 | função | `readText` | `tools/generate-technical-spec.mjs:42` | tooling / STATICALLY_TRACED |
+| FUNC-01077 | função | `blockEnd` | `tools/generate-technical-spec.mjs:48` | tooling / STATICALLY_TRACED |
+| FUNC-01078 | função | `bodyAt` | `tools/generate-technical-spec.mjs:69` | tooling / STATICALLY_TRACED |
+| FUNC-01079 | função | `captures` | `tools/generate-technical-spec.mjs:75` | tooling / STATICALLY_TRACED |
+| FUNC-01080 | função | `refs` | `tools/generate-technical-spec.mjs:81` | tooling / STATICALLY_TRACED |
+| FUNC-01081 | função | `extractFunctions` | `tools/generate-technical-spec.mjs:99` | tooling / STATICALLY_TRACED |
+| FUNC-01082 | função | `add` | `tools/generate-technical-spec.mjs:149` | tooling / STATICALLY_TRACED |
+| FUNC-01083 | função | `grouped` | `tools/generate-technical-spec.mjs:163` | tooling / STATICALLY_TRACED |
+| FUNC-01084 | função | `header` | `tools/generate-technical-spec.mjs:216` | tooling / STATICALLY_TRACED |
+| FUNC-01085 | função | `sources` | `tools/generate-technical-spec.mjs:217` | tooling / STATICALLY_TRACED |
+| FUNC-01086 | função | `listCodes` | `tools/generate-technical-spec.mjs:218` | tooling / STATICALLY_TRACED |
+| FUNC-01087 | função | `assert` | `tools/live-worker-e2e.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-01088 | função | `record` | `tools/live-worker-e2e.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01089 | função | `request` | `tools/live-worker-e2e.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01090 | função | `safe` | `tools/live-worker-e2e.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-01091 | função | `writeReport` | `tools/live-worker-e2e.mjs:29` | tooling / STATICALLY_TRACED |
+| FUNC-01092 | função | `norm` | `tools/reconcile-asset-references.mjs:11` | tooling / STATICALLY_TRACED |
+| FUNC-01093 | função | `isDynamic` | `tools/reconcile-asset-references.mjs:12` | tooling / STATICALLY_TRACED |
+| FUNC-01094 | função | `existsLiteral` | `tools/reconcile-asset-references.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-01095 | função | `code` | `tools/reconcile-asset-references.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01096 | função | `srcs` | `tools/reconcile-asset-references.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-01097 | função | `norm` | `tools/refine-technical-spec.mjs:13` | tooling / STATICALLY_TRACED |
+| FUNC-01098 | função | `hasSourceExt` | `tools/refine-technical-spec.mjs:14` | tooling / STATICALLY_TRACED |
+| FUNC-01099 | função | `isDocumentation` | `tools/refine-technical-spec.mjs:15` | tooling / STATICALLY_TRACED |
+| FUNC-01100 | função | `isTooling` | `tools/refine-technical-spec.mjs:16` | tooling / STATICALLY_TRACED |
+| FUNC-01101 | função | `isSource` | `tools/refine-technical-spec.mjs:17` | tooling / STATICALLY_TRACED |
+| FUNC-01102 | função | `isGameRuntimeSource` | `tools/refine-technical-spec.mjs:18` | tooling / STATICALLY_TRACED |
+| FUNC-01103 | função | `domainOf` | `tools/refine-technical-spec.mjs:19` | tooling / STATICALLY_TRACED |
+| FUNC-01104 | função | `code` | `tools/refine-technical-spec.mjs:20` | tooling / STATICALLY_TRACED |
+| FUNC-01105 | função | `clean` | `tools/refine-technical-spec.mjs:21` | tooling / STATICALLY_TRACED |
+| FUNC-01106 | função | `srcs` | `tools/refine-technical-spec.mjs:22` | tooling / STATICALLY_TRACED |
+| FUNC-01107 | função | `listCodes` | `tools/refine-technical-spec.mjs:23` | tooling / STATICALLY_TRACED |
+| FUNC-01108 | função | `header` | `tools/refine-technical-spec.mjs:24` | tooling / STATICALLY_TRACED |
+| FUNC-01109 | função | `filterGrouped` | `tools/refine-technical-spec.mjs:26` | tooling / STATICALLY_TRACED |
+| API-00001 | API | `/api/account/delete` | `app.js:3544`, `cloudflare/oneclick-backend/src/index.js:72`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:128`, `cloudflare/r41-api/src/index.js:108` | game-runtime / STATICALLY_TRACED |
 | API-00002 | API | `/api/account/load` | `app.js:3512`, `app.js:3516`, `cloudflare/oneclick-backend/src/index.js:71`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:107` | game-runtime / STATICALLY_TRACED |
 | API-00003 | API | `/api/account/save` | `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/oneclick-backend/src/index.js:70`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:106` | game-runtime / STATICALLY_TRACED |
 | API-00004 | API | `/api/account/slots` | `app.js:3510`, `cloudflare/oneclick-backend/src/index.js:69`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/r41-api/src/index.js:105` | game-runtime / STATICALLY_TRACED |
 | API-00005 | API | `/api/ai` | `app.js:613`, `app.js:1147`, `cloudflare/oneclick-backend/src/index.js:63`, `cloudflare/r41-api/src/entry.js:136`, `cloudflare/r41-api/src/index.js:97` | game-runtime / STATICALLY_TRACED |
-| API-00006 | API | `/api/auth/delete-account` | `cloudflare/r41-api/src/entry-authoritative.js:125`, `cloudflare/r41-api/src/entry.js:67`, `r41-github-api.js:168` | game-runtime / STATICALLY_TRACED |
-| API-00007 | API | `/api/auth/login` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:89`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `r41-github-api.js:66`, `r41-github-api.js:137` | game-runtime / STATICALLY_TRACED |
+| API-00006 | API | `/api/auth/delete-account` | `cloudflare/r41-api/src/entry-authoritative.js:131`, `cloudflare/r41-api/src/entry.js:67`, `r41-github-api.js:168` | game-runtime / STATICALLY_TRACED |
+| API-00007 | API | `/api/auth/login` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `r41-github-api.js:66`, `r41-github-api.js:137` | game-runtime / STATICALLY_TRACED |
 | API-00008 | API | `/api/auth/logout` | `app.js:3541`, `cloudflare/oneclick-backend/src/index.js:68`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/index.js:103`, `r41-github-api.js:154` | game-runtime / STATICALLY_TRACED |
-| API-00009 | API | `/api/auth/me` | `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:86`, `cloudflare/r41-api/src/entry-authoritative.js:128`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144` | game-runtime / STATICALLY_TRACED |
-| API-00010 | API | `/api/auth/recover` | `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:89`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `r41-github-api.js:162` | game-runtime / STATICALLY_TRACED |
+| API-00009 | API | `/api/auth/me` | `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144` | game-runtime / STATICALLY_TRACED |
+| API-00010 | API | `/api/auth/recover` | `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `r41-github-api.js:162` | game-runtime / STATICALLY_TRACED |
 | API-00011 | API | `/api/auth/recovery-code` | `cloudflare/r41-api/src/entry.js:59`, `r41-github-api.js:165` | game-runtime / STATICALLY_TRACED |
-| API-00012 | API | `/api/auth/register` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:89`, `cloudflare/r41-api/src/entry-authoritative.js:90`, `cloudflare/r41-api/src/index.js:94`, `r41-github-api.js:66`, `r41-github-api.js:130` | game-runtime / STATICALLY_TRACED |
+| API-00012 | API | `/api/auth/register` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:92`, `cloudflare/r41-api/src/index.js:94`, `r41-github-api.js:66`, `r41-github-api.js:130` | game-runtime / STATICALLY_TRACED |
 | API-00013 | API | `/api/cloud/load` | `app.js:756`, `app.js:1142`, `cloudflare/oneclick-backend/src/index.js:73`, `cloudflare/r41-api/src/index.js:109` | game-runtime / STATICALLY_TRACED |
 | API-00014 | API | `/api/friends` | `cloudflare/oneclick-backend/src/index.js:78`, `cloudflare/r41-api/src/index.js:116` | game-runtime / STATICALLY_TRACED |
 | API-00015 | API | `/api/friends/add` | `cloudflare/oneclick-backend/src/index.js:79`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
-| API-00016 | API | `/api/leaderboard` | `cloudflare/oneclick-backend/src/index.js:77`, `cloudflare/r41-api/src/entry-authoritative.js:122`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
-| API-00017 | API | `/api/online/action` | `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:128`, `cloudflare/r41-api/src/index.js:125` | game-runtime / STATICALLY_TRACED |
+| API-00016 | API | `/api/leaderboard` | `cloudflare/oneclick-backend/src/index.js:77`, `cloudflare/r41-api/src/entry-authoritative.js:124`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
+| API-00017 | API | `/api/online/action` | `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/index.js:125` | game-runtime / STATICALLY_TRACED |
 | API-00018 | API | `/api/online/create` | `app.js:1152`, `cloudflare/oneclick-backend/src/index.js:80`, `cloudflare/oneclick-backend/test/local-e2e.mjs:11`, `cloudflare/r41-api/src/index.js:119` | game-runtime / STATICALLY_TRACED |
 | API-00019 | API | `/api/online/heartbeat` | `app.js:1154`, `cloudflare/oneclick-backend/src/index.js:82`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:121` | game-runtime / STATICALLY_TRACED |
 | API-00020 | API | `/api/online/join` | `app.js:1153`, `cloudflare/oneclick-backend/src/index.js:81`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:120` | game-runtime / STATICALLY_TRACED |
 | API-00021 | API | `/api/online/message` | `app.js:1156`, `cloudflare/oneclick-backend/src/index.js:84`, `cloudflare/oneclick-backend/test/local-e2e.mjs:13`, `cloudflare/r41-api/src/index.js:123` | game-runtime / STATICALLY_TRACED |
 | API-00022 | API | `/api/online/messages` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:85`, `cloudflare/oneclick-backend/test/local-e2e.mjs:13`, `cloudflare/r41-api/src/index.js:124` | game-runtime / STATICALLY_TRACED |
-| API-00023 | API | `/api/online/room` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:105`, `cloudflare/r41-api/src/index.js:122` | game-runtime / STATICALLY_TRACED |
+| API-00023 | API | `/api/online/room` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:107`, `cloudflare/r41-api/src/index.js:122` | game-runtime / STATICALLY_TRACED |
 | API-00024 | API | `/api/online/state` | `app.js:5599`, `cloudflare/oneclick-backend/src/index.js:87`, `cloudflare/oneclick-backend/test/local-e2e.mjs:16`, `cloudflare/r41-api/src/index.js:126` | game-runtime / STATICALLY_TRACED |
 | API-00025 | API | `/api/private/claim-leon` | `cloudflare/r41-api/src/entry.js:137`, `r41-github-api.js:77` | game-runtime / STATICALLY_TRACED |
 | API-00026 | API | `/api/private/leon/load` | `app.js:1127`, `cloudflare/oneclick-backend/src/index.js:75`, `cloudflare/r41-api/src/index.js:112` | game-runtime / STATICALLY_TRACED |
 | API-00027 | API | `/api/private/leon/save` | `app.js:1128`, `cloudflare/oneclick-backend/src/index.js:76`, `cloudflare/r41-api/src/index.js:113` | game-runtime / STATICALLY_TRACED |
 | API-00028 | API | `/api/private/unlock` | `app.js:1115`, `cloudflare/oneclick-backend/src/index.js:74`, `cloudflare/r41-api/src/index.js:111` | game-runtime / STATICALLY_TRACED |
-| API-00029 | API | `/api/status` | `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:128`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89` | game-runtime / STATICALLY_TRACED |
+| API-00029 | API | `/api/status` | `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89` | game-runtime / STATICALLY_TRACED |
 | API-00030 | API | `/api/v84/bootstrap` | `app.js:3376`, `app.js:3512`, `app.js:3521`, `cloudflare/oneclick-backend/src/index.js:64`, `cloudflare/r41-api/src/index.js:98` | game-runtime / STATICALLY_TRACED |
-| API-00031 | API | `/api/v84/world/event` | `app.js:3342`, `cloudflare/oneclick-backend/src/index.js:89`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:117`, `cloudflare/r41-api/src/entry-authoritative.js:118`, `cloudflare/r41-api/src/entry.js:128`, `cloudflare/r41-api/src/index.js:130` | game-runtime / STATICALLY_TRACED |
-| API-00032 | API | `/api/v84/world/savepoint` | `app.js:3344`, `cloudflare/oneclick-backend/src/index.js:90`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:117`, `cloudflare/r41-api/src/index.js:131` | game-runtime / STATICALLY_TRACED |
+| API-00031 | API | `/api/v84/world/event` | `app.js:3342`, `cloudflare/oneclick-backend/src/index.js:89`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:119`, `cloudflare/r41-api/src/entry-authoritative.js:120`, `cloudflare/r41-api/src/entry.js:128`, `cloudflare/r41-api/src/index.js:130` | game-runtime / STATICALLY_TRACED |
+| API-00032 | API | `/api/v84/world/savepoint` | `app.js:3344`, `cloudflare/oneclick-backend/src/index.js:90`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry-authoritative.js:119`, `cloudflare/r41-api/src/index.js:131` | game-runtime / STATICALLY_TRACED |
 | API-00033 | API | `/api/v84/world/tick` | `cloudflare/r41-api/src/entry.js:126` | game-runtime / STATICALLY_TRACED |
 | AI-00001 | IA | `@cf/meta/llama-3.2-1b-instruct` | `cloudflare/oneclick-backend/src/index.js:55`, `cloudflare/oneclick-backend/src/index.js:55`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/r41-api/src/index.js:84`, `cloudflare/r41-api/src/index.js:84`, `cloudflare/r41-api/src/index.js:89` | game-runtime / STATICALLY_TRACED |
 | AI-00002 | IA | `@cf/zai-org/glm-4.7-flash` | `cloudflare/r41-api/src/entry.js:5` | game-runtime / STATICALLY_TRACED |
 | DB-00001 | persistência | `audit_events` | `cloudflare/r41-api/src/entry.js:64`, `cloudflare/r41-api/src/entry.js:79`, `cloudflare/r41-api/src/entry.js:99`, `cloudflare/r41-api/src/index.js:49`, `cloudflare/r41-api/src/index.js:60`, `cloudflare/r41-api/src/index.js:125` | game-runtime / STATICALLY_TRACED |
 | DB-00002 | persistência | `friends` | `cloudflare/r41-api/src/entry.js:74`, `cloudflare/r41-api/src/index.js:44`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
-| DB-00003 | persistência | `mechanical_profiles` | `cloudflare/r41-api/src/entry-authoritative.js:25`, `cloudflare/r41-api/src/entry-authoritative.js:63`, `cloudflare/r41-api/src/entry-authoritative.js:64`, `cloudflare/r41-api/src/entry-authoritative.js:67`, `cloudflare/r41-api/src/entry-authoritative.js:122`, `cloudflare/r41-api/src/entry-authoritative.js:125` | game-runtime / STATICALLY_TRACED |
+| DB-00003 | persistência | `mechanical_profiles` | `cloudflare/r41-api/src/entry-authoritative.js:25`, `cloudflare/r41-api/src/entry-authoritative.js:65`, `cloudflare/r41-api/src/entry-authoritative.js:66`, `cloudflare/r41-api/src/entry-authoritative.js:69`, `cloudflare/r41-api/src/entry-authoritative.js:124`, `cloudflare/r41-api/src/entry-authoritative.js:129`, `cloudflare/r41-api/src/entry-authoritative.js:131` | game-runtime / STATICALLY_TRACED |
 | DB-00004 | persistência | `private_claims` | `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:98` | game-runtime / STATICALLY_TRACED |
 | DB-00005 | persistência | `recovery_codes` | `cloudflare/r41-api/src/entry.js:62`, `cloudflare/r41-api/src/entry.js:63`, `cloudflare/r41-api/src/entry.js:73`, `cloudflare/r41-api/src/index.js:50`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96` | game-runtime / STATICALLY_TRACED |
 | DB-00006 | persistência | `room_memberships` | `cloudflare/r41-api/src/entry.js:19`, `cloudflare/r41-api/src/entry.js:21`, `cloudflare/r41-api/src/entry.js:22`, `cloudflare/r41-api/src/entry.js:23`, `cloudflare/r41-api/src/entry.js:42`, `cloudflare/r41-api/src/entry.js:75` | game-runtime / STATICALLY_TRACED |
 | DB-00007 | persistência | `room_registry` | `cloudflare/r41-api/src/index.js:45`, `cloudflare/r41-api/src/index.js:46`, `cloudflare/r41-api/src/index.js:119`, `cloudflare/r41-api/src/index.js:120`, `cloudflare/r41-api/src/index.js:126` | game-runtime / STATICALLY_TRACED |
-| DB-00008 | persistência | `saves` | `cloudflare/r41-api/src/entry-authoritative.js:75`, `cloudflare/r41-api/src/entry.js:72`, `cloudflare/r41-api/src/index.js:42`, `cloudflare/r41-api/src/index.js:43`, `cloudflare/r41-api/src/index.js:105`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:107`, `cloudflare/r41-api/src/index.js:108`, `cloudflare/r41-api/src/index.js:109`, `cloudflare/r41-api/src/index.js:112`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
+| DB-00008 | persistência | `saves` | `cloudflare/r41-api/src/entry-authoritative.js:77`, `cloudflare/r41-api/src/entry.js:72`, `cloudflare/r41-api/src/index.js:42`, `cloudflare/r41-api/src/index.js:43`, `cloudflare/r41-api/src/index.js:105`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:107`, `cloudflare/r41-api/src/index.js:108`, `cloudflare/r41-api/src/index.js:109`, `cloudflare/r41-api/src/index.js:112`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
 | DB-00009 | persistência | `sessions` | `cloudflare/r41-api/src/entry.js:71`, `cloudflare/r41-api/src/index.js:40`, `cloudflare/r41-api/src/index.js:41`, `cloudflare/r41-api/src/index.js:54`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:57`, `cloudflare/r41-api/src/index.js:96` | game-runtime / STATICALLY_TRACED |
-| DB-00010 | persistência | `users` | `cloudflare/r41-api/src/entry-authoritative.js:29`, `cloudflare/r41-api/src/entry-authoritative.js:87`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:93`, `cloudflare/r41-api/src/entry-authoritative.js:96`, `cloudflare/r41-api/src/entry-authoritative.js:122`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
+| DB-00010 | persistência | `users` | `cloudflare/r41-api/src/entry-authoritative.js:30`, `cloudflare/r41-api/src/entry-authoritative.js:89`, `cloudflare/r41-api/src/entry-authoritative.js:93`, `cloudflare/r41-api/src/entry-authoritative.js:95`, `cloudflare/r41-api/src/entry-authoritative.js:98`, `cloudflare/r41-api/src/entry-authoritative.js:124`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
 | DB-00011 | persistência | `world_events` | `cloudflare/r41-api/src/entry.js:76`, `cloudflare/r41-api/src/index.js:47`, `cloudflare/r41-api/src/index.js:130` | game-runtime / STATICALLY_TRACED |
 | DB-00012 | persistência | `world_state` | `cloudflare/r41-api/src/index.js:48`, `cloudflare/r41-api/src/index.js:98`, `cloudflare/r41-api/src/index.js:131` | game-runtime / STATICALLY_TRACED |
 | UI-00001 | UI | `${action}` | `app.js:4809` | game-runtime / STATICALLY_TRACED |
