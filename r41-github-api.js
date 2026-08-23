@@ -133,7 +133,8 @@
       return data;
     },
     async login(identifier,password){
-      const data=await request("/api/auth/login",{identifier,password});
+      const normalized=String(identifier||"").trim();
+      const data=await request("/api/auth/login",{username:normalized,identifier:normalized,password});
       if(data?.token)setToken(data.token);
       window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));
       return data;
@@ -157,7 +158,8 @@
       return {ok:true};
     },
     async recover(identifier,recoveryCode,newPassword){
-      return request("/api/auth/recover",{identifier,recoveryCode,newPassword});
+      const normalized=String(identifier||"").trim();
+      return request("/api/auth/recover",{username:normalized,identifier:normalized,recoveryCode,newPassword});
     },
     async generateRecoveryCode(){
       return request("/api/auth/recovery-code",{});
