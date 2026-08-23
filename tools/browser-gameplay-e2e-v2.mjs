@@ -33,6 +33,7 @@ async function registerV2(page){
 
 async function seedNormalV2(page){
   const fixture=normalFixture();
+
   const saved=await page.evaluate(async ({slot,fixture})=>{
     const r=await fetch('/api/account/save',{
       method:'POST',
@@ -42,16 +43,90 @@ async function seedNormalV2(page){
     const data=await r.json().catch(()=>({}));
     return {status:r.status,data};
   },{slot:SLOT_ID,fixture});
+
   assert(saved.status===200&&saved.data?.saved===true,`fixture cloud save falhou: ${saved.status} ${JSON.stringify(saved.data)}`);
+  pass('cloudFixtureSaved');
+
+  const listed=await page.evaluate(async ()=>{
+    const r=await fetch('/api/account/slots',{method:'GET'});
+    const data=await r.json().catch(()=>({}));
+    return {status:r.status,data};
+  });
+  assert(
+    listed.status===200 &&
+    Array.isArray(listed.data?.slots) &&
+    listed.data.slots.some(s=>String(s.slotId||s.slot_id||s.id||'')===SLOT_ID),
+    `slot salvo nao apareceu em /api/account/slots: ${listed.status} ${JSON.stringify(listed.data)}`
+  );
+  pass('cloudFixtureListed');
+
   await page.reload({waitUntil:'domcontentloaded',timeout:90000});
   await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:30000});
-  const slotButton=page.locator(`[data-action="account-load"][data-id="${SLOT_ID}"]`);
-  await slotButton.waitFor({state:'visible',timeout:30000});
-  await slotButton.click();
-  await page.waitForFunction(()=>document.querySelector('#main-nav [data-screen="personagem"]')&&document.querySelector('#screen'),{timeout:30000});
-  await page.waitForTimeout(700);
+
+  await page.waitForFunction(slot=>{
+    return [...document.querySelectorAll('[data-id],[data-slot-id],[data-slot]')].some(el=>
+      [el.getAttribute('data-id'),el.getAttribute('data-slot-id'),el.getAttribute('data-slot')]
+        .some(v=>String(v||'')===String(slot))
+    );
+  },SLOT_ID,{timeout:30000}).catch(()=>{});
+
+  const selectors=[
+    `[data-id="${SLOT_ID}"]`,
+    `[data-slot-id="${SLOT_ID}"]`,
+    `[data-slot="${SLOT_ID}"]`
+  ];
+
+  let slotButton=null;
+  for(const selector of selectors){
+    const list=page.locator(selector);
+    const n=await list.count();
+    for(let i=0;i<n;i++){
+      const el=list.nth(i);
+      const tag=await el.evaluate(node=>node.tagName.toLowerCase()).catch(()=>'');
+      const role=await el.getAttribute('role').catch(()=>null);
+      if(tag==='button'||tag==='a'||role==='button'){
+        slotButton=el;
+        break;
+      }
+      const inner=el.locator('button,a,[role="button"]').first();
+      if(await inner.count()){
+        slotButton=inner;
+        break;
+      }
+    }
+    if(slotButton)break;
+  }
+
+  if(!slotButton){
+    const diag=await page.evaluate(slot=>({
+      slot,
+      title:document.title,
+      r41:window.__NARUTO_R41__?.version||'',
+      auth:!!window.r41Auth?.authenticated,
+      mainNav:(document.querySelector('#main-nav')?.innerText||'').slice(0,1600),
+      screen:(document.querySelector('#screen')?.innerText||'').slice(0,6000),
+      controls:[...document.querySelectorAll('button,a,[role="button"]')].slice(0,250).map(el=>({
+        tag:el.tagName,
+        action:el.getAttribute('data-action'),
+        id:el.getAttribute('data-id'),
+        slotId:el.getAttribute('data-slot-id'),
+        slot:el.getAttribute('data-slot'),
+        text:(el.textContent||'').trim().slice(0,180)
+      }))
+    }),SLOT_ID);
+    throw new Error(`ACCOUNT_SLOT_NOT_RENDERED ${SLOT_ID}: ${JSON.stringify(diag)}`);
+  }
+
+  await slotButton.evaluate(el=>el.click());
+  await page.waitForFunction(
+    ()=>!!document.querySelector('#main-nav [data-screen="personagem"]')&&!!document.querySelector('#screen'),
+    {timeout:30000}
+  );
+  await page.waitForTimeout(900);
+
   const s=await readSave(page);
-  assert(s?.character?.name==='Gameplay E2E','fixture da conta não carregou no runtime local');
+  assert(s?.character?.name==='Gameplay E2E',`fixture da conta nao carregou no runtime local; character=${s?.character?.name||'null'}`);
+  pass('cloudFixtureLoadedIntoRuntime');
   return s;
 }
 
