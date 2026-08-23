@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T10:37:12.336Z",
+  "generatedAt": "2026-08-23T10:38:52.825Z",
   "status": "PASS_ACCOUNT_LIVE_E2E",
   "ok": true,
   "authOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-auth",
@@ -32,7 +32,7 @@
       "recoveryCodes": true
     },
     "account": {
-      "username": "acct_mt5oa5bcn3miyp",
+      "username": "acct_mt5oc623trx76y",
       "emailLinked": true
     }
   },
