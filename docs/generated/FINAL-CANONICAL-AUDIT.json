@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-23T12:38:35.608Z",
+  "generatedAt": "2026-08-23T12:40:43.858Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-23T12:38:31.242Z",
+  "sourceInventoryGeneratedAt": "2026-08-23T12:40:39.637Z",
   "counts": {
     "functions": 1087,
     "functionsWithExactCode": 1087,
@@ -6623,12 +6623,12 @@
       "line": 9,
       "name": "originHeaders",
       "exactCode": true,
-      "snippetSha256": "1fc113e6a3c74ee6b2b3614ddd2d08f554fbb135fe1cd672c1e4c1a9d1f1ecbb"
+      "snippetSha256": "ebe690714b91057514c35cf3c2a8af73942070134540ecc85e2c2e5eef2b18c5"
     },
     {
       "id": "FUNC-00825",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 15,
+      "line": 16,
       "name": "json",
       "exactCode": true,
       "snippetSha256": "931ff4df5f2aa880d3b3cfa27fa5f6bc18ce122d818a5b8429035a28a24ae010"
@@ -6636,7 +6636,7 @@
     {
       "id": "FUNC-00826",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 16,
+      "line": 17,
       "name": "body",
       "exactCode": true,
       "snippetSha256": "792116d39a6c5a3a89f57922963a199a23dbffda680d070225c3ab47786227a8"
@@ -6644,7 +6644,7 @@
     {
       "id": "FUNC-00827",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 17,
+      "line": 18,
       "name": "db",
       "exactCode": true,
       "snippetSha256": "aaddb766f3f26b198513960ca1aa06feaf611e697f4cf4100e0de5a168d6257a"
@@ -6652,7 +6652,7 @@
     {
       "id": "FUNC-00828",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 24,
+      "line": 25,
       "name": "validEmail",
       "exactCode": true,
       "snippetSha256": "8e9e678db54912fa1f1066e4995788d2a087ffcca77d3acf920be97528a29e2e"
@@ -6660,7 +6660,7 @@
     {
       "id": "FUNC-00829",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 25,
+      "line": 26,
       "name": "copyRequest",
       "exactCode": true,
       "snippetSha256": "0d808a4c072b3a9ea33465ad12f71738acec698b5f0fbeac9d7add03b12054ec"
@@ -6668,7 +6668,7 @@
     {
       "id": "FUNC-00830",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 26,
+      "line": 27,
       "name": "account",
       "exactCode": true,
       "snippetSha256": "fbc93d50bcd23ed82a2cb439de35a086fff77c30edcfb6555adc67cd4f0b7a26"
@@ -6676,7 +6676,7 @@
     {
       "id": "FUNC-00831",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 31,
+      "line": 32,
       "name": "augmentAccountEmail",
       "exactCode": true,
       "snippetSha256": "cefb16070916ec774d24925e960e5c035f7d62beab45ece5bf728b582d003c7b"
@@ -6684,15 +6684,15 @@
     {
       "id": "FUNC-00832",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 37,
+      "line": 38,
       "name": "emailAwareAuth",
       "exactCode": true,
-      "snippetSha256": "3095ae764c08f33e93a85a44313a2431b124b3381bea14bc58f7e07163cc49af"
+      "snippetSha256": "7d5cca63d186eee48455a5de5263033e37f02f40d72996e7fee1dedfa27cac0f"
     },
     {
       "id": "FUNC-00833",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 61,
+      "line": 63,
       "name": "roomSnapshot",
       "exactCode": true,
       "snippetSha256": "fa97d45813884188ebcfb5f46c1f7c7d0815152b2cae43ce825d24280b136776"
@@ -6700,7 +6700,7 @@
     {
       "id": "FUNC-00834",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 67,
+      "line": 69,
       "name": "actionType",
       "exactCode": true,
       "snippetSha256": "0ddf6dc735dc2232d870ac792538318d8bc0e1417dc162352bf5251060a2a87b"
@@ -6708,15 +6708,15 @@
     {
       "id": "FUNC-00835",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 68,
+      "line": 70,
       "name": "authoritativeAction",
       "exactCode": true,
-      "snippetSha256": "95f2029e8ccef4cc8c05350915238a09ba80226b4ed089594d710e49ed6d6e91"
+      "snippetSha256": "88806ca34b7fbb9b874e4a1e882916164e48c8061fc5188ed170548d59683931"
     },
     {
       "id": "FUNC-00836",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 91,
+      "line": 94,
       "name": "status",
       "exactCode": true,
       "snippetSha256": "ce3351e55b89d8ed61b0bd02988299599a1bd050539c7cbacee45b4bb51bbb4c"
@@ -6724,10 +6724,10 @@
     {
       "id": "FUNC-00837",
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 99,
+      "line": 102,
       "name": "fetch",
       "exactCode": true,
-      "snippetSha256": "f1d9f5f03ecdd0f652f24c6bf1d7826ecacb058b6248923343af9af96615b14a"
+      "snippetSha256": "dea3d1a6ce8cfc4f721114646fae5a151b50852417959fc2d655621fb7c1d498"
     },
     {
       "id": "FUNC-00838",
@@ -14823,8 +14823,8 @@
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
-      "size": 1964,
-      "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4"
+      "size": 2674,
+      "sha256": "76d52eb411f1a41910338fecf59c99333632dc8cc80b1d4ffddf6209a19d4e63"
     },
     {
       "path": "app.js",
@@ -14839,7 +14839,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 759,
-      "sha256": "be120e27296de278e5de5400e7849aac8e56e6e57a745a97eb7d45a61656bb28"
+      "sha256": "0edc5f29d1ebbb5b1a5fb0a6d40f16fd85a00715eb535924bccadde389516549"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -14863,8 +14863,8 @@
     },
     {
       "path": "cloudflare/r41-api/src/entry-authoritative.js",
-      "size": 7687,
-      "sha256": "0d1e04bfe0ed2722630262725945d4606f32b9e096c3086cd164b724bc8cd379"
+      "size": 8072,
+      "sha256": "3afd7b445605002e781f4f5ea8d75473e492ad6cc5169e558f51ddf64ec5d92a"
     },
     {
       "path": "cloudflare/r41-api/src/entry.js",

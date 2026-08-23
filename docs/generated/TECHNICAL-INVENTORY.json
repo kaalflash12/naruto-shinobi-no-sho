@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T12:38:31.242Z",
+  "generatedAt": "2026-08-23T12:40:39.637Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -99,8 +99,8 @@
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
-      "size": 1964,
-      "sha256": "b38aac968497e5acfe430ae981942b6b1f32d4d6f65d6c2b8166161a62761ec4",
+      "size": 2674,
+      "sha256": "76d52eb411f1a41910338fecf59c99333632dc8cc80b1d4ffddf6209a19d4e63",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43532,7 +43532,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 759,
-      "sha256": "be120e27296de278e5de5400e7849aac8e56e6e57a745a97eb7d45a61656bb28",
+      "sha256": "0edc5f29d1ebbb5b1a5fb0a6d40f16fd85a00715eb535924bccadde389516549",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43611,8 +43611,8 @@
     },
     {
       "path": "cloudflare/r41-api/src/entry-authoritative.js",
-      "size": 7687,
-      "sha256": "0d1e04bfe0ed2722630262725945d4606f32b9e096c3086cd164b724bc8cd379",
+      "size": 8072,
+      "sha256": "3afd7b445605002e781f4f5ea8d75473e492ad6cc5169e558f51ddf64ec5d92a",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -64563,7 +64563,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 15,
+      "line": 16,
       "name": "json",
       "kind": "declaration",
       "params": "req,env,status,data",
@@ -64584,7 +64584,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 16,
+      "line": 17,
       "name": "body",
       "kind": "declaration",
       "params": "req",
@@ -64606,7 +64606,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 17,
+      "line": 18,
       "name": "db",
       "kind": "declaration",
       "params": "env",
@@ -64630,7 +64630,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 24,
+      "line": 25,
       "name": "validEmail",
       "kind": "declaration",
       "params": "value",
@@ -64651,7 +64651,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 25,
+      "line": 26,
       "name": "copyRequest",
       "kind": "declaration",
       "params": "req,url,data",
@@ -64670,7 +64670,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 26,
+      "line": 27,
       "name": "account",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -64695,7 +64695,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 31,
+      "line": 32,
       "name": "augmentAccountEmail",
       "kind": "declaration",
       "params": "req,env,res",
@@ -64721,7 +64721,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 37,
+      "line": 38,
       "name": "emailAwareAuth",
       "kind": "declaration",
       "params": "req,env,ctx,path",
@@ -64736,16 +64736,18 @@
         ],
         "models": [],
         "storageKeys": [],
-        "env": [],
+        "env": [
+          "MONGODB_URI"
+        ],
         "domIds": [],
         "actions": []
       },
       "calls": [
+        "fetch",
         "body",
         "db",
         "validEmail",
         "json",
-        "fetch",
         "copyRequest",
         "augmentAccountEmail",
         "clone",
@@ -64756,7 +64758,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 61,
+      "line": 63,
       "name": "roomSnapshot",
       "kind": "declaration",
       "params": "req,env,ctx,roomId",
@@ -64781,7 +64783,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 67,
+      "line": 69,
       "name": "actionType",
       "kind": "declaration",
       "params": "envelope",
@@ -64800,7 +64802,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 68,
+      "line": 70,
       "name": "authoritativeAction",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -64810,6 +64812,8 @@
         "models": [],
         "storageKeys": [],
         "env": [
+          "MONGODB_URI",
+          "AUTH_SECRET",
           "GAME_ROOMS"
         ],
         "domIds": [],
@@ -64817,6 +64821,7 @@
       },
       "calls": [
         "json",
+        "fetch",
         "body",
         "hasClientResult",
         "actionType",
@@ -64824,7 +64829,6 @@
         "account",
         "roomSnapshot",
         "resolveTerionIntent",
-        "fetch",
         "clone"
       ],
       "id": "FUNC-00835",
@@ -64832,7 +64836,7 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 91,
+      "line": 94,
       "name": "status",
       "kind": "declaration",
       "params": "req,env,ctx",
@@ -64856,13 +64860,14 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 99,
+      "line": 102,
       "name": "fetch",
       "kind": "method",
       "params": "req,env,ctx",
       "refs": {
         "routes": [
           "/api/status",
+          "/api/auth/me",
           "/api/online/action"
         ],
         "collections": [],
@@ -64874,6 +64879,7 @@
       },
       "calls": [
         "status",
+        "augmentAccountEmail",
         "emailAwareAuth",
         "authoritativeAction"
       ],
@@ -70541,7 +70547,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 38
+          "line": 39
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -70617,7 +70623,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 27
+          "line": 28
+        },
+        {
+          "file": "cloudflare/r41-api/src/entry-authoritative.js",
+          "line": 105
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -70643,7 +70653,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 38
+          "line": 39
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -70699,11 +70709,11 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 38
+          "line": 39
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 40
+          "line": 42
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -70805,7 +70815,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 103
+          "line": 107
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -70941,7 +70951,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 62
+          "line": 64
         },
         {
           "file": "cloudflare/r41-api/src/index.js",
@@ -71061,7 +71071,7 @@
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 101
+          "line": 104
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -71455,23 +71465,23 @@
       "sources": [
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 21
+          "line": 22
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 34
+          "line": 35
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 43
+          "line": 45
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 48
+          "line": 50
         },
         {
           "file": "cloudflare/r41-api/src/entry-authoritative.js",
-          "line": 55
+          "line": 57
         },
         {
           "file": "cloudflare/r41-api/src/entry.js",
@@ -79064,7 +79074,7 @@
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
       "line": 11,
-      "text": "const allowed=String(env.ALLOWED_ORIGINS\\|\\|env.ALLOWED_ORIGIN\\|\\|\"https://kaalflash12.github.io\").split(\",\").map(x=>x.trim()).filter(Boolean);",
+      "text": "const configured=String(env.ALLOWED_ORIGINS\\|\\|env.ALLOWED_ORIGIN\\|\\|\"https://kaalflash12.github.io\").split(\",\").map(x=>x.trim()).filter(Boolean);",
       "id": "MOVE-00530"
     },
     {
@@ -234239,242 +234249,242 @@
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 18,
+      "line": 19,
       "value": "MONGODB_URI",
       "id": "ENV-00057"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 19,
+      "line": 20,
       "value": "MONGODB_URI",
       "id": "ENV-00058"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 19,
+      "line": 20,
       "value": "MONGODB_URI",
       "id": "ENV-00059"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 19,
+      "line": 20,
       "value": "MONGODB_URI",
       "id": "ENV-00060"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 20,
+      "line": 21,
       "value": "MONGODB_DB",
       "id": "ENV-00061"
     },
     {
       "file": "cloudflare/r41-api/src/entry-authoritative.js",
-      "line": 83,
-      "value": "GAME_ROOMS",
+      "line": 40,
+      "value": "MONGODB_URI",
       "id": "ENV-00062"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 72,
+      "value": "MONGODB_URI",
+      "id": "ENV-00063"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 72,
+      "value": "AUTH_SECRET",
+      "id": "ENV-00064"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 72,
+      "value": "GAME_ROOMS",
+      "id": "ENV-00065"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry-authoritative.js",
+      "line": 86,
+      "value": "GAME_ROOMS",
+      "id": "ENV-00066"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 16,
       "value": "ALLOWED_ORIGINS",
-      "id": "ENV-00063"
+      "id": "ENV-00067"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 16,
       "value": "ALLOWED_ORIGIN",
-      "id": "ENV-00064"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 19,
-      "value": "MONGODB_URI",
-      "id": "ENV-00065"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 19,
-      "value": "MONGODB_URI",
-      "id": "ENV-00066"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 19,
-      "value": "MONGODB_URI",
-      "id": "ENV-00067"
-    },
-    {
-      "file": "cloudflare/r41-api/src/entry.js",
-      "line": 19,
-      "value": "MONGODB_URI",
       "id": "ENV-00068"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 19,
-      "value": "MONGODB_DB",
+      "value": "MONGODB_URI",
       "id": "ENV-00069"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 87,
-      "value": "LEON_PRIVATE_CODE",
+      "line": 19,
+      "value": "MONGODB_URI",
       "id": "ENV-00070"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
-      "line": 87,
+      "line": 19,
       "value": "MONGODB_URI",
       "id": "ENV-00071"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
+      "line": 19,
+      "value": "MONGODB_URI",
+      "id": "ENV-00072"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 19,
+      "value": "MONGODB_DB",
+      "id": "ENV-00073"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 87,
+      "value": "LEON_PRIVATE_CODE",
+      "id": "ENV-00074"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry.js",
+      "line": 87,
+      "value": "MONGODB_URI",
+      "id": "ENV-00075"
+    },
+    {
+      "file": "cloudflare/r41-api/src/entry.js",
       "line": 89,
       "value": "LEON_PRIVATE_CODE",
-      "id": "ENV-00072"
+      "id": "ENV-00076"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 92,
       "value": "LEON_PRIVATE_CODE",
-      "id": "ENV-00073"
+      "id": "ENV-00077"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 108,
       "value": "AI",
-      "id": "ENV-00074"
+      "id": "ENV-00078"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 111,
       "value": "AI",
-      "id": "ENV-00075"
+      "id": "ENV-00079"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 117,
       "value": "AI",
-      "id": "ENV-00076"
+      "id": "ENV-00080"
     },
     {
       "file": "cloudflare/r41-api/src/entry.js",
       "line": 119,
       "value": "LEON_PRIVATE_CODE",
-      "id": "ENV-00077"
+      "id": "ENV-00081"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 25,
       "value": "ALLOWED_ORIGINS",
-      "id": "ENV-00078"
+      "id": "ENV-00082"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 25,
       "value": "ALLOWED_ORIGIN",
-      "id": "ENV-00079"
+      "id": "ENV-00083"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 33,
       "value": "MONGODB_URI",
-      "id": "ENV-00080"
+      "id": "ENV-00084"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 34,
       "value": "MONGODB_URI",
-      "id": "ENV-00081"
+      "id": "ENV-00085"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 34,
       "value": "MONGODB_URI",
-      "id": "ENV-00082"
+      "id": "ENV-00086"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 34,
       "value": "MONGODB_URI",
-      "id": "ENV-00083"
+      "id": "ENV-00087"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 35,
       "value": "MONGODB_DB",
-      "id": "ENV-00084"
+      "id": "ENV-00088"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 54,
       "value": "AUTH_SECRET",
-      "id": "ENV-00085"
+      "id": "ENV-00089"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 55,
       "value": "AUTH_SECRET",
-      "id": "ENV-00086"
+      "id": "ENV-00090"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 81,
       "value": "GAME_ROOMS",
-      "id": "ENV-00087"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 84,
-      "value": "AI",
-      "id": "ENV-00088"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 84,
-      "value": "AI",
-      "id": "ENV-00089"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 89,
-      "value": "AI",
-      "id": "ENV-00090"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 89,
-      "value": "AI",
       "id": "ENV-00091"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
-      "line": 89,
+      "line": 84,
       "value": "AI",
       "id": "ENV-00092"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
-      "line": 89,
+      "line": 84,
       "value": "AI",
       "id": "ENV-00093"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "MONGODB_URI",
+      "value": "AI",
       "id": "ENV-00094"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "MONGODB_URI",
+      "value": "AI",
       "id": "ENV-00095"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "GAME_ROOMS",
+      "value": "AI",
       "id": "ENV-00096"
     },
     {
@@ -234486,7 +234496,7 @@
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "AI",
+      "value": "MONGODB_URI",
       "id": "ENV-00098"
     },
     {
@@ -234498,50 +234508,74 @@
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "AUTH_SECRET",
+      "value": "GAME_ROOMS",
       "id": "ENV-00100"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 89,
-      "value": "GAME_ROOMS",
+      "value": "AI",
       "id": "ENV-00101"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
-      "line": 90,
-      "value": "MONGODB_URI",
+      "line": 89,
+      "value": "AI",
       "id": "ENV-00102"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
-      "line": 90,
-      "value": "AUTH_SECRET",
+      "line": 89,
+      "value": "MONGODB_URI",
       "id": "ENV-00103"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 89,
+      "value": "AUTH_SECRET",
+      "id": "ENV-00104"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 89,
+      "value": "GAME_ROOMS",
+      "id": "ENV-00105"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 90,
       "value": "MONGODB_URI",
-      "id": "ENV-00104"
+      "id": "ENV-00106"
     },
     {
       "file": "cloudflare/r41-api/src/index.js",
       "line": 90,
       "value": "AUTH_SECRET",
-      "id": "ENV-00105"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 111,
-      "value": "LEON_PRIVATE_CODE",
-      "id": "ENV-00106"
-    },
-    {
-      "file": "cloudflare/r41-api/src/index.js",
-      "line": 111,
-      "value": "LEON_PRIVATE_CODE",
       "id": "ENV-00107"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 90,
+      "value": "MONGODB_URI",
+      "id": "ENV-00108"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 90,
+      "value": "AUTH_SECRET",
+      "id": "ENV-00109"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 111,
+      "value": "LEON_PRIVATE_CODE",
+      "id": "ENV-00110"
+    },
+    {
+      "file": "cloudflare/r41-api/src/index.js",
+      "line": 111,
+      "value": "LEON_PRIVATE_CODE",
+      "id": "ENV-00111"
     }
   ],
   "refinement": {
@@ -234577,7 +234611,7 @@
       "events": 11,
       "movement": 7993,
       "assets": 15821,
-      "environment": 133
+      "environment": 137
     },
     "after": {
       "functions": 1087,
@@ -234589,7 +234623,7 @@
       "events": 11,
       "movement": 7841,
       "assets": 15814,
-      "environment": 107
+      "environment": 111
     }
   },
   "assetAudit": {

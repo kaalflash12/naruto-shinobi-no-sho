@@ -2,7 +2,7 @@
 
 Evidências retiradas somente do runtime do jogo. Não inclui documentação nem scripts de auditoria.
 
-Gerado em: `2026-08-23T12:38:31.242Z`
+Gerado em: `2026-08-23T12:40:39.637Z`
 
 - **MOVE-00001** `app.js:61` — missions:new Map((CAT.missions\\|\\|[]).map(x=>[String(x.id),x])),
 - **MOVE-00002** `app.js:62` — jutsus:new Map((CAT.jutsus\\|\\|[]).map(x=>[String(x.id),x])),
@@ -533,7 +533,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 - **MOVE-00527** `cloudflare/oneclick-backend/src/index.js:78` — if(path==="/api/friends"){const{results}=await env.DB.prepare("SELECT u.* FROM friends f JOIN users u ON u.id=f.friend_id WHERE f.owner_id=? ORDER BY f.created_at DESC").bind(user.id).all();return reply(req,env,200,{ok:true,friends:(results\\|\\|[]).map(safeAccount)});}
 - **MOVE-00528** `cloudflare/oneclick-backend/test/local-e2e.mjs:14` — const intent=await req("/api/online/action",{token:ta,body:{roomId,playerId:`pa-${suffix}`,action:{type:"move",intent:"move",direction:"north",target:"training-field"}}});assert(intent.data?.accepted===true,"intent accepted");
 - **MOVE-00529** `cloudflare/oneclick-backend/test/local-e2e.mjs:16` — const st=await req("/api/online/state",{token:tb,body:{roomId}});assert((st.data?.state?.members\\|\\|[]).length>=2,"members sync");assert((st.data?.state?.actions\\|\\|[]).some(x=>x.type==="move"),"action sync");
-- **MOVE-00530** `cloudflare/r41-api/src/entry-authoritative.js:11` — const allowed=String(env.ALLOWED_ORIGINS\\|\\|env.ALLOWED_ORIGIN\\|\\|"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean);
+- **MOVE-00530** `cloudflare/r41-api/src/entry-authoritative.js:11` — const configured=String(env.ALLOWED_ORIGINS\\|\\|env.ALLOWED_ORIGIN\\|\\|"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean);
 - **MOVE-00531** `cloudflare/r41-api/src/entry.js:16` — function cors(req,env){const origin=req.headers.get("origin")\\|\\|"",allowed=String(env.ALLOWED_ORIGINS\\|\\|env.ALLOWED_ORIGIN\\|\\|"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean),selected=allowed.includes(origin)?origin:(!origin?(allowed[0]\\|\\|"*"):"null");return{"content-type":"application/json; charset=utf-8","access-control-allow-origin":selected,"access-control-allow-methods":"GET,POST,PUT,PATCH,DELETE,OPTIONS","access-control-allow-headers":"authorization,content-t
 - **MOVE-00532** `cloudflare/r41-api/src/entry.js:18` — async function fingerprint(value){const bytes=enc.encode(String(value\\|\\|"")),hash=new Uint8Array(await crypto.subtle.digest("SHA-256",bytes));return [...hash].map(x=>x.toString(16).padStart(2,"0")).join("");}
 - **MOVE-00533** `cloudflare/r41-api/src/entry.js:42` — if(action==="state"&&!roomId){const db=await guardDb(env),rows=await db.collection("room_memberships").find({userId:String(account.id)}).sort({updatedAt:-1}).limit(50).toArray();return json(req,env,200,{ok:true,state:{rooms:rows.map(x=>({roomId:x.roomId,mode:x.mode,role:x.role,joinedAt:x.joinedAt,lastSeen:x.lastSeen}))}});}

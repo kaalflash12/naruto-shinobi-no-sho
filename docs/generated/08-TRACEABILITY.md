@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-23T12:38:31.242Z`
+Gerado em: `2026-08-23T12:40:39.637Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -830,19 +830,19 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 | FUNC-00822 | função | `assert` | `cloudflare/oneclick-backend/test/local-e2e.mjs:2` | game-runtime / STATICALLY_TRACED |
 | FUNC-00823 | função | `req` | `cloudflare/oneclick-backend/test/local-e2e.mjs:3` | game-runtime / STATICALLY_TRACED |
 | FUNC-00824 | função | `originHeaders` | `cloudflare/r41-api/src/entry-authoritative.js:9` | game-runtime / STATICALLY_TRACED |
-| FUNC-00825 | função | `json` | `cloudflare/r41-api/src/entry-authoritative.js:15` | game-runtime / STATICALLY_TRACED |
-| FUNC-00826 | função | `body` | `cloudflare/r41-api/src/entry-authoritative.js:16` | game-runtime / STATICALLY_TRACED |
-| FUNC-00827 | função | `db` | `cloudflare/r41-api/src/entry-authoritative.js:17` | game-runtime / STATICALLY_TRACED |
-| FUNC-00828 | função | `validEmail` | `cloudflare/r41-api/src/entry-authoritative.js:24` | game-runtime / STATICALLY_TRACED |
-| FUNC-00829 | função | `copyRequest` | `cloudflare/r41-api/src/entry-authoritative.js:25` | game-runtime / STATICALLY_TRACED |
-| FUNC-00830 | função | `account` | `cloudflare/r41-api/src/entry-authoritative.js:26` | game-runtime / STATICALLY_TRACED |
-| FUNC-00831 | função | `augmentAccountEmail` | `cloudflare/r41-api/src/entry-authoritative.js:31` | game-runtime / STATICALLY_TRACED |
-| FUNC-00832 | função | `emailAwareAuth` | `cloudflare/r41-api/src/entry-authoritative.js:37` | game-runtime / STATICALLY_TRACED |
-| FUNC-00833 | função | `roomSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:61` | game-runtime / STATICALLY_TRACED |
-| FUNC-00834 | função | `actionType` | `cloudflare/r41-api/src/entry-authoritative.js:67` | game-runtime / STATICALLY_TRACED |
-| FUNC-00835 | função | `authoritativeAction` | `cloudflare/r41-api/src/entry-authoritative.js:68` | game-runtime / STATICALLY_TRACED |
-| FUNC-00836 | função | `status` | `cloudflare/r41-api/src/entry-authoritative.js:91` | game-runtime / STATICALLY_TRACED |
-| FUNC-00837 | função | `fetch` | `cloudflare/r41-api/src/entry-authoritative.js:99` | game-runtime / STATICALLY_TRACED |
+| FUNC-00825 | função | `json` | `cloudflare/r41-api/src/entry-authoritative.js:16` | game-runtime / STATICALLY_TRACED |
+| FUNC-00826 | função | `body` | `cloudflare/r41-api/src/entry-authoritative.js:17` | game-runtime / STATICALLY_TRACED |
+| FUNC-00827 | função | `db` | `cloudflare/r41-api/src/entry-authoritative.js:18` | game-runtime / STATICALLY_TRACED |
+| FUNC-00828 | função | `validEmail` | `cloudflare/r41-api/src/entry-authoritative.js:25` | game-runtime / STATICALLY_TRACED |
+| FUNC-00829 | função | `copyRequest` | `cloudflare/r41-api/src/entry-authoritative.js:26` | game-runtime / STATICALLY_TRACED |
+| FUNC-00830 | função | `account` | `cloudflare/r41-api/src/entry-authoritative.js:27` | game-runtime / STATICALLY_TRACED |
+| FUNC-00831 | função | `augmentAccountEmail` | `cloudflare/r41-api/src/entry-authoritative.js:32` | game-runtime / STATICALLY_TRACED |
+| FUNC-00832 | função | `emailAwareAuth` | `cloudflare/r41-api/src/entry-authoritative.js:38` | game-runtime / STATICALLY_TRACED |
+| FUNC-00833 | função | `roomSnapshot` | `cloudflare/r41-api/src/entry-authoritative.js:63` | game-runtime / STATICALLY_TRACED |
+| FUNC-00834 | função | `actionType` | `cloudflare/r41-api/src/entry-authoritative.js:69` | game-runtime / STATICALLY_TRACED |
+| FUNC-00835 | função | `authoritativeAction` | `cloudflare/r41-api/src/entry-authoritative.js:70` | game-runtime / STATICALLY_TRACED |
+| FUNC-00836 | função | `status` | `cloudflare/r41-api/src/entry-authoritative.js:94` | game-runtime / STATICALLY_TRACED |
+| FUNC-00837 | função | `fetch` | `cloudflare/r41-api/src/entry-authoritative.js:102` | game-runtime / STATICALLY_TRACED |
 | FUNC-00838 | função | `safeEqual` | `cloudflare/r41-api/src/entry.js:11` | game-runtime / STATICALLY_TRACED |
 | FUNC-00839 | função | `b64url` | `cloudflare/r41-api/src/entry.js:12` | game-runtime / STATICALLY_TRACED |
 | FUNC-00840 | função | `randomBytes` | `cloudflare/r41-api/src/entry.js:13` | game-runtime / STATICALLY_TRACED |
@@ -1099,29 +1099,29 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 | API-00004 | API | `/api/account/slots` | `app.js:3510`, `cloudflare/oneclick-backend/src/index.js:69`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/r41-api/src/index.js:105` | game-runtime / STATICALLY_TRACED |
 | API-00005 | API | `/api/ai` | `app.js:613`, `app.js:1147`, `cloudflare/oneclick-backend/src/index.js:63`, `cloudflare/r41-api/src/entry.js:136`, `cloudflare/r41-api/src/index.js:97` | game-runtime / STATICALLY_TRACED |
 | API-00006 | API | `/api/auth/delete-account` | `cloudflare/r41-api/src/entry.js:67`, `r41-github-api.js:168` | game-runtime / STATICALLY_TRACED |
-| API-00007 | API | `/api/auth/login` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:38`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `r41-github-api.js:66`, `r41-github-api.js:137` | game-runtime / STATICALLY_TRACED |
+| API-00007 | API | `/api/auth/login` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:39`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `r41-github-api.js:66`, `r41-github-api.js:137` | game-runtime / STATICALLY_TRACED |
 | API-00008 | API | `/api/auth/logout` | `app.js:3541`, `cloudflare/oneclick-backend/src/index.js:68`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/index.js:103`, `r41-github-api.js:154` | game-runtime / STATICALLY_TRACED |
-| API-00009 | API | `/api/auth/me` | `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:27`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144` | game-runtime / STATICALLY_TRACED |
-| API-00010 | API | `/api/auth/recover` | `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:38`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `r41-github-api.js:162` | game-runtime / STATICALLY_TRACED |
+| API-00009 | API | `/api/auth/me` | `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:28`, `cloudflare/r41-api/src/entry-authoritative.js:105`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:144` | game-runtime / STATICALLY_TRACED |
+| API-00010 | API | `/api/auth/recover` | `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:39`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `r41-github-api.js:162` | game-runtime / STATICALLY_TRACED |
 | API-00011 | API | `/api/auth/recovery-code` | `cloudflare/r41-api/src/entry.js:59`, `r41-github-api.js:165` | game-runtime / STATICALLY_TRACED |
-| API-00012 | API | `/api/auth/register` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:38`, `cloudflare/r41-api/src/entry-authoritative.js:40`, `cloudflare/r41-api/src/index.js:94`, `r41-github-api.js:66`, `r41-github-api.js:130` | game-runtime / STATICALLY_TRACED |
+| API-00012 | API | `/api/auth/register` | `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:39`, `cloudflare/r41-api/src/entry-authoritative.js:42`, `cloudflare/r41-api/src/index.js:94`, `r41-github-api.js:66`, `r41-github-api.js:130` | game-runtime / STATICALLY_TRACED |
 | API-00013 | API | `/api/cloud/load` | `app.js:756`, `app.js:1142`, `cloudflare/oneclick-backend/src/index.js:73`, `cloudflare/r41-api/src/index.js:109` | game-runtime / STATICALLY_TRACED |
 | API-00014 | API | `/api/friends` | `cloudflare/oneclick-backend/src/index.js:78`, `cloudflare/r41-api/src/index.js:116` | game-runtime / STATICALLY_TRACED |
 | API-00015 | API | `/api/friends/add` | `cloudflare/oneclick-backend/src/index.js:79`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
 | API-00016 | API | `/api/leaderboard` | `cloudflare/oneclick-backend/src/index.js:77`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
-| API-00017 | API | `/api/online/action` | `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:103`, `cloudflare/r41-api/src/index.js:125` | game-runtime / STATICALLY_TRACED |
+| API-00017 | API | `/api/online/action` | `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:107`, `cloudflare/r41-api/src/index.js:125` | game-runtime / STATICALLY_TRACED |
 | API-00018 | API | `/api/online/create` | `app.js:1152`, `cloudflare/oneclick-backend/src/index.js:80`, `cloudflare/oneclick-backend/test/local-e2e.mjs:11`, `cloudflare/r41-api/src/index.js:119` | game-runtime / STATICALLY_TRACED |
 | API-00019 | API | `/api/online/heartbeat` | `app.js:1154`, `cloudflare/oneclick-backend/src/index.js:82`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:121` | game-runtime / STATICALLY_TRACED |
 | API-00020 | API | `/api/online/join` | `app.js:1153`, `cloudflare/oneclick-backend/src/index.js:81`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:120` | game-runtime / STATICALLY_TRACED |
 | API-00021 | API | `/api/online/message` | `app.js:1156`, `cloudflare/oneclick-backend/src/index.js:84`, `cloudflare/oneclick-backend/test/local-e2e.mjs:13`, `cloudflare/r41-api/src/index.js:123` | game-runtime / STATICALLY_TRACED |
 | API-00022 | API | `/api/online/messages` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:85`, `cloudflare/oneclick-backend/test/local-e2e.mjs:13`, `cloudflare/r41-api/src/index.js:124` | game-runtime / STATICALLY_TRACED |
-| API-00023 | API | `/api/online/room` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:62`, `cloudflare/r41-api/src/index.js:122` | game-runtime / STATICALLY_TRACED |
+| API-00023 | API | `/api/online/room` | `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:64`, `cloudflare/r41-api/src/index.js:122` | game-runtime / STATICALLY_TRACED |
 | API-00024 | API | `/api/online/state` | `app.js:5599`, `cloudflare/oneclick-backend/src/index.js:87`, `cloudflare/oneclick-backend/test/local-e2e.mjs:16`, `cloudflare/r41-api/src/index.js:126` | game-runtime / STATICALLY_TRACED |
 | API-00025 | API | `/api/private/claim-leon` | `cloudflare/r41-api/src/entry.js:137`, `r41-github-api.js:77` | game-runtime / STATICALLY_TRACED |
 | API-00026 | API | `/api/private/leon/load` | `app.js:1127`, `cloudflare/oneclick-backend/src/index.js:75`, `cloudflare/r41-api/src/index.js:112` | game-runtime / STATICALLY_TRACED |
 | API-00027 | API | `/api/private/leon/save` | `app.js:1128`, `cloudflare/oneclick-backend/src/index.js:76`, `cloudflare/r41-api/src/index.js:113` | game-runtime / STATICALLY_TRACED |
 | API-00028 | API | `/api/private/unlock` | `app.js:1115`, `cloudflare/oneclick-backend/src/index.js:74`, `cloudflare/r41-api/src/index.js:111` | game-runtime / STATICALLY_TRACED |
-| API-00029 | API | `/api/status` | `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:101`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89` | game-runtime / STATICALLY_TRACED |
+| API-00029 | API | `/api/status` | `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:104`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89` | game-runtime / STATICALLY_TRACED |
 | API-00030 | API | `/api/v84/bootstrap` | `app.js:3376`, `app.js:3512`, `app.js:3521`, `cloudflare/oneclick-backend/src/index.js:64`, `cloudflare/r41-api/src/index.js:98` | game-runtime / STATICALLY_TRACED |
 | API-00031 | API | `/api/v84/world/event` | `app.js:3342`, `cloudflare/oneclick-backend/src/index.js:89`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/entry.js:128`, `cloudflare/r41-api/src/index.js:130` | game-runtime / STATICALLY_TRACED |
 | API-00032 | API | `/api/v84/world/savepoint` | `app.js:3344`, `cloudflare/oneclick-backend/src/index.js:90`, `cloudflare/oneclick-backend/test/local-e2e.mjs:17`, `cloudflare/r41-api/src/index.js:131` | game-runtime / STATICALLY_TRACED |
@@ -1136,7 +1136,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 | DB-00006 | persistência | `room_registry` | `cloudflare/r41-api/src/index.js:45`, `cloudflare/r41-api/src/index.js:46`, `cloudflare/r41-api/src/index.js:119`, `cloudflare/r41-api/src/index.js:120`, `cloudflare/r41-api/src/index.js:126` | game-runtime / STATICALLY_TRACED |
 | DB-00007 | persistência | `saves` | `cloudflare/r41-api/src/entry.js:72`, `cloudflare/r41-api/src/index.js:42`, `cloudflare/r41-api/src/index.js:43`, `cloudflare/r41-api/src/index.js:105`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:107`, `cloudflare/r41-api/src/index.js:108`, `cloudflare/r41-api/src/index.js:109`, `cloudflare/r41-api/src/index.js:112`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:115` | game-runtime / STATICALLY_TRACED |
 | DB-00008 | persistência | `sessions` | `cloudflare/r41-api/src/entry.js:71`, `cloudflare/r41-api/src/index.js:40`, `cloudflare/r41-api/src/index.js:41`, `cloudflare/r41-api/src/index.js:54`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:57`, `cloudflare/r41-api/src/index.js:96` | game-runtime / STATICALLY_TRACED |
-| DB-00009 | persistência | `users` | `cloudflare/r41-api/src/entry-authoritative.js:21`, `cloudflare/r41-api/src/entry-authoritative.js:34`, `cloudflare/r41-api/src/entry-authoritative.js:43`, `cloudflare/r41-api/src/entry-authoritative.js:48`, `cloudflare/r41-api/src/entry-authoritative.js:55`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
+| DB-00009 | persistência | `users` | `cloudflare/r41-api/src/entry-authoritative.js:22`, `cloudflare/r41-api/src/entry-authoritative.js:35`, `cloudflare/r41-api/src/entry-authoritative.js:45`, `cloudflare/r41-api/src/entry-authoritative.js:50`, `cloudflare/r41-api/src/entry-authoritative.js:57`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117` | game-runtime / STATICALLY_TRACED |
 | DB-00010 | persistência | `world_events` | `cloudflare/r41-api/src/entry.js:76`, `cloudflare/r41-api/src/index.js:47`, `cloudflare/r41-api/src/index.js:130` | game-runtime / STATICALLY_TRACED |
 | DB-00011 | persistência | `world_state` | `cloudflare/r41-api/src/index.js:48`, `cloudflare/r41-api/src/index.js:98`, `cloudflare/r41-api/src/index.js:131` | game-runtime / STATICALLY_TRACED |
 | UI-00001 | UI | `${action}` | `app.js:4809` | game-runtime / STATICALLY_TRACED |

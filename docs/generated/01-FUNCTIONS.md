@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-23T12:38:31.242Z`
+Gerado em: `2026-08-23T12:40:39.637Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -13190,7 +13190,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00825 — `json`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:15`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:16`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,status,data`
@@ -13206,7 +13206,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00826 — `body`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:16`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:17`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req`
@@ -13222,7 +13222,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00827 — `db`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:17`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:18`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `env`
@@ -13238,7 +13238,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00828 — `validEmail`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:24`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:25`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `value`
@@ -13254,7 +13254,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00829 — `copyRequest`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:25`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:26`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,url,data`
@@ -13270,7 +13270,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00830 — `account`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:26`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:27`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx`
@@ -13286,7 +13286,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00831 — `augmentAccountEmail`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:31`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:32`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,res`
@@ -13302,23 +13302,23 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00832 — `emailAwareAuth`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:37`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:38`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx,path`
-- **Chamadas internas detectadas:** `body`, `db`, `validEmail`, `json`, `fetch`, `copyRequest`, `augmentAccountEmail`, `clone`, `originHeaders`
+- **Chamadas internas detectadas:** `fetch`, `body`, `db`, `validEmail`, `json`, `copyRequest`, `augmentAccountEmail`, `clone`, `originHeaders`
 - **Rotas referidas:** `/api/auth/register`, `/api/auth/login`, `/api/auth/recover`
 - **Coleções MongoDB:** `users`
 - **Modelos IA:** —
 - **DOM IDs:** —
 - **Storage keys:** —
-- **Env:** —
+- **Env:** `MONGODB_URI`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
 ## FUNC-00833 — `roomSnapshot`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:61`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:63`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx,roomId`
@@ -13334,7 +13334,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00834 — `actionType`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:67`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:69`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `envelope`
@@ -13350,23 +13350,23 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00835 — `authoritativeAction`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:68`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:70`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx`
-- **Chamadas internas detectadas:** `json`, `body`, `hasClientResult`, `actionType`, `test`, `account`, `roomSnapshot`, `resolveTerionIntent`, `fetch`, `clone`
+- **Chamadas internas detectadas:** `json`, `fetch`, `body`, `hasClientResult`, `actionType`, `test`, `account`, `roomSnapshot`, `resolveTerionIntent`, `clone`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
 - **DOM IDs:** —
 - **Storage keys:** —
-- **Env:** `GAME_ROOMS`
+- **Env:** `MONGODB_URI`, `AUTH_SECRET`, `GAME_ROOMS`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
 ## FUNC-00836 — `status`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:91`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:94`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,ctx`
@@ -13382,12 +13382,12 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 
 ## FUNC-00837 — `fetch`
 
-- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:99`
+- **Fonte:** `cloudflare/r41-api/src/entry-authoritative.js:102`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `req,env,ctx`
-- **Chamadas internas detectadas:** `status`, `emailAwareAuth`, `authoritativeAction`
-- **Rotas referidas:** `/api/status`, `/api/online/action`
+- **Chamadas internas detectadas:** `status`, `augmentAccountEmail`, `emailAwareAuth`, `authoritativeAction`
+- **Rotas referidas:** `/api/status`, `/api/auth/me`, `/api/online/action`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
 - **DOM IDs:** —

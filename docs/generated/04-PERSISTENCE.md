@@ -2,7 +2,7 @@
 
 Coleções MongoDB e storage do navegador detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-23T12:38:31.242Z`
+Gerado em: `2026-08-23T12:40:39.637Z`
 
 ## Coleções MongoDB
 
@@ -14,7 +14,7 @@ Gerado em: `2026-08-23T12:38:31.242Z`
 - **DB-00006** `room_registry` — `cloudflare/r41-api/src/index.js:45`, `cloudflare/r41-api/src/index.js:46`, `cloudflare/r41-api/src/index.js:119`, `cloudflare/r41-api/src/index.js:120`, `cloudflare/r41-api/src/index.js:126`
 - **DB-00007** `saves` — `cloudflare/r41-api/src/entry.js:72`, `cloudflare/r41-api/src/index.js:42`, `cloudflare/r41-api/src/index.js:43`, `cloudflare/r41-api/src/index.js:105`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:106`, `cloudflare/r41-api/src/index.js:107`, `cloudflare/r41-api/src/index.js:108`, `cloudflare/r41-api/src/index.js:109`, `cloudflare/r41-api/src/index.js:112`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:113`, `cloudflare/r41-api/src/index.js:115`
 - **DB-00008** `sessions` — `cloudflare/r41-api/src/entry.js:71`, `cloudflare/r41-api/src/index.js:40`, `cloudflare/r41-api/src/index.js:41`, `cloudflare/r41-api/src/index.js:54`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:57`, `cloudflare/r41-api/src/index.js:96`
-- **DB-00009** `users` — `cloudflare/r41-api/src/entry-authoritative.js:21`, `cloudflare/r41-api/src/entry-authoritative.js:34`, `cloudflare/r41-api/src/entry-authoritative.js:43`, `cloudflare/r41-api/src/entry-authoritative.js:48`, `cloudflare/r41-api/src/entry-authoritative.js:55`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117`
+- **DB-00009** `users` — `cloudflare/r41-api/src/entry-authoritative.js:22`, `cloudflare/r41-api/src/entry-authoritative.js:35`, `cloudflare/r41-api/src/entry-authoritative.js:45`, `cloudflare/r41-api/src/entry-authoritative.js:50`, `cloudflare/r41-api/src/entry-authoritative.js:57`, `cloudflare/r41-api/src/entry.js:78`, `cloudflare/r41-api/src/entry.js:92`, `cloudflare/r41-api/src/entry.js:96`, `cloudflare/r41-api/src/entry.js:97`, `cloudflare/r41-api/src/entry.js:101`, `cloudflare/r41-api/src/index.js:39`, `cloudflare/r41-api/src/index.js:55`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/src/index.js:115`, `cloudflare/r41-api/src/index.js:116`, `cloudflare/r41-api/src/index.js:117`
 - **DB-00010** `world_events` — `cloudflare/r41-api/src/entry.js:76`, `cloudflare/r41-api/src/index.js:47`, `cloudflare/r41-api/src/index.js:130`
 - **DB-00011** `world_state` — `cloudflare/r41-api/src/index.js:48`, `cloudflare/r41-api/src/index.js:98`, `cloudflare/r41-api/src/index.js:131`
 
