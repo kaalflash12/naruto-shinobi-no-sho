@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'audit/**'
+      - 'docs/generated/**'
   pull_request:
     branches: [main]
 
