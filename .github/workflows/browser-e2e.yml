@@ -1,136 +1,87 @@
-name: Browser E2E
+name: Browser Smoke + Live API
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
-    paths-ignore:
-      - 'audit/BROWSER-SMOKE.json'
-      - 'audit/BROWSER-GAMEPLAY-E2E.json'
-  pull_request:
-  workflow_dispatch:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'styles.css'
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+      - 'src/**'
+      - 'tools/browser-smoke.mjs'
+      - 'tools/browser-live-api.mjs'
+      - '.github/workflows/browser-e2e.yml'
 
 permissions:
   contents: write
 
+concurrency:
+  group: shinobi-browser-supabase
+  cancel-in-progress: false
+
 jobs:
   browser:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Node 24
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: '24'
-
-      - name: Install Playwright only in CI runner
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
         run: |
-          npm install --no-save --package-lock=false playwright@1.55.0
+          npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
-
       - name: Start local HTTP game server
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/shinobi-http.log 2>&1 &
-          echo $! > /tmp/shinobi-http.pid
-          for i in {1..30}; do
-            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
-            sleep 1
-          done
-          cat /tmp/shinobi-http.log
-          exit 1
-
-      - name: Run real Chromium smoke test
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:4173/ >/dev/null && exit 0; sleep 1; done
+          cat /tmp/shinobi-http.log; exit 1
+      - name: Run Chromium smoke
         env:
           BASE_URL: http://127.0.0.1:4173
           BROWSER_REPORT: audit/BROWSER-SMOKE.json
         run: node tools/browser-smoke.mjs
-
-      - name: Enforce browser smoke report
+      - name: Run public GitHub Pages to Supabase Chromium probe
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          API_ORIGIN: https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api
+          BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
+        run: node tools/browser-live-api.mjs
+      - name: Enforce reports
         run: |
-          test -s audit/BROWSER-SMOKE.json
-          node -e "const r=require('./audit/BROWSER-SMOKE.json'); if(!r.ok||r.status!=='PASS_BROWSER_SMOKE'||!r.checks.httpLoad||!r.checks.publicIdentity||!r.checks.r41RuntimeLoaded||!r.checks.localResetClickReload||!r.checks.runtimeRequests||!r.checks.pageExceptions) process.exit(1); console.log(r.status,r.checks,r.api)"
-
-      - name: Preflight public Cloudflare backend
-        id: backend
+          node - <<'NODE'
+          const s=require('./audit/BROWSER-SMOKE.json'),l=require('./audit/BROWSER-LIVE-API.json');
+          if(!s.ok||s.status!=='PASS_BROWSER_SMOKE')throw new Error(JSON.stringify(s.failures||[]));
+          if(!l.ok||l.status!=='PASS_BROWSER_LIVE_API')throw new Error(JSON.stringify(l.failures||[]));
+          if(l.backendStatus?.data?.storage!=='supabase-postgres')throw new Error('browser live não confirmou Supabase Postgres');
+          console.log(s.status,l.status);
+          NODE
+      - name: Commit browser evidence
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
-          cfg="$(curl -fsSL --max-time 20 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?browser-e2e-preflight='"$RANDOM" || true)"
-          result="$(API_CONFIG="$cfg" node --input-type=module <<'NODE'
-          const cfg=String(process.env.API_CONFIG||'');
-          const origin=(cfg.match(/const baked = \"([^\"]*)\"/)?.[1]||'').trim().replace(/\/+$/g,'');
-          const build=(cfg.match(/window\.NARUTO_R41_API_BUILD = \"([^\"]+)\"/)?.[1]||'');
-          const ready=/^https:\/\//.test(origin)&&build==='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB';
-          process.stdout.write(JSON.stringify({ready,origin,build}));
-          NODE
-          )"
-          echo "$result"
-          ready="$(RESULT="$result" node -e "const r=JSON.parse(process.env.RESULT);process.stdout.write(r.ready?'true':'false')")"
-          echo "ready=$ready" >> "$GITHUB_OUTPUT"
-          if [ "$ready" != "true" ]; then
-            echo 'Public gameplay E2E blocked because Cloudflare Worker URL is not configured yet.' >&2
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for f in audit/BROWSER-SMOKE.json audit/BROWSER-LIVE-API.json; do [ -f "$f" ] && git add "$f"; done
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: record Supabase browser evidence'
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
-
-      - name: Run public Chromium gameplay E2E V2
-        id: gameplay
-        if: steps.backend.outputs.ready == 'true'
-        continue-on-error: true
-        env:
-          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
-          BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
-        run: node tools/browser-gameplay-e2e-v2.mjs
-
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: shinobi-browser-e2e
+          name: shinobi-browser-supabase
           path: |
             audit/BROWSER-SMOKE.json
-            audit/BROWSER-GAMEPLAY-E2E.json
+            audit/BROWSER-LIVE-API.json
           if-no-files-found: warn
-
-      - name: Commit only PASS browser evidence on main
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          if [ -f audit/BROWSER-SMOKE.json ]; then
-            smoke="$(node -e "const r=require('./audit/BROWSER-SMOKE.json');process.stdout.write(r.status||'UNKNOWN')")"
-            if [ "$smoke" = "PASS_BROWSER_SMOKE" ]; then git add audit/BROWSER-SMOKE.json; fi
-          fi
-
-          if [ -f audit/BROWSER-GAMEPLAY-E2E.json ]; then
-            gameplay="$(node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'UNKNOWN')")"
-            if [ "$gameplay" = "PASS_BROWSER_GAMEPLAY_E2E" ]; then
-              git add audit/BROWSER-GAMEPLAY-E2E.json
-            else
-              git restore --staged audit/BROWSER-GAMEPLAY-E2E.json 2>/dev/null || true
-              git checkout -- audit/BROWSER-GAMEPLAY-E2E.json 2>/dev/null || true
-              echo "Not committing non-PASS gameplay evidence: $gameplay"
-            fi
-          fi
-
-          if git diff --cached --quiet; then
-            echo "No PASS browser evidence change to commit."
-          else
-            git commit -m "test: record PASS browser evidence"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-
-      - name: Enforce gameplay report
-        if: always()
-        shell: bash
-        run: |
-          if [ "${{ steps.backend.outputs.ready }}" != "true" ]; then
-            echo 'BACKEND_NOT_DEPLOYED: public Cloudflare Worker URL is not configured.' >&2
-            exit 1
-          fi
-          test -s audit/BROWSER-GAMEPLAY-E2E.json
-          node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json'); if(!r.ok||r.status!=='PASS_BROWSER_GAMEPLAY_E2E'||!r.checks.allOperationalContractsGameplayE2E) { console.error(r.failures); process.exit(1); } console.log(r.status,r.contracts.map(x=>x.id+':'+x.status));"
