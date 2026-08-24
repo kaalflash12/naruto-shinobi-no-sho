@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T03:36:02.764Z`
+Gerado em: `2026-08-24T15:56:43.006Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -14,36 +14,39 @@ Gerado em: `2026-08-24T03:36:02.764Z`
 | 6 | `data/v74-content.js` | SIM | 7 |
 | 7 | `data/v75-content.js` | SIM | 8 |
 | 8 | `data/v81-leon-content.js` | SIM | 9 |
-| 9 | `data/v84-visual-manifest.js` | SIM | 10 |
-| 10 | `data/v84-live-world.js` | SIM | 11 |
-| 11 | `data/r27-canon-events.js` | SIM | 12 |
-| 12 | `data/r27-downloaded-canon-portraits.js` | SIM | 13 |
-| 13 | `data/v84-knowledge-catalog.js` | SIM | 14 |
-| 14 | `data/r38-master-loader.js` | SIM | 15 |
-| 15 | `data/v83-integrated-config.js` | SIM | 16 |
-| 16 | `data/v84-integrated-config.js` | SIM | 17 |
-| 17 | `data/r29-user-assets.js` | SIM | 18 |
-| 18 | `data/r30-assets.js` | SIM | 19 |
-| 19 | `data/r31-assets.js` | SIM | 20 |
-| 20 | `data/r33-mission-scripts.js` | SIM | 21 |
-| 21 | `data/r41-data-delta.js` | SIM | 22 |
-| 22 | `data/r41-verified-visuals.js` | SIM | 23 |
-| 23 | `data/r41-exact-visuals.js` | SIM | 24 |
-| 24 | `data/r41-user-visuals.js` | SIM | 25 |
-| 25 | `src/r41-core-bundle.js` | SIM | 26 |
-| 26 | `src/r41-canonical-repair.js` | SIM | 27 |
-| 27 | `r41-api-config.js` | SIM | 28 |
-| 28 | `r41-github-api.js` | SIM | 29 |
-| 29 | `app.js` | SIM | 30 |
-| 30 | `src/r41-local-reset-fix.js` | SIM | 31 |
-| 31 | `src/r41-final-ui-repair.js` | SIM | 32 |
-| 32 | `r41-account-ui.js` | SIM | 33 |
-| 33 | `r41-account-deeplink-fix.js` | SIM | 34 |
+| 9 | `src/r41-leon-state-repair.js` | SIM | 10 |
+| 10 | `data/v84-visual-manifest.js` | SIM | 11 |
+| 11 | `data/v84-live-world.js` | SIM | 12 |
+| 12 | `data/r27-canon-events.js` | SIM | 13 |
+| 13 | `data/r27-downloaded-canon-portraits.js` | SIM | 14 |
+| 14 | `data/v84-knowledge-catalog.js` | SIM | 15 |
+| 15 | `data/r38-master-loader.js` | SIM | 16 |
+| 16 | `data/v83-integrated-config.js` | SIM | 17 |
+| 17 | `data/v84-integrated-config.js` | SIM | 18 |
+| 18 | `data/r29-user-assets.js` | SIM | 19 |
+| 19 | `data/r30-assets.js` | SIM | 20 |
+| 20 | `data/r31-assets.js` | SIM | 21 |
+| 21 | `data/r33-mission-scripts.js` | SIM | 22 |
+| 22 | `data/r41-data-delta.js` | SIM | 23 |
+| 23 | `data/r41-verified-visuals.js` | SIM | 24 |
+| 24 | `data/r41-exact-visuals.js` | SIM | 25 |
+| 25 | `data/r41-user-visuals.js` | SIM | 26 |
+| 26 | `src/r41-core-bundle.js` | SIM | 27 |
+| 27 | `src/r41-canonical-repair.js` | SIM | 28 |
+| 28 | `r41-api-config.js` | SIM | 29 |
+| 29 | `r41-github-api.js` | SIM | 30 |
+| 30 | `src/r41-asset-path-repair.js` | SIM | 31 |
+| 31 | `app.js` | SIM | 32 |
+| 32 | `src/r41-v82-combat-bridge.js` | SIM | 33 |
+| 33 | `src/r41-local-reset-fix.js` | SIM | 34 |
+| 34 | `src/r41-final-ui-repair.js` | SIM | 35 |
+| 35 | `r41-account-ui.js` | SIM | 36 |
+| 36 | `r41-account-deeplink-fix.js` | SIM | 37 |
 
 ## Fonte/configuração/tooling
 
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 4580 bytes — SHA-256 `dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771`
-- `.github/workflows/browser-e2e.yml` — domínio `tooling` — 1803 bytes — SHA-256 `93f238cdd2e33823138c0962404a52f94642f7d539d3479f3f31e6116e26c84e`
+- `.github/workflows/browser-e2e.yml` — domínio `tooling` — 1960 bytes — SHA-256 `4cad14d28dc132cfbe29cc4b621c16604e14d7209f2c0ed338930c5ae661f090`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 5390 bytes — SHA-256 `68db6698dff53569d98c824a6adad70288bc591fbaf1dbdb688fd6a2023c0082`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3182 bytes — SHA-256 `5267791f80a93a8c5625e8cb4561db44b1bb300962106a64a1663ef6218c1cc3`
@@ -97,8 +100,8 @@ Gerado em: `2026-08-24T03:36:02.764Z`
 - `data/v84-live-world.js` — domínio `game-runtime` — 894903 bytes — SHA-256 `02b7a54e1d27499047618d51e3e01308d276d259c42667527449227849b92ae2`
 - `data/v84-live-world.json` — domínio `game-runtime` — 1446635 bytes — SHA-256 `4cd5d0cf319e01d4cdefde444b74b3e1ae5b9eea2e8fba75e4fd3efd649f833c`
 - `data/v84-visual-manifest.js` — domínio `game-runtime` — 242316 bytes — SHA-256 `736232844cffbb8d0377bfaecd3857d5cb0b378f73a295844696706fa8848eab`
-- `index.html` — domínio `game-runtime` — 3786 bytes — SHA-256 `997ab5beb3f8b0ea061ae599f011cc8a73aee663d8b712f0dc5547e301aeccd1`
-- `package.json` — domínio `game-runtime` — 1329 bytes — SHA-256 `9a47ce6df57af8d2023fc150f45a26b94b2e161750f001fda980715aee53639a`
+- `index.html` — domínio `game-runtime` — 4050 bytes — SHA-256 `ee68fc340411d5f5a537b4107ae2c188fb2c1d3bd3d5d4e5961f2cec45225ad6`
+- `package.json` — domínio `game-runtime` — 1419 bytes — SHA-256 `34eac733f0d9b1f50233098ea3a0ae44f53e8f2036c979eac8aa0fff8eefc841`
 - `r31.css` — domínio `game-runtime` — 6504 bytes — SHA-256 `9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-account-deeplink-fix.js` — domínio `game-runtime` — 587 bytes — SHA-256 `656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2`
@@ -106,10 +109,13 @@ Gerado em: `2026-08-24T03:36:02.764Z`
 - `r41-api-config.js` — domínio `game-runtime` — 1041 bytes — SHA-256 `5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732`
 - `r41-github-api.js` — domínio `game-runtime` — 6207 bytes — SHA-256 `f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1`
 - `r41-map-hitfix.css` — domínio `game-runtime` — 383 bytes — SHA-256 `1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9`
+- `src/r41-asset-path-repair.js` — domínio `game-runtime` — 1707 bytes — SHA-256 `e313440ba475ad9f02b32c71a6651fe50594c9fa7734034033b8d26ca05173fd`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
-- `src/r41-final-ui-repair.js` — domínio `game-runtime` — 3280 bytes — SHA-256 `9380405fa99b96598731b1d9f874ea062cca798b3b99508bc913a8723dfb1a53`
+- `src/r41-final-ui-repair.js` — domínio `game-runtime` — 3922 bytes — SHA-256 `87dd13b8f0571f53625d87bd5506f32d31fbef7ab5368a2eca7e08adbf6aad8c`
+- `src/r41-leon-state-repair.js` — domínio `game-runtime` — 1886 bytes — SHA-256 `eaf36dd4b485c8ec1746a5f188d314bd0adf0a4bd4ba620edc64958daa15f67a`
 - `src/r41-local-reset-fix.js` — domínio `game-runtime` — 1605 bytes — SHA-256 `6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487`
+- `src/r41-v82-combat-bridge.js` — domínio `game-runtime` — 8803 bytes — SHA-256 `782ccc6e3677b0d45836a3e40ba0c4fa9ebfcbd7b0b3861a41b34df183a91e2b`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/account-live-e2e.mjs` — domínio `tooling` — 4937 bytes — SHA-256 `e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7`
 - `tools/audit-documentation-coverage.mjs` — domínio `tooling` — 13113 bytes — SHA-256 `9a3b81f709b44720beb176fe2aaba3e91d213e67280e11743ab236628b24e594`
@@ -117,6 +123,7 @@ Gerado em: `2026-08-24T03:36:02.764Z`
 - `tools/audit-operational-static-contracts.mjs` — domínio `tooling` — 2954 bytes — SHA-256 `218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 4125 bytes — SHA-256 `39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a`
 - `tools/browser-account-live.mjs` — domínio `tooling` — 5191 bytes — SHA-256 `1d62144ef47d69f22aa9c8efac15adfb66e8c25abda0a89d8928dd78b0552f2f`
+- `tools/browser-combat-local-e2e.mjs` — domínio `tooling` — 8444 bytes — SHA-256 `e30a710e5ef378e068eaabad8fe77cdd481175994b77b7b372a9ea97f3961d21`
 - `tools/browser-gameplay-e2e-v2.mjs` — domínio `tooling` — 9066 bytes — SHA-256 `1e4f4da345fd560b253054e35b81fa9ce99932b5ee497806512e788d92476a12`
 - `tools/browser-gameplay-e2e-v3.mjs` — domínio `tooling` — 5034 bytes — SHA-256 `2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa`
 - `tools/browser-gameplay-e2e-v4.mjs` — domínio `tooling` — 5423 bytes — SHA-256 `c88b16d694c96e860a34dae980e150d31732f430e6416eee1ee58d242857c3d1`

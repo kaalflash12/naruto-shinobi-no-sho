@@ -2,7 +2,7 @@
 
 Coleções MongoDB e storage do navegador detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-24T03:36:02.764Z`
+Gerado em: `2026-08-24T15:56:43.006Z`
 
 ## Coleções MongoDB
 
@@ -37,3 +37,6 @@ Gerado em: `2026-08-24T03:36:02.764Z`
 | STORE-00012 | localStorage | removeItem | `sns-r41-api-origin` | `r41-api-config.js:17` |
 | STORE-00013 | localStorage | getItem | `sns-api-origin` | `r41-github-api.js:8` |
 | STORE-00014 | localStorage | getItem | `sns-r41-api-origin` | `r41-github-api.js:8` |
+| STORE-00015 | localStorage | getItem | `narutoShinobiNoShoPcV5Active` | `src/r41-final-ui-repair.js:16` |
+| STORE-00016 | localStorage | getItem | `narutoShinobiNoShoPcV5:${id}` | `src/r41-final-ui-repair.js:17` |
+| STORE-00017 | localStorage | getItem | `narutoShinobiNoShoPcV4` | `src/r41-final-ui-repair.js:17` |
