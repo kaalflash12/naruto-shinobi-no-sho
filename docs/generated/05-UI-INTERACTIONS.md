@@ -2,7 +2,7 @@
 
 Ações e eventos detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-24T19:52:18.814Z`
+Gerado em: `2026-08-24T20:24:20.361Z`
 
 ## Ações
 
@@ -11,7 +11,7 @@ Gerado em: `2026-08-24T19:52:18.814Z`
 - **UI-00003** `abandon-mission` — `app.js:837`, `app.js:1342`, `app.js:5206`
 - **UI-00004** `account-delete` — `app.js:3590`, `app.js:4484`
 - **UI-00005** `account-import-legacy` — `app.js:3590`, `app.js:4485`
-- **UI-00006** `account-load` — `app.js:3590`, `app.js:4484`, `src/r41-account-active-slot.js:169`, `src/r41-account-active-slot.js:169`, `src/r41-account-active-slot.js:175`
+- **UI-00006** `account-load` — `app.js:3590`, `app.js:4484`, `src/r41-account-active-slot.js:231`, `src/r41-account-active-slot.js:231`, `src/r41-account-active-slot.js:237`
 - **UI-00007** `account-load-leon` — `app.js:4483`, `app.js:4487`, `app.js:4492`, `app.js:4991`
 - **UI-00008** `account-logout` — `app.js:3588`, `app.js:3593`, `app.js:3593`, `app.js:4481`, `styles.css:338`
 - **UI-00009** `account-new` — `app.js:3588`, `app.js:3590`, `app.js:3590`, `app.js:4393`, `app.js:4393`, `app.js:4481`, `app.js:4485`, `app.js:4485`, `app.js:4981`, `app.js:4991`
@@ -73,7 +73,7 @@ Gerado em: `2026-08-24T19:52:18.814Z`
 - **UI-00065** `kurai-mode` — `app.js:1859`, `app.js:1859`, `app.js:2394`, `app.js:2394`
 - **UI-00066** `learn-jutsu` — `app.js:820`
 - **UI-00067** `leon-dojo` — `app.js:1504`, `app.js:1504`
-- **UI-00068** `load-account-slot` — `src/r41-account-active-slot.js:169`, `src/r41-account-active-slot.js:175`
+- **UI-00068** `load-account-slot` — `src/r41-account-active-slot.js:231`, `src/r41-account-active-slot.js:237`
 - **UI-00069** `load-slot` — `app.js:1057`, `app.js:2773`
 - **UI-00070** `logout` — `r41-account-ui.js:26`
 - **UI-00071** `map-enter` — `app.js:1104`, `app.js:1347`
@@ -126,119 +126,120 @@ Gerado em: `2026-08-24T19:52:18.814Z`
 - **UI-00118** `r41-activity` — `app.js:5594`, `app.js:5595`
 - **UI-00119** `r41-hospital-treat` — `app.js:5503`, `app.js:5505`
 - **UI-00120** `r41-online-intent` — `app.js:5604`, `app.js:5607`
-- **UI-00121** `recovery-code` — `r41-account-ui.js:26`
-- **UI-00122** `reset` — `app.js:903`, `src/r41-local-reset-fix.js:4`, `src/r41-local-reset-fix.js:39`
-- **UI-00123** `rest` — `app.js:795`, `app.js:801`, `app.js:2673`
-- **UI-00124** `rinne-unlock` — `app.js:1855`
-- **UI-00125** `rpg-confirm-cost` — `app.js:1735`
-- **UI-00126** `rpg-continue` — `app.js:1835`, `app.js:2359`, `app.js:2693`
-- **UI-00127** `rpg-option` — `app.js:1835`, `app.js:2359`, `app.js:2693`
-- **UI-00128** `rpg-resource` — `app.js:1792`, `app.js:1792`
-- **UI-00129** `rpg-roll` — `app.js:1808`, `app.js:1808`, `app.js:1811`, `app.js:1811`, `app.js:1811`, `app.js:2345`, `app.js:2345`, `app.js:2743`, `app.js:2743`, `app.js:2745`, `app.js:2745`, `app.js:2745`
-- **UI-00130** `rpg-select` — `app.js:1818`
-- **UI-00131** `rpg-tab` — `app.js:1835`, `app.js:2359`
-- **UI-00132** `rpg-use` — `app.js:1818`, `app.js:2372`, `app.js:2524`, `app.js:2657`, `app.js:2685`, `app.js:3102`, `app.js:4675`
-- **UI-00133** `save` — `app.js:898`, `app.js:1056`, `app.js:1067`, `app.js:1071`, `app.js:1171`, `app.js:1239`, `app.js:1242`, `app.js:1350`, `app.js:1808`, `app.js:1811`, `app.js:1833`, `app.js:2359`, `app.js:2708`, `index.html:1`
-- **UI-00134** `save-sheet` — `app.js:1071`
-- **UI-00135** `set-defense` — `app.js:843`, `app.js:1339`, `app.js:2716`, `app.js:2716`, `app.js:2716`
-- **UI-00136** `sheet-attr` — `app.js:1074`, `app.js:1074`
-- **UI-00137** `sheet-skill` — `app.js:1077`, `app.js:1077`
-- **UI-00138** `shop-buy` — `app.js:1282`, `app.js:4220`
-- **UI-00139** `shop-buy-qty` — `app.js:1477`, `app.js:4220`
-- **UI-00140** `shop-category` — `app.js:1310`, `app.js:1479`
-- **UI-00141** `shop-mode` — `app.js:1310`, `app.js:1310`, `app.js:1479`, `app.js:1479`
-- **UI-00142** `shop-qty` — `app.js:1477`, `app.js:1477`, `app.js:1478`, `app.js:1478`
-- **UI-00143** `shop-sell` — `app.js:1282`
-- **UI-00144** `shop-sell-qty` — `app.js:1478`
-- **UI-00145** `shop-vendor` — `app.js:1310`, `app.js:1479`, `app.js:3715`, `app.js:3715`
-- **UI-00146** `show-more-jutsu` — `app.js:827`, `app.js:1299`
-- **UI-00147** `show-more-mission` — `app.js:833`, `app.js:3073`
-- **UI-00148** `skill-up` — `app.js:805`
-- **UI-00149** `start-battle` — `app.js:841`, `app.js:841`, `app.js:1339`, `app.js:1339`, `app.js:2715`, `app.js:2715`
-- **UI-00150** `start-mission` — `app.js:833`, `app.js:1093`, `app.js:3073`, `app.js:3350`, `app.js:4369`, `app.js:4840`, `app.js:5362`
-- **UI-00151** `tactical-move` — `app.js:1338`, `app.js:2712`, `app.js:4280`, `styles.css:172`, `styles.css:172`
-- **UI-00152** `toggle-menu` — `index.html:1`
-- **UI-00153** `train` — `app.js:1317`, `app.js:3438`
-- **UI-00154** `use-item` — `app.js:847`, `app.js:1252`, `app.js:1282`
-- **UI-00155** `v8-battle-ai` — `app.js:2201`, `app.js:2500`
-- **UI-00156** `v8-leon-basic` — `app.js:2201`, `app.js:2500`
-- **UI-00157** `v8-leon-defend` — `app.js:2201`, `app.js:2500`
-- **UI-00158** `v8-leon-dodge` — `app.js:2201`, `app.js:2500`
-- **UI-00159** `v8-leon-exit` — `app.js:2201`, `app.js:2500`
-- **UI-00160** `v8-leon-flee` — `app.js:2201`, `app.js:2500`
-- **UI-00161** `v8-leon-focus` — `app.js:2201`, `app.js:2500`
-- **UI-00162** `v8-leon-move` — `app.js:2199`, `app.js:4281`, `app.js:4390`
-- **UI-00163** `v8-leon-tech` — `app.js:2201`, `app.js:2490`, `app.js:3101`
-- **UI-00164** `v8-leon-tech-confirm` — `app.js:2197`
-- **UI-00165** `v8-open-ai-train` — `app.js:2054`, `app.js:2096`
-- **UI-00166** `v8-start-leon` — `app.js:2200`, `app.js:2200`, `app.js:2208`, `app.js:2208`, `app.js:2495`, `app.js:2495`
-- **UI-00167** `v8-visual` — `app.js:1972`, `app.js:2120`, `app.js:2779`, `app.js:3391`
-- **UI-00168** `v8-xp-table` — `app.js:2149`, `app.js:2405`
-- **UI-00169** `v81-ai-progression` — `app.js:2405`, `app.js:2677`
-- **UI-00170** `v81-cap-open` — `app.js:2372`, `app.js:2657`
-- **UI-00171** `v81-codex-tab` — `app.js:2383`, `app.js:2383`, `app.js:2383`, `app.js:2383`, `app.js:2399`, `app.js:2399`, `app.js:2399`
-- **UI-00172** `v81-combat-filter` — `app.js:2498`
-- **UI-00173** `v81-grim-filter` — `app.js:2380`, `app.js:2651`, `app.js:2651`
-- **UI-00174** `v81-refresh-ai` — `app.js:2411`, `app.js:2708`
-- **UI-00175** `v82-ai-tab` — `app.js:2693`
-- **UI-00176** `v82-basic-melee` — `app.js:2716`
-- **UI-00177** `v82-basic-ranged` — `app.js:2716`
-- **UI-00178** `v82-codex` — `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`
-- **UI-00179** `v82-npc-narrate` — `app.js:2681`, `app.js:2691`
-- **UI-00180** `v82-npc-train` — `app.js:2671`
-- **UI-00181** `v82-open-resource` — `app.js:2639`, `app.js:2697`, `app.js:2697`, `app.js:2743`, `app.js:2743`, `app.js:2743`
-- **UI-00182** `v82-practice-skill` — `app.js:2669`
-- **UI-00183** `v82-practice-tech` — `app.js:2670`, `app.js:4726`
-- **UI-00184** `v82-select-action` — `app.js:2685`, `app.js:3102`, `app.js:4675`
-- **UI-00185** `v82-start-elite` — `app.js:2672`
-- **UI-00186** `v82-tech-tab` — `app.js:2655`, `app.js:2655`
-- **UI-00187** `v82-train-tab` — `app.js:2674`
-- **UI-00188** `v82-train-tech` — `app.js:2658`, `app.js:4788`
-- **UI-00189** `v82-use-outside` — `app.js:2658`, `app.js:4788`
-- **UI-00190** `v821-load-leon` — `app.js:2883`
-- **UI-00191** `v821-reset-leon` — `app.js:2883`
-- **UI-00192** `v83-cap-open` — `app.js:3033`
-- **UI-00193** `v83-codex-more` — `app.js:3063`
-- **UI-00194** `v83-codex-tab` — `app.js:3068`
-- **UI-00195** `v83-mission-training` — `app.js:3050`
-- **UI-00196** `v83-practice-owned` — `app.js:3054`
-- **UI-00197** `v83-practice-skill` — `app.js:3054`
-- **UI-00198** `v83-project-final` — `app.js:3055`
-- **UI-00199** `v83-project-session` — `app.js:3055`
-- **UI-00200** `v83-resolve-mission-event` — `app.js:3084`
-- **UI-00201** `v83-start-dojo` — `app.js:3057`, `app.js:3057`
-- **UI-00202** `v83-start-project` — `app.js:3061`
-- **UI-00203** `v83-tech-category` — `app.js:3036`, `app.js:3036`
-- **UI-00204** `v83-tech-state` — `app.js:3036`
-- **UI-00205** `v83-train-tab` — `app.js:3059`
-- **UI-00206** `v83-use-tech` — `app.js:3032`, `app.js:3129`
-- **UI-00207** `v84-cell` — `app.js:3239`
-- **UI-00208** `v84-character-preset` — `app.js:3331`
-- **UI-00209** `v84-field-preset` — `app.js:3240`
-- **UI-00210** `v84-grid-toggle` — `app.js:3240`
-- **UI-00211** `v84-kb-more` — `app.js:3324`
-- **UI-00212** `v84-kb-type` — `app.js:3324`
-- **UI-00213** `v84-map-tool` — `app.js:3240`, `app.js:3240`, `app.js:3240`
-- **UI-00214** `v84-npc-more` — `app.js:3283`, `app.js:3723`
-- **UI-00215** `v84-open-kb` — `app.js:3324`
-- **UI-00216** `v84-open-npc` — `app.js:3278`, `app.js:3283`, `app.js:3718`, `app.js:3718`, `app.js:3723`, `app.js:4219`
-- **UI-00217** `v84-stage-field` — `app.js:3278`
-- **UI-00218** `v84-token` — `app.js:3239`
-- **UI-00219** `v841-atlas-more` — `app.js:3426`, `app.js:5573`
-- **UI-00220** `v841-atlas-type` — `app.js:3426`, `app.js:5573`
-- **UI-00221** `world-select` — `app.js:1101`, `app.js:1347`
-- **UI-00222** `world-travel` — `app.js:1101`, `app.js:1347`
+- **UI-00121** `r41-send-online-intent` — `src/r41-account-active-slot.js:107`, `src/r41-account-active-slot.js:128`, `src/r41-account-active-slot.js:134`, `src/r41-account-active-slot.js:149`
+- **UI-00122** `recovery-code` — `r41-account-ui.js:26`
+- **UI-00123** `reset` — `app.js:903`, `src/r41-local-reset-fix.js:4`, `src/r41-local-reset-fix.js:39`
+- **UI-00124** `rest` — `app.js:795`, `app.js:801`, `app.js:2673`
+- **UI-00125** `rinne-unlock` — `app.js:1855`
+- **UI-00126** `rpg-confirm-cost` — `app.js:1735`
+- **UI-00127** `rpg-continue` — `app.js:1835`, `app.js:2359`, `app.js:2693`
+- **UI-00128** `rpg-option` — `app.js:1835`, `app.js:2359`, `app.js:2693`
+- **UI-00129** `rpg-resource` — `app.js:1792`, `app.js:1792`
+- **UI-00130** `rpg-roll` — `app.js:1808`, `app.js:1808`, `app.js:1811`, `app.js:1811`, `app.js:1811`, `app.js:2345`, `app.js:2345`, `app.js:2743`, `app.js:2743`, `app.js:2745`, `app.js:2745`, `app.js:2745`
+- **UI-00131** `rpg-select` — `app.js:1818`
+- **UI-00132** `rpg-tab` — `app.js:1835`, `app.js:2359`
+- **UI-00133** `rpg-use` — `app.js:1818`, `app.js:2372`, `app.js:2524`, `app.js:2657`, `app.js:2685`, `app.js:3102`, `app.js:4675`
+- **UI-00134** `save` — `app.js:898`, `app.js:1056`, `app.js:1067`, `app.js:1071`, `app.js:1171`, `app.js:1239`, `app.js:1242`, `app.js:1350`, `app.js:1808`, `app.js:1811`, `app.js:1833`, `app.js:2359`, `app.js:2708`, `index.html:1`
+- **UI-00135** `save-sheet` — `app.js:1071`
+- **UI-00136** `set-defense` — `app.js:843`, `app.js:1339`, `app.js:2716`, `app.js:2716`, `app.js:2716`
+- **UI-00137** `sheet-attr` — `app.js:1074`, `app.js:1074`
+- **UI-00138** `sheet-skill` — `app.js:1077`, `app.js:1077`
+- **UI-00139** `shop-buy` — `app.js:1282`, `app.js:4220`
+- **UI-00140** `shop-buy-qty` — `app.js:1477`, `app.js:4220`
+- **UI-00141** `shop-category` — `app.js:1310`, `app.js:1479`
+- **UI-00142** `shop-mode` — `app.js:1310`, `app.js:1310`, `app.js:1479`, `app.js:1479`
+- **UI-00143** `shop-qty` — `app.js:1477`, `app.js:1477`, `app.js:1478`, `app.js:1478`
+- **UI-00144** `shop-sell` — `app.js:1282`
+- **UI-00145** `shop-sell-qty` — `app.js:1478`
+- **UI-00146** `shop-vendor` — `app.js:1310`, `app.js:1479`, `app.js:3715`, `app.js:3715`
+- **UI-00147** `show-more-jutsu` — `app.js:827`, `app.js:1299`
+- **UI-00148** `show-more-mission` — `app.js:833`, `app.js:3073`
+- **UI-00149** `skill-up` — `app.js:805`
+- **UI-00150** `start-battle` — `app.js:841`, `app.js:841`, `app.js:1339`, `app.js:1339`, `app.js:2715`, `app.js:2715`
+- **UI-00151** `start-mission` — `app.js:833`, `app.js:1093`, `app.js:3073`, `app.js:3350`, `app.js:4369`, `app.js:4840`, `app.js:5362`
+- **UI-00152** `tactical-move` — `app.js:1338`, `app.js:2712`, `app.js:4280`, `styles.css:172`, `styles.css:172`
+- **UI-00153** `toggle-menu` — `index.html:1`
+- **UI-00154** `train` — `app.js:1317`, `app.js:3438`
+- **UI-00155** `use-item` — `app.js:847`, `app.js:1252`, `app.js:1282`
+- **UI-00156** `v8-battle-ai` — `app.js:2201`, `app.js:2500`
+- **UI-00157** `v8-leon-basic` — `app.js:2201`, `app.js:2500`
+- **UI-00158** `v8-leon-defend` — `app.js:2201`, `app.js:2500`
+- **UI-00159** `v8-leon-dodge` — `app.js:2201`, `app.js:2500`
+- **UI-00160** `v8-leon-exit` — `app.js:2201`, `app.js:2500`
+- **UI-00161** `v8-leon-flee` — `app.js:2201`, `app.js:2500`
+- **UI-00162** `v8-leon-focus` — `app.js:2201`, `app.js:2500`
+- **UI-00163** `v8-leon-move` — `app.js:2199`, `app.js:4281`, `app.js:4390`
+- **UI-00164** `v8-leon-tech` — `app.js:2201`, `app.js:2490`, `app.js:3101`
+- **UI-00165** `v8-leon-tech-confirm` — `app.js:2197`
+- **UI-00166** `v8-open-ai-train` — `app.js:2054`, `app.js:2096`
+- **UI-00167** `v8-start-leon` — `app.js:2200`, `app.js:2200`, `app.js:2208`, `app.js:2208`, `app.js:2495`, `app.js:2495`
+- **UI-00168** `v8-visual` — `app.js:1972`, `app.js:2120`, `app.js:2779`, `app.js:3391`
+- **UI-00169** `v8-xp-table` — `app.js:2149`, `app.js:2405`
+- **UI-00170** `v81-ai-progression` — `app.js:2405`, `app.js:2677`
+- **UI-00171** `v81-cap-open` — `app.js:2372`, `app.js:2657`
+- **UI-00172** `v81-codex-tab` — `app.js:2383`, `app.js:2383`, `app.js:2383`, `app.js:2383`, `app.js:2399`, `app.js:2399`, `app.js:2399`
+- **UI-00173** `v81-combat-filter` — `app.js:2498`
+- **UI-00174** `v81-grim-filter` — `app.js:2380`, `app.js:2651`, `app.js:2651`
+- **UI-00175** `v81-refresh-ai` — `app.js:2411`, `app.js:2708`
+- **UI-00176** `v82-ai-tab` — `app.js:2693`
+- **UI-00177** `v82-basic-melee` — `app.js:2716`
+- **UI-00178** `v82-basic-ranged` — `app.js:2716`
+- **UI-00179** `v82-codex` — `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`, `app.js:2700`
+- **UI-00180** `v82-npc-narrate` — `app.js:2681`, `app.js:2691`
+- **UI-00181** `v82-npc-train` — `app.js:2671`
+- **UI-00182** `v82-open-resource` — `app.js:2639`, `app.js:2697`, `app.js:2697`, `app.js:2743`, `app.js:2743`, `app.js:2743`
+- **UI-00183** `v82-practice-skill` — `app.js:2669`
+- **UI-00184** `v82-practice-tech` — `app.js:2670`, `app.js:4726`
+- **UI-00185** `v82-select-action` — `app.js:2685`, `app.js:3102`, `app.js:4675`
+- **UI-00186** `v82-start-elite` — `app.js:2672`
+- **UI-00187** `v82-tech-tab` — `app.js:2655`, `app.js:2655`
+- **UI-00188** `v82-train-tab` — `app.js:2674`
+- **UI-00189** `v82-train-tech` — `app.js:2658`, `app.js:4788`
+- **UI-00190** `v82-use-outside` — `app.js:2658`, `app.js:4788`
+- **UI-00191** `v821-load-leon` — `app.js:2883`
+- **UI-00192** `v821-reset-leon` — `app.js:2883`
+- **UI-00193** `v83-cap-open` — `app.js:3033`
+- **UI-00194** `v83-codex-more` — `app.js:3063`
+- **UI-00195** `v83-codex-tab` — `app.js:3068`
+- **UI-00196** `v83-mission-training` — `app.js:3050`
+- **UI-00197** `v83-practice-owned` — `app.js:3054`
+- **UI-00198** `v83-practice-skill` — `app.js:3054`
+- **UI-00199** `v83-project-final` — `app.js:3055`
+- **UI-00200** `v83-project-session` — `app.js:3055`
+- **UI-00201** `v83-resolve-mission-event` — `app.js:3084`
+- **UI-00202** `v83-start-dojo` — `app.js:3057`, `app.js:3057`
+- **UI-00203** `v83-start-project` — `app.js:3061`
+- **UI-00204** `v83-tech-category` — `app.js:3036`, `app.js:3036`
+- **UI-00205** `v83-tech-state` — `app.js:3036`
+- **UI-00206** `v83-train-tab` — `app.js:3059`
+- **UI-00207** `v83-use-tech` — `app.js:3032`, `app.js:3129`
+- **UI-00208** `v84-cell` — `app.js:3239`
+- **UI-00209** `v84-character-preset` — `app.js:3331`
+- **UI-00210** `v84-field-preset` — `app.js:3240`
+- **UI-00211** `v84-grid-toggle` — `app.js:3240`
+- **UI-00212** `v84-kb-more` — `app.js:3324`
+- **UI-00213** `v84-kb-type` — `app.js:3324`
+- **UI-00214** `v84-map-tool` — `app.js:3240`, `app.js:3240`, `app.js:3240`
+- **UI-00215** `v84-npc-more` — `app.js:3283`, `app.js:3723`
+- **UI-00216** `v84-open-kb` — `app.js:3324`
+- **UI-00217** `v84-open-npc` — `app.js:3278`, `app.js:3283`, `app.js:3718`, `app.js:3718`, `app.js:3723`, `app.js:4219`
+- **UI-00218** `v84-stage-field` — `app.js:3278`
+- **UI-00219** `v84-token` — `app.js:3239`
+- **UI-00220** `v841-atlas-more` — `app.js:3426`, `app.js:5573`
+- **UI-00221** `v841-atlas-type` — `app.js:3426`, `app.js:5573`
+- **UI-00222** `world-select` — `app.js:1101`, `app.js:1347`
+- **UI-00223** `world-travel` — `app.js:1101`, `app.js:1347`
 
 ## Eventos
 
 - **EVENT-00001** `beforeunload` — `app.js:5303`
 - **EVENT-00002** `change` — `app.js:1380`, `app.js:2932`
-- **EVENT-00003** `click` — `app.js:1356`, `app.js:1519`, `app.js:1883`, `app.js:1933`, `app.js:2073`, `app.js:2213`, `app.js:2517`, `app.js:2727`, `app.js:2926`, `app.js:3128`, `app.js:3360`, `app.js:3450`, `app.js:3612`, `app.js:3672`, `app.js:3787`, `app.js:3954`, `app.js:3974`, `app.js:4016`, `app.js:4104`, `app.js:4129`, `app.js:4152`, `app.js:4284`, `app.js:4395`, `app.js:4487`, `app.js:4847`, `app.js:5164`, `app.js:5168`, `app.js:5258`, `app.js:5389`, `app.js:5505`, `app.js:5529`, `app.js:5595`, `app.js:5607`, `r41-account-ui.js:18`, `r41-account-ui.js:27`, `r41-account-ui.js:36`, `src/r41-account-active-slot.js:208`, `src/r41-local-reset-fix.js:38`, `src/r41-v82-combat-bridge.js:151`
-- **EVENT-00004** `DOMContentLoaded` — `r41-account-deeplink-fix.js:13`, `r41-account-ui.js:38`, `src/r41-account-active-slot.js:233`, `src/r41-core-bundle.js:170`, `src/r41-final-ui-repair.js:62`, `src/r41-v82-combat-bridge.js:159`
+- **EVENT-00003** `click` — `app.js:1356`, `app.js:1519`, `app.js:1883`, `app.js:1933`, `app.js:2073`, `app.js:2213`, `app.js:2517`, `app.js:2727`, `app.js:2926`, `app.js:3128`, `app.js:3360`, `app.js:3450`, `app.js:3612`, `app.js:3672`, `app.js:3787`, `app.js:3954`, `app.js:3974`, `app.js:4016`, `app.js:4104`, `app.js:4129`, `app.js:4152`, `app.js:4284`, `app.js:4395`, `app.js:4487`, `app.js:4847`, `app.js:5164`, `app.js:5168`, `app.js:5258`, `app.js:5389`, `app.js:5505`, `app.js:5529`, `app.js:5595`, `app.js:5607`, `r41-account-ui.js:18`, `r41-account-ui.js:27`, `r41-account-ui.js:36`, `src/r41-account-active-slot.js:270`, `src/r41-local-reset-fix.js:38`, `src/r41-v82-combat-bridge.js:151`
+- **EVENT-00004** `DOMContentLoaded` — `r41-account-deeplink-fix.js:13`, `r41-account-ui.js:38`, `src/r41-account-active-slot.js:304`, `src/r41-core-bundle.js:170`, `src/r41-final-ui-repair.js:62`, `src/r41-v82-combat-bridge.js:159`
 - **EVENT-00005** `error` — `app.js:5278`, `app.js:5301`
 - **EVENT-00006** `input` — `app.js:1376`, `app.js:1882`, `app.js:2513`, `app.js:2726`, `app.js:3127`, `app.js:3359`
 - **EVENT-00007** `keydown` — `app.js:1372`, `app.js:1905`, `app.js:3616`
-- **EVENT-00008** `sns:account-changed` — `r41-account-ui.js:38`, `src/r41-account-active-slot.js:224`, `src/r41-final-ui-repair.js:64`
+- **EVENT-00008** `sns:account-changed` — `r41-account-ui.js:38`, `src/r41-account-active-slot.js:295`, `src/r41-final-ui-repair.js:64`
 - **EVENT-00009** `storage` — `src/r41-final-ui-repair.js:63`
 - **EVENT-00010** `submit` — `r41-account-ui.js:27`, `r41-account-ui.js:27`, `r41-account-ui.js:27`
 - **EVENT-00011** `unhandledrejection` — `app.js:5302`

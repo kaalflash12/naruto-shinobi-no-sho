@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T19:52:18.814Z`
+Gerado em: `2026-08-24T20:24:20.361Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -51,13 +51,17 @@ Gerado em: `2026-08-24T19:52:18.814Z`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 3798 bytes — SHA-256 `6baa47bcced58620f3b33847bbb5ac02332a99acb51200717273083b701d7ab1`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 5390 bytes — SHA-256 `68db6698dff53569d98c824a6adad70288bc591fbaf1dbdb688fd6a2023c0082`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
+- `.github/workflows/final-readiness-orchestration.yml` — domínio `tooling` — 2307 bytes — SHA-256 `617c2d78a7e6633afba989e8090ce99e3f29d7d00b95a7f59be1fa930b16c6bb`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3182 bytes — SHA-256 `5267791f80a93a8c5625e8cb4561db44b1bb300962106a64a1663ef6218c1cc3`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 10869 bytes — SHA-256 `94fbfc8b578ef0c1e57758f9536b3359e11df12d8e745893971bcfdd55cbf467`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 3652 bytes — SHA-256 `f4771091db58cbe139f314bb5e51b8014790888f918ae525dc1b8a6cd2941c05`
 - `.github/workflows/one-shot-terion-authority.yml` — domínio `tooling` — 6191 bytes — SHA-256 `626915f9d67570722ef3c145112860549c95c98b8f12a33beefaf5eef9534eac`
+- `.github/workflows/post-live-backend-orchestration.yml` — domínio `tooling` — 1054 bytes — SHA-256 `7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 5967 bytes — SHA-256 `54499685541b67724f296363e3ffb17f3135ab54e5820aed5b99d2d4ebe1a089`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `game-runtime` — 785 bytes — SHA-256 `fe95f93d6e4cbeb86732d139f2b1fc2b2fd3c5edd90aeaa3f176490e89be427c`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `game-runtime` — 5613 bytes — SHA-256 `1bb65964cbe4ea394274d3091dc2497e32aa06003f002b012fb7be9111f1e5f3`
+- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 767 bytes — SHA-256 `612bd70834eec87df8906e318d29fe26129364a635844890e0e9a511e34b490a`
 - `audit/LIVE-BACKEND.json` — domínio `game-runtime` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `game-runtime` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `game-runtime` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
@@ -116,7 +120,7 @@ Gerado em: `2026-08-24T19:52:18.814Z`
 - `r41-api-config.js` — domínio `game-runtime` — 1041 bytes — SHA-256 `5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732`
 - `r41-github-api.js` — domínio `game-runtime` — 6207 bytes — SHA-256 `f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1`
 - `r41-map-hitfix.css` — domínio `game-runtime` — 383 bytes — SHA-256 `1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9`
-- `src/r41-account-active-slot.js` — domínio `game-runtime` — 13468 bytes — SHA-256 `6619fdb440395088f06f5e352c9e0960a3c89a2acf3b3a85da4d15b2c6053112`
+- `src/r41-account-active-slot.js` — domínio `game-runtime` — 16951 bytes — SHA-256 `64b5461473de7d4f421127fedf803a2e7fe4f492e56767c17c0c6209322b96f6`
 - `src/r41-asset-path-repair.js` — domínio `game-runtime` — 3126 bytes — SHA-256 `819b549845882723160287e73a8bb64c6391e15015695d29bc0a59d418d53e46`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
