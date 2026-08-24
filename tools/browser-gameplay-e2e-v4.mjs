@@ -10,7 +10,7 @@ let base=fs.readFileSync(basePath,'utf8');
 const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
   await attack.waitFor({state:'visible',timeout:15000});
   await attack.click();`;
-const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+const newAttackWait=`  const attack=page.locator('[data-action="v82-basic-melee"]:not([disabled]), [data-action="basic-attack"]:not([disabled])').first();
   const attackVisible=await attack.isVisible().catch(()=>false);
   if(!attackVisible){
     const combatDiag=await page.evaluate(()=>({
