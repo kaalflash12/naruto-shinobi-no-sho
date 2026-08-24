@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'tools/final-readiness.mjs'
+      - 'tools/gameplay-live-provenance.mjs'
       - 'r41-api-config.js'
       - 'r41-github-api.js'
       - 'audit/LIVE-BACKEND.json'
@@ -44,6 +45,7 @@ jobs:
         run: |
           set -euo pipefail
           node --check tools/final-readiness.mjs
+          node --check tools/gameplay-live-provenance.mjs
           node --check r41-api-config.js
           node --check r41-github-api.js
           grep -F 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
@@ -52,6 +54,31 @@ jobs:
             echo 'Backend proibido permanece no runtime ativo.' >&2
             exit 1
           fi
+      - name: Reject local or stale gameplay evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f audit/FINAL-READINESS.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const p='audit/BROWSER-GAMEPLAY-E2E.json';
+          if(!fs.existsSync(p))throw new Error('BROWSER_GAMEPLAY_LIVE_EVIDENCE_MISSING');
+          const g=JSON.parse(fs.readFileSync(p,'utf8'));
+          if(g.ok!==true||g.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`GAMEPLAY_NOT_PASS ${g.status||'null'}`);
+          if(g.scope!=='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY')throw new Error(`GAMEPLAY_SCOPE_NOT_PUBLIC ${g.scope||'null'}`);
+          if(g.site!=='https://kaalflash12.github.io/naruto-shinobi-no-sho/')throw new Error(`GAMEPLAY_SITE_NOT_CANONICAL ${g.site||'null'}`);
+          const pr=g.provenance||{};
+          if(pr.kind!=='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE')throw new Error('GAMEPLAY_LIVE_PROVENANCE_MISSING');
+          if(pr.backend!=='cloudflare-workers-mongodb-atlas'||pr.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
+          if(pr.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
+          const cfg=fs.readFileSync('r41-api-config.js','utf8');
+          const baked=String(cfg.match(/const baked="([^"]*)"/)?.[1]||'').replace(/\/+$/,'');
+          const used=String(pr.apiOrigin||'').replace(/\/+$/,'');
+          if(!baked||used!==baked)throw new Error(`GAMEPLAY_WORKER_MISMATCH baked=${baked||'null'} used=${used||'null'}`);
+          if(g.checks?.temporaryAccountRegistered!==true||g.checks?.temporaryAccountDeleted!==true)throw new Error('GAMEPLAY_TEMP_ACCOUNT_LIFECYCLE_NOT_PROVEN');
+          if(!Array.isArray(g.contracts)||g.contracts.length<11||g.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('GAMEPLAY_11_CONTRACTS_NOT_PROVEN');
+          console.log('PASS_FINAL_GAMEPLAY_LIVE_PROVENANCE',pr);
+          NODE
       - name: Run final all-systems gate
         run: node tools/final-readiness.mjs
       - name: Enforce PASS_FINAL_READINESS
