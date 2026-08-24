@@ -41,9 +41,20 @@ jobs:
           const browserAccount=read('audit/BROWSER-ACCOUNT-LIVE.json');
           const gameplay=read('audit/BROWSER-GAMEPLAY-E2E.json');
           const accountOk=account?.ok===true&&account?.status==='PASS_ACCOUNT_LIVE_E2E'&&browserAccount?.ok===true&&browserAccount?.status==='PASS_BROWSER_ACCOUNT_LIVE';
-          const gameplayOk=gameplay?.ok===true&&gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&Array.isArray(gameplay?.contracts)&&gameplay.contracts.length>=11&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E');
+          const gameplayOk=gameplay?.ok===true&&
+            gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&
+            gameplay?.scope==='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'&&
+            gameplay?.site==='https://kaalflash12.github.io/naruto-shinobi-no-sho/'&&
+            gameplay?.provenance?.kind==='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE'&&
+            gameplay?.provenance?.backend==='cloudflare-workers-mongodb-atlas'&&
+            gameplay?.provenance?.realtime==='cloudflare-durable-objects'&&
+            gameplay?.provenance?.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'&&
+            /^https:\/\//i.test(String(gameplay?.provenance?.apiOrigin||''))&&
+            gameplay?.checks?.temporaryAccountRegistered===true&&
+            gameplay?.checks?.temporaryAccountDeleted===true&&
+            Array.isArray(gameplay?.contracts)&&gameplay.contracts.length>=11&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E');
           require('fs').appendFileSync(process.env.GITHUB_OUTPUT,`ready=${accountOk&&gameplayOk?'true':'false'}\naccount=${accountOk?'true':'false'}\ngameplay=${gameplayOk?'true':'false'}\n`);
-          console.log(JSON.stringify({accountOk,gameplayOk},null,2));
+          console.log(JSON.stringify({accountOk,gameplayOk,gameplayScope:gameplay?.scope||null,gameplayProvenance:gameplay?.provenance||null},null,2));
           NODE
 
       - name: Dispatch final readiness
