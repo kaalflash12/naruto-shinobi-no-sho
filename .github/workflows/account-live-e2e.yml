@@ -21,7 +21,6 @@ concurrency:
 
 jobs:
   account-live:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     env:
