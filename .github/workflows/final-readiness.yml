@@ -1,23 +1,6 @@
 name: Final Readiness
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/final-readiness.mjs'
-      - 'tools/gameplay-live-provenance.mjs'
-      - 'r41-api-config.js'
-      - 'r41-github-api.js'
-      - 'audit/LIVE-BACKEND.json'
-      - 'audit/BROWSER-LIVE-API.json'
-      - 'audit/ACCOUNT-LIVE-E2E.json'
-      - 'audit/BROWSER-ACCOUNT-LIVE.json'
-      - 'audit/BROWSER-SMOKE.json'
-      - 'audit/BROWSER-GAMEPLAY-E2E.json'
-      - 'docs/generated/FINAL-CANONICAL-AUDIT.json'
-      - 'docs/generated/DOCUMENTATION-AUDIT.json'
-      - 'docs/generated/OPERATIONAL-STATIC-AUDIT.json'
-      - '.github/workflows/final-readiness.yml'
   workflow_dispatch:
 
 permissions:
