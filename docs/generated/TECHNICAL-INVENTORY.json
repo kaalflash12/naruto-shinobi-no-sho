@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-24T19:50:24.267Z",
+  "generatedAt": "2026-08-24T19:52:18.814Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5548,
-    "runtimeFiles": 86,
+    "files": 5550,
+    "runtimeFiles": 88,
     "assetFiles": 5434,
-    "textFiles": 109,
+    "textFiles": 111,
     "functions": 1171,
     "routes": 33,
     "models": 2,
@@ -24,8 +24,8 @@
     "gameRuntimeFunctions": 1054,
     "toolingFunctions": 117,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 99,
-    "gameRuntimeSourceFiles": 67,
+    "sourceFiles": 101,
+    "gameRuntimeSourceFiles": 69,
     "toolingSourceFiles": 32,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
@@ -43621,6 +43621,22 @@
       "path": "audit/LIVE-BACKEND.json",
       "size": 1023,
       "sha256": "0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json",
+      "size": 1776,
+      "sha256": "7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "audit/PR39-BROWSER-SMOKE.json",
+      "size": 1032,
+      "sha256": "4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2",
       "extension": ".json",
       "runtime": true,
       "asset": false
