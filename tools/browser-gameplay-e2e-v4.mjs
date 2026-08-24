@@ -2,8 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-// V4 mantém os adapters V2/V3 e corrige contratos do gate com a UI atual.
-// O sucesso de registro é sessão real (r41Auth/token), não uma tela específica.
 const tmpDir=path.resolve('.tmp-gameplay-e2e-v4');
 fs.mkdirSync(tmpDir,{recursive:true});
 
@@ -14,8 +12,6 @@ const newWait=`  await page.waitForFunction(()=>Boolean(window.r41Auth?.authenti
 if(!v2.includes(oldWait))throw new Error('GAMEPLAY_E2E_V4_REGISTER_WAIT_TARGET_MISSING');
 v2=v2.replace(oldWait,newWait);
 
-// O runtime atual renderiza vários data-screen em cards/atalhos. Para navegação
-// do gate, o contrato estável é o menu principal #main-nav.
 const oldNavSelector='  const selector=`[data-screen="${screen}"]`;';
 const newNavSelector='  const selector=`#main-nav [data-screen="${screen}"]`;';
 if(!v2.includes(oldNavSelector))throw new Error('GAMEPLAY_E2E_V4_NAV_SELECTOR_TARGET_MISSING');
@@ -26,10 +22,6 @@ const newNavClick='  await b.evaluate(el=>el.click());\n  await page.waitForFunc
 if(!v2.includes(oldNavClick))throw new Error('GAMEPLAY_E2E_V4_NAV_CLICK_TARGET_MISSING');
 v2=v2.replace(oldNavClick,newNavClick);
 
-// A tela da ficha mudou de composição ao longo das revisões. O gate antigo
-// usava texto de H1 como se fosse contrato. O contrato real é: menu personagem
-// ativo e, em seguida, os próprios testes verificam .r41-appearance-state e
-// ferimentos persistentes. Assim não mascaramos falha funcional por título.
 const oldCharacterAssert=`  if(screen==='personagem'){
     const h=String(await page.locator('#screen h1').first().textContent().catch(()=>''));
     assert(/Ficha Shinobi|Leon Kosmo/i.test(h),\`navegação personagem não abriu a ficha; h1=\${h}\`);
@@ -40,6 +32,27 @@ const newCharacterAssert=`  if(screen==='personagem'){
   }`;
 if(!v2.includes(oldCharacterAssert))throw new Error('GAMEPLAY_E2E_V4_CHARACTER_ASSERT_TARGET_MISSING');
 v2=v2.replace(oldCharacterAssert,newCharacterAssert);
+
+// Diagnóstico fail-closed: se o combate iniciou mas a ação canônica não existe,
+// o relatório grava todos os data-action visíveis e o estado R41 em vez de só
+// estourar timeout sem explicar a UI produzida.
+const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+  await attack.waitFor({state:'visible',timeout:15000});
+  await attack.click();`;
+const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+  const attackVisible=await attack.isVisible().catch(()=>false);
+  if(!attackVisible){
+    const combatDiag=await page.evaluate(()=>({
+      heading:String(document.querySelector('#screen h1')?.textContent||''),
+      text:String(document.querySelector('#screen')?.innerText||'').slice(0,1800),
+      actions:[...document.querySelectorAll('#screen [data-action]')].map(x=>({action:x.getAttribute('data-action'),id:x.getAttribute('data-id'),disabled:!!x.disabled,text:String(x.textContent||'').trim().slice(0,120)})).slice(0,80),
+      r41:window.__NARUTO_R41__?.state?.()||null
+    }));
+    throw new Error('COMBAT_ACTION_MISSING '+JSON.stringify(combatDiag));
+  }
+  await attack.click();`;
+if(!v2.includes(oldAttackWait))throw new Error('GAMEPLAY_E2E_V4_COMBAT_TARGET_MISSING');
+v2=v2.replace(oldAttackWait,newAttackWait);
 
 const patchedV2=path.join(tmpDir,'browser-gameplay-e2e-v2-patched.mjs');
 fs.writeFileSync(patchedV2,v2,'utf8');
@@ -58,8 +71,4 @@ v3=v3.replace(nodeLocalStorage,"active:'checked-in-browser'");
 const patchedV3=path.join(tmpDir,'browser-gameplay-e2e-v3-patched.mjs');
 fs.writeFileSync(patchedV3,v3,'utf8');
 
-try{
-  await import(pathToFileURL(patchedV3).href);
-}finally{
-  try{fs.rmSync(tmpDir,{recursive:true,force:true});}catch{}
-}
+try{await import(pathToFileURL(patchedV3).href);}finally{try{fs.rmSync(tmpDir,{recursive:true,force:true});}catch{}}
