@@ -5,7 +5,9 @@ const SAVE_KEY='narutoShinobiNoShoPcV4';
 const ACTIVE_SLOT_KEY='narutoShinobiNoShoPcV5Active';
 const SLOT_PREFIX='narutoShinobiNoShoPcV5:';
 const SLOT_INDEX_KEY='narutoShinobiNoShoPcV5Slots';
+const AUTH_TOKEN_KEY='sns-v841-auth-token';
 const SLOT_ID='combat-local-e2e';
+const ACCOUNT={id:'account-combat-local-e2e',username:'combat-local-e2e',role:'player',displayName:'Combat Local E2E'};
 const fixture={
   version:'8.20.0-r40',
   playerId:'player-combat-local-e2e',campaignId:'campaign-combat-local-e2e',
@@ -29,6 +31,7 @@ const fixture={
     hp:30,maxHp:40,chakra:24,maxChakra:30,stamina:18,maxStamina:24,conditions:[],injuries:[]
   }
 };
+const slotSummary={id:SLOT_ID,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId};
 
 const browser=await chromium.launch({headless:true});
 const page=await browser.newPage({viewport:{width:1365,height:900}});
@@ -37,18 +40,34 @@ const isImage=url=>/\.(?:png|jpe?g|webp|gif|svg)(?:\?|$)/i.test(url);
 page.on('pageerror',e=>pageErrors.push(String(e?.message||e)));
 page.on('requestfailed',req=>{const url=req.url();if(url.startsWith(base)&&isImage(url))failedImages.push({url,error:req.failure()?.errorText||'request failed'});});
 page.on('response',response=>{const url=response.url();if(url.startsWith(base)&&isImage(url)&&response.status()>=400)failedImages.push({url,status:response.status()});});
+await page.route('**/api/**',async route=>{
+  const url=new URL(route.request().url());
+  const path=url.pathname;
+  const json=value=>route.fulfill({status:200,contentType:'application/json; charset=utf-8',body:JSON.stringify(value)});
+  if(path==='/api/auth/me')return json({ok:true,account:ACCOUNT});
+  if(path==='/api/account/slots')return json({ok:true,slots:[slotSummary],mirrors:{cloud:false}});
+  if(path==='/api/account/load')return json({ok:true,slotId:SLOT_ID,save:fixture,mirrors:{cloud:false}});
+  if(path==='/api/v84/bootstrap')return json({ok:true,world:{},savePoints:[]});
+  if(path==='/api/status')return json({ok:true,enabled:false,cloudSave:false,providers:[],routes:{}});
+  return json({ok:true});
+});
 try{
   const response=await page.goto(`${base}/?combat-local=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:60000});
   if(!response?.ok())throw new Error(`site HTTP ${response?.status()}`);
-  await page.evaluate(({fixture,slotId,saveKey,activeKey,prefix,indexKey})=>{
+  await page.evaluate(({fixture,slotId,saveKey,activeKey,prefix,indexKey,authKey})=>{
     const json=JSON.stringify(fixture);
     localStorage.setItem(saveKey,json);
     localStorage.setItem(activeKey,slotId);
     localStorage.setItem(prefix+slotId,json);
     localStorage.setItem(indexKey,JSON.stringify([{id:slotId,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId}]));
-  },{fixture,slotId:SLOT_ID,saveKey:SAVE_KEY,activeKey:ACTIVE_SLOT_KEY,prefix:SLOT_PREFIX,indexKey:SLOT_INDEX_KEY});
+    sessionStorage.setItem(authKey,'local-ci-token');
+  },{fixture,slotId:SLOT_ID,saveKey:SAVE_KEY,activeKey:ACTIVE_SLOT_KEY,prefix:SLOT_PREFIX,indexKey:SLOT_INDEX_KEY,authKey:AUTH_TOKEN_KEY});
   await page.reload({waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:20000});
+
+  const accountLoad=page.locator(`[data-action="account-load"][data-id="${SLOT_ID}"]`).first();
+  await accountLoad.waitFor({state:'visible',timeout:15000});
+  await accountLoad.click();
 
   const combatNav=page.locator('[data-screen="combate"]').first();
   await combatNav.waitFor({state:'visible',timeout:15000});
