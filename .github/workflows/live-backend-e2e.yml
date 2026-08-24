@@ -56,7 +56,7 @@ jobs:
           fi
           echo 'PASS_BACKEND_IDENTITY_CLOUDFLARE_MONGODB'
 
-      - name: Verify Cloudflare token
+      - name: Verify Cloudflare token is present and active
         shell: bash
         run: |
           set -euo pipefail
@@ -68,6 +68,19 @@ jobs:
           NODE
             exit 1
           fi
+          verify="$(curl -sS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' https://api.cloudflare.com/client/v4/user/tokens/verify || true)"
+          if ! TOKEN_JSON="$verify" node --input-type=module <<'NODE'
+          let data={};try{data=JSON.parse(process.env.TOKEN_JSON||'{}')}catch{};
+          if(!(data.success===true&&String(data.result?.status||'').toLowerCase()==='active'))process.exit(1);
+          NODE
+          then
+            node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_INVALID_CLOUDFLARE_TOKEN',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',sourceFingerprint:String(process.env.SOURCE_FINGERPRINT||'')||null,failures:['CLOUDFLARE_API_TOKEN não foi confirmado como token ativo pela API Cloudflare.']},null,2)+'\n');
+          NODE
+            exit 1
+          fi
+          echo 'PASS_CLOUDFLARE_TOKEN_ACTIVE'
 
       - name: Resolve Cloudflare account automatically
         shell: bash
@@ -86,6 +99,12 @@ jobs:
       - name: Install Worker dependencies
         working-directory: cloudflare/r41-api
         run: npm install --no-audit --no-fund
+
+      - name: MongoDB Atlas credential and network preflight
+        working-directory: cloudflare/r41-api
+        env:
+          MONGODB_DB: naruto_shinobi_no_sho
+        run: node test/mongodb-live-preflight.mjs
 
       - name: Worker syntax and TERION unit gates
         working-directory: cloudflare/r41-api
@@ -182,13 +201,14 @@ jobs:
       - name: Enforce live authority contracts
         run: |
           node - <<'NODE'
-          const live=require('./audit/LIVE-BACKEND.json');const browser=require('./audit/BROWSER-LIVE-API.json');
+          const preflight=require('./audit/MONGODB-PREFLIGHT.json');const live=require('./audit/LIVE-BACKEND.json');const browser=require('./audit/BROWSER-LIVE-API.json');
+          if(!preflight.ok||preflight.status!=='PASS_MONGODB_ATLAS_PREFLIGHT')throw new Error(`MongoDB preflight sem PASS: ${preflight.status}`);
           if(!live.ok||live.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(JSON.stringify(live.failures||[]));
           if(!browser.ok||browser.status!=='PASS_BROWSER_LIVE_API')throw new Error(JSON.stringify(browser.failures||[]));
           if(!/^[a-f0-9]{64}$/.test(String(live.sourceFingerprint||''))||live.sourceFingerprint!==process.env.SOURCE_FINGERPRINT)throw new Error('LIVE_SOURCE_FINGERPRINT_MISMATCH');
           const required=['statusConfigured','authoritativeBoundariesAdvertised','v6PerCharacterAuthorityAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected','mongoSaveRoundTrip','multipleCharacterSlotsPersisted','slotListing','roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','multipleMechanicalProfilesSameAccount','profileSelectorMatchesPlayerAndCampaign','continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging','intentActionAccepted','terionUsesLockedMechanicalProfile','terionSelectsCorrectProfilePerCharacter','clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave','leaderboardSeparatesCharacters','worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','slotDeleteCleansOnlyMatchingMechanicalProfile','sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'];
           for(const k of required)if(live.checks?.[k]!==true)throw new Error(`Gate live ausente: ${k}`);
-          console.log('PASS_CLOUDFLARE_MONGODB_LIVE',live.status,browser.status,live.sourceFingerprint);
+          console.log('PASS_CLOUDFLARE_MONGODB_LIVE',preflight.status,live.status,browser.status,live.sourceFingerprint);
           NODE
 
       - name: Bake verified Worker URL into public game
@@ -205,6 +225,7 @@ jobs:
         with:
           name: shinobi-cloudflare-mongodb-live-evidence
           path: |
+            audit/MONGODB-PREFLIGHT.json
             audit/LIVE-BACKEND.json
             audit/BROWSER-LIVE-API.json
           if-no-files-found: warn
@@ -216,7 +237,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/LIVE-BACKEND.json audit/BROWSER-LIVE-API.json r41-api-config.js
+          git add audit/MONGODB-PREFLIGHT.json audit/LIVE-BACKEND.json audit/BROWSER-LIVE-API.json r41-api-config.js
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'test: record verified Cloudflare MongoDB live backend'
           git pull --rebase origin main
