@@ -2,12 +2,12 @@
   "use strict";
   const params=new URLSearchParams(location.search);
   const clean=v=>String(v||"").trim().replace(/\/+$/g,"");
-  const allowed=v=>/^https:\/\//i.test(v)&&!/(?:supabase|vercel|turso)/i.test(v);
+  const allowedOverride=v=>/^https:\/\/[A-Za-z0-9._-]+\.workers\.dev$/i.test(v);
   const fromQueryRaw=clean(params.get("api"));
   const storedRaw=clean(localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"");
   const baked=""; // preenchido automaticamente pelo CI apos deploy Cloudflare + MongoDB verificado
-  const fromQuery=allowed(fromQueryRaw)?fromQueryRaw:"";
-  const fromStorage=allowed(storedRaw)?storedRaw:"";
+  const fromQuery=allowedOverride(fromQueryRaw)?fromQueryRaw:"";
+  const fromStorage=allowedOverride(storedRaw)?storedRaw:"";
   const origin=fromQuery||fromStorage||baked;
   if(fromQuery){
     localStorage.setItem("sns-api-origin",fromQuery);
