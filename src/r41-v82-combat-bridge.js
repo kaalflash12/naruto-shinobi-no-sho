@@ -1,192 +1,66 @@
 (() => {
   'use strict';
 
-  const SAVE_KEY = 'narutoShinobiNoShoPcV4';
-  const ACTIONS = new Set(['v82-basic-melee']);
-  let installedApiBridge = false;
-
-  const clone = value => {
-    try { return JSON.parse(JSON.stringify(value)); } catch { return value; }
+  const SAVE_KEY='narutoShinobiNoShoPcV4';
+  const ACTIONS={
+    'v82-basic-melee':{source:'v82_basic_melee',label:'Ataque corporal'},
+    'v82-basic-ranged':{source:'v82_basic_ranged',label:'Ataque à distância'}
   };
-
-  function readSave() {
-    try { return JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); } catch { return null; }
+  let installedApiBridge=false;
+  const clone=v=>{try{return JSON.parse(JSON.stringify(v));}catch{return v;}};
+  const readSave=()=>{try{return JSON.parse(localStorage.getItem(SAVE_KEY)||'null');}catch{return null;}};
+  function writeSave(save){if(!save||typeof save!=='object')return false;try{save.updatedAt=Date.now();localStorage.setItem(SAVE_KEY,JSON.stringify(save));return true;}catch(e){console.error('[R41_V82_BRIDGE_SAVE]',e);return false;}}
+  function readDomVitals(){
+    const text=document.querySelector('.v82-turn-summary')?.innerText||'';
+    const value=label=>{const m=text.match(new RegExp(`${label}\\s+(\\d+)\\s*\\/\\s*(\\d+)`,'i'));return m?{current:Number(m[1]),max:Number(m[2])}:null;};
+    return {playerHp:value('PV'),playerChakra:value('Chakra'),enemyHp:value('Inimigo'),text};
   }
-
-  function writeSave(save) {
-    if (!save || typeof save !== 'object') return false;
-    try {
-      save.updatedAt = Date.now();
-      localStorage.setItem(SAVE_KEY, JSON.stringify(save));
-      return true;
-    } catch (error) {
-      console.error('[R41_V82_BRIDGE_SAVE]', error);
-      return false;
-    }
+  function readCharacterVitals(save){const c=save?.character||{};return{playerHp:Number(c.hp??c.pv??0),playerChakra:Number(c.chakra||0),kurai:Number(c.kurai?.chakra||0)};}
+  function makeResult(meta,beforeSave,afterSave,beforeDom,afterDom,beforeText,afterText){
+    const bc=readCharacterVitals(beforeSave),ac=readCharacterVitals(afterSave);
+    const enemyBefore=Number(beforeDom?.enemyHp?.current),enemyAfter=Number(afterDom?.enemyHp?.current);
+    const hasEnemy=Number.isFinite(enemyBefore)&&Number.isFinite(enemyAfter);
+    const damage=hasEnemy?Math.max(0,enemyBefore-enemyAfter):0;
+    const playerDamage=Math.max(0,(Number(beforeDom?.playerHp?.current)||bc.playerHp)-(Number(afterDom?.playerHp?.current)||ac.playerHp));
+    const spent=Math.max(0,bc.playerChakra-ac.playerChakra);
+    const changed=String(beforeText||'')!==String(afterText||'')||damage>0||playerDamage>0||spent>0||bc.kurai!==ac.kurai;
+    if(!changed)return null;
+    const beforeLines=String(beforeText||'').split('\n');
+    const afterLines=String(afterText||'').split('\n');
+    const newLines=afterLines.filter(line=>line&&!beforeLines.includes(line)).join(' ').toLowerCase();
+    const blocked=/fora do alcance|exige adjac|não pode|impedido|sem alvo/.test(newLines);
+    return {actionType:'attack',source:meta.source,label:meta.label,confirmed:true,hit:damage>0,blocked,damage,playerDamageTaken:playerDamage,resourceSpent:spent,ko:hasEnemy&&enemyAfter<=0,enemyHpBefore:hasEnemy?enemyBefore:null,enemyHpAfter:hasEnemy?enemyAfter:null};
   }
-
-  function collectVitals(root) {
-    const out = [];
-    const seen = new WeakSet();
-    const walk = (value, path, depth) => {
-      if (!value || typeof value !== 'object' || depth > 9) return;
-      if (seen.has(value)) return;
-      seen.add(value);
-      for (const [key, child] of Object.entries(value)) {
-        const nextPath = path ? `${path}.${key}` : key;
-        if (typeof child === 'number' && Number.isFinite(child) && /(?:^|\.)(?:hp|pv|life|vida|chakra)$/i.test(nextPath)) {
-          out.push({ path: nextPath, value: child });
-        } else if (child && typeof child === 'object') {
-          walk(child, nextPath, depth + 1);
-        }
-      }
-    };
-    walk(root, '', 0);
-    return out;
+  function makePresentation(result,action){
+    const technique={id:action,name:result.label,type:'attack',class:'attack'};
+    const events=window.SNSCombatPresentationEngine?.fromResult?.(result)||[];
+    const validation=window.SNSCombatPresentationEngine?.validate?.(result,events)||{ok:true,errors:[]};
+    const states=window.SNSVisualStateEngine?.fromCombatResult?.(result)||[];
+    const animation=window.SNSAnimationRegistry?.infer?.(technique)||null;
+    return{at:Date.now(),result:clone(result),events:clone(events),states:clone(states),animation:clone(animation),validation:clone(validation)};
   }
-
-  function byPath(vitals) {
-    return new Map((vitals || []).map(item => [item.path, Number(item.value || 0)]));
+  function renderPresentation(p){
+    document.querySelectorAll('.r41-combat-present').forEach(n=>n.remove());const r=p.result||{},n=document.createElement('div');
+    n.className=`r41-combat-present ${r.blocked?'miss':Number(r.damage||0)>0?'hit':'miss'}`;
+    const detail=r.blocked?'Ação impedida pelas regras do encontro':r.hit?`${r.damage} dano${r.playerDamageTaken?` • resposta: ${r.playerDamageTaken} dano recebido`:''}`:'Sem dano';
+    n.innerHTML=`<b>${r.label}</b><small>${detail}</small>`;document.body.appendChild(n);setTimeout(()=>n.remove(),1100);
   }
-
-  function classifyPath(path) {
-    const p = String(path || '').toLowerCase();
-    if (/(enemy|inimigo|opponent|target|advers)/.test(p)) return 'enemy';
-    if (/(player|jogador|character|personagem|hero|leon)/.test(p)) return 'player';
-    return 'unknown';
-  }
-
-  function diffVitals(beforeSave, afterSave) {
-    const before = byPath(collectVitals(beforeSave));
-    const after = byPath(collectVitals(afterSave));
-    const changes = [];
-    for (const [path, b] of before) {
-      if (!after.has(path)) continue;
-      const a = after.get(path);
-      if (a !== b) changes.push({ path, before: b, after: a, delta: a - b, owner: classifyPath(path) });
-    }
-    return changes;
-  }
-
-  function saveFingerprint(save) {
-    if (!save) return '';
-    try {
-      const r = save.r41 || {};
-      const master = save.masterV83 || save.masterV84 || save.r27?.master || {};
-      return JSON.stringify({
-        vitals: collectVitals(save),
-        ticks: master?.world?.ticks,
-        encounter: save.v82 || save.encounter || save.combat || save.battle || null,
-        narrative: r.narrative?.lastConfirmedFact || ''
-      });
-    } catch { return ''; }
-  }
-
-  function makeResult(beforeSave, afterSave, beforeText, afterText) {
-    const changes = diffVitals(beforeSave, afterSave);
-    const enemyLosses = changes.filter(x => x.owner === 'enemy' && x.delta < 0 && /(?:hp|pv|life|vida)$/i.test(x.path));
-    const playerSpend = changes.filter(x => x.owner === 'player' && x.delta < 0 && /chakra$/i.test(x.path));
-    const enemyDamage = enemyLosses.reduce((sum, x) => sum + Math.abs(x.delta), 0);
-    const spent = playerSpend.reduce((sum, x) => sum + Math.abs(x.delta), 0);
-    const changed = saveFingerprint(beforeSave) !== saveFingerprint(afterSave) || String(beforeText || '') !== String(afterText || '');
-    if (!changed) return null;
-
-    const lower = String(afterText || '').toLowerCase();
-    const blocked = /bloqueio lógico|exige aproximação|não pode|impedido|sem alvo/.test(lower);
-    const hit = enemyDamage > 0;
-    const enemyKo = enemyLosses.some(x => x.after <= 0);
-    return {
-      actionType: 'attack',
-      source: 'v82_basic_melee',
-      label: 'Ataque básico',
-      confirmed: true,
-      hit,
-      blocked,
-      damage: enemyDamage,
-      resourceSpent: spent,
-      ko: enemyKo,
-      changes
-    };
-  }
-
-  function makePresentation(result) {
-    const technique = { id: 'v82-basic-melee', name: 'Ataque básico', type: 'attack', class: 'attack' };
-    const events = window.SNSCombatPresentationEngine?.fromResult?.(result) || [];
-    const validation = window.SNSCombatPresentationEngine?.validate?.(result, events) || { ok: true, errors: [] };
-    const states = window.SNSVisualStateEngine?.fromCombatResult?.(result) || [];
-    const animation = window.SNSAnimationRegistry?.infer?.(technique) || null;
-    return { at: Date.now(), result: clone(result), events: clone(events), states: clone(states), animation: clone(animation), validation: clone(validation) };
-  }
-
-  function renderPresentation(presentation) {
-    try { document.querySelectorAll('.r41-combat-present').forEach(node => node.remove()); } catch {}
-    const result = presentation?.result || {};
-    const node = document.createElement('div');
-    node.className = `r41-combat-present ${result.blocked ? 'miss' : Number(result.damage || 0) > 0 ? 'hit' : 'miss'}`;
-    const detail = result.blocked ? 'Ação impedida pelas regras do encontro' : result.hit ? `${Number(result.damage || 0)} dano` : 'Sem dano';
-    node.innerHTML = `<b>Ataque básico</b><small>${detail}</small>`;
-    document.body.appendChild(node);
-    setTimeout(() => node.remove(), 1100);
-  }
-
-  function persistPresentation(presentation) {
-    const save = readSave();
-    if (!save) return;
-    save.r41 = save.r41 && typeof save.r41 === 'object' ? save.r41 : {};
-    save.r41.lastCombatPresentation = clone(presentation);
-    save.r41.autosave = save.r41.autosave && typeof save.r41.autosave === 'object'
-      ? save.r41.autosave
-      : { localAt: 0, cloudAt: 0, lastError: '', pending: false };
-    save.r41.autosave.localAt = Date.now();
-    save.r41.narrative = save.r41.narrative && typeof save.r41.narrative === 'object' ? save.r41.narrative : { freeActions: [], lastConfirmedFact: '' };
-    save.r41.narrative.lastConfirmedFact = presentation.result.blocked
-      ? 'Ataque básico tentado e impedido pelas regras confirmadas do encontro.'
-      : `Ataque básico confirmado: ${Number(presentation.result.damage || 0)} de dano.`;
+  function persistPresentation(p){
+    const save=readSave();if(!save)return;save.r41=save.r41&&typeof save.r41==='object'?save.r41:{};save.r41.lastCombatPresentation=clone(p);
+    save.r41.autosave=save.r41.autosave&&typeof save.r41.autosave==='object'?save.r41.autosave:{localAt:0,cloudAt:0,lastError:'',pending:false};save.r41.autosave.localAt=Date.now();
+    save.r41.narrative=save.r41.narrative&&typeof save.r41.narrative==='object'?save.r41.narrative:{freeActions:[],lastConfirmedFact:''};
+    save.r41.narrative.lastConfirmedFact=p.result.blocked?`${p.result.label} tentado e impedido pelas regras confirmadas do encontro.`:`${p.result.label} confirmado: ${p.result.damage} de dano${p.result.playerDamageTaken?`; ${p.result.playerDamageTaken} recebido na resposta`:''}.`;
     writeSave(save);
   }
-
-  function installPublicApiBridge() {
-    if (installedApiBridge || !window.__NARUTO_R41__?.state) return;
-    const api = window.__NARUTO_R41__;
-    const baseState = api.state.bind(api);
-    api.state = () => {
-      const base = baseState() || {};
-      const persisted = readSave()?.r41 || {};
-      if (persisted.lastCombatPresentation && !base.lastCombatPresentation) {
-        base.lastCombatPresentation = clone(persisted.lastCombatPresentation);
-      }
-      if (persisted.autosave) base.autosave = { ...(base.autosave || {}), ...clone(persisted.autosave) };
-      return base;
-    };
-    installedApiBridge = true;
+  function installPublicApiBridge(){
+    if(installedApiBridge||!window.__NARUTO_R41__?.state)return;const api=window.__NARUTO_R41__,baseState=api.state.bind(api);api.state=()=>{const base=baseState()||{},persisted=readSave()?.r41||{},bp=base.lastCombatPresentation,pp=persisted.lastCombatPresentation;if(pp&&(!bp||Number(pp.at||0)>=Number(bp.at||0)))base.lastCombatPresentation=clone(pp);if(persisted.autosave)base.autosave={...(base.autosave||{}),...clone(persisted.autosave)};return base;};installedApiBridge=true;
   }
-
-  async function finishAction(beforeSave, beforeText) {
-    await new Promise(resolve => setTimeout(resolve, 260));
-    installPublicApiBridge();
-    const afterSave = readSave();
-    const afterText = document.querySelector('#screen')?.innerText || '';
-    const result = makeResult(beforeSave, afterSave, beforeText, afterText);
-    if (!result) return;
-    const presentation = makePresentation(result);
-    persistPresentation(presentation);
-    try { window.SNSSavePointManager?.record?.('combat_result', { result: clone(result), validation: clone(presentation.validation), source: 'v82_bridge' }); } catch {}
-    try { document.dispatchEvent(new CustomEvent('sns:r41-combat-result', { detail: clone(presentation) })); } catch {}
-    renderPresentation(presentation);
-    if (presentation.validation?.ok === false) console.error('[R41_V82_COMBAT_GATE]', presentation.validation.errors, result);
+  async function finishAction(action,beforeSave,beforeDom,beforeText){
+    await new Promise(r=>setTimeout(r,300));installPublicApiBridge();const afterSave=readSave(),afterDom=readDomVitals(),afterText=document.querySelector('#screen')?.innerText||'',meta=ACTIONS[action];
+    const result=makeResult(meta,beforeSave,afterSave,beforeDom,afterDom,beforeText,afterText);if(!result)return;const p=makePresentation(result,action);
+    try{window.SNSSavePointManager?.record?.('combat_result',{result:clone(result),validation:clone(p.validation),source:'v82_bridge'});}catch{}
+    persistPresentation(p);try{document.dispatchEvent(new CustomEvent('sns:r41-combat-result',{detail:clone(p)}));}catch{}renderPresentation(p);if(p.validation?.ok===false)console.error('[R41_V82_COMBAT_GATE]',p.validation.errors,result);
   }
-
-  document.addEventListener('click', event => {
-    const button = event.target?.closest?.('[data-action]');
-    const action = button?.getAttribute?.('data-action') || '';
-    if (!ACTIONS.has(action) || button.disabled) return;
-    const beforeSave = readSave();
-    const beforeText = document.querySelector('#screen')?.innerText || '';
-    queueMicrotask(() => finishAction(beforeSave, beforeText));
-  }, true);
-
-  const boot = () => installPublicApiBridge();
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });
-  else boot();
-  setTimeout(boot, 0);
+  document.addEventListener('click',event=>{const button=event.target?.closest?.('[data-action]'),action=button?.getAttribute?.('data-action')||'';if(!ACTIONS[action]||button.disabled)return;const beforeSave=readSave(),beforeDom=readDomVitals(),beforeText=document.querySelector('#screen')?.innerText||'';queueMicrotask(()=>finishAction(action,beforeSave,beforeDom,beforeText));},true);
+  const boot=()=>installPublicApiBridge();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();setTimeout(boot,0);
 })();
