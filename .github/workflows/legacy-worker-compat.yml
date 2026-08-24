@@ -1,0 +1,49 @@
+name: Legacy Worker Compatibility
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/legacy-worker-compat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Exercise public v8.4.1 worker with synthetic data
+        shell: bash
+        env:
+          API: https://mestre.mestrederpg35.workers.dev/api/v1
+        run: |
+          set -euo pipefail
+          suffix="$(date +%s)-$RANDOM"
+          user="compat${suffix//-/}"
+          pass="Compat-${suffix}-A9!"
+          origin='https://kaalflash12.github.io'
+          call(){
+            local method="$1" path="$2" body="${3:-{}}" token="${4:-}"
+            local args=(-sS --max-time 25 -X "$method" -H 'content-type: application/json' -H "Origin: $origin")
+            [ -z "$token" ] || args+=(-H "Authorization: Bearer $token")
+            curl "${args[@]}" -D /tmp/headers -o /tmp/body -w '%{http_code}' "$API$path" --data "$body"
+          }
+          code="$(call POST /auth/register "{\"username\":\"$user\",\"password\":\"$pass\",\"displayName\":\"Compat E2E\"}")"
+          echo "register HTTP=$code"; cat /tmp/body; echo
+          [ "$code" = 200 ] || [ "$code" = 201 ]
+          token="$(node -e "const d=require('/tmp/body');process.stdout.write(String(d.token||''))")"; test -n "$token"
+          grep -i '^access-control-allow-origin:' /tmp/headers || true
+          slot="compat-$suffix"; player="player-$suffix"; campaign="campaign-$suffix"
+          save="{\"slotId\":\"$slot\",\"gameVersion\":\"COMPAT\",\"save\":{\"version\":\"COMPAT\",\"playerId\":\"$player\",\"campaignId\":\"$campaign\",\"character\":{\"name\":\"Compat Shinobi\",\"level\":1,\"hp\":10,\"maxHp\":10,\"chakra\":10,\"maxChakra\":10},\"stats\":{}}}"
+          code="$(call POST /account/save "$save" "$token")"; echo "save HTTP=$code"; cat /tmp/body; echo; [ "$code" = 200 ]
+          code="$(call POST /account/load "{\"slotId\":\"$slot\"}" "$token")"; echo "load HTTP=$code"; cat /tmp/body; echo; [ "$code" = 200 ]; grep -q 'Compat Shinobi' /tmp/body
+          roomPayload="{\"playerId\":\"$player\",\"campaignId\":\"$campaign\",\"title\":\"Compat Room\",\"character\":{\"name\":\"Compat Shinobi\",\"level\":1}}"
+          code="$(call POST /online/room/create "$roomPayload" "$token")"; echo "room create HTTP=$code"; cat /tmp/body; echo
+          if [ "$code" = 200 ]; then room="$(node -e "const d=require('/tmp/body');process.stdout.write(String(d.roomId||d.room?.roomId||d.room?.id||''))")"; else room=''; fi
+          code="$(call POST /account/delete "{\"slotId\":\"$slot\"}" "$token")"; echo "slot delete HTTP=$code"; cat /tmp/body; echo
+          code="$(call POST /auth/logout '{}' "$token")"; echo "logout HTTP=$code"; cat /tmp/body; echo
+          test -n "$room"
+          echo "PASS_LEGACY_WORKER_COMPAT account_save_load=true online_room=true"
