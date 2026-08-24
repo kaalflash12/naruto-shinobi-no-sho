@@ -48,6 +48,7 @@ jobs:
           const s=require('./audit/BROWSER-SMOKE.json');
           if(!s.ok||s.status!=='PASS_BROWSER_SMOKE'||!s.checks?.backendIdentity)throw new Error(JSON.stringify(s.failures||[]));
           if(s.api?.build!=='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB')throw new Error('identidade Cloudflare/MongoDB ausente');
+          if(s.api?.liveWorkerTestedElsewhere!==false||s.api?.liveWorkerEvidence!=='UNVERIFIED_BY_LOCAL_SMOKE')throw new Error('smoke local não pode alegar prova de Worker live');
           console.log(s.status,s.api);
           NODE
       - name: Gate V82 to TERION combat pipeline
@@ -58,6 +59,7 @@ jobs:
         env:
           PUBLIC_GAME_URL: http://127.0.0.1:4173/
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-LOCAL-E2E.json
+          GAMEPLAY_SCOPE: LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE
         run: node tools/browser-gameplay-local-e2e.mjs
       - name: Enforce 11 local gameplay contracts
         if: always()
@@ -67,8 +69,9 @@ jobs:
           if(!fs.existsSync(p))throw new Error('LOCAL_GAMEPLAY_REPORT_MISSING');
           const r=JSON.parse(fs.readFileSync(p,'utf8'));
           if(r.ok!==true||r.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`LOCAL_GAMEPLAY_FAILED ${r.status}: ${(r.failures||[]).join(' | ')}`);
+          if(r.scope!=='LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE')throw new Error(`LOCAL_GAMEPLAY_SCOPE_INVALID ${r.scope||'missing'}`);
           if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error(`LOCAL_GAMEPLAY_CONTRACTS ${r.contracts?.length||0}/11`);
-          console.log('PASS_LOCAL_11_GAMEPLAY_CONTRACTS',r.contracts.map(x=>x.id).join(','));
+          console.log('PASS_LOCAL_11_GAMEPLAY_CONTRACTS',r.scope,r.contracts.map(x=>x.id).join(','));
           NODE
       - name: Upload smoke evidence
         if: always()
