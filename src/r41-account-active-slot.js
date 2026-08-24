@@ -11,6 +11,7 @@
   let restoring=false;
   let reconciling=false;
   let onlineTransition=false;
+  let onlineIntentPending=false;
   let reloadQueued=false;
   let manualCharactersUntil=0;
   let lastAttemptAt=0;
@@ -91,6 +92,67 @@
       catch(e){console.warn('[R41_KURAI_ACCOUNT_SYNC]',e.message);}
     }
     return true;
+  }
+
+  function onlineBridgeReady(){
+    try{return window.__NARUTO_R41__?.state?.()?.online?.ready===true}catch{return false}
+  }
+
+  function removeOnlineIntentNotice(){
+    document.querySelectorAll('.r41-online-intent-wait').forEach(x=>x.remove());
+  }
+
+  function showOnlineIntentNotice(button,message,isError=false){
+    removeOnlineIntentNotice();
+    const current=button?.isConnected?button:document.querySelector('[data-action="r41-send-online-intent"]');
+    if(!current)return;
+    const small=document.createElement('small');
+    small.className='r41-online-intent-wait';
+    small.setAttribute('role',isError?'alert':'status');
+    small.textContent=message;
+    current.insertAdjacentElement('afterend',small);
+  }
+
+  async function replayOnlineIntentWhenReady(intent,button){
+    if(onlineIntentPending)return false;
+    onlineIntentPending=true;
+    const originalText=String(button?.textContent||'Enviar intenção');
+    if(button?.isConnected){button.disabled=true;button.textContent='Sincronizando sala...';}
+    showOnlineIntentNotice(button,'Sincronizando a sala antes de enviar sua intenção...');
+    const deadline=Date.now()+20000;
+    try{
+      while(Date.now()<deadline&&!onlineBridgeReady())await new Promise(r=>setTimeout(r,100));
+      if(!onlineBridgeReady()){
+        const input=document.getElementById('r41-online-intent');
+        if(input&&String(input.value||'').trim()!==intent)input.value=intent;
+        const current=document.querySelector('[data-action="r41-send-online-intent"]')||button;
+        if(current?.isConnected){current.disabled=false;current.textContent=originalText;}
+        showOnlineIntentNotice(current,'A sala online ainda não terminou de sincronizar. A intenção foi preservada; tente enviar novamente.',true);
+        return false;
+      }
+      const input=document.getElementById('r41-online-intent');
+      const current=document.querySelector('[data-action="r41-send-online-intent"]');
+      if(!input||!current)throw new Error('ONLINE_INTENT_UI_NOT_AVAILABLE');
+      input.value=intent;
+      input.dispatchEvent(new Event('input',{bubbles:true}));
+      input.dispatchEvent(new Event('change',{bubbles:true}));
+      removeOnlineIntentNotice();
+      current.disabled=false;
+      current.textContent=originalText;
+      current.dataset.snsIntentReplay='1';
+      current.click();
+      return true;
+    }catch(e){
+      console.error('[R41_ONLINE_INTENT_REPLAY]',e);
+      const input=document.getElementById('r41-online-intent');
+      if(input)input.value=intent;
+      const current=document.querySelector('[data-action="r41-send-online-intent"]')||button;
+      if(current?.isConnected){current.disabled=false;current.textContent=originalText;}
+      showOnlineIntentNotice(current,'Não foi possível sincronizar a sala agora. A intenção foi preservada; tente novamente.',true);
+      return false;
+    }finally{
+      onlineIntentPending=false;
+    }
   }
 
   async function finishOnlineTransition(entry,id,save){
@@ -210,6 +272,15 @@
     const action=String(target.getAttribute('data-action')||'');
     const screen=String(target.getAttribute('data-screen')||'');
     const id=String(target.getAttribute('data-id')||target.getAttribute('data-slot')||'').trim();
+    if(action==='r41-send-online-intent'){
+      if(target.dataset.snsIntentReplay==='1'){delete target.dataset.snsIntentReplay;return;}
+      const intent=String(document.getElementById('r41-online-intent')?.value||'').trim();
+      if(intent&&!onlineBridgeReady()){
+        event.preventDefault();event.stopImmediatePropagation();
+        if(!onlineIntentPending)replayOnlineIntentWhenReady(intent,target);
+        return;
+      }
+    }
     if(action==='kurai-mode'&&KURAI_MODES.has(id.toLowerCase())&&(activeAccountEntry()||parse(localStorage.getItem(LEGACY_KEY))?.special?.kurai)){
       event.preventDefault();event.stopImmediatePropagation();setKuraiModeDirect(target);return;
     }
@@ -232,5 +303,5 @@
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 
-  window.__SNS_ACTIVE_ACCOUNT_SLOT__={get:active,remember,forget,recover:recoverActiveSlot,reconcile:reconcileOnlineRoomMirror,setKuraiMode:setKuraiModeDirect};
+  window.__SNS_ACTIVE_ACCOUNT_SLOT__={get:active,remember,forget,recover:recoverActiveSlot,reconcile:reconcileOnlineRoomMirror,setKuraiMode:setKuraiModeDirect,onlineReady:onlineBridgeReady,replayOnlineIntent:replayOnlineIntentWhenReady};
 })();
