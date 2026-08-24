@@ -66,8 +66,22 @@ try{
   await page.reload({waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:20000});
 
-  const accountLoad=page.locator(`[data-action="account-load"][data-id="${SLOT_ID}"]`).first();
-  await accountLoad.waitFor({state:'visible',timeout:15000});
+  const accountLoad=page.locator(`[data-action="load-account-slot"][data-id="${SLOT_ID}"], [data-action="load-account-slot"][data-slot="${SLOT_ID}"], [data-action="account-load"][data-id="${SLOT_ID}"]`).first();
+  try{
+    await accountLoad.waitFor({state:'visible',timeout:15000});
+  }catch{
+    const ui=await page.evaluate(()=>({
+      heading:document.querySelector('#screen h1')?.textContent?.trim()||'',
+      screen:(document.querySelector('#screen')?.textContent||'').trim().slice(0,3000),
+      actions:[...document.querySelectorAll('[data-action]')].map(el=>({
+        action:el.getAttribute('data-action'),
+        id:el.getAttribute('data-id'),
+        slot:el.getAttribute('data-slot'),
+        text:(el.textContent||'').trim().slice(0,120)
+      }))
+    }));
+    throw new Error(`ACCOUNT_SLOT_ACTION_MISSING ${JSON.stringify(ui)}`);
+  }
   await accountLoad.click();
 
   const combatNav=page.locator('[data-screen="combate"]').first();
