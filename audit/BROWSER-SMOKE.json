@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-23T20:02:48.423Z",
-  "startedAt": "2026-08-23T20:02:44.143Z",
-  "status": "PASS_BROWSER_SMOKE",
-  "ok": true,
+  "generatedAt": "2026-08-24T02:27:55.757Z",
+  "startedAt": "2026-08-24T02:27:50.115Z",
+  "status": "FAIL_BROWSER_SMOKE",
+  "ok": false,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
   "baseURL": "http://127.0.0.1:4173",
   "checks": {
@@ -13,16 +13,19 @@
     "localResetClickReload": true,
     "runtimeRequests": true,
     "pageExceptions": true,
-    "backendIdentity": true
+    "backendIdentity": false
   },
   "api": {
-    "build": "NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB",
-    "backend": "unconfigured",
-    "originConfigured": false,
-    "origin": null,
+    "build": "NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES",
+    "backend": "supabase-edge-postgres",
+    "originConfigured": true,
+    "origin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
     "liveWorkerTested": false
   },
-  "failures": [],
+  "failures": [
+    "API build inesperado: NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES",
+    "backend runtime inesperado: supabase-edge-postgres"
+  ],
   "pageErrors": [],
   "consoleErrors": [],
   "failedRuntimeRequests": []
