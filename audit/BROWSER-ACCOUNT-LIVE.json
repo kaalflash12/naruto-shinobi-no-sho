@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-08-24T02:27:10.333Z",
+  "status": "PASS_BROWSER_ACCOUNT_LIVE",
+  "ok": true,
+  "backend": "supabase-edge-postgres",
+  "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
+  "apiOrigin": "https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api",
+  "checks": {
+    "publicAccountUiLoaded": true,
+    "supabaseBackendSelected": true,
+    "apiOriginConfigured": true,
+    "registerUi": true,
+    "recoveryCodeShown": true,
+    "sessionPersistsReload": true,
+    "accountButtonVisibleAfterReload": true,
+    "rotateRecoveryCodeUi": true,
+    "logoutUi": true,
+    "loginByEmailUi": true,
+    "deleteUi": true
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failures": []
+}
