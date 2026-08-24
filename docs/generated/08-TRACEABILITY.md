@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-24T02:25:16.967Z`
+Gerado em: `2026-08-24T02:31:47.682Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -1047,7 +1047,7 @@ Gerado em: `2026-08-24T02:25:16.967Z`
 | FUNC-01039 | função | `testNormalGameplay` | `tools/browser-gameplay-e2e.mjs:118` | tooling / STATICALLY_TRACED |
 | FUNC-01040 | função | `testKurai` | `tools/browser-gameplay-e2e.mjs:283` | tooling / STATICALLY_TRACED |
 | FUNC-01041 | função | `cleanupAccount` | `tools/browser-gameplay-e2e.mjs:308` | tooling / STATICALLY_TRACED |
-| FUNC-01042 | função | `assert` | `tools/browser-live-api.mjs:10` | tooling / STATICALLY_TRACED |
+| FUNC-01042 | função | `assert` | `tools/browser-live-api.mjs:9` | tooling / STATICALLY_TRACED |
 | FUNC-01043 | função | `fail` | `tools/browser-smoke.mjs:12` | tooling / STATICALLY_TRACED |
 | FUNC-01044 | função | `assert` | `tools/browser-smoke.mjs:13` | tooling / STATICALLY_TRACED |
 | FUNC-01045 | função | `sha256` | `tools/build-final-canonical-spec.mjs:19` | tooling / STATICALLY_TRACED |

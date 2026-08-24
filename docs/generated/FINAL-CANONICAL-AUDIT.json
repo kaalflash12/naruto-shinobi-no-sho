@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T02:25:20.993Z",
+  "generatedAt": "2026-08-24T02:31:51.476Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T02:25:16.967Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T02:31:47.682Z",
   "counts": {
     "functions": 1114,
     "functionsWithExactCode": 1114,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 219,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 91,
+    "sourceFiles": 94,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -8364,7 +8364,7 @@
     {
       "id": "FUNC-01042",
       "file": "tools/browser-live-api.mjs",
-      "line": 10,
+      "line": 9,
       "name": "assert",
       "exactCode": true,
       "snippetSha256": "22ce1dba3fcd8a8fec809ca8d05843221b349da7aed65bc72a67b72520573537"
@@ -15004,13 +15004,13 @@
   "sourceFiles": [
     {
       "path": ".github/workflows/account-live-e2e.yml",
-      "size": 5027,
-      "sha256": "dc5c86a4d3a60afbc57bdd38f14bb6a9960f57bfab79ce78860fb04b23aa82f8"
+      "size": 3054,
+      "sha256": "59563ef84038a7d45bcb50a643ac93bf8acda40bb8aaca4f64a0c7ee6b3bcd45"
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 5598,
-      "sha256": "6fcfd06f457612eb37a32ebb43bd56fbb80ecc8dc49fbda1e28fcfd7dd37c9cb"
+      "size": 3134,
+      "sha256": "ab5d9fc75f0c033a8f04d352ed4f5d1dc6fdbae784484810f439534b81aef59f"
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
@@ -15048,14 +15048,29 @@
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
     },
     {
+      "path": "audit/ACCOUNT-LIVE-E2E.json",
+      "size": 717,
+      "sha256": "3558104106bed932eb0d496a42ced904a0c113254514036bb1adce1aa2acb8bc"
+    },
+    {
+      "path": "audit/BROWSER-ACCOUNT-LIVE.json",
+      "size": 717,
+      "sha256": "471c52677be618e2e716fad4f3c55b274f48af7cd10b3a26ab5b4a4d908f4bb6"
+    },
+    {
       "path": "audit/BROWSER-GAMEPLAY-E2E.json",
-      "size": 1548,
-      "sha256": "451327d875dd43c7083db705e852a0eb7db03553cefdbc31675ee63f91689fe4"
+      "size": 1625,
+      "sha256": "24e01f22ed2df9e80c9b82a61f1008d5ea389fb266f6a22258e9559472273d9f"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
-      "size": 759,
-      "sha256": "d4cee26160407d6e838ef339cd5d329c07b2863d04519d7b90dc575679fb734a"
+      "size": 961,
+      "sha256": "52edd5e4982148d6278ea541d0c7b15c5e024b59cd6f7d0e820786090e486991"
+    },
+    {
+      "path": "audit/LIVE-BACKEND.json",
+      "size": 2016,
+      "sha256": "0401fa0c62ec9109703de0e43e5f8bee6e1ff54cd2575994fe80cdf7a7efd53a"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -15379,8 +15394,8 @@
     },
     {
       "path": "tools/browser-account-live.mjs",
-      "size": 4464,
-      "sha256": "9389b1454b69d2f33a4303fd4613182d459c8d160d82e081ea223f14969bbe96"
+      "size": 5095,
+      "sha256": "274bdadf9009258304063168db448ac4f74a4b1eb6b2bf43b65274d7e1fe3023"
     },
     {
       "path": "tools/browser-gameplay-e2e-v2.mjs",
@@ -15394,8 +15409,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 2434,
-      "sha256": "0e4f2164be676a853b40e99717d08ef36ef3330e31ec52dd79030150a0395441"
+      "size": 4158,
+      "sha256": "115bdb1cc7bd0d48fa21f684fa30ad88bee6d9dc6c0975e832053cbeaa0ea344"
     },
     {
       "path": "tools/browser-gameplay-e2e.mjs",
@@ -15404,8 +15419,8 @@
     },
     {
       "path": "tools/browser-live-api.mjs",
-      "size": 4729,
-      "sha256": "67e1046f218c44eae5491df38caf52f820cf097ecb4eaa5b861283cca6a2b8f2"
+      "size": 4205,
+      "sha256": "5359b093da6dca9fe4438c378027a8780461f7994e6f1db7e6cb299b5f3766c9"
     },
     {
       "path": "tools/browser-smoke.mjs",

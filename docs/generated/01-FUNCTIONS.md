@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-24T02:25:16.967Z`
+Gerado em: `2026-08-24T02:31:47.682Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -16662,7 +16662,7 @@ Gerado em: `2026-08-24T02:25:16.967Z`
 
 ## FUNC-01042 — `assert`
 
-- **Fonte:** `tools/browser-live-api.mjs:10`
+- **Fonte:** `tools/browser-live-api.mjs:9`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `cond,msg`
