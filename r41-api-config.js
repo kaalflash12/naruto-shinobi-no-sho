@@ -1,20 +1,21 @@
 (function(){
   "use strict";
-  const SUPABASE_ORIGIN="https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api";
-  const SUPABASE_KEY="sb_publishable_S9LtSpLhLKFOU9iSd8b4yQ_EziH1Arr";
   const params=new URLSearchParams(location.search);
-  const fromQuery=String(params.get("api")||"").trim().replace(/\/+$/g,"");
-  const stored=String(localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"").trim().replace(/\/+$/g,"");
-  const fromStorage=/^https:\/\/rlyiwlwzrdgvcwawrnpl\.supabase\.co\/functions\/v1\/shinobi-api$/i.test(stored)?stored:"";
-  const origin=fromQuery||fromStorage||SUPABASE_ORIGIN;
+  const clean=v=>String(v||"").trim().replace(/\/+$/g,"");
+  const allowed=v=>/^https:\/\//i.test(v)&&!/(?:supabase|vercel|turso)/i.test(v);
+  const fromQueryRaw=clean(params.get("api"));
+  const storedRaw=clean(localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"");
+  const baked=""; // preenchido automaticamente pelo CI apos deploy Cloudflare + MongoDB verificado
+  const fromQuery=allowed(fromQueryRaw)?fromQueryRaw:"";
+  const fromStorage=allowed(storedRaw)?storedRaw:"";
+  const origin=fromQuery||fromStorage||baked;
   if(fromQuery){
     localStorage.setItem("sns-api-origin",fromQuery);
     localStorage.setItem("sns-r41-api-origin",fromQuery);
-  }else if(!fromStorage){
-    localStorage.setItem("sns-api-origin",SUPABASE_ORIGIN);
-    localStorage.setItem("sns-r41-api-origin",SUPABASE_ORIGIN);
+  }else if(storedRaw&&!fromStorage){
+    localStorage.removeItem("sns-api-origin");
+    localStorage.removeItem("sns-r41-api-origin");
   }
   window.NARUTO_R41_API_ORIGIN=origin;
-  window.NARUTO_R41_SUPABASE_PUBLISHABLE_KEY=SUPABASE_KEY;
-  window.NARUTO_R41_API_BUILD="NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES";
+  window.NARUTO_R41_API_BUILD="NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB";
 })();
