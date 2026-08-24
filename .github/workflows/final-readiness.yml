@@ -9,6 +9,8 @@ on:
       - 'r41-github-api.js'
       - 'audit/LIVE-BACKEND.json'
       - 'audit/BROWSER-LIVE-API.json'
+      - 'audit/ACCOUNT-LIVE-E2E.json'
+      - 'audit/BROWSER-ACCOUNT-LIVE.json'
       - 'audit/BROWSER-SMOKE.json'
       - 'audit/BROWSER-GAMEPLAY-E2E.json'
       - 'docs/generated/FINAL-CANONICAL-AUDIT.json'
@@ -22,11 +24,10 @@ permissions:
 
 concurrency:
   group: shinobi-final-readiness
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   final-readiness:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -34,37 +35,34 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Node 24
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-
       - name: Validate backend identity and gate syntax
+        shell: bash
         run: |
+          set -euo pipefail
           node --check tools/final-readiness.mjs
           node --check r41-api-config.js
           node --check r41-github-api.js
-          if grep -Eiq 'supabase|vercel' r41-api-config.js r41-github-api.js tools/final-readiness.mjs; then
-            echo 'Forbidden backend reference remains in active runtime/readiness files.' >&2
+          grep -F 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
+          grep -F 'cloudflare-mongodb-durable-objects' r41-github-api.js
+          if grep -Eiq '(supabase|vercel|turso)' r41-api-config.js r41-github-api.js; then
+            echo 'Backend proibido permanece no runtime ativo.' >&2
             exit 1
           fi
-
       - name: Run final all-systems gate
         run: node tools/final-readiness.mjs
-
       - name: Enforce PASS_FINAL_READINESS
         run: |
           node - <<'NODE'
           const r=require('./audit/FINAL-READINESS.json');
           if(!r.ok||r.status!=='PASS_FINAL_READINESS')throw new Error(JSON.stringify(r.failures||[]));
-          if(r.gates?.liveBackend!=='PASS_LIVE_BACKEND_E2E')throw new Error('liveBackend sem PASS');
-          if(r.gates?.browserLive!=='PASS_BROWSER_LIVE_API')throw new Error('browserLive sem PASS');
-          if(r.gates?.gameplay!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error('gameplay sem PASS');
-          if(!String(r.stack||'').includes('MongoDB Atlas'))throw new Error('stack final não é MongoDB Atlas');
-          console.log(r.status,r.gates.liveBackend,r.gates.browserLive,r.gates.gameplay);
+          for(const [k,v] of Object.entries({liveBackend:'PASS_LIVE_BACKEND_E2E',browserLive:'PASS_BROWSER_LIVE_API',accountLive:'PASS_ACCOUNT_LIVE_E2E',browserAccount:'PASS_BROWSER_ACCOUNT_LIVE',gameplay:'PASS_BROWSER_GAMEPLAY_E2E'}))if(r.gates?.[k]!==v)throw new Error(`${k} sem ${v}`);
+          if(!String(r.stack||'').includes('Cloudflare Workers')||!String(r.stack||'').includes('MongoDB Atlas'))throw new Error('stack final incorreto');
+          console.log(r.status,r.gates);
           NODE
-
       - name: Upload final readiness evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -72,17 +70,13 @@ jobs:
           name: shinobi-final-readiness
           path: audit/FINAL-READINESS.json
           if-no-files-found: warn
-
       - name: Commit final readiness evidence
         if: success() && github.ref == 'refs/heads/main'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add audit/FINAL-READINESS.json
-          if git diff --cached --quiet; then
-            echo 'Final readiness evidence unchanged.'
-          else
-            git commit -m 'test: record PASS_FINAL_READINESS Cloudflare MongoDB'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record PASS_FINAL_READINESS Cloudflare MongoDB'
+          git pull --rebase origin main
+          git push origin HEAD:main
