@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T21:39:58.865Z",
+  "generatedAt": "2026-08-24T22:42:19.585Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T21:39:54.159Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T22:42:15.644Z",
   "counts": {
     "functions": 1184,
     "functionsWithExactCode": 1184,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 106,
+    "sourceFiles": 107,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -15684,8 +15684,8 @@
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
-      "size": 3353,
-      "sha256": "48324750f4825ee0e886c1a2404f6167718f885fc2170352010e84de12a24b8c"
+      "size": 4478,
+      "sha256": "64542ac9d986fdae3f00ae20e7ff92b24393f0c71e20b75a710cffc9e4498bc1"
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
@@ -15714,8 +15714,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 10869,
-      "sha256": "94fbfc8b578ef0c1e57758f9536b3359e11df12d8e745893971bcfdd55cbf467"
+      "size": 10902,
+      "sha256": "1945ae5557fa3e702a147ef11b069212f004139a329d47c23580f81e2cad7f66"
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
@@ -15744,18 +15744,18 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 785,
-      "sha256": "fe95f93d6e4cbeb86732d139f2b1fc2b2fd3c5edd90aeaa3f176490e89be427c"
+      "size": 933,
+      "sha256": "e04b715918530abc0715fc9b3906bba86165b8f4ea34d6243877ee3397915351"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5610,
-      "sha256": "251d92afb57d370d26fca9c88bdc8ba7346e953a9a0944e5333c3577072f3819"
+      "size": 5604,
+      "sha256": "39cab259a3cb72a00b3545f1ba10488e762cf4775e7f6b334d1344548c20be00"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
-      "size": 767,
-      "sha256": "caac9f7e7d27a3831ad6dd5a5e795dcd0b52bc58f868126b85da5229d227f83b"
+      "size": 823,
+      "sha256": "790304d8dfc9799322ac487450364ac2c84b2c8478eb4b4d3450839b6a438963"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -16181,6 +16181,11 @@
       "path": "tools/finalize-canonical-ui-trace.mjs",
       "size": 9765,
       "sha256": "b728c5b66e8f85aaaa803e93adf1a39033bd2901ffe45f48c80b11d96460d24c"
+    },
+    {
+      "path": "tools/gameplay-live-provenance.mjs",
+      "size": 1255,
+      "sha256": "a0ed4f9e99d48986c1ef555cd7a665b11f3aa0818da2b88cb33183f7f1e5a1cc"
     },
     {
       "path": "tools/generate-technical-spec.mjs",
