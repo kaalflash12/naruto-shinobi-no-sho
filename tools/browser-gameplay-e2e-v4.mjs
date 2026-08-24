@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-// V4 mantém os adapters V2/V3 e corrige o contrato de pós-registro da UI atual.
+// V4 mantém os adapters V2/V3 e corrige contratos do gate com a UI atual.
 // O sucesso de registro é sessão real (r41Auth/token), não uma tela específica.
 const tmpDir=path.resolve('.tmp-gameplay-e2e-v4');
 fs.mkdirSync(tmpDir,{recursive:true});
@@ -22,6 +22,13 @@ const oldSource="const sourcePath = path.resolve('tools/browser-gameplay-e2e-v2.
 const newSource=`const sourcePath = ${JSON.stringify(patchedV2)};`;
 if(!v3.includes(oldSource))throw new Error('GAMEPLAY_E2E_V4_V3_SOURCE_TARGET_MISSING');
 v3=v3.replace(oldSource,newSource);
+
+// V3 usava localStorage apenas numa mensagem de diagnóstico executada no Node.
+// localStorage pertence ao Chromium; não pode ser acessado no processo Node.
+const nodeLocalStorage="active:localStorage.getItem('narutoShinobiNoShoPcV5Active')";
+if(!v3.includes(nodeLocalStorage))throw new Error('GAMEPLAY_E2E_V4_NODE_LOCALSTORAGE_TARGET_MISSING');
+v3=v3.replace(nodeLocalStorage,"active:'checked-in-browser'");
+
 const patchedV3=path.join(tmpDir,'browser-gameplay-e2e-v3-patched.mjs');
 fs.writeFileSync(patchedV3,v3,'utf8');
 
