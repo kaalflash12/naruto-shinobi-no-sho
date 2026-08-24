@@ -4,6 +4,7 @@
   const SAVE_KEY='narutoShinobiNoShoPcV4';
   const ACTIVE_SLOT_KEY='narutoShinobiNoShoPcV5Active';
   const SLOT_PREFIX='narutoShinobiNoShoPcV5:';
+  const ACCOUNT_SAVE_PREFIX='sns-v841-account-save:';
   const STATE_BRIDGE_MARK='__snsV82CombatBridgeState';
   const ACTIONS={
     'v82-basic-melee':{source:'v82_basic_melee',label:'Ataque corporal'},
@@ -11,24 +12,38 @@
   };
   const BLOCKED_RE=/fora do alcance|mova-se primeiro|exige adjac|não pode|impedido|sem alvo|movimento permitido|terreno custa movimento/i;
   const clone=v=>{try{return JSON.parse(JSON.stringify(v));}catch{return v;}};
-  function activeSlotKey(){const id=localStorage.getItem(ACTIVE_SLOT_KEY)||'';return id?`${SLOT_PREFIX}${id}`:'';}
   function parseSave(raw){try{return raw?JSON.parse(raw):null;}catch{return null;}}
-  function readRuntimeSave(){
+  function activeSlotId(){return String(localStorage.getItem(ACTIVE_SLOT_KEY)||'').trim();}
+  function legacySlotKey(){const id=activeSlotId();return id?`${SLOT_PREFIX}${id}`:'';}
+  function accountEntries(){
+    const id=activeSlotId(),rows=[];
+    for(let i=0;i<localStorage.length;i++){
+      const key=localStorage.key(i)||'';
+      if(!key.startsWith(ACCOUNT_SAVE_PREFIX))continue;
+      const save=parseSave(localStorage.getItem(key));
+      if(!save||typeof save!=='object')continue;
+      const exact=id&&key.endsWith(`:${id}`);
+      rows.push({key,save,exact,updated:Number(save.updatedAt||save.r41?.autosave?.localAt||0)});
+    }
+    rows.sort((a,b)=>(Number(b.exact)-Number(a.exact))||(b.updated-a.updated));
+    return rows;
+  }
+  function readSaveEntry(){
+    const account=accountEntries()[0];
+    if(account)return account;
+    const slot=legacySlotKey(),legacy=slot?parseSave(localStorage.getItem(slot)):null;
+    if(legacy)return {key:slot,save:legacy,exact:true,updated:Number(legacy.updatedAt||0)};
     const runtime=parseSave(localStorage.getItem(SAVE_KEY));
-    if(runtime)return runtime;
-    const slot=activeSlotKey();
-    return slot?parseSave(localStorage.getItem(slot)):null;
+    return runtime?{key:SAVE_KEY,save:runtime,exact:false,updated:Number(runtime.updatedAt||0)}:null;
   }
-  function readPersistedSave(){
-    const slot=activeSlotKey();
-    const persisted=slot?parseSave(localStorage.getItem(slot)):null;
-    return persisted||readRuntimeSave();
-  }
+  function readRuntimeSave(){return readSaveEntry()?.save||null;}
+  function readPersistedSave(){return readRuntimeSave();}
   function writeSave(save){
     if(!save||typeof save!=='object')return false;
     try{
       save.updatedAt=Date.now();
-      const json=JSON.stringify(save),slot=activeSlotKey();
+      const json=JSON.stringify(save),entry=readSaveEntry(),slot=legacySlotKey();
+      if(entry?.key)localStorage.setItem(entry.key,json);
       localStorage.setItem(SAVE_KEY,json);
       if(slot)localStorage.setItem(slot,json);
       return true;
@@ -120,7 +135,7 @@
     return true;
   }
   async function finishAction(action,beforeSave,beforeDom,beforeText,beforeFeedback){
-    await new Promise(r=>setTimeout(r,350));
+    await new Promise(r=>setTimeout(r,450));
     installPublicApiBridge();
     const afterSave=readRuntimeSave()||readPersistedSave(),afterDom=readDomVitals(),afterText=document.querySelector('#screen')?.innerText||'',afterFeedback=readFeedback(),meta=ACTIONS[action];
     const result=makeResult(meta,beforeSave,afterSave,beforeDom,afterDom,beforeText,afterText,beforeFeedback,afterFeedback);
