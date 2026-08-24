@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-08-24T18:13:28.108Z",
+  "status": "PASS_BROWSER_GAMEPLAY_E2E",
+  "ok": true,
+  "scope": "LOCAL_HTTP_CHROMIUM_PR39_ARCHIVED_EVIDENCE",
+  "provenance": {
+    "workflowRunId": 32761009112,
+    "artifactId": 9532709995,
+    "artifactDigest": "sha256:3959ec1540f09b5d85e51538aefaf43376c976e00c7f7bf0f991b44c4d795a99",
+    "headSha": "943c7ab2584868816f4782a1430268c21e735db5",
+    "headBranch": "test/local-11-contract-gameplay-20260824",
+    "note": "Metadados de proveniência adicionados ao arquivamento. Os resultados abaixo reproduzem a evidência do artefato aprovado do PR #39; não substituem o gate live nem o rerun atual do main."
+  },
+  "site": "http://127.0.0.1:4173/",
+  "checks": {
+    "temporaryAccountRegistered": true,
+    "cloudFixtureSaved": true,
+    "cloudFixtureListed": true,
+    "cloudFixtureLoadedIntoRuntime": true,
+    "hospitalWorldTick": true,
+    "restWorldTick": true,
+    "minigameWorldTick": true,
+    "visualStateReload": true,
+    "allOperationalContractsGameplayE2E": true,
+    "temporaryAccountDeleted": true
+  },
+  "contracts": [
+    {"id":"persistent_injuries","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"visual_state","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"hospital_treatment","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"rest_consequences","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"minigame_engine","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"combat_pipeline","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"mission_choice_resolution","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"online_intent_state","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"world_tick","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"save_autosave","status":"PASS_GAMEPLAY_E2E"},
+    {"id":"kurai_hud_resource","status":"PASS_GAMEPLAY_E2E"}
+  ],
+  "failures": []
+}
