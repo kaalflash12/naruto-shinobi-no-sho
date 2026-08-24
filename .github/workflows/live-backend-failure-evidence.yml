@@ -1,0 +1,74 @@
+name: Persist Live Backend Failure Evidence
+
+on:
+  workflow_run:
+    workflows: ["Live Backend Cloudflare + MongoDB E2E"]
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  persist-failure:
+    if: github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.conclusion != 'success'
+    runs-on: ubuntu-24.04
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+      LEON_PRIVATE_CODE: ${{ secrets.LEON_PRIVATE_CODE }}
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Recover evidence artifact and write safe diagnostic
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -euo pipefail
+          mkdir -p audit /tmp/live-evidence
+          artifacts="$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}/artifacts")"
+          artifact_id="$(ARTIFACTS="$artifacts" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.ARTIFACTS||'{}');
+          const a=(d.artifacts||[]).find(x=>x.name==='shinobi-cloudflare-mongodb-live-evidence');
+          if(a?.id)process.stdout.write(String(a.id));
+          NODE
+          )"
+          if [ -n "$artifact_id" ]; then
+            curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" -o /tmp/live-evidence.zip
+            unzip -oq /tmp/live-evidence.zip -d /tmp/live-evidence || true
+            found="$(find /tmp/live-evidence -type f -name 'LIVE-BACKEND.json' | head -1 || true)"
+            if [ -n "$found" ]; then cp "$found" audit/LIVE-BACKEND.json; fi
+          fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const missing=[];
+          if(!process.env.CLOUDFLARE_API_TOKEN)missing.push('CLOUDFLARE_API_TOKEN');
+          if(!process.env.MONGODB_URI)missing.push('MONGODB_URI_GITHUB_SECRET');
+          if(!process.env.AUTH_SECRET)missing.push('AUTH_SECRET_GITHUB_SECRET');
+          if(!process.env.LEON_PRIVATE_CODE)missing.push('LEON_PRIVATE_CODE_GITHUB_SECRET');
+          const p='audit/LIVE-BACKEND-DIAGNOSTIC.json';
+          const body={generatedAt:new Date().toISOString(),status:'LIVE_BACKEND_WORKFLOW_FAILED',ok:false,runId:process.env.RUN_ID,conclusion:process.env.RUN_CONCLUSION,runUrl:process.env.RUN_URL,missingAtGithubActions:missing,note:'A lista registra apenas presença/ausência; nenhum valor secreto é exposto.'};
+          fs.writeFileSync(p,JSON.stringify(body,null,2)+'\n');
+          NODE
+
+      - name: Commit failure evidence to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/LIVE-BACKEND-DIAGNOSTIC.json
+          test ! -f audit/LIVE-BACKEND.json || git add audit/LIVE-BACKEND.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record blocked live backend evidence'
+          git pull --rebase origin main
+          git push origin HEAD:main
