@@ -1,0 +1,135 @@
+name: Cloudflare MongoDB Live Diagnostic
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/cloudflare-live-diagnostic.yml'
+      - 'cloudflare/r41-api/**'
+      - 'tools/live-worker-e2e.mjs'
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shinobi-cloudflare-live-diagnostic-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+      LEON_PRIVATE_CODE: ${{ secrets.LEON_PRIVATE_CODE }}
+      LIVE_API_ORIGIN: ${{ vars.LIVE_API_ORIGIN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate architecture and credentials presence
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
+          grep -q 'cloudflare-mongodb-durable-objects' r41-github-api.js
+          grep -q 'main = "src/entry-authoritative.js"' cloudflare/r41-api/wrangler.toml
+          test -n "${CLOUDFLARE_API_TOKEN:-}" || { echo 'BLOCKED_MISSING_CLOUDFLARE_TOKEN'; exit 20; }
+          echo 'CLOUDFLARE_TOKEN_PRESENT'
+          if [ -n "${MONGODB_URI:-}" ]; then echo 'MONGODB_GITHUB_SECRET_PRESENT'; else echo 'MONGODB_GITHUB_SECRET_ABSENT_CHECKING_WORKER'; fi
+
+      - name: Resolve Cloudflare account
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then echo 'CLOUDFLARE_ACCOUNT_ID_PRESENT'; exit 0; fi
+          response="$(curl -fsS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' https://api.cloudflare.com/client/v4/accounts)"
+          account="$(ACCOUNT_JSON="$response" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.ACCOUNT_JSON||'{}');const a=Array.isArray(d.result)?d.result:[];if(d.success!==true||a.length!==1)process.exit(3);process.stdout.write(String(a[0].id||''));
+          NODE
+          )"
+          test -n "$account"
+          echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
+          echo 'CLOUDFLARE_ACCOUNT_RESOLVED'
+
+      - name: Install and validate Worker
+        working-directory: cloudflare/r41-api
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir /tmp/shinobi-worker-dry
+
+      - name: Deploy Worker shell
+        working-directory: cloudflare/r41-api
+        run: npx wrangler deploy
+
+      - name: Ensure persisted secrets
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_json="$(npx wrangler secret list --format json)"
+          has_mongo="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='MONGODB_URI')?'true':'false')")"
+          has_auth="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='AUTH_SECRET')?'true':'false')")"
+          if [ -n "${MONGODB_URI:-}" ]; then printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI; has_mongo=true; fi
+          if [ "$has_mongo" != true ]; then echo 'BLOCKED_MONGODB_URI_NOT_CONFIGURED'; exit 21; fi
+          if [ -n "${AUTH_SECRET:-}" ]; then printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET; has_auth=true; fi
+          if [ "$has_auth" != true ]; then generated="$(openssl rand -hex 48)"; printf '%s' "$generated" | npx wrangler secret put AUTH_SECRET; has_auth=true; fi
+          if [ -n "${LEON_PRIVATE_CODE:-}" ]; then printf '%s' "$LEON_PRIVATE_CODE" | npx wrangler secret put LEON_PRIVATE_CODE; fi
+          echo 'MONGODB_SECRET_READY'
+          echo 'AUTH_SECRET_READY'
+
+      - name: Final deploy and resolve Worker URL
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee /tmp/shinobi-diagnostic-deploy.log
+          api="${LIVE_API_ORIGIN:-}"
+          if [ -z "$api" ]; then api="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' /tmp/shinobi-diagnostic-deploy.log | tail -n 1 || true)"; fi
+          api="${api%/}"
+          test -n "$api" || { echo 'WORKER_URL_NOT_DISCOVERED'; exit 22; }
+          echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
+          echo "WORKER_URL=$api"
+
+      - name: Verify authoritative live status
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 50); do
+            body="$(curl -fsS --max-time 10 "$API_ORIGIN/api/status" 2>/dev/null || true)"
+            if BODY="$body" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.BODY||'{}');if(!(d.ok===true&&d.configured===true&&d.storage==='mongodb-atlas'&&d.realtime==='cloudflare-durable-objects'&&d.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'))process.exit(1);console.log(JSON.stringify(d));
+          NODE
+            then echo 'PASS_CLOUDFLARE_MONGODB_STATUS'; exit 0; fi
+            sleep 3
+          done
+          echo 'WORKER_STATUS_NOT_READY'; exit 23
+
+      - name: Run authoritative MongoDB and TERION E2E
+        env:
+          LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
+        run: node tools/live-worker-e2e.mjs
+
+      - name: Enforce live E2E
+        run: |
+          node - <<'NODE'
+          const r=require('./audit/LIVE-BACKEND.json');if(!r.ok||r.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(JSON.stringify(r.failures||[]));console.log(r.status,r.checks);
+          NODE
+
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-mongodb-live-diagnostic
+          path: audit/LIVE-BACKEND.json
+          if-no-files-found: warn
