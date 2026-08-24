@@ -41,6 +41,21 @@ const onlineDiagWait=`  try{await page.locator('#r41-online-intent').waitFor({st
 if(!base.includes(onlineWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_WAIT_TARGET_MISSING');
 base=base.replaceAll(onlineWait,onlineDiagWait);
 
+const onlineTextWait=`  await page.waitForFunction(text=>document.body.innerText.includes(text),intent,{timeout:30000});`;
+const onlineTextDiag=`  try{await page.waitForFunction(text=>document.body.innerText.includes(text),intent,{timeout:30000});}catch{
+    const onlineIntentDiag=await page.evaluate(expected=>{
+      const parse=x=>{try{return x?JSON.parse(x):null}catch{return null}};
+      const active=localStorage.getItem('sns-v841-active-account-slot')||localStorage.getItem('narutoShinobiNoShoPcV5Active')||'';
+      const rows=[];
+      for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i)||'';if(k.startsWith('sns-v841-account-save:'))rows.push({key:k,save:parse(localStorage.getItem(k))});}
+      const r41=window.__NARUTO_R41__?.state?.()||null;
+      return {expected,bodyHasExpected:document.body.innerText.includes(expected),screen:String(document.querySelector('#screen')?.innerText||'').slice(0,7000),active,accountRows:rows.map(x=>({key:x.key,online:x.save?.online||null,updatedAt:x.save?.updatedAt||null})),legacy:parse(localStorage.getItem('narutoShinobiNoShoPcV4'))?.online||null,r41Online:r41?.online||null,r41Version:window.__NARUTO_R41__?.version||'',toasts:String(document.querySelector('#toast-root')?.innerText||'').slice(0,3000),consoleHint:'intent not rendered before timeout'};
+    },intent);
+    throw new Error('ONLINE_INTENT_ROUNDTRIP_MISSING '+JSON.stringify(onlineIntentDiag));
+  }`;
+if(!base.includes(onlineTextWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_TEXT_WAIT_TARGET_MISSING');
+base=base.replaceAll(onlineTextWait,onlineTextDiag);
+
 const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-base-patched.mjs');
 fs.writeFileSync(patchedBase,base,'utf8');
 
