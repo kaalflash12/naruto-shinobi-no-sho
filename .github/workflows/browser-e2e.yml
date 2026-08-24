@@ -51,10 +51,28 @@ jobs:
         env:
           BASE_URL: http://127.0.0.1:4173
         run: node tools/browser-combat-local-e2e.mjs
+      - name: Gate all 11 gameplay contracts locally
+        env:
+          PUBLIC_GAME_URL: http://127.0.0.1:4173/
+          BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-LOCAL-E2E.json
+        run: node tools/browser-gameplay-local-e2e.mjs
+      - name: Enforce 11 local gameplay contracts
+        if: always()
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'),p='audit/BROWSER-GAMEPLAY-LOCAL-E2E.json';
+          if(!fs.existsSync(p))throw new Error('LOCAL_GAMEPLAY_REPORT_MISSING');
+          const r=JSON.parse(fs.readFileSync(p,'utf8'));
+          if(r.ok!==true||r.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`LOCAL_GAMEPLAY_FAILED ${r.status}: ${(r.failures||[]).join(' | ')}`);
+          if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error(`LOCAL_GAMEPLAY_CONTRACTS ${r.contracts?.length||0}/11`);
+          console.log('PASS_LOCAL_11_GAMEPLAY_CONTRACTS',r.contracts.map(x=>x.id).join(','));
+          NODE
       - name: Upload smoke evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: shinobi-browser-smoke
-          path: audit/BROWSER-SMOKE.json
+          path: |
+            audit/BROWSER-SMOKE.json
+            audit/BROWSER-GAMEPLAY-LOCAL-E2E.json
           if-no-files-found: warn

@@ -1,13 +1,20 @@
 (() => {
   'use strict';
-  const BUILD='R41-ASSET-PATH-REPAIR-20260824';
+  const BUILD='R41-ASSET-PATH-REPAIR-20260824-V2';
   const jpg=['j','p','g'].join('');
   const svg=['s','v','g'].join('');
   const actionBase=['assets','ui_v8','combat','actions'].join('/')+'/action_';
   const eventBase=['assets','ui_v8','events','cards'].join('/')+'/event_';
+  const eventArtBase=['assets','events_v74'].join('/')+'/';
   const path=(base,id,ext)=>`${base}${String(id).padStart(2,'0')}.${ext}`;
   const MAP=new Map();
   for(const id of [1,2,3,4,9,10,11,12])MAP.set(path(actionBase,id,jpg),path(actionBase,id,svg));
+  MAP.set(path(eventBase,1,jpg),`${eventArtBase}iruka.svg`);
+  MAP.set(path(eventBase,2,jpg),`${eventArtBase}kakashi.svg`);
+  MAP.set(path(eventBase,3,jpg),`${eventArtBase}gai.svg`);
+  MAP.set(path(eventBase,4,jpg),`${eventArtBase}festival.svg`);
+  MAP.set(path(eventBase,6,jpg),`${eventArtBase}mensageiro.svg`);
+  MAP.set(path(eventBase,8,jpg),`${eventArtBase}pergaminho.svg`);
   MAP.set(path(eventBase,12,jpg),path(eventBase,12,svg));
   const rewrite=value=>{
     if(typeof value!=='string'||!value)return value;
@@ -29,6 +36,23 @@
   if(typeof nativeInsert==='function'&&!Element.prototype.__snsR41InsertRepair){
     Element.prototype.insertAdjacentHTML=function(position,text){return nativeInsert.call(this,position,rewrite(text));};
     Object.defineProperty(Element.prototype,'__snsR41InsertRepair',{value:true,configurable:false});
+  }
+  const nativeSetAttribute=Element.prototype.setAttribute;
+  if(typeof nativeSetAttribute==='function'&&!Element.prototype.__snsR41AttributeRepair){
+    Element.prototype.setAttribute=function(name,value){
+      return nativeSetAttribute.call(this,name,String(name).toLowerCase()==='src'?rewrite(value):value);
+    };
+    Object.defineProperty(Element.prototype,'__snsR41AttributeRepair',{value:true,configurable:false});
+  }
+  const srcDescriptor=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,'src');
+  if(srcDescriptor?.get&&srcDescriptor?.set&&!HTMLImageElement.prototype.__snsR41SrcRepair){
+    Object.defineProperty(HTMLImageElement.prototype,'src',{
+      configurable:srcDescriptor.configurable,
+      enumerable:srcDescriptor.enumerable,
+      get:srcDescriptor.get,
+      set(value){return srcDescriptor.set.call(this,rewrite(value));}
+    });
+    Object.defineProperty(HTMLImageElement.prototype,'__snsR41SrcRepair',{value:true,configurable:false});
   }
   window.__SNS_R41_ASSET_REPAIR__={build:BUILD,rewrite,map:Object.fromEntries(MAP)};
 })();

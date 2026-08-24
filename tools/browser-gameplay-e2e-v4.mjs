@@ -10,7 +10,7 @@ let base=fs.readFileSync(basePath,'utf8');
 const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
   await attack.waitFor({state:'visible',timeout:15000});
   await attack.click();`;
-const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+const newAttackWait=`  const attack=page.locator('[data-action="v82-basic-melee"]:not([disabled]), [data-action="basic-attack"]:not([disabled])').first();
   const attackVisible=await attack.isVisible().catch(()=>false);
   if(!attackVisible){
     const combatDiag=await page.evaluate(()=>({
@@ -26,6 +26,41 @@ const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:n
   await attack.click();`;
 if(!base.includes(oldAttackWait))throw new Error('GAMEPLAY_E2E_V4_BASE_COMBAT_TARGET_MISSING');
 base=base.replace(oldAttackWait,newAttackWait);
+
+const onlineWait=`  await page.locator('#r41-online-intent').waitFor({state:'visible',timeout:30000});`;
+const onlineDiagWait=`  try{await page.locator('#r41-online-intent').waitFor({state:'visible',timeout:30000});}catch{
+    const onlineDiag=await page.evaluate(()=>{
+      const parse=x=>{try{return x?JSON.parse(x):null}catch{return null}};
+      const active=localStorage.getItem('sns-v841-active-account-slot')||localStorage.getItem('narutoShinobiNoShoPcV5Active')||'';
+      const accountRows=[];
+      for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i)||'';if(k.startsWith('sns-v841-account-save:'))accountRows.push({key:k,save:parse(localStorage.getItem(k))});}
+      return {heading:String(document.querySelector('#screen h1')?.textContent||''),screen:String(document.querySelector('#screen')?.innerText||'').slice(0,5000),nav:String(document.querySelector('#main-nav')?.innerText||'').slice(0,2000),active,accountRows:accountRows.map(x=>({key:x.key,online:x.save?.online||null,character:x.save?.character?.name||null,updatedAt:x.save?.updatedAt||null})),legacy:parse(localStorage.getItem('narutoShinobiNoShoPcV4'))?.online||null,r41:window.__NARUTO_R41__?.state?.()||null,toasts:String(document.querySelector('#toast-root')?.innerText||'').slice(0,2000)};
+    });
+    throw new Error('ONLINE_INTENT_UI_MISSING '+JSON.stringify(onlineDiag));
+  }`;
+if(!base.includes(onlineWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_WAIT_TARGET_MISSING');
+base=base.replaceAll(onlineWait,onlineDiagWait);
+
+const onlineTextWait=`  await page.waitForFunction(text=>document.body.innerText.includes(text),intent,{timeout:30000});`;
+const onlineTextDiag=`  try{await page.waitForFunction(text=>document.body.innerText.includes(text),intent,{timeout:30000});}catch{
+    const onlineIntentDiag=await page.evaluate(expected=>{
+      const parse=x=>{try{return x?JSON.parse(x):null}catch{return null}};
+      const active=localStorage.getItem('sns-v841-active-account-slot')||localStorage.getItem('narutoShinobiNoShoPcV5Active')||'';
+      const rows=[];
+      for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i)||'';if(k.startsWith('sns-v841-account-save:'))rows.push({key:k,save:parse(localStorage.getItem(k))});}
+      const r41=window.__NARUTO_R41__?.state?.()||null;
+      return {expected,bodyHasExpected:document.body.innerText.includes(expected),screen:String(document.querySelector('#screen')?.innerText||'').slice(0,7000),active,accountRows:rows.map(x=>({key:x.key,online:x.save?.online||null,updatedAt:x.save?.updatedAt||null})),legacy:parse(localStorage.getItem('narutoShinobiNoShoPcV4'))?.online||null,r41Online:r41?.online||null,r41Version:window.__NARUTO_R41__?.version||'',toasts:String(document.querySelector('#toast-root')?.innerText||'').slice(0,3000),consoleHint:'intent not rendered before timeout'};
+    },intent);
+    throw new Error('ONLINE_INTENT_ROUNDTRIP_MISSING '+JSON.stringify(onlineIntentDiag));
+  }`;
+if(!base.includes(onlineTextWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_TEXT_WAIT_TARGET_MISSING');
+base=base.replaceAll(onlineTextWait,onlineTextDiag);
+
+const kuraiGoto="    await page.goto(`${site}?kurai-e2e=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});";
+const kuraiGotoFixed="    try{await page.goto(`${site}?kurai-e2e=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});}catch(e){if(!String(e?.message||e).includes('ERR_ABORTED'))throw e;}\n    await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:30000});";
+if(!base.includes(kuraiGoto))throw new Error('GAMEPLAY_E2E_V4_KURAI_GOTO_TARGET_MISSING');
+base=base.replace(kuraiGoto,kuraiGotoFixed);
+
 const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-base-patched.mjs');
 fs.writeFileSync(patchedBase,base,'utf8');
 
