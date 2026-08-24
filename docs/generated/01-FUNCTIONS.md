@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-24T02:20:59.779Z`
+Gerado em: `2026-08-24T02:22:55.855Z`
 
 ## FUNC-00001 — `accountToken`
 
