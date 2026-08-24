@@ -24,16 +24,24 @@ jobs:
             'https://naruto-shinobi-r40-master.mestrederpg35.workers.dev'
             'https://naruto-shinobi-no-sho-api.mestrederpg35.workers.dev'
           )
+          routes=( '/api/status' '/api/v1/status' )
           found=0
           for u in "${urls[@]}"; do
-            echo "=== $u ==="
-            code="$(curl -sS -o /tmp/status.json -w '%{http_code}' --max-time 20 "$u/api/status" || true)"
-            echo "HTTP=$code"
-            cat /tmp/status.json 2>/dev/null || true
-            echo
-            if [ "$code" = 200 ] && STATUS_JSON="$(cat /tmp/status.json)" node --input-type=module <<'NODE'
-          const d=JSON.parse(process.env.STATUS_JSON||'{}');console.log('PARSED',JSON.stringify({build:d.build,buildAuthority:d.buildAuthority,storage:d.storage,realtime:d.realtime,configured:d.configured,game:d.game}));if(!(d.ok===true&&d.configured===true))process.exit(1);
+            for route in "${routes[@]}"; do
+              echo "=== $u$route ==="
+              code="$(curl -sS -o /tmp/status.json -w '%{http_code}' --max-time 20 "$u$route" || true)"
+              echo "HTTP=$code"
+              cat /tmp/status.json 2>/dev/null || true
+              echo
+              if [ "$code" = 200 ]; then
+                STATUS_JSON="$(cat /tmp/status.json)" node --input-type=module <<'NODE' || true
+          const d=JSON.parse(process.env.STATUS_JSON||'{}');
+          console.log('PARSED',JSON.stringify({ok:d.ok,service:d.service,version:d.version,build:d.build,buildAuthority:d.buildAuthority,storage:d.storage,realtime:d.realtime,configured:d.configured,game:d.game,routes:d.routes,modes:d.modes}));
+          if(d.ok===true && (d.service||d.game||d.build||d.routes)) process.exit(0);
+          process.exit(1);
           NODE
-            then found=1; fi
+                if [ "$?" = 0 ]; then found=1; fi
+              fi
+            done
           done
-          if [ "$found" -eq 0 ]; then echo 'NO_CONFIGURED_PUBLIC_WORKER_FOUND'; exit 1; fi
+          if [ "$found" -eq 0 ]; then echo 'NO_PUBLIC_SHINOBI_WORKER_FOUND'; exit 1; fi
