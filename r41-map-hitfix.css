@@ -1,0 +1,7 @@
+/* R41 map interaction hotfix.
+   Core village/location pins are navigation controls and must remain clickable
+   even when a living-world event marker is nearby. Event markers keep their
+   normal layer but no longer cover core location controls. */
+.play-map .map-pin{z-index:12}
+.play-map .map-pin:hover,.play-map .map-pin.selected{z-index:13}
+.play-map .event-map-pin{z-index:9}
