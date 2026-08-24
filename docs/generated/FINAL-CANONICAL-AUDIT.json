@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T02:38:41.620Z",
+  "generatedAt": "2026-08-24T02:45:57.901Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T02:38:36.945Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T02:45:53.529Z",
   "counts": {
     "functions": 1114,
     "functionsWithExactCode": 1114,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 219,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 95,
+    "sourceFiles": 96,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -15059,13 +15059,18 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-E2E.json",
-      "size": 1132,
-      "sha256": "5b74663b8ff649271b1a8348d2af4f0df8e7ec58d79108a6f7dfa8262150a0e5"
+      "size": 6262,
+      "sha256": "e3cba6caf3a4efaf0f15596688f5839a79ac36bbf25dce744caf419eeff4f1ac"
+    },
+    {
+      "path": "audit/BROWSER-LIVE-API.json",
+      "size": 1681,
+      "sha256": "7de1baad4c10731adaa36e9e8f708a625d242a86fa4d83992335282139a18ec9"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
-      "size": 961,
-      "sha256": "53e3cd4d9775237a10746d671d535b0f98e803b71255c947dd906a460fe4518c"
+      "size": 839,
+      "sha256": "03b33314fa95b1071965e6fcb5790f35cb1dc181f48fb014ea45a40770c2d369"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -15414,8 +15419,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 4158,
-      "sha256": "115bdb1cc7bd0d48fa21f684fa30ad88bee6d9dc6c0975e832053cbeaa0ea344"
+      "size": 4862,
+      "sha256": "04d4ec2474984d8b79cac8e5832e7d224f553aefd73d638917e0195dfa931607"
     },
     {
       "path": "tools/browser-gameplay-e2e.mjs",
@@ -15429,8 +15434,8 @@
     },
     {
       "path": "tools/browser-smoke.mjs",
-      "size": 5675,
-      "sha256": "b8475ddc66c704f9c4d77a9ca53f8d040aa43b18c775552c439b9c066250dd60"
+      "size": 5994,
+      "sha256": "57ac54552729bfedb24ee65f8b08645ed31cf3473f2ee0a0ecf593bafe725aac"
     },
     {
       "path": "tools/build-final-canonical-spec.mjs",
