@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T19:35:18.666Z",
+  "generatedAt": "2026-08-24T19:40:53.822Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -51,16 +51,16 @@
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
-      "size": 2157,
-      "sha256": "3f0804f47b100baedb8f8a9bce0b805838f290ea4ead9e581e4cd35ff55a663f",
+      "size": 3353,
+      "sha256": "48324750f4825ee0e886c1a2404f6167718f885fc2170352010e84de12a24b8c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 3046,
-      "sha256": "77d4d5ae82322a3a090ed2c6f8bcb4a5150a1d345dbc30a44571813f204fbf98",
+      "size": 3770,
+      "sha256": "c9ee77999c1d3a5a5255f445a950433f42d4f00e0a9f7200f4e6c2a1488c3467",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43611,8 +43611,8 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 397,
-      "sha256": "cbb7d0d0486794c16722ac8caa57cfa5e01497443247829632c92eb1d26919b2",
+      "size": 785,
+      "sha256": "fe95f93d6e4cbeb86732d139f2b1fc2b2fd3c5edd90aeaa3f176490e89be427c",
       "extension": ".json",
       "runtime": true,
       "asset": false
