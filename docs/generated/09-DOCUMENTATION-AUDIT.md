@@ -17,8 +17,8 @@ Worker entry selecionado: `cloudflare/r41-api/src/entry-authoritative.js`.
 
 | Categoria | Total |
 |---|---:|
-| sourceFiles | 94 |
-| gameRuntimeSourceFiles | 65 |
+| sourceFiles | 95 |
+| gameRuntimeSourceFiles | 66 |
 | toolingSourceFiles | 29 |
 | functions | 1114 |
 | gameRuntimeFunctions | 1002 |
@@ -29,7 +29,7 @@ Worker entry selecionado: `cloudflare/r41-api/src/entry-authoritative.js`.
 | storage | 14 |
 | uiActions | 221 |
 | events | 11 |
-| movementEvidence | 7850 |
+| movementEvidence | 7858 |
 | scripts | 33 |
 | runtimeFiles | 84 |
 | uniqueAssetReferences | 5442 |
