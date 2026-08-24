@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
+// PR diagnostic trigger 2026-08-23: same fail-closed gameplay gate as main.
 const tmpDir=path.resolve('.tmp-gameplay-e2e-v4');
 fs.mkdirSync(tmpDir,{recursive:true});
 
@@ -33,9 +34,6 @@ const newCharacterAssert=`  if(screen==='personagem'){
 if(!v2.includes(oldCharacterAssert))throw new Error('GAMEPLAY_E2E_V4_CHARACTER_ASSERT_TARGET_MISSING');
 v2=v2.replace(oldCharacterAssert,newCharacterAssert);
 
-// Diagnóstico fail-closed: se o combate iniciou mas a ação canônica não existe,
-// o relatório grava todos os data-action visíveis e o estado R41 em vez de só
-// estourar timeout sem explicar a UI produzida.
 const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
   await attack.waitFor({state:'visible',timeout:15000});
   await attack.click();`;
