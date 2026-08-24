@@ -14,6 +14,7 @@ on:
       - 'src/**'
       - 'assets/**'
       - 'tools/browser-gameplay-e2e*.mjs'
+      - 'tools/gameplay-live-provenance.mjs'
       - '.github/workflows/browser-gameplay-e2e.yml'
 
 permissions:
@@ -87,6 +88,12 @@ jobs:
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
         run: node tools/browser-gameplay-e2e-v4.mjs
 
+      - name: Bind public gameplay live provenance
+        if: always()
+        env:
+          BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
+        run: node tools/gameplay-live-provenance.mjs
+
       - name: Commit gameplay evidence
         if: always()
         shell: bash
@@ -118,6 +125,13 @@ jobs:
           node - <<'NODE'
           const fs=require('fs'),p='audit/BROWSER-GAMEPLAY-E2E.json';if(!fs.existsSync(p))throw new Error('BROWSER_GAMEPLAY_REPORT_MISSING');const r=JSON.parse(fs.readFileSync(p,'utf8'));
           if(r.ok!==true||r.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`GAMEPLAY_E2E_FAILED ${r.status}: ${(r.failures||[]).join(' | ')}`);
+          if(r.scope!=='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY')throw new Error(`GAMEPLAY_SCOPE_NOT_PUBLIC ${r.scope||'null'}`);
+          if(r.site!=='https://kaalflash12.github.io/naruto-shinobi-no-sho/')throw new Error(`GAMEPLAY_SITE_NOT_CANONICAL ${r.site||'null'}`);
+          if(r.provenance?.kind!=='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE')throw new Error('GAMEPLAY_LIVE_PROVENANCE_MISSING');
+          if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
+          if(r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
+          const api=String(process.env.API_ORIGIN||'').replace(/\/+$/,'');
+          if(!api||String(r.provenance?.apiOrigin||'').replace(/\/+$/,'')!==api)throw new Error('GAMEPLAY_LIVE_API_ORIGIN_MISMATCH');
           if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('11 gameplay contracts not proven');
-          console.log(r.status,'contracts=',r.contracts.length);
+          console.log(r.status,'contracts=',r.contracts.length,'provenance=',r.provenance.kind);
           NODE
