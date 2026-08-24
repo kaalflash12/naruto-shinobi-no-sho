@@ -26,6 +26,14 @@ jobs:
       - name: Add isolated local API shim
         shell: bash
         run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('r41-api-config.js')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('const baked=""; // preenchido automaticamente pelo CI apos deploy Cloudflare + MongoDB verificado','const baked="http://127.0.0.1:8000"; // diagnostic-only injected endpoint')
+          p.write_text(s,encoding='utf-8')
+          PY
+          grep -q 'const baked="http://127.0.0.1:8000"' r41-api-config.js
           cat > /tmp/shim.py <<'PY'
           import json, os, secrets
           from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
@@ -47,7 +55,7 @@ jobs:
               return super().do_GET()
             def do_POST(self):
               p=self.path.split('?',1)[0]; d=self._body()
-              if p=='/api/auth/register' or p=='/api/auth/login': return self._json(200,{'ok':True,'token':token,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
+              if p in ('/api/auth/register','/api/auth/login'): return self._json(200,{'ok':True,'token':token,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
               if p=='/api/auth/me': return self._json(200,{'ok':True,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
               if p=='/api/account/save':
                 sid=str(d.get('slotId','')); slots[sid]=d.get('save') or d.get('data') or {}; return self._json(200,{'ok':True,'saved':True,'slotId':sid})
