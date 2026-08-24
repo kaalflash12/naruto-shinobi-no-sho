@@ -1,0 +1,37 @@
+name: Post Live Backend Orchestration
+
+on:
+  workflow_run:
+    workflows:
+      - Live Backend Cloudflare + MongoDB E2E
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: shinobi-post-live-backend-orchestration
+  cancel-in-progress: false
+
+jobs:
+  dispatch-live-consumers:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Dispatch account live E2E
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run account-live-e2e.yml --repo kaalflash12/naruto-shinobi-no-sho --ref main
+
+      - name: Dispatch public gameplay E2E
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run browser-gameplay-e2e.yml --repo kaalflash12/naruto-shinobi-no-sho --ref main
+
+      - name: Record orchestration result
+        run: echo 'DISPATCHED_ACCOUNT_AND_GAMEPLAY_LIVE_GATES'

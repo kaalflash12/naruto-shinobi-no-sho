@@ -1,0 +1,57 @@
+name: Final Readiness Orchestration
+
+on:
+  workflow_run:
+    workflows:
+      - Account Live E2E - Cloudflare MongoDB
+      - Browser Gameplay E2E
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: shinobi-final-readiness-orchestration
+  cancel-in-progress: false
+
+jobs:
+  dispatch-final-readiness:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Require both live consumer evidence files
+        id: gates
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const read=p=>{try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return null}};
+          const account=read('audit/ACCOUNT-LIVE-E2E.json');
+          const browserAccount=read('audit/BROWSER-ACCOUNT-LIVE.json');
+          const gameplay=read('audit/BROWSER-GAMEPLAY-E2E.json');
+          const accountOk=account?.ok===true&&account?.status==='PASS_ACCOUNT_LIVE_E2E'&&browserAccount?.ok===true&&browserAccount?.status==='PASS_BROWSER_ACCOUNT_LIVE';
+          const gameplayOk=gameplay?.ok===true&&gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&Array.isArray(gameplay?.contracts)&&gameplay.contracts.length>=11&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E');
+          require('fs').appendFileSync(process.env.GITHUB_OUTPUT,`ready=${accountOk&&gameplayOk?'true':'false'}\naccount=${accountOk?'true':'false'}\ngameplay=${gameplayOk?'true':'false'}\n`);
+          console.log(JSON.stringify({accountOk,gameplayOk},null,2));
+          NODE
+
+      - name: Dispatch final readiness
+        if: steps.gates.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run final-readiness.yml --repo kaalflash12/naruto-shinobi-no-sho --ref main
+
+      - name: Wait for remaining live gate
+        if: steps.gates.outputs.ready != 'true'
+        run: echo "FINAL_READINESS_WAITING account=${{ steps.gates.outputs.account }} gameplay=${{ steps.gates.outputs.gameplay }}"
