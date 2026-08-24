@@ -1,0 +1,47 @@
+name: Combat Source Inspect
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/source-inspect.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gameplay-integral-fix-20260824
+      - name: Inspect combat and presentation integration
+        shell: bash
+        run: |
+          set -e
+          python3 - <<'PY'
+          from pathlib import Path
+          needles=['lastCombatPresentation','v82-basic-melee','basic-attack','combatPresentation','resolveCombat','commitCombat','worldTick','World Tick']
+          for fn in ['app.js','r41-gameplay-engine.js','r41-runtime.js','r41-bridge.js','r41-github-api.js']:
+            p=Path(fn)
+            if not p.exists(): continue
+            lines=p.read_text(encoding='utf-8',errors='replace').splitlines()
+            hits=[]
+            for i,line in enumerate(lines):
+              if any(n in line for n in needles): hits.append(i)
+            if not hits: continue
+            print(f'===== {fn} hits={len(hits)} =====')
+            shown=set()
+            for i in hits:
+              a=max(0,i-24); b=min(len(lines),i+45)
+              key=(a,b)
+              if key in shown: continue
+              shown.add(key)
+              print(f'--- {fn}:{a+1}-{b} ---')
+              for j in range(a,b): print(f'{j+1:06d}: {lines[j]}')
+          PY
+          echo '===== data-action handlers ====='
+          grep -Rsn --include='*.js' -E "v82-basic-melee|basic-attack|lastCombatPresentation" . --exclude-dir=.git --exclude='browser-gameplay-e2e*.mjs' | head -300 || true
