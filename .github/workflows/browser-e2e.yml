@@ -47,6 +47,10 @@ jobs:
           if(s.api?.build!=='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB')throw new Error('identidade Cloudflare/MongoDB ausente');
           console.log(s.status,s.api);
           NODE
+      - name: Gate V82 to TERION combat pipeline
+        env:
+          BASE_URL: http://127.0.0.1:4173
+        run: node tools/browser-combat-local-e2e.mjs
       - name: Upload smoke evidence
         if: always()
         uses: actions/upload-artifact@v4
