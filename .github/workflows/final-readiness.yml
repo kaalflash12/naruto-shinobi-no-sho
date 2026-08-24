@@ -29,6 +29,7 @@ jobs:
           set -euo pipefail
           node --check tools/final-readiness.mjs
           node --check tools/gameplay-live-provenance.mjs
+          node --check tools/live-source-fingerprint.mjs
           node --check r41-api-config.js
           node --check r41-github-api.js
           grep -F 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
@@ -37,30 +38,46 @@ jobs:
             echo 'Backend proibido permanece no runtime ativo.' >&2
             exit 1
           fi
-      - name: Reject local or stale gameplay evidence
+      - name: Reject local or stale live consumer evidence
         shell: bash
         run: |
           set -euo pipefail
           rm -f audit/FINAL-READINESS.json
           node - <<'NODE'
           const fs=require('fs');
-          const p='audit/BROWSER-GAMEPLAY-E2E.json';
-          if(!fs.existsSync(p))throw new Error('BROWSER_GAMEPLAY_LIVE_EVIDENCE_MISSING');
-          const g=JSON.parse(fs.readFileSync(p,'utf8'));
+          const {execFileSync}=require('child_process');
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const live=read('audit/LIVE-BACKEND.json');
+          const account=read('audit/ACCOUNT-LIVE-E2E.json');
+          const browserAccount=read('audit/BROWSER-ACCOUNT-LIVE.json');
+          const g=read('audit/BROWSER-GAMEPLAY-E2E.json');
+          const current=execFileSync(process.execPath,['tools/live-source-fingerprint.mjs'],{encoding:'utf8'}).trim();
+          const liveFingerprint=String(live?.sourceFingerprint||'');
+          if(!/^[a-f0-9]{64}$/.test(current))throw new Error('FINAL_CURRENT_SOURCE_FINGERPRINT_INVALID');
+          if(live?.ok!==true||live?.status!=='PASS_LIVE_BACKEND_E2E'||liveFingerprint!==current)throw new Error('FINAL_LIVE_BACKEND_STALE_OR_NOT_PASS');
+          if(account?.ok!==true||account?.status!=='PASS_ACCOUNT_LIVE_E2E')throw new Error(`ACCOUNT_NOT_PASS ${account?.status||'null'}`);
+          if(browserAccount?.ok!==true||browserAccount?.status!=='PASS_BROWSER_ACCOUNT_LIVE')throw new Error(`BROWSER_ACCOUNT_NOT_PASS ${browserAccount?.status||'null'}`);
+          if(account?.provenance?.kind!=='ACCOUNT_LIVE_CLOUDFLARE_MONGODB'||browserAccount?.provenance?.kind!=='BROWSER_ACCOUNT_LIVE_CLOUDFLARE_MONGODB')throw new Error('ACCOUNT_LIVE_PROVENANCE_MISSING');
+          if(account?.provenance?.sourceFingerprint!==liveFingerprint||browserAccount?.provenance?.sourceFingerprint!==liveFingerprint)throw new Error('ACCOUNT_LIVE_SOURCE_FINGERPRINT_MISMATCH');
+          if(account?.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||browserAccount?.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||account?.provenance?.realtime!=='cloudflare-durable-objects'||browserAccount?.provenance?.realtime!=='cloudflare-durable-objects')throw new Error('ACCOUNT_LIVE_BACKEND_IDENTITY_INVALID');
+          if(account?.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6'||browserAccount?.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('ACCOUNT_LIVE_AUTHORITY_INVALID');
           if(g.ok!==true||g.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`GAMEPLAY_NOT_PASS ${g.status||'null'}`);
           if(g.scope!=='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY')throw new Error(`GAMEPLAY_SCOPE_NOT_PUBLIC ${g.scope||'null'}`);
           if(g.site!=='https://kaalflash12.github.io/naruto-shinobi-no-sho/')throw new Error(`GAMEPLAY_SITE_NOT_CANONICAL ${g.site||'null'}`);
           const pr=g.provenance||{};
           if(pr.kind!=='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE')throw new Error('GAMEPLAY_LIVE_PROVENANCE_MISSING');
+          if(pr.sourceFingerprint!==liveFingerprint)throw new Error('GAMEPLAY_LIVE_SOURCE_FINGERPRINT_MISMATCH');
           if(pr.backend!=='cloudflare-workers-mongodb-atlas'||pr.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
           if(pr.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
           const cfg=fs.readFileSync('r41-api-config.js','utf8');
           const baked=String(cfg.match(/const baked="([^"]*)"/)?.[1]||'').replace(/\/+$/,'');
-          const used=String(pr.apiOrigin||'').replace(/\/+$/,'');
-          if(!baked||used!==baked)throw new Error(`GAMEPLAY_WORKER_MISMATCH baked=${baked||'null'} used=${used||'null'}`);
+          const accountApi=String(account?.provenance?.apiOrigin||'').replace(/\/+$/,'');
+          const browserAccountApi=String(browserAccount?.provenance?.apiOrigin||'').replace(/\/+$/,'');
+          const gameplayApi=String(pr.apiOrigin||'').replace(/\/+$/,'');
+          if(!baked||accountApi!==baked||browserAccountApi!==baked||gameplayApi!==baked)throw new Error(`LIVE_CONSUMER_WORKER_MISMATCH baked=${baked||'null'} account=${accountApi||'null'} browserAccount=${browserAccountApi||'null'} gameplay=${gameplayApi||'null'}`);
           if(g.checks?.temporaryAccountRegistered!==true||g.checks?.temporaryAccountDeleted!==true)throw new Error('GAMEPLAY_TEMP_ACCOUNT_LIFECYCLE_NOT_PROVEN');
           if(!Array.isArray(g.contracts)||g.contracts.length<11||g.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('GAMEPLAY_11_CONTRACTS_NOT_PROVEN');
-          console.log('PASS_FINAL_GAMEPLAY_LIVE_PROVENANCE',pr);
+          console.log('PASS_FINAL_LIVE_CONSUMER_PROVENANCE',JSON.stringify({sourceFingerprint:liveFingerprint,baked,account:account.provenance,browserAccount:browserAccount.provenance,gameplay:pr},null,2));
           NODE
       - name: Run final all-systems gate
         run: node tools/final-readiness.mjs
@@ -70,8 +87,9 @@ jobs:
           const r=require('./audit/FINAL-READINESS.json');
           if(!r.ok||r.status!=='PASS_FINAL_READINESS')throw new Error(JSON.stringify(r.failures||[]));
           for(const [k,v] of Object.entries({liveBackend:'PASS_LIVE_BACKEND_E2E',browserLive:'PASS_BROWSER_LIVE_API',accountLive:'PASS_ACCOUNT_LIVE_E2E',browserAccount:'PASS_BROWSER_ACCOUNT_LIVE',gameplay:'PASS_BROWSER_GAMEPLAY_E2E'}))if(r.gates?.[k]!==v)throw new Error(`${k} sem ${v}`);
+          if(r.sourceFingerprint?.allConsumersMatch!==true)throw new Error('consumidores live não correspondem ao fingerprint atual');
           if(!String(r.stack||'').includes('Cloudflare Workers')||!String(r.stack||'').includes('MongoDB Atlas'))throw new Error('stack final incorreto');
-          console.log(r.status,r.gates);
+          console.log(r.status,r.gates,r.sourceFingerprint);
           NODE
       - name: Upload final readiness evidence
         if: always()
