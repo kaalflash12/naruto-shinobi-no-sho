@@ -26,7 +26,8 @@ jobs:
           pass="Compat-${suffix}-A9!"
           origin='https://kaalflash12.github.io'
           call(){
-            local method="$1" path="$2" body="${3:-{}}" token="${4:-}"
+            local method="$1" path="$2" body="${3:-}" token="${4:-}"
+            [ -n "$body" ] || body='{}'
             local args=(-sS --max-time 25 -X "$method" -H 'content-type: application/json' -H "Origin: $origin")
             [ -z "$token" ] || args+=(-H "Authorization: Bearer $token")
             curl "${args[@]}" -D /tmp/headers -o /tmp/body -w '%{http_code}' "$API$path" --data "$body"
