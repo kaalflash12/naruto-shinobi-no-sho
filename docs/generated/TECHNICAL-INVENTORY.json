@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-24T02:22:55.855Z",
+  "generatedAt": "2026-08-24T02:25:16.967Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5530,
-    "runtimeFiles": 80,
+    "files": 5531,
+    "runtimeFiles": 81,
     "assetFiles": 5425,
-    "textFiles": 100,
-    "functions": 1110,
+    "textFiles": 101,
+    "functions": 1114,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -22,11 +22,11 @@
     "assetReferences": 15814,
     "missingLiteralAssetReferences": 0,
     "gameRuntimeFunctions": 1002,
-    "toolingFunctions": 108,
+    "toolingFunctions": 112,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 90,
+    "sourceFiles": 91,
     "gameRuntimeSourceFiles": 62,
-    "toolingSourceFiles": 28,
+    "toolingSourceFiles": 29,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -83,8 +83,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 12679,
-      "sha256": "4ff8386e63cfb24e7275753efa5a5ec4b7f42e423b3dc51ae8ed14bfd58d6b98",
+      "size": 3038,
+      "sha256": "c8b80a69b530e909981c004c03cd32e941882ff6cbbd733b16348fc3597d37a5",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43523,8 +43523,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-E2E.json",
-      "size": 1158,
-      "sha256": "26fa5ac3f092667a0e62bfde6aedeebb2d190f0ee78201b90b5b7b8d2c77964f",
+      "size": 1548,
+      "sha256": "451327d875dd43c7083db705e852a0eb7db03553cefdbc31675ee63f91689fe4",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44269,6 +44269,14 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/supabase-live-e2e.mjs",
+      "size": 10266,
+      "sha256": "d9cd45d6777770f65b56698d3cd608f5ad86bd1e8ddc5a53d6bc59ee14da2abd",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -70918,6 +70926,86 @@
       },
       "calls": [],
       "id": "FUNC-01110",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 11,
+      "name": "mark",
+      "kind": "arrow",
+      "params": "k,v=true",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01111",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 12,
+      "name": "assert",
+      "kind": "declaration",
+      "params": "cond,msg",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01112",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 13,
+      "name": "api",
+      "kind": "declaration",
+      "params": "route,{method='GET',body,token}={}",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01113",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 18,
+      "name": "cleanup",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [
+          "/api/auth/delete-account"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "api"
+      ],
+      "id": "FUNC-01114",
       "domain": "tooling"
     }
   ],
@@ -235329,23 +235417,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 1002,
-      "tooling": 108,
+      "tooling": 112,
       "otherSource": 0
     },
     "before": {
-      "functions": 1110,
+      "functions": 1114,
       "routes": 33,
       "models": 3,
       "collections": 13,
       "storage": 27,
       "uiActions": 222,
       "events": 11,
-      "movement": 7998,
+      "movement": 8000,
       "assets": 15821,
-      "environment": 148
+      "environment": 147
     },
     "after": {
-      "functions": 1110,
+      "functions": 1114,
       "routes": 33,
       "models": 2,
       "collections": 12,

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-24T02:23:00.552Z",
+  "generatedAt": "2026-08-24T02:25:20.993Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T02:22:55.855Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T02:25:16.967Z",
   "counts": {
-    "functions": 1110,
-    "functionsWithExactCode": 1110,
+    "functions": 1114,
+    "functionsWithExactCode": 1114,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 219,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 90,
+    "sourceFiles": 91,
     "assetFiles": 5425,
     "manualDocs": 5
   },
@@ -8912,6 +8912,38 @@
       "name": "filterGrouped",
       "exactCode": true,
       "snippetSha256": "b72fc42bd955c0b3a8185bc89e009b789a1e501a5ee51403961a3ddf4891a1cc"
+    },
+    {
+      "id": "FUNC-01111",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 11,
+      "name": "mark",
+      "exactCode": true,
+      "snippetSha256": "2dd3cf965ef321d2ffa4a8ca8fbb5a477a7efada7ed81e95cd34413d377ad4ae"
+    },
+    {
+      "id": "FUNC-01112",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 12,
+      "name": "assert",
+      "exactCode": true,
+      "snippetSha256": "5c0f4891d1b23701201f80cee72ae83329485db49cbdf91f159561c2853e6028"
+    },
+    {
+      "id": "FUNC-01113",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 13,
+      "name": "api",
+      "exactCode": true,
+      "snippetSha256": "928086a8105805a96428d79ed05625ae69129074314695797eb302d0a8214315"
+    },
+    {
+      "id": "FUNC-01114",
+      "file": "tools/supabase-live-e2e.mjs",
+      "line": 18,
+      "name": "cleanup",
+      "exactCode": true,
+      "snippetSha256": "40254e0413f1d5b188ac0190850565b006fbbda023e3b5bf0185d9280169c5d7"
     }
   ],
   "uiTraces": [
@@ -14997,8 +15029,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 12679,
-      "sha256": "4ff8386e63cfb24e7275753efa5a5ec4b7f42e423b3dc51ae8ed14bfd58d6b98"
+      "size": 3038,
+      "sha256": "c8b80a69b530e909981c004c03cd32e941882ff6cbbd733b16348fc3597d37a5"
     },
     {
       "path": ".github/workflows/one-shot-terion-authority.yml",
@@ -15017,8 +15049,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-E2E.json",
-      "size": 1158,
-      "sha256": "26fa5ac3f092667a0e62bfde6aedeebb2d190f0ee78201b90b5b7b8d2c77964f"
+      "size": 1548,
+      "sha256": "451327d875dd43c7083db705e852a0eb7db03553cefdbc31675ee63f91689fe4"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
@@ -15419,6 +15451,11 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586"
+    },
+    {
+      "path": "tools/supabase-live-e2e.mjs",
+      "size": 10266,
+      "sha256": "d9cd45d6777770f65b56698d3cd608f5ad86bd1e8ddc5a53d6bc59ee14da2abd"
     }
   ],
   "assetFiles": [
