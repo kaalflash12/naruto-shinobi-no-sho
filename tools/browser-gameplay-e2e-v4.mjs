@@ -56,6 +56,11 @@ const onlineTextDiag=`  try{await page.waitForFunction(text=>document.body.inner
 if(!base.includes(onlineTextWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_TEXT_WAIT_TARGET_MISSING');
 base=base.replaceAll(onlineTextWait,onlineTextDiag);
 
+const kuraiGoto="    await page.goto(`${site}?kurai-e2e=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});";
+const kuraiGotoFixed="    try{await page.goto(`${site}?kurai-e2e=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:90000});}catch(e){if(!String(e?.message||e).includes('ERR_ABORTED'))throw e;}\n    await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:30000});";
+if(!base.includes(kuraiGoto))throw new Error('GAMEPLAY_E2E_V4_KURAI_GOTO_TARGET_MISSING');
+base=base.replace(kuraiGoto,kuraiGotoFixed);
+
 const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-base-patched.mjs');
 fs.writeFileSync(patchedBase,base,'utf8');
 
