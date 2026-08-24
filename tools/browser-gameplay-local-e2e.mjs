@@ -79,6 +79,23 @@ const fixtureCode=String.raw`
   });`;
 
 base=base.replace(pageMarker,pageMarker+fixtureCode);
+
+const kuraiOpen=`async function testKurai(browser){\n  const context=await browser.newContext({viewport:{width:1365,height:900}});\n  const page=await context.newPage();\n  try{`;
+if(!base.includes(kuraiOpen))throw new Error('LOCAL_GAMEPLAY_KURAI_CONTEXT_TARGET_MISSING');
+base=base.replace(kuraiOpen,`async function testKurai(page){\n  try{`);
+const kuraiSeed=`    await page.evaluate(({key,fixture})=>localStorage.setItem(key,JSON.stringify(fixture)),{key:SAVE_KEY,fixture});`;
+if(!base.includes(kuraiSeed))throw new Error('LOCAL_GAMEPLAY_KURAI_SEED_TARGET_MISSING');
+base=base.replace(kuraiSeed,`    await page.evaluate(async ({key,slot,fixture})=>{\n      const json=JSON.stringify(fixture);\n      localStorage.setItem(key,json);\n      localStorage.setItem('sns-v841-active-account-slot',slot);\n      localStorage.setItem('narutoShinobiNoShoPcV5Active',slot);\n      for(let i=0;i<localStorage.length;i++){\n        const k=localStorage.key(i)||'';\n        if(k.startsWith('sns-v841-account-save:')&&k.endsWith(\`:\${slot}\`))localStorage.setItem(k,json);\n      }\n      await fetch('/api/account/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slotId:slot,save:fixture,gameVersion:'R41-KURAI-E2E'})});\n    },{key:SAVE_KEY,slot:SLOT_ID,fixture});`);
+const kuraiClose=`  } finally {await context.close();}\n}`;
+if(!base.includes(kuraiClose))throw new Error('LOCAL_GAMEPLAY_KURAI_CLOSE_TARGET_MISSING');
+base=base.replace(kuraiClose,`  } finally {}\n}`);
+if(!base.includes('    await testKurai(browser);'))throw new Error('LOCAL_GAMEPLAY_KURAI_CALL_TARGET_MISSING');
+base=base.replace('    await testKurai(browser);','    await testKurai(page);');
+
+const consoleMarker="  page.on('console',m=>{if(m.type()==='error')consoleErrors.push(m.text());});";
+if(!base.includes(consoleMarker))throw new Error('LOCAL_GAMEPLAY_CONSOLE_MARKER_MISSING');
+base=base.replace(consoleMarker,consoleMarker+"\n  page.on('response',r=>{if(r.status()===404)consoleErrors.push(`HTTP_404 ${r.url()}`);});");
+
 const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-local-base.mjs');
 fs.writeFileSync(patchedBase,base,'utf8');
 
