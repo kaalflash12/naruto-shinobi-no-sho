@@ -9,9 +9,10 @@ on:
       - 'index.html'
       - 'r41-api-config.js'
       - 'r41-github-api.js'
+      - 'r41-account-ui.js'
+      - 'src/**'
       - 'assets/**'
-      - 'tools/browser-gameplay-e2e.mjs'
-      - 'tools/browser-gameplay-e2e-v2.mjs'
+      - 'tools/browser-gameplay-e2e*.mjs'
       - '.github/workflows/browser-gameplay-e2e.yml'
   pull_request:
     branches: [main]
@@ -20,9 +21,10 @@ on:
       - 'index.html'
       - 'r41-api-config.js'
       - 'r41-github-api.js'
+      - 'r41-account-ui.js'
+      - 'src/**'
       - 'assets/**'
-      - 'tools/browser-gameplay-e2e.mjs'
-      - 'tools/browser-gameplay-e2e-v2.mjs'
+      - 'tools/browser-gameplay-e2e*.mjs'
       - '.github/workflows/browser-gameplay-e2e.yml'
 
 permissions:
@@ -36,115 +38,71 @@ jobs:
   gameplay:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Preflight public backend route
-        id: backend
+      - name: Preflight canonical Supabase backend
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p audit
-          cfg="$(curl -fsSL --max-time 20 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?backend-preflight='"$RANDOM" || true)"
-          API_CONFIG="$cfg" node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const cfg=String(process.env.API_CONFIG||'');
-          const m=cfg.match(/const baked = "([^"]*)"/);
-          const origin=String(m?.[1]||'').trim().replace(/\/+$/g,'');
-          const build=(cfg.match(/window\.NARUTO_R41_API_BUILD = "([^"]+)"/)?.[1])||'';
-          const ready=/^https:\/\/.+/i.test(origin) && build==='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB';
-          fs.writeFileSync('audit/BROWSER-GAMEPLAY-E2E.json',JSON.stringify({
-            generatedAt:new Date().toISOString(),
-            status:ready?'READY_FOR_BROWSER_GAMEPLAY_E2E':'BLOCKED_API_ORIGIN_NOT_CONFIGURED',
-            ok:false,
-            scope:'PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY',
-            site:'https://kaalflash12.github.io/naruto-shinobi-no-sho/',
-            backend:build||'UNKNOWN',
-            apiOrigin:origin,
-            checks:{publicBackendRouteConfigured:ready},
-            contracts:[],
-            evidence:{},
-            pageErrors:[],
-            consoleErrors:[],
-            failures:ready?[]:['r41-api-config.js público ainda não contém uma URL Worker Cloudflare verificada. O backend MongoDB Atlas + Durable Objects precisa concluir o live-backend-e2e antes do gameplay E2E.']
-          },null,2)+'\n');
-          console.log(JSON.stringify({ready,origin,build}));
-          if(!ready) process.exit(42);
+          cfg="$(curl -fsSL --max-time 30 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?preflight='"$RANDOM")"
+          printf '%s' "$cfg" | grep -q 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES'
+          printf '%s' "$cfg" | grep -q 'rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api'
+          origin="$(printf '%s' "$cfg" | sed -n 's/.*const SUPABASE_ORIGIN="\([^"]*\)".*/\1/p' | head -1)"
+          key="$(printf '%s' "$cfg" | sed -n 's/.*const SUPABASE_KEY="\([^"]*\)".*/\1/p' | head -1)"
+          test -n "$origin" && test -n "$key"
+          status="$(curl -fsSL --max-time 30 -H "apikey: $key" -H 'Origin: https://kaalflash12.github.io' "$origin/api/status")"
+          STATUS_JSON="$status" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.STATUS_JSON||'{}');
+          if(d.ok!==true||d.storage!=='supabase-postgres'||!String(d.backend||'').startsWith('shinobi-api-')) throw new Error(JSON.stringify(d));
+          console.log('SUPABASE_BACKEND_READY',d.build,d.backend,d.storage);
           NODE
-        continue-on-error: true
 
-      - name: Mark backend preflight result
-        id: backend_result
-        shell: bash
-        run: |
-          set -euo pipefail
-          status="$(node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'UNKNOWN')")"
-          if [ "$status" = "READY_FOR_BROWSER_GAMEPLAY_E2E" ]; then
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-            echo "Public Cloudflare + MongoDB route is configured."
-          else
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "BLOCKED: $status" >&2
-          fi
-
-      - name: Install Playwright
-        if: steps.backend_result.outputs.ready == 'true'
+      - name: Install Playwright Chromium
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Wait for public site
-        if: steps.backend_result.outputs.ready == 'true'
+      - name: Wait for public site update
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq 1 45); do
-            html="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/?gameplay-deploy-check='"$RANDOM" || true)"
-            js="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/app.js?gameplay-deploy-check='"$RANDOM" || true)"
-            if printf '%s' "$html" | grep -q 'NARUTO SHINOBI NO SHO' && printf '%s' "$js" | grep -q 'R41-MD-OPERACIONAL-APLICADO'; then
-              echo 'Public R41 site is responding.'
+          for i in $(seq 1 60); do
+            cfg="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?deploy-check='"$RANDOM" || true)"
+            html="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/?deploy-check='"$RANDOM" || true)"
+            if printf '%s' "$cfg" | grep -q 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES' && printf '%s' "$html" | grep -q 'NARUTO SHINOBI NO SHO'; then
+              echo 'Public GitHub Pages + Supabase build is responding.'
               exit 0
             fi
-            sleep 4
+            sleep 5
           done
-          echo 'Public R41 site did not respond in time.' >&2
+          echo 'Public site did not publish the Supabase build in time.' >&2
           exit 1
 
-      - name: Run real Chromium gameplay E2E V2
+      - name: Run real Chromium gameplay E2E V4
         id: gameplay
-        if: steps.backend_result.outputs.ready == 'true'
         continue-on-error: true
         env:
           PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
-        run: node tools/browser-gameplay-e2e-v2.mjs
+        run: node tools/browser-gameplay-e2e-v4.mjs
 
-      - name: Commit PASS gameplay evidence
-        if: always() && github.event_name == 'push' && steps.gameplay.outcome == 'success'
+      - name: Commit gameplay evidence
+        if: always() && github.event_name == 'push'
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f audit/BROWSER-GAMEPLAY-E2E.json ]; then
-            echo 'Gameplay report was not generated.' >&2
-            exit 1
-          fi
+          test -f audit/BROWSER-GAMEPLAY-E2E.json
           status="$(node -e "const r=require('./audit/BROWSER-GAMEPLAY-E2E.json');process.stdout.write(r.status||'UNKNOWN')")"
-          if [ "$status" != "PASS_BROWSER_GAMEPLAY_E2E" ]; then
-            echo "Refusing to commit non-PASS gameplay evidence: $status" >&2
-            exit 1
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add audit/BROWSER-GAMEPLAY-E2E.json
-          if git diff --cached --quiet; then
-            echo 'No gameplay report change.'
-          else
-            git commit -m "test: record ${status}"
+          if ! git diff --cached --quiet; then
+            git commit -m "test: gameplay evidence ${status}"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
@@ -155,7 +113,7 @@ jobs:
         with:
           name: browser-gameplay-e2e
           path: audit/BROWSER-GAMEPLAY-E2E.json
-          if-no-files-found: ignore
+          if-no-files-found: warn
 
       - name: Enforce gameplay gate
         if: always()
@@ -164,13 +122,9 @@ jobs:
           node - <<'NODE'
           const fs=require('fs');
           const p='audit/BROWSER-GAMEPLAY-E2E.json';
-          if(!fs.existsSync(p)) throw new Error('BROWSER_GAMEPLAY_REPORT_MISSING');
+          if(!fs.existsSync(p))throw new Error('BROWSER_GAMEPLAY_REPORT_MISSING');
           const r=JSON.parse(fs.readFileSync(p,'utf8'));
-          if(r.status==='BLOCKED_API_ORIGIN_NOT_CONFIGURED'){
-            throw new Error(`BACKEND_NOT_DEPLOYED: ${r.backend||'UNKNOWN'} apiOrigin=${r.apiOrigin||'<empty>'}`);
-          }
-          if(r.ok!==true || r.status!=='PASS_BROWSER_GAMEPLAY_E2E'){
-            throw new Error(`GAMEPLAY_E2E_FAILED: ${r.status||'UNKNOWN'} ${(r.failures||[]).join(' | ')}`);
-          }
-          console.log(r.status);
+          if(r.ok!==true||r.status!=='PASS_BROWSER_GAMEPLAY_E2E')throw new Error(`GAMEPLAY_E2E_FAILED ${r.status}: ${(r.failures||[]).join(' | ')}`);
+          if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('11 gameplay contracts not proven');
+          console.log(r.status,'contracts=',r.contracts.length);
           NODE
