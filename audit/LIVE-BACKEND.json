@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-08-24T19:31:35.573Z",
+  "status": "BLOCKED_MISSING_EXTERNAL_CREDENTIALS",
+  "ok": false,
+  "scope": "CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE",
+  "missing": [
+    "CLOUDFLARE_API_TOKEN",
+    "CLOUDFLARE_ACCOUNT_ID",
+    "MONGODB_URI",
+    "AUTH_SECRET",
+    "LEON_PRIVATE_CODE",
+    "LIVE_API_ORIGIN"
+  ],
+  "blockingRequired": [
+    "CLOUDFLARE_API_TOKEN",
+    "MONGODB_URI"
+  ],
+  "evidence": "audit/BACKEND-SECRET-PRESENCE.json",
+  "failures": [
+    "O GitHub Actions confirmou que CLOUDFLARE_API_TOKEN não está configurado.",
+    "O GitHub Actions confirmou que MONGODB_URI não está configurado.",
+    "Sem autenticação Cloudflare não é possível criar, atualizar ou verificar o Worker público.",
+    "Sem MONGODB_URI e sem acesso ao Worker não é possível provar persistência MongoDB Atlas no backend autorizado."
+  ],
+  "note": "Nenhum PASS live foi fabricado. Este arquivo deve ser substituído somente por evidência produzida pelo E2E Cloudflare + MongoDB real."
+}
