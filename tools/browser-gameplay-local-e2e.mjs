@@ -27,11 +27,11 @@ const fixtureCode=String.raw`
     origin:save?.character?.origin||'sem_cla',avatar:save?.character?.avatar||'assets/ui/avatar.png',updatedAt:new Date().toISOString(),
     playerId:save?.playerId||'',campaignId:save?.campaignId||''
   });
-  await page.addInitScript(origin=>{
+  await context.addInitScript(origin=>{
     localStorage.setItem('sns-api-origin',origin);
     localStorage.setItem('sns-r41-api-origin',origin);
   },localApiOrigin);
-  await page.route('**/api/**',async route=>{
+  await context.route('**/api/**',async route=>{
     const req=route.request(),url=new URL(req.url()),p=url.pathname;
     let body={};try{body=JSON.parse(req.postData()||'{}')}catch{}
     const reply=(data,status=200)=>route.fulfill({status,contentType:'application/json; charset=utf-8',body:JSON.stringify(data)});
@@ -78,19 +78,27 @@ const fixtureCode=String.raw`
     return reply({ok:true});
   });`;
 
-base=base.replace(pageMarker,pageMarker+fixtureCode);
+// A fixture pertence ao BrowserContext inteiro: reloads e a página isolada da Kurai usam a mesma API simulada.
+base=base.replace(pageMarker,fixtureCode+'\n'+pageMarker);
 
+// Mantém a Kurai numa página própria para não herdar DOM/observers assíncronos dos 10 contratos anteriores,
+// mas reutiliza o mesmo BrowserContext para manter localStorage e a fixture de API determinísticos.
 const kuraiOpen=`async function testKurai(browser){\n  const context=await browser.newContext({viewport:{width:1365,height:900}});\n  const page=await context.newPage();\n  try{`;
 if(!base.includes(kuraiOpen))throw new Error('LOCAL_GAMEPLAY_KURAI_CONTEXT_TARGET_MISSING');
-base=base.replace(kuraiOpen,`async function testKurai(page){\n  try{`);
+base=base.replace(kuraiOpen,`async function testKurai(context){\n  const page=await context.newPage();\n  try{`);
 const kuraiSeed=`    await page.evaluate(({key,fixture})=>localStorage.setItem(key,JSON.stringify(fixture)),{key:SAVE_KEY,fixture});`;
 if(!base.includes(kuraiSeed))throw new Error('LOCAL_GAMEPLAY_KURAI_SEED_TARGET_MISSING');
 base=base.replace(kuraiSeed,`    await page.evaluate(async ({key,slot,fixture})=>{\n      const json=JSON.stringify(fixture);\n      localStorage.setItem(key,json);\n      localStorage.setItem('sns-v841-active-account-slot',slot);\n      localStorage.setItem('narutoShinobiNoShoPcV5Active',slot);\n      for(let i=0;i<localStorage.length;i++){\n        const k=localStorage.key(i)||'';\n        if(k.startsWith('sns-v841-account-save:')&&k.endsWith(\`:\${slot}\`))localStorage.setItem(k,json);\n      }\n      await fetch('/api/account/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({slotId:slot,save:fixture,gameVersion:'R41-KURAI-E2E'})});\n    },{key:SAVE_KEY,slot:SLOT_ID,fixture});`);
 const kuraiClose=`  } finally {await context.close();}\n}`;
 if(!base.includes(kuraiClose))throw new Error('LOCAL_GAMEPLAY_KURAI_CLOSE_TARGET_MISSING');
-base=base.replace(kuraiClose,`  } finally {}\n}`);
+base=base.replace(kuraiClose,`  } finally {await page.close();}\n}`);
 if(!base.includes('    await testKurai(browser);'))throw new Error('LOCAL_GAMEPLAY_KURAI_CALL_TARGET_MISSING');
-base=base.replace('    await testKurai(browser);','    await testKurai(page);');
+base=base.replace('    await testKurai(browser);','    await testKurai(context);');
+
+// O executor público continua com o scope público por padrão; apenas o wrapper local fornece GAMEPLAY_SCOPE.
+const scopeMarker="scope:'PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'";
+if(!base.includes(scopeMarker))throw new Error('LOCAL_GAMEPLAY_SCOPE_TARGET_MISSING');
+base=base.replace(scopeMarker,"scope:process.env.GAMEPLAY_SCOPE||'PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'");
 
 const consoleMarker="  page.on('console',m=>{if(m.type()==='error')consoleErrors.push(m.text());});";
 if(!base.includes(consoleMarker))throw new Error('LOCAL_GAMEPLAY_CONSOLE_MARKER_MISSING');
