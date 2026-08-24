@@ -1,0 +1,39 @@
+name: Public Cloudflare Worker Probe
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/public-worker-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Probe known Shinobi Worker candidates
+        shell: bash
+        run: |
+          set -u
+          urls=(
+            'https://mestre.mestrederpg35.workers.dev'
+            'https://naruto-shinobi-r40-master.mestrederpg35.workers.dev'
+            'https://naruto-shinobi-no-sho-api.mestrederpg35.workers.dev'
+          )
+          found=0
+          for u in "${urls[@]}"; do
+            echo "=== $u ==="
+            code="$(curl -sS -o /tmp/status.json -w '%{http_code}' --max-time 20 "$u/api/status" || true)"
+            echo "HTTP=$code"
+            cat /tmp/status.json 2>/dev/null || true
+            echo
+            if [ "$code" = 200 ] && STATUS_JSON="$(cat /tmp/status.json)" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.STATUS_JSON||'{}');console.log('PARSED',JSON.stringify({build:d.build,buildAuthority:d.buildAuthority,storage:d.storage,realtime:d.realtime,configured:d.configured,game:d.game}));if(!(d.ok===true&&d.configured===true))process.exit(1);
+          NODE
+            then found=1; fi
+          done
+          if [ "$found" -eq 0 ]; then echo 'NO_CONFIGURED_PUBLIC_WORKER_FOUND'; exit 1; fi
