@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T03:34:03.672Z`
+Gerado em: `2026-08-24T03:36:02.764Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -42,9 +42,9 @@ Gerado em: `2026-08-24T03:34:03.672Z`
 
 ## Fonte/configuração/tooling
 
-- `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 4626 bytes — SHA-256 `732a9b96c3b74151851efbd74a2c1227427f71f3328780cd378cb34271a7998c`
+- `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 4580 bytes — SHA-256 `dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 1803 bytes — SHA-256 `93f238cdd2e33823138c0962404a52f94642f7d539d3479f3f31e6116e26c84e`
-- `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 5436 bytes — SHA-256 `1d0aaa40c59793f27580baf49feff6d55ff4a6616eb00539a3ed594f243b41df`
+- `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 5390 bytes — SHA-256 `68db6698dff53569d98c824a6adad70288bc591fbaf1dbdb688fd6a2023c0082`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3182 bytes — SHA-256 `5267791f80a93a8c5625e8cb4561db44b1bb300962106a64a1663ef6218c1cc3`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 10869 bytes — SHA-256 `94fbfc8b578ef0c1e57758f9536b3359e11df12d8e745893971bcfdd55cbf467`

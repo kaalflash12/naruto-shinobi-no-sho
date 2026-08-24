@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T03:34:08.372Z",
+  "generatedAt": "2026-08-24T03:36:06.492Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T03:34:03.672Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T03:36:02.764Z",
   "counts": {
     "functions": 1111,
     "functionsWithExactCode": 1111,
@@ -14980,8 +14980,8 @@
   "sourceFiles": [
     {
       "path": ".github/workflows/account-live-e2e.yml",
-      "size": 4626,
-      "sha256": "732a9b96c3b74151851efbd74a2c1227427f71f3328780cd378cb34271a7998c"
+      "size": 4580,
+      "sha256": "dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771"
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
@@ -14990,8 +14990,8 @@
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
-      "size": 5436,
-      "sha256": "1d0aaa40c59793f27580baf49feff6d55ff4a6616eb00539a3ed594f243b41df"
+      "size": 5390,
+      "sha256": "68db6698dff53569d98c824a6adad70288bc591fbaf1dbdb688fd6a2023c0082"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
