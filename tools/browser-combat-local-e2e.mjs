@@ -54,14 +54,15 @@ await page.route('**/api/**',async route=>{
 try{
   const response=await page.goto(`${base}/?combat-local=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:60000});
   if(!response?.ok())throw new Error(`site HTTP ${response?.status()}`);
-  await page.evaluate(({fixture,slotId,saveKey,activeKey,prefix,indexKey,authKey})=>{
+  await page.evaluate(({fixture,slotId,saveKey,activeKey,prefix,indexKey,authKey,apiOrigin})=>{
     const json=JSON.stringify(fixture);
+    localStorage.setItem('sns-api-origin',apiOrigin);
     localStorage.setItem(saveKey,json);
     localStorage.setItem(activeKey,slotId);
     localStorage.setItem(prefix+slotId,json);
     localStorage.setItem(indexKey,JSON.stringify([{id:slotId,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId}]));
     sessionStorage.setItem(authKey,'local-ci-token');
-  },{fixture,slotId:SLOT_ID,saveKey:SAVE_KEY,activeKey:ACTIVE_SLOT_KEY,prefix:SLOT_PREFIX,indexKey:SLOT_INDEX_KEY,authKey:AUTH_TOKEN_KEY});
+  },{fixture,slotId:SLOT_ID,saveKey:SAVE_KEY,activeKey:ACTIVE_SLOT_KEY,prefix:SLOT_PREFIX,indexKey:SLOT_INDEX_KEY,authKey:AUTH_TOKEN_KEY,apiOrigin:base});
   await page.reload({waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>!!window.__NARUTO_R41__?.version,{timeout:20000});
 
