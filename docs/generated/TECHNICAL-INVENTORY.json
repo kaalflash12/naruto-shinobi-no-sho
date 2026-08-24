@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-24T02:45:53.529Z",
+  "generatedAt": "2026-08-24T03:34:03.672Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5536,
-    "runtimeFiles": 85,
+    "files": 5529,
+    "runtimeFiles": 78,
     "assetFiles": 5425,
-    "textFiles": 106,
-    "functions": 1114,
+    "textFiles": 99,
+    "functions": 1111,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -21,12 +21,12 @@
     "scriptTags": 33,
     "assetReferences": 15814,
     "missingLiteralAssetReferences": 0,
-    "gameRuntimeFunctions": 1002,
-    "toolingFunctions": 112,
+    "gameRuntimeFunctions": 1003,
+    "toolingFunctions": 108,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 96,
-    "gameRuntimeSourceFiles": 67,
-    "toolingSourceFiles": 29,
+    "sourceFiles": 89,
+    "gameRuntimeSourceFiles": 61,
+    "toolingSourceFiles": 28,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -43,24 +43,24 @@
     },
     {
       "path": ".github/workflows/account-live-e2e.yml",
-      "size": 3054,
-      "sha256": "59563ef84038a7d45bcb50a643ac93bf8acda40bb8aaca4f64a0c7ee6b3bcd45",
+      "size": 4626,
+      "sha256": "732a9b96c3b74151851efbd74a2c1227427f71f3328780cd378cb34271a7998c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 3134,
-      "sha256": "ab5d9fc75f0c033a8f04d352ed4f5d1dc6fdbae784484810f439534b81aef59f",
+      "size": 1803,
+      "sha256": "93f238cdd2e33823138c0962404a52f94642f7d539d3479f3f31e6116e26c84e",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
-      "size": 6199,
-      "sha256": "d86d1488c364ae2f9977784e3ee69b41d9fa3dccec8a89225fd30811174a2f79",
+      "size": 5436,
+      "sha256": "1d0aaa40c59793f27580baf49feff6d55ff4a6616eb00539a3ed594f243b41df",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -75,16 +75,16 @@
     },
     {
       "path": ".github/workflows/final-readiness.yml",
-      "size": 3097,
-      "sha256": "a36786ece900c13a39cd911603c8495430a0b03c8180ad6e48e28a62f4d15be0",
+      "size": 3182,
+      "sha256": "5267791f80a93a8c5625e8cb4561db44b1bb300962106a64a1663ef6218c1cc3",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 3038,
-      "sha256": "c8b80a69b530e909981c004c03cd32e941882ff6cbbd733b16348fc3597d37a5",
+      "size": 10869,
+      "sha256": "94fbfc8b578ef0c1e57758f9536b3359e11df12d8e745893971bcfdd55cbf467",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43522,54 +43522,6 @@
       "asset": true
     },
     {
-      "path": "audit/ACCOUNT-LIVE-E2E.json",
-      "size": 717,
-      "sha256": "3558104106bed932eb0d496a42ced904a0c113254514036bb1adce1aa2acb8bc",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "audit/BROWSER-ACCOUNT-LIVE.json",
-      "size": 717,
-      "sha256": "222339c7d577a8227af1de2f612e34e798e4121c658764c9ea722cde90d9cbfe",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "audit/BROWSER-GAMEPLAY-E2E.json",
-      "size": 6262,
-      "sha256": "e3cba6caf3a4efaf0f15596688f5839a79ac36bbf25dce744caf419eeff4f1ac",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "audit/BROWSER-LIVE-API.json",
-      "size": 1681,
-      "sha256": "7de1baad4c10731adaa36e9e8f708a625d242a86fa4d83992335282139a18ec9",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "audit/BROWSER-SMOKE.json",
-      "size": 839,
-      "sha256": "03b33314fa95b1071965e6fcb5790f35cb1dc181f48fb014ea45a40770c2d369",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "audit/LIVE-BACKEND.json",
-      "size": 2016,
-      "sha256": "0401fa0c62ec9109703de0e43e5f8bee6e1ff54cd2575994fe80cdf7a7efd53a",
-      "extension": ".json",
-      "runtime": true,
-      "asset": false
-    },
-    {
       "path": "audit/R41_CORRECAO_INTEGRAL_20260819.md",
       "size": 2042,
       "sha256": "2d3af5133044801a53a8b534cf43b783422ad8069d341e7016bbae53302bf667",
@@ -44083,16 +44035,16 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 1098,
-      "sha256": "465315d0ec31c1ad58ee2bb4d025f2007cacf7c5baa78ecbd7c8e4ee324f3278",
+      "size": 1041,
+      "sha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732",
       "extension": ".js",
       "runtime": true,
       "asset": false
     },
     {
       "path": "r41-github-api.js",
-      "size": 6492,
-      "sha256": "7f9c0dec0add41853c8b94b6b17b2ee3ec74c3e3021288d8cb7317df6ede67e0",
+      "size": 6207,
+      "sha256": "f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44195,8 +44147,8 @@
     },
     {
       "path": "tools/browser-account-live.mjs",
-      "size": 5095,
-      "sha256": "274bdadf9009258304063168db448ac4f74a4b1eb6b2bf43b65274d7e1fe3023",
+      "size": 5191,
+      "sha256": "1d62144ef47d69f22aa9c8efac15adfb66e8c25abda0a89d8928dd78b0552f2f",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44219,8 +44171,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 4862,
-      "sha256": "04d4ec2474984d8b79cac8e5832e7d224f553aefd73d638917e0195dfa931607",
+      "size": 5423,
+      "sha256": "c88b16d694c96e860a34dae980e150d31732f430e6416eee1ee58d242857c3d1",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44235,16 +44187,16 @@
     },
     {
       "path": "tools/browser-live-api.mjs",
-      "size": 4205,
-      "sha256": "5359b093da6dca9fe4438c378027a8780461f7994e6f1db7e6cb299b5f3766c9",
+      "size": 5129,
+      "sha256": "22093535386cd41b289baafa512755b3305c50f638b971dcd49972590bd3bd1a",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
     },
     {
       "path": "tools/browser-smoke.mjs",
-      "size": 5994,
-      "sha256": "57ac54552729bfedb24ee65f8b08645ed31cf3473f2ee0a0ecf593bafe725aac",
+      "size": 5225,
+      "sha256": "e4afc34dddd9cbdc7750c099bad492d92eb36e9b4039e799371f713c59951950",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44259,8 +44211,8 @@
     },
     {
       "path": "tools/final-readiness.mjs",
-      "size": 9243,
-      "sha256": "bd66e89c794d7caa4d80f8cdc49ec930ee51e1051000208aa006c666fa183f3f",
+      "size": 10206,
+      "sha256": "69369483da9178e4cc3e99ea85928a8c9e2fdab571d62056e658f96a105578f2",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44309,14 +44261,6 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586",
-      "extension": ".mjs",
-      "runtime": true,
-      "asset": false
-    },
-    {
-      "path": "tools/supabase-live-e2e.mjs",
-      "size": 10266,
-      "sha256": "d9cd45d6777770f65b56698d3cd608f5ad86bd1e8ddc5a53d6bc59ee14da2abd",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -67582,6 +67526,50 @@
       "domain": "game-runtime"
     },
     {
+      "file": "r41-api-config.js",
+      "line": 4,
+      "name": "clean",
+      "kind": "arrow-one",
+      "params": "v",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [
+          "sns-api-origin",
+          "sns-r41-api-origin"
+        ],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00950",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "r41-api-config.js",
+      "line": 5,
+      "name": "allowedOverride",
+      "kind": "arrow-one",
+      "params": "v",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [
+          "sns-api-origin",
+          "sns-r41-api-origin"
+        ],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00951",
+      "domain": "game-runtime"
+    },
+    {
       "file": "r41-github-api.js",
       "line": 8,
       "name": "apiOrigin",
@@ -67600,53 +67588,15 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00950",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "r41-github-api.js",
-      "line": 9,
-      "name": "publishableKey",
-      "kind": "declaration",
-      "params": "",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
-      "id": "FUNC-00951",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "r41-github-api.js",
-      "line": 10,
-      "name": "token",
-      "kind": "declaration",
-      "params": "",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
       "id": "FUNC-00952",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 14,
-      "name": "setToken",
+      "line": 9,
+      "name": "token",
       "kind": "declaration",
-      "params": "value",
+      "params": "",
       "refs": {
         "routes": [],
         "collections": [],
@@ -67662,7 +67612,26 @@
     },
     {
       "file": "r41-github-api.js",
-      "line": 15,
+      "line": 13,
+      "name": "setToken",
+      "kind": "declaration",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00954",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "r41-github-api.js",
+      "line": 14,
       "name": "captureClaim",
       "kind": "declaration",
       "params": "",
@@ -67678,12 +67647,12 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00954",
+      "id": "FUNC-00955",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 18,
+      "line": 17,
       "name": "mapTarget",
       "kind": "declaration",
       "params": "raw",
@@ -67699,12 +67668,12 @@
       "calls": [
         "apiOrigin"
       ],
-      "id": "FUNC-00955",
+      "id": "FUNC-00956",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 23,
+      "line": 22,
       "name": "withAuth",
       "kind": "declaration",
       "params": "init,api",
@@ -67718,15 +67687,14 @@
         "actions": []
       },
       "calls": [
-        "publishableKey",
         "token"
       ],
-      "id": "FUNC-00956",
+      "id": "FUNC-00957",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 29,
+      "line": 27,
       "name": "applyLeonClaim",
       "kind": "declaration",
       "params": "response,mapped",
@@ -67746,15 +67714,14 @@
       "calls": [
         "clone",
         "json",
-        "publishableKey",
         "apiOrigin"
       ],
-      "id": "FUNC-00957",
+      "id": "FUNC-00958",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 51,
+      "line": 48,
       "name": "request",
       "kind": "declaration",
       "params": "route,body,method=\"POST\"",
@@ -67771,12 +67738,12 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00958",
+      "id": "FUNC-00959",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 59,
+      "line": 56,
       "name": "register",
       "kind": "method",
       "params": "username,password,displayName,email",
@@ -67795,12 +67762,12 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00959",
+      "id": "FUNC-00960",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 60,
+      "line": 57,
       "name": "login",
       "kind": "method",
       "params": "identifier,password",
@@ -67819,12 +67786,12 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00960",
+      "id": "FUNC-00961",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 61,
+      "line": 58,
       "name": "me",
       "kind": "method",
       "params": "",
@@ -67844,12 +67811,12 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00961",
+      "id": "FUNC-00962",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 62,
+      "line": 59,
       "name": "logout",
       "kind": "method",
       "params": "",
@@ -67869,12 +67836,12 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00962",
+      "id": "FUNC-00963",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 63,
+      "line": 60,
       "name": "recover",
       "kind": "method",
       "params": "identifier,recoveryCode,newPassword",
@@ -67892,12 +67859,12 @@
       "calls": [
         "request"
       ],
-      "id": "FUNC-00963",
+      "id": "FUNC-00964",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 64,
+      "line": 61,
       "name": "generateRecoveryCode",
       "kind": "method",
       "params": "",
@@ -67915,12 +67882,12 @@
       "calls": [
         "request"
       ],
-      "id": "FUNC-00964",
+      "id": "FUNC-00965",
       "domain": "game-runtime"
     },
     {
       "file": "r41-github-api.js",
-      "line": 65,
+      "line": 62,
       "name": "deleteAccount",
       "kind": "method",
       "params": "",
@@ -67939,7 +67906,7 @@
         "request",
         "setToken"
       ],
-      "id": "FUNC-00965",
+      "id": "FUNC-00966",
       "domain": "game-runtime"
     },
     {
@@ -67960,7 +67927,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00966",
+      "id": "FUNC-00967",
       "domain": "game-runtime"
     },
     {
@@ -67982,7 +67949,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00967",
+      "id": "FUNC-00968",
       "domain": "game-runtime"
     },
     {
@@ -68004,7 +67971,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00968",
+      "id": "FUNC-00969",
       "domain": "game-runtime"
     },
     {
@@ -68026,7 +67993,7 @@
         "normalize",
         "get"
       ],
-      "id": "FUNC-00969",
+      "id": "FUNC-00970",
       "domain": "game-runtime"
     },
     {
@@ -68049,7 +68016,7 @@
         "indexManifest",
         "normalize"
       ],
-      "id": "FUNC-00970",
+      "id": "FUNC-00971",
       "domain": "game-runtime"
     },
     {
@@ -68072,7 +68039,7 @@
         "get",
         "warn"
       ],
-      "id": "FUNC-00971",
+      "id": "FUNC-00972",
       "domain": "game-runtime"
     },
     {
@@ -68091,7 +68058,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00972",
+      "id": "FUNC-00973",
       "domain": "game-runtime"
     },
     {
@@ -68110,7 +68077,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00973",
+      "id": "FUNC-00974",
       "domain": "game-runtime"
     },
     {
@@ -68129,7 +68096,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00974",
+      "id": "FUNC-00975",
       "domain": "game-runtime"
     },
     {
@@ -68150,7 +68117,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00975",
+      "id": "FUNC-00976",
       "domain": "game-runtime"
     },
     {
@@ -68169,7 +68136,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00976",
+      "id": "FUNC-00977",
       "domain": "game-runtime"
     },
     {
@@ -68188,7 +68155,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00977",
+      "id": "FUNC-00978",
       "domain": "game-runtime"
     },
     {
@@ -68207,7 +68174,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00978",
+      "id": "FUNC-00979",
       "domain": "game-runtime"
     },
     {
@@ -68226,7 +68193,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00979",
+      "id": "FUNC-00980",
       "domain": "game-runtime"
     },
     {
@@ -68245,7 +68212,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00980",
+      "id": "FUNC-00981",
       "domain": "game-runtime"
     },
     {
@@ -68264,7 +68231,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00981",
+      "id": "FUNC-00982",
       "domain": "game-runtime"
     },
     {
@@ -68283,7 +68250,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00982",
+      "id": "FUNC-00983",
       "domain": "game-runtime"
     },
     {
@@ -68302,7 +68269,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00983",
+      "id": "FUNC-00984",
       "domain": "game-runtime"
     },
     {
@@ -68321,7 +68288,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00984",
+      "id": "FUNC-00985",
       "domain": "game-runtime"
     },
     {
@@ -68340,7 +68307,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00985",
+      "id": "FUNC-00986",
       "domain": "game-runtime"
     },
     {
@@ -68361,7 +68328,7 @@
       "calls": [
         "get"
       ],
-      "id": "FUNC-00986",
+      "id": "FUNC-00987",
       "domain": "game-runtime"
     },
     {
@@ -68383,7 +68350,7 @@
         "norm",
         "get"
       ],
-      "id": "FUNC-00987",
+      "id": "FUNC-00988",
       "domain": "game-runtime"
     },
     {
@@ -68404,7 +68371,7 @@
       "calls": [
         "norm"
       ],
-      "id": "FUNC-00988",
+      "id": "FUNC-00989",
       "domain": "game-runtime"
     },
     {
@@ -68423,7 +68390,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00989",
+      "id": "FUNC-00990",
       "domain": "game-runtime"
     },
     {
@@ -68442,7 +68409,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00990",
+      "id": "FUNC-00991",
       "domain": "game-runtime"
     },
     {
@@ -68461,7 +68428,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00991",
+      "id": "FUNC-00992",
       "domain": "game-runtime"
     },
     {
@@ -68482,7 +68449,7 @@
       "calls": [
         "normalizeResult"
       ],
-      "id": "FUNC-00992",
+      "id": "FUNC-00993",
       "domain": "game-runtime"
     },
     {
@@ -68501,7 +68468,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00993",
+      "id": "FUNC-00994",
       "domain": "game-runtime"
     },
     {
@@ -68520,7 +68487,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00994",
+      "id": "FUNC-00995",
       "domain": "game-runtime"
     },
     {
@@ -68539,7 +68506,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00995",
+      "id": "FUNC-00996",
       "domain": "game-runtime"
     },
     {
@@ -68558,7 +68525,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00996",
+      "id": "FUNC-00997",
       "domain": "game-runtime"
     },
     {
@@ -68577,7 +68544,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00997",
+      "id": "FUNC-00998",
       "domain": "game-runtime"
     },
     {
@@ -68596,7 +68563,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00998",
+      "id": "FUNC-00999",
       "domain": "game-runtime"
     },
     {
@@ -68615,7 +68582,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00999",
+      "id": "FUNC-01000",
       "domain": "game-runtime"
     },
     {
@@ -68636,7 +68603,7 @@
       "calls": [
         "repair"
       ],
-      "id": "FUNC-01000",
+      "id": "FUNC-01001",
       "domain": "game-runtime"
     },
     {
@@ -68655,7 +68622,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01001",
+      "id": "FUNC-01002",
       "domain": "game-runtime"
     },
     {
@@ -68676,7 +68643,7 @@
       "calls": [
         "localProgressKeys"
       ],
-      "id": "FUNC-01002",
+      "id": "FUNC-01003",
       "domain": "game-runtime"
     },
     {
@@ -68695,7 +68662,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01003",
+      "id": "FUNC-01004",
       "domain": "tooling"
     },
     {
@@ -68714,7 +68681,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01004",
+      "id": "FUNC-01005",
       "domain": "tooling"
     },
     {
@@ -68733,7 +68700,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01005",
+      "id": "FUNC-01006",
       "domain": "tooling"
     },
     {
@@ -68752,7 +68719,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01006",
+      "id": "FUNC-01007",
       "domain": "tooling"
     },
     {
@@ -68771,7 +68738,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01007",
+      "id": "FUNC-01008",
       "domain": "tooling"
     },
     {
@@ -68790,7 +68757,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01008",
+      "id": "FUNC-01009",
       "domain": "tooling"
     },
     {
@@ -68809,7 +68776,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01009",
+      "id": "FUNC-01010",
       "domain": "tooling"
     },
     {
@@ -68828,7 +68795,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01010",
+      "id": "FUNC-01011",
       "domain": "tooling"
     },
     {
@@ -68847,7 +68814,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01011",
+      "id": "FUNC-01012",
       "domain": "tooling"
     },
     {
@@ -68866,7 +68833,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01012",
+      "id": "FUNC-01013",
       "domain": "tooling"
     },
     {
@@ -68888,7 +68855,7 @@
         "fail",
         "isGameRuntime"
       ],
-      "id": "FUNC-01013",
+      "id": "FUNC-01014",
       "domain": "tooling"
     },
     {
@@ -68907,7 +68874,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01014",
+      "id": "FUNC-01015",
       "domain": "tooling"
     },
     {
@@ -68926,7 +68893,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01015",
+      "id": "FUNC-01016",
       "domain": "tooling"
     },
     {
@@ -68945,7 +68912,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01016",
+      "id": "FUNC-01017",
       "domain": "tooling"
     },
     {
@@ -68972,7 +68939,7 @@
         "values",
         "warn"
       ],
-      "id": "FUNC-01017",
+      "id": "FUNC-01018",
       "domain": "tooling"
     },
     {
@@ -68995,12 +68962,12 @@
         "isDynamic",
         "get"
       ],
-      "id": "FUNC-01018",
+      "id": "FUNC-01019",
       "domain": "tooling"
     },
     {
       "file": "tools/browser-account-live.mjs",
-      "line": 10,
+      "line": 11,
       "name": "assert",
       "kind": "declaration",
       "params": "cond,msg",
@@ -69014,7 +68981,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01019",
+      "id": "FUNC-01020",
       "domain": "tooling"
     },
     {
@@ -69035,7 +69002,7 @@
       "calls": [
         "tryParse"
       ],
-      "id": "FUNC-01020",
+      "id": "FUNC-01021",
       "domain": "tooling"
     },
     {
@@ -69054,7 +69021,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01021",
+      "id": "FUNC-01022",
       "domain": "tooling"
     },
     {
@@ -69085,7 +69052,7 @@
         "count",
         "pass"
       ],
-      "id": "FUNC-01022",
+      "id": "FUNC-01023",
       "domain": "tooling"
     },
     {
@@ -69118,7 +69085,7 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01023",
+      "id": "FUNC-01024",
       "domain": "tooling"
     },
     {
@@ -69145,7 +69112,7 @@
         "assert",
         "test"
       ],
-      "id": "FUNC-01024",
+      "id": "FUNC-01025",
       "domain": "tooling"
     },
     {
@@ -69180,7 +69147,7 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01025",
+      "id": "FUNC-01026",
       "domain": "tooling"
     },
     {
@@ -69199,7 +69166,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01026",
+      "id": "FUNC-01027",
       "domain": "tooling"
     },
     {
@@ -69218,7 +69185,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01027",
+      "id": "FUNC-01028",
       "domain": "tooling"
     },
     {
@@ -69237,7 +69204,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01028",
+      "id": "FUNC-01029",
       "domain": "tooling"
     },
     {
@@ -69256,7 +69223,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01029",
+      "id": "FUNC-01030",
       "domain": "tooling"
     },
     {
@@ -69275,7 +69242,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01030",
+      "id": "FUNC-01031",
       "domain": "tooling"
     },
     {
@@ -69294,7 +69261,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01031",
+      "id": "FUNC-01032",
       "domain": "tooling"
     },
     {
@@ -69313,7 +69280,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01032",
+      "id": "FUNC-01033",
       "domain": "tooling"
     },
     {
@@ -69332,7 +69299,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01033",
+      "id": "FUNC-01034",
       "domain": "tooling"
     },
     {
@@ -69353,7 +69320,7 @@
       "calls": [
         "readSave"
       ],
-      "id": "FUNC-01034",
+      "id": "FUNC-01035",
       "domain": "tooling"
     },
     {
@@ -69372,7 +69339,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01035",
+      "id": "FUNC-01036",
       "domain": "tooling"
     },
     {
@@ -69393,7 +69360,7 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01036",
+      "id": "FUNC-01037",
       "domain": "tooling"
     },
     {
@@ -69419,7 +69386,7 @@
         "status",
         "pass"
       ],
-      "id": "FUNC-01037",
+      "id": "FUNC-01038",
       "domain": "tooling"
     },
     {
@@ -69442,7 +69409,7 @@
         "readSave",
         "assert"
       ],
-      "id": "FUNC-01038",
+      "id": "FUNC-01039",
       "domain": "tooling"
     },
     {
@@ -69494,7 +69461,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-01039",
+      "id": "FUNC-01040",
       "domain": "tooling"
     },
     {
@@ -69522,7 +69489,7 @@
         "test",
         "close"
       ],
-      "id": "FUNC-01040",
+      "id": "FUNC-01041",
       "domain": "tooling"
     },
     {
@@ -69545,7 +69512,7 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01041",
+      "id": "FUNC-01042",
       "domain": "tooling"
     },
     {
@@ -69564,34 +69531,15 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01042",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/browser-smoke.mjs",
-      "line": 12,
-      "name": "fail",
-      "kind": "declaration",
-      "params": "message",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
       "id": "FUNC-01043",
       "domain": "tooling"
     },
     {
       "file": "tools/browser-smoke.mjs",
-      "line": 13,
+      "line": 7,
       "name": "assert",
-      "kind": "declaration",
-      "params": "condition, message",
+      "kind": "arrow",
+      "params": "c,m",
       "refs": {
         "routes": [],
         "collections": [],
@@ -69605,6 +69553,25 @@
         "fail"
       ],
       "id": "FUNC-01044",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-smoke.mjs",
+      "line": 7,
+      "name": "fail",
+      "kind": "arrow-one",
+      "params": "m",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01045",
       "domain": "tooling"
     },
     {
@@ -69623,7 +69590,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01045",
+      "id": "FUNC-01046",
       "domain": "tooling"
     },
     {
@@ -69642,7 +69609,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01046",
+      "id": "FUNC-01047",
       "domain": "tooling"
     },
     {
@@ -69661,7 +69628,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01047",
+      "id": "FUNC-01048",
       "domain": "tooling"
     },
     {
@@ -69680,7 +69647,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01048",
+      "id": "FUNC-01049",
       "domain": "tooling"
     },
     {
@@ -69699,7 +69666,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01049",
+      "id": "FUNC-01050",
       "domain": "tooling"
     },
     {
@@ -69718,7 +69685,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01050",
+      "id": "FUNC-01051",
       "domain": "tooling"
     },
     {
@@ -69737,7 +69704,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01051",
+      "id": "FUNC-01052",
       "domain": "tooling"
     },
     {
@@ -69756,7 +69723,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01052",
+      "id": "FUNC-01053",
       "domain": "tooling"
     },
     {
@@ -69775,7 +69742,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01053",
+      "id": "FUNC-01054",
       "domain": "tooling"
     },
     {
@@ -69794,7 +69761,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01054",
+      "id": "FUNC-01055",
       "domain": "tooling"
     },
     {
@@ -69815,7 +69782,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01055",
+      "id": "FUNC-01056",
       "domain": "tooling"
     },
     {
@@ -69849,7 +69816,7 @@
         "fence",
         "langFor"
       ],
-      "id": "FUNC-01056",
+      "id": "FUNC-01057",
       "domain": "tooling"
     },
     {
@@ -69868,7 +69835,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01057",
+      "id": "FUNC-01058",
       "domain": "tooling"
     },
     {
@@ -69887,7 +69854,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01058",
+      "id": "FUNC-01059",
       "domain": "tooling"
     },
     {
@@ -69906,7 +69873,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01059",
+      "id": "FUNC-01060",
       "domain": "tooling"
     },
     {
@@ -69925,7 +69892,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01060",
+      "id": "FUNC-01061",
       "domain": "tooling"
     },
     {
@@ -69946,7 +69913,7 @@
       "calls": [
         "test"
       ],
-      "id": "FUNC-01061",
+      "id": "FUNC-01062",
       "domain": "tooling"
     },
     {
@@ -69965,7 +69932,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01062",
+      "id": "FUNC-01063",
       "domain": "tooling"
     },
     {
@@ -69984,7 +69951,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01063",
+      "id": "FUNC-01064",
       "domain": "tooling"
     },
     {
@@ -70003,7 +69970,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01064",
+      "id": "FUNC-01065",
       "domain": "tooling"
     },
     {
@@ -70024,7 +69991,7 @@
       "calls": [
         "add"
       ],
-      "id": "FUNC-01065",
+      "id": "FUNC-01066",
       "domain": "tooling"
     },
     {
@@ -70043,7 +70010,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01066",
+      "id": "FUNC-01067",
       "domain": "tooling"
     },
     {
@@ -70071,7 +70038,7 @@
         "aliasesForDatasetAction",
         "uniqEvidence"
       ],
-      "id": "FUNC-01067",
+      "id": "FUNC-01068",
       "domain": "tooling"
     },
     {
@@ -70093,7 +70060,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01068",
+      "id": "FUNC-01069",
       "domain": "tooling"
     },
     {
@@ -70114,7 +70081,7 @@
       "calls": [
         "walk"
       ],
-      "id": "FUNC-01069",
+      "id": "FUNC-01070",
       "domain": "tooling"
     },
     {
@@ -70136,7 +70103,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01070",
+      "id": "FUNC-01071",
       "domain": "tooling"
     },
     {
@@ -70158,7 +70125,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01071",
+      "id": "FUNC-01072",
       "domain": "tooling"
     },
     {
@@ -70180,7 +70147,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01072",
+      "id": "FUNC-01073",
       "domain": "tooling"
     },
     {
@@ -70202,7 +70169,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01073",
+      "id": "FUNC-01074",
       "domain": "tooling"
     },
     {
@@ -70224,7 +70191,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01074",
+      "id": "FUNC-01075",
       "domain": "tooling"
     },
     {
@@ -70245,7 +70212,7 @@
       "calls": [
         "rel"
       ],
-      "id": "FUNC-01075",
+      "id": "FUNC-01076",
       "domain": "tooling"
     },
     {
@@ -70264,7 +70231,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01076",
+      "id": "FUNC-01077",
       "domain": "tooling"
     },
     {
@@ -70283,7 +70250,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01077",
+      "id": "FUNC-01078",
       "domain": "tooling"
     },
     {
@@ -70302,7 +70269,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01078",
+      "id": "FUNC-01079",
       "domain": "tooling"
     },
     {
@@ -70323,7 +70290,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01079",
+      "id": "FUNC-01080",
       "domain": "tooling"
     },
     {
@@ -70344,7 +70311,7 @@
       "calls": [
         "uniq"
       ],
-      "id": "FUNC-01080",
+      "id": "FUNC-01081",
       "domain": "tooling"
     },
     {
@@ -70366,7 +70333,7 @@
         "captures",
         "uniq"
       ],
-      "id": "FUNC-01081",
+      "id": "FUNC-01082",
       "domain": "tooling"
     },
     {
@@ -70405,7 +70372,7 @@
         "sources",
         "listCodes"
       ],
-      "id": "FUNC-01082",
+      "id": "FUNC-01083",
       "domain": "tooling"
     },
     {
@@ -70426,7 +70393,7 @@
       "calls": [
         "lineAt"
       ],
-      "id": "FUNC-01083",
+      "id": "FUNC-01084",
       "domain": "tooling"
     },
     {
@@ -70448,7 +70415,7 @@
         "get",
         "ident"
       ],
-      "id": "FUNC-01084",
+      "id": "FUNC-01085",
       "domain": "tooling"
     },
     {
@@ -70469,7 +70436,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01085",
+      "id": "FUNC-01086",
       "domain": "tooling"
     },
     {
@@ -70490,7 +70457,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01086",
+      "id": "FUNC-01087",
       "domain": "tooling"
     },
     {
@@ -70509,7 +70476,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01087",
+      "id": "FUNC-01088",
       "domain": "tooling"
     },
     {
@@ -70528,7 +70495,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01088",
+      "id": "FUNC-01089",
       "domain": "tooling"
     },
     {
@@ -70547,7 +70514,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01089",
+      "id": "FUNC-01090",
       "domain": "tooling"
     },
     {
@@ -70566,7 +70533,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01090",
+      "id": "FUNC-01091",
       "domain": "tooling"
     },
     {
@@ -70585,7 +70552,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01091",
+      "id": "FUNC-01092",
       "domain": "tooling"
     },
     {
@@ -70604,7 +70571,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01092",
+      "id": "FUNC-01093",
       "domain": "tooling"
     },
     {
@@ -70631,7 +70598,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01093",
+      "id": "FUNC-01094",
       "domain": "tooling"
     },
     {
@@ -70658,7 +70625,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01094",
+      "id": "FUNC-01095",
       "domain": "tooling"
     },
     {
@@ -70680,7 +70647,7 @@
         "norm",
         "isDynamic"
       ],
-      "id": "FUNC-01095",
+      "id": "FUNC-01096",
       "domain": "tooling"
     },
     {
@@ -70699,7 +70666,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01096",
+      "id": "FUNC-01097",
       "domain": "tooling"
     },
     {
@@ -70718,7 +70685,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01097",
+      "id": "FUNC-01098",
       "domain": "tooling"
     },
     {
@@ -70737,7 +70704,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01098",
+      "id": "FUNC-01099",
       "domain": "tooling"
     },
     {
@@ -70756,7 +70723,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01099",
+      "id": "FUNC-01100",
       "domain": "tooling"
     },
     {
@@ -70775,7 +70742,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01100",
+      "id": "FUNC-01101",
       "domain": "tooling"
     },
     {
@@ -70794,7 +70761,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01101",
+      "id": "FUNC-01102",
       "domain": "tooling"
     },
     {
@@ -70813,7 +70780,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01102",
+      "id": "FUNC-01103",
       "domain": "tooling"
     },
     {
@@ -70832,7 +70799,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01103",
+      "id": "FUNC-01104",
       "domain": "tooling"
     },
     {
@@ -70851,7 +70818,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01104",
+      "id": "FUNC-01105",
       "domain": "tooling"
     },
     {
@@ -70870,7 +70837,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01105",
+      "id": "FUNC-01106",
       "domain": "tooling"
     },
     {
@@ -70889,7 +70856,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01106",
+      "id": "FUNC-01107",
       "domain": "tooling"
     },
     {
@@ -70908,7 +70875,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01107",
+      "id": "FUNC-01108",
       "domain": "tooling"
     },
     {
@@ -70927,7 +70894,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01108",
+      "id": "FUNC-01109",
       "domain": "tooling"
     },
     {
@@ -70946,7 +70913,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01109",
+      "id": "FUNC-01110",
       "domain": "tooling"
     },
     {
@@ -70965,87 +70932,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01110",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 11,
-      "name": "mark",
-      "kind": "arrow",
-      "params": "k,v=true",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
       "id": "FUNC-01111",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 12,
-      "name": "assert",
-      "kind": "declaration",
-      "params": "cond,msg",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
-      "id": "FUNC-01112",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 13,
-      "name": "api",
-      "kind": "declaration",
-      "params": "route,{method='GET',body,token}={}",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
-      "id": "FUNC-01113",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/supabase-live-e2e.mjs",
-      "line": 18,
-      "name": "cleanup",
-      "kind": "declaration",
-      "params": "",
-      "refs": {
-        "routes": [
-          "/api/auth/delete-account"
-        ],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [
-        "api"
-      ],
-      "id": "FUNC-01114",
       "domain": "tooling"
     }
   ],
@@ -71194,7 +71081,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 65
+          "line": 62
         }
       ]
     },
@@ -71228,11 +71115,11 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 30
+          "line": 28
         },
         {
           "file": "r41-github-api.js",
-          "line": 60
+          "line": 57
         }
       ]
     },
@@ -71262,7 +71149,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 62
+          "line": 59
         }
       ]
     },
@@ -71304,7 +71191,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 61
+          "line": 58
         }
       ]
     },
@@ -71334,7 +71221,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 63
+          "line": 60
         }
       ]
     },
@@ -71348,7 +71235,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 64
+          "line": 61
         }
       ]
     },
@@ -71386,11 +71273,11 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 30
+          "line": 28
         },
         {
           "file": "r41-github-api.js",
-          "line": 59
+          "line": 56
         }
       ]
     },
@@ -71660,7 +71547,7 @@
         },
         {
           "file": "r41-github-api.js",
-          "line": 36
+          "line": 33
         }
       ]
     },
@@ -72368,7 +72255,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 11,
+      "line": 13,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-api-origin",
@@ -72376,7 +72263,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 12,
+      "line": 14,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-r41-api-origin",
@@ -72384,17 +72271,17 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 14,
+      "line": 16,
       "scope": "localStorage",
-      "operation": "setItem",
+      "operation": "removeItem",
       "value": "sns-api-origin",
       "id": "STORE-00011"
     },
     {
       "file": "r41-api-config.js",
-      "line": 15,
+      "line": 17,
       "scope": "localStorage",
-      "operation": "setItem",
+      "operation": "removeItem",
       "value": "sns-r41-api-origin",
       "id": "STORE-00012"
     },
@@ -122994,49 +122881,49 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 5,
+      "line": 3,
       "text": "const params=new URLSearchParams(location.search);",
       "id": "MOVE-07727"
     },
     {
       "file": "r41-github-api.js",
-      "line": 15,
+      "line": 14,
       "text": "function captureClaim(){try{const u=new URL(location.href),claim=String(u.searchParams.get(\"leonClaim\")\\|\\|\"\").trim();if(claim){sessionStorage.setItem(CLAIM_KEY,claim);u.searchParams.delete(\"leonClaim\");history.replaceState(null,\"\",u.pathname+(u.search?u.search:\"\")+(u.hash\\|\\|\"\"));}}catch{}}",
       "id": "MOVE-07728"
     },
     {
       "file": "r41-github-api.js",
-      "line": 19,
+      "line": 18,
       "text": "if(raw.startsWith(\"/api/\")){const origin=apiOrigin();if(!origin)throw new Error(\"R41_API_ORIGIN_NOT_CONFIGURED\");return {url:origin+raw,api:true,route:raw};}",
       "id": "MOVE-07729"
     },
     {
       "file": "r41-github-api.js",
-      "line": 20,
+      "line": 19,
       "text": "if(raw.startsWith(\"/assets/\")\\|\\|raw.startsWith(\"/data/\")\\|\\|raw.startsWith(\"/_r40/\")\\|\\|raw.startsWith(\"/src/\"))return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:\"\"};",
       "id": "MOVE-07730"
     },
     {
       "file": "r41-github-api.js",
-      "line": 21,
+      "line": 20,
       "text": "return {url:raw,api:false,route:\"\"};",
       "id": "MOVE-07731"
     },
     {
       "file": "r41-github-api.js",
-      "line": 30,
+      "line": 28,
       "text": "if(!mapped.api\\|\\|!response.ok\\|\\|![\"/api/auth/login\",\"/api/auth/register\"].includes(mapped.route))return response;",
       "id": "MOVE-07732"
     },
     {
       "file": "r41-github-api.js",
-      "line": 51,
+      "line": 48,
       "text": "async function request(route,body,method=\"POST\"){",
       "id": "MOVE-07733"
     },
     {
       "file": "r41-github-api.js",
-      "line": 53,
+      "line": 50,
       "text": "const res=await window.fetch(route,init),data=await res.json().catch(()=>({ok:false,error:\"INVALID_JSON\"}));",
       "id": "MOVE-07734"
     },
@@ -235498,24 +235385,24 @@
     "excludedDocumentation": true,
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
-      "gameRuntime": 1002,
-      "tooling": 112,
+      "gameRuntime": 1003,
+      "tooling": 108,
       "otherSource": 0
     },
     "before": {
-      "functions": 1114,
+      "functions": 1111,
       "routes": 33,
       "models": 3,
       "collections": 13,
-      "storage": 27,
+      "storage": 28,
       "uiActions": 222,
       "events": 11,
-      "movement": 8012,
-      "assets": 15821,
-      "environment": 144
+      "movement": 8010,
+      "assets": 15820,
+      "environment": 146
     },
     "after": {
-      "functions": 1114,
+      "functions": 1111,
       "routes": 33,
       "models": 2,
       "collections": 12,

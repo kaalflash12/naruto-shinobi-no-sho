@@ -2,7 +2,7 @@
 
 Coleções MongoDB e storage do navegador detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-24T02:45:53.529Z`
+Gerado em: `2026-08-24T03:34:03.672Z`
 
 ## Coleções MongoDB
 
@@ -31,9 +31,9 @@ Gerado em: `2026-08-24T02:45:53.529Z`
 | STORE-00006 | localStorage | getItem | `sns-r34-client-errors` | `app.js:5638` |
 | STORE-00007 | localStorage | getItem | `sns-api-origin` | `r41-api-config.js:7` |
 | STORE-00008 | localStorage | getItem | `sns-r41-api-origin` | `r41-api-config.js:7` |
-| STORE-00009 | localStorage | setItem | `sns-api-origin` | `r41-api-config.js:11` |
-| STORE-00010 | localStorage | setItem | `sns-r41-api-origin` | `r41-api-config.js:12` |
-| STORE-00011 | localStorage | setItem | `sns-api-origin` | `r41-api-config.js:14` |
-| STORE-00012 | localStorage | setItem | `sns-r41-api-origin` | `r41-api-config.js:15` |
+| STORE-00009 | localStorage | setItem | `sns-api-origin` | `r41-api-config.js:13` |
+| STORE-00010 | localStorage | setItem | `sns-r41-api-origin` | `r41-api-config.js:14` |
+| STORE-00011 | localStorage | removeItem | `sns-api-origin` | `r41-api-config.js:16` |
+| STORE-00012 | localStorage | removeItem | `sns-r41-api-origin` | `r41-api-config.js:17` |
 | STORE-00013 | localStorage | getItem | `sns-api-origin` | `r41-github-api.js:8` |
 | STORE-00014 | localStorage | getItem | `sns-r41-api-origin` | `r41-github-api.js:8` |
