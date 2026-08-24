@@ -10,6 +10,7 @@ on:
       - 'r41-api-config.js'
       - 'r41-github-api.js'
       - 'r41-account-ui.js'
+      - 'r41-map-hitfix.css'
       - 'src/**'
       - 'assets/**'
       - 'tools/browser-gameplay-e2e*.mjs'
@@ -22,6 +23,7 @@ on:
       - 'r41-api-config.js'
       - 'r41-github-api.js'
       - 'r41-account-ui.js'
+      - 'r41-map-hitfix.css'
       - 'src/**'
       - 'assets/**'
       - 'tools/browser-gameplay-e2e*.mjs'
@@ -38,7 +40,7 @@ jobs:
   gameplay:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -49,13 +51,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cfg="$(curl -fsSL --max-time 30 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?preflight='"$RANDOM")"
+          cfg="$(curl -fsSL --retry 5 --retry-delay 2 --max-time 30 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?preflight='"$RANDOM")"
           printf '%s' "$cfg" | grep -q 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES'
           printf '%s' "$cfg" | grep -q 'rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api'
           origin="$(printf '%s' "$cfg" | sed -n 's/.*const SUPABASE_ORIGIN="\([^"]*\)".*/\1/p' | head -1)"
           key="$(printf '%s' "$cfg" | sed -n 's/.*const SUPABASE_KEY="\([^"]*\)".*/\1/p' | head -1)"
           test -n "$origin" && test -n "$key"
-          status="$(curl -fsSL --max-time 30 -H "apikey: $key" -H 'Origin: https://kaalflash12.github.io' "$origin/api/status")"
+          status="$(curl -fsSL --retry 5 --retry-delay 2 --max-time 30 -H "apikey: $key" -H 'Origin: https://kaalflash12.github.io' "$origin/api/status")"
           STATUS_JSON="$status" node --input-type=module <<'NODE'
           const d=JSON.parse(process.env.STATUS_JSON||'{}');
           if(d.ok!==true||d.storage!=='supabase-postgres'||!String(d.backend||'').startsWith('shinobi-api-')) throw new Error(JSON.stringify(d));
@@ -67,20 +69,33 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Wait for public site update
+      - name: Wait for complete public gameplay build
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq 1 60); do
-            cfg="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/r41-api-config.js?deploy-check='"$RANDOM" || true)"
-            html="$(curl -fsSL 'https://kaalflash12.github.io/naruto-shinobi-no-sho/?deploy-check='"$RANDOM" || true)"
-            if printf '%s' "$cfg" | grep -q 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES' && printf '%s' "$html" | grep -q 'NARUTO SHINOBI NO SHO'; then
-              echo 'Public GitHub Pages + Supabase build is responding.'
+          base='https://kaalflash12.github.io/naruto-shinobi-no-sho'
+          for i in $(seq 1 90); do
+            q="$RANDOM-$i-$(date +%s)"
+            html="$(curl -fsSL --max-time 20 "$base/?deploy-check=$q" 2>/dev/null || true)"
+            cfg="$(curl -fsSL --max-time 20 "$base/r41-api-config.js?deploy-check=$q" 2>/dev/null || true)"
+            api="$(curl -fsSL --max-time 20 "$base/r41-github-api.js?deploy-check=$q" 2>/dev/null || true)"
+            account="$(curl -fsSL --max-time 20 "$base/r41-account-ui.js?deploy-check=$q" 2>/dev/null || true)"
+            app="$(curl -fsSL --max-time 20 "$base/app.js?deploy-check=$q" 2>/dev/null || true)"
+            css="$(curl -fsSL --max-time 20 "$base/r41-map-hitfix.css?deploy-check=$q" 2>/dev/null || true)"
+            if printf '%s' "$html" | grep -q 'NARUTO SHINOBI NO SHO' \
+              && printf '%s' "$html" | grep -q 'r41-map-hitfix.css' \
+              && printf '%s' "$cfg" | grep -q 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES' \
+              && printf '%s' "$api" | grep -q 'r41Auth' \
+              && printf '%s' "$account" | grep -q 'ACCOUNT-UI' \
+              && printf '%s' "$app" | grep -q 'R41-MD-OPERACIONAL-APLICADO' \
+              && printf '%s' "$css" | grep -q '.play-map .map-pin'; then
+              echo "COMPLETE_PUBLIC_BUILD_READY attempt=$i"
               exit 0
             fi
+            echo "waiting complete Pages publication attempt=$i" >&2
             sleep 5
           done
-          echo 'Public site did not publish the Supabase build in time.' >&2
+          echo 'Public site never reached a complete coherent gameplay build.' >&2
           exit 1
 
       - name: Run real Chromium gameplay E2E V4
