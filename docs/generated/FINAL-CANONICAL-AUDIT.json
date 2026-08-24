@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T22:42:19.585Z",
+  "generatedAt": "2026-08-24T22:53:53.519Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T22:42:15.644Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T22:53:49.073Z",
   "counts": {
     "functions": 1184,
     "functionsWithExactCode": 1184,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 107,
+    "sourceFiles": 106,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -15679,8 +15679,8 @@
   "sourceFiles": [
     {
       "path": ".github/workflows/account-live-e2e.yml",
-      "size": 4580,
-      "sha256": "dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771"
+      "size": 4329,
+      "sha256": "a61fae4a96b284c7f659dc7a8418e968f136b3975404fff0009e31d09d241ea4"
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
@@ -15694,8 +15694,8 @@
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
-      "size": 5390,
-      "sha256": "68db6698dff53569d98c824a6adad70288bc591fbaf1dbdb688fd6a2023c0082"
+      "size": 6244,
+      "sha256": "bb5b29d1748a94ccc67844f349003bc7e034639f03c0be407a8b54217502cd63"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
@@ -15704,13 +15704,13 @@
     },
     {
       "path": ".github/workflows/final-readiness-orchestration.yml",
-      "size": 2307,
-      "sha256": "617c2d78a7e6633afba989e8090ce99e3f29d7d00b95a7f59be1fa930b16c6bb"
+      "size": 3124,
+      "sha256": "108f9bb78742d08fb77ee0019e58b2e139fada6af6c29367493bce6bb7c0c354"
     },
     {
       "path": ".github/workflows/final-readiness.yml",
-      "size": 3182,
-      "sha256": "5267791f80a93a8c5625e8cb4561db44b1bb300962106a64a1663ef6218c1cc3"
+      "size": 4700,
+      "sha256": "7ff5d35c00db87c706abb00474b0aa778c9f78218da54732717e0e9e4c40d681"
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
@@ -15721,11 +15721,6 @@
       "path": ".github/workflows/live-backend-failure-evidence.yml",
       "size": 3652,
       "sha256": "f4771091db58cbe139f314bb5e51b8014790888f918ae525dc1b8a6cd2941c05"
-    },
-    {
-      "path": ".github/workflows/one-shot-terion-authority.yml",
-      "size": 6191,
-      "sha256": "626915f9d67570722ef3c145112860549c95c98b8f12a33beefaf5eef9534eac"
     },
     {
       "path": ".github/workflows/post-live-backend-orchestration.yml",
@@ -15745,17 +15740,17 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 933,
-      "sha256": "e04b715918530abc0715fc9b3906bba86165b8f4ea34d6243877ee3397915351"
+      "sha256": "d5ecb3dd50ddae2c489460f872881f6733b58616fb286c5bc88b95e2b4dd056b"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "39cab259a3cb72a00b3545f1ba10488e762cf4775e7f6b334d1344548c20be00"
+      "size": 5607,
+      "sha256": "2ad36401c89dfee801e00f65098561d23bbe889a7ef070331506d3cb20e62c12"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "790304d8dfc9799322ac487450364ac2c84b2c8478eb4b4d3450839b6a438963"
+      "sha256": "60b765abb134abebc918305c941768170355b428b753b4df276bbd52015a4e7c"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
