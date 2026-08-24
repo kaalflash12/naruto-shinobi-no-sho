@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-08-24T18:12:43.923Z",
+  "startedAt": "2026-08-24T18:12:37.817Z",
+  "status": "PASS_BROWSER_SMOKE",
+  "ok": true,
+  "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS_PR39_ARCHIVED_EVIDENCE",
+  "provenance": {
+    "workflowRunId": 32761009112,
+    "artifactId": 9532709995,
+    "artifactDigest": "sha256:3959ec1540f09b5d85e51538aefaf43376c976e00c7f7bf0f991b44c4d795a99",
+    "headSha": "943c7ab2584868816f4782a1430268c21e735db5"
+  },
+  "baseURL": "http://127.0.0.1:4173",
+  "checks": {
+    "httpLoad": true,
+    "publicIdentity": true,
+    "r41RuntimeLoaded": true,
+    "localResetHandlerLoaded": true,
+    "localResetClickReload": true,
+    "runtimeRequests": true,
+    "pageExceptions": true,
+    "backendIdentity": true
+  },
+  "api": {
+    "build": "NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB",
+    "backend": "unconfigured",
+    "originConfigured": false,
+    "origin": null,
+    "liveWorkerTestedElsewhere": true
+  },
+  "failures": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failedRuntimeRequests": []
+}
