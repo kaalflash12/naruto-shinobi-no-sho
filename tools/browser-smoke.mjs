@@ -47,8 +47,9 @@ try {
   }));
   assert(runtime.r41, 'window.__NARUTO_R41__ não foi inicializado');
   assert(runtime.reset && runtime.resetKeys, 'handler de reset local não foi carregado');
-  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB', `API build inesperado: ${runtime.apiBuild}`);
-  assert(runtime.backend === (runtime.apiOrigin ? 'cloudflare-mongodb-durable-objects' : 'unconfigured'), `backend runtime inesperado: ${runtime.backend}`);
+  assert(runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES', `API build inesperado: ${runtime.apiBuild}`);
+  assert(runtime.backend === 'supabase-edge-postgres', `backend runtime inesperado: ${runtime.backend}`);
+  assert(/^https:\/\/rlyiwlwzrdgvcwawrnpl\.supabase\.co\/functions\/v1\/shinobi-api\/?$/i.test(runtime.apiOrigin), `API origin Supabase inesperado: ${runtime.apiOrigin}`);
 
   await page.evaluate(() => {
     localStorage.setItem('sns-v841-account-save:e2e-browser:slot', 'e2e');
@@ -84,6 +85,10 @@ try {
   const fatalConsole = consoleErrors.filter(x => /uncaught|referenceerror|syntaxerror|typeerror|failed to load module/i.test(x));
   if (fatalConsole.length) fail(`Console fatal: ${fatalConsole.join(' | ')}`);
 
+  const backendIdentity = runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-SUPABASE-POSTGRES' &&
+    runtime.backend === 'supabase-edge-postgres' &&
+    /^https:\/\/rlyiwlwzrdgvcwawrnpl\.supabase\.co\/functions\/v1\/shinobi-api\/?$/i.test(runtime.apiOrigin);
+
   const report = {
     generatedAt: new Date().toISOString(), startedAt,
     status: failures.length ? 'FAIL_BROWSER_SMOKE' : 'PASS_BROWSER_SMOKE',
@@ -97,9 +102,9 @@ try {
       localResetClickReload: afterReset.key === null && afterReset.resetLoaded,
       runtimeRequests: failedRuntimeRequests.length === 0,
       pageExceptions: pageErrors.length === 0,
-      backendIdentity: runtime.apiBuild === 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB'
+      backendIdentity
     },
-    api: { build: runtime.apiBuild, backend: runtime.backend, originConfigured: !!runtime.apiOrigin, origin: runtime.apiOrigin || null, liveWorkerTested: false },
+    api: { build: runtime.apiBuild, backend: runtime.backend, originConfigured: !!runtime.apiOrigin, origin: runtime.apiOrigin || null, liveBackendTestedElsewhere: true },
     failures,pageErrors,consoleErrors: consoleErrors.slice(0, 50),failedRuntimeRequests
   };
 
