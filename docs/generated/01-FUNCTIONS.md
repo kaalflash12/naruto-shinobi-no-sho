@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-24T18:14:41.738Z`
+Gerado em: `2026-08-24T19:27:32.393Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -15190,7 +15190,7 @@ Gerado em: `2026-08-24T18:14:41.738Z`
 
 ## FUNC-00950 — `clean`
 
-- **Fonte:** `r41-api-config.js:4`
+- **Fonte:** `r41-api-config.js:5`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow-one
 - **Parâmetros:** `v`
@@ -15206,7 +15206,7 @@ Gerado em: `2026-08-24T18:14:41.738Z`
 
 ## FUNC-00951 — `allowedOverride`
 
-- **Fonte:** `r41-api-config.js:5`
+- **Fonte:** `r41-api-config.js:6`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow-one
 - **Parâmetros:** `v`

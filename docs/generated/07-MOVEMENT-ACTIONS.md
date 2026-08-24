@@ -2,7 +2,7 @@
 
 Evidências retiradas somente do runtime do jogo. Não inclui documentação nem scripts de auditoria.
 
-Gerado em: `2026-08-24T18:14:41.738Z`
+Gerado em: `2026-08-24T19:27:32.393Z`
 
 - **MOVE-00001** `app.js:61` — missions:new Map((CAT.missions\\|\\|[]).map(x=>[String(x.id),x])),
 - **MOVE-00002** `app.js:62` — jutsus:new Map((CAT.jutsus\\|\\|[]).map(x=>[String(x.id),x])),
@@ -7730,7 +7730,7 @@ Gerado em: `2026-08-24T18:14:41.738Z`
 - **MOVE-07724** `r41-account-ui.js:10` — .sns-account-btn{position:fixed!important;top:max(10px,env(safe-area-inset-top))!important;right:max(58px,calc(env(safe-area-inset-right) + 58px))!important;z-index:2147482000!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;min-height:34px;border:1px solid rgba(255,255,255,.20);background:#211711;color:#f5e6c8;border-radius:10px;padding:8px 11px;font:600 12px/1 sys
 - **MOVE-07725** `r41-account-ui.js:12` — .sns-account-overlay{position:fixed;inset:0;z-index:2147483000;background:rgba(5,4,3,.72);display:flex;align-items:center;justify-content:center;padding:18px}.sns-account-card{width:min(520px,96vw);max-height:90vh;overflow:auto;background:#17110d;color:#f4ead8;border:1px solid #594333;border-radius:16px;box-shadow:0 22px 80px #000;padding:18px;font-family:system-ui}.sns-account-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.sns-account-head h2{margin:0;font-size:20p
 - **MOVE-07726** `r41-account-ui.js:37` — async function boot(){style();updateButton();if(!window.r41Auth){console.error("[SNS ACCOUNT] r41Auth indisponível");return;}try{const d=await window.r41Auth.me();state.account=d?.account\\|\\|null;}catch{state.account=null;}updateButton();const p=new URLSearchParams(location.search);if(p.get("account")==="1")open(p.get("tab")\\|\\|undefined);}
-- **MOVE-07727** `r41-api-config.js:3` — const params=new URLSearchParams(location.search);
+- **MOVE-07727** `r41-api-config.js:4` — const params=new URLSearchParams(location.search);
 - **MOVE-07728** `r41-github-api.js:14` — function captureClaim(){try{const u=new URL(location.href),claim=String(u.searchParams.get("leonClaim")\\|\\|"").trim();if(claim){sessionStorage.setItem(CLAIM_KEY,claim);u.searchParams.delete("leonClaim");history.replaceState(null,"",u.pathname+(u.search?u.search:"")+(u.hash\\|\\|""));}}catch{}}
 - **MOVE-07729** `r41-github-api.js:18` — if(raw.startsWith("/api/")){const origin=apiOrigin();if(!origin)throw new Error("R41_API_ORIGIN_NOT_CONFIGURED");return {url:origin+raw,api:true,route:raw};}
 - **MOVE-07730** `r41-github-api.js:19` — if(raw.startsWith("/assets/")\\|\\|raw.startsWith("/data/")\\|\\|raw.startsWith("/_r40/")\\|\\|raw.startsWith("/src/"))return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:""};

@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-24T18:14:41.738Z`
+Gerado em: `2026-08-24T19:27:32.393Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -955,8 +955,8 @@ Gerado em: `2026-08-24T18:14:41.738Z`
 | FUNC-00947 | função | `close` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
 | FUNC-00948 | função | `open` | `r41-account-ui.js:35` | game-runtime / STATICALLY_TRACED |
 | FUNC-00949 | função | `boot` | `r41-account-ui.js:37` | game-runtime / STATICALLY_TRACED |
-| FUNC-00950 | função | `clean` | `r41-api-config.js:4` | game-runtime / STATICALLY_TRACED |
-| FUNC-00951 | função | `allowedOverride` | `r41-api-config.js:5` | game-runtime / STATICALLY_TRACED |
+| FUNC-00950 | função | `clean` | `r41-api-config.js:5` | game-runtime / STATICALLY_TRACED |
+| FUNC-00951 | função | `allowedOverride` | `r41-api-config.js:6` | game-runtime / STATICALLY_TRACED |
 | FUNC-00952 | função | `apiOrigin` | `r41-github-api.js:8` | game-runtime / STATICALLY_TRACED |
 | FUNC-00953 | função | `token` | `r41-github-api.js:9` | game-runtime / STATICALLY_TRACED |
 | FUNC-00954 | função | `setToken` | `r41-github-api.js:13` | game-runtime / STATICALLY_TRACED |

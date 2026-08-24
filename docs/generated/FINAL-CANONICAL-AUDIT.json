@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T18:14:46.221Z",
+  "generatedAt": "2026-08-24T19:27:36.842Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T18:14:41.738Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T19:27:32.393Z",
   "counts": {
     "functions": 1171,
     "functionsWithExactCode": 1171,
@@ -7628,7 +7628,7 @@
     {
       "id": "FUNC-00950",
       "file": "r41-api-config.js",
-      "line": 4,
+      "line": 5,
       "name": "clean",
       "exactCode": true,
       "snippetSha256": "30bcab71c43a6097972f319d10b3100c3b4503aa3389e4f50f65ac0035d060c9"
@@ -7636,7 +7636,7 @@
     {
       "id": "FUNC-00951",
       "file": "r41-api-config.js",
-      "line": 5,
+      "line": 6,
       "name": "allowedOverride",
       "exactCode": true,
       "snippetSha256": "b7aca570704f7ce3a23eb39494ef399218403b95088898fce20b41fa6ec7921f"
@@ -15845,8 +15845,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 1041,
-      "sha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732"
+      "size": 1107,
+      "sha256": "c2a610a840f242ff1995d2f774c914b66da01b2473be24dbfcc707f2c404aeda"
     },
     {
       "path": "r41-github-api.js",

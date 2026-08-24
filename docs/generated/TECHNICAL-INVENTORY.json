@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T18:14:41.738Z",
+  "generatedAt": "2026-08-24T19:27:32.393Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -44107,8 +44107,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 1041,
-      "sha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732",
+      "size": 1107,
+      "sha256": "c2a610a840f242ff1995d2f774c914b66da01b2473be24dbfcc707f2c404aeda",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -67692,7 +67692,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 4,
+      "line": 5,
       "name": "clean",
       "kind": "arrow-one",
       "params": "v",
@@ -67714,7 +67714,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 5,
+      "line": 6,
       "name": "allowedOverride",
       "kind": "arrow-one",
       "params": "v",
@@ -73783,7 +73783,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 7,
+      "line": 8,
       "scope": "localStorage",
       "operation": "getItem",
       "value": "sns-api-origin",
@@ -73791,7 +73791,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 7,
+      "line": 8,
       "scope": "localStorage",
       "operation": "getItem",
       "value": "sns-r41-api-origin",
@@ -73799,7 +73799,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 13,
+      "line": 14,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-api-origin",
@@ -73807,7 +73807,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 14,
+      "line": 15,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-r41-api-origin",
@@ -73815,7 +73815,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 16,
+      "line": 17,
       "scope": "localStorage",
       "operation": "removeItem",
       "value": "sns-api-origin",
@@ -73823,7 +73823,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 17,
+      "line": 18,
       "scope": "localStorage",
       "operation": "removeItem",
       "value": "sns-r41-api-origin",
@@ -124514,7 +124514,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 3,
+      "line": 4,
       "text": "const params=new URLSearchParams(location.search);",
       "id": "MOVE-07727"
     },

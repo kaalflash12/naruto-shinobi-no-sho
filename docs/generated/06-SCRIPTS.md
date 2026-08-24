@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T18:14:41.738Z`
+Gerado em: `2026-08-24T19:27:32.393Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -107,7 +107,7 @@ Gerado em: `2026-08-24T18:14:41.738Z`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-account-deeplink-fix.js` — domínio `game-runtime` — 587 bytes — SHA-256 `656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2`
 - `r41-account-ui.js` — domínio `game-runtime` — 12242 bytes — SHA-256 `a19b31871cd677b30e881b3728e2e304d4a4adcd63be611b80534a4d9e90dcab`
-- `r41-api-config.js` — domínio `game-runtime` — 1041 bytes — SHA-256 `5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732`
+- `r41-api-config.js` — domínio `game-runtime` — 1107 bytes — SHA-256 `c2a610a840f242ff1995d2f774c914b66da01b2473be24dbfcc707f2c404aeda`
 - `r41-github-api.js` — domínio `game-runtime` — 6207 bytes — SHA-256 `f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1`
 - `r41-map-hitfix.css` — domínio `game-runtime` — 383 bytes — SHA-256 `1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9`
 - `src/r41-account-active-slot.js` — domínio `game-runtime` — 13468 bytes — SHA-256 `6619fdb440395088f06f5e352c9e0960a3c89a2acf3b3a85da4d15b2c6053112`
