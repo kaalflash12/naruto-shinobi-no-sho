@@ -22,6 +22,22 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Require fresh live backend fingerprint
+        shell: bash
+        run: |
+          set -euo pipefail
+          fingerprint="$(node tools/live-source-fingerprint.mjs)"
+          test "${#fingerprint}" -eq 64
+          SOURCE_FINGERPRINT="$fingerprint" node - <<'NODE'
+          const fs=require('fs');
+          const live=JSON.parse(fs.readFileSync('audit/LIVE-BACKEND.json','utf8'));
+          const current=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          if(!/^[a-f0-9]{64}$/.test(current))throw new Error('GAMEPLAY_CURRENT_SOURCE_FINGERPRINT_INVALID');
+          if(live?.ok!==true||live?.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(`GAMEPLAY_LIVE_BACKEND_NOT_PASS ${live?.status||'null'}`);
+          if(String(live?.sourceFingerprint||'')!==current)throw new Error('GAMEPLAY_LIVE_BACKEND_STALE');
+          NODE
+          echo "SOURCE_FINGERPRINT=$fingerprint" >> "$GITHUB_ENV"
+
       - name: Install Playwright Chromium
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
@@ -116,8 +132,10 @@ jobs:
           if(r.provenance?.kind!=='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE')throw new Error('GAMEPLAY_LIVE_PROVENANCE_MISSING');
           if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
           if(r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
+          const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          if(!/^[a-f0-9]{64}$/.test(fingerprint)||r.provenance?.sourceFingerprint!==fingerprint)throw new Error('GAMEPLAY_LIVE_SOURCE_FINGERPRINT_MISMATCH');
           const api=String(process.env.API_ORIGIN||'').replace(/\/+$/,'');
           if(!api||String(r.provenance?.apiOrigin||'').replace(/\/+$/,'')!==api)throw new Error('GAMEPLAY_LIVE_API_ORIGIN_MISMATCH');
           if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('11 gameplay contracts not proven');
-          console.log(r.status,'contracts=',r.contracts.length,'provenance=',r.provenance.kind);
+          console.log(r.status,'contracts=',r.contracts.length,'provenance=',r.provenance.kind,'sourceFingerprint=',fingerprint);
           NODE
