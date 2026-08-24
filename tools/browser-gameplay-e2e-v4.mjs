@@ -15,18 +15,31 @@ if(!v2.includes(oldWait))throw new Error('GAMEPLAY_E2E_V4_REGISTER_WAIT_TARGET_M
 v2=v2.replace(oldWait,newWait);
 
 // O runtime atual renderiza vários data-screen em cards/atalhos. Para navegação
-// do gate, o contrato estável é o menu principal #main-nav. Isso evita clicar
-// num atalho homônimo fora da navegação e depois concluir falsamente que a tela
-// não abriu.
+// do gate, o contrato estável é o menu principal #main-nav.
 const oldNavSelector='  const selector=`[data-screen="${screen}"]`;';
 const newNavSelector='  const selector=`#main-nav [data-screen="${screen}"]`;';
 if(!v2.includes(oldNavSelector))throw new Error('GAMEPLAY_E2E_V4_NAV_SELECTOR_TARGET_MISSING');
 v2=v2.replace(oldNavSelector,newNavSelector);
 
 const oldNavClick='  await b.evaluate(el=>el.click());\n  await page.waitForTimeout(450);';
-const newNavClick='  await b.evaluate(el=>el.click());\n  await page.waitForFunction(s=>document.querySelector(`#main-nav .nav-button.active[data-screen="${s}"]`)||String(document.querySelector(`#screen h1`)?.textContent||``).length>0,screen,{timeout:10000}).catch(()=>{});\n  await page.waitForTimeout(450);';
+const newNavClick='  await b.evaluate(el=>el.click());\n  await page.waitForFunction(s=>Boolean(document.querySelector(`#main-nav .nav-button.active[data-screen="${s}"]`)),screen,{timeout:10000}).catch(()=>{});\n  await page.waitForTimeout(450);';
 if(!v2.includes(oldNavClick))throw new Error('GAMEPLAY_E2E_V4_NAV_CLICK_TARGET_MISSING');
 v2=v2.replace(oldNavClick,newNavClick);
+
+// A tela da ficha mudou de composição ao longo das revisões. O gate antigo
+// usava texto de H1 como se fosse contrato. O contrato real é: menu personagem
+// ativo e, em seguida, os próprios testes verificam .r41-appearance-state e
+// ferimentos persistentes. Assim não mascaramos falha funcional por título.
+const oldCharacterAssert=`  if(screen==='personagem'){
+    const h=String(await page.locator('#screen h1').first().textContent().catch(()=>''));
+    assert(/Ficha Shinobi|Leon Kosmo/i.test(h),\`navegação personagem não abriu a ficha; h1=\${h}\`);
+  }`;
+const newCharacterAssert=`  if(screen==='personagem'){
+    const active=await page.locator('#main-nav .nav-button.active[data-screen="personagem"]').count();
+    assert(active>0,'navegação personagem não ativou o menu canônico');
+  }`;
+if(!v2.includes(oldCharacterAssert))throw new Error('GAMEPLAY_E2E_V4_CHARACTER_ASSERT_TARGET_MISSING');
+v2=v2.replace(oldCharacterAssert,newCharacterAssert);
 
 const patchedV2=path.join(tmpDir,'browser-gameplay-e2e-v2-patched.mjs');
 fs.writeFileSync(patchedV2,v2,'utf8');
@@ -38,8 +51,6 @@ const newSource=`const sourcePath = ${JSON.stringify(patchedV2)};`;
 if(!v3.includes(oldSource))throw new Error('GAMEPLAY_E2E_V4_V3_SOURCE_TARGET_MISSING');
 v3=v3.replace(oldSource,newSource);
 
-// V3 usava localStorage apenas numa mensagem de diagnóstico executada no Node.
-// localStorage pertence ao Chromium; não pode ser acessado no processo Node.
 const nodeLocalStorage="active:localStorage.getItem('narutoShinobiNoShoPcV5Active')";
 if(!v3.includes(nodeLocalStorage))throw new Error('GAMEPLAY_E2E_V4_NODE_LOCALSTORAGE_TARGET_MISSING');
 v3=v3.replace(nodeLocalStorage,"active:'checked-in-browser'");
