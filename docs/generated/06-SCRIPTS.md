@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T02:19:33.195Z`
+Gerado em: `2026-08-24T02:20:59.779Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -44,7 +44,7 @@ Gerado em: `2026-08-24T02:19:33.195Z`
 
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 5027 bytes — SHA-256 `dc5c86a4d3a60afbc57bdd38f14bb6a9960f57bfab79ce78860fb04b23aa82f8`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 5598 bytes — SHA-256 `6fcfd06f457612eb37a32ebb43bd56fbb80ecc8dc49fbda1e28fcfd7dd37c9cb`
-- `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 6859 bytes — SHA-256 `6654ff587166e20f7b7d431e363608aa0adeb1b1bad1c32653966fb9388cde90`
+- `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 5179 bytes — SHA-256 `88c5744ca9d2c644d9608c8afd6b8aab80d21650a7ff58437da91485bf407030`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3097 bytes — SHA-256 `a36786ece900c13a39cd911603c8495430a0b03c8180ad6e48e28a62f4d15be0`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 12679 bytes — SHA-256 `4ff8386e63cfb24e7275753efa5a5ec4b7f42e423b3dc51ae8ed14bfd58d6b98`
@@ -120,6 +120,7 @@ Gerado em: `2026-08-24T02:19:33.195Z`
 - `tools/browser-account-live.mjs` — domínio `tooling` — 4464 bytes — SHA-256 `9389b1454b69d2f33a4303fd4613182d459c8d160d82e081ea223f14969bbe96`
 - `tools/browser-gameplay-e2e-v2.mjs` — domínio `tooling` — 9066 bytes — SHA-256 `1e4f4da345fd560b253054e35b81fa9ce99932b5ee497806512e788d92476a12`
 - `tools/browser-gameplay-e2e-v3.mjs` — domínio `tooling` — 5034 bytes — SHA-256 `2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa`
+- `tools/browser-gameplay-e2e-v4.mjs` — domínio `tooling` — 2027 bytes — SHA-256 `4ada9e7dce98248446b6ba7c9ccf1c5f2af2b024dd458d641ad22a209ca0b7aa`
 - `tools/browser-gameplay-e2e.mjs` — domínio `tooling` — 24505 bytes — SHA-256 `3b71f9eef487aea41b1232571fb54caa259739640355d801899fe46fbeb2c0ea`
 - `tools/browser-live-api.mjs` — domínio `tooling` — 4729 bytes — SHA-256 `67e1046f218c44eae5491df38caf52f820cf097ecb4eaa5b861283cca6a2b8f2`
 - `tools/browser-smoke.mjs` — domínio `tooling` — 5675 bytes — SHA-256 `b8475ddc66c704f9c4d77a9ca53f8d040aa43b18c775552c439b9c066250dd60`

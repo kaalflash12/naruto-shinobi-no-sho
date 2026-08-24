@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-24T02:19:33.195Z",
+  "generatedAt": "2026-08-24T02:20:59.779Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5529,
-    "runtimeFiles": 79,
+    "files": 5530,
+    "runtimeFiles": 80,
     "assetFiles": 5425,
-    "textFiles": 99,
+    "textFiles": 100,
     "functions": 1110,
     "routes": 33,
     "models": 2,
@@ -24,9 +24,9 @@
     "gameRuntimeFunctions": 1002,
     "toolingFunctions": 108,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 89,
+    "sourceFiles": 90,
     "gameRuntimeSourceFiles": 62,
-    "toolingSourceFiles": 27,
+    "toolingSourceFiles": 28,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
-      "size": 6859,
-      "sha256": "6654ff587166e20f7b7d431e363608aa0adeb1b1bad1c32653966fb9388cde90",
+      "size": 5179,
+      "sha256": "88c5744ca9d2c644d9608c8afd6b8aab80d21650a7ff58437da91485bf407030",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -44173,6 +44173,14 @@
       "path": "tools/browser-gameplay-e2e-v3.mjs",
       "size": 5034,
       "sha256": "2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/browser-gameplay-e2e-v4.mjs",
+      "size": 2027,
+      "sha256": "4ada9e7dce98248446b6ba7c9ccf1c5f2af2b024dd458d641ad22a209ca0b7aa",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -235329,10 +235337,10 @@
       "routes": 33,
       "models": 3,
       "collections": 13,
-      "storage": 24,
+      "storage": 26,
       "uiActions": 222,
       "events": 11,
-      "movement": 8000,
+      "movement": 7998,
       "assets": 15821,
       "environment": 148
     },
