@@ -30,16 +30,24 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Require both live consumer evidence files
+      - name: Require fresh live backend and both live consumer evidence files
         id: gates
         shell: bash
         run: |
           node - <<'NODE'
           const fs=require('fs');
+          const {execFileSync}=require('child_process');
           const read=p=>{try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return null}};
+          const live=read('audit/LIVE-BACKEND.json');
           const account=read('audit/ACCOUNT-LIVE-E2E.json');
           const browserAccount=read('audit/BROWSER-ACCOUNT-LIVE.json');
           const gameplay=read('audit/BROWSER-GAMEPLAY-E2E.json');
+          let currentFingerprint='';
+          try{currentFingerprint=execFileSync(process.execPath,['tools/live-source-fingerprint.mjs'],{encoding:'utf8'}).trim();}catch{}
+          const liveFresh=live?.ok===true&&
+            live?.status==='PASS_LIVE_BACKEND_E2E'&&
+            /^[a-f0-9]{64}$/.test(currentFingerprint)&&
+            live?.sourceFingerprint===currentFingerprint;
           const accountOk=account?.ok===true&&account?.status==='PASS_ACCOUNT_LIVE_E2E'&&browserAccount?.ok===true&&browserAccount?.status==='PASS_BROWSER_ACCOUNT_LIVE';
           const gameplayOk=gameplay?.ok===true&&
             gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&
@@ -53,8 +61,9 @@ jobs:
             gameplay?.checks?.temporaryAccountRegistered===true&&
             gameplay?.checks?.temporaryAccountDeleted===true&&
             Array.isArray(gameplay?.contracts)&&gameplay.contracts.length>=11&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E');
-          require('fs').appendFileSync(process.env.GITHUB_OUTPUT,`ready=${accountOk&&gameplayOk?'true':'false'}\naccount=${accountOk?'true':'false'}\ngameplay=${gameplayOk?'true':'false'}\n`);
-          console.log(JSON.stringify({accountOk,gameplayOk,gameplayScope:gameplay?.scope||null,gameplayProvenance:gameplay?.provenance||null},null,2));
+          const ready=liveFresh&&accountOk&&gameplayOk;
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`ready=${ready?'true':'false'}\nlive=${liveFresh?'true':'false'}\naccount=${accountOk?'true':'false'}\ngameplay=${gameplayOk?'true':'false'}\n`);
+          console.log(JSON.stringify({liveFresh,currentFingerprint,liveFingerprint:live?.sourceFingerprint||null,accountOk,gameplayOk,gameplayScope:gameplay?.scope||null,gameplayProvenance:gameplay?.provenance||null},null,2));
           NODE
 
       - name: Dispatch final readiness
@@ -65,4 +74,4 @@ jobs:
 
       - name: Wait for remaining live gate
         if: steps.gates.outputs.ready != 'true'
-        run: echo "FINAL_READINESS_WAITING account=${{ steps.gates.outputs.account }} gameplay=${{ steps.gates.outputs.gameplay }}"
+        run: echo "FINAL_READINESS_WAITING live=${{ steps.gates.outputs.live }} account=${{ steps.gates.outputs.account }} gameplay=${{ steps.gates.outputs.gameplay }}"
