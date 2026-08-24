@@ -5,8 +5,37 @@ import { pathToFileURL } from 'node:url';
 const tmpDir=path.resolve('.tmp-gameplay-e2e-v4');
 fs.mkdirSync(tmpDir,{recursive:true});
 
+const basePath=path.resolve('tools/browser-gameplay-e2e.mjs');
+let base=fs.readFileSync(basePath,'utf8');
+const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+  await attack.waitFor({state:'visible',timeout:15000});
+  await attack.click();`;
+const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
+  const attackVisible=await attack.isVisible().catch(()=>false);
+  if(!attackVisible){
+    const combatDiag=await page.evaluate(()=>({
+      heading:String(document.querySelector('#screen h1')?.textContent||''),
+      text:String(document.querySelector('#screen')?.innerText||'').slice(0,2400),
+      actions:[...document.querySelectorAll('#screen [data-action]')].map(x=>({action:x.getAttribute('data-action'),id:x.getAttribute('data-id'),disabled:!!x.disabled,text:String(x.textContent||'').trim().slice(0,160)})).slice(0,100),
+      navActive:[...document.querySelectorAll('#main-nav .nav-button.active')].map(x=>x.getAttribute('data-screen')),
+      save:(()=>{try{return JSON.parse(localStorage.getItem('narutoShinobiNoShoPcV4')||'null')}catch{return null}})(),
+      r41:window.__NARUTO_R41__?.state?.()||null
+    }));
+    throw new Error('COMBAT_ACTION_MISSING '+JSON.stringify(combatDiag));
+  }
+  await attack.click();`;
+if(!base.includes(oldAttackWait))throw new Error('GAMEPLAY_E2E_V4_BASE_COMBAT_TARGET_MISSING');
+base=base.replace(oldAttackWait,newAttackWait);
+const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-base-patched.mjs');
+fs.writeFileSync(patchedBase,base,'utf8');
+
 const v2Path=path.resolve('tools/browser-gameplay-e2e-v2.mjs');
 let v2=fs.readFileSync(v2Path,'utf8');
+const v2BaseSource="const sourcePath = path.resolve('tools/browser-gameplay-e2e.mjs');";
+const v2BasePatched=`const sourcePath = ${JSON.stringify(patchedBase)};`;
+if(!v2.includes(v2BaseSource))throw new Error('GAMEPLAY_E2E_V4_V2_BASE_SOURCE_TARGET_MISSING');
+v2=v2.replace(v2BaseSource,v2BasePatched);
+
 const oldWait="  await page.waitForFunction(()=>!!document.querySelector('[data-action=\"account-new\"]')||!!document.querySelector('.creation-shell'),{timeout:30000});";
 const newWait=`  await page.waitForFunction(()=>Boolean(window.r41Auth?.authenticated&&(window.r41Auth?.token||localStorage.getItem('sns-v841-auth-token')||sessionStorage.getItem('sns-v841-auth-token'))),{timeout:30000});\n  await page.evaluate(()=>window.SNS_ACCOUNT_UI?.close?.()).catch(()=>{});\n  const accountClose=page.locator('#sns-account-overlay [data-action=\"close\"],.sns-account-close').first();\n  if(await accountClose.count())await accountClose.evaluate(el=>el.click()).catch(()=>{});\n  await page.waitForTimeout(250);`;
 if(!v2.includes(oldWait))throw new Error('GAMEPLAY_E2E_V4_REGISTER_WAIT_TARGET_MISSING');
@@ -32,27 +61,6 @@ const newCharacterAssert=`  if(screen==='personagem'){
   }`;
 if(!v2.includes(oldCharacterAssert))throw new Error('GAMEPLAY_E2E_V4_CHARACTER_ASSERT_TARGET_MISSING');
 v2=v2.replace(oldCharacterAssert,newCharacterAssert);
-
-// Diagnóstico fail-closed: se o combate iniciou mas a ação canônica não existe,
-// o relatório grava todos os data-action visíveis e o estado R41 em vez de só
-// estourar timeout sem explicar a UI produzida.
-const oldAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
-  await attack.waitFor({state:'visible',timeout:15000});
-  await attack.click();`;
-const newAttackWait=`  const attack=page.locator('[data-action="basic-attack"]:not([disabled])').first();
-  const attackVisible=await attack.isVisible().catch(()=>false);
-  if(!attackVisible){
-    const combatDiag=await page.evaluate(()=>({
-      heading:String(document.querySelector('#screen h1')?.textContent||''),
-      text:String(document.querySelector('#screen')?.innerText||'').slice(0,1800),
-      actions:[...document.querySelectorAll('#screen [data-action]')].map(x=>({action:x.getAttribute('data-action'),id:x.getAttribute('data-id'),disabled:!!x.disabled,text:String(x.textContent||'').trim().slice(0,120)})).slice(0,80),
-      r41:window.__NARUTO_R41__?.state?.()||null
-    }));
-    throw new Error('COMBAT_ACTION_MISSING '+JSON.stringify(combatDiag));
-  }
-  await attack.click();`;
-if(!v2.includes(oldAttackWait))throw new Error('GAMEPLAY_E2E_V4_COMBAT_TARGET_MISSING');
-v2=v2.replace(oldAttackWait,newAttackWait);
 
 const patchedV2=path.join(tmpDir,'browser-gameplay-e2e-v2-patched.mjs');
 fs.writeFileSync(patchedV2,v2,'utf8');

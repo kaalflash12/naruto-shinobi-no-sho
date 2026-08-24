@@ -1,42 +1,33 @@
-name: Browser Smoke + Live API
+name: Browser Smoke
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - 'app.js'
-      - 'index.html'
-      - 'styles.css'
-      - 'r41-api-config.js'
-      - 'r41-github-api.js'
-      - 'src/**'
-      - 'tools/browser-smoke.mjs'
-      - 'tools/browser-live-api.mjs'
-      - '.github/workflows/browser-e2e.yml'
+    paths-ignore:
+      - 'audit/**'
+  pull_request:
+    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: shinobi-browser-supabase
-  cancel-in-progress: false
+  group: shinobi-browser-smoke-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   browser:
-    if: github.actor != 'github-actions[bot]'
-    runs-on: ubuntu-latest
-    timeout-minutes: 18
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Install Playwright
         run: |
-          npm install --no-save playwright@1.55.0
+          npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
       - name: Start local HTTP game server
         run: |
@@ -48,40 +39,18 @@ jobs:
           BASE_URL: http://127.0.0.1:4173
           BROWSER_REPORT: audit/BROWSER-SMOKE.json
         run: node tools/browser-smoke.mjs
-      - name: Run public GitHub Pages to Supabase Chromium probe
-        env:
-          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
-          API_ORIGIN: https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api
-          BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
-        run: node tools/browser-live-api.mjs
-      - name: Enforce reports
+      - name: Enforce smoke report
         run: |
           node - <<'NODE'
-          const s=require('./audit/BROWSER-SMOKE.json'),l=require('./audit/BROWSER-LIVE-API.json');
-          if(!s.ok||s.status!=='PASS_BROWSER_SMOKE')throw new Error(JSON.stringify(s.failures||[]));
-          if(!l.ok||l.status!=='PASS_BROWSER_LIVE_API')throw new Error(JSON.stringify(l.failures||[]));
-          if(l.backendStatus?.data?.storage!=='supabase-postgres')throw new Error('browser live não confirmou Supabase Postgres');
-          console.log(s.status,l.status);
+          const s=require('./audit/BROWSER-SMOKE.json');
+          if(!s.ok||s.status!=='PASS_BROWSER_SMOKE'||!s.checks?.backendIdentity)throw new Error(JSON.stringify(s.failures||[]));
+          if(s.api?.build!=='NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB')throw new Error('identidade Cloudflare/MongoDB ausente');
+          console.log(s.status,s.api);
           NODE
-      - name: Commit browser evidence
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for f in audit/BROWSER-SMOKE.json audit/BROWSER-LIVE-API.json; do [ -f "$f" ] && git add "$f"; done
-          if ! git diff --cached --quiet; then
-            git commit -m 'test: record Supabase browser evidence'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-      - name: Upload browser evidence
+      - name: Upload smoke evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: shinobi-browser-supabase
-          path: |
-            audit/BROWSER-SMOKE.json
-            audit/BROWSER-LIVE-API.json
+          name: shinobi-browser-smoke
+          path: audit/BROWSER-SMOKE.json
           if-no-files-found: warn

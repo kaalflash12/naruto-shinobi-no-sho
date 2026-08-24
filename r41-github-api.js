@@ -6,7 +6,6 @@
   const TOKEN_KEY="sns-v841-auth-token";
 
   function apiOrigin(){return String(window.NARUTO_R41_API_ORIGIN||localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"").replace(/\/+$/g,"");}
-  function publishableKey(){return String(window.NARUTO_R41_SUPABASE_PUBLISHABLE_KEY||"").trim();}
   function token(){
     const persistent=localStorage.getItem(TOKEN_KEY)||"",session=sessionStorage.getItem(TOKEN_KEY)||"",resolved=persistent||session;
     if(resolved){if(persistent!==resolved)localStorage.setItem(TOKEN_KEY,resolved);if(session!==resolved)sessionStorage.setItem(TOKEN_KEY,resolved);}return resolved;
@@ -21,8 +20,7 @@
     return {url:raw,api:false,route:""};
   }
   function withAuth(init,api){
-    if(!api)return init;const out={...(init||{})},headers=new Headers(out.headers||{}),key=publishableKey(),t=token();
-    if(key&&!headers.has("apikey"))headers.set("apikey",key);
+    if(!api)return init;const out={...(init||{})},headers=new Headers(out.headers||{}),t=token();
     if(t&&!headers.has("authorization"))headers.set("authorization",`Bearer ${t}`);
     out.headers=headers;return out;
   }
@@ -32,8 +30,7 @@
     let data;try{data=await response.clone().json();}catch{return response;}if(!data?.ok||!data?.token||!data?.account)return response;
     if(data.account.role==="leon"){sessionStorage.removeItem(CLAIM_KEY);return response;}
     try{
-      const headers={"content-type":"application/json","authorization":`Bearer ${data.token}`},key=publishableKey();if(key)headers.apikey=key;
-      const claimed=await transportFetch(apiOrigin()+"/api/private/claim-leon",{method:"POST",headers,body:JSON.stringify({code:claim})});
+      const claimed=await transportFetch(apiOrigin()+"/api/private/claim-leon",{method:"POST",headers:{"content-type":"application/json","authorization":`Bearer ${data.token}`},body:JSON.stringify({code:claim})});
       const c=await claimed.json().catch(()=>({}));if(!claimed.ok||!c.ok)return response;
       data.account=Object.assign({},data.account,{role:"leon"});sessionStorage.removeItem(CLAIM_KEY);
       const responseHeaders=new Headers(response.headers);responseHeaders.set("content-type","application/json; charset=utf-8");return new Response(JSON.stringify(data),{status:response.status,statusText:response.statusText,headers:responseHeaders});
@@ -57,13 +54,13 @@
   window.r41Auth={
     get token(){return token();},get authenticated(){return !!token();},
     async register(username,password,displayName,email){const payload=typeof username==="object"?username:{username,password,displayName,email};const data=await request("/api/auth/register",payload);if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},
-    async login(identifier,password){const normalized=String(identifier||"").trim(),data=await request("/api/auth/login",{username:normalized,identifier:normalized,password});if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},
+    async login(identifier,password){const normalized=String(identifier||"").trim(),data=await request("/api/auth/login",{identifier:normalized,username:normalized,password});if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},
     async me(){if(!token())return {ok:false,error:"UNAUTHORIZED",account:null};try{return await request("/api/auth/me",undefined,"GET");}catch(err){if(err.status===401){setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}throw err;}},
     async logout(){try{if(token())await request("/api/auth/logout",{});}finally{setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}return {ok:true};},
-    async recover(identifier,recoveryCode,newPassword){const normalized=String(identifier||"").trim();return request("/api/auth/recover",{username:normalized,identifier:normalized,recoveryCode,newPassword});},
+    async recover(identifier,recoveryCode,newPassword){return request("/api/auth/recover",{identifier:String(identifier||"").trim(),recoveryCode,newPassword});},
     async generateRecoveryCode(){return request("/api/auth/recovery-code",{});},
     async deleteAccount(){const data=await request("/api/auth/delete-account",{});setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));return data;}
   };
   token();
-  window.__R41_GITHUB_API__={build:"R41-SUPABASE-POSTGRES-INTEGRAL-20260823",get apiOrigin(){return apiOrigin();},get authOrigin(){return apiOrigin();},get backend(){return apiOrigin()?"supabase-edge-postgres":"unconfigured";},sameOriginStatic:true,leonClaimPending:()=>!!sessionStorage.getItem(CLAIM_KEY)};
+  window.__R41_GITHUB_API__={build:"R41-CLOUDFLARE-MONGODB-INTEGRAL-20260824",get apiOrigin(){return apiOrigin();},get authOrigin(){return apiOrigin();},get backend(){return apiOrigin()?"cloudflare-mongodb-durable-objects":"unconfigured";},sameOriginStatic:true,leonClaimPending:()=>!!sessionStorage.getItem(CLAIM_KEY)};
 })();
