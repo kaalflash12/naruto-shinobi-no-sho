@@ -16,6 +16,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: gameplay-integral-fix-20260824
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -63,7 +65,7 @@ jobs:
               if p=='/api/account/load':
                 sid=str(d.get('slotId','')); return self._json(200,{'ok':True,'slotId':sid,'save':slots.get(sid),'data':slots.get(sid)})
               if p.startswith('/api/'):
-                return self._json(200,{'ok':True,'saved':True,'messages':[],'room':{'id':'diag-room','players':[]}})
+                return self._json(200,{'ok':True,'saved':True,'messages':[],'roomId':'diag-room','room':{'id':'diag-room','roomId':'diag-room','players':[]},'actions':[]})
               return self._json(404,{'ok':False,'error':'NOT_FOUND'})
           ThreadingHTTPServer(('127.0.0.1',8000),H).serve_forever()
           PY
