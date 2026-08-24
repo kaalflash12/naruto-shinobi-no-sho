@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: shinobi-browser-smoke-${{ github.event_name }}-${{ github.ref }}
@@ -22,6 +22,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -76,3 +78,15 @@ jobs:
             audit/BROWSER-SMOKE.json
             audit/BROWSER-GAMEPLAY-LOCAL-E2E.json
           if-no-files-found: warn
+      - name: Commit verified local browser evidence
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/BROWSER-SMOKE.json audit/BROWSER-GAMEPLAY-LOCAL-E2E.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record local browser smoke and 11 gameplay contracts'
+          git pull --rebase origin main
+          git push origin HEAD:main
