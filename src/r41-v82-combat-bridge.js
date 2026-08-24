@@ -4,12 +4,12 @@
   const SAVE_KEY='narutoShinobiNoShoPcV4';
   const ACTIVE_SLOT_KEY='narutoShinobiNoShoPcV5Active';
   const SLOT_PREFIX='narutoShinobiNoShoPcV5:';
+  const STATE_BRIDGE_MARK='__snsV82CombatBridgeState';
   const ACTIONS={
     'v82-basic-melee':{source:'v82_basic_melee',label:'Ataque corporal'},
     'v82-basic-ranged':{source:'v82_basic_ranged',label:'Ataque à distância'}
   };
   const BLOCKED_RE=/fora do alcance|mova-se primeiro|exige adjac|não pode|impedido|sem alvo|movimento permitido|terreno custa movimento/i;
-  let installedApiBridge=false;
   const clone=v=>{try{return JSON.parse(JSON.stringify(v));}catch{return v;}};
   function activeSlotKey(){const id=localStorage.getItem(ACTIVE_SLOT_KEY)||'';return id?`${SLOT_PREFIX}${id}`:'';}
   function parseSave(raw){try{return raw?JSON.parse(raw):null;}catch{return null;}}
@@ -92,7 +92,7 @@
   }
   function persistPresentation(p,afterDom){
     const save=readRuntimeSave()||readPersistedSave();
-    if(!save)return;
+    if(!save)return false;
     save.r41=save.r41&&typeof save.r41==='object'?save.r41:{};
     save.r41.lastCombatPresentation=clone(p);
     save.r41.autosave=save.r41.autosave&&typeof save.r41.autosave==='object'?save.r41.autosave:{localAt:0,cloudAt:0,lastError:'',pending:false};
@@ -101,18 +101,23 @@
     save.r41.narrative.lastConfirmedFact=p.result.blocked?`${p.result.label} tentado e impedido pelas regras confirmadas do encontro${p.result.reason?`: ${p.result.reason}`:''}.`:`${p.result.label} confirmado: ${p.result.damage} de dano${p.result.playerDamageTaken?`; ${p.result.playerDamageTaken} recebido na resposta`:''}.`;
     if(save.character&&afterDom?.playerHp){save.character.hp=afterDom.playerHp.current;save.character.maxHp=afterDom.playerHp.max;}
     if(save.character&&afterDom?.playerChakra){save.character.chakra=afterDom.playerChakra.current;save.character.maxChakra=afterDom.playerChakra.max;}
-    writeSave(save);
+    return writeSave(save);
   }
   function installPublicApiBridge(){
-    if(installedApiBridge||!window.__NARUTO_R41__?.state)return;
-    const api=window.__NARUTO_R41__,baseState=api.state.bind(api);
-    api.state=()=>{
+    const api=window.__NARUTO_R41__;
+    if(!api||typeof api.state!=='function')return false;
+    const current=api.state;
+    if(current?.[STATE_BRIDGE_MARK])return true;
+    const baseState=current.bind(api);
+    const wrapped=()=>{
       const base=baseState()||{},persisted=readPersistedSave()?.r41||{},bp=base.lastCombatPresentation,pp=persisted.lastCombatPresentation;
       if(pp&&(!bp||Number(pp.at||0)>=Number(bp.at||0)))base.lastCombatPresentation=clone(pp);
       if(persisted.autosave)base.autosave={...(base.autosave||{}),...clone(persisted.autosave)};
       return base;
     };
-    installedApiBridge=true;
+    try{Object.defineProperty(wrapped,STATE_BRIDGE_MARK,{value:true,configurable:false});}catch{wrapped[STATE_BRIDGE_MARK]=true;}
+    api.state=wrapped;
+    return true;
   }
   async function finishAction(action,beforeSave,beforeDom,beforeText,beforeFeedback){
     await new Promise(r=>setTimeout(r,350));
@@ -123,6 +128,7 @@
     const p=makePresentation(result,action);
     try{window.SNSSavePointManager?.record?.('combat_result',{result:clone(result),validation:clone(p.validation),source:'v82_bridge'});}catch{}
     persistPresentation(p,afterDom);
+    installPublicApiBridge();
     try{document.dispatchEvent(new CustomEvent('sns:r41-combat-result',{detail:clone(p)}));}catch{}
     renderPresentation(p);
     if(p.validation?.ok===false)console.error('[R41_V82_COMBAT_GATE]',p.validation.errors,result);
@@ -130,10 +136,13 @@
   document.addEventListener('click',event=>{
     const button=event.target?.closest?.('[data-action]'),action=button?.getAttribute?.('data-action')||'';
     if(!ACTIONS[action]||button.disabled)return;
+    installPublicApiBridge();
     const beforeSave=readRuntimeSave()||readPersistedSave(),beforeDom=readDomVitals(),beforeText=document.querySelector('#screen')?.innerText||'',beforeFeedback=readFeedback();
     queueMicrotask(()=>finishAction(action,beforeSave,beforeDom,beforeText,beforeFeedback));
   },true);
   const boot=()=>installPublicApiBridge();
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
   setTimeout(boot,0);
+  setTimeout(boot,500);
+  setTimeout(boot,1500);
 })();
