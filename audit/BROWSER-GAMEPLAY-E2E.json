@@ -1,61 +1,23 @@
 {
-  "generatedAt": "2026-08-24T02:32:51.214Z",
+  "generatedAt": "2026-08-24T02:36:27.535Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt6melj3e5vxx",
-  "slotId": "gameplay-mt6melj3",
-  "checks": {
-    "temporaryAccountRegistered": true,
-    "cloudFixtureSaved": true,
-    "cloudFixtureListed": true,
-    "cloudFixtureLoadedIntoRuntime": true,
-    "temporaryAccountDeleted": true
-  },
-  "contracts": [
-    {
-      "id": "persistent_injuries",
-      "status": "PASS_GAMEPLAY_E2E",
-      "evidence": {
-        "ui": true,
-        "active": [
-          {
-            "id": "inj_e2e_fratura",
-            "status": "ACTIVE",
-            "severity": 2
-          },
-          {
-            "id": "inj_fratura_grave_do_braco",
-            "status": "ACTIVE",
-            "severity": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": "visual_state",
-      "status": "PASS_GAMEPLAY_E2E",
-      "evidence": {
-        "uiSection": "r41-appearance-state",
-        "damageBadge": "inj_e2e_fratura"
-      }
-    }
-  ],
+  "temporaryAccount": "play_mt6mjhaqfoxy9",
+  "slotId": "gameplay-mt6mjhaq",
+  "checks": {},
+  "contracts": [],
   "evidence": {},
   "pageErrors": [],
   "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()",
-    "Failed to load resource: the server responded with a status of 404 ()"
+    "[SNS ACCOUNT] r41Auth indisponível",
+    "Failed to load resource: the server responded with a status of 405 ()"
   ],
   "failures": [
-    "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('[data-action=\"map-hotspot\"][data-id=\"hospital\"]').first()\n    - locator resolved to <button class=\"map-pin \" data-id=\"hospital\" data-action=\"map-hotspot\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <button data-action=\"event-open\" data-id=\"canon_gai_dojo\" title=\"Desafio da Juventude\" class=\"event-map-pin tipo-canonico\">…</button> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <button data-action=\"event-open\" data-id=\"canon_gai_dojo\" title=\"Desafio da Juventude\" class=\"event-map-pin tipo-canonico\">…</button> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <button data-action=\"event-open\" data-id=\"canon_gai_dojo\" title=\"Desafio da Juventude\" class=\"event-map-pin tipo-canonico\">…</button> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n\n    at testNormalGameplay (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538727306.mjs:291:17)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538727306.mjs:486:5"
+    "page.waitForFunction: Timeout 30000ms exceeded.\n    at register (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538955104.mjs:151:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538955104.mjs:484:17"
   ]
 }
