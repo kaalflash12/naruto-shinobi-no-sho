@@ -1,23 +1,153 @@
 {
-  "generatedAt": "2026-08-24T02:36:27.535Z",
+  "generatedAt": "2026-08-24T02:39:38.688Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt6mjhaqfoxy9",
-  "slotId": "gameplay-mt6mjhaq",
-  "checks": {},
-  "contracts": [],
+  "temporaryAccount": "play_mt6mncyxdlqj8",
+  "slotId": "gameplay-mt6mncyx",
+  "checks": {
+    "temporaryAccountRegistered": true,
+    "cloudFixtureSaved": true,
+    "cloudFixtureListed": true,
+    "cloudFixtureLoadedIntoRuntime": true,
+    "hospitalWorldTick": true,
+    "restWorldTick": true,
+    "minigameWorldTick": true,
+    "temporaryAccountDeleted": true
+  },
+  "contracts": [
+    {
+      "id": "persistent_injuries",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "ui": true,
+        "active": [
+          {
+            "id": "inj_e2e_fratura",
+            "status": "ACTIVE",
+            "severity": 2
+          },
+          {
+            "id": "inj_fratura_grave_do_braco",
+            "status": "ACTIVE",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "visual_state",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "uiSection": "r41-appearance-state",
+        "damageBadge": "inj_e2e_fratura"
+      }
+    },
+    {
+      "id": "hospital_treatment",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "before": {
+          "hp": 9,
+          "ryo": 5000
+        },
+        "after": {
+          "hp": 20,
+          "ryo": 4890,
+          "injuryStatus": "STABILIZED"
+        },
+        "ui": "Primeiro eu avalio o ferimento. Tratamento não apaga lesão grave nem tempo decorrido.\n\nPV perdido\n21\nCondições clínicas\nFratura grave do braço\nFerimentos persistentes\n2\nTempo\n120 min\nCusto\n110 Ryos\nTratamento comum estabiliza ferimentos persistentes, mas não apaga membro perdido/fratura grave automaticamente. A alta remove o ferimento somente quando o registro permitir.\nIniciar tratamento"
+      }
+    },
+    {
+      "id": "rest_consequences",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "short": {
+          "beforeChakra": 10,
+          "afterChakra": 14,
+          "beforeHp": 20,
+          "afterHp": 20
+        },
+        "long": {
+          "hp": 22,
+          "maxHp": 30,
+          "cap": 22,
+          "injuryPersists": true
+        }
+      }
+    },
+    {
+      "id": "minigame_engine",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "clicks": 5,
+        "result": {
+          "score": 1000,
+          "success": true,
+          "errors": 0,
+          "time": 4.8,
+          "performanceTags": [
+            "preciso",
+            "controlado"
+          ],
+          "meta": {}
+        },
+        "activity": {
+          "at": 1787539160358,
+          "clock": 44005,
+          "id": "coleta",
+          "score": 1000,
+          "total": 17,
+          "cd": 11,
+          "ok": true,
+          "reward": "+3 material(is)"
+        }
+      }
+    }
+  ],
   "evidence": {},
   "pageErrors": [],
   "consoleErrors": [
-    "Failed to load resource: the server responded with a status of 503 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
-    "[SNS ACCOUNT] r41Auth indisponível",
-    "Failed to load resource: the server responded with a status of 405 ()"
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
   ],
   "failures": [
-    "page.waitForFunction: Timeout 30000ms exceeded.\n    at register (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538955104.mjs:151:14)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538955104.mjs:484:17"
+    "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('[data-action=\"basic-attack\"]:not([disabled])').first() to be visible\n\n    at testNormalGameplay (/home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787539136199.mjs:351:16)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787539136199.mjs:486:5"
   ]
 }
