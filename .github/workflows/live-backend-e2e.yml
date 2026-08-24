@@ -2,15 +2,6 @@ name: Live Backend Cloudflare + MongoDB E2E
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/live-backend-e2e.yml'
-      - 'cloudflare/r41-api/**'
-      - 'tools/live-worker-e2e.mjs'
-      - 'tools/browser-live-api.mjs'
-      - 'r41-api-config.js'
-      - 'r41-github-api.js'
 
 permissions:
   contents: write
@@ -21,7 +12,6 @@ concurrency:
 
 jobs:
   live-backend:
-    if: github.event_name == 'workflow_dispatch' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env:
@@ -42,6 +32,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Compute live source fingerprint
+        shell: bash
+        run: |
+          set -euo pipefail
+          fingerprint="$(node tools/live-source-fingerprint.mjs)"
+          test "${#fingerprint}" -eq 64
+          echo "SOURCE_FINGERPRINT=$fingerprint" >> "$GITHUB_ENV"
+          echo "LIVE_SOURCE_FINGERPRINT=$fingerprint"
 
       - name: Enforce allowed backend architecture
         shell: bash
@@ -65,7 +64,7 @@ jobs:
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
             node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MISSING_CLOUDFLARE_TOKEN',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['CLOUDFLARE_API_TOKEN'],failures:['GitHub Actions secret CLOUDFLARE_API_TOKEN ausente.']},null,2)+'\n');
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MISSING_CLOUDFLARE_TOKEN',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['CLOUDFLARE_API_TOKEN'],sourceFingerprint:String(process.env.SOURCE_FINGERPRINT||'')||null,failures:['GitHub Actions secret CLOUDFLARE_API_TOKEN ausente.']},null,2)+'\n');
           NODE
             exit 1
           fi
@@ -114,7 +113,7 @@ jobs:
           if [ "$has_mongo" != "true" ]; then
             cd ../..; mkdir -p audit
             node --input-type=module <<'NODE'
-          import fs from 'node:fs';fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MONGODB_URI_NOT_CONFIGURED',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['MONGODB_URI'],failures:['MONGODB_URI não existe nem no GitHub Actions nem nos secrets persistidos do Worker.']},null,2)+'\n');
+          import fs from 'node:fs';fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MONGODB_URI_NOT_CONFIGURED',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['MONGODB_URI'],sourceFingerprint:String(process.env.SOURCE_FINGERPRINT||'')||null,failures:['MONGODB_URI não existe nem no GitHub Actions nem nos secrets persistidos do Worker.']},null,2)+'\n');
           NODE
             exit 1
           fi
@@ -154,6 +153,21 @@ jobs:
           LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
         run: node tools/live-worker-e2e.mjs
 
+      - name: Bind live source fingerprint to backend evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p='audit/LIVE-BACKEND.json';
+          const r=JSON.parse(fs.readFileSync(p,'utf8'));
+          const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          if(!/^[a-f0-9]{64}$/.test(fingerprint))throw new Error('SOURCE_FINGERPRINT_INVALID');
+          r.sourceFingerprint=fingerprint;
+          r.sourceHead=String(process.env.GITHUB_SHA||'').trim()||null;
+          fs.writeFileSync(p,JSON.stringify(r,null,2)+'\n');
+          NODE
+
       - name: Install Chromium
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
@@ -171,9 +185,10 @@ jobs:
           const live=require('./audit/LIVE-BACKEND.json');const browser=require('./audit/BROWSER-LIVE-API.json');
           if(!live.ok||live.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(JSON.stringify(live.failures||[]));
           if(!browser.ok||browser.status!=='PASS_BROWSER_LIVE_API')throw new Error(JSON.stringify(browser.failures||[]));
+          if(!/^[a-f0-9]{64}$/.test(String(live.sourceFingerprint||''))||live.sourceFingerprint!==process.env.SOURCE_FINGERPRINT)throw new Error('LIVE_SOURCE_FINGERPRINT_MISMATCH');
           const required=['statusConfigured','authoritativeBoundariesAdvertised','v6PerCharacterAuthorityAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected','mongoSaveRoundTrip','multipleCharacterSlotsPersisted','slotListing','roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','multipleMechanicalProfilesSameAccount','profileSelectorMatchesPlayerAndCampaign','continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging','intentActionAccepted','terionUsesLockedMechanicalProfile','terionSelectsCorrectProfilePerCharacter','clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave','leaderboardSeparatesCharacters','worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','slotDeleteCleansOnlyMatchingMechanicalProfile','sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'];
           for(const k of required)if(live.checks?.[k]!==true)throw new Error(`Gate live ausente: ${k}`);
-          console.log('PASS_CLOUDFLARE_MONGODB_LIVE',live.status,browser.status);
+          console.log('PASS_CLOUDFLARE_MONGODB_LIVE',live.status,browser.status,live.sourceFingerprint);
           NODE
 
       - name: Bake verified Worker URL into public game
