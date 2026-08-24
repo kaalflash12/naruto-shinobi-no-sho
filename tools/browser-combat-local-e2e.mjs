@@ -27,8 +27,11 @@ const fixture={
 
 const browser=await chromium.launch({headless:true});
 const page=await browser.newPage({viewport:{width:1365,height:900}});
-const pageErrors=[];
+const pageErrors=[],failedImages=[];
+const isImage=url=>/\.(?:png|jpe?g|webp|gif|svg)(?:\?|$)/i.test(url);
 page.on('pageerror',e=>pageErrors.push(String(e?.message||e)));
+page.on('requestfailed',req=>{const url=req.url();if(url.startsWith(base)&&isImage(url))failedImages.push({url,error:req.failure()?.errorText||'request failed'});});
+page.on('response',response=>{const url=response.url();if(url.startsWith(base)&&isImage(url)&&response.status()>=400)failedImages.push({url,status:response.status()});});
 try{
   const response=await page.goto(`${base}/?combat-local=${Date.now()}`,{waitUntil:'domcontentloaded',timeout:60000});
   if(!response?.ok())throw new Error(`site HTTP ${response?.status()}`);
@@ -60,6 +63,8 @@ try{
   if(p?.validation?.ok===false)throw new Error(`validação TERION falhou: ${JSON.stringify(p.validation.errors||[])}`);
   if(Number(persisted?.r41?.autosave?.localAt||0)<=0)throw new Error('autosave local não foi marcado pela ponte V82');
   if(pageErrors.length)throw new Error(`erros de página: ${JSON.stringify(pageErrors)}`);
+  const uniqueBroken=[...new Map(failedImages.map(x=>[x.url,x])).values()];
+  if(uniqueBroken.length)throw new Error(`imagens quebradas no fluxo de combate: ${JSON.stringify(uniqueBroken)}`);
   console.log('PASS_V82_TERION_COMBAT',JSON.stringify({result:p.result,validation:p.validation,autosaveLocalAt:persisted.r41.autosave.localAt}));
 } finally {
   await browser.close();
