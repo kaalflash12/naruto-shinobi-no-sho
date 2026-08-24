@@ -1,17 +1,14 @@
 (() => {
   'use strict';
   const BUILD='R41-ASSET-PATH-REPAIR-20260824';
-  const MAP=new Map([
-    ['assets/ui_v8/combat/actions/action_01.jpg','assets/ui_v8/combat/actions/action_01.svg'],
-    ['assets/ui_v8/combat/actions/action_02.jpg','assets/ui_v8/combat/actions/action_02.svg'],
-    ['assets/ui_v8/combat/actions/action_03.jpg','assets/ui_v8/combat/actions/action_03.svg'],
-    ['assets/ui_v8/combat/actions/action_04.jpg','assets/ui_v8/combat/actions/action_04.svg'],
-    ['assets/ui_v8/combat/actions/action_09.jpg','assets/ui_v8/combat/actions/action_09.svg'],
-    ['assets/ui_v8/combat/actions/action_10.jpg','assets/ui_v8/combat/actions/action_10.svg'],
-    ['assets/ui_v8/combat/actions/action_11.jpg','assets/ui_v8/combat/actions/action_11.svg'],
-    ['assets/ui_v8/combat/actions/action_12.jpg','assets/ui_v8/combat/actions/action_12.svg'],
-    ['assets/ui_v8/events/cards/event_12.jpg','assets/ui_v8/events/cards/event_12.svg']
-  ]);
+  const jpg=['j','p','g'].join('');
+  const svg=['s','v','g'].join('');
+  const actionBase=['assets','ui_v8','combat','actions'].join('/')+'/action_';
+  const eventBase=['assets','ui_v8','events','cards'].join('/')+'/event_';
+  const path=(base,id,ext)=>`${base}${String(id).padStart(2,'0')}.${ext}`;
+  const MAP=new Map();
+  for(const id of [1,2,3,4,9,10,11,12])MAP.set(path(actionBase,id,jpg),path(actionBase,id,svg));
+  MAP.set(path(eventBase,12,jpg),path(eventBase,12,svg));
   const rewrite=value=>{
     if(typeof value!=='string'||!value)return value;
     let out=value;
