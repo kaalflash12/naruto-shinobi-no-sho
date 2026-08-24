@@ -2,7 +2,7 @@
 
 Ações e eventos detectados somente no runtime do jogo.
 
-Gerado em: `2026-08-23T20:01:16.411Z`
+Gerado em: `2026-08-24T02:19:33.195Z`
 
 ## Ações
 
@@ -233,7 +233,7 @@ Gerado em: `2026-08-23T20:01:16.411Z`
 - **EVENT-00001** `beforeunload` — `app.js:5303`
 - **EVENT-00002** `change` — `app.js:1380`, `app.js:2932`
 - **EVENT-00003** `click` — `app.js:1356`, `app.js:1519`, `app.js:1883`, `app.js:1933`, `app.js:2073`, `app.js:2213`, `app.js:2517`, `app.js:2727`, `app.js:2926`, `app.js:3128`, `app.js:3360`, `app.js:3450`, `app.js:3612`, `app.js:3672`, `app.js:3787`, `app.js:3954`, `app.js:3974`, `app.js:4016`, `app.js:4104`, `app.js:4129`, `app.js:4152`, `app.js:4284`, `app.js:4395`, `app.js:4487`, `app.js:4847`, `app.js:5164`, `app.js:5168`, `app.js:5258`, `app.js:5389`, `app.js:5505`, `app.js:5529`, `app.js:5595`, `app.js:5607`, `r41-account-ui.js:18`, `r41-account-ui.js:27`, `r41-account-ui.js:36`, `src/r41-local-reset-fix.js:38`
-- **EVENT-00004** `DOMContentLoaded` — `r41-account-deeplink-fix.js:13`, `r41-account-ui.js:38`, `src/r41-core-bundle.js:170`, `src/r41-final-ui-repair.js:21`
+- **EVENT-00004** `DOMContentLoaded` — `r41-account-deeplink-fix.js:13`, `r41-account-ui.js:38`, `src/r41-core-bundle.js:170`, `src/r41-final-ui-repair.js:32`
 - **EVENT-00005** `error` — `app.js:5278`, `app.js:5301`
 - **EVENT-00006** `input` — `app.js:1376`, `app.js:1882`, `app.js:2513`, `app.js:2726`, `app.js:3127`, `app.js:3359`
 - **EVENT-00007** `keydown` — `app.js:1372`, `app.js:1905`, `app.js:3616`

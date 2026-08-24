@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-23T20:01:16.411Z`
+Gerado em: `2026-08-24T02:19:33.195Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -47,12 +47,12 @@ Gerado em: `2026-08-23T20:01:16.411Z`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 6859 bytes — SHA-256 `6654ff587166e20f7b7d431e363608aa0adeb1b1bad1c32653966fb9388cde90`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 4399 bytes — SHA-256 `8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3097 bytes — SHA-256 `a36786ece900c13a39cd911603c8495430a0b03c8180ad6e48e28a62f4d15be0`
-- `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 11863 bytes — SHA-256 `4947c7ea3df89720fa903f1067c56cb1812707b3b45037cd555b61ee6a2f66ea`
+- `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 12679 bytes — SHA-256 `4ff8386e63cfb24e7275753efa5a5ec4b7f42e423b3dc51ae8ed14bfd58d6b98`
 - `.github/workflows/one-shot-terion-authority.yml` — domínio `tooling` — 6191 bytes — SHA-256 `626915f9d67570722ef3c145112860549c95c98b8f12a33beefaf5eef9534eac`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 5967 bytes — SHA-256 `54499685541b67724f296363e3ffb17f3135ab54e5820aed5b99d2d4ebe1a089`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BROWSER-GAMEPLAY-E2E.json` — domínio `game-runtime` — 779 bytes — SHA-256 `7049d39628192cd8b30d38e76c18484ebb9f664f415ee2c38054bca3701679b7`
-- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `b6ed6dbd5ad2e54d6afac1b0c95bb1fe27dcf5e469d0fcf7da02d6c98cf066f3`
+- `audit/BROWSER-SMOKE.json` — domínio `game-runtime` — 759 bytes — SHA-256 `d4cee26160407d6e838ef339cd5d329c07b2863d04519d7b90dc575679fb734a`
 - `cloudflare/oneclick-backend/package.json` — domínio `game-runtime` — 426 bytes — SHA-256 `ae3e5dca5b74eb230651e216aa1cab3577238669c2107bca42abef90805813e2`
 - `cloudflare/oneclick-backend/src/index.js` — domínio `game-runtime` — 30353 bytes — SHA-256 `09fe58d5b5893e81768c29ecd74043bda80ff6ca28639c048fe81019eb664df2`
 - `cloudflare/oneclick-backend/test/local-e2e.mjs` — domínio `game-runtime` — 4619 bytes — SHA-256 `26add25c775c9090492466118aa2650f6f004832f74a377603946a61bde51221`
@@ -105,11 +105,11 @@ Gerado em: `2026-08-23T20:01:16.411Z`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-account-deeplink-fix.js` — domínio `game-runtime` — 587 bytes — SHA-256 `656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2`
 - `r41-account-ui.js` — domínio `game-runtime` — 12242 bytes — SHA-256 `a19b31871cd677b30e881b3728e2e304d4a4adcd63be611b80534a4d9e90dcab`
-- `r41-api-config.js` — domínio `game-runtime` — 729 bytes — SHA-256 `6b1837639df2886d142cbe559edbd57ae3354ead5b92b5a22f7ed185a286cdec`
-- `r41-github-api.js` — domínio `game-runtime` — 7052 bytes — SHA-256 `bd3dd0a77e0587f7cc8f8951cff67ed8ba0e39670909d1b501b7033fe00f5056`
+- `r41-api-config.js` — domínio `game-runtime` — 1098 bytes — SHA-256 `465315d0ec31c1ad58ee2bb4d025f2007cacf7c5baa78ecbd7c8e4ee324f3278`
+- `r41-github-api.js` — domínio `game-runtime` — 6492 bytes — SHA-256 `7f9c0dec0add41853c8b94b6b17b2ee3ec74c3e3021288d8cb7317df6ede67e0`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
-- `src/r41-final-ui-repair.js` — domínio `game-runtime` — 2366 bytes — SHA-256 `caffe196b8abd33d0e6237ac2dcf3149a5fabd17c39276f7fbf8b523b1d7c619`
+- `src/r41-final-ui-repair.js` — domínio `game-runtime` — 3280 bytes — SHA-256 `9380405fa99b96598731b1d9f874ea062cca798b3b99508bc913a8723dfb1a53`
 - `src/r41-local-reset-fix.js` — domínio `game-runtime` — 1605 bytes — SHA-256 `6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/account-live-e2e.mjs` — domínio `tooling` — 4937 bytes — SHA-256 `e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7`

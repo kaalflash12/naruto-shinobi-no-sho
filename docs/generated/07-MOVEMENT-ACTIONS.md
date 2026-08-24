@@ -2,7 +2,7 @@
 
 Evidências retiradas somente do runtime do jogo. Não inclui documentação nem scripts de auditoria.
 
-Gerado em: `2026-08-23T20:01:16.411Z`
+Gerado em: `2026-08-24T02:19:33.195Z`
 
 - **MOVE-00001** `app.js:61` — missions:new Map((CAT.missions\\|\\|[]).map(x=>[String(x.id),x])),
 - **MOVE-00002** `app.js:62` — jutsus:new Map((CAT.jutsus\\|\\|[]).map(x=>[String(x.id),x])),
@@ -7729,14 +7729,14 @@ Gerado em: `2026-08-23T20:01:16.411Z`
 - **MOVE-07723** `r41-account-ui.js:10` — .sns-account-btn{position:fixed!important;top:max(10px,env(safe-area-inset-top))!important;right:max(58px,calc(env(safe-area-inset-right) + 58px))!important;z-index:2147482000!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;min-height:34px;border:1px solid rgba(255,255,255,.20);background:#211711;color:#f5e6c8;border-radius:10px;padding:8px 11px;font:600 12px/1 sys
 - **MOVE-07724** `r41-account-ui.js:12` — .sns-account-overlay{position:fixed;inset:0;z-index:2147483000;background:rgba(5,4,3,.72);display:flex;align-items:center;justify-content:center;padding:18px}.sns-account-card{width:min(520px,96vw);max-height:90vh;overflow:auto;background:#17110d;color:#f4ead8;border:1px solid #594333;border-radius:16px;box-shadow:0 22px 80px #000;padding:18px;font-family:system-ui}.sns-account-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.sns-account-head h2{margin:0;font-size:20p
 - **MOVE-07725** `r41-account-ui.js:37` — async function boot(){style();updateButton();if(!window.r41Auth){console.error("[SNS ACCOUNT] r41Auth indisponível");return;}try{const d=await window.r41Auth.me();state.account=d?.account\\|\\|null;}catch{state.account=null;}updateButton();const p=new URLSearchParams(location.search);if(p.get("account")==="1")open(p.get("tab")\\|\\|undefined);}
-- **MOVE-07726** `r41-api-config.js:3` — const params = new URLSearchParams(location.search);
-- **MOVE-07727** `r41-github-api.js:33` — const u=new URL(location.href),claim=String(u.searchParams.get("leonClaim")\\|\\|"").trim();
-- **MOVE-07728** `r41-github-api.js:47` — return {url:origin+raw,api:true,route:raw};
-- **MOVE-07729** `r41-github-api.js:50` — return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:""};
-- **MOVE-07730** `r41-github-api.js:52` — return {url:raw,api:false,route:""};
-- **MOVE-07731** `r41-github-api.js:66` — if(!mapped.api\\|\\|!response.ok\\|\\|!["/api/auth/login","/api/auth/register"].includes(mapped.route))return response;
-- **MOVE-07732** `r41-github-api.js:111` — async function request(route,body,method="POST"){
-- **MOVE-07733** `r41-github-api.js:114` — const res=await window.fetch(route,init);
+- **MOVE-07726** `r41-api-config.js:5` — const params=new URLSearchParams(location.search);
+- **MOVE-07727** `r41-github-api.js:15` — function captureClaim(){try{const u=new URL(location.href),claim=String(u.searchParams.get("leonClaim")\\|\\|"").trim();if(claim){sessionStorage.setItem(CLAIM_KEY,claim);u.searchParams.delete("leonClaim");history.replaceState(null,"",u.pathname+(u.search?u.search:"")+(u.hash\\|\\|""));}}catch{}}
+- **MOVE-07728** `r41-github-api.js:19` — if(raw.startsWith("/api/")){const origin=apiOrigin();if(!origin)throw new Error("R41_API_ORIGIN_NOT_CONFIGURED");return {url:origin+raw,api:true,route:raw};}
+- **MOVE-07729** `r41-github-api.js:20` — if(raw.startsWith("/assets/")\\|\\|raw.startsWith("/data/")\\|\\|raw.startsWith("/_r40/")\\|\\|raw.startsWith("/src/"))return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:""};
+- **MOVE-07730** `r41-github-api.js:21` — return {url:raw,api:false,route:""};
+- **MOVE-07731** `r41-github-api.js:30` — if(!mapped.api\\|\\|!response.ok\\|\\|!["/api/auth/login","/api/auth/register"].includes(mapped.route))return response;
+- **MOVE-07732** `r41-github-api.js:51` — async function request(route,body,method="POST"){
+- **MOVE-07733** `r41-github-api.js:53` — const res=await window.fetch(route,init),data=await res.json().catch(()=>({ok:false,error:"INVALID_JSON"}));
 - **MOVE-07734** `src/r41-canonical-repair.js:7` — const byId=Object.fromEntries(v.npcs.map(x=>[x.id,x]));
 - **MOVE-07735** `src/r41-core-bundle.js:4` — const state={manifest:null,byCanonical:new Map(),aliases:new Map(),fallbacks:[]};
 - **MOVE-07736** `src/r41-core-bundle.js:21` — for(const map of [chars,npcs,jutsu,items,locations]) for(const [alias,id] of Object.entries(map\\|\\|{})) state.aliases.set(normalize(alias),normalize(id));
@@ -7749,7 +7749,7 @@ Gerado em: `2026-08-23T20:01:16.411Z`
 - **MOVE-07743** `src/r41-core-bundle.js:109` — register('taijutsu_melee',{prepare:'stance',movement:'dash_short',impact:'melee_impact',targetReaction:'knockback_light'});
 - **MOVE-07744** `src/r41-core-bundle.js:147` — const IMPORTANT=new Set(['pv','hp','chakra','condition','mission','world','time','technique','position','trigger','death','inventory','equipment','appearance','relationship']);
 - **MOVE-07745** `src/r41-core-bundle.js:149` — function shouldSave(change={}){const keys=[change.type,...Object.keys(change)].map(x=>String(x\\|\\|'').toLowerCase());return keys.some(k=>IMPORTANT.has(k));}
-- **MOVE-07746** `src/r41-final-ui-repair.js:3` — const replacements = new Map([
+- **MOVE-07746** `src/r41-final-ui-repair.js:3` — const replacements=new Map([
 - **MOVE-07747** `src/r41-local-reset-fix.js:34` — location.reload();
 - **MOVE-07748** `styles.css:15` — .v83-tech-grid{align-items:stretch}.v83-tech-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border-color:#50321f}
 - **MOVE-07749** `styles.css:28` — .v83-mentor{position:relative;display:flex;flex-direction:column;gap:7px}.v83-mentor>img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid #593821}.v83-mentor.unavailable{opacity:.7}.v83-mentor h3,.v83-mentor p{margin:0}.v83-mentor small{color:#9d8b7d}
