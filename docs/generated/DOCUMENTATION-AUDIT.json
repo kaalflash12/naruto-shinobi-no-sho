@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T02:35:38.375Z",
+  "generatedAt": "2026-08-24T02:38:37.568Z",
   "ok": true,
   "status": "PASS_STATIC_COVERAGE",
   "meaning": "PASS_STATIC_COVERAGE prova cobertura estatica: funcoes de toda fonte nao documental + semantica do jogo somente do runtime. Nao equivale a PASS de runtime, jogabilidade, visual ou E2E.",
@@ -18,7 +18,7 @@
     "storage": 14,
     "uiActions": 221,
     "events": 11,
-    "movementEvidence": 7858,
+    "movementEvidence": 7857,
     "scripts": 33,
     "runtimeFiles": 84,
     "uniqueAssetReferences": 5442,

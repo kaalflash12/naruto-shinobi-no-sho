@@ -29,7 +29,7 @@ Worker entry selecionado: `cloudflare/r41-api/src/entry-authoritative.js`.
 | storage | 14 |
 | uiActions | 221 |
 | events | 11 |
-| movementEvidence | 7858 |
+| movementEvidence | 7857 |
 | scripts | 33 |
 | runtimeFiles | 84 |
 | uniqueAssetReferences | 5442 |
