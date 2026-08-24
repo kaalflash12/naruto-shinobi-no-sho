@@ -1,5 +1,6 @@
 (function(){
   "use strict";
+  // CI live-backend verification trigger: 2026-08-24T16:26-03:00
   const params=new URLSearchParams(location.search);
   const clean=v=>String(v||"").trim().replace(/\/+$/g,"");
   const allowedOverride=v=>/^https:\/\/[A-Za-z0-9._-]+\.workers\.dev$/i.test(v);
