@@ -31,7 +31,7 @@ const fixture={
     hp:30,maxHp:40,chakra:24,maxChakra:30,stamina:18,maxStamina:24,conditions:[],injuries:[]
   }
 };
-const slotSummary={id:SLOT_ID,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId};
+const slotSummary={slotId:SLOT_ID,id:SLOT_ID,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId};
 
 const browser=await chromium.launch({headless:true});
 const page=await browser.newPage({viewport:{width:1365,height:900}});
@@ -60,7 +60,7 @@ try{
     localStorage.setItem(saveKey,json);
     localStorage.setItem(activeKey,slotId);
     localStorage.setItem(prefix+slotId,json);
-    localStorage.setItem(indexKey,JSON.stringify([{id:slotId,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId}]));
+    localStorage.setItem(indexKey,JSON.stringify([{slotId,id:slotId,name:fixture.character.name,campaign:fixture.campaign.name,level:fixture.character.level,graduation:fixture.character.graduation,village:fixture.character.village,origin:fixture.character.origin,avatar:fixture.character.avatar,updatedAt:Date.now(),playerId:fixture.playerId,campaignId:fixture.campaignId}]));
     sessionStorage.setItem(authKey,'local-ci-token');
   },{fixture,slotId:SLOT_ID,saveKey:SAVE_KEY,activeKey:ACTIVE_SLOT_KEY,prefix:SLOT_PREFIX,indexKey:SLOT_INDEX_KEY,authKey:AUTH_TOKEN_KEY,apiOrigin:'https://local-e2e.workers.dev'});
   await page.reload({waitUntil:'domcontentloaded',timeout:60000});
