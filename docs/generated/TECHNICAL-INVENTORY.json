@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T19:40:53.822Z",
+  "generatedAt": "2026-08-24T19:50:24.267Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -59,8 +59,8 @@
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 3770,
-      "sha256": "c9ee77999c1d3a5a5255f445a950433f42d4f00e0a9f7200f4e6c2a1488c3467",
+      "size": 3798,
+      "sha256": "6baa47bcced58620f3b33847bbb5ac02332a99acb51200717273083b701d7ab1",
       "extension": ".yml",
       "runtime": false,
       "asset": false
