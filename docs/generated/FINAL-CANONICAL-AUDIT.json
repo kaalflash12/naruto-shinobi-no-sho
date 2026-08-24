@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T19:30:41.411Z",
+  "generatedAt": "2026-08-24T19:35:23.470Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T19:30:37.595Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T19:35:18.666Z",
   "counts": {
     "functions": 1171,
     "functionsWithExactCode": 1171,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 220,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 96,
+    "sourceFiles": 99,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -7628,7 +7628,7 @@
     {
       "id": "FUNC-00950",
       "file": "r41-api-config.js",
-      "line": 5,
+      "line": 4,
       "name": "clean",
       "exactCode": true,
       "snippetSha256": "30bcab71c43a6097972f319d10b3100c3b4503aa3389e4f50f65ac0035d060c9"
@@ -7636,7 +7636,7 @@
     {
       "id": "FUNC-00951",
       "file": "r41-api-config.js",
-      "line": 6,
+      "line": 5,
       "name": "allowedOverride",
       "exactCode": true,
       "snippetSha256": "b7aca570704f7ce3a23eb39494ef399218403b95088898fce20b41fa6ec7921f"
@@ -15544,6 +15544,11 @@
       "sha256": "dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771"
     },
     {
+      "path": ".github/workflows/backend-secret-presence.yml",
+      "size": 2157,
+      "sha256": "3f0804f47b100baedb8f8a9bce0b805838f290ea4ead9e581e4cd35ff55a663f"
+    },
+    {
       "path": ".github/workflows/browser-e2e.yml",
       "size": 3046,
       "sha256": "77d4d5ae82322a3a090ed2c6f8bcb4a5150a1d345dbc30a44571813f204fbf98"
@@ -15587,6 +15592,16 @@
       "path": "app.js",
       "size": 1084160,
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
+    },
+    {
+      "path": "audit/BACKEND-SECRET-PRESENCE.json",
+      "size": 397,
+      "sha256": "cbb7d0d0486794c16722ac8caa57cfa5e01497443247829632c92eb1d26919b2"
+    },
+    {
+      "path": "audit/LIVE-BACKEND.json",
+      "size": 1023,
+      "sha256": "0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -15850,8 +15865,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 1117,
-      "sha256": "45b5c05ca03e06b6bf1ddd76a278b687e3990a118b80df983ca66ef04348e738"
+      "size": 1041,
+      "sha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732"
     },
     {
       "path": "r41-github-api.js",

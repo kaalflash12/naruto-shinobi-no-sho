@@ -2,16 +2,16 @@
 
 Funções são inventariadas em toda fonte não documental; semântica do jogo (IA/API/DB/UI/movimento/assets/env) é extraída somente do runtime, excluindo docs, ferramentas e workflows.
 
-Gerado em: `2026-08-24T19:30:37.595Z`
+Gerado em: `2026-08-24T19:35:18.666Z`
 
 ## Totais
 
 | Item | Total |
 |---|---:|
-| files | 5545 |
-| runtimeFiles | 84 |
+| files | 5548 |
+| runtimeFiles | 86 |
 | assetFiles | 5434 |
-| textFiles | 106 |
+| textFiles | 109 |
 | functions | 1171 |
 | routes | 33 |
 | models | 2 |
@@ -26,9 +26,9 @@ Gerado em: `2026-08-24T19:30:37.595Z`
 | gameRuntimeFunctions | 1054 |
 | toolingFunctions | 117 |
 | uniqueAssetReferences | 5442 |
-| sourceFiles | 96 |
-| gameRuntimeSourceFiles | 65 |
-| toolingSourceFiles | 31 |
+| sourceFiles | 99 |
+| gameRuntimeSourceFiles | 67 |
+| toolingSourceFiles | 32 |
 
 - Descoberta semântica: `game-runtime-only`.
 - Funções: `all-source-except-docs` com domínio por entrada.

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-24T19:30:37.595Z",
+  "generatedAt": "2026-08-24T19:35:18.666Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5545,
-    "runtimeFiles": 84,
+    "files": 5548,
+    "runtimeFiles": 86,
     "assetFiles": 5434,
-    "textFiles": 106,
+    "textFiles": 109,
     "functions": 1171,
     "routes": 33,
     "models": 2,
@@ -24,9 +24,9 @@
     "gameRuntimeFunctions": 1054,
     "toolingFunctions": 117,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 96,
-    "gameRuntimeSourceFiles": 65,
-    "toolingSourceFiles": 31,
+    "sourceFiles": 99,
+    "gameRuntimeSourceFiles": 67,
+    "toolingSourceFiles": 32,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -45,6 +45,14 @@
       "path": ".github/workflows/account-live-e2e.yml",
       "size": 4580,
       "sha256": "dae33f5c7654f94a77fa7c45e48e663e84dce5e87685a3e0cc23ee8a259bc771",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/backend-secret-presence.yml",
+      "size": 2157,
+      "sha256": "3f0804f47b100baedb8f8a9bce0b805838f290ea4ead9e581e4cd35ff55a663f",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43602,6 +43610,22 @@
       "asset": true
     },
     {
+      "path": "audit/BACKEND-SECRET-PRESENCE.json",
+      "size": 397,
+      "sha256": "cbb7d0d0486794c16722ac8caa57cfa5e01497443247829632c92eb1d26919b2",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "audit/LIVE-BACKEND.json",
+      "size": 1023,
+      "sha256": "0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "audit/R41_CORRECAO_INTEGRAL_20260819.md",
       "size": 2042,
       "sha256": "2d3af5133044801a53a8b534cf43b783422ad8069d341e7016bbae53302bf667",
@@ -44115,8 +44139,8 @@
     },
     {
       "path": "r41-api-config.js",
-      "size": 1117,
-      "sha256": "45b5c05ca03e06b6bf1ddd76a278b687e3990a118b80df983ca66ef04348e738",
+      "size": 1041,
+      "sha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -67700,7 +67724,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 5,
+      "line": 4,
       "name": "clean",
       "kind": "arrow-one",
       "params": "v",
@@ -67722,7 +67746,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 6,
+      "line": 5,
       "name": "allowedOverride",
       "kind": "arrow-one",
       "params": "v",
@@ -73791,7 +73815,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 8,
+      "line": 7,
       "scope": "localStorage",
       "operation": "getItem",
       "value": "sns-api-origin",
@@ -73799,7 +73823,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 8,
+      "line": 7,
       "scope": "localStorage",
       "operation": "getItem",
       "value": "sns-r41-api-origin",
@@ -73807,7 +73831,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 14,
+      "line": 13,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-api-origin",
@@ -73815,7 +73839,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 15,
+      "line": 14,
       "scope": "localStorage",
       "operation": "setItem",
       "value": "sns-r41-api-origin",
@@ -73823,7 +73847,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 17,
+      "line": 16,
       "scope": "localStorage",
       "operation": "removeItem",
       "value": "sns-api-origin",
@@ -73831,7 +73855,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 18,
+      "line": 17,
       "scope": "localStorage",
       "operation": "removeItem",
       "value": "sns-r41-api-origin",
@@ -124522,7 +124546,7 @@
     },
     {
       "file": "r41-api-config.js",
-      "line": 4,
+      "line": 3,
       "text": "const params=new URLSearchParams(location.search);",
       "id": "MOVE-07727"
     },
