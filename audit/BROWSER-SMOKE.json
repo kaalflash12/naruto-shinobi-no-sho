@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-08-24T19:54:24.859Z",
+  "startedAt": "2026-08-24T19:54:20.555Z",
+  "status": "PASS_BROWSER_SMOKE",
+  "ok": true,
+  "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
+  "baseURL": "http://127.0.0.1:4173",
+  "checks": {
+    "httpLoad": true,
+    "publicIdentity": true,
+    "r41RuntimeLoaded": true,
+    "localResetHandlerLoaded": true,
+    "localResetClickReload": true,
+    "runtimeRequests": true,
+    "pageExceptions": true,
+    "backendIdentity": true
+  },
+  "api": {
+    "build": "NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB",
+    "backend": "unconfigured",
+    "originConfigured": false,
+    "origin": null,
+    "liveWorkerTestedElsewhere": true
+  },
+  "failures": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failedRuntimeRequests": []
+}

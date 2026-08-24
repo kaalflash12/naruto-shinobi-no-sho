@@ -1,0 +1,217 @@
+{
+  "generatedAt": "2026-08-24T19:55:09.144Z",
+  "status": "PASS_BROWSER_GAMEPLAY_E2E",
+  "ok": true,
+  "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
+  "site": "http://127.0.0.1:4173/",
+  "temporaryAccount": "play_mt7nn2885n93v",
+  "slotId": "gameplay-mt7nn288",
+  "checks": {
+    "temporaryAccountRegistered": true,
+    "cloudFixtureSaved": true,
+    "cloudFixtureListed": true,
+    "cloudFixtureLoadedIntoRuntime": true,
+    "hospitalWorldTick": true,
+    "restWorldTick": true,
+    "minigameWorldTick": true,
+    "visualStateReload": true,
+    "allOperationalContractsGameplayE2E": true,
+    "temporaryAccountDeleted": true
+  },
+  "contracts": [
+    {
+      "id": "persistent_injuries",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "ui": true,
+        "active": [
+          {
+            "id": "inj_e2e_fratura",
+            "status": "ACTIVE",
+            "severity": 2
+          },
+          {
+            "id": "inj_fratura_grave_do_braco",
+            "status": "ACTIVE",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "visual_state",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "uiSection": "r41-appearance-state",
+        "damageBadge": "inj_e2e_fratura"
+      }
+    },
+    {
+      "id": "hospital_treatment",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "before": {
+          "hp": 9,
+          "ryo": 5000
+        },
+        "after": {
+          "hp": 20,
+          "ryo": 4890,
+          "injuryStatus": "STABILIZED"
+        },
+        "ui": "Primeiro eu avalio o ferimento. Tratamento não apaga lesão grave nem tempo decorrido.\n\nPV perdido\n21\nCondições clínicas\nFratura grave do braço\nFerimentos persistentes\n2\nTempo\n120 min\nCusto\n110 Ryos\nTratamento comum estabiliza ferimentos persistentes, mas não apaga membro perdido/fratura grave automaticamente. A alta remove o ferimento somente quando o registro permitir.\nIniciar tratamento"
+      }
+    },
+    {
+      "id": "rest_consequences",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "short": {
+          "beforeChakra": 10,
+          "afterChakra": 14,
+          "beforeHp": 20,
+          "afterHp": 20
+        },
+        "long": {
+          "hp": 22,
+          "maxHp": 30,
+          "cap": 22,
+          "injuryPersists": true
+        }
+      }
+    },
+    {
+      "id": "minigame_engine",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "clicks": 5,
+        "result": {
+          "score": 1000,
+          "success": true,
+          "errors": 0,
+          "time": 4.8,
+          "performanceTags": [
+            "preciso",
+            "controlado"
+          ],
+          "meta": {}
+        },
+        "activity": {
+          "at": 1787601280487,
+          "clock": 44005,
+          "id": "coleta",
+          "score": 1000,
+          "total": 12,
+          "cd": 11,
+          "ok": true,
+          "reward": "+3 material(is)"
+        }
+      }
+    },
+    {
+      "id": "combat_pipeline",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "result": {
+          "actionType": "attack",
+          "source": "v82_basic_melee",
+          "label": "Ataque corporal",
+          "confirmed": true,
+          "hit": false,
+          "blocked": true,
+          "damage": 0,
+          "playerDamageTaken": 0,
+          "resourceSpent": 0,
+          "ko": false,
+          "enemyHpBefore": 26,
+          "enemyHpAfter": 26,
+          "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
+        },
+        "validation": {
+          "ok": true,
+          "errors": []
+        },
+        "animation": {
+          "prepare": "prepare_neutral",
+          "movement": "step_forward",
+          "impact": "impact_neutral",
+          "targetReaction": "hit_light",
+          "id": "generic_attack"
+        }
+      }
+    },
+    {
+      "id": "mission_choice_resolution",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "missionId": "task1",
+        "clicks": 5,
+        "minigame": "chakra_control",
+        "result": {
+          "score": 370,
+          "success": false,
+          "errors": 4,
+          "time": 0.8,
+          "performanceTags": [
+            "impreciso",
+            "com_erros"
+          ],
+          "meta": {}
+        },
+        "context": {
+          "source": "mission",
+          "missionId": "task1",
+          "stage": 0,
+          "choiceId": "task1:s1:c1"
+        }
+      }
+    },
+    {
+      "id": "online_intent_state",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "roomId": "room-local-gameplay-e2e",
+        "intent": "Cobrir saída E2E mt7nn2885n93v",
+        "persistedAcrossReload": true
+      }
+    },
+    {
+      "id": "world_tick",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "hospital": true,
+        "shortRest": true,
+        "longRest": true,
+        "activity": true,
+        "finalTicks": 8
+      }
+    },
+    {
+      "id": "save_autosave",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "localAt": 1787601285139,
+        "cloudAt": 1787601278023,
+        "lastError": "",
+        "cloudStatus": 200,
+        "cloudMinigames": 2,
+        "cloudInjury": "STABILIZED"
+      }
+    },
+    {
+      "id": "kurai_hud_resource",
+      "status": "PASS_GAMEPLAY_E2E",
+      "evidence": {
+        "hud": "🟣 Kurai 8/8",
+        "beforeMode": "guardada",
+        "afterMode": "empunhada",
+        "persistedMode": "empunhada",
+        "isolatedFixture": true
+      }
+    }
+  ],
+  "evidence": {},
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failures": []
+}
