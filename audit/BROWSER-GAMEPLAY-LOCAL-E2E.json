@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-24T20:33:06.506Z",
+  "generatedAt": "2026-08-24T21:40:35.679Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
-  "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
+  "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt7ozw1oh4nrc",
-  "slotId": "gameplay-mt7ozw1o",
+  "temporaryAccount": "play_mt7repaofblym",
+  "slotId": "gameplay-mt7repao",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,8 +15,7 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true,
-    "temporaryAccountDeleted": true
+    "allOperationalContractsGameplayE2E": true
   },
   "contracts": [
     {
@@ -97,11 +96,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787603558421,
+          "at": 1787607608446,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 11,
+          "total": 18,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,12 +147,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 672,
-          "success": true,
-          "errors": 2,
+          "score": 257,
+          "success": false,
+          "errors": 4,
           "time": 0.8,
           "performanceTags": [
-            "estavel",
+            "impreciso",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +170,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt7ozw1oh4nrc",
+        "intent": "Cobrir saída E2E mt7repaofblym",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +189,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787603562972,
-        "cloudAt": 1787603555873,
+        "localAt": 1787607617123,
+        "cloudAt": 1787607605996,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,

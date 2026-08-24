@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-24T20:32:23.282Z",
-  "startedAt": "2026-08-24T20:32:17.417Z",
+  "generatedAt": "2026-08-24T21:39:53.738Z",
+  "startedAt": "2026-08-24T21:39:49.571Z",
   "status": "PASS_BROWSER_SMOKE",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_GITHUB_ACTIONS",
@@ -20,7 +20,8 @@
     "backend": "unconfigured",
     "originConfigured": false,
     "origin": null,
-    "liveWorkerTestedElsewhere": true
+    "liveWorkerTestedElsewhere": false,
+    "liveWorkerEvidence": "UNVERIFIED_BY_LOCAL_SMOKE"
   },
   "failures": [],
   "pageErrors": [],
