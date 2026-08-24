@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-24T20:24:24.742Z",
+  "generatedAt": "2026-08-24T20:31:04.207Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-24T20:24:20.361Z",
+  "sourceInventoryGeneratedAt": "2026-08-24T20:30:59.482Z",
   "counts": {
     "functions": 1175,
     "functionsWithExactCode": 1175,
@@ -9335,7 +9335,7 @@
       "line": 13,
       "name": "norm",
       "exactCode": true,
-      "snippetSha256": "7e8b05ce7bb261c79ddf34629c3e7354a27cfdd3d2260b681c0df535a726f2f0"
+      "snippetSha256": "a38bc293fa955487b4162338cbaa2e0ba903cc6c706b0e923a410cea9e692bda"
     },
     {
       "id": "FUNC-01164",
@@ -9343,7 +9343,7 @@
       "line": 14,
       "name": "hasSourceExt",
       "exactCode": true,
-      "snippetSha256": "fbf329a30791bf80c08bf0adda1f2bad450a5b192e5c9f7e5385eb5484a35b53"
+      "snippetSha256": "d56018c18fb4de23bf4ea5eb264bef3fde3aaef77839de32af146a23bd346676"
     },
     {
       "id": "FUNC-01165",
@@ -9351,7 +9351,7 @@
       "line": 15,
       "name": "isDocumentation",
       "exactCode": true,
-      "snippetSha256": "7bf6f053cc437cd27de6673899ee48af1aeee57fff8536ad6d55ac94471ebe0e"
+      "snippetSha256": "22ff02ab290f1e359f5bfa006bbdade4de5285b6282e4d88febeebdcb8b0f15b"
     },
     {
       "id": "FUNC-01166",
@@ -9359,7 +9359,7 @@
       "line": 16,
       "name": "isTooling",
       "exactCode": true,
-      "snippetSha256": "f1c5a027b92429a95488b3772e50620ddd77c7e02fea93127fdf31a31c1e8d4e"
+      "snippetSha256": "d3564bae3f06a9da2f7f212831cc1a5cc20595654e5f37effa3a81be9a2eb3be"
     },
     {
       "id": "FUNC-01167",
@@ -15678,12 +15678,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5613,
-      "sha256": "1bb65964cbe4ea394274d3091dc2497e32aa06003f002b012fb7be9111f1e5f3"
+      "sha256": "65307fe8dd8cfe66bf90ba376131e7ce3db970611852ef97bf3273c9180b6f34"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 767,
-      "sha256": "612bd70834eec87df8906e318d29fe26129364a635844890e0e9a511e34b490a"
+      "sha256": "d6b3445ca29aaeeea0b02d00befc4fb6eb44caa5f0d6ff9821f9cd9da5f5f01c"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -16122,8 +16122,8 @@
     },
     {
       "path": "tools/refine-technical-spec.mjs",
-      "size": 12448,
-      "sha256": "b7e5f87f940c4634198739263635a951b4d0554a5b8bcdab72e7260a6709ff3c"
+      "size": 12478,
+      "sha256": "36ca9a7dbcf3637489252d8003f88f1c17b60e7747a002e842885345332311e4"
     },
     {
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
