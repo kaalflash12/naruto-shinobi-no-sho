@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-24T02:23:34.835Z",
+  "generatedAt": "2026-08-24T02:28:52.306Z",
   "status": "FAIL_BROWSER_GAMEPLAY_E2E",
   "ok": false,
   "scope": "PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY",
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "temporaryAccount": "play_mt6m3d3dao6ad",
-  "slotId": "gameplay-mt6m3d3d",
+  "temporaryAccount": "play_mt6ma726jaavm",
+  "slotId": "gameplay-mt6ma726",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -17,11 +17,12 @@
   "evidence": {},
   "pageErrors": [],
   "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
     "Failed to load resource: the server responded with a status of 404 ()",
     "Failed to load resource: the server responded with a status of 404 ()"
   ],
   "failures": [
-    "Error: navegação personagem não abriu a ficha; h1=Gameplay E2E\n    at assert (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538203153.mjs:18:42)\n    at navigate (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538203153.mjs:116:5)\n    at async testNormalGameplay (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538203153.mjs:279:3)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538203153.mjs:485:5"
+    "Error: navegação personagem não abriu a ficha; h1=Gameplay E2E\n    at assert (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538521916.mjs:18:42)\n    at navigate (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538521916.mjs:117:5)\n    at async testNormalGameplay (file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538521916.mjs:280:3)\n    at async file:///home/runner/work/naruto-shinobi-no-sho/naruto-shinobi-no-sho/.tmp-gameplay-e2e-v2/browser-gameplay-e2e-v2-1787538521916.mjs:486:5"
   ]
 }
