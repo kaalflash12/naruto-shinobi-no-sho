@@ -1,0 +1,75 @@
+name: Local Gameplay Diagnostic
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/local-gameplay-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gameplay-local:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Add isolated local API shim
+        shell: bash
+        run: |
+          cat > /tmp/shim.py <<'PY'
+          import json, os, secrets
+          from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+          ROOT=os.environ['GITHUB_WORKSPACE']; slots={}; token='diag-'+secrets.token_hex(12)
+          class H(SimpleHTTPRequestHandler):
+            def translate_path(self,p):
+              old=os.getcwd(); os.chdir(ROOT)
+              try:return super().translate_path(p)
+              finally:os.chdir(old)
+            def _json(self,status,data):
+              b=json.dumps(data).encode(); self.send_response(status); self.send_header('content-type','application/json'); self.send_header('content-length',str(len(b))); self.end_headers(); self.wfile.write(b)
+            def _body(self):
+              n=int(self.headers.get('content-length','0') or 0)
+              try:return json.loads(self.rfile.read(n) or b'{}')
+              except:return {}
+            def do_GET(self):
+              if self.path.startswith('/api/auth/me'): return self._json(200,{'ok':True,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
+              if self.path.startswith('/api/account/slots'): return self._json(200,{'ok':True,'slots':[{'slotId':k,'id':k,'name':v.get('character',{}).get('name','Gameplay E2E')} for k,v in slots.items()]})
+              return super().do_GET()
+            def do_POST(self):
+              p=self.path.split('?',1)[0]; d=self._body()
+              if p=='/api/auth/register' or p=='/api/auth/login': return self._json(200,{'ok':True,'token':token,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
+              if p=='/api/auth/me': return self._json(200,{'ok':True,'account':{'id':'diag','username':'gameplaydiag','displayName':'Gameplay E2E','role':'player'}})
+              if p=='/api/account/save':
+                sid=str(d.get('slotId','')); slots[sid]=d.get('save') or d.get('data') or {}; return self._json(200,{'ok':True,'saved':True,'slotId':sid})
+              if p=='/api/account/slots': return self._json(200,{'ok':True,'slots':[{'slotId':k,'id':k,'name':v.get('character',{}).get('name','Gameplay E2E')} for k,v in slots.items()]})
+              if p=='/api/account/load':
+                sid=str(d.get('slotId','')); return self._json(200,{'ok':True,'slotId':sid,'save':slots.get(sid),'data':slots.get(sid)})
+              if p.startswith('/api/'):
+                return self._json(200,{'ok':True,'saved':True,'messages':[],'room':{'id':'diag-room','players':[]}})
+              return self._json(404,{'ok':False,'error':'NOT_FOUND'})
+          ThreadingHTTPServer(('127.0.0.1',8000),H).serve_forever()
+          PY
+          python3 /tmp/shim.py >/tmp/shim.log 2>&1 &
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:8000/ >/dev/null && exit 0; sleep .5; done
+          cat /tmp/shim.log; exit 1
+      - name: Run gameplay V4 locally
+        env:
+          PUBLIC_GAME_URL: http://127.0.0.1:8000/
+          BROWSER_GAMEPLAY_REPORT: /tmp/BROWSER-GAMEPLAY-E2E.json
+        run: node tools/browser-gameplay-e2e-v4.mjs
+      - name: Show report
+        if: always()
+        run: |
+          cat /tmp/BROWSER-GAMEPLAY-E2E.json 2>/dev/null || true
+          echo '--- shim log ---'
+          tail -200 /tmp/shim.log || true
