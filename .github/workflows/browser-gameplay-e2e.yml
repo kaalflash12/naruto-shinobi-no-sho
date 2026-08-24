@@ -2,20 +2,6 @@ name: Browser Gameplay E2E
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'app.js'
-      - 'index.html'
-      - 'r41-api-config.js'
-      - 'r41-github-api.js'
-      - 'r41-account-ui.js'
-      - 'r41-map-hitfix.css'
-      - 'src/**'
-      - 'assets/**'
-      - 'tools/browser-gameplay-e2e*.mjs'
-      - 'tools/gameplay-live-provenance.mjs'
-      - '.github/workflows/browser-gameplay-e2e.yml'
 
 permissions:
   contents: write
