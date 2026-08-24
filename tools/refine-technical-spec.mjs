@@ -13,7 +13,7 @@ const inv=JSON.parse(fs.readFileSync(INV,'utf8'));
 const norm=p=>String(p||'').replace(/\\/g,'/');
 const hasSourceExt=p=>SOURCE_EXT.has(path.extname(norm(p)).toLowerCase());
 const isDocumentation=p=>norm(p).startsWith('docs/');
-const isTooling=p=>norm(p).startsWith('tools/')||norm(p).startsWith('.github/');
+const isTooling=p=>norm(p).startsWith('tools/')||norm(p).startsWith('.github/')||norm(p).startsWith('audit/');
 const isSource=p=>hasSourceExt(p)&&!isDocumentation(p);
 const isGameRuntimeSource=p=>isSource(p)&&!isTooling(p);
 const domainOf=p=>isTooling(p)?'tooling':(isGameRuntimeSource(p)?'game-runtime':'other-source');
