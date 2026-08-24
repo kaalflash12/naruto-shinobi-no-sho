@@ -7,6 +7,7 @@
   const ACCOUNT_PREFIX='sns-v841-account-save:';
   const ONLINE_RECOVERY_KEY='sns-v841-online-room-recovery';
   const RETURN_SCREEN_KEY='sns-v841-return-screen';
+  const KURAI_MODES=new Set(['guardada','empunhada','selada']);
   let restoring=false;
   let reconciling=false;
   let onlineTransition=false;
@@ -58,6 +59,38 @@
     const json=JSON.stringify(save);
     localStorage.setItem(entry.key,json);
     localStorage.setItem(LEGACY_KEY,json);
+  }
+
+  function applyKuraiMode(save,mode){
+    if(!save||typeof save!=='object'||!KURAI_MODES.has(mode))return false;
+    const hasKurai=Boolean(save.special?.kurai||save.character?.kurai||save.kurai);
+    if(!hasKurai)return false;
+    save.special=save.special&&typeof save.special==='object'?save.special:{};
+    save.special.kurai=save.special.kurai&&typeof save.special.kurai==='object'?save.special.kurai:{};
+    save.special.kurai.mode=mode;
+    if(save.kurai&&typeof save.kurai==='object')save.kurai.mode=mode;
+    if(save.character?.kurai&&typeof save.character.kurai==='object')save.character.kurai.mode=mode;
+    return true;
+  }
+
+  async function setKuraiModeDirect(button){
+    const mode=String(button?.getAttribute('data-id')||'').trim().toLowerCase();
+    if(!KURAI_MODES.has(mode))return false;
+    const id=active(),entry=activeAccountEntry(id),legacy=parse(localStorage.getItem(LEGACY_KEY));
+    let save=entry?.save&&typeof entry.save==='object'?copy(entry.save):(legacy&&typeof legacy==='object'?copy(legacy):null);
+    if(!save||!applyKuraiMode(save,mode))return false;
+    if(entry){
+      persistAccountSave(entry,save);
+    }else{
+      save.updatedAt=Date.now();
+      localStorage.setItem(LEGACY_KEY,JSON.stringify(save));
+    }
+    window.dispatchEvent(new CustomEvent('sns:kurai-mode-changed',{detail:{mode,slotId:id||null}}));
+    if(entry&&authenticated()){
+      try{await apiPost('/api/account/save',{slotId:id,gameVersion:save.version||'8.20.0-r40',save});}
+      catch(e){console.warn('[R41_KURAI_ACCOUNT_SYNC]',e.message);}
+    }
+    return true;
   }
 
   async function finishOnlineTransition(entry,id,save){
@@ -177,6 +210,9 @@
     const action=String(target.getAttribute('data-action')||'');
     const screen=String(target.getAttribute('data-screen')||'');
     const id=String(target.getAttribute('data-id')||target.getAttribute('data-slot')||'').trim();
+    if(action==='kurai-mode'&&KURAI_MODES.has(id.toLowerCase())&&(activeAccountEntry()||parse(localStorage.getItem(LEGACY_KEY))?.special?.kurai)){
+      event.preventDefault();event.stopImmediatePropagation();setKuraiModeDirect(target);return;
+    }
     if(action==='online-create'&&authenticated()&&activeAccountEntry()){event.preventDefault();event.stopImmediatePropagation();createOnlineRoomDirect(target);return;}
     if(action==='online-join'&&authenticated()&&activeAccountEntry()&&String(document.getElementById('online-room-id')?.value||'').trim()){event.preventDefault();event.stopImmediatePropagation();joinOnlineRoomDirect(target);return;}
     if(action==='account-load'||action==='load-account-slot'){remember(id);return;}
@@ -196,5 +232,5 @@
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 
-  window.__SNS_ACTIVE_ACCOUNT_SLOT__={get:active,remember,forget,recover:recoverActiveSlot,reconcile:reconcileOnlineRoomMirror};
+  window.__SNS_ACTIVE_ACCOUNT_SLOT__={get:active,remember,forget,recover:recoverActiveSlot,reconcile:reconcileOnlineRoomMirror,setKuraiMode:setKuraiModeDirect};
 })();
