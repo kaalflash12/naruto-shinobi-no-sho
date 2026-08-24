@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-24T15:56:43.006Z`
+Gerado em: `2026-08-24T18:14:41.738Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -16,7 +16,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 
 ## API-00003 — `/api/account/save`
 
-- **Referências:** `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/oneclick-backend/src/index.js:70`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:106`
+- **Referências:** `app.js:749`, `app.js:3547`, `app.js:3597`, `cloudflare/oneclick-backend/src/index.js:70`, `cloudflare/oneclick-backend/test/local-e2e.mjs:10`, `cloudflare/r41-api/src/index.js:106`, `src/r41-account-active-slot.js:90`, `src/r41-account-active-slot.js:98`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00004 — `/api/account/slots`
@@ -91,7 +91,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 
 ## API-00018 — `/api/online/create`
 
-- **Referências:** `app.js:1152`, `cloudflare/oneclick-backend/src/index.js:80`, `cloudflare/oneclick-backend/test/local-e2e.mjs:11`, `cloudflare/r41-api/src/index.js:119`
+- **Referências:** `app.js:1152`, `cloudflare/oneclick-backend/src/index.js:80`, `cloudflare/oneclick-backend/test/local-e2e.mjs:11`, `cloudflare/r41-api/src/index.js:119`, `src/r41-account-active-slot.js:110`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00019 — `/api/online/heartbeat`
@@ -101,7 +101,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 
 ## API-00020 — `/api/online/join`
 
-- **Referências:** `app.js:1153`, `cloudflare/oneclick-backend/src/index.js:81`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:120`
+- **Referências:** `app.js:1153`, `cloudflare/oneclick-backend/src/index.js:81`, `cloudflare/oneclick-backend/test/local-e2e.mjs:12`, `cloudflare/r41-api/src/index.js:120`, `src/r41-account-active-slot.js:129`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00021 — `/api/online/message`

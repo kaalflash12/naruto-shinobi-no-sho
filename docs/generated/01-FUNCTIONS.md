@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-24T15:56:43.006Z`
+Gerado em: `2026-08-24T18:14:41.738Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -90,7 +90,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `defaultState`, `recalc`
+- **Chamadas internas detectadas:** `defaultState`, `parse`, `recalc`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -154,7 +154,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v=''`
-- **Chamadas internas detectadas:** `clamp`, `rand`, `rollTerion2d10`, `rollLeon2d10`, `fmt`, `pct`, `today`, `newId`, `sourceName`, `xpNeeded`, `ncFor`, `graduationFor`, `originById`, `get`, `hijutsuById`, `variantById`, `updateVariantSelect`, `aptitudeById`, `itemById`, `jutsuById`, `missionById`, `set`, `aptitudeEffects`, `recalc`, `applyBonusToAttributes`, `createCharacter`, `toast`, `defaultState`, `saveState`, `render`, `gainXp`, `skillTotal`, `characterCanLearn`, `test`, `learnJutsu`, `buyAptitude`, `buyItem`, `useItem`, `battleLog`, `rest`, `daily`, `missionAvailable`, `startMission`, `resolveMissionChoice`, `startBattle`, `finishMission`, `enemyFor`, `weaponDamage`, `conditionPenalty`, `useBattleJutsu`, `enemyTurn`, `advanceBattleTurn`, `elementAdvantage`, `finishBattle`, `basicAttack`, `defendBattle`, `setDefense`, `normalizeAIResult`, `r361MissionScript`, `r361NarratorOptions`, `aiFallback`, `aiGameContext`, `r27CurrentLocationId`, `r25NpcRuntime`, `v83ClockLabel`, `v83EnsureState`, `v75Norm`, `checkAIStatus`, `fetch`, `json`, `updateAIStatusUI`, `mergeWorldUpdates`, `currentAIDirector`, `readAIDirectorFromForm`, `callAI`, `apiHeaders`, `narrateMissionStage`, `aiCustom`, `aiGenerateMission`, `normKey`, `normalize`, `leonRating`, `performAICheck`, `r25Duo`, `applyAIEffects`, `renderChrome`, `saveCampaignNow`, `leonSave`, `cloudSave`, `cloudLoad`, `exportSave`, `importSave`, `modal`, `closeModal`, `bars`, `renderCreate`, `renderHome`, `values`, `renderCharacter`, `renderOrigins`, `renderAptitudes`, `jutsuCard`, `renderTechniques`, `renderMissions`, `renderActiveMission`, `renderCombat`, `leonPrivatePanel`, `renderInventory`, `renderAI`, `renderEncyclopedia`, `renderConfig`, `deepClone`, `coreAttrKeys`, `socialAttrKeys`, `professionById`, `powerById`, `villageArt`, `itemPrice`, `originBonusObject`, `bonusHuman`, `sourceShort`, `writeCreationDraft`, `clearCreationDraft`, `newCreationDraft`, `getCreationDraft`, `creationAttrSpent`, `creationSocialSpent`, `creationSkillSpent`, `creationPowerSpent`, `creationPowerAvailable`, `creationCombatMoved`, `initialSkillBase`, `creationSkillTotal`, `creationSkillAvailable`, `characterSkillPurchaseAllowed`, `creationCombatTotal`, `creationAptitudeAvailable`, `validateCreationStep`, `goCreationStep`, `selectCreationOrigin`, `changeCreationAttr`, `changeCreationCombat`, `normalizeCombatBaseDraft`, `changeCreationSkill`, `toggleCreationAptitude`, `changeCreationPower`, `toggleExtraAptitude`, `addCreationItem`, `resizeImageFile`, `resolve`, `readSlotIndex`, `writeSlotIndex`, `updateSlotSummary`, `loadSlot`, `hydrateState`, `deleteSlot`, `loadState`, `r25CoreDefaults`, `r25LegacyFromCoreValues`, `renderCreationProgress`, `renderSlots`, `startSheetEdit`, `cancelSheetEdit`, `saveSheetEdit`, `officialOriginGrant`, `officialHijutsuGrant`, `ensureTravel`, `gridStyle`, `pctPos`, `mapCellButtons`, `selectedWorldVillage`, `worldSteps`, `worldRouteExists`, `missionDestination`, `travelMissionRows`, `mapLog`, `renderVillage`, `moveMapCell`, `selectWorld`, `travelWorld`, `leonUnlock`, `leonLoad`, `cloudLoadById`, `ensureOnlineState`, `onlineCharacterSummary`, `onlinePost`, `createOnlineRoom`, `refreshOnlineRoom`, `joinOnlineRoom`, `onlineHeartbeat`, `warn`, `sendOnlineMessage`, `leaveOnlineRoom`, `renderOnline`, `renderAIEnhanced`, `itemVisual`, `itemGlyph`, `equipmentReferenceGallery`, `attrIcon`, `allItems`, `shopItemAllowed`, `itemRarity`, `v7ItemArt`, `itemCategory`, `itemDescription`, `ensureV7State`, `add`, `inventoryCompartments`, `rankIndexName`, `salePrice`, `itemCardV7`, `hardTechniqueAccess`, `renderShop`, `buyItemV7`, `sellItemV7`, `trainingProgress`, `renderTraining`, `doTraining`, `weightedDrop`, `rollLoot`, `enemyTemplateFor`, `makeTerrain`, `gridDistance`, `terrainAt`, `tacticalMove`, `playerAttackRange`, `moveEnemyToward`, `techniqueRangeV7`, `renderTacticalBoard`, `routeMinigame`, `resolveMissionRoute`, `npcPortrait`, `npcInteract`, `healHospital`, `villageLocation`, `ensureV74State`, `ensureLeonKuraiV74`, `refreshDailyEventsV74`, `dayKeyV74`, `seededV74`, `eventCompletedV74`, `activeEventsV74`, `eventByIdV74`, `eventRewardTextV74`, `completeEventV74`, `eventTestV74`, `eventPanelV74`, `buyQtyV74`, `sellQtyV74`, `kuraiCardV74`, `leonDojoV74`, `rinnePath`, `ensureV75State`, `v75CostText`, `v75JutsuArt`, `v75LeonTechArt`, `rinneUnlocked`, `rinneRequirementStatus`, `unlockRinnePathV75`, `v75NormalActions`, `v75LeonActions`, `v75Actions`, `v75Action`, `v75ResolvedCost`, `v75CanPay`, `v75Deduct`, `v75PromptAction`, `useRpgActionV75`, `clone`, `v75HasEffects`, `rpgRollV75`, `call`, `v75EffectsPanel`, `v75ConditionRow`, `v75ResourceControls`, `adjustRpgResourceV75`, `v75SheetPanel`, `v75ActionCard`, `renderAIV75`, `privateAccessAllowed`, `v8EnsureCreationVisuals`, `v8VisualSummary`, `v8ChoiceButtons`, `v8ProgressHtml`, `v8Asset`, `v8CreatorAsset`, `v8TechAsset`, `v8ItemAsset`, `v8ActionAsset`, `v8EventAsset`, `v8XpTableRows`, `v8TechniqueFallback`, `v8ItemFallback`, `v8LeonTerrain`, `v8StartLeonBattle`, `v8LeonSkillFor`, `v8LeonDefenseCD`, `v8LeonLog`, `v8LeonFinish`, `v8LeonNextTurn`, `v8LeonEnemyTurn`, `v8LeonBasicAttack`, `v8LeonDefend`, `v8LeonPromptCombat`, `v8LeonUseAction`, `v8LeonBoard`, `v8RenderLeonCombat`, `v81IsLeon`, `v81LeonCaps`, `v81CapGroup`, `v81PaletteGroup`, `v81CapArt`, `v81ActionId`, `v81SyncLeonPrivate`, `matchTab`, `count`, `v81CapCard`, `v81CodexNav`, `v81KusenroCodex`, `v81SuirinCodex`, `v81KuraiCodex`, `v81Progression`, `v81CombatTabDefs`, `v81CombatActions`, `v81CombatActionCard`, `v82DamageGrade`, `v82DamageGradeLabel`, `v82OfficialBaseDamage`, `v82AttackMode`, `v82ResolvePlayerAttack`, `v82LeonOutcome`, `v84Visual`, `v84NormKey`, `v82OriginArt`, `v82JutsuArt`, `v82Learnable`, `v82OwnedNormal`, `v82NormalTechCard`, `v82LeonTechCard`, `v82EnsureTraining`, `v82TrainingRoll`, `v82PracticeSkill`, `v82PracticeTech`, `skillName`, `v82Progression`, `v82CurrentNPCs`, `v82ActionList`, `v82NarrationCard`, `v82RenderLeonCodex`, `v82RulesCodex`, `v82NormalBoard`, `v82CleanUI`, `v821Clone`, `v821ActiveStatus`, `v821ApplyLeonCanonical`, `v821LeonLocalState`, `v821LoadLeon`, `v821ResetLeon`, `v821LoadImage`, `v821DrawCrop`, `v821DrawAvatar`, `v821ComposeAvatarDataUrl`, `v83Copy`, `v83Hash`, `v83ClockAbsolute`, `v83DefaultMasterState`, `v83AdvanceMinutes`, `v83WorldTick`, `v83Commit`, `v83SavePoint`, `v83BeginScene`, `v83EndScene`, `v83CapCategory`, `v83CapArt`, `v83CapForAction`, `v83IsPassive`, `v83UsageLimit`, `v83ResourceReasons`, `v83Decision`, `v83CatalogActionDecision`, `v83ActionDecision`, `v83Deactivate`, `v83AfterTechnique`, `v83TechStatusFilter`, `v83TechniqueButton`, `v83TechniqueCard`, `v83SkillValue`, `v83EligibleMentorIds`, `v83AcquireDecision`, `v83ProjectFor`, `v83StartProject`, `v83TrainingMentor`, `v83ProjectSession`, `v83FinalizeProject`, `v83PracticeOwned`, `v83PracticeSkillAdvance`, `v83VisibleMentors`, `v83MentorOptions`, `v83MissionExercise`, `v83CatalogCard`, `v83MissionRecord`, `v83MissionAccess`, `v83CreateMissionBranch`, `v83ResolveMissionEvent`, `v84TrainerCanUnlock`, `v83CompleteMissionTraining`, `v83CombatRoundTick`, `v84MigrateLeon`, `v84Clone`, `v84EnsureMaster`, `v84NpcArt`, `v84SyncBattleTokens`, `v84BattlefieldMarkup`, `renderBattlefieldV84`, `v84SceneActors`, `v84IntegrateVisualDraft`, `v84SceneStageMarkup`, `renderNpcCodexV84`, `v84KnowledgeMeta`, `r39SemanticKnowledgeFallback`, `v84KnowledgeImage`, `renderKnowledgeV84`, `v84OpenKnowledge`, `v84OpenNpc`, `v84Api`, `v84DecorateScreen`, `v841CreatorLayer`, `v841ReferenceData`, `v841RecordName`, `v841RecordDesc`, `renderVisualAtlasV841`, `v841CardArt`, `v841InsertArt`, `v841DecorateScreen`, `v841DurationMinutes`, `accountApi`, `accountLocalKey`, `accountArt`, `cacheAccount`, `setAccountState`, `loadAccountSlots`, `loadAccountSlot`, `loadLeonAccount`, `accountToken`, `v841SyncAccountSave`, `startAccountCreation`, `submitAuth`, `restoreAuth`, `logoutAccount`, `deleteAccountSlot`, `importLegacySlots`, `renderAccessV841`, `r31Asset`, `renderAccountSlotsV841`, `decorateAccountChrome`, `r25Commit`, `r25CommonCD`, `r25NarrativeFromChoice`, `r25Rest`, `r25TrainerAvailable`, `r25MentorSession`, `r25NpcRoutineSlot`, `r25CoreSpent`, `r25CoreFromLegacy`, `r25SyncLegacyFromCore`, `r25ChangeCoreAttr`, `r25CoreResourcePreview`, `r25CoreCreatorHTML`, `r25CoreReviewHTML`, `r25ReplaceWizardMiddle`, `r25ApplyCoreResources`, `r27AbsMinute`, `r27Copy`, `r27Ensure`, `r27TrainingRecent`, `r27TrainingGate`, `r27TrainingBlock`, `r27RecordTraining`, `r27RestSafety`, `r27ApplyAIResultEffects`, `num`, `r27EnemyArtForOpponent`, `r27BattleDims`, `r27NormalizeOpponent`, `r27SetBattleOpponents`, `r27SyncBattleTarget`, `r27ActiveEnemies`, `r27SelectBattleTarget`, `r27CellBlocked`, `r27PathStep`, `r27EnemyIntent`, `r27TargetStrip`, `r27TrainingData`, `r27TechniqueTrack`, `r27TechniqueForms`, `r27UpdateTechniqueForms`, `r27CommonSkillPractice`, `r27CommonTechniquePractice`, `r27DojoPractice`, `r27RestUnified`, `r27RenderRest`, `r27MaterialSnapshot`, `r27DiffObjects`, `r27VillageKey`, `r27VillageCenterLocation`, `r27SetCurrentLocation`, `r27NpcSameLocation`, `r27VillageLocationId`, `r27SocialEnsure`, `r27NpcRelation`, `r27RelationLabel`, `r27NpcByAnyId`, `r27RegisterRumor`, `r27SocialInteraction`, `r27FactionImpact`, `r27ApplySocialImpactFromAI`, `r27RenderRelationships`, `r36StoryArc`, `r36StoryChoices`, `r27StoryChapters`, `r27StoryEnsure`, `r27StoryComplete`, `r27StoryEnemySpecs`, `r27StoryStart`, `r27DuelEnsure`, `r27DuelAutoAI`, `r36StoryChance`, `r27StoryChoice`, `r27StoryBattleTick`, `r27RenderStory`, `r27DuelEra`, `r27DuelRoster`, `r27DuelSelect`, `r27DuelFighter`, `r27StartDuel`, `byId`, `r27DuelAlive`, `r27DuelCurrent`, `r27DuelTarget`, `r27DuelRoll`, `r27DuelCheckEnd`, `r27DuelAIRound`, `r27DuelAction`, `r27RenderDuel`, `r27ActionValidation`, `r27QuickCards`, `r27GMFormat`, `r27RuntimeValidation`, `r27InvocationEnsure`, `r27GrantInvocationContract`, `r27Summon`, `r27SenjutsuEnsure`, `r27SenjutsuGather`, `r27CampaignAudit`, `r27CanonEnsure`, `r27SystemDispatch`, `r27RenderSystems`, `r27ApplyLeonAuthority`, `r27WorldMission`, `r27MissionStageTitle`, `r27MissionScriptedNarrative`, `r27ArcNumber`, `r27CanonPreviousResolved`, `r27CanonPlayerLocation`, `r27CanonLocationMatch`, `r27CanonRoster`, `r27CanonPendingSync`, `r27ProcessCanonTriggers`, `r27CanonValidEvidence`, `r27ResolveCanonEvent`, `r27ApplyCanonEvidenceFromAI`, `r29Hash`, `r29Family`, `r29AssetFor`, `r29NormRank`, `r29Ensure`, `r29RankMax`, `r29CanonRank`, `r29SeedCanonMissions`, `r29Assignment`, `r29MissionKind`, `r29ActiveCanonEvent`, `r29AssignMission`, `r29SideCandidates`, `r29DirectorTick`, `r29MissionAccess`, `r29UpdatePromotionPending`, `r29PromotionRequirements`, `r29RankReview`, `r30Pick`, `r30Text`, `r30JutsuArt`, `r30ItemArt`, `r30SkillArt`, `r30AptArt`, `r30ResourceArt`, `r30CharacterArt`, `r30NpcArt`, `r30TitleArt`, `r30EffectArt`, `r30Ensure`, `r30UnlockTitle`, `r30RevealSecret`, `r30ResolveSecret`, `r30SecretDef`, `r30EvaluateSecrets`, `r30TitlesHtml`, `r31GeneratedItemPool`, `r31EnsureCatalogItems`, `r31Ensure`, `r31Clock`, `r31Commit`, `r31Norm`, `r31HasOwned`, `r31GradId`, `r31Metric`, `r31Category`, `r31MentorFor`, `r31SourceUnlocked`, `r31LineageRequirement`, `r31RequiredItemForTechnique`, `r31InventoryHas`, `r31EquipmentRequirement`, `r31RuntimePrerequisites`, `r31TechniqueAccess`, `r31RecordTechniqueUse`, `r31ExpireActiveTechniques`, `r31TechniqueDamageProfile`, `r31TechniqueStatusLabel`, `r31TechniqueMentorAvailable`, `r31ResolveTrainingOpportunity`, `r31OpportunityFromBranch`, `r31MissionBranches`, `r31SyncMissionBranches`, `r31ResolveMentorOpportunity`, `r31DiscoverMentorForOpportunity`, `r31ResolveOpportunity`, `r31MentorTechniqueCandidates`, `r31MentorSession`, `r31TechniqueArt`, `r31Semantic`, `r31UniqueAssets`, `r31PickVisualPool`, `r31VariantContext`, `r31ItemArt`, `r31NpcArt`, `r31EnemyArt`, `r31MissionArt`, `r31VendorArt`, `r31TechniqueCard`, `r31PartyDef`, `r31PartyHtml`, `r31PartyToggle`, `r31RandomBattle`, `r31PartyAction`, `r31BattlefieldArt`, `r31BoardHtml`, `r31AptitudeArt`, `r31SkillArt`, `r31ResourceArt`, `r31VisualCoverage`, `r31PlaceholderPolicy`, `r31StaticAcceptance`, `r31QaEnter`, `r31QaAcceptance`, `r31InstallVisualMaps`, `bind`, `r31DecorateUI`, `r32Clone`, `r32MissionRuntime`, `r32ActiveAssignment`, `r32PersistMissionRuntime`, `r32RestoreMissionRuntime`, `r32ActiveMission`, `r32MissionDependencyIds`, `r32MissionContinuityGate`, `r33Script`, `r33Bonus`, `r33CD`, `r33Chance`, `r33Outcome`, `r33ApplyEffects`, `r33EnsureRun`, `r33Stage`, `r33ChoiceMeta`, `r33EffectSummary`, `r33MissionHeader`, `r33ChoiceCard`, `r33RenderActiveMission`, `r33LocalOpponent`, `r33StartLocalCombat`, `r35MissionError`, `r34RecordClientError`, `r34SaveNow`, `r382ContentType`, `r382TrueMissions`, `r382Tasks`, `r382Events`, `r382Script`, `r382Mode`, `r382ModeLabel`, `r382CampaignForArc`, `r382ArcById`, `r382NarrativeState`, `r382RemoveLegacyCanonPseudoMissions`, `r382Words`, `r382ArcMissionScore`, `r382ArcMissionCandidate`, `r382RenderNarrativeHub`, `r382NarrateArc`, `done`, `r382MissionFreeAction`, `r41Clone`, `r41Slug`, `r41AbsMinute`, `r41Ensure`, `r41ActiveInjuries`, `r41PersistentRecoveryCap`, `r41Log`, `r41CloudFlush`, `r41ScheduleCloudSave`, `r41HospitalPlan`, `r41HospitalTreat`, `r41GameForText`, `r41RecordMinigame`, `r41OpenMinigame`, `r41BroadcastGameplay`, `finish`, `frame`, `nextTiming`, `nextTargets`, `nextSequence`, `nextReaction`, `nextOdd`, `nextMerge`, `nextWave`, `nextStealth`, `handler`, `next`, `r41ExactVisual`, `r41Appearance`, `r41SetVisualState`, `r41AvatarComposite`, `r41DoActivity`, `r41OnlineAction`, `r41OnlineRefresh`, `r41SendOnlineIntent`, `r41CombatSnapshot`, `r41CombatVisual`, `r41PresentDiff`
+- **Chamadas internas detectadas:** `clamp`, `rand`, `rollTerion2d10`, `rollLeon2d10`, `fmt`, `pct`, `today`, `newId`, `sourceName`, `xpNeeded`, `ncFor`, `graduationFor`, `originById`, `get`, `hijutsuById`, `variantById`, `updateVariantSelect`, `aptitudeById`, `itemById`, `jutsuById`, `missionById`, `set`, `aptitudeEffects`, `recalc`, `applyBonusToAttributes`, `createCharacter`, `toast`, `defaultState`, `saveState`, `render`, `gainXp`, `skillTotal`, `characterCanLearn`, `test`, `learnJutsu`, `buyAptitude`, `buyItem`, `useItem`, `battleLog`, `rest`, `daily`, `missionAvailable`, `startMission`, `resolveMissionChoice`, `startBattle`, `finishMission`, `enemyFor`, `weaponDamage`, `conditionPenalty`, `useBattleJutsu`, `enemyTurn`, `advanceBattleTurn`, `elementAdvantage`, `finishBattle`, `basicAttack`, `defendBattle`, `setDefense`, `normalizeAIResult`, `r361MissionScript`, `r361NarratorOptions`, `aiFallback`, `aiGameContext`, `r27CurrentLocationId`, `r25NpcRuntime`, `v83ClockLabel`, `v83EnsureState`, `v75Norm`, `checkAIStatus`, `fetch`, `json`, `updateAIStatusUI`, `mergeWorldUpdates`, `currentAIDirector`, `readAIDirectorFromForm`, `callAI`, `apiHeaders`, `parse`, `narrateMissionStage`, `aiCustom`, `aiGenerateMission`, `normKey`, `normalize`, `leonRating`, `performAICheck`, `r25Duo`, `applyAIEffects`, `renderChrome`, `saveCampaignNow`, `leonSave`, `cloudSave`, `cloudLoad`, `exportSave`, `importSave`, `modal`, `closeModal`, `bars`, `renderCreate`, `renderHome`, `values`, `renderCharacter`, `renderOrigins`, `renderAptitudes`, `jutsuCard`, `renderTechniques`, `renderMissions`, `renderActiveMission`, `renderCombat`, `leonPrivatePanel`, `renderInventory`, `renderAI`, `renderEncyclopedia`, `renderConfig`, `deepClone`, `coreAttrKeys`, `socialAttrKeys`, `professionById`, `powerById`, `villageArt`, `itemPrice`, `originBonusObject`, `bonusHuman`, `sourceShort`, `writeCreationDraft`, `clearCreationDraft`, `newCreationDraft`, `getCreationDraft`, `creationAttrSpent`, `creationSocialSpent`, `creationSkillSpent`, `creationPowerSpent`, `creationPowerAvailable`, `creationCombatMoved`, `initialSkillBase`, `creationSkillTotal`, `creationSkillAvailable`, `characterSkillPurchaseAllowed`, `creationCombatTotal`, `creationAptitudeAvailable`, `validateCreationStep`, `goCreationStep`, `selectCreationOrigin`, `changeCreationAttr`, `changeCreationCombat`, `normalizeCombatBaseDraft`, `changeCreationSkill`, `toggleCreationAptitude`, `changeCreationPower`, `toggleExtraAptitude`, `addCreationItem`, `resizeImageFile`, `resolve`, `readSlotIndex`, `writeSlotIndex`, `updateSlotSummary`, `loadSlot`, `hydrateState`, `deleteSlot`, `loadState`, `r25CoreDefaults`, `r25LegacyFromCoreValues`, `renderCreationProgress`, `renderSlots`, `startSheetEdit`, `cancelSheetEdit`, `saveSheetEdit`, `officialOriginGrant`, `officialHijutsuGrant`, `ensureTravel`, `gridStyle`, `pctPos`, `mapCellButtons`, `selectedWorldVillage`, `worldSteps`, `worldRouteExists`, `missionDestination`, `travelMissionRows`, `mapLog`, `renderVillage`, `moveMapCell`, `selectWorld`, `travelWorld`, `leonUnlock`, `leonLoad`, `cloudLoadById`, `ensureOnlineState`, `onlineCharacterSummary`, `onlinePost`, `createOnlineRoom`, `refreshOnlineRoom`, `joinOnlineRoom`, `onlineHeartbeat`, `warn`, `sendOnlineMessage`, `leaveOnlineRoom`, `renderOnline`, `renderAIEnhanced`, `itemVisual`, `itemGlyph`, `equipmentReferenceGallery`, `attrIcon`, `allItems`, `shopItemAllowed`, `itemRarity`, `v7ItemArt`, `itemCategory`, `itemDescription`, `ensureV7State`, `add`, `inventoryCompartments`, `rankIndexName`, `salePrice`, `itemCardV7`, `hardTechniqueAccess`, `renderShop`, `buyItemV7`, `sellItemV7`, `trainingProgress`, `renderTraining`, `doTraining`, `weightedDrop`, `rollLoot`, `enemyTemplateFor`, `makeTerrain`, `gridDistance`, `terrainAt`, `tacticalMove`, `playerAttackRange`, `moveEnemyToward`, `techniqueRangeV7`, `renderTacticalBoard`, `routeMinigame`, `resolveMissionRoute`, `npcPortrait`, `npcInteract`, `healHospital`, `villageLocation`, `ensureV74State`, `ensureLeonKuraiV74`, `refreshDailyEventsV74`, `dayKeyV74`, `seededV74`, `eventCompletedV74`, `activeEventsV74`, `eventByIdV74`, `eventRewardTextV74`, `completeEventV74`, `eventTestV74`, `eventPanelV74`, `buyQtyV74`, `sellQtyV74`, `kuraiCardV74`, `leonDojoV74`, `rinnePath`, `ensureV75State`, `v75CostText`, `v75JutsuArt`, `v75LeonTechArt`, `rinneUnlocked`, `rinneRequirementStatus`, `unlockRinnePathV75`, `v75NormalActions`, `v75LeonActions`, `v75Actions`, `v75Action`, `v75ResolvedCost`, `v75CanPay`, `v75Deduct`, `v75PromptAction`, `useRpgActionV75`, `clone`, `v75HasEffects`, `rpgRollV75`, `call`, `v75EffectsPanel`, `v75ConditionRow`, `v75ResourceControls`, `adjustRpgResourceV75`, `v75SheetPanel`, `v75ActionCard`, `renderAIV75`, `privateAccessAllowed`, `v8EnsureCreationVisuals`, `v8VisualSummary`, `v8ChoiceButtons`, `v8ProgressHtml`, `v8Asset`, `v8CreatorAsset`, `v8TechAsset`, `v8ItemAsset`, `v8ActionAsset`, `v8EventAsset`, `v8XpTableRows`, `v8TechniqueFallback`, `v8ItemFallback`, `v8LeonTerrain`, `v8StartLeonBattle`, `v8LeonSkillFor`, `v8LeonDefenseCD`, `v8LeonLog`, `v8LeonFinish`, `v8LeonNextTurn`, `v8LeonEnemyTurn`, `v8LeonBasicAttack`, `v8LeonDefend`, `v8LeonPromptCombat`, `v8LeonUseAction`, `v8LeonBoard`, `v8RenderLeonCombat`, `v81IsLeon`, `v81LeonCaps`, `v81CapGroup`, `v81PaletteGroup`, `v81CapArt`, `v81ActionId`, `v81SyncLeonPrivate`, `matchTab`, `count`, `v81CapCard`, `v81CodexNav`, `v81KusenroCodex`, `v81SuirinCodex`, `v81KuraiCodex`, `v81Progression`, `v81CombatTabDefs`, `v81CombatActions`, `v81CombatActionCard`, `v82DamageGrade`, `v82DamageGradeLabel`, `v82OfficialBaseDamage`, `v82AttackMode`, `v82ResolvePlayerAttack`, `v82LeonOutcome`, `v84Visual`, `v84NormKey`, `v82OriginArt`, `v82JutsuArt`, `v82Learnable`, `v82OwnedNormal`, `v82NormalTechCard`, `v82LeonTechCard`, `v82EnsureTraining`, `v82TrainingRoll`, `v82PracticeSkill`, `v82PracticeTech`, `skillName`, `v82Progression`, `v82CurrentNPCs`, `v82ActionList`, `v82NarrationCard`, `v82RenderLeonCodex`, `v82RulesCodex`, `v82NormalBoard`, `v82CleanUI`, `v821Clone`, `v821ActiveStatus`, `v821ApplyLeonCanonical`, `v821LeonLocalState`, `v821LoadLeon`, `v821ResetLeon`, `v821LoadImage`, `v821DrawCrop`, `v821DrawAvatar`, `v821ComposeAvatarDataUrl`, `v83Copy`, `v83Hash`, `v83ClockAbsolute`, `v83DefaultMasterState`, `v83AdvanceMinutes`, `v83WorldTick`, `v83Commit`, `v83SavePoint`, `v83BeginScene`, `v83EndScene`, `v83CapCategory`, `v83CapArt`, `v83CapForAction`, `v83IsPassive`, `v83UsageLimit`, `v83ResourceReasons`, `v83Decision`, `v83CatalogActionDecision`, `v83ActionDecision`, `v83Deactivate`, `v83AfterTechnique`, `v83TechStatusFilter`, `v83TechniqueButton`, `v83TechniqueCard`, `v83SkillValue`, `v83EligibleMentorIds`, `v83AcquireDecision`, `v83ProjectFor`, `v83StartProject`, `v83TrainingMentor`, `v83ProjectSession`, `v83FinalizeProject`, `v83PracticeOwned`, `v83PracticeSkillAdvance`, `v83VisibleMentors`, `v83MentorOptions`, `v83MissionExercise`, `v83CatalogCard`, `v83MissionRecord`, `v83MissionAccess`, `v83CreateMissionBranch`, `v83ResolveMissionEvent`, `v84TrainerCanUnlock`, `v83CompleteMissionTraining`, `v83CombatRoundTick`, `v84MigrateLeon`, `v84Clone`, `v84EnsureMaster`, `v84NpcArt`, `v84SyncBattleTokens`, `v84BattlefieldMarkup`, `renderBattlefieldV84`, `v84SceneActors`, `v84IntegrateVisualDraft`, `v84SceneStageMarkup`, `renderNpcCodexV84`, `v84KnowledgeMeta`, `r39SemanticKnowledgeFallback`, `v84KnowledgeImage`, `renderKnowledgeV84`, `v84OpenKnowledge`, `v84OpenNpc`, `v84Api`, `v84DecorateScreen`, `v841CreatorLayer`, `v841ReferenceData`, `v841RecordName`, `v841RecordDesc`, `renderVisualAtlasV841`, `v841CardArt`, `v841InsertArt`, `v841DecorateScreen`, `v841DurationMinutes`, `accountApi`, `accountLocalKey`, `accountArt`, `cacheAccount`, `setAccountState`, `loadAccountSlots`, `loadAccountSlot`, `loadLeonAccount`, `accountToken`, `v841SyncAccountSave`, `startAccountCreation`, `submitAuth`, `restoreAuth`, `logoutAccount`, `deleteAccountSlot`, `importLegacySlots`, `renderAccessV841`, `r31Asset`, `renderAccountSlotsV841`, `decorateAccountChrome`, `r25Commit`, `r25CommonCD`, `r25NarrativeFromChoice`, `r25Rest`, `r25TrainerAvailable`, `r25MentorSession`, `r25NpcRoutineSlot`, `r25CoreSpent`, `r25CoreFromLegacy`, `r25SyncLegacyFromCore`, `r25ChangeCoreAttr`, `r25CoreResourcePreview`, `r25CoreCreatorHTML`, `r25CoreReviewHTML`, `r25ReplaceWizardMiddle`, `r25ApplyCoreResources`, `r27AbsMinute`, `r27Copy`, `r27Ensure`, `r27TrainingRecent`, `r27TrainingGate`, `r27TrainingBlock`, `r27RecordTraining`, `r27RestSafety`, `r27ApplyAIResultEffects`, `num`, `r27EnemyArtForOpponent`, `r27BattleDims`, `r27NormalizeOpponent`, `r27SetBattleOpponents`, `r27SyncBattleTarget`, `r27ActiveEnemies`, `r27SelectBattleTarget`, `r27CellBlocked`, `r27PathStep`, `r27EnemyIntent`, `r27TargetStrip`, `r27TrainingData`, `r27TechniqueTrack`, `r27TechniqueForms`, `r27UpdateTechniqueForms`, `r27CommonSkillPractice`, `r27CommonTechniquePractice`, `r27DojoPractice`, `r27RestUnified`, `r27RenderRest`, `r27MaterialSnapshot`, `r27DiffObjects`, `r27VillageKey`, `r27VillageCenterLocation`, `r27SetCurrentLocation`, `r27NpcSameLocation`, `r27VillageLocationId`, `r27SocialEnsure`, `r27NpcRelation`, `r27RelationLabel`, `r27NpcByAnyId`, `r27RegisterRumor`, `r27SocialInteraction`, `r27FactionImpact`, `r27ApplySocialImpactFromAI`, `r27RenderRelationships`, `r36StoryArc`, `r36StoryChoices`, `r27StoryChapters`, `r27StoryEnsure`, `r27StoryComplete`, `r27StoryEnemySpecs`, `r27StoryStart`, `r27DuelEnsure`, `r27DuelAutoAI`, `r36StoryChance`, `r27StoryChoice`, `r27StoryBattleTick`, `r27RenderStory`, `r27DuelEra`, `r27DuelRoster`, `r27DuelSelect`, `r27DuelFighter`, `r27StartDuel`, `byId`, `r27DuelAlive`, `r27DuelCurrent`, `r27DuelTarget`, `r27DuelRoll`, `r27DuelCheckEnd`, `r27DuelAIRound`, `r27DuelAction`, `r27RenderDuel`, `r27ActionValidation`, `r27QuickCards`, `r27GMFormat`, `r27RuntimeValidation`, `r27InvocationEnsure`, `r27GrantInvocationContract`, `r27Summon`, `r27SenjutsuEnsure`, `r27SenjutsuGather`, `r27CampaignAudit`, `r27CanonEnsure`, `r27SystemDispatch`, `r27RenderSystems`, `r27ApplyLeonAuthority`, `r27WorldMission`, `r27MissionStageTitle`, `r27MissionScriptedNarrative`, `r27ArcNumber`, `r27CanonPreviousResolved`, `r27CanonPlayerLocation`, `r27CanonLocationMatch`, `r27CanonRoster`, `r27CanonPendingSync`, `r27ProcessCanonTriggers`, `r27CanonValidEvidence`, `r27ResolveCanonEvent`, `r27ApplyCanonEvidenceFromAI`, `r29Hash`, `r29Family`, `r29AssetFor`, `r29NormRank`, `r29Ensure`, `r29RankMax`, `r29CanonRank`, `r29SeedCanonMissions`, `r29Assignment`, `r29MissionKind`, `r29ActiveCanonEvent`, `r29AssignMission`, `r29SideCandidates`, `r29DirectorTick`, `r29MissionAccess`, `r29UpdatePromotionPending`, `r29PromotionRequirements`, `r29RankReview`, `r30Pick`, `r30Text`, `r30JutsuArt`, `r30ItemArt`, `r30SkillArt`, `r30AptArt`, `r30ResourceArt`, `r30CharacterArt`, `r30NpcArt`, `r30TitleArt`, `r30EffectArt`, `r30Ensure`, `r30UnlockTitle`, `r30RevealSecret`, `r30ResolveSecret`, `r30SecretDef`, `r30EvaluateSecrets`, `r30TitlesHtml`, `r31GeneratedItemPool`, `r31EnsureCatalogItems`, `r31Ensure`, `r31Clock`, `r31Commit`, `r31Norm`, `r31HasOwned`, `r31GradId`, `r31Metric`, `r31Category`, `r31MentorFor`, `r31SourceUnlocked`, `r31LineageRequirement`, `r31RequiredItemForTechnique`, `r31InventoryHas`, `r31EquipmentRequirement`, `r31RuntimePrerequisites`, `r31TechniqueAccess`, `r31RecordTechniqueUse`, `r31ExpireActiveTechniques`, `r31TechniqueDamageProfile`, `r31TechniqueStatusLabel`, `r31TechniqueMentorAvailable`, `r31ResolveTrainingOpportunity`, `r31OpportunityFromBranch`, `r31MissionBranches`, `r31SyncMissionBranches`, `r31ResolveMentorOpportunity`, `r31DiscoverMentorForOpportunity`, `r31ResolveOpportunity`, `r31MentorTechniqueCandidates`, `r31MentorSession`, `r31TechniqueArt`, `r31Semantic`, `r31UniqueAssets`, `r31PickVisualPool`, `r31VariantContext`, `r31ItemArt`, `r31NpcArt`, `r31EnemyArt`, `r31MissionArt`, `r31VendorArt`, `r31TechniqueCard`, `r31PartyDef`, `r31PartyHtml`, `r31PartyToggle`, `r31RandomBattle`, `r31PartyAction`, `r31BattlefieldArt`, `r31BoardHtml`, `r31AptitudeArt`, `r31SkillArt`, `r31ResourceArt`, `r31VisualCoverage`, `r31PlaceholderPolicy`, `r31StaticAcceptance`, `r31QaEnter`, `r31QaAcceptance`, `r31InstallVisualMaps`, `bind`, `r31DecorateUI`, `r32Clone`, `r32MissionRuntime`, `r32ActiveAssignment`, `r32PersistMissionRuntime`, `r32RestoreMissionRuntime`, `r32ActiveMission`, `r32MissionDependencyIds`, `r32MissionContinuityGate`, `r33Script`, `r33Bonus`, `r33CD`, `r33Chance`, `r33Outcome`, `r33ApplyEffects`, `r33EnsureRun`, `r33Stage`, `r33ChoiceMeta`, `r33EffectSummary`, `r33MissionHeader`, `r33ChoiceCard`, `r33RenderActiveMission`, `r33LocalOpponent`, `r33StartLocalCombat`, `r35MissionError`, `r34RecordClientError`, `r34SaveNow`, `r382ContentType`, `r382TrueMissions`, `r382Tasks`, `r382Events`, `r382Script`, `r382Mode`, `r382ModeLabel`, `r382CampaignForArc`, `r382ArcById`, `r382NarrativeState`, `r382RemoveLegacyCanonPseudoMissions`, `r382Words`, `r382ArcMissionScore`, `r382ArcMissionCandidate`, `r382RenderNarrativeHub`, `r382NarrateArc`, `done`, `r382MissionFreeAction`, `r41Clone`, `r41Slug`, `r41AbsMinute`, `r41Ensure`, `r41ActiveInjuries`, `r41PersistentRecoveryCap`, `r41Log`, `r41CloudFlush`, `r41ScheduleCloudSave`, `r41HospitalPlan`, `r41HospitalTreat`, `r41GameForText`, `r41RecordMinigame`, `r41OpenMinigame`, `r41BroadcastGameplay`, `finish`, `frame`, `nextTiming`, `nextTargets`, `nextSequence`, `nextReaction`, `nextOdd`, `nextMerge`, `nextWave`, `nextStealth`, `handler`, `next`, `r41ExactVisual`, `r41Appearance`, `r41SetVisualState`, `r41AvatarComposite`, `r41DoActivity`, `r41OnlineAction`, `r41OnlineRefresh`, `r41SendOnlineIntent`, `r41CombatSnapshot`, `r41CombatVisual`, `r41PresentDiff`
 - **Rotas referidas:** `/api/status`, `/api/ai`, `/api/account/save`, `/api/cloud/load`, `/api/private/unlock`, `/api/private/leon/load`, `/api/private/leon/save`, `/api/online/create`, `/api/online/join`, `/api/online/heartbeat`, `/api/online/room`, `/api/online/messages`, `/api/online/message`, `/api/v84/world/event`, `/api/v84/world/savepoint`, `/api/v84/bootstrap`, `/api/account/slots`, `/api/account/load`, `/api/auth/register`, `/api/auth/login`, `/api/auth/me`, `/api/auth/logout`, `/api/account/delete`, `/api/online/action`, `/api/online/state`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -1114,7 +1114,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `payload`
-- **Chamadas internas detectadas:** `currentAIDirector`, `render`, `aiFallback`, `fetch`, `apiHeaders`, `json`, `normalizeAIResult`, `mergeWorldUpdates`, `toast`
+- **Chamadas internas detectadas:** `currentAIDirector`, `render`, `aiFallback`, `fetch`, `apiHeaders`, `json`, `parse`, `normalizeAIResult`, `mergeWorldUpdates`, `toast`
 - **Rotas referidas:** `/api/ai`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -1322,7 +1322,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `file`
-- **Chamadas internas detectadas:** `defaultState`, `recalc`, `saveState`, `render`, `toast`
+- **Chamadas internas detectadas:** `parse`, `defaultState`, `recalc`, `saveState`, `render`, `toast`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -1658,7 +1658,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -1866,7 +1866,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `newCreationDraft`
+- **Chamadas internas detectadas:** `newCreationDraft`, `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -2266,7 +2266,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -2314,7 +2314,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `id`
-- **Chamadas internas detectadas:** `hydrateState`, `render`, `toast`
+- **Chamadas internas detectadas:** `hydrateState`, `parse`, `render`, `toast`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -2378,7 +2378,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `hydrateState`, `newId`, `readSlotIndex`, `writeSlotIndex`, `defaultState`
+- **Chamadas internas detectadas:** `hydrateState`, `parse`, `newId`, `readSlotIndex`, `writeSlotIndex`, `defaultState`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -2954,7 +2954,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `payload`
-- **Chamadas internas detectadas:** `currentAIDirector`, `render`, `aiFallback`, `fetch`, `apiHeaders`, `json`, `normalizeAIResult`, `mergeWorldUpdates`, `toast`
+- **Chamadas internas detectadas:** `currentAIDirector`, `render`, `aiFallback`, `fetch`, `apiHeaders`, `json`, `parse`, `normalizeAIResult`, `mergeWorldUpdates`, `toast`
 - **Rotas referidas:** `/api/ai`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -6058,7 +6058,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `value`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -6106,7 +6106,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `v821ApplyLeonCanonical`, `hydrateState`, `v821Clone`, `warn`
+- **Chamadas internas detectadas:** `v821ApplyLeonCanonical`, `hydrateState`, `parse`, `v821Clone`, `warn`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -6218,7 +6218,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `value`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -7530,7 +7530,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `accountToken`, `accountApi`, `v821ApplyLeonCanonical`, `hydrateState`, `saveState`, `v841SyncAccountSave`, `render`, `v84Api`
+- **Chamadas internas detectadas:** `accountToken`, `accountApi`, `parse`, `v821ApplyLeonCanonical`, `hydrateState`, `saveState`, `v841SyncAccountSave`, `render`, `v84Api`
 - **Rotas referidas:** `/api/account/load`, `/api/v84/bootstrap`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -7626,7 +7626,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `readSlotIndex`, `accountApi`, `loadAccountSlots`, `render`, `toast`
+- **Chamadas internas detectadas:** `readSlotIndex`, `parse`, `accountApi`, `loadAccountSlots`, `render`, `toast`
 - **Rotas referidas:** `/api/account/save`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -8042,7 +8042,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -9546,7 +9546,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `ev`
-- **Chamadas internas detectadas:** `v75Norm`, `r27CanonPlayerLocation`, `r27CanonRoster`, `r25NpcRuntime`, `v84NpcArt`, `r27CanonPendingSync`, `test`, `r27ProcessCanonTriggers`, `r27CanonEnsure`, `r27CanonPreviousResolved`, `v83ClockLabel`, `v83EnsureState`, `r27CanonValidEvidence`, `r27ResolveCanonEvent`, `r27Copy`, `saveState`, `r27ApplyCanonEvidenceFromAI`, `r27ActiveEnemies`, `gainXp`, `battleLog`, `r27SyncBattleTarget`, `render`, `v8LeonLog`, `r27EnemyIntent`, `r27PathStep`, `r27BattleDims`, `gridDistance`, `rollTerion2d10`, `terrainAt`, `conditionPenalty`, `itemById`, `finishBattle`, `rollLeon2d10`, `v8LeonDefenseCD`, `v8LeonFinish`, `v8LeonNextTurn`, `esc`, `r27TargetStrip`, `r27SelectBattleTarget`, `getCreationDraft`, `v8EnsureCreationVisuals`, `v8ChoiceButtons`, `v841CreatorLayer`, `r29Hash`, `r29Family`, `r29AssetFor`, `r29NormRank`, `r29Ensure`, `r29RankMax`, `r29CanonRank`, `r27ArcNumber`, `r29SeedCanonMissions`, `r29Assignment`, `r29MissionKind`, `r29ActiveCanonEvent`, `v81IsLeon`, `r29AssignMission`, `r29SideCandidates`, `r29DirectorTick`, `values`, `missionById`, `r29MissionAccess`, `toast`, `r29UpdatePromotionPending`, `r29PromotionRequirements`, `r29RankReview`, `aiGameContext`, `callAI`, `aiFallback`, `warn`, `fmt`, `v84KnowledgeMeta`, `v8LeonTerrain`, `r31Asset`, `finishMission`, `v821ApplyLeonCanonical`, `hydrateState`, `defaultState`, `r27TrainingGate`, `r27ApplyAIResultEffects`, `v83AdvanceMinutes`, `r27RecordTraining`, `r27RestSafety`, `r27ApplyLeonAuthority`, `resolveMissionChoice`, `r27SetBattleOpponents`, `v8LeonEnemyTurn`, `enemyTurn`, `r30Pick`, `r30Text`, `r30JutsuArt`, `r30ItemArt`, `r30SkillArt`, `r30AptArt`, `r30ResourceArt`, `r30CharacterArt`, `r30NpcArt`, `r30TitleArt`, `r30EffectArt`, `r30Ensure`, `r30UnlockTitle`, `r30RevealSecret`, `r30ResolveSecret`, `r30SecretDef`, `r30EvaluateSecrets`, `r30TitlesHtml`, `skillTotal`, `accountArt`, `readSlotIndex`, `loadLeonAccount`, `renderAccountSlotsV841`, `r31GeneratedItemPool`, `r31EnsureCatalogItems`, `r31Ensure`, `r31Clock`, `r31Commit`, `r31Norm`, `v84NormKey`, `r31HasOwned`, `r31GradId`, `r31Metric`, `r31Category`, `r31MentorFor`, `r31SourceUnlocked`, `r31LineageRequirement`, `r31RequiredItemForTechnique`, `r31InventoryHas`, `r31EquipmentRequirement`, `r31RuntimePrerequisites`, `jutsuById`, `r31TechniqueAccess`, `v75Action`, `v75Actions`, `v83ActionDecision`, `r31RecordTechniqueUse`, `r31ExpireActiveTechniques`, `r31TechniqueDamageProfile`, `clamp`, `r31TechniqueStatusLabel`, `v8TechniqueFallback`, `v75CostText`, `r31TechniqueMentorAvailable`, `add`, `r31ResolveTrainingOpportunity`, `r31OpportunityFromBranch`, `r31MissionBranches`, `r31SyncMissionBranches`, `r31ResolveMentorOpportunity`, `r31DiscoverMentorForOpportunity`, `v83Hash`, `r31ResolveOpportunity`, `startBattle`, `r25Duo`, `v83SkillValue`, `r31MentorTechniqueCandidates`, `r31MentorSession`, `r27TrainingBlock`, `v82TrainingRoll`, `r31TechniqueArt`, `r31Semantic`, `r31UniqueAssets`, `r31PickVisualPool`, `r31VariantContext`, `r31ItemArt`, `r31NpcArt`, `r31EnemyArt`, `r31MissionArt`, `r31VendorArt`, `r31TechniqueCard`, `r31PartyDef`, `r31PartyHtml`, `r31PartyToggle`, `r31RandomBattle`, `v83ClockAbsolute`, `r31PartyAction`, `r31BattlefieldArt`, `r31BoardHtml`, `r31AptitudeArt`, `r31SkillArt`, `r31ResourceArt`, `r27CommonTechniquePractice`, `r31VisualCoverage`, `allItems`, `r31PlaceholderPolicy`, `r31StaticAcceptance`, `r31QaEnter`, `ensureV7State`, `r31QaAcceptance`, `r31InstallVisualMaps`, `bind`, `r31DecorateUI`, `r32Clone`, `r32MissionRuntime`, `r32ActiveAssignment`, `r32PersistMissionRuntime`, `r32RestoreMissionRuntime`, `r32ActiveMission`, `r32MissionDependencyIds`, `r32MissionContinuityGate`, `r33Script`, `r33Bonus`, `r33CD`, `r33Chance`, `r33Outcome`, `r33ApplyEffects`, `r33EnsureRun`, `r33Stage`, `r33ChoiceMeta`, `r33EffectSummary`, `r33MissionHeader`, `r33ChoiceCard`, `r33RenderActiveMission`, `r33LocalOpponent`, `r33StartLocalCombat`, `v8StartLeonBattle`, `r25Commit`, `recalc`, `r35MissionError`, `r34RecordClientError`, `r34SaveNow`, `leonSave`, `cloudSave`, `refreshOnlineRoom`, `r382ContentType`, `r382TrueMissions`, `r382Tasks`, `r382Events`, `r382Script`, `r382Mode`, `r382ModeLabel`, `r382CampaignForArc`, `r382ArcById`, `r382NarrativeState`, `r382RemoveLegacyCanonPseudoMissions`, `r382Words`, `r382ArcMissionScore`, `r382ArcMissionCandidate`, `r382RenderNarrativeHub`, `renderChrome`, `r382NarrateArc`, `done`, `r382MissionFreeAction`, `narrateMissionStage`, `r41Clone`, `r41Slug`, `normalize`, `r41AbsMinute`, `r41Ensure`, `ensureLeonKuraiV74`, `r41ActiveInjuries`, `r41PersistentRecoveryCap`, `r41Log`, `r41CloudFlush`, `accountToken`, `r41ScheduleCloudSave`, `r27RestUnified`, `r41HospitalPlan`, `modal`, `r41HospitalTreat`, `closeModal`, `r41GameForText`, `r41RecordMinigame`, `r41OpenMinigame`, `r41BroadcastGameplay`, `resolve`, `finish`, `frame`, `nextTiming`, `nextTargets`, `nextSequence`, `nextReaction`, `nextOdd`, `nextMerge`, `nextWave`, `nextStealth`, `handler`, `next`, `completeEventV74`, `r41ExactVisual`, `v841RecordName`, `v841RecordDesc`, `r41Appearance`, `r41SetVisualState`, `r41AvatarComposite`, `v7ItemArt`, `r41DoActivity`, `r41OnlineAction`, `ensureOnlineState`, `onlinePost`, `onlineCharacterSummary`, `r41OnlineRefresh`, `r41SendOnlineIntent`, `r41CombatSnapshot`, `r41CombatVisual`, `r41PresentDiff`, `checkAIStatus`
+- **Chamadas internas detectadas:** `v75Norm`, `r27CanonPlayerLocation`, `r27CanonRoster`, `r25NpcRuntime`, `v84NpcArt`, `r27CanonPendingSync`, `test`, `r27ProcessCanonTriggers`, `r27CanonEnsure`, `r27CanonPreviousResolved`, `v83ClockLabel`, `v83EnsureState`, `r27CanonValidEvidence`, `r27ResolveCanonEvent`, `r27Copy`, `saveState`, `r27ApplyCanonEvidenceFromAI`, `r27ActiveEnemies`, `gainXp`, `battleLog`, `r27SyncBattleTarget`, `render`, `v8LeonLog`, `r27EnemyIntent`, `r27PathStep`, `r27BattleDims`, `gridDistance`, `rollTerion2d10`, `terrainAt`, `conditionPenalty`, `itemById`, `finishBattle`, `rollLeon2d10`, `v8LeonDefenseCD`, `v8LeonFinish`, `v8LeonNextTurn`, `esc`, `r27TargetStrip`, `r27SelectBattleTarget`, `getCreationDraft`, `v8EnsureCreationVisuals`, `v8ChoiceButtons`, `v841CreatorLayer`, `r29Hash`, `r29Family`, `r29AssetFor`, `r29NormRank`, `r29Ensure`, `r29RankMax`, `r29CanonRank`, `r27ArcNumber`, `r29SeedCanonMissions`, `r29Assignment`, `r29MissionKind`, `r29ActiveCanonEvent`, `v81IsLeon`, `r29AssignMission`, `r29SideCandidates`, `r29DirectorTick`, `values`, `missionById`, `r29MissionAccess`, `toast`, `r29UpdatePromotionPending`, `r29PromotionRequirements`, `r29RankReview`, `aiGameContext`, `callAI`, `aiFallback`, `warn`, `fmt`, `v84KnowledgeMeta`, `v8LeonTerrain`, `r31Asset`, `finishMission`, `v821ApplyLeonCanonical`, `hydrateState`, `parse`, `defaultState`, `r27TrainingGate`, `r27ApplyAIResultEffects`, `v83AdvanceMinutes`, `r27RecordTraining`, `r27RestSafety`, `r27ApplyLeonAuthority`, `resolveMissionChoice`, `r27SetBattleOpponents`, `v8LeonEnemyTurn`, `enemyTurn`, `r30Pick`, `r30Text`, `r30JutsuArt`, `r30ItemArt`, `r30SkillArt`, `r30AptArt`, `r30ResourceArt`, `r30CharacterArt`, `r30NpcArt`, `r30TitleArt`, `r30EffectArt`, `r30Ensure`, `r30UnlockTitle`, `r30RevealSecret`, `r30ResolveSecret`, `r30SecretDef`, `r30EvaluateSecrets`, `r30TitlesHtml`, `skillTotal`, `accountArt`, `readSlotIndex`, `loadLeonAccount`, `renderAccountSlotsV841`, `r31GeneratedItemPool`, `r31EnsureCatalogItems`, `r31Ensure`, `r31Clock`, `r31Commit`, `r31Norm`, `v84NormKey`, `r31HasOwned`, `r31GradId`, `r31Metric`, `r31Category`, `r31MentorFor`, `r31SourceUnlocked`, `r31LineageRequirement`, `r31RequiredItemForTechnique`, `r31InventoryHas`, `r31EquipmentRequirement`, `r31RuntimePrerequisites`, `jutsuById`, `r31TechniqueAccess`, `v75Action`, `v75Actions`, `v83ActionDecision`, `r31RecordTechniqueUse`, `r31ExpireActiveTechniques`, `r31TechniqueDamageProfile`, `clamp`, `r31TechniqueStatusLabel`, `v8TechniqueFallback`, `v75CostText`, `r31TechniqueMentorAvailable`, `add`, `r31ResolveTrainingOpportunity`, `r31OpportunityFromBranch`, `r31MissionBranches`, `r31SyncMissionBranches`, `r31ResolveMentorOpportunity`, `r31DiscoverMentorForOpportunity`, `v83Hash`, `r31ResolveOpportunity`, `startBattle`, `r25Duo`, `v83SkillValue`, `r31MentorTechniqueCandidates`, `r31MentorSession`, `r27TrainingBlock`, `v82TrainingRoll`, `r31TechniqueArt`, `r31Semantic`, `r31UniqueAssets`, `r31PickVisualPool`, `r31VariantContext`, `r31ItemArt`, `r31NpcArt`, `r31EnemyArt`, `r31MissionArt`, `r31VendorArt`, `r31TechniqueCard`, `r31PartyDef`, `r31PartyHtml`, `r31PartyToggle`, `r31RandomBattle`, `v83ClockAbsolute`, `r31PartyAction`, `r31BattlefieldArt`, `r31BoardHtml`, `r31AptitudeArt`, `r31SkillArt`, `r31ResourceArt`, `r27CommonTechniquePractice`, `r31VisualCoverage`, `allItems`, `r31PlaceholderPolicy`, `r31StaticAcceptance`, `r31QaEnter`, `ensureV7State`, `r31QaAcceptance`, `r31InstallVisualMaps`, `bind`, `r31DecorateUI`, `r32Clone`, `r32MissionRuntime`, `r32ActiveAssignment`, `r32PersistMissionRuntime`, `r32RestoreMissionRuntime`, `r32ActiveMission`, `r32MissionDependencyIds`, `r32MissionContinuityGate`, `r33Script`, `r33Bonus`, `r33CD`, `r33Chance`, `r33Outcome`, `r33ApplyEffects`, `r33EnsureRun`, `r33Stage`, `r33ChoiceMeta`, `r33EffectSummary`, `r33MissionHeader`, `r33ChoiceCard`, `r33RenderActiveMission`, `r33LocalOpponent`, `r33StartLocalCombat`, `v8StartLeonBattle`, `r25Commit`, `recalc`, `r35MissionError`, `r34RecordClientError`, `r34SaveNow`, `leonSave`, `cloudSave`, `refreshOnlineRoom`, `r382ContentType`, `r382TrueMissions`, `r382Tasks`, `r382Events`, `r382Script`, `r382Mode`, `r382ModeLabel`, `r382CampaignForArc`, `r382ArcById`, `r382NarrativeState`, `r382RemoveLegacyCanonPseudoMissions`, `r382Words`, `r382ArcMissionScore`, `r382ArcMissionCandidate`, `r382RenderNarrativeHub`, `renderChrome`, `r382NarrateArc`, `done`, `r382MissionFreeAction`, `narrateMissionStage`, `r41Clone`, `r41Slug`, `normalize`, `r41AbsMinute`, `r41Ensure`, `ensureLeonKuraiV74`, `r41ActiveInjuries`, `r41PersistentRecoveryCap`, `r41Log`, `r41CloudFlush`, `accountToken`, `r41ScheduleCloudSave`, `r27RestUnified`, `r41HospitalPlan`, `modal`, `r41HospitalTreat`, `closeModal`, `r41GameForText`, `r41RecordMinigame`, `r41OpenMinigame`, `r41BroadcastGameplay`, `resolve`, `finish`, `frame`, `nextTiming`, `nextTargets`, `nextSequence`, `nextReaction`, `nextOdd`, `nextMerge`, `nextWave`, `nextStealth`, `handler`, `next`, `completeEventV74`, `r41ExactVisual`, `v841RecordName`, `v841RecordDesc`, `r41Appearance`, `r41SetVisualState`, `r41AvatarComposite`, `v7ItemArt`, `r41DoActivity`, `r41OnlineAction`, `ensureOnlineState`, `onlinePost`, `onlineCharacterSummary`, `r41OnlineRefresh`, `r41SendOnlineIntent`, `r41CombatSnapshot`, `r41CombatVisual`, `r41PresentDiff`, `checkAIStatus`
 - **Rotas referidas:** `/api/online/action`, `/api/online/state`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -11258,7 +11258,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -11658,7 +11658,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `kind,msg,src,line,col`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -11978,7 +11978,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -12602,7 +12602,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `bytes`
-- **Chamadas internas detectadas:** `unb64url`, `sha256Text`, `hashPassword`, `timingSafe`, `randomBytes`, `randomSecret`, `norm`, `cleanText`, `bearer`, `get`, `test`, `nowIso`, `roomId`, `safeJson`, `safeAccount`, `cors`, `reply`, `bodyJson`, `json`, `clampSaveForStorage`, `ensureSchema`, `audit`, `bind`, `issueToken`, `verifyToken`, `requireUser`, `revokeCurrent`, `slotSummary`, `hasForbiddenMechanicalResult`, `constructor`, `read`, `write`, `liveMembers`, `values`, `fetch`, `roomJson`, `aiRoute`, `handleApi`, `set`
+- **Chamadas internas detectadas:** `unb64url`, `sha256Text`, `hashPassword`, `timingSafe`, `randomBytes`, `randomSecret`, `norm`, `cleanText`, `bearer`, `get`, `test`, `nowIso`, `roomId`, `safeJson`, `parse`, `safeAccount`, `cors`, `reply`, `bodyJson`, `json`, `clampSaveForStorage`, `ensureSchema`, `audit`, `bind`, `issueToken`, `verifyToken`, `requireUser`, `revokeCurrent`, `slotSummary`, `hasForbiddenMechanicalResult`, `constructor`, `read`, `write`, `liveMembers`, `values`, `fetch`, `roomJson`, `aiRoute`, `handleApi`, `set`
 - **Rotas referidas:** `/api/status`, `/api/auth/register`, `/api/auth/login`, `/api/auth/recover`, `/api/ai`, `/api/v84/bootstrap`, `/api/auth/me`, `/api/auth/logout`, `/api/account/slots`, `/api/account/save`, `/api/account/load`, `/api/account/delete`, `/api/cloud/load`, `/api/private/unlock`, `/api/private/leon/load`, `/api/private/leon/save`, `/api/leaderboard`, `/api/friends`, `/api/friends/add`, `/api/online/create`, `/api/online/join`, `/api/online/heartbeat`, `/api/online/room`, `/api/online/message`, `/api/online/messages`, `/api/online/action`, `/api/online/state`, `/api/v84/world/event`, `/api/v84/world/savepoint`
 - **Coleções MongoDB:** —
 - **Modelos IA:** `@cf/meta/llama-3.2-1b-instruct`
@@ -12794,7 +12794,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `v,fallback=null`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -13066,7 +13066,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `room`
-- **Chamadas internas detectadas:** `values`
+- **Chamadas internas detectadas:** `values`, `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -14090,7 +14090,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `bytes`
-- **Chamadas internas detectadas:** `unb64url`, `hmac`, `timingSafe`, `hashPassword`, `randomBytes`, `randomSecret`, `norm`, `cleanText`, `bearer`, `get`, `test`, `plainId`, `safeAccount`, `cors`, `reply`, `bodyJson`, `json`, `toObjectId`, `nowIso`, `roomId`, `mongo`, `db`, `ensureIndexes`, `issueToken`, `verifyToken`, `requireUser`, `revokeCurrent`, `slotSummary`, `clampSaveForStorage`, `audit`, `constructor`, `read`, `write`, `liveMembers`, `values`, `fetch`, `roomCall`, `roomJson`, `aiRoute`
+- **Chamadas internas detectadas:** `unb64url`, `hmac`, `timingSafe`, `hashPassword`, `randomBytes`, `randomSecret`, `norm`, `cleanText`, `bearer`, `get`, `test`, `plainId`, `safeAccount`, `cors`, `reply`, `bodyJson`, `json`, `toObjectId`, `nowIso`, `roomId`, `mongo`, `db`, `ensureIndexes`, `issueToken`, `verifyToken`, `parse`, `requireUser`, `revokeCurrent`, `slotSummary`, `clampSaveForStorage`, `audit`, `constructor`, `read`, `write`, `liveMembers`, `values`, `fetch`, `roomCall`, `roomJson`, `aiRoute`
 - **Rotas referidas:** `/api/status`, `/api/auth/register`, `/api/auth/login`, `/api/auth/recover`, `/api/ai`, `/api/v84/bootstrap`, `/api/auth/me`, `/api/auth/logout`, `/api/account/slots`, `/api/account/save`, `/api/account/load`, `/api/account/delete`, `/api/cloud/load`, `/api/private/unlock`, `/api/private/leon/load`, `/api/private/leon/save`, `/api/leaderboard`, `/api/friends`, `/api/friends/add`, `/api/online/create`, `/api/online/join`, `/api/online/heartbeat`, `/api/online/room`, `/api/online/message`, `/api/online/messages`, `/api/online/action`, `/api/online/state`, `/api/v84/world/event`, `/api/v84/world/savepoint`
 - **Coleções MongoDB:** `users`, `sessions`, `saves`, `friends`, `room_registry`, `world_events`, `world_state`, `audit_events`, `recovery_codes`
 - **Modelos IA:** `@cf/meta/llama-3.2-1b-instruct`
@@ -14426,7 +14426,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `env,db,token`
-- **Chamadas internas detectadas:** `b64url`, `hmac`, `timingSafe`, `unb64url`, `toObjectId`
+- **Chamadas internas detectadas:** `b64url`, `hmac`, `timingSafe`, `parse`, `unb64url`, `toObjectId`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** `sessions`, `users`
 - **Modelos IA:** —
@@ -14458,7 +14458,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `req,env,db`
-- **Chamadas internas detectadas:** `bearer`, `unb64url`
+- **Chamadas internas detectadas:** `bearer`, `parse`, `unb64url`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** `sessions`
 - **Modelos IA:** —
@@ -14570,7 +14570,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `room`
-- **Chamadas internas detectadas:** `values`
+- **Chamadas internas detectadas:** `values`, `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -15460,9 +15460,393 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00967 — `path`
+## FUNC-00967 — `parse`
 
-- **Fonte:** `src/r41-asset-path-repair.js:8`
+- **Fonte:** `src/r41-account-active-slot.js:18`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow-one
+- **Parâmetros:** `raw`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00968 — `copy`
+
+- **Fonte:** `src/r41-account-active-slot.js:19`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow-one
+- **Parâmetros:** `v`
+- **Chamadas internas detectadas:** `parse`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00969 — `authenticated`
+
+- **Fonte:** `src/r41-account-active-slot.js:20`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00970 — `active`
+
+- **Fonte:** `src/r41-account-active-slot.js:21`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00971 — `remember`
+
+- **Fonte:** `src/r41-account-active-slot.js:22`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow-one
+- **Parâmetros:** `id`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00972 — `forget`
+
+- **Fonte:** `src/r41-account-active-slot.js:23`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow-one
+- **Parâmetros:** `id`
+- **Chamadas internas detectadas:** `active`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00973 — `activeAccountEntry`
+
+- **Fonte:** `src/r41-account-active-slot.js:25`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `id=active(`
+- **Chamadas internas detectadas:** `parse`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00974 — `sameCharacter`
+
+- **Fonte:** `src/r41-account-active-slot.js:36`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `a,b`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00975 — `characterSummary`
+
+- **Fonte:** `src/r41-account-active-slot.js:45`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `save`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00976 — `apiPost`
+
+- **Fonte:** `src/r41-account-active-slot.js:50`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `path,body`
+- **Chamadas internas detectadas:** `fetch`, `json`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00977 — `persistAccountSave`
+
+- **Fonte:** `src/r41-account-active-slot.js:57`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `entry,save`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00978 — `applyKuraiMode`
+
+- **Fonte:** `src/r41-account-active-slot.js:64`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `save,mode`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00979 — `setKuraiModeDirect`
+
+- **Fonte:** `src/r41-account-active-slot.js:76`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `button`
+- **Chamadas internas detectadas:** `active`, `activeAccountEntry`, `parse`, `copy`, `applyKuraiMode`, `persistAccountSave`, `authenticated`, `apiPost`, `warn`
+- **Rotas referidas:** `/api/account/save`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00980 — `finishOnlineTransition`
+
+- **Fonte:** `src/r41-account-active-slot.js:96`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `entry,id,save`
+- **Chamadas internas detectadas:** `persistAccountSave`, `apiPost`, `warn`
+- **Rotas referidas:** `/api/account/save`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00981 — `createOnlineRoomDirect`
+
+- **Fonte:** `src/r41-account-active-slot.js:103`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `button`
+- **Chamadas internas detectadas:** `authenticated`, `active`, `activeAccountEntry`, `copy`, `apiPost`, `characterSummary`, `finishOnlineTransition`
+- **Rotas referidas:** `/api/online/create`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `online-room-title`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00982 — `joinOnlineRoomDirect`
+
+- **Fonte:** `src/r41-account-active-slot.js:121`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `button`
+- **Chamadas internas detectadas:** `authenticated`, `active`, `activeAccountEntry`, `copy`, `apiPost`, `characterSummary`, `finishOnlineTransition`
+- **Rotas referidas:** `/api/online/join`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `online-room-id`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00983 — `reconcileOnlineRoomMirror`
+
+- **Fonte:** `src/r41-account-active-slot.js:139`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `authenticated`, `active`, `activeAccountEntry`, `parse`, `sameCharacter`, `copy`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00984 — `clearSatisfiedRecovery`
+
+- **Fonte:** `src/r41-account-active-slot.js:160`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `active`, `activeAccountEntry`, `parse`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00985 — `slotControl`
+
+- **Fonte:** `src/r41-account-active-slot.js:166`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `id`
+- **Chamadas internas detectadas:** `accountChooserVisible`, `returnToRequestedScreen`, `recoverActiveSlot`, `authenticated`, `active`, `clearSatisfiedRecovery`, `repairAndRecover`, `reconcileOnlineRoomMirror`, `activeAccountEntry`, `parse`, `setKuraiModeDirect`, `createOnlineRoomDirect`, `joinOnlineRoomDirect`, `remember`, `forget`, `start`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `main-nav`, `screen`, `online-room-id`, `app`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** `account-load`, `load-account-slot`
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00986 — `accountChooserVisible`
+
+- **Fonte:** `src/r41-account-active-slot.js:172`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `main-nav`, `screen`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** `account-load`, `load-account-slot`
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00987 — `returnToRequestedScreen`
+
+- **Fonte:** `src/r41-account-active-slot.js:178`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00988 — `recoverActiveSlot`
+
+- **Fonte:** `src/r41-account-active-slot.js:184`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `authenticated`, `accountChooserVisible`, `active`, `slotControl`, `clearSatisfiedRecovery`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `screen`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00989 — `repairAndRecover`
+
+- **Fonte:** `src/r41-account-active-slot.js:201`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `reconcileOnlineRoomMirror`, `clearSatisfiedRecovery`, `returnToRequestedScreen`, `recoverActiveSlot`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00990 — `start`
+
+- **Fonte:** `src/r41-account-active-slot.js:227`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `repairAndRecover`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** `app`
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00991 — `path`
+
+- **Fonte:** `src/r41-asset-path-repair.js:9`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow
 - **Parâmetros:** `base,id,ext`
@@ -15476,9 +15860,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00968 — `rewrite`
+## FUNC-00992 — `rewrite`
 
-- **Fonte:** `src/r41-asset-path-repair.js:12`
+- **Fonte:** `src/r41-asset-path-repair.js:19`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow-one
 - **Parâmetros:** `value`
@@ -15492,9 +15876,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00969 — `set`
+## FUNC-00993 — `set`
 
-- **Fonte:** `src/r41-asset-path-repair.js:24`
+- **Fonte:** `src/r41-asset-path-repair.js:31`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `value`
@@ -15508,7 +15892,23 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00970 — `slug`
+## FUNC-00994 — `set`
+
+- **Fonte:** `src/r41-asset-path-repair.js:53`
+- **Domínio:** `game-runtime`
+- **Forma:** method
+- **Parâmetros:** `value`
+- **Chamadas internas detectadas:** `call`, `rewrite`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-00995 — `slug`
 
 - **Fonte:** `src/r41-canonical-repair.js:28`
 - **Domínio:** `game-runtime`
@@ -15524,7 +15924,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00971 — `normalize`
+## FUNC-00996 — `normalize`
 
 - **Fonte:** `src/r41-core-bundle.js:5`
 - **Domínio:** `game-runtime`
@@ -15540,7 +15940,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00972 — `getJson`
+## FUNC-00997 — `getJson`
 
 - **Fonte:** `src/r41-core-bundle.js:6`
 - **Domínio:** `game-runtime`
@@ -15556,7 +15956,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00973 — `indexManifest`
+## FUNC-00998 — `indexManifest`
 
 - **Fonte:** `src/r41-core-bundle.js:7`
 - **Domínio:** `game-runtime`
@@ -15572,7 +15972,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00974 — `init`
+## FUNC-00999 — `init`
 
 - **Fonte:** `src/r41-core-bundle.js:14`
 - **Domínio:** `game-runtime`
@@ -15588,7 +15988,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00975 — `resolve`
+## FUNC-01000 — `resolve`
 
 - **Fonte:** `src/r41-core-bundle.js:25`
 - **Domínio:** `game-runtime`
@@ -15604,7 +16004,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00976 — `auditKnown`
+## FUNC-01001 — `auditKnown`
 
 - **Fonte:** `src/r41-core-bundle.js:42`
 - **Domínio:** `game-runtime`
@@ -15620,7 +16020,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00977 — `normalize`
+## FUNC-01002 — `normalize`
 
 - **Fonte:** `src/r41-core-bundle.js:51`
 - **Domínio:** `game-runtime`
@@ -15636,7 +16036,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00978 — `fromCombatResult`
+## FUNC-01003 — `fromCombatResult`
 
 - **Fonte:** `src/r41-core-bundle.js:52`
 - **Domínio:** `game-runtime`
@@ -15652,7 +16052,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00979 — `validateEvent`
+## FUNC-01004 — `validateEvent`
 
 - **Fonte:** `src/r41-core-bundle.js:63`
 - **Domínio:** `game-runtime`
@@ -15668,7 +16068,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00980 — `clone`
+## FUNC-01005 — `clone`
 
 - **Fonte:** `src/r41-core-bundle.js:70`
 - **Domínio:** `game-runtime`
@@ -15684,7 +16084,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00981 — `ensure`
+## FUNC-01006 — `ensure`
 
 - **Fonte:** `src/r41-core-bundle.js:71`
 - **Domínio:** `game-runtime`
@@ -15700,7 +16100,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00982 — `apply`
+## FUNC-01007 — `apply`
 
 - **Fonte:** `src/r41-core-bundle.js:72`
 - **Domínio:** `game-runtime`
@@ -15716,7 +16116,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00983 — `validate`
+## FUNC-01008 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:73`
 - **Domínio:** `game-runtime`
@@ -15732,7 +16132,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00984 — `fromResult`
+## FUNC-01009 — `fromResult`
 
 - **Fonte:** `src/r41-core-bundle.js:78`
 - **Domínio:** `game-runtime`
@@ -15748,7 +16148,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00985 — `validate`
+## FUNC-01010 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:79`
 - **Domínio:** `game-runtime`
@@ -15764,7 +16164,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00986 — `norm`
+## FUNC-01011 — `norm`
 
 - **Fonte:** `src/r41-core-bundle.js:84`
 - **Domínio:** `game-runtime`
@@ -15780,7 +16180,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00987 — `kindOf`
+## FUNC-01012 — `kindOf`
 
 - **Fonte:** `src/r41-core-bundle.js:85`
 - **Domínio:** `game-runtime`
@@ -15796,7 +16196,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00988 — `apply`
+## FUNC-01013 — `apply`
 
 - **Fonte:** `src/r41-core-bundle.js:86`
 - **Domínio:** `game-runtime`
@@ -15812,7 +16212,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00989 — `validate`
+## FUNC-01014 — `validate`
 
 - **Fonte:** `src/r41-core-bundle.js:87`
 - **Domínio:** `game-runtime`
@@ -15828,7 +16228,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00990 — `norm`
+## FUNC-01015 — `norm`
 
 - **Fonte:** `src/r41-core-bundle.js:94`
 - **Domínio:** `game-runtime`
@@ -15844,7 +16244,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00991 — `register`
+## FUNC-01016 — `register`
 
 - **Fonte:** `src/r41-core-bundle.js:95`
 - **Domínio:** `game-runtime`
@@ -15860,7 +16260,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00992 — `get`
+## FUNC-01017 — `get`
 
 - **Fonte:** `src/r41-core-bundle.js:96`
 - **Domínio:** `game-runtime`
@@ -15876,7 +16276,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00993 — `infer`
+## FUNC-01018 — `infer`
 
 - **Fonte:** `src/r41-core-bundle.js:97`
 - **Domínio:** `game-runtime`
@@ -15892,7 +16292,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00994 — `clamp`
+## FUNC-01019 — `clamp`
 
 - **Fonte:** `src/r41-core-bundle.js:115`
 - **Domínio:** `game-runtime`
@@ -15908,7 +16308,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00995 — `normalizeResult`
+## FUNC-01020 — `normalizeResult`
 
 - **Fonte:** `src/r41-core-bundle.js:116`
 - **Domínio:** `game-runtime`
@@ -15924,7 +16324,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00996 — `terionModifier`
+## FUNC-01021 — `terionModifier`
 
 - **Fonte:** `src/r41-core-bundle.js:120`
 - **Domínio:** `game-runtime`
@@ -15940,7 +16340,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00997 — `trainingResult`
+## FUNC-01022 — `trainingResult`
 
 - **Fonte:** `src/r41-core-bundle.js:126`
 - **Domínio:** `game-runtime`
@@ -15956,7 +16356,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00998 — `normalizeScene`
+## FUNC-01023 — `normalizeScene`
 
 - **Fonte:** `src/r41-core-bundle.js:137`
 - **Domínio:** `game-runtime`
@@ -15972,7 +16372,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-00999 — `fromMissionStage`
+## FUNC-01024 — `fromMissionStage`
 
 - **Fonte:** `src/r41-core-bundle.js:141`
 - **Domínio:** `game-runtime`
@@ -15988,7 +16388,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01000 — `shouldSave`
+## FUNC-01025 — `shouldSave`
 
 - **Fonte:** `src/r41-core-bundle.js:149`
 - **Domínio:** `game-runtime`
@@ -16004,7 +16404,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01001 — `record`
+## FUNC-01026 — `record`
 
 - **Fonte:** `src/r41-core-bundle.js:150`
 - **Domínio:** `game-runtime`
@@ -16020,7 +16420,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01002 — `boot`
+## FUNC-01027 — `boot`
 
 - **Fonte:** `src/r41-core-bundle.js:160`
 - **Domínio:** `game-runtime`
@@ -16036,13 +16436,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01003 — `activeSave`
+## FUNC-01028 — `activeSave`
 
 - **Fonte:** `src/r41-final-ui-repair.js:14`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16052,7 +16452,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01004 — `ensureKuraiResource`
+## FUNC-01029 — `ensureKuraiResource`
 
 - **Fonte:** `src/r41-final-ui-repair.js:21`
 - **Domínio:** `game-runtime`
@@ -16068,7 +16468,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01005 — `repair`
+## FUNC-01030 — `repair`
 
 - **Fonte:** `src/r41-final-ui-repair.js:41`
 - **Domínio:** `game-runtime`
@@ -16084,7 +16484,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01006 — `schedule`
+## FUNC-01031 — `schedule`
 
 - **Fonte:** `src/r41-final-ui-repair.js:60`
 - **Domínio:** `game-runtime`
@@ -16100,7 +16500,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01007 — `localProgressKeys`
+## FUNC-01032 — `localProgressKeys`
 
 - **Fonte:** `src/r41-local-reset-fix.js:20`
 - **Domínio:** `game-runtime`
@@ -16116,7 +16516,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01008 — `resetLocalProgress`
+## FUNC-01033 — `resetLocalProgress`
 
 - **Fonte:** `src/r41-local-reset-fix.js:30`
 - **Domínio:** `game-runtime`
@@ -16132,29 +16532,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01009 — `clone`
-
-- **Fonte:** `src/r41-v82-combat-bridge.js:13`
-- **Domínio:** `game-runtime`
-- **Forma:** arrow-one
-- **Parâmetros:** `v`
-- **Chamadas internas detectadas:** —
-- **Rotas referidas:** —
-- **Coleções MongoDB:** —
-- **Modelos IA:** —
-- **DOM IDs:** —
-- **Storage keys:** —
-- **Env:** —
-- **Ações UI literais:** —
-- **Status:** `STATICALLY_TRACED`
-
-## FUNC-01010 — `activeSlotKey`
+## FUNC-01034 — `clone`
 
 - **Fonte:** `src/r41-v82-combat-bridge.js:14`
 - **Domínio:** `game-runtime`
-- **Forma:** declaration
-- **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** —
+- **Forma:** arrow-one
+- **Parâmetros:** `v`
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16164,12 +16548,28 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01011 — `parseSave`
+## FUNC-01035 — `parseSave`
 
 - **Fonte:** `src/r41-v82-combat-bridge.js:15`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `raw`
+- **Chamadas internas detectadas:** `parse`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01036 — `activeSlotId`
+
+- **Fonte:** `src/r41-v82-combat-bridge.js:16`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
 - **Chamadas internas detectadas:** —
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
@@ -16180,13 +16580,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01012 — `readRuntimeSave`
+## FUNC-01037 — `legacySlotKey`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:16`
+- **Fonte:** `src/r41-v82-combat-bridge.js:17`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `parseSave`, `activeSlotKey`
+- **Chamadas internas detectadas:** `activeSlotId`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16196,13 +16596,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01013 — `readPersistedSave`
+## FUNC-01038 — `accountEntries`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:22`
+- **Fonte:** `src/r41-v82-combat-bridge.js:18`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
-- **Chamadas internas detectadas:** `activeSlotKey`, `parseSave`, `readRuntimeSave`
+- **Chamadas internas detectadas:** `activeSlotId`, `parseSave`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16212,13 +16612,61 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01014 — `writeSave`
+## FUNC-01039 — `readSaveEntry`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:27`
+- **Fonte:** `src/r41-v82-combat-bridge.js:31`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `accountEntries`, `legacySlotKey`, `parseSave`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01040 — `readRuntimeSave`
+
+- **Fonte:** `src/r41-v82-combat-bridge.js:39`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `readSaveEntry`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01041 — `readPersistedSave`
+
+- **Fonte:** `src/r41-v82-combat-bridge.js:40`
+- **Domínio:** `game-runtime`
+- **Forma:** declaration
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `readRuntimeSave`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01042 — `writeSave`
+
+- **Fonte:** `src/r41-v82-combat-bridge.js:41`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `save`
-- **Chamadas internas detectadas:** `activeSlotKey`
+- **Chamadas internas detectadas:** `readSaveEntry`, `legacySlotKey`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16228,9 +16676,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01015 — `readDomVitals`
+## FUNC-01043 — `readDomVitals`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:37`
+- **Fonte:** `src/r41-v82-combat-bridge.js:52`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
@@ -16244,9 +16692,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01016 — `value`
+## FUNC-01044 — `value`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:39`
+- **Fonte:** `src/r41-v82-combat-bridge.js:54`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow-one
 - **Parâmetros:** `label`
@@ -16260,9 +16708,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01017 — `readFeedback`
+## FUNC-01045 — `readFeedback`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:42`
+- **Fonte:** `src/r41-v82-combat-bridge.js:57`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
@@ -16276,9 +16724,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01018 — `readCharacterVitals`
+## FUNC-01046 — `readCharacterVitals`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:48`
+- **Fonte:** `src/r41-v82-combat-bridge.js:63`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `save`
@@ -16292,9 +16740,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01019 — `makeResult`
+## FUNC-01047 — `makeResult`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:52`
+- **Fonte:** `src/r41-v82-combat-bridge.js:67`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `meta,beforeSave,afterSave,beforeDom,afterDom,beforeText,afterText,beforeFeedback,afterFeedback`
@@ -16308,9 +16756,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01020 — `makePresentation`
+## FUNC-01048 — `makePresentation`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:76`
+- **Fonte:** `src/r41-v82-combat-bridge.js:91`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `result,action`
@@ -16324,9 +16772,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01021 — `renderPresentation`
+## FUNC-01049 — `renderPresentation`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:84`
+- **Fonte:** `src/r41-v82-combat-bridge.js:99`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `p`
@@ -16340,9 +16788,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01022 — `persistPresentation`
+## FUNC-01050 — `persistPresentation`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:93`
+- **Fonte:** `src/r41-v82-combat-bridge.js:108`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `p,afterDom`
@@ -16356,9 +16804,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01023 — `installPublicApiBridge`
+## FUNC-01051 — `installPublicApiBridge`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:106`
+- **Fonte:** `src/r41-v82-combat-bridge.js:121`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `(nenhum explícito)`
@@ -16372,9 +16820,25 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01024 — `finishAction`
+## FUNC-01052 — `wrapped`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:117`
+- **Fonte:** `src/r41-v82-combat-bridge.js:127`
+- **Domínio:** `game-runtime`
+- **Forma:** arrow
+- **Parâmetros:** `(nenhum explícito)`
+- **Chamadas internas detectadas:** `readPersistedSave`, `clone`
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01053 — `finishAction`
+
+- **Fonte:** `src/r41-v82-combat-bridge.js:137`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `action,beforeSave,beforeDom,beforeText,beforeFeedback`
@@ -16388,9 +16852,9 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01025 — `boot`
+## FUNC-01054 — `boot`
 
-- **Fonte:** `src/r41-v82-combat-bridge.js:136`
+- **Fonte:** `src/r41-v82-combat-bridge.js:158`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow
 - **Parâmetros:** `(nenhum explícito)`
@@ -16404,7 +16868,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01026 — `ok`
+## FUNC-01055 — `ok`
 
 - **Fonte:** `tools/account-live-e2e.mjs:11`
 - **Domínio:** `tooling`
@@ -16420,7 +16884,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01027 — `call`
+## FUNC-01056 — `call`
 
 - **Fonte:** `tools/account-live-e2e.mjs:12`
 - **Domínio:** `tooling`
@@ -16436,7 +16900,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01028 — `write`
+## FUNC-01057 — `write`
 
 - **Fonte:** `tools/account-live-e2e.mjs:21`
 - **Domínio:** `tooling`
@@ -16452,7 +16916,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01029 — `fail`
+## FUNC-01058 — `fail`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:10`
 - **Domínio:** `tooling`
@@ -16468,7 +16932,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01030 — `warn`
+## FUNC-01059 — `warn`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:11`
 - **Domínio:** `tooling`
@@ -16484,7 +16948,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01031 — `exists`
+## FUNC-01060 — `exists`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:12`
 - **Domínio:** `tooling`
@@ -16500,7 +16964,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01032 — `norm`
+## FUNC-01061 — `norm`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:13`
 - **Domínio:** `tooling`
@@ -16516,7 +16980,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01033 — `isDoc`
+## FUNC-01062 — `isDoc`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:14`
 - **Domínio:** `tooling`
@@ -16532,7 +16996,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01034 — `isTooling`
+## FUNC-01063 — `isTooling`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:15`
 - **Domínio:** `tooling`
@@ -16548,7 +17012,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01035 — `isGameRuntime`
+## FUNC-01064 — `isGameRuntime`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:16`
 - **Domínio:** `tooling`
@@ -16564,7 +17028,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01036 — `auditGameGrouped`
+## FUNC-01065 — `auditGameGrouped`
 
 - **Fonte:** `tools/audit-documentation-coverage.mjs:37`
 - **Domínio:** `tooling`
@@ -16580,7 +17044,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01037 — `sha256`
+## FUNC-01066 — `sha256`
 
 - **Fonte:** `tools/audit-final-canonical-spec.mjs:10`
 - **Domínio:** `tooling`
@@ -16596,7 +17060,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01038 — `walk`
+## FUNC-01067 — `walk`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:17`
 - **Domínio:** `tooling`
@@ -16612,7 +17076,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01039 — `cleanRef`
+## FUNC-01068 — `cleanRef`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:26`
 - **Domínio:** `tooling`
@@ -16628,7 +17092,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01040 — `isDynamic`
+## FUNC-01069 — `isDynamic`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:31`
 - **Domínio:** `tooling`
@@ -16644,7 +17108,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01041 — `addRef`
+## FUNC-01070 — `addRef`
 
 - **Fonte:** `tools/audit-r41-assets.mjs:32`
 - **Domínio:** `tooling`
@@ -16660,7 +17124,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01042 — `assert`
+## FUNC-01071 — `assert`
 
 - **Fonte:** `tools/browser-account-live.mjs:11`
 - **Domínio:** `tooling`
@@ -16676,7 +17140,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01043 — `isImage`
+## FUNC-01072 — `isImage`
 
 - **Fonte:** `tools/browser-combat-local-e2e.mjs:39`
 - **Domínio:** `tooling`
@@ -16692,7 +17156,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01044 — `json`
+## FUNC-01073 — `json`
 
 - **Fonte:** `tools/browser-combat-local-e2e.mjs:46`
 - **Domínio:** `tooling`
@@ -16708,13 +17172,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01045 — `readSaveV2`
+## FUNC-01074 — `readSaveV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:16`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `page`
-- **Chamadas internas detectadas:** `tryParse`
+- **Chamadas internas detectadas:** `parse`, `tryParse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16724,13 +17188,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01046 — `tryParse`
+## FUNC-01075 — `tryParse`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:18`
 - **Domínio:** `tooling`
 - **Forma:** arrow-one
 - **Parâmetros:** `raw`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16740,7 +17204,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01047 — `registerV2`
+## FUNC-01076 — `registerV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:48`
 - **Domínio:** `tooling`
@@ -16756,7 +17220,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** `auth-mode`, `auth-submit`, `account-new`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01048 — `seedNormalV2`
+## FUNC-01077 — `seedNormalV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:66`
 - **Domínio:** `tooling`
@@ -16772,7 +17236,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01049 — `navigateV2`
+## FUNC-01078 — `navigateV2`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v2.mjs:165`
 - **Domínio:** `tooling`
@@ -16788,7 +17252,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01050 — `seedNormalV3`
+## FUNC-01079 — `seedNormalV3`
 
 - **Fonte:** `tools/browser-gameplay-e2e-v3.mjs:10`
 - **Domínio:** `tooling`
@@ -16804,7 +17268,39 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01051 — `assert`
+## FUNC-01080 — `parse`
+
+- **Fonte:** `tools/browser-gameplay-e2e-v4.mjs:33`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `x`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01081 — `parse`
+
+- **Fonte:** `tools/browser-gameplay-e2e-v4.mjs:47`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `x`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01082 — `assert`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:18`
 - **Domínio:** `tooling`
@@ -16820,7 +17316,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01052 — `pass`
+## FUNC-01083 — `pass`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:19`
 - **Domínio:** `tooling`
@@ -16836,7 +17332,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01053 — `contract`
+## FUNC-01084 — `contract`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:20`
 - **Domínio:** `tooling`
@@ -16852,7 +17348,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01054 — `sleep`
+## FUNC-01085 — `sleep`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:21`
 - **Domínio:** `tooling`
@@ -16868,7 +17364,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01055 — `normalFixture`
+## FUNC-01086 — `normalFixture`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:23`
 - **Domínio:** `tooling`
@@ -16884,7 +17380,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01056 — `leonFixture`
+## FUNC-01087 — `leonFixture`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:55`
 - **Domínio:** `tooling`
@@ -16900,13 +17396,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01057 — `readSave`
+## FUNC-01088 — `readSave`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:65`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `page`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -16916,7 +17412,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01058 — `r41State`
+## FUNC-01089 — `r41State`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:66`
 - **Domínio:** `tooling`
@@ -16932,7 +17428,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01059 — `masterState`
+## FUNC-01090 — `masterState`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:67`
 - **Domínio:** `tooling`
@@ -16948,7 +17444,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01060 — `navigate`
+## FUNC-01091 — `navigate`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:68`
 - **Domínio:** `tooling`
@@ -16964,7 +17460,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01061 — `playVisibleMinigame`
+## FUNC-01092 — `playVisibleMinigame`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:70`
 - **Domínio:** `tooling`
@@ -16980,7 +17476,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01062 — `register`
+## FUNC-01093 — `register`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:89`
 - **Domínio:** `tooling`
@@ -16996,7 +17492,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01063 — `seedNormal`
+## FUNC-01094 — `seedNormal`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:107`
 - **Domínio:** `tooling`
@@ -17012,7 +17508,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01064 — `testNormalGameplay`
+## FUNC-01095 — `testNormalGameplay`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:118`
 - **Domínio:** `tooling`
@@ -17028,7 +17524,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** `map-hotspot`, `map-enter`, `r41-hospital-treat`, `r27-rest`, `r41-activity`, `start-battle`, `basic-attack`, `end-battle`, `start-mission`, `r382-board-tab`, `mission-route`, `mission-choice`, `r32-resume-mission`, `online-create`, `r41-online-intent`, `online-leave`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01065 — `testKurai`
+## FUNC-01096 — `testKurai`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:283`
 - **Domínio:** `tooling`
@@ -17044,7 +17540,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** `kurai-mode`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01066 — `cleanupAccount`
+## FUNC-01097 — `cleanupAccount`
 
 - **Fonte:** `tools/browser-gameplay-e2e.mjs:308`
 - **Domínio:** `tooling`
@@ -17060,7 +17556,87 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** `delete-account`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01067 — `assert`
+## FUNC-01098 — `cloneLocal`
+
+- **Fonte:** `tools/browser-gameplay-local-e2e.mjs:23`
+- **Domínio:** `tooling`
+- **Forma:** arrow-one
+- **Parâmetros:** `v`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01099 — `slotSummaryLocal`
+
+- **Fonte:** `tools/browser-gameplay-local-e2e.mjs:24`
+- **Domínio:** `tooling`
+- **Forma:** arrow
+- **Parâmetros:** `slotId,save`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01100 — `reply`
+
+- **Fonte:** `tools/browser-gameplay-local-e2e.mjs:37`
+- **Domínio:** `tooling`
+- **Forma:** arrow
+- **Parâmetros:** `data,status=200`
+- **Chamadas internas detectadas:** —
+- **Rotas referidas:** —
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** —
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01101 — `testKurai`
+
+- **Fonte:** `tools/browser-gameplay-local-e2e.mjs:83`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `browser`
+- **Chamadas internas detectadas:** `fetch`, `close`, `text`, `status`, `resolve`
+- **Rotas referidas:** `/api/account/save`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** `sns-v841-active-account-slot`, `narutoShinobiNoShoPcV5Active`
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01102 — `testKurai`
+
+- **Fonte:** `tools/browser-gameplay-local-e2e.mjs:85`
+- **Domínio:** `tooling`
+- **Forma:** declaration
+- **Parâmetros:** `page`
+- **Chamadas internas detectadas:** `fetch`, `close`, `text`, `status`, `resolve`
+- **Rotas referidas:** `/api/account/save`
+- **Coleções MongoDB:** —
+- **Modelos IA:** —
+- **DOM IDs:** —
+- **Storage keys:** `sns-v841-active-account-slot`, `narutoShinobiNoShoPcV5Active`
+- **Env:** —
+- **Ações UI literais:** —
+- **Status:** `STATICALLY_TRACED`
+
+## FUNC-01103 — `assert`
 
 - **Fonte:** `tools/browser-live-api.mjs:9`
 - **Domínio:** `tooling`
@@ -17076,7 +17652,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01068 — `assert`
+## FUNC-01104 — `assert`
 
 - **Fonte:** `tools/browser-smoke.mjs:7`
 - **Domínio:** `tooling`
@@ -17092,7 +17668,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01069 — `fail`
+## FUNC-01105 — `fail`
 
 - **Fonte:** `tools/browser-smoke.mjs:7`
 - **Domínio:** `tooling`
@@ -17108,7 +17684,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01070 — `sha256`
+## FUNC-01106 — `sha256`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -17124,7 +17700,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01071 — `norm`
+## FUNC-01107 — `norm`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:20`
 - **Domínio:** `tooling`
@@ -17140,7 +17716,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01072 — `isDocs`
+## FUNC-01108 — `isDocs`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -17156,7 +17732,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01073 — `isSource`
+## FUNC-01109 — `isSource`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:22`
 - **Domínio:** `tooling`
@@ -17172,7 +17748,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01074 — `esc`
+## FUNC-01110 — `esc`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:23`
 - **Domínio:** `tooling`
@@ -17188,7 +17764,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01075 — `code`
+## FUNC-01111 — `code`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:24`
 - **Domínio:** `tooling`
@@ -17204,7 +17780,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01076 — `fence`
+## FUNC-01112 — `fence`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:25`
 - **Domínio:** `tooling`
@@ -17220,7 +17796,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01077 — `langFor`
+## FUNC-01113 — `langFor`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:26`
 - **Domínio:** `tooling`
@@ -17236,7 +17812,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01078 — `lineLocator`
+## FUNC-01114 — `lineLocator`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:31`
 - **Domínio:** `tooling`
@@ -17252,7 +17828,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01079 — `blockEnd`
+## FUNC-01115 — `blockEnd`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:41`
 - **Domínio:** `tooling`
@@ -17268,7 +17844,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01080 — `snippetAt`
+## FUNC-01116 — `snippetAt`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:62`
 - **Domínio:** `tooling`
@@ -17284,7 +17860,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01081 — `scanFunctions`
+## FUNC-01117 — `scanFunctions`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:72`
 - **Domínio:** `tooling`
@@ -17300,7 +17876,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01082 — `actionHandlerEvidence`
+## FUNC-01118 — `actionHandlerEvidence`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:126`
 - **Domínio:** `tooling`
@@ -17316,7 +17892,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01083 — `gate`
+## FUNC-01119 — `gate`
 
 - **Fonte:** `tools/build-final-canonical-spec.mjs:175`
 - **Domínio:** `tooling`
@@ -17332,7 +17908,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01084 — `pass`
+## FUNC-01120 — `pass`
 
 - **Fonte:** `tools/final-readiness.mjs:7`
 - **Domínio:** `tooling`
@@ -17348,13 +17924,13 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01085 — `readJson`
+## FUNC-01121 — `readJson`
 
 - **Fonte:** `tools/final-readiness.mjs:8`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `p`
-- **Chamadas internas detectadas:** —
+- **Chamadas internas detectadas:** `parse`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -17364,7 +17940,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01086 — `walk`
+## FUNC-01122 — `walk`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:26`
 - **Domínio:** `tooling`
@@ -17380,7 +17956,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01087 — `reEsc`
+## FUNC-01123 — `reEsc`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:40`
 - **Domínio:** `tooling`
@@ -17396,7 +17972,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01088 — `lineAt`
+## FUNC-01124 — `lineAt`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:41`
 - **Domínio:** `tooling`
@@ -17412,7 +17988,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01089 — `occurrences`
+## FUNC-01125 — `occurrences`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:46`
 - **Domínio:** `tooling`
@@ -17428,7 +18004,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01090 — `uniqEvidence`
+## FUNC-01126 — `uniqEvidence`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:55`
 - **Domínio:** `tooling`
@@ -17444,7 +18020,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01091 — `aliasesForDatasetAction`
+## FUNC-01127 — `aliasesForDatasetAction`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:65`
 - **Domínio:** `tooling`
@@ -17460,7 +18036,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01092 — `handlerEvidence`
+## FUNC-01128 — `handlerEvidence`
 
 - **Fonte:** `tools/finalize-canonical-ui-trace.mjs:73`
 - **Domínio:** `tooling`
@@ -17476,7 +18052,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** `${value}`
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01093 — `px`
+## FUNC-01129 — `px`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:13`
 - **Domínio:** `tooling`
@@ -17492,7 +18068,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01094 — `rel`
+## FUNC-01130 — `rel`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:14`
 - **Domínio:** `tooling`
@@ -17508,7 +18084,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01095 — `code`
+## FUNC-01131 — `code`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:15`
 - **Domínio:** `tooling`
@@ -17524,7 +18100,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01096 — `clean`
+## FUNC-01132 — `clean`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:16`
 - **Domínio:** `tooling`
@@ -17540,7 +18116,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01097 — `uniq`
+## FUNC-01133 — `uniq`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:17`
 - **Domínio:** `tooling`
@@ -17556,7 +18132,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01098 — `ident`
+## FUNC-01134 — `ident`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:18`
 - **Domínio:** `tooling`
@@ -17572,7 +18148,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01099 — `hash`
+## FUNC-01135 — `hash`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -17588,7 +18164,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01100 — `walk`
+## FUNC-01136 — `walk`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -17604,7 +18180,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01101 — `lineLocator`
+## FUNC-01137 — `lineLocator`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:32`
 - **Domínio:** `tooling`
@@ -17620,7 +18196,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01102 — `readText`
+## FUNC-01138 — `readText`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:42`
 - **Domínio:** `tooling`
@@ -17636,7 +18212,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01103 — `blockEnd`
+## FUNC-01139 — `blockEnd`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:48`
 - **Domínio:** `tooling`
@@ -17652,7 +18228,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01104 — `bodyAt`
+## FUNC-01140 — `bodyAt`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:69`
 - **Domínio:** `tooling`
@@ -17668,7 +18244,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01105 — `captures`
+## FUNC-01141 — `captures`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:75`
 - **Domínio:** `tooling`
@@ -17684,7 +18260,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01106 — `refs`
+## FUNC-01142 — `refs`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:81`
 - **Domínio:** `tooling`
@@ -17700,7 +18276,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01107 — `extractFunctions`
+## FUNC-01143 — `extractFunctions`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:99`
 - **Domínio:** `tooling`
@@ -17716,7 +18292,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01108 — `add`
+## FUNC-01144 — `add`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:149`
 - **Domínio:** `tooling`
@@ -17732,7 +18308,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01109 — `grouped`
+## FUNC-01145 — `grouped`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:163`
 - **Domínio:** `tooling`
@@ -17748,7 +18324,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01110 — `header`
+## FUNC-01146 — `header`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:216`
 - **Domínio:** `tooling`
@@ -17764,7 +18340,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01111 — `sources`
+## FUNC-01147 — `sources`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:217`
 - **Domínio:** `tooling`
@@ -17780,7 +18356,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01112 — `listCodes`
+## FUNC-01148 — `listCodes`
 
 - **Fonte:** `tools/generate-technical-spec.mjs:218`
 - **Domínio:** `tooling`
@@ -17796,7 +18372,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01113 — `assert`
+## FUNC-01149 — `assert`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:11`
 - **Domínio:** `tooling`
@@ -17812,7 +18388,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01114 — `record`
+## FUNC-01150 — `record`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:12`
 - **Domínio:** `tooling`
@@ -17828,7 +18404,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01115 — `request`
+## FUNC-01151 — `request`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:13`
 - **Domínio:** `tooling`
@@ -17844,7 +18420,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01116 — `safe`
+## FUNC-01152 — `safe`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:23`
 - **Domínio:** `tooling`
@@ -17860,7 +18436,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01117 — `writeReport`
+## FUNC-01153 — `writeReport`
 
 - **Fonte:** `tools/live-worker-e2e.mjs:29`
 - **Domínio:** `tooling`
@@ -17876,7 +18452,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01118 — `norm`
+## FUNC-01154 — `norm`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:11`
 - **Domínio:** `tooling`
@@ -17892,7 +18468,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01119 — `isDynamic`
+## FUNC-01155 — `isDynamic`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:12`
 - **Domínio:** `tooling`
@@ -17908,7 +18484,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01120 — `existsLiteral`
+## FUNC-01156 — `existsLiteral`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:16`
 - **Domínio:** `tooling`
@@ -17924,7 +18500,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01121 — `code`
+## FUNC-01157 — `code`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:21`
 - **Domínio:** `tooling`
@@ -17940,7 +18516,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01122 — `srcs`
+## FUNC-01158 — `srcs`
 
 - **Fonte:** `tools/reconcile-asset-references.mjs:22`
 - **Domínio:** `tooling`
@@ -17956,7 +18532,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01123 — `norm`
+## FUNC-01159 — `norm`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:13`
 - **Domínio:** `tooling`
@@ -17972,7 +18548,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01124 — `hasSourceExt`
+## FUNC-01160 — `hasSourceExt`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:14`
 - **Domínio:** `tooling`
@@ -17988,7 +18564,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01125 — `isDocumentation`
+## FUNC-01161 — `isDocumentation`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:15`
 - **Domínio:** `tooling`
@@ -18004,7 +18580,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01126 — `isTooling`
+## FUNC-01162 — `isTooling`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:16`
 - **Domínio:** `tooling`
@@ -18020,7 +18596,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01127 — `isSource`
+## FUNC-01163 — `isSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:17`
 - **Domínio:** `tooling`
@@ -18036,7 +18612,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01128 — `isGameRuntimeSource`
+## FUNC-01164 — `isGameRuntimeSource`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:18`
 - **Domínio:** `tooling`
@@ -18052,7 +18628,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01129 — `domainOf`
+## FUNC-01165 — `domainOf`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:19`
 - **Domínio:** `tooling`
@@ -18068,7 +18644,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01130 — `code`
+## FUNC-01166 — `code`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:20`
 - **Domínio:** `tooling`
@@ -18084,7 +18660,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01131 — `clean`
+## FUNC-01167 — `clean`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:21`
 - **Domínio:** `tooling`
@@ -18100,7 +18676,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01132 — `srcs`
+## FUNC-01168 — `srcs`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:22`
 - **Domínio:** `tooling`
@@ -18116,7 +18692,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01133 — `listCodes`
+## FUNC-01169 — `listCodes`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:23`
 - **Domínio:** `tooling`
@@ -18132,7 +18708,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01134 — `header`
+## FUNC-01170 — `header`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:24`
 - **Domínio:** `tooling`
@@ -18148,7 +18724,7 @@ Gerado em: `2026-08-24T15:56:43.006Z`
 - **Ações UI literais:** —
 - **Status:** `STATICALLY_TRACED`
 
-## FUNC-01135 — `filterGrouped`
+## FUNC-01171 — `filterGrouped`
 
 - **Fonte:** `tools/refine-technical-spec.mjs:26`
 - **Domínio:** `tooling`

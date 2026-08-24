@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-08-24T15:56:43.006Z",
+  "generatedAt": "2026-08-24T18:14:41.738Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5542,
-    "runtimeFiles": 82,
+    "files": 5544,
+    "runtimeFiles": 84,
     "assetFiles": 5434,
-    "textFiles": 103,
-    "functions": 1135,
+    "textFiles": 105,
+    "functions": 1171,
     "routes": 33,
     "models": 2,
     "collections": 12,
     "storageOccurrences": 17,
-    "uiActions": 221,
+    "uiActions": 222,
     "events": 12,
-    "movementEvidence": 7865,
-    "scriptTags": 36,
-    "assetReferences": 15814,
+    "movementEvidence": 7873,
+    "scriptTags": 37,
+    "assetReferences": 15815,
     "missingLiteralAssetReferences": 0,
-    "gameRuntimeFunctions": 1025,
-    "toolingFunctions": 110,
+    "gameRuntimeFunctions": 1054,
+    "toolingFunctions": 117,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 93,
-    "gameRuntimeSourceFiles": 64,
-    "toolingSourceFiles": 29,
+    "sourceFiles": 95,
+    "gameRuntimeSourceFiles": 65,
+    "toolingSourceFiles": 30,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -51,8 +51,8 @@
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 1960,
-      "sha256": "4cad14d28dc132cfbe29cc4b621c16604e14d7209f2c0ed338930c5ae661f090",
+      "size": 3046,
+      "sha256": "77d4d5ae82322a3a090ed2c6f8bcb4a5150a1d345dbc30a44571813f204fbf98",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -44051,8 +44051,8 @@
     },
     {
       "path": "index.html",
-      "size": 4050,
-      "sha256": "ee68fc340411d5f5a537b4107ae2c188fb2c1d3bd3d5d4e5961f2cec45225ad6",
+      "size": 4140,
+      "sha256": "cbd2bfcb59365a9e594946a4047b0021db788ab3113513221e283f42d6f84186",
       "extension": ".html",
       "runtime": true,
       "asset": false
@@ -44138,9 +44138,17 @@
       "asset": false
     },
     {
+      "path": "src/r41-account-active-slot.js",
+      "size": 13468,
+      "sha256": "6619fdb440395088f06f5e352c9e0960a3c89a2acf3b3a85da4d15b2c6053112",
+      "extension": ".js",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "src/r41-asset-path-repair.js",
-      "size": 1707,
-      "sha256": "e313440ba475ad9f02b32c71a6651fe50594c9fa7734034033b8d26ca05173fd",
+      "size": 3126,
+      "sha256": "819b549845882723160287e73a8bb64c6391e15015695d29bc0a59d418d53e46",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44187,8 +44195,8 @@
     },
     {
       "path": "src/r41-v82-combat-bridge.js",
-      "size": 8803,
-      "sha256": "782ccc6e3677b0d45836a3e40ba0c4fa9ebfcbd7b0b3861a41b34df183a91e2b",
+      "size": 10105,
+      "sha256": "771607cf769588b9bd2b6e8004d2f3b1196865cce555860c7a550b4ec9d04511",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44275,8 +44283,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 5423,
-      "sha256": "c88b16d694c96e860a34dae980e150d31732f430e6416eee1ee58d242857c3d1",
+      "size": 9122,
+      "sha256": "08023f1fde71ae53eee36549d8e3dcbba7927c892483b9ba557fd3960a6ff1a2",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44285,6 +44293,14 @@
       "path": "tools/browser-gameplay-e2e.mjs",
       "size": 24505,
       "sha256": "3b71f9eef487aea41b1232571fb54caa259739640355d801899fe46fbeb2c0ea",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/browser-gameplay-local-e2e.mjs",
+      "size": 8627,
+      "sha256": "58b3981ff1ea9b3fc04b2341ff69bee9322263b5688c7af7c29138861422c92b",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44485,6 +44501,7 @@
       },
       "calls": [
         "defaultState",
+        "parse",
         "recalc"
       ],
       "id": "FUNC-00006",
@@ -44902,6 +44919,7 @@
         "readAIDirectorFromForm",
         "callAI",
         "apiHeaders",
+        "parse",
         "narrateMissionStage",
         "aiCustom",
         "aiGenerateMission",
@@ -46913,6 +46931,7 @@
         "fetch",
         "apiHeaders",
         "json",
+        "parse",
         "normalizeAIResult",
         "mergeWorldUpdates",
         "toast"
@@ -47237,6 +47256,7 @@
         "actions": []
       },
       "calls": [
+        "parse",
         "defaultState",
         "recalc",
         "saveState",
@@ -47761,7 +47781,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00104",
       "domain": "game-runtime"
     },
@@ -48014,7 +48036,8 @@
         "actions": []
       },
       "calls": [
-        "newCreationDraft"
+        "newCreationDraft",
+        "parse"
       ],
       "id": "FUNC-00117",
       "domain": "game-runtime"
@@ -48587,7 +48610,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00142",
       "domain": "game-runtime"
     },
@@ -48649,6 +48674,7 @@
       },
       "calls": [
         "hydrateState",
+        "parse",
         "render",
         "toast"
       ],
@@ -48738,6 +48764,7 @@
       },
       "calls": [
         "hydrateState",
+        "parse",
         "newId",
         "readSlotIndex",
         "writeSlotIndex",
@@ -49660,6 +49687,7 @@
         "fetch",
         "apiHeaders",
         "json",
+        "parse",
         "normalizeAIResult",
         "mergeWorldUpdates",
         "toast"
@@ -54241,7 +54269,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00379",
       "domain": "game-runtime"
     },
@@ -54305,6 +54335,7 @@
       "calls": [
         "v821ApplyLeonCanonical",
         "hydrateState",
+        "parse",
         "v821Clone",
         "warn"
       ],
@@ -54460,7 +54491,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00389",
       "domain": "game-runtime"
     },
@@ -56362,6 +56395,7 @@
       "calls": [
         "accountToken",
         "accountApi",
+        "parse",
         "v821ApplyLeonCanonical",
         "hydrateState",
         "saveState",
@@ -56528,6 +56562,7 @@
       },
       "calls": [
         "readSlotIndex",
+        "parse",
         "accountApi",
         "loadAccountSlots",
         "render",
@@ -57113,7 +57148,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00503",
       "domain": "game-runtime"
     },
@@ -59333,6 +59370,7 @@
         "finishMission",
         "v821ApplyLeonCanonical",
         "hydrateState",
+        "parse",
         "defaultState",
         "r27TrainingGate",
         "r27ApplyAIResultEffects",
@@ -61919,7 +61957,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00704",
       "domain": "game-runtime"
     },
@@ -62468,7 +62508,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00729",
       "domain": "game-runtime"
     },
@@ -62908,7 +62950,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00749",
       "domain": "game-runtime"
     },
@@ -63821,6 +63865,7 @@
         "nowIso",
         "roomId",
         "safeJson",
+        "parse",
         "safeAccount",
         "cors",
         "reply",
@@ -64086,7 +64131,9 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
+      "calls": [
+        "parse"
+      ],
       "id": "FUNC-00800",
       "domain": "game-runtime"
     },
@@ -64447,7 +64494,8 @@
         "actions": []
       },
       "calls": [
-        "values"
+        "values",
+        "parse"
       ],
       "id": "FUNC-00817",
       "domain": "game-runtime"
@@ -66165,6 +66213,7 @@
         "ensureIndexes",
         "issueToken",
         "verifyToken",
+        "parse",
         "requireUser",
         "revokeCurrent",
         "slotSummary",
@@ -66629,6 +66678,7 @@
         "b64url",
         "hmac",
         "timingSafe",
+        "parse",
         "unb64url",
         "toObjectId"
       ],
@@ -66676,6 +66726,7 @@
       },
       "calls": [
         "bearer",
+        "parse",
         "unb64url"
       ],
       "id": "FUNC-00904",
@@ -66815,7 +66866,8 @@
         "actions": []
       },
       "calls": [
-        "values"
+        "values",
+        "parse"
       ],
       "id": "FUNC-00911",
       "domain": "game-runtime"
@@ -68025,11 +68077,11 @@
       "domain": "game-runtime"
     },
     {
-      "file": "src/r41-asset-path-repair.js",
-      "line": 8,
-      "name": "path",
-      "kind": "arrow",
-      "params": "base,id,ext",
+      "file": "src/r41-account-active-slot.js",
+      "line": 18,
+      "name": "parse",
+      "kind": "arrow-one",
+      "params": "raw",
       "refs": {
         "routes": [],
         "collections": [],
@@ -68044,8 +68096,574 @@
       "domain": "game-runtime"
     },
     {
+      "file": "src/r41-account-active-slot.js",
+      "line": 19,
+      "name": "copy",
+      "kind": "arrow-one",
+      "params": "v",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-00968",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 20,
+      "name": "authenticated",
+      "kind": "arrow",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00969",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 21,
+      "name": "active",
+      "kind": "arrow",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00970",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 22,
+      "name": "remember",
+      "kind": "arrow-one",
+      "params": "id",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00971",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 23,
+      "name": "forget",
+      "kind": "arrow-one",
+      "params": "id",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "active"
+      ],
+      "id": "FUNC-00972",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 25,
+      "name": "activeAccountEntry",
+      "kind": "declaration",
+      "params": "id=active(",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-00973",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 36,
+      "name": "sameCharacter",
+      "kind": "declaration",
+      "params": "a,b",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00974",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 45,
+      "name": "characterSummary",
+      "kind": "declaration",
+      "params": "save",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00975",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 50,
+      "name": "apiPost",
+      "kind": "declaration",
+      "params": "path,body",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "fetch",
+        "json"
+      ],
+      "id": "FUNC-00976",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 57,
+      "name": "persistAccountSave",
+      "kind": "declaration",
+      "params": "entry,save",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00977",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 64,
+      "name": "applyKuraiMode",
+      "kind": "declaration",
+      "params": "save,mode",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00978",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 76,
+      "name": "setKuraiModeDirect",
+      "kind": "declaration",
+      "params": "button",
+      "refs": {
+        "routes": [
+          "/api/account/save"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "active",
+        "activeAccountEntry",
+        "parse",
+        "copy",
+        "applyKuraiMode",
+        "persistAccountSave",
+        "authenticated",
+        "apiPost",
+        "warn"
+      ],
+      "id": "FUNC-00979",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 96,
+      "name": "finishOnlineTransition",
+      "kind": "declaration",
+      "params": "entry,id,save",
+      "refs": {
+        "routes": [
+          "/api/account/save"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "persistAccountSave",
+        "apiPost",
+        "warn"
+      ],
+      "id": "FUNC-00980",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 103,
+      "name": "createOnlineRoomDirect",
+      "kind": "declaration",
+      "params": "button",
+      "refs": {
+        "routes": [
+          "/api/online/create"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "online-room-title"
+        ],
+        "actions": []
+      },
+      "calls": [
+        "authenticated",
+        "active",
+        "activeAccountEntry",
+        "copy",
+        "apiPost",
+        "characterSummary",
+        "finishOnlineTransition"
+      ],
+      "id": "FUNC-00981",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 121,
+      "name": "joinOnlineRoomDirect",
+      "kind": "declaration",
+      "params": "button",
+      "refs": {
+        "routes": [
+          "/api/online/join"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "online-room-id"
+        ],
+        "actions": []
+      },
+      "calls": [
+        "authenticated",
+        "active",
+        "activeAccountEntry",
+        "copy",
+        "apiPost",
+        "characterSummary",
+        "finishOnlineTransition"
+      ],
+      "id": "FUNC-00982",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 139,
+      "name": "reconcileOnlineRoomMirror",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "authenticated",
+        "active",
+        "activeAccountEntry",
+        "parse",
+        "sameCharacter",
+        "copy"
+      ],
+      "id": "FUNC-00983",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 160,
+      "name": "clearSatisfiedRecovery",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "active",
+        "activeAccountEntry",
+        "parse"
+      ],
+      "id": "FUNC-00984",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 166,
+      "name": "slotControl",
+      "kind": "declaration",
+      "params": "id",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "main-nav",
+          "screen",
+          "online-room-id",
+          "app"
+        ],
+        "actions": [
+          "account-load",
+          "load-account-slot"
+        ]
+      },
+      "calls": [
+        "accountChooserVisible",
+        "returnToRequestedScreen",
+        "recoverActiveSlot",
+        "authenticated",
+        "active",
+        "clearSatisfiedRecovery",
+        "repairAndRecover",
+        "reconcileOnlineRoomMirror",
+        "activeAccountEntry",
+        "parse",
+        "setKuraiModeDirect",
+        "createOnlineRoomDirect",
+        "joinOnlineRoomDirect",
+        "remember",
+        "forget",
+        "start"
+      ],
+      "id": "FUNC-00985",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 172,
+      "name": "accountChooserVisible",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "main-nav",
+          "screen"
+        ],
+        "actions": [
+          "account-load",
+          "load-account-slot"
+        ]
+      },
+      "calls": [],
+      "id": "FUNC-00986",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 178,
+      "name": "returnToRequestedScreen",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00987",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 184,
+      "name": "recoverActiveSlot",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "screen"
+        ],
+        "actions": []
+      },
+      "calls": [
+        "authenticated",
+        "accountChooserVisible",
+        "active",
+        "slotControl",
+        "clearSatisfiedRecovery"
+      ],
+      "id": "FUNC-00988",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 201,
+      "name": "repairAndRecover",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "reconcileOnlineRoomMirror",
+        "clearSatisfiedRecovery",
+        "returnToRequestedScreen",
+        "recoverActiveSlot"
+      ],
+      "id": "FUNC-00989",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "line": 227,
+      "name": "start",
+      "kind": "arrow",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [
+          "app"
+        ],
+        "actions": []
+      },
+      "calls": [
+        "repairAndRecover"
+      ],
+      "id": "FUNC-00990",
+      "domain": "game-runtime"
+    },
+    {
       "file": "src/r41-asset-path-repair.js",
-      "line": 12,
+      "line": 9,
+      "name": "path",
+      "kind": "arrow",
+      "params": "base,id,ext",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-00991",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 19,
       "name": "rewrite",
       "kind": "arrow-one",
       "params": "value",
@@ -68059,12 +68677,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00968",
+      "id": "FUNC-00992",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-asset-path-repair.js",
-      "line": 24,
+      "line": 31,
       "name": "set",
       "kind": "method",
       "params": "value",
@@ -68081,7 +68699,29 @@
         "call",
         "rewrite"
       ],
-      "id": "FUNC-00969",
+      "id": "FUNC-00993",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 53,
+      "name": "set",
+      "kind": "method",
+      "params": "value",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "call",
+        "rewrite"
+      ],
+      "id": "FUNC-00994",
       "domain": "game-runtime"
     },
     {
@@ -68102,7 +68742,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00970",
+      "id": "FUNC-00995",
       "domain": "game-runtime"
     },
     {
@@ -68124,7 +68764,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00971",
+      "id": "FUNC-00996",
       "domain": "game-runtime"
     },
     {
@@ -68146,7 +68786,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-00972",
+      "id": "FUNC-00997",
       "domain": "game-runtime"
     },
     {
@@ -68169,7 +68809,7 @@
         "set",
         "get"
       ],
-      "id": "FUNC-00973",
+      "id": "FUNC-00998",
       "domain": "game-runtime"
     },
     {
@@ -68193,7 +68833,7 @@
         "set",
         "normalize"
       ],
-      "id": "FUNC-00974",
+      "id": "FUNC-00999",
       "domain": "game-runtime"
     },
     {
@@ -68216,7 +68856,7 @@
         "get",
         "warn"
       ],
-      "id": "FUNC-00975",
+      "id": "FUNC-01000",
       "domain": "game-runtime"
     },
     {
@@ -68235,7 +68875,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00976",
+      "id": "FUNC-01001",
       "domain": "game-runtime"
     },
     {
@@ -68254,7 +68894,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00977",
+      "id": "FUNC-01002",
       "domain": "game-runtime"
     },
     {
@@ -68273,7 +68913,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00978",
+      "id": "FUNC-01003",
       "domain": "game-runtime"
     },
     {
@@ -68294,7 +68934,7 @@
       "calls": [
         "normalize"
       ],
-      "id": "FUNC-00979",
+      "id": "FUNC-01004",
       "domain": "game-runtime"
     },
     {
@@ -68313,7 +68953,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00980",
+      "id": "FUNC-01005",
       "domain": "game-runtime"
     },
     {
@@ -68332,7 +68972,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00981",
+      "id": "FUNC-01006",
       "domain": "game-runtime"
     },
     {
@@ -68351,7 +68991,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00982",
+      "id": "FUNC-01007",
       "domain": "game-runtime"
     },
     {
@@ -68370,7 +69010,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00983",
+      "id": "FUNC-01008",
       "domain": "game-runtime"
     },
     {
@@ -68389,7 +69029,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00984",
+      "id": "FUNC-01009",
       "domain": "game-runtime"
     },
     {
@@ -68408,7 +69048,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00985",
+      "id": "FUNC-01010",
       "domain": "game-runtime"
     },
     {
@@ -68427,7 +69067,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00986",
+      "id": "FUNC-01011",
       "domain": "game-runtime"
     },
     {
@@ -68446,7 +69086,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00987",
+      "id": "FUNC-01012",
       "domain": "game-runtime"
     },
     {
@@ -68465,7 +69105,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00988",
+      "id": "FUNC-01013",
       "domain": "game-runtime"
     },
     {
@@ -68484,7 +69124,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00989",
+      "id": "FUNC-01014",
       "domain": "game-runtime"
     },
     {
@@ -68506,7 +69146,7 @@
         "set",
         "get"
       ],
-      "id": "FUNC-00990",
+      "id": "FUNC-01015",
       "domain": "game-runtime"
     },
     {
@@ -68529,7 +69169,7 @@
         "norm",
         "get"
       ],
-      "id": "FUNC-00991",
+      "id": "FUNC-01016",
       "domain": "game-runtime"
     },
     {
@@ -68550,7 +69190,7 @@
       "calls": [
         "norm"
       ],
-      "id": "FUNC-00992",
+      "id": "FUNC-01017",
       "domain": "game-runtime"
     },
     {
@@ -68569,7 +69209,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00993",
+      "id": "FUNC-01018",
       "domain": "game-runtime"
     },
     {
@@ -68588,7 +69228,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00994",
+      "id": "FUNC-01019",
       "domain": "game-runtime"
     },
     {
@@ -68607,7 +69247,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00995",
+      "id": "FUNC-01020",
       "domain": "game-runtime"
     },
     {
@@ -68628,7 +69268,7 @@
       "calls": [
         "normalizeResult"
       ],
-      "id": "FUNC-00996",
+      "id": "FUNC-01021",
       "domain": "game-runtime"
     },
     {
@@ -68647,7 +69287,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00997",
+      "id": "FUNC-01022",
       "domain": "game-runtime"
     },
     {
@@ -68666,7 +69306,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00998",
+      "id": "FUNC-01023",
       "domain": "game-runtime"
     },
     {
@@ -68685,7 +69325,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-00999",
+      "id": "FUNC-01024",
       "domain": "game-runtime"
     },
     {
@@ -68704,7 +69344,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01000",
+      "id": "FUNC-01025",
       "domain": "game-runtime"
     },
     {
@@ -68723,7 +69363,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01001",
+      "id": "FUNC-01026",
       "domain": "game-runtime"
     },
     {
@@ -68742,7 +69382,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01002",
+      "id": "FUNC-01027",
       "domain": "game-runtime"
     },
     {
@@ -68764,8 +69404,10 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01003",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01028",
       "domain": "game-runtime"
     },
     {
@@ -68788,7 +69430,7 @@
       "calls": [
         "activeSave"
       ],
-      "id": "FUNC-01004",
+      "id": "FUNC-01029",
       "domain": "game-runtime"
     },
     {
@@ -68809,7 +69451,7 @@
       "calls": [
         "ensureKuraiResource"
       ],
-      "id": "FUNC-01005",
+      "id": "FUNC-01030",
       "domain": "game-runtime"
     },
     {
@@ -68830,7 +69472,7 @@
       "calls": [
         "repair"
       ],
-      "id": "FUNC-01006",
+      "id": "FUNC-01031",
       "domain": "game-runtime"
     },
     {
@@ -68849,7 +69491,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01007",
+      "id": "FUNC-01032",
       "domain": "game-runtime"
     },
     {
@@ -68870,12 +69512,12 @@
       "calls": [
         "localProgressKeys"
       ],
-      "id": "FUNC-01008",
+      "id": "FUNC-01033",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 13,
+      "line": 14,
       "name": "clone",
       "kind": "arrow-one",
       "params": "v",
@@ -68888,27 +69530,10 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01009",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "src/r41-v82-combat-bridge.js",
-      "line": 14,
-      "name": "activeSlotKey",
-      "kind": "declaration",
-      "params": "",
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "calls": [],
-      "id": "FUNC-01010",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01034",
       "domain": "game-runtime"
     },
     {
@@ -68926,13 +69551,100 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01011",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01035",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
       "line": 16,
+      "name": "activeSlotId",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01036",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "line": 17,
+      "name": "legacySlotKey",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "activeSlotId"
+      ],
+      "id": "FUNC-01037",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "line": 18,
+      "name": "accountEntries",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "activeSlotId",
+        "parseSave"
+      ],
+      "id": "FUNC-01038",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "line": 31,
+      "name": "readSaveEntry",
+      "kind": "declaration",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "accountEntries",
+        "legacySlotKey",
+        "parseSave"
+      ],
+      "id": "FUNC-01039",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "line": 39,
       "name": "readRuntimeSave",
       "kind": "declaration",
       "params": "",
@@ -68946,15 +69658,14 @@
         "actions": []
       },
       "calls": [
-        "parseSave",
-        "activeSlotKey"
+        "readSaveEntry"
       ],
-      "id": "FUNC-01012",
+      "id": "FUNC-01040",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 22,
+      "line": 40,
       "name": "readPersistedSave",
       "kind": "declaration",
       "params": "",
@@ -68968,16 +69679,14 @@
         "actions": []
       },
       "calls": [
-        "activeSlotKey",
-        "parseSave",
         "readRuntimeSave"
       ],
-      "id": "FUNC-01013",
+      "id": "FUNC-01041",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 27,
+      "line": 41,
       "name": "writeSave",
       "kind": "declaration",
       "params": "save",
@@ -68991,14 +69700,15 @@
         "actions": []
       },
       "calls": [
-        "activeSlotKey"
+        "readSaveEntry",
+        "legacySlotKey"
       ],
-      "id": "FUNC-01014",
+      "id": "FUNC-01042",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 37,
+      "line": 52,
       "name": "readDomVitals",
       "kind": "declaration",
       "params": "",
@@ -69014,12 +69724,12 @@
       "calls": [
         "value"
       ],
-      "id": "FUNC-01015",
+      "id": "FUNC-01043",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 39,
+      "line": 54,
       "name": "value",
       "kind": "arrow-one",
       "params": "label",
@@ -69033,12 +69743,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01016",
+      "id": "FUNC-01044",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 42,
+      "line": 57,
       "name": "readFeedback",
       "kind": "declaration",
       "params": "",
@@ -69052,12 +69762,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01017",
+      "id": "FUNC-01045",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 48,
+      "line": 63,
       "name": "readCharacterVitals",
       "kind": "declaration",
       "params": "save",
@@ -69071,12 +69781,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01018",
+      "id": "FUNC-01046",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 52,
+      "line": 67,
       "name": "makeResult",
       "kind": "declaration",
       "params": "meta,beforeSave,afterSave,beforeDom,afterDom,beforeText,afterText,beforeFeedback,afterFeedback",
@@ -69093,12 +69803,12 @@
         "readCharacterVitals",
         "test"
       ],
-      "id": "FUNC-01019",
+      "id": "FUNC-01047",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 76,
+      "line": 91,
       "name": "makePresentation",
       "kind": "declaration",
       "params": "result,action",
@@ -69114,12 +69824,12 @@
       "calls": [
         "clone"
       ],
-      "id": "FUNC-01020",
+      "id": "FUNC-01048",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 84,
+      "line": 99,
       "name": "renderPresentation",
       "kind": "declaration",
       "params": "p",
@@ -69133,12 +69843,12 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01021",
+      "id": "FUNC-01049",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 93,
+      "line": 108,
       "name": "persistPresentation",
       "kind": "declaration",
       "params": "p,afterDom",
@@ -69157,12 +69867,12 @@
         "clone",
         "writeSave"
       ],
-      "id": "FUNC-01022",
+      "id": "FUNC-01050",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 106,
+      "line": 121,
       "name": "installPublicApiBridge",
       "kind": "declaration",
       "params": "",
@@ -69180,12 +69890,34 @@
         "readPersistedSave",
         "clone"
       ],
-      "id": "FUNC-01023",
+      "id": "FUNC-01051",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 117,
+      "line": 127,
+      "name": "wrapped",
+      "kind": "arrow",
+      "params": "",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "readPersistedSave",
+        "clone"
+      ],
+      "id": "FUNC-01052",
+      "domain": "game-runtime"
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "line": 137,
       "name": "finishAction",
       "kind": "declaration",
       "params": "action,beforeSave,beforeDom,beforeText,beforeFeedback",
@@ -69212,12 +69944,12 @@
         "persistPresentation",
         "renderPresentation"
       ],
-      "id": "FUNC-01024",
+      "id": "FUNC-01053",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 136,
+      "line": 158,
       "name": "boot",
       "kind": "arrow",
       "params": "",
@@ -69231,7 +69963,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01025",
+      "id": "FUNC-01054",
       "domain": "game-runtime"
     },
     {
@@ -69250,7 +69982,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01026",
+      "id": "FUNC-01055",
       "domain": "tooling"
     },
     {
@@ -69269,7 +70001,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01027",
+      "id": "FUNC-01056",
       "domain": "tooling"
     },
     {
@@ -69288,7 +70020,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01028",
+      "id": "FUNC-01057",
       "domain": "tooling"
     },
     {
@@ -69307,7 +70039,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01029",
+      "id": "FUNC-01058",
       "domain": "tooling"
     },
     {
@@ -69326,7 +70058,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01030",
+      "id": "FUNC-01059",
       "domain": "tooling"
     },
     {
@@ -69345,7 +70077,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01031",
+      "id": "FUNC-01060",
       "domain": "tooling"
     },
     {
@@ -69364,7 +70096,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01032",
+      "id": "FUNC-01061",
       "domain": "tooling"
     },
     {
@@ -69383,7 +70115,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01033",
+      "id": "FUNC-01062",
       "domain": "tooling"
     },
     {
@@ -69402,7 +70134,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01034",
+      "id": "FUNC-01063",
       "domain": "tooling"
     },
     {
@@ -69421,7 +70153,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01035",
+      "id": "FUNC-01064",
       "domain": "tooling"
     },
     {
@@ -69443,7 +70175,7 @@
         "fail",
         "isGameRuntime"
       ],
-      "id": "FUNC-01036",
+      "id": "FUNC-01065",
       "domain": "tooling"
     },
     {
@@ -69462,7 +70194,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01037",
+      "id": "FUNC-01066",
       "domain": "tooling"
     },
     {
@@ -69481,7 +70213,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01038",
+      "id": "FUNC-01067",
       "domain": "tooling"
     },
     {
@@ -69500,7 +70232,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01039",
+      "id": "FUNC-01068",
       "domain": "tooling"
     },
     {
@@ -69528,7 +70260,7 @@
         "values",
         "warn"
       ],
-      "id": "FUNC-01040",
+      "id": "FUNC-01069",
       "domain": "tooling"
     },
     {
@@ -69552,7 +70284,7 @@
         "get",
         "set"
       ],
-      "id": "FUNC-01041",
+      "id": "FUNC-01070",
       "domain": "tooling"
     },
     {
@@ -69571,7 +70303,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01042",
+      "id": "FUNC-01071",
       "domain": "tooling"
     },
     {
@@ -69590,7 +70322,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01043",
+      "id": "FUNC-01072",
       "domain": "tooling"
     },
     {
@@ -69609,7 +70341,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01044",
+      "id": "FUNC-01073",
       "domain": "tooling"
     },
     {
@@ -69628,9 +70360,10 @@
         "actions": []
       },
       "calls": [
+        "parse",
         "tryParse"
       ],
-      "id": "FUNC-01045",
+      "id": "FUNC-01074",
       "domain": "tooling"
     },
     {
@@ -69648,8 +70381,10 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01046",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01075",
       "domain": "tooling"
     },
     {
@@ -69680,7 +70415,7 @@
         "count",
         "pass"
       ],
-      "id": "FUNC-01047",
+      "id": "FUNC-01076",
       "domain": "tooling"
     },
     {
@@ -69713,7 +70448,7 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01048",
+      "id": "FUNC-01077",
       "domain": "tooling"
     },
     {
@@ -69740,7 +70475,7 @@
         "assert",
         "test"
       ],
-      "id": "FUNC-01049",
+      "id": "FUNC-01078",
       "domain": "tooling"
     },
     {
@@ -69775,7 +70510,45 @@
         "count",
         "readSave"
       ],
-      "id": "FUNC-01050",
+      "id": "FUNC-01079",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-e2e-v4.mjs",
+      "line": 33,
+      "name": "parse",
+      "kind": "arrow-one",
+      "params": "x",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01080",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-e2e-v4.mjs",
+      "line": 47,
+      "name": "parse",
+      "kind": "arrow-one",
+      "params": "x",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01081",
       "domain": "tooling"
     },
     {
@@ -69794,7 +70567,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01051",
+      "id": "FUNC-01082",
       "domain": "tooling"
     },
     {
@@ -69813,7 +70586,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01052",
+      "id": "FUNC-01083",
       "domain": "tooling"
     },
     {
@@ -69832,7 +70605,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01053",
+      "id": "FUNC-01084",
       "domain": "tooling"
     },
     {
@@ -69851,7 +70624,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01054",
+      "id": "FUNC-01085",
       "domain": "tooling"
     },
     {
@@ -69870,7 +70643,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01055",
+      "id": "FUNC-01086",
       "domain": "tooling"
     },
     {
@@ -69889,7 +70662,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01056",
+      "id": "FUNC-01087",
       "domain": "tooling"
     },
     {
@@ -69907,8 +70680,10 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01057",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01088",
       "domain": "tooling"
     },
     {
@@ -69927,7 +70702,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01058",
+      "id": "FUNC-01089",
       "domain": "tooling"
     },
     {
@@ -69948,7 +70723,7 @@
       "calls": [
         "readSave"
       ],
-      "id": "FUNC-01059",
+      "id": "FUNC-01090",
       "domain": "tooling"
     },
     {
@@ -69967,7 +70742,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01060",
+      "id": "FUNC-01091",
       "domain": "tooling"
     },
     {
@@ -69988,7 +70763,7 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01061",
+      "id": "FUNC-01092",
       "domain": "tooling"
     },
     {
@@ -70014,7 +70789,7 @@
         "status",
         "pass"
       ],
-      "id": "FUNC-01062",
+      "id": "FUNC-01093",
       "domain": "tooling"
     },
     {
@@ -70037,7 +70812,7 @@
         "readSave",
         "assert"
       ],
-      "id": "FUNC-01063",
+      "id": "FUNC-01094",
       "domain": "tooling"
     },
     {
@@ -70089,7 +70864,7 @@
         "fetch",
         "json"
       ],
-      "id": "FUNC-01064",
+      "id": "FUNC-01095",
       "domain": "tooling"
     },
     {
@@ -70117,7 +70892,7 @@
         "test",
         "close"
       ],
-      "id": "FUNC-01065",
+      "id": "FUNC-01096",
       "domain": "tooling"
     },
     {
@@ -70140,7 +70915,124 @@
       "calls": [
         "count"
       ],
-      "id": "FUNC-01066",
+      "id": "FUNC-01097",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-local-e2e.mjs",
+      "line": 23,
+      "name": "cloneLocal",
+      "kind": "arrow-one",
+      "params": "v",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01098",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-local-e2e.mjs",
+      "line": 24,
+      "name": "slotSummaryLocal",
+      "kind": "arrow",
+      "params": "slotId,save",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01099",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-local-e2e.mjs",
+      "line": 37,
+      "name": "reply",
+      "kind": "arrow",
+      "params": "data,status=200",
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [],
+      "id": "FUNC-01100",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-local-e2e.mjs",
+      "line": 83,
+      "name": "testKurai",
+      "kind": "declaration",
+      "params": "browser",
+      "refs": {
+        "routes": [
+          "/api/account/save"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [
+          "sns-v841-active-account-slot",
+          "narutoShinobiNoShoPcV5Active"
+        ],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "fetch",
+        "close",
+        "text",
+        "status",
+        "resolve"
+      ],
+      "id": "FUNC-01101",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/browser-gameplay-local-e2e.mjs",
+      "line": 85,
+      "name": "testKurai",
+      "kind": "declaration",
+      "params": "page",
+      "refs": {
+        "routes": [
+          "/api/account/save"
+        ],
+        "collections": [],
+        "models": [],
+        "storageKeys": [
+          "sns-v841-active-account-slot",
+          "narutoShinobiNoShoPcV5Active"
+        ],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "calls": [
+        "fetch",
+        "close",
+        "text",
+        "status",
+        "resolve"
+      ],
+      "id": "FUNC-01102",
       "domain": "tooling"
     },
     {
@@ -70159,7 +71051,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01067",
+      "id": "FUNC-01103",
       "domain": "tooling"
     },
     {
@@ -70180,7 +71072,7 @@
       "calls": [
         "fail"
       ],
-      "id": "FUNC-01068",
+      "id": "FUNC-01104",
       "domain": "tooling"
     },
     {
@@ -70199,7 +71091,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01069",
+      "id": "FUNC-01105",
       "domain": "tooling"
     },
     {
@@ -70218,7 +71110,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01070",
+      "id": "FUNC-01106",
       "domain": "tooling"
     },
     {
@@ -70237,7 +71129,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01071",
+      "id": "FUNC-01107",
       "domain": "tooling"
     },
     {
@@ -70256,7 +71148,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01072",
+      "id": "FUNC-01108",
       "domain": "tooling"
     },
     {
@@ -70275,7 +71167,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01073",
+      "id": "FUNC-01109",
       "domain": "tooling"
     },
     {
@@ -70294,7 +71186,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01074",
+      "id": "FUNC-01110",
       "domain": "tooling"
     },
     {
@@ -70313,7 +71205,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01075",
+      "id": "FUNC-01111",
       "domain": "tooling"
     },
     {
@@ -70332,7 +71224,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01076",
+      "id": "FUNC-01112",
       "domain": "tooling"
     },
     {
@@ -70351,7 +71243,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01077",
+      "id": "FUNC-01113",
       "domain": "tooling"
     },
     {
@@ -70370,7 +71262,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01078",
+      "id": "FUNC-01114",
       "domain": "tooling"
     },
     {
@@ -70389,7 +71281,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01079",
+      "id": "FUNC-01115",
       "domain": "tooling"
     },
     {
@@ -70410,7 +71302,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01080",
+      "id": "FUNC-01116",
       "domain": "tooling"
     },
     {
@@ -70445,7 +71337,7 @@
         "fence",
         "langFor"
       ],
-      "id": "FUNC-01081",
+      "id": "FUNC-01117",
       "domain": "tooling"
     },
     {
@@ -70464,7 +71356,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01082",
+      "id": "FUNC-01118",
       "domain": "tooling"
     },
     {
@@ -70483,7 +71375,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01083",
+      "id": "FUNC-01119",
       "domain": "tooling"
     },
     {
@@ -70502,7 +71394,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01084",
+      "id": "FUNC-01120",
       "domain": "tooling"
     },
     {
@@ -70520,8 +71412,10 @@
         "domIds": [],
         "actions": []
       },
-      "calls": [],
-      "id": "FUNC-01085",
+      "calls": [
+        "parse"
+      ],
+      "id": "FUNC-01121",
       "domain": "tooling"
     },
     {
@@ -70543,7 +71437,7 @@
         "test",
         "set"
       ],
-      "id": "FUNC-01086",
+      "id": "FUNC-01122",
       "domain": "tooling"
     },
     {
@@ -70562,7 +71456,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01087",
+      "id": "FUNC-01123",
       "domain": "tooling"
     },
     {
@@ -70581,7 +71475,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01088",
+      "id": "FUNC-01124",
       "domain": "tooling"
     },
     {
@@ -70600,7 +71494,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01089",
+      "id": "FUNC-01125",
       "domain": "tooling"
     },
     {
@@ -70621,7 +71515,7 @@
       "calls": [
         "add"
       ],
-      "id": "FUNC-01090",
+      "id": "FUNC-01126",
       "domain": "tooling"
     },
     {
@@ -70640,7 +71534,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01091",
+      "id": "FUNC-01127",
       "domain": "tooling"
     },
     {
@@ -70668,7 +71562,7 @@
         "aliasesForDatasetAction",
         "uniqEvidence"
       ],
-      "id": "FUNC-01092",
+      "id": "FUNC-01128",
       "domain": "tooling"
     },
     {
@@ -70690,7 +71584,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01093",
+      "id": "FUNC-01129",
       "domain": "tooling"
     },
     {
@@ -70711,7 +71605,7 @@
       "calls": [
         "walk"
       ],
-      "id": "FUNC-01094",
+      "id": "FUNC-01130",
       "domain": "tooling"
     },
     {
@@ -70733,7 +71627,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01095",
+      "id": "FUNC-01131",
       "domain": "tooling"
     },
     {
@@ -70755,7 +71649,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01096",
+      "id": "FUNC-01132",
       "domain": "tooling"
     },
     {
@@ -70777,7 +71671,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01097",
+      "id": "FUNC-01133",
       "domain": "tooling"
     },
     {
@@ -70799,7 +71693,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01098",
+      "id": "FUNC-01134",
       "domain": "tooling"
     },
     {
@@ -70821,7 +71715,7 @@
         "rel",
         "walk"
       ],
-      "id": "FUNC-01099",
+      "id": "FUNC-01135",
       "domain": "tooling"
     },
     {
@@ -70842,7 +71736,7 @@
       "calls": [
         "rel"
       ],
-      "id": "FUNC-01100",
+      "id": "FUNC-01136",
       "domain": "tooling"
     },
     {
@@ -70861,7 +71755,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01101",
+      "id": "FUNC-01137",
       "domain": "tooling"
     },
     {
@@ -70880,7 +71774,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01102",
+      "id": "FUNC-01138",
       "domain": "tooling"
     },
     {
@@ -70899,7 +71793,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01103",
+      "id": "FUNC-01139",
       "domain": "tooling"
     },
     {
@@ -70920,7 +71814,7 @@
       "calls": [
         "blockEnd"
       ],
-      "id": "FUNC-01104",
+      "id": "FUNC-01140",
       "domain": "tooling"
     },
     {
@@ -70941,7 +71835,7 @@
       "calls": [
         "uniq"
       ],
-      "id": "FUNC-01105",
+      "id": "FUNC-01141",
       "domain": "tooling"
     },
     {
@@ -70963,7 +71857,7 @@
         "captures",
         "uniq"
       ],
-      "id": "FUNC-01106",
+      "id": "FUNC-01142",
       "domain": "tooling"
     },
     {
@@ -71003,7 +71897,7 @@
         "sources",
         "listCodes"
       ],
-      "id": "FUNC-01107",
+      "id": "FUNC-01143",
       "domain": "tooling"
     },
     {
@@ -71024,7 +71918,7 @@
       "calls": [
         "lineAt"
       ],
-      "id": "FUNC-01108",
+      "id": "FUNC-01144",
       "domain": "tooling"
     },
     {
@@ -71047,7 +71941,7 @@
         "get",
         "ident"
       ],
-      "id": "FUNC-01109",
+      "id": "FUNC-01145",
       "domain": "tooling"
     },
     {
@@ -71068,7 +71962,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01110",
+      "id": "FUNC-01146",
       "domain": "tooling"
     },
     {
@@ -71089,7 +71983,7 @@
       "calls": [
         "code"
       ],
-      "id": "FUNC-01111",
+      "id": "FUNC-01147",
       "domain": "tooling"
     },
     {
@@ -71108,7 +72002,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01112",
+      "id": "FUNC-01148",
       "domain": "tooling"
     },
     {
@@ -71127,7 +72021,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01113",
+      "id": "FUNC-01149",
       "domain": "tooling"
     },
     {
@@ -71146,7 +72040,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01114",
+      "id": "FUNC-01150",
       "domain": "tooling"
     },
     {
@@ -71165,7 +72059,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01115",
+      "id": "FUNC-01151",
       "domain": "tooling"
     },
     {
@@ -71184,7 +72078,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01116",
+      "id": "FUNC-01152",
       "domain": "tooling"
     },
     {
@@ -71203,7 +72097,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01117",
+      "id": "FUNC-01153",
       "domain": "tooling"
     },
     {
@@ -71231,7 +72125,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01118",
+      "id": "FUNC-01154",
       "domain": "tooling"
     },
     {
@@ -71259,7 +72153,7 @@
         "existsLiteral",
         "srcs"
       ],
-      "id": "FUNC-01119",
+      "id": "FUNC-01155",
       "domain": "tooling"
     },
     {
@@ -71281,7 +72175,7 @@
         "norm",
         "isDynamic"
       ],
-      "id": "FUNC-01120",
+      "id": "FUNC-01156",
       "domain": "tooling"
     },
     {
@@ -71300,7 +72194,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01121",
+      "id": "FUNC-01157",
       "domain": "tooling"
     },
     {
@@ -71319,7 +72213,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01122",
+      "id": "FUNC-01158",
       "domain": "tooling"
     },
     {
@@ -71338,7 +72232,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01123",
+      "id": "FUNC-01159",
       "domain": "tooling"
     },
     {
@@ -71357,7 +72251,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01124",
+      "id": "FUNC-01160",
       "domain": "tooling"
     },
     {
@@ -71376,7 +72270,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01125",
+      "id": "FUNC-01161",
       "domain": "tooling"
     },
     {
@@ -71395,7 +72289,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01126",
+      "id": "FUNC-01162",
       "domain": "tooling"
     },
     {
@@ -71414,7 +72308,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01127",
+      "id": "FUNC-01163",
       "domain": "tooling"
     },
     {
@@ -71433,7 +72327,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01128",
+      "id": "FUNC-01164",
       "domain": "tooling"
     },
     {
@@ -71452,7 +72346,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01129",
+      "id": "FUNC-01165",
       "domain": "tooling"
     },
     {
@@ -71471,7 +72365,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01130",
+      "id": "FUNC-01166",
       "domain": "tooling"
     },
     {
@@ -71490,7 +72384,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01131",
+      "id": "FUNC-01167",
       "domain": "tooling"
     },
     {
@@ -71509,7 +72403,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01132",
+      "id": "FUNC-01168",
       "domain": "tooling"
     },
     {
@@ -71528,7 +72422,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01133",
+      "id": "FUNC-01169",
       "domain": "tooling"
     },
     {
@@ -71547,7 +72441,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01134",
+      "id": "FUNC-01170",
       "domain": "tooling"
     },
     {
@@ -71566,7 +72460,7 @@
         "actions": []
       },
       "calls": [],
-      "id": "FUNC-01135",
+      "id": "FUNC-01171",
       "domain": "tooling"
     }
   ],
@@ -71650,6 +72544,14 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 106
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 90
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 98
         }
       ]
     },
@@ -72032,6 +72934,10 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 119
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 110
         }
       ]
     },
@@ -72080,6 +72986,10 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 120
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 129
         }
       ]
     },
@@ -73048,6 +73958,21 @@
         {
           "file": "app.js",
           "line": 4484,
+          "kind": "action"
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 169,
+          "kind": "action"
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 169,
+          "kind": "action"
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 175,
           "kind": "action"
         }
       ]
@@ -74220,6 +75145,22 @@
     },
     {
       "id": "UI-00068",
+      "value": "load-account-slot",
+      "sources": [
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 169,
+          "kind": "action"
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 175,
+          "kind": "action"
+        }
+      ]
+    },
+    {
+      "id": "UI-00069",
       "value": "load-slot",
       "sources": [
         {
@@ -74235,7 +75176,7 @@
       ]
     },
     {
-      "id": "UI-00069",
+      "id": "UI-00070",
       "value": "logout",
       "sources": [
         {
@@ -74246,7 +75187,7 @@
       ]
     },
     {
-      "id": "UI-00070",
+      "id": "UI-00071",
       "value": "map-enter",
       "sources": [
         {
@@ -74262,7 +75203,7 @@
       ]
     },
     {
-      "id": "UI-00071",
+      "id": "UI-00072",
       "value": "map-hotspot",
       "sources": [
         {
@@ -74288,7 +75229,7 @@
       ]
     },
     {
-      "id": "UI-00072",
+      "id": "UI-00073",
       "value": "map-mode",
       "sources": [
         {
@@ -74334,7 +75275,7 @@
       ]
     },
     {
-      "id": "UI-00073",
+      "id": "UI-00074",
       "value": "mission-choice",
       "sources": [
         {
@@ -74360,7 +75301,7 @@
       ]
     },
     {
-      "id": "UI-00074",
+      "id": "UI-00075",
       "value": "mission-route",
       "sources": [
         {
@@ -74371,7 +75312,7 @@
       ]
     },
     {
-      "id": "UI-00075",
+      "id": "UI-00076",
       "value": "narrate-mission",
       "sources": [
         {
@@ -74392,7 +75333,7 @@
       ]
     },
     {
-      "id": "UI-00076",
+      "id": "UI-00077",
       "value": "new-character",
       "sources": [
         {
@@ -74413,7 +75354,7 @@
       ]
     },
     {
-      "id": "UI-00077",
+      "id": "UI-00078",
       "value": "npc-talk",
       "sources": [
         {
@@ -74429,7 +75370,7 @@
       ]
     },
     {
-      "id": "UI-00078",
+      "id": "UI-00079",
       "value": "online-create",
       "sources": [
         {
@@ -74440,7 +75381,7 @@
       ]
     },
     {
-      "id": "UI-00079",
+      "id": "UI-00080",
       "value": "online-join",
       "sources": [
         {
@@ -74451,7 +75392,7 @@
       ]
     },
     {
-      "id": "UI-00080",
+      "id": "UI-00081",
       "value": "online-leave",
       "sources": [
         {
@@ -74462,7 +75403,7 @@
       ]
     },
     {
-      "id": "UI-00081",
+      "id": "UI-00082",
       "value": "online-refresh",
       "sources": [
         {
@@ -74473,7 +75414,7 @@
       ]
     },
     {
-      "id": "UI-00082",
+      "id": "UI-00083",
       "value": "online-send",
       "sources": [
         {
@@ -74484,7 +75425,7 @@
       ]
     },
     {
-      "id": "UI-00083",
+      "id": "UI-00084",
       "value": "private-login",
       "sources": [
         {
@@ -74505,7 +75446,7 @@
       ]
     },
     {
-      "id": "UI-00084",
+      "id": "UI-00085",
       "value": "r25-core-attr",
       "sources": [
         {
@@ -74526,7 +75467,7 @@
       ]
     },
     {
-      "id": "UI-00085",
+      "id": "UI-00086",
       "value": "r25-mentor",
       "sources": [
         {
@@ -74537,7 +75478,7 @@
       ]
     },
     {
-      "id": "UI-00086",
+      "id": "UI-00087",
       "value": "r25-rest",
       "sources": [
         {
@@ -74553,7 +75494,7 @@
       ]
     },
     {
-      "id": "UI-00087",
+      "id": "UI-00088",
       "value": "r27-dojo-practice",
       "sources": [
         {
@@ -74569,7 +75510,7 @@
       ]
     },
     {
-      "id": "UI-00088",
+      "id": "UI-00089",
       "value": "r27-duel-action",
       "sources": [
         {
@@ -74590,7 +75531,7 @@
       ]
     },
     {
-      "id": "UI-00089",
+      "id": "UI-00090",
       "value": "r27-duel-active",
       "sources": [
         {
@@ -74601,7 +75542,7 @@
       ]
     },
     {
-      "id": "UI-00090",
+      "id": "UI-00091",
       "value": "r27-duel-ai",
       "sources": [
         {
@@ -74612,7 +75553,7 @@
       ]
     },
     {
-      "id": "UI-00091",
+      "id": "UI-00092",
       "value": "r27-duel-filter",
       "sources": [
         {
@@ -74623,7 +75564,7 @@
       ]
     },
     {
-      "id": "UI-00092",
+      "id": "UI-00093",
       "value": "r27-duel-reset",
       "sources": [
         {
@@ -74634,7 +75575,7 @@
       ]
     },
     {
-      "id": "UI-00093",
+      "id": "UI-00094",
       "value": "r27-duel-select",
       "sources": [
         {
@@ -74650,7 +75591,7 @@
       ]
     },
     {
-      "id": "UI-00094",
+      "id": "UI-00095",
       "value": "r27-duel-start",
       "sources": [
         {
@@ -74661,7 +75602,7 @@
       ]
     },
     {
-      "id": "UI-00095",
+      "id": "UI-00096",
       "value": "r27-duel-target",
       "sources": [
         {
@@ -74672,7 +75613,7 @@
       ]
     },
     {
-      "id": "UI-00096",
+      "id": "UI-00097",
       "value": "r27-rest",
       "sources": [
         {
@@ -74693,7 +75634,7 @@
       ]
     },
     {
-      "id": "UI-00097",
+      "id": "UI-00098",
       "value": "r27-social-talk",
       "sources": [
         {
@@ -74709,7 +75650,7 @@
       ]
     },
     {
-      "id": "UI-00098",
+      "id": "UI-00099",
       "value": "r27-story-abandon",
       "sources": [
         {
@@ -74720,7 +75661,7 @@
       ]
     },
     {
-      "id": "UI-00099",
+      "id": "UI-00100",
       "value": "r27-story-choice",
       "sources": [
         {
@@ -74731,7 +75672,7 @@
       ]
     },
     {
-      "id": "UI-00100",
+      "id": "UI-00101",
       "value": "r27-story-start",
       "sources": [
         {
@@ -74742,7 +75683,7 @@
       ]
     },
     {
-      "id": "UI-00101",
+      "id": "UI-00102",
       "value": "r27-system-audit",
       "sources": [
         {
@@ -74758,7 +75699,7 @@
       ]
     },
     {
-      "id": "UI-00102",
+      "id": "UI-00103",
       "value": "r27-target-enemy",
       "sources": [
         {
@@ -74774,7 +75715,7 @@
       ]
     },
     {
-      "id": "UI-00103",
+      "id": "UI-00104",
       "value": "r29-rank-review",
       "sources": [
         {
@@ -74785,7 +75726,7 @@
       ]
     },
     {
-      "id": "UI-00104",
+      "id": "UI-00105",
       "value": "r31-mentor-session",
       "sources": [
         {
@@ -74796,7 +75737,7 @@
       ]
     },
     {
-      "id": "UI-00105",
+      "id": "UI-00106",
       "value": "r31-opportunity",
       "sources": [
         {
@@ -74812,7 +75753,7 @@
       ]
     },
     {
-      "id": "UI-00106",
+      "id": "UI-00107",
       "value": "r31-party-action",
       "sources": [
         {
@@ -74823,7 +75764,7 @@
       ]
     },
     {
-      "id": "UI-00107",
+      "id": "UI-00108",
       "value": "r31-party-toggle",
       "sources": [
         {
@@ -74834,7 +75775,7 @@
       ]
     },
     {
-      "id": "UI-00108",
+      "id": "UI-00109",
       "value": "r31-random-battle",
       "sources": [
         {
@@ -74845,7 +75786,7 @@
       ]
     },
     {
-      "id": "UI-00109",
+      "id": "UI-00110",
       "value": "r31-tech-category",
       "sources": [
         {
@@ -74856,7 +75797,7 @@
       ]
     },
     {
-      "id": "UI-00110",
+      "id": "UI-00111",
       "value": "r31-tech-state",
       "sources": [
         {
@@ -74877,7 +75818,7 @@
       ]
     },
     {
-      "id": "UI-00111",
+      "id": "UI-00112",
       "value": "r31-train-technique",
       "sources": [
         {
@@ -74898,7 +75839,7 @@
       ]
     },
     {
-      "id": "UI-00112",
+      "id": "UI-00113",
       "value": "r32-resume-mission",
       "sources": [
         {
@@ -74939,7 +75880,7 @@
       ]
     },
     {
-      "id": "UI-00113",
+      "id": "UI-00114",
       "value": "r382-board-tab",
       "sources": [
         {
@@ -74955,7 +75896,7 @@
       ]
     },
     {
-      "id": "UI-00114",
+      "id": "UI-00115",
       "value": "r382-mission-free-action",
       "sources": [
         {
@@ -74966,7 +75907,7 @@
       ]
     },
     {
-      "id": "UI-00115",
+      "id": "UI-00116",
       "value": "r382-narrate-arc",
       "sources": [
         {
@@ -74977,7 +75918,7 @@
       ]
     },
     {
-      "id": "UI-00116",
+      "id": "UI-00117",
       "value": "r382-select-arc",
       "sources": [
         {
@@ -74988,7 +75929,7 @@
       ]
     },
     {
-      "id": "UI-00117",
+      "id": "UI-00118",
       "value": "r41-activity",
       "sources": [
         {
@@ -75004,7 +75945,7 @@
       ]
     },
     {
-      "id": "UI-00118",
+      "id": "UI-00119",
       "value": "r41-hospital-treat",
       "sources": [
         {
@@ -75020,7 +75961,7 @@
       ]
     },
     {
-      "id": "UI-00119",
+      "id": "UI-00120",
       "value": "r41-online-intent",
       "sources": [
         {
@@ -75036,7 +75977,7 @@
       ]
     },
     {
-      "id": "UI-00120",
+      "id": "UI-00121",
       "value": "recovery-code",
       "sources": [
         {
@@ -75047,7 +75988,7 @@
       ]
     },
     {
-      "id": "UI-00121",
+      "id": "UI-00122",
       "value": "reset",
       "sources": [
         {
@@ -75068,7 +76009,7 @@
       ]
     },
     {
-      "id": "UI-00122",
+      "id": "UI-00123",
       "value": "rest",
       "sources": [
         {
@@ -75089,7 +76030,7 @@
       ]
     },
     {
-      "id": "UI-00123",
+      "id": "UI-00124",
       "value": "rinne-unlock",
       "sources": [
         {
@@ -75100,7 +76041,7 @@
       ]
     },
     {
-      "id": "UI-00124",
+      "id": "UI-00125",
       "value": "rpg-confirm-cost",
       "sources": [
         {
@@ -75111,7 +76052,7 @@
       ]
     },
     {
-      "id": "UI-00125",
+      "id": "UI-00126",
       "value": "rpg-continue",
       "sources": [
         {
@@ -75132,7 +76073,7 @@
       ]
     },
     {
-      "id": "UI-00126",
+      "id": "UI-00127",
       "value": "rpg-option",
       "sources": [
         {
@@ -75153,7 +76094,7 @@
       ]
     },
     {
-      "id": "UI-00127",
+      "id": "UI-00128",
       "value": "rpg-resource",
       "sources": [
         {
@@ -75169,7 +76110,7 @@
       ]
     },
     {
-      "id": "UI-00128",
+      "id": "UI-00129",
       "value": "rpg-roll",
       "sources": [
         {
@@ -75235,7 +76176,7 @@
       ]
     },
     {
-      "id": "UI-00129",
+      "id": "UI-00130",
       "value": "rpg-select",
       "sources": [
         {
@@ -75246,7 +76187,7 @@
       ]
     },
     {
-      "id": "UI-00130",
+      "id": "UI-00131",
       "value": "rpg-tab",
       "sources": [
         {
@@ -75262,7 +76203,7 @@
       ]
     },
     {
-      "id": "UI-00131",
+      "id": "UI-00132",
       "value": "rpg-use",
       "sources": [
         {
@@ -75303,7 +76244,7 @@
       ]
     },
     {
-      "id": "UI-00132",
+      "id": "UI-00133",
       "value": "save",
       "sources": [
         {
@@ -75379,7 +76320,7 @@
       ]
     },
     {
-      "id": "UI-00133",
+      "id": "UI-00134",
       "value": "save-sheet",
       "sources": [
         {
@@ -75390,7 +76331,7 @@
       ]
     },
     {
-      "id": "UI-00134",
+      "id": "UI-00135",
       "value": "set-defense",
       "sources": [
         {
@@ -75421,7 +76362,7 @@
       ]
     },
     {
-      "id": "UI-00135",
+      "id": "UI-00136",
       "value": "sheet-attr",
       "sources": [
         {
@@ -75437,7 +76378,7 @@
       ]
     },
     {
-      "id": "UI-00136",
+      "id": "UI-00137",
       "value": "sheet-skill",
       "sources": [
         {
@@ -75453,7 +76394,7 @@
       ]
     },
     {
-      "id": "UI-00137",
+      "id": "UI-00138",
       "value": "shop-buy",
       "sources": [
         {
@@ -75469,7 +76410,7 @@
       ]
     },
     {
-      "id": "UI-00138",
+      "id": "UI-00139",
       "value": "shop-buy-qty",
       "sources": [
         {
@@ -75485,7 +76426,7 @@
       ]
     },
     {
-      "id": "UI-00139",
+      "id": "UI-00140",
       "value": "shop-category",
       "sources": [
         {
@@ -75501,7 +76442,7 @@
       ]
     },
     {
-      "id": "UI-00140",
+      "id": "UI-00141",
       "value": "shop-mode",
       "sources": [
         {
@@ -75527,7 +76468,7 @@
       ]
     },
     {
-      "id": "UI-00141",
+      "id": "UI-00142",
       "value": "shop-qty",
       "sources": [
         {
@@ -75553,7 +76494,7 @@
       ]
     },
     {
-      "id": "UI-00142",
+      "id": "UI-00143",
       "value": "shop-sell",
       "sources": [
         {
@@ -75564,7 +76505,7 @@
       ]
     },
     {
-      "id": "UI-00143",
+      "id": "UI-00144",
       "value": "shop-sell-qty",
       "sources": [
         {
@@ -75575,7 +76516,7 @@
       ]
     },
     {
-      "id": "UI-00144",
+      "id": "UI-00145",
       "value": "shop-vendor",
       "sources": [
         {
@@ -75601,7 +76542,7 @@
       ]
     },
     {
-      "id": "UI-00145",
+      "id": "UI-00146",
       "value": "show-more-jutsu",
       "sources": [
         {
@@ -75617,7 +76558,7 @@
       ]
     },
     {
-      "id": "UI-00146",
+      "id": "UI-00147",
       "value": "show-more-mission",
       "sources": [
         {
@@ -75633,7 +76574,7 @@
       ]
     },
     {
-      "id": "UI-00147",
+      "id": "UI-00148",
       "value": "skill-up",
       "sources": [
         {
@@ -75644,7 +76585,7 @@
       ]
     },
     {
-      "id": "UI-00148",
+      "id": "UI-00149",
       "value": "start-battle",
       "sources": [
         {
@@ -75680,7 +76621,7 @@
       ]
     },
     {
-      "id": "UI-00149",
+      "id": "UI-00150",
       "value": "start-mission",
       "sources": [
         {
@@ -75721,7 +76662,7 @@
       ]
     },
     {
-      "id": "UI-00150",
+      "id": "UI-00151",
       "value": "tactical-move",
       "sources": [
         {
@@ -75752,7 +76693,7 @@
       ]
     },
     {
-      "id": "UI-00151",
+      "id": "UI-00152",
       "value": "toggle-menu",
       "sources": [
         {
@@ -75763,7 +76704,7 @@
       ]
     },
     {
-      "id": "UI-00152",
+      "id": "UI-00153",
       "value": "train",
       "sources": [
         {
@@ -75779,7 +76720,7 @@
       ]
     },
     {
-      "id": "UI-00153",
+      "id": "UI-00154",
       "value": "use-item",
       "sources": [
         {
@@ -75800,7 +76741,7 @@
       ]
     },
     {
-      "id": "UI-00154",
+      "id": "UI-00155",
       "value": "v8-battle-ai",
       "sources": [
         {
@@ -75816,7 +76757,7 @@
       ]
     },
     {
-      "id": "UI-00155",
+      "id": "UI-00156",
       "value": "v8-leon-basic",
       "sources": [
         {
@@ -75832,7 +76773,7 @@
       ]
     },
     {
-      "id": "UI-00156",
+      "id": "UI-00157",
       "value": "v8-leon-defend",
       "sources": [
         {
@@ -75848,7 +76789,7 @@
       ]
     },
     {
-      "id": "UI-00157",
+      "id": "UI-00158",
       "value": "v8-leon-dodge",
       "sources": [
         {
@@ -75864,7 +76805,7 @@
       ]
     },
     {
-      "id": "UI-00158",
+      "id": "UI-00159",
       "value": "v8-leon-exit",
       "sources": [
         {
@@ -75880,7 +76821,7 @@
       ]
     },
     {
-      "id": "UI-00159",
+      "id": "UI-00160",
       "value": "v8-leon-flee",
       "sources": [
         {
@@ -75896,7 +76837,7 @@
       ]
     },
     {
-      "id": "UI-00160",
+      "id": "UI-00161",
       "value": "v8-leon-focus",
       "sources": [
         {
@@ -75912,7 +76853,7 @@
       ]
     },
     {
-      "id": "UI-00161",
+      "id": "UI-00162",
       "value": "v8-leon-move",
       "sources": [
         {
@@ -75933,7 +76874,7 @@
       ]
     },
     {
-      "id": "UI-00162",
+      "id": "UI-00163",
       "value": "v8-leon-tech",
       "sources": [
         {
@@ -75954,7 +76895,7 @@
       ]
     },
     {
-      "id": "UI-00163",
+      "id": "UI-00164",
       "value": "v8-leon-tech-confirm",
       "sources": [
         {
@@ -75965,7 +76906,7 @@
       ]
     },
     {
-      "id": "UI-00164",
+      "id": "UI-00165",
       "value": "v8-open-ai-train",
       "sources": [
         {
@@ -75981,7 +76922,7 @@
       ]
     },
     {
-      "id": "UI-00165",
+      "id": "UI-00166",
       "value": "v8-start-leon",
       "sources": [
         {
@@ -76017,7 +76958,7 @@
       ]
     },
     {
-      "id": "UI-00166",
+      "id": "UI-00167",
       "value": "v8-visual",
       "sources": [
         {
@@ -76043,7 +76984,7 @@
       ]
     },
     {
-      "id": "UI-00167",
+      "id": "UI-00168",
       "value": "v8-xp-table",
       "sources": [
         {
@@ -76059,7 +77000,7 @@
       ]
     },
     {
-      "id": "UI-00168",
+      "id": "UI-00169",
       "value": "v81-ai-progression",
       "sources": [
         {
@@ -76075,7 +77016,7 @@
       ]
     },
     {
-      "id": "UI-00169",
+      "id": "UI-00170",
       "value": "v81-cap-open",
       "sources": [
         {
@@ -76091,7 +77032,7 @@
       ]
     },
     {
-      "id": "UI-00170",
+      "id": "UI-00171",
       "value": "v81-codex-tab",
       "sources": [
         {
@@ -76132,7 +77073,7 @@
       ]
     },
     {
-      "id": "UI-00171",
+      "id": "UI-00172",
       "value": "v81-combat-filter",
       "sources": [
         {
@@ -76143,7 +77084,7 @@
       ]
     },
     {
-      "id": "UI-00172",
+      "id": "UI-00173",
       "value": "v81-grim-filter",
       "sources": [
         {
@@ -76164,7 +77105,7 @@
       ]
     },
     {
-      "id": "UI-00173",
+      "id": "UI-00174",
       "value": "v81-refresh-ai",
       "sources": [
         {
@@ -76180,7 +77121,7 @@
       ]
     },
     {
-      "id": "UI-00174",
+      "id": "UI-00175",
       "value": "v82-ai-tab",
       "sources": [
         {
@@ -76191,7 +77132,7 @@
       ]
     },
     {
-      "id": "UI-00175",
+      "id": "UI-00176",
       "value": "v82-basic-melee",
       "sources": [
         {
@@ -76202,7 +77143,7 @@
       ]
     },
     {
-      "id": "UI-00176",
+      "id": "UI-00177",
       "value": "v82-basic-ranged",
       "sources": [
         {
@@ -76213,7 +77154,7 @@
       ]
     },
     {
-      "id": "UI-00177",
+      "id": "UI-00178",
       "value": "v82-codex",
       "sources": [
         {
@@ -76249,7 +77190,7 @@
       ]
     },
     {
-      "id": "UI-00178",
+      "id": "UI-00179",
       "value": "v82-npc-narrate",
       "sources": [
         {
@@ -76265,7 +77206,7 @@
       ]
     },
     {
-      "id": "UI-00179",
+      "id": "UI-00180",
       "value": "v82-npc-train",
       "sources": [
         {
@@ -76276,7 +77217,7 @@
       ]
     },
     {
-      "id": "UI-00180",
+      "id": "UI-00181",
       "value": "v82-open-resource",
       "sources": [
         {
@@ -76312,7 +77253,7 @@
       ]
     },
     {
-      "id": "UI-00181",
+      "id": "UI-00182",
       "value": "v82-practice-skill",
       "sources": [
         {
@@ -76323,7 +77264,7 @@
       ]
     },
     {
-      "id": "UI-00182",
+      "id": "UI-00183",
       "value": "v82-practice-tech",
       "sources": [
         {
@@ -76339,7 +77280,7 @@
       ]
     },
     {
-      "id": "UI-00183",
+      "id": "UI-00184",
       "value": "v82-select-action",
       "sources": [
         {
@@ -76360,7 +77301,7 @@
       ]
     },
     {
-      "id": "UI-00184",
+      "id": "UI-00185",
       "value": "v82-start-elite",
       "sources": [
         {
@@ -76371,7 +77312,7 @@
       ]
     },
     {
-      "id": "UI-00185",
+      "id": "UI-00186",
       "value": "v82-tech-tab",
       "sources": [
         {
@@ -76387,7 +77328,7 @@
       ]
     },
     {
-      "id": "UI-00186",
+      "id": "UI-00187",
       "value": "v82-train-tab",
       "sources": [
         {
@@ -76398,7 +77339,7 @@
       ]
     },
     {
-      "id": "UI-00187",
+      "id": "UI-00188",
       "value": "v82-train-tech",
       "sources": [
         {
@@ -76414,7 +77355,7 @@
       ]
     },
     {
-      "id": "UI-00188",
+      "id": "UI-00189",
       "value": "v82-use-outside",
       "sources": [
         {
@@ -76430,7 +77371,7 @@
       ]
     },
     {
-      "id": "UI-00189",
+      "id": "UI-00190",
       "value": "v821-load-leon",
       "sources": [
         {
@@ -76441,7 +77382,7 @@
       ]
     },
     {
-      "id": "UI-00190",
+      "id": "UI-00191",
       "value": "v821-reset-leon",
       "sources": [
         {
@@ -76452,7 +77393,7 @@
       ]
     },
     {
-      "id": "UI-00191",
+      "id": "UI-00192",
       "value": "v83-cap-open",
       "sources": [
         {
@@ -76463,7 +77404,7 @@
       ]
     },
     {
-      "id": "UI-00192",
+      "id": "UI-00193",
       "value": "v83-codex-more",
       "sources": [
         {
@@ -76474,7 +77415,7 @@
       ]
     },
     {
-      "id": "UI-00193",
+      "id": "UI-00194",
       "value": "v83-codex-tab",
       "sources": [
         {
@@ -76485,7 +77426,7 @@
       ]
     },
     {
-      "id": "UI-00194",
+      "id": "UI-00195",
       "value": "v83-mission-training",
       "sources": [
         {
@@ -76496,7 +77437,7 @@
       ]
     },
     {
-      "id": "UI-00195",
+      "id": "UI-00196",
       "value": "v83-practice-owned",
       "sources": [
         {
@@ -76507,7 +77448,7 @@
       ]
     },
     {
-      "id": "UI-00196",
+      "id": "UI-00197",
       "value": "v83-practice-skill",
       "sources": [
         {
@@ -76518,7 +77459,7 @@
       ]
     },
     {
-      "id": "UI-00197",
+      "id": "UI-00198",
       "value": "v83-project-final",
       "sources": [
         {
@@ -76529,7 +77470,7 @@
       ]
     },
     {
-      "id": "UI-00198",
+      "id": "UI-00199",
       "value": "v83-project-session",
       "sources": [
         {
@@ -76540,7 +77481,7 @@
       ]
     },
     {
-      "id": "UI-00199",
+      "id": "UI-00200",
       "value": "v83-resolve-mission-event",
       "sources": [
         {
@@ -76551,7 +77492,7 @@
       ]
     },
     {
-      "id": "UI-00200",
+      "id": "UI-00201",
       "value": "v83-start-dojo",
       "sources": [
         {
@@ -76567,7 +77508,7 @@
       ]
     },
     {
-      "id": "UI-00201",
+      "id": "UI-00202",
       "value": "v83-start-project",
       "sources": [
         {
@@ -76578,7 +77519,7 @@
       ]
     },
     {
-      "id": "UI-00202",
+      "id": "UI-00203",
       "value": "v83-tech-category",
       "sources": [
         {
@@ -76594,7 +77535,7 @@
       ]
     },
     {
-      "id": "UI-00203",
+      "id": "UI-00204",
       "value": "v83-tech-state",
       "sources": [
         {
@@ -76605,7 +77546,7 @@
       ]
     },
     {
-      "id": "UI-00204",
+      "id": "UI-00205",
       "value": "v83-train-tab",
       "sources": [
         {
@@ -76616,7 +77557,7 @@
       ]
     },
     {
-      "id": "UI-00205",
+      "id": "UI-00206",
       "value": "v83-use-tech",
       "sources": [
         {
@@ -76632,7 +77573,7 @@
       ]
     },
     {
-      "id": "UI-00206",
+      "id": "UI-00207",
       "value": "v84-cell",
       "sources": [
         {
@@ -76643,7 +77584,7 @@
       ]
     },
     {
-      "id": "UI-00207",
+      "id": "UI-00208",
       "value": "v84-character-preset",
       "sources": [
         {
@@ -76654,7 +77595,7 @@
       ]
     },
     {
-      "id": "UI-00208",
+      "id": "UI-00209",
       "value": "v84-field-preset",
       "sources": [
         {
@@ -76665,7 +77606,7 @@
       ]
     },
     {
-      "id": "UI-00209",
+      "id": "UI-00210",
       "value": "v84-grid-toggle",
       "sources": [
         {
@@ -76676,7 +77617,7 @@
       ]
     },
     {
-      "id": "UI-00210",
+      "id": "UI-00211",
       "value": "v84-kb-more",
       "sources": [
         {
@@ -76687,7 +77628,7 @@
       ]
     },
     {
-      "id": "UI-00211",
+      "id": "UI-00212",
       "value": "v84-kb-type",
       "sources": [
         {
@@ -76698,7 +77639,7 @@
       ]
     },
     {
-      "id": "UI-00212",
+      "id": "UI-00213",
       "value": "v84-map-tool",
       "sources": [
         {
@@ -76719,7 +77660,7 @@
       ]
     },
     {
-      "id": "UI-00213",
+      "id": "UI-00214",
       "value": "v84-npc-more",
       "sources": [
         {
@@ -76735,7 +77676,7 @@
       ]
     },
     {
-      "id": "UI-00214",
+      "id": "UI-00215",
       "value": "v84-open-kb",
       "sources": [
         {
@@ -76746,7 +77687,7 @@
       ]
     },
     {
-      "id": "UI-00215",
+      "id": "UI-00216",
       "value": "v84-open-npc",
       "sources": [
         {
@@ -76782,7 +77723,7 @@
       ]
     },
     {
-      "id": "UI-00216",
+      "id": "UI-00217",
       "value": "v84-stage-field",
       "sources": [
         {
@@ -76793,7 +77734,7 @@
       ]
     },
     {
-      "id": "UI-00217",
+      "id": "UI-00218",
       "value": "v84-token",
       "sources": [
         {
@@ -76804,7 +77745,7 @@
       ]
     },
     {
-      "id": "UI-00218",
+      "id": "UI-00219",
       "value": "v841-atlas-more",
       "sources": [
         {
@@ -76820,7 +77761,7 @@
       ]
     },
     {
-      "id": "UI-00219",
+      "id": "UI-00220",
       "value": "v841-atlas-type",
       "sources": [
         {
@@ -76836,7 +77777,7 @@
       ]
     },
     {
-      "id": "UI-00220",
+      "id": "UI-00221",
       "value": "world-select",
       "sources": [
         {
@@ -76852,7 +77793,7 @@
       ]
     },
     {
-      "id": "UI-00221",
+      "id": "UI-00222",
       "value": "world-travel",
       "sources": [
         {
@@ -77042,12 +77983,16 @@
           "line": 36
         },
         {
+          "file": "src/r41-account-active-slot.js",
+          "line": 208
+        },
+        {
           "file": "src/r41-local-reset-fix.js",
           "line": 38
         },
         {
           "file": "src/r41-v82-combat-bridge.js",
-          "line": 130
+          "line": 151
         }
       ]
     },
@@ -77064,6 +78009,10 @@
           "line": 38
         },
         {
+          "file": "src/r41-account-active-slot.js",
+          "line": 233
+        },
+        {
           "file": "src/r41-core-bundle.js",
           "line": 170
         },
@@ -77073,7 +78022,7 @@
         },
         {
           "file": "src/r41-v82-combat-bridge.js",
-          "line": 137
+          "line": 159
         }
       ]
     },
@@ -77146,6 +78095,10 @@
         {
           "file": "r41-account-ui.js",
           "line": 38
+        },
+        {
+          "file": "src/r41-account-active-slot.js",
+          "line": 224
         },
         {
           "file": "src/r41-final-ui-repair.js",
@@ -123644,754 +124597,802 @@
       "id": "MOVE-07740"
     },
     {
-      "file": "src/r41-asset-path-repair.js",
-      "line": 9,
-      "text": "const MAP=new Map();",
+      "file": "src/r41-account-active-slot.js",
+      "line": 100,
+      "text": "location.reload();",
       "id": "MOVE-07741"
     },
     {
-      "file": "src/r41-asset-path-repair.js",
-      "line": 10,
-      "text": "for(const id of [1,2,3,4,9,10,11,12])MAP.set(path(actionBase,id,jpg),path(actionBase,id,svg));",
+      "file": "src/r41-account-active-slot.js",
+      "line": 154,
+      "text": "if(sessionStorage.getItem(ONLINE_RECOVERY_KEY)!==marker&&!reloadQueued){sessionStorage.setItem(ONLINE_RECOVERY_KEY,marker);sessionStorage.setItem(RETURN_SCREEN_KEY,'online');reloadQueued=true;setTimeout(()=>location.reload(),25);}",
       "id": "MOVE-07742"
     },
     {
       "file": "src/r41-asset-path-repair.js",
-      "line": 11,
-      "text": "MAP.set(path(eventBase,12,jpg),path(eventBase,12,svg));",
+      "line": 10,
+      "text": "const MAP=new Map();",
       "id": "MOVE-07743"
     },
     {
       "file": "src/r41-asset-path-repair.js",
-      "line": 15,
-      "text": "for(const [from,to] of MAP)out=out.split(from).join(to);",
+      "line": 11,
+      "text": "for(const id of [1,2,3,4,9,10,11,12])MAP.set(path(actionBase,id,jpg),path(actionBase,id,svg));",
       "id": "MOVE-07744"
     },
     {
       "file": "src/r41-asset-path-repair.js",
-      "line": 30,
-      "text": "Element.prototype.insertAdjacentHTML=function(position,text){return nativeInsert.call(this,position,rewrite(text));};",
+      "line": 12,
+      "text": "MAP.set(path(eventBase,1,jpg),`${eventArtBase}iruka.svg`);",
       "id": "MOVE-07745"
     },
     {
       "file": "src/r41-asset-path-repair.js",
-      "line": 33,
-      "text": "window.__SNS_R41_ASSET_REPAIR__={build:BUILD,rewrite,map:Object.fromEntries(MAP)};",
+      "line": 13,
+      "text": "MAP.set(path(eventBase,2,jpg),`${eventArtBase}kakashi.svg`);",
       "id": "MOVE-07746"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 14,
+      "text": "MAP.set(path(eventBase,3,jpg),`${eventArtBase}gai.svg`);",
+      "id": "MOVE-07747"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 15,
+      "text": "MAP.set(path(eventBase,4,jpg),`${eventArtBase}festival.svg`);",
+      "id": "MOVE-07748"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 16,
+      "text": "MAP.set(path(eventBase,6,jpg),`${eventArtBase}mensageiro.svg`);",
+      "id": "MOVE-07749"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 17,
+      "text": "MAP.set(path(eventBase,8,jpg),`${eventArtBase}pergaminho.svg`);",
+      "id": "MOVE-07750"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 18,
+      "text": "MAP.set(path(eventBase,12,jpg),path(eventBase,12,svg));",
+      "id": "MOVE-07751"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 22,
+      "text": "for(const [from,to] of MAP)out=out.split(from).join(to);",
+      "id": "MOVE-07752"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 37,
+      "text": "Element.prototype.insertAdjacentHTML=function(position,text){return nativeInsert.call(this,position,rewrite(text));};",
+      "id": "MOVE-07753"
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "line": 57,
+      "text": "window.__SNS_R41_ASSET_REPAIR__={build:BUILD,rewrite,map:Object.fromEntries(MAP)};",
+      "id": "MOVE-07754"
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 7,
       "text": "const byId=Object.fromEntries(v.npcs.map(x=>[x.id,x]));",
-      "id": "MOVE-07747"
+      "id": "MOVE-07755"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 4,
       "text": "const state={manifest:null,byCanonical:new Map(),aliases:new Map(),fallbacks:[]};",
-      "id": "MOVE-07748"
+      "id": "MOVE-07756"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 21,
       "text": "for(const map of [chars,npcs,jutsu,items,locations]) for(const [alias,id] of Object.entries(map\\|\\|{})) state.aliases.set(normalize(alias),normalize(id));",
-      "id": "MOVE-07749"
+      "id": "MOVE-07757"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 49,
       "text": "const BASE=new Set(['IDLE','MOVE','DASH','PREPARE','HAND_SEALS','ATTACK','CAST','BLOCK','DODGE','HIT','KNOCKBACK','DOWN','KO','TRANSFORM','RECOVER']);",
-      "id": "MOVE-07750"
+      "id": "MOVE-07758"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 58,
       "text": "const conditions=[...(result.conditions\\|\\|[]),...(result.appliedConditions\\|\\|[])].map(normalize);",
-      "id": "MOVE-07751"
+      "id": "MOVE-07759"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 93,
       "text": "const registry=new Map();",
-      "id": "MOVE-07752"
+      "id": "MOVE-07760"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 106,
       "text": "register('generic_attack',{prepare:'prepare_neutral',movement:'step_forward',impact:'impact_neutral',targetReaction:'hit_light'});",
-      "id": "MOVE-07753"
+      "id": "MOVE-07761"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 107,
       "text": "register('raiton_melee',{prepare:'lightning_charge',movement:'dash_forward',impact:'lightning_hit',targetReaction:'knockback_medium'});",
-      "id": "MOVE-07754"
+      "id": "MOVE-07762"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 108,
       "text": "register('katon_projectile',{prepare:'hand_seals',movement:'projectile_forward',impact:'fire_burst',targetReaction:'hit_burning'});",
-      "id": "MOVE-07755"
+      "id": "MOVE-07763"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 109,
       "text": "register('taijutsu_melee',{prepare:'stance',movement:'dash_short',impact:'melee_impact',targetReaction:'knockback_light'});",
-      "id": "MOVE-07756"
+      "id": "MOVE-07764"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 147,
       "text": "const IMPORTANT=new Set(['pv','hp','chakra','condition','mission','world','time','technique','position','trigger','death','inventory','equipment','appearance','relationship']);",
-      "id": "MOVE-07757"
+      "id": "MOVE-07765"
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "text": "function shouldSave(change={}){const keys=[change.type,...Object.keys(change)].map(x=>String(x\\|\\|'').toLowerCase());return keys.some(k=>IMPORTANT.has(k));}",
-      "id": "MOVE-07758"
+      "id": "MOVE-07766"
     },
     {
       "file": "src/r41-final-ui-repair.js",
       "line": 5,
       "text": "const replacements=new Map([",
-      "id": "MOVE-07759"
+      "id": "MOVE-07767"
     },
     {
       "file": "src/r41-local-reset-fix.js",
       "line": 34,
       "text": "location.reload();",
-      "id": "MOVE-07760"
+      "id": "MOVE-07768"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 11,
+      "line": 13,
       "text": "const BLOCKED_RE=/fora do alcance\\|mova-se primeiro\\|exige adjac\\|não pode\\|impedido\\|sem alvo\\|movimento permitido\\|terreno custa movimento/i;",
-      "id": "MOVE-07761"
+      "id": "MOVE-07769"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
-      "line": 44,
+      "line": 59,
       "text": ".map(n=>String(n.innerText\\|\\|n.textContent\\|\\|'').trim())",
-      "id": "MOVE-07762"
+      "id": "MOVE-07770"
     },
     {
       "file": "styles.css",
       "line": 15,
       "text": ".v83-tech-grid{align-items:stretch}.v83-tech-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border-color:#50321f}",
-      "id": "MOVE-07763"
+      "id": "MOVE-07771"
     },
     {
       "file": "styles.css",
       "line": 28,
       "text": ".v83-mentor{position:relative;display:flex;flex-direction:column;gap:7px}.v83-mentor>img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid #593821}.v83-mentor.unavailable{opacity:.7}.v83-mentor h3,.v83-mentor p{margin:0}.v83-mentor small{color:#9d8b7d}",
-      "id": "MOVE-07764"
+      "id": "MOVE-07772"
     },
     {
       "file": "styles.css",
       "line": 30,
       "text": ".v83-big-clock{font-size:2rem;font-weight:900;color:#ff9a3d;margin:14px 0}.v83-catalog-card{position:relative;display:flex;flex-direction:column;gap:8px}.v83-catalog-card.owned{box-shadow:inset 0 3px 0 #2f9c5a}.v83-catalog-card.trainable{box-shadow:inset 0 3px 0 #2f79a8}.v83-catalog-card.blocked{box-shadow:inset 0 3px 0 #895326}.v83-load-more{display:block;margin:18px auto}",
-      "id": "MOVE-07765"
+      "id": "MOVE-07773"
     },
     {
       "file": "styles.css",
       "line": 35,
       "text": "*{box-sizing:border-box}html,body{height:100%;margin:0;background:radial-gradient(circle at 70% 0,#29170c 0,#0f0c0a 45%);color:var(--text);font-family:Segoe UI,Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app-shell{min-height:100vh;display:grid;grid-template-columns:280px 1fr}.sidebar{position:sticky;top:0;height:100vh;background:linear-gradient(180deg,#21150e,#120e0b);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:20;box-",
-      "id": "MOVE-07766"
+      "id": "MOVE-07774"
     },
     {
       "file": "styles.css",
       "line": 36,
       "text": "@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.sticky-card{position:static}}",
-      "id": "MOVE-07767"
+      "id": "MOVE-07775"
     },
     {
       "file": "styles.css",
       "line": 37,
       "text": "@media(max-width:820px){.app-shell{grid-template-columns:1fr}.sidebar{position:fixed;left:-290px;width:280px;transition:left .2s}.sidebar.open{left:0}.mobile-only{display:inline-flex}.screen{padding:14px}.topbar{padding:9px 12px}.grid-2,.grid-3,.grid-4,.battle-layout,.form-grid{grid-template-columns:1fr}.hero-content{padding:22px}.hero{min-height:200px}.top-resources{max-width:calc(100vw - 110px);overflow:auto;flex-wrap:nowrap}.resource-pill{white-space:nowrap}.catalog-grid{grid-template-columns",
-      "id": "MOVE-07768"
+      "id": "MOVE-07776"
     },
     {
       "file": "styles.css",
       "line": 45,
       "text": ".creation-shell{display:grid;gap:18px}.creation-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#2d1d12,#17100c);box-shadow:var(--shadow)}.creation-head h1{margin:4px 0 6px;font-size:clamp(25px,4vw,42px)}.creation-head p{margin:0;color:var(--muted);max-width:820px;line-height:1.55}.creation-head img{width:110px;height:72px;object-fit:contain;opacity:.9}.wizard-progr",
-      "id": "MOVE-07769"
+      "id": "MOVE-07777"
     },
     {
       "file": "styles.css",
       "line": 49,
       "text": ".item-ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:10px}.item-ref-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#16110e;display:grid;grid-template-columns:86px 1fr;min-height:120px}.item-ref-image{width:86px;height:100%;min-height:120px;object-fit:cover;background:#0d0a08}.item-ref-placeholder{width:86px;min-height:120px;display:grid;place-items:center;font-size:34px;background:linear-gradient(145deg,#261a12,#0f0c0a)}.item-",
-      "id": "MOVE-07770"
+      "id": "MOVE-07778"
     },
     {
       "file": "styles.css",
       "line": 52,
       "text": ".village-hero{position:relative;min-height:245px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:28px;box-shadow:var(--shadow);margin-bottom:16px}.village-hero:before{content:\"\";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,7,5,.93),rgba(10,7,5,.55),rgba(10,7,5,.08))}.village-hero>div{position:relative;z-index:1;max-width:720px}.village-hero h1{font-size:clamp(30px,5vw,",
-      "id": "MOVE-07771"
+      "id": "MOVE-07779"
     },
     {
       "file": "styles.css",
       "line": 53,
       "text": ".ai-router-card{margin:0 0 16px;border-color:#355d79;background:linear-gradient(180deg,#14202a,#121514)}.provider-strip{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.provider-chip{display:grid;gap:2px;border:1px solid #36566d;background:#0d1820;border-radius:10px;padding:8px 10px}.provider-chip small{font-size:10px;color:#a9cce3;max-width:190px;overflow:hidden;text-overflow:ellipsis}.route-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:7px}.provider-list{dis",
-      "id": "MOVE-07772"
+      "id": "MOVE-07780"
     },
     {
       "file": "styles.css",
       "line": 54,
       "text": ".visual-catalog-card{overflow:hidden;padding:0}.visual-catalog-card .visual-top{height:130px;background:linear-gradient(145deg,#302014,#100d0b);position:relative;display:grid;place-items:center}.visual-catalog-card .visual-top img{width:100%;height:100%;object-fit:cover}.visual-catalog-card .visual-top .visual-placeholder{font-size:45px;opacity:.7}.visual-catalog-card .visual-body{padding:14px}.origin-info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:10px}.orig",
-      "id": "MOVE-07773"
+      "id": "MOVE-07781"
     },
     {
       "file": "styles.css",
       "line": 57,
       "text": "@media(max-width:820px){.creation-head{padding:16px}.creation-head img,.launcher-hero>img{display:none}.launcher-hero{padding:20px;min-height:0}.slot-grid{grid-template-columns:1fr}.slot-card{grid-template-columns:84px 1fr}.slot-card>img{width:84px;height:105px}.profile-sheet{grid-template-columns:1fr;text-align:center}.avatar-editor{grid-template-columns:1fr;justify-items:center;text-align:center}.summary-grid,.location-grid{grid-template-columns:1fr}.wizard-actions{bottom:6px}.wizard-actions .",
-      "id": "MOVE-07774"
+      "id": "MOVE-07782"
     },
     {
       "file": "styles.css",
       "line": 58,
       "text": "@media(max-width:560px){.skill-create-grid,.apt-create-grid,.profession-grid{grid-template-columns:1fr}.inline-form{flex-direction:column}.slot-card{grid-template-columns:1fr}.slot-card>img{width:100%;height:210px}.creation-head h1,.launcher-hero h1,.village-hero h1{font-size:28px}.wizard-actions{position:static}.village-hero{padding:20px;min-height:220px}}",
-      "id": "MOVE-07775"
+      "id": "MOVE-07783"
     },
     {
       "file": "styles.css",
       "line": 78,
       "text": ".launcher-hero{position:relative;overflow:hidden;background-image:linear-gradient(100deg,rgba(20,13,9,.97) 0%,rgba(24,15,10,.9) 46%,rgba(14,11,9,.4) 100%),url('assets/original/ui/layout_home_1.jpg');background-size:cover;background-position:center}",
-      "id": "MOVE-07776"
+      "id": "MOVE-07784"
     },
     {
       "file": "styles.css",
       "line": 79,
       "text": ".launcher-hero:after{content:\"\";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(244,123,32,.16),transparent 35%);pointer-events:none}",
-      "id": "MOVE-07777"
+      "id": "MOVE-07785"
     },
     {
       "file": "styles.css",
       "line": 80,
       "text": ".launcher-hero>div,.launcher-hero>img{position:relative;z-index:1}.launcher-hero>img{filter:drop-shadow(0 12px 25px rgba(0,0,0,.5))}",
-      "id": "MOVE-07778"
+      "id": "MOVE-07786"
     },
     {
       "file": "styles.css",
       "line": 83,
       "text": ".creation-head{background-image:linear-gradient(105deg,rgba(45,29,18,.96),rgba(23,16,12,.92)),url('assets/original/ui/layout_bg_home.png');background-size:cover;background-position:center}",
-      "id": "MOVE-07779"
+      "id": "MOVE-07787"
     },
     {
       "file": "styles.css",
       "line": 111,
       "text": ".location-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}.location-card{padding:9px}",
-      "id": "MOVE-07780"
+      "id": "MOVE-07788"
     },
     {
       "file": "styles.css",
       "line": 113,
       "text": ".map-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.map-tabs .btn.active{box-shadow:inset 0 -3px var(--accent2)}",
-      "id": "MOVE-07781"
+      "id": "MOVE-07789"
     },
     {
       "file": "styles.css",
       "line": 114,
       "text": ".map-workspace{display:grid;grid-template-columns:minmax(0,1.55fr) 330px;gap:11px;align-items:start}",
-      "id": "MOVE-07782"
+      "id": "MOVE-07790"
     },
     {
       "file": "styles.css",
       "line": 115,
       "text": ".play-map{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:13px;background:#110d0a;aspect-ratio:16/10;min-height:430px}",
-      "id": "MOVE-07783"
+      "id": "MOVE-07791"
     },
     {
       "file": "styles.css",
       "line": 116,
       "text": ".play-map>img.map-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.86) brightness(.7)}",
-      "id": "MOVE-07784"
+      "id": "MOVE-07792"
     },
     {
       "file": "styles.css",
       "line": 117,
       "text": ".play-map:after{content:\"\";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,5,4,.1),rgba(7,5,4,.32))}",
-      "id": "MOVE-07785"
+      "id": "MOVE-07793"
     },
     {
       "file": "styles.css",
       "line": 118,
       "text": ".map-grid-cells{position:absolute;inset:0;display:grid;z-index:2}.map-cell{border:1px solid rgba(255,255,255,.055);background:transparent;min-width:0;padding:0}.map-cell:hover{background:rgba(244,123,32,.12);border-color:rgba(255,179,71,.35)}",
-      "id": "MOVE-07786"
+      "id": "MOVE-07794"
     },
     {
       "file": "styles.css",
       "line": 119,
       "text": ".map-pin{position:absolute;z-index:5;transform:translate(-50%,-100%);border:1px solid rgba(255,179,71,.7);background:rgba(17,12,9,.92);color:var(--text);border-radius:9px;padding:5px 7px;font-size:11px;box-shadow:0 5px 16px rgba(0,0,0,.35);white-space:nowrap}",
-      "id": "MOVE-07787"
+      "id": "MOVE-07795"
     },
     {
       "file": "styles.css",
       "line": 120,
       "text": ".map-pin:hover,.map-pin.selected{background:rgba(244,123,32,.9);color:#fff}.map-pin span{font-size:16px;margin-right:4px}",
-      "id": "MOVE-07788"
+      "id": "MOVE-07796"
     },
     {
       "file": "styles.css",
       "line": 121,
       "text": ".player-marker{position:absolute;z-index:7;transform:translate(-50%,-50%);width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:#0d68ae;border:3px solid #d9f2ff;box-shadow:0 0 0 4px rgba(14,116,184,.25),0 5px 18px #000;font-size:15px;pointer-events:none}",
-      "id": "MOVE-07789"
+      "id": "MOVE-07797"
     },
     {
       "file": "styles.css",
       "line": 122,
       "text": ".map-legend{position:absolute;left:8px;bottom:8px;z-index:8;padding:6px 8px;border-radius:8px;background:rgba(10,8,7,.86);border:1px solid var(--line);font-size:11px;color:var(--muted)}",
-      "id": "MOVE-07790"
+      "id": "MOVE-07798"
     },
     {
       "file": "styles.css",
       "line": 123,
       "text": ".map-side{display:grid;gap:10px}.map-side .card{margin:0}.map-locations{display:grid;gap:6px;max-height:370px;overflow:auto}.map-location-row{display:grid;grid-template-columns:33px minmax(0,1fr) auto;gap:7px;align-items:center;border:1px solid var(--line);background:#15100d;color:var(--text);border-radius:9px;padding:7px;text-align:left}.map-location-row:hover,.map-location-row.selected{border-color:var(--accent);background:rgba(244,123,32,.09)}.map-location-row .ico{font-size:20px}.map-locatio",
-      "id": "MOVE-07791"
+      "id": "MOVE-07799"
     },
     {
       "file": "styles.css",
       "line": 124,
       "text": ".world-map{background:radial-gradient(circle at 52% 62%,rgba(44,89,44,.38),transparent 19%),radial-gradient(circle at 22% 72%,rgba(149,113,53,.34),transparent 23%),radial-gradient(circle at 78% 68%,rgba(40,91,116,.34),transparent 22%),radial-gradient(circle at 66% 21%,rgba(117,116,145,.3),transparent 19%),linear-gradient(145deg,#1b2118,#202219 42%,#171b18)}",
-      "id": "MOVE-07792"
+      "id": "MOVE-07800"
     },
     {
       "file": "styles.css",
       "line": 125,
       "text": ".world-map .terrain-lines{position:absolute;inset:0;z-index:1;width:100%;height:100%;opacity:.7}.world-node{position:absolute;z-index:5;transform:translate(-50%,-50%);width:62px;border:0;background:transparent;color:#fff;text-align:center;padding:0}.world-node img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid #e9d2b6;box-shadow:0 5px 15px #000}.world-node b{display:block;margin-top:3px;font-size:10px;text-shadow:0 2px 4px #000}.world-node.selected img{border-color:va",
-      "id": "MOVE-07793"
+      "id": "MOVE-07801"
     },
     {
       "file": "styles.css",
       "line": 126,
       "text": ".travel-card .route-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.route-meta div{background:#110e0c;border:1px solid var(--line);border-radius:8px;padding:6px;text-align:center}.route-meta b,.route-meta small{display:block}.route-meta small{color:var(--muted);font-size:10px}",
-      "id": "MOVE-07794"
+      "id": "MOVE-07802"
     },
     {
       "file": "styles.css",
       "line": 127,
       "text": ".travel-log{display:grid;gap:5px;max-height:160px;overflow:auto}.travel-log div{font-size:11px;padding:6px;border-left:2px solid var(--line);background:#120e0c}",
-      "id": "MOVE-07795"
+      "id": "MOVE-07803"
     },
     {
       "file": "styles.css",
       "line": 128,
       "text": ".mission-travel-list{display:grid;gap:6px;max-height:300px;overflow:auto}.mission-travel-row{border:1px solid var(--line);border-radius:8px;padding:7px;background:#15100d}.mission-travel-row strong,.mission-travel-row small{display:block}.mission-travel-row small{color:var(--muted)}",
-      "id": "MOVE-07796"
+      "id": "MOVE-07804"
     },
     {
       "file": "styles.css",
       "line": 131,
       "text": "@media(max-width:1050px){.map-workspace{grid-template-columns:1fr}.map-side{grid-template-columns:repeat(2,minmax(0,1fr))}.play-map{min-height:380px}}",
-      "id": "MOVE-07797"
+      "id": "MOVE-07805"
     },
     {
       "file": "styles.css",
       "line": 132,
       "text": "@media(max-width:680px){.screen{padding:9px}.topbar{padding:6px 8px}.map-side{grid-template-columns:1fr}.play-map{min-height:330px;aspect-ratio:4/5}.map-pin{font-size:0;padding:4px}.map-pin span{font-size:17px;margin:0}.world-node{width:46px}.world-node img{width:36px;height:36px}.world-node b{font-size:8px}.ai-sheet-snapshot{grid-template-columns:55px minmax(0,1fr)}.ai-sheet-snapshot img{width:55px;height:55px}}",
-      "id": "MOVE-07798"
+      "id": "MOVE-07806"
     },
     {
       "file": "styles.css",
       "line": 147,
       "text": ".map-tabs{margin-bottom:7px}.map-tabs .btn{padding:6px 9px}",
-      "id": "MOVE-07799"
+      "id": "MOVE-07807"
     },
     {
       "file": "styles.css",
       "line": 148,
       "text": ".map-workspace{grid-template-columns:minmax(0,1fr) 292px;gap:8px}",
-      "id": "MOVE-07800"
+      "id": "MOVE-07808"
     },
     {
       "file": "styles.css",
       "line": 149,
       "text": ".play-map{aspect-ratio:auto;height:calc(100vh - 225px);min-height:525px;border-radius:10px}",
-      "id": "MOVE-07801"
+      "id": "MOVE-07809"
     },
     {
       "file": "styles.css",
       "line": 150,
       "text": ".map-side{gap:7px}.map-side .card{padding:9px}.map-side h2,.map-side h3{margin:0 0 6px;font-size:15px}",
-      "id": "MOVE-07802"
+      "id": "MOVE-07810"
     },
     {
       "file": "styles.css",
       "line": 151,
       "text": ".map-locations{max-height:calc(100vh - 380px)}.map-location-row{padding:6px}.map-location-row .ico{font-size:17px}.map-location-row b{font-size:11px}.map-location-row small{font-size:9px}",
-      "id": "MOVE-07803"
+      "id": "MOVE-07811"
     },
     {
       "file": "styles.css",
       "line": 152,
       "text": ".map-pin{padding:4px 6px;font-size:10px}.map-pin span{font-size:14px}",
-      "id": "MOVE-07804"
+      "id": "MOVE-07812"
     },
     {
       "file": "styles.css",
       "line": 172,
       "text": ".tactical-layout{display:grid;grid-template-columns:minmax(470px,1.35fr) minmax(310px,.65fr);gap:10px}.tactical-board{position:relative;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(5,1fr);gap:2px;aspect-ratio:7/5;min-height:390px;background:#080706;border:1px solid var(--line);padding:5px;border-radius:12px;overflow:hidden}.tactical-cell{position:relative;border:1px solid rgba(255,255,255,.08);border-radius:5px;background:rgba(68,58,44,.35);min-width:0}.tactical-cel",
-      "id": "MOVE-07805"
+      "id": "MOVE-07813"
     },
     {
       "file": "styles.css",
       "line": 176,
       "text": ".mission-mini{border:1px solid rgba(217,150,69,.35);border-radius:10px;padding:9px;background:#130f0d;margin:8px 0}.route-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.route-mini-grid button{min-height:92px;border:1px solid var(--line);border-radius:8px;background:#0e0c0b;color:var(--text);padding:7px;text-align:left}.route-mini-grid button:hover{border-color:var(--accent);background:rgba(217,150,69,.08)}",
-      "id": "MOVE-07806"
+      "id": "MOVE-07814"
     },
     {
       "file": "styles.css",
       "line": 178,
       "text": "@media(max-width:980px){.inventory-layout,.shop-layout,.training-layout,.tactical-layout{grid-template-columns:1fr}.tactical-board{min-height:350px}}@media(max-width:620px){.inventory-grid,.shop-grid,.training-grid{grid-template-columns:1fr}.tactical-board{min-height:300px}.jutsu-combat-grid{grid-template-columns:1fr}.route-mini-grid{grid-template-columns:1fr}.combat-hud{grid-template-columns:1fr}}",
-      "id": "MOVE-07807"
+      "id": "MOVE-07815"
     },
     {
       "file": "styles.css",
       "line": 184,
       "text": ".screen{padding:14px 16px 30px}.section-title.compact-title{margin-bottom:10px}.compact-title h1{margin:0 0 2px;font-size:28px}.compact-title p{margin:0;max-width:900px}.card{padding:13px}.world-map.world-v74{background-image:linear-gradient(rgba(10,15,14,.12),rgba(10,10,8,.38)),url('assets/maps/world_v74.svg')!important;background-size:cover!important;background-position:center!important}.world-map.world-v74 .map-grid-cells{background:rgba(6,9,8,.14)}",
-      "id": "MOVE-07808"
+      "id": "MOVE-07816"
     },
     {
       "file": "styles.css",
       "line": 185,
       "text": ".event-map-pin{position:absolute;transform:translate(-50%,-50%);z-index:9;display:flex;align-items:center;gap:5px;max-width:180px;padding:5px 8px;border-radius:999px;border:1px solid #ed9a42;background:#1a100bcc;color:#fff8e9;box-shadow:0 5px 18px #0009;cursor:pointer}.event-map-pin span{font-size:17px}.event-map-pin b{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.event-map-pin.tipo-canonico{border-color:#f3bf55}.event-map-pin.tipo-sazonal{border-color:#d86df0}.event-",
-      "id": "MOVE-07809"
+      "id": "MOVE-07817"
     },
     {
       "file": "styles.css",
       "line": 186,
       "text": ".shop-layout-v74{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:10px}.shop-topline{display:flex;align-items:center;gap:8px;justify-content:space-between;position:sticky;top:0;z-index:5;background:#100b08e8;backdrop-filter:blur(10px);padding:6px;border-radius:9px}.compact-tabs{display:flex;gap:5px;overflow:auto;padding:6px 0}.compact-tabs .btn{padding:6px 9px;font-size:11px;white-space:nowrap}.shop-grid-v74{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:7px",
-      "id": "MOVE-07810"
+      "id": "MOVE-07818"
     },
     {
       "file": "styles.css",
       "line": 190,
       "text": "@media(max-width:1150px){.shop-layout-v74,.inventory-layout-v74{grid-template-columns:1fr}.shop-side-v74{position:static}.kurai-card{grid-template-columns:190px 1fr}.kurai-techs{grid-column:1/-1}.shop-grid-v74{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}@media(max-width:720px){.screen{padding:10px}.shop-card-v74{grid-template-columns:72px 1fr}.shop-card-v74>img{width:72px;height:72px}.kurai-card{grid-template-columns:1fr}.event-map-pin b{display:none}.dojo-strip-v74{align-items:fl",
-      "id": "MOVE-07811"
+      "id": "MOVE-07819"
     },
     {
       "file": "styles.css",
       "line": 196,
       "text": ".rpg-desk-v75{display:grid;grid-template-columns:minmax(230px,280px) minmax(420px,1fr) minmax(300px,390px);gap:10px;align-items:start;max-width:1800px;margin:0 auto}.rpg-sheet-v75{position:sticky;top:8px;max-height:calc(100vh - 80px);overflow:auto;padding:12px}.rpg-palette-v75{position:sticky;top:8px;max-height:calc(100vh - 80px);display:flex;flex-direction:column;gap:8px}.rpg-narrative-v75{min-width:0;display:flex;flex-direction:column;gap:8px}",
-      "id": "MOVE-07812"
+      "id": "MOVE-07820"
     },
     {
       "file": "styles.css",
       "line": 205,
       "text": ".creation-nav-v75{position:sticky;top:0;z-index:5;display:flex;gap:4px;overflow-x:auto;background:var(--bg);padding:7px 0;border-bottom:1px solid var(--line);margin-bottom:8px}.creation-nav-v75 button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:8px;padding:6px 8px;display:flex;gap:5px;align-items:center;white-space:nowrap;font-size:10px}.creation-nav-v75 button span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:rgba(",
-      "id": "MOVE-07813"
+      "id": "MOVE-07821"
     },
     {
       "file": "styles.css",
       "line": 207,
       "text": "@media(max-width:1350px){.rpg-desk-v75{grid-template-columns:230px minmax(380px,1fr) 320px}.creation-live-v75{position:static;width:auto;max-height:none}.creation-live-v75 .card{box-shadow:none}body:has(.creation-live-v75) .screen{padding-right:var(--screen-pad,16px)}}",
-      "id": "MOVE-07814"
+      "id": "MOVE-07822"
     },
     {
       "file": "styles.css",
       "line": 208,
       "text": "@media(max-width:1050px){.rpg-desk-v75{grid-template-columns:220px minmax(0,1fr)}.rpg-palette-v75{position:static;grid-column:1/-1;max-height:none}.rpg-action-list{grid-template-columns:repeat(2,minmax(0,1fr));max-height:520px}.rpg-sheet-v75{top:4px}.rpg-desk-title{align-items:flex-start;flex-direction:column}.kurai-actions-grid{grid-template-columns:1fr 1fr}}",
-      "id": "MOVE-07815"
+      "id": "MOVE-07823"
     },
     {
       "file": "styles.css",
       "line": 209,
       "text": "@media(max-width:720px){.rpg-desk-v75{grid-template-columns:1fr}.rpg-sheet-v75,.rpg-palette-v75{position:static;max-height:none}.rpg-action-list{grid-template-columns:1fr}.rpg-desk-title .button-row{width:100%}.rpg-desk-title .btn{flex:1}.kurai-hero{grid-template-columns:1fr}.kurai-hero>img{width:100%;height:140px}.kurai-actions-grid{grid-template-columns:1fr}.rinne-progress-v75 .card-header{grid-template-columns:1fr}.rinne-progress-v75 .card-header img{width:100%;height:110px}.creation-nav-v75{",
-      "id": "MOVE-07816"
+      "id": "MOVE-07824"
     },
     {
       "file": "styles.css",
       "line": 222,
       "text": ".rpg-desk-v76{display:grid;grid-template-columns:minmax(245px,285px) minmax(430px,1fr) minmax(340px,405px);gap:10px;align-items:start}.rpg-sheet-v76{position:sticky;top:78px;max-height:calc(100vh - 92px);overflow:auto;padding:11px}.rpg-narrative-v76{display:grid;gap:9px;min-width:0}.rpg-palette-v76{position:sticky;top:78px;max-height:calc(100vh - 92px);display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:7px;min-width:0}.rpg-action-list.v76{overflow:auto;display:grid;gap:6px;padding-right",
-      "id": "MOVE-07817"
+      "id": "MOVE-07825"
     },
     {
       "file": "styles.css",
       "line": 223,
       "text": ".search-wrap-v76{position:relative;margin-top:7px}.search-wrap-v76>span{position:absolute;left:10px;top:9px;color:var(--muted);z-index:1}.search-wrap-v76 .input{padding-left:30px;margin:0}.selected-action-v76{padding:9px;border-color:rgba(244,123,32,.6)}.selected-action-v76 p{font-size:10px;line-height:1.4;margin:6px 0 0}.selected-action-head-v76{display:grid;grid-template-columns:64px 1fr;gap:7px;align-items:center;margin-top:5px}.selected-action-head-v76 img{width:64px;height:44px;border-radiu",
-      "id": "MOVE-07818"
+      "id": "MOVE-07826"
     },
     {
       "file": "styles.css",
       "line": 224,
       "text": ".narrative-stage.v76{padding:15px}.narrative-text.v76{max-width:none;font-size:15px;line-height:1.78;padding:18px 4px;white-space:normal}.rpg-compose.v76{position:sticky;bottom:6px;z-index:5;box-shadow:0 -9px 28px rgba(0,0,0,.25)}.spend-flash-v76{margin:-2px 0 10px;padding:8px 11px;border-radius:9px;border:1px solid rgba(97,174,242,.45);background:rgba(23,110,180,.13);font-size:11px;color:#d9efff}.spend-flash-v76 b{color:#fff}",
-      "id": "MOVE-07819"
+      "id": "MOVE-07827"
     },
     {
       "file": "styles.css",
       "line": 228,
       "text": "@media(max-width:1370px){.rpg-desk-v76{grid-template-columns:245px minmax(400px,1fr) 350px}.creation-live-v75.v76{position:static;width:auto;max-height:none}body:has(.creation-live-v75.v76) .screen{padding-right:24px}}",
-      "id": "MOVE-07820"
+      "id": "MOVE-07828"
     },
     {
       "file": "styles.css",
       "line": 229,
       "text": "@media(max-width:1100px){.rpg-desk-v76{grid-template-columns:235px minmax(0,1fr)}.rpg-palette-v76{position:static;grid-column:1/-1;max-height:none;grid-template-rows:auto auto auto}.rpg-action-list.v76{grid-template-columns:repeat(2,minmax(0,1fr));max-height:580px}.rpg-sheet-v76{top:76px}}",
-      "id": "MOVE-07821"
+      "id": "MOVE-07829"
     },
     {
       "file": "styles.css",
       "line": 230,
       "text": "@media(max-width:760px){.rpg-desk-v76{grid-template-columns:1fr}.rpg-sheet-v76,.rpg-palette-v76{position:static;max-height:none}.rpg-action-list.v76{grid-template-columns:1fr;max-height:none}.rpg-tabs.v76{grid-template-columns:repeat(2,minmax(0,1fr))}.action-confirm-v76{grid-template-columns:1fr}.action-confirm-v76>img{width:100%;height:145px}.rpg-compose.v76{position:static}}",
-      "id": "MOVE-07822"
+      "id": "MOVE-07830"
     },
     {
       "file": "styles.css",
       "line": 274,
       "text": ".v8-router-live{display:grid;grid-template-columns:1fr 1.4fr;gap:14px;margin-bottom:12px}.v8-route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.v8-route-grid div{padding:7px 9px;border:1px solid rgba(255,255,255,.07);border-radius:9px;background:rgba(0,0,0,.18);display:flex;flex-direction:column}.v8-route-grid small{text-transform:uppercase;color:#c2a78d}.v8-route-grid b{color:#ffb15f}",
-      "id": "MOVE-07823"
+      "id": "MOVE-07831"
     },
     {
       "file": "styles.css",
       "line": 279,
       "text": ".resource-pill.live.xp{position:relative;overflow:hidden;min-width:150px}.resource-pill.live.xp i{position:absolute;left:0;bottom:0;height:2px;width:var(--p);background:linear-gradient(90deg,#ff7a18,#9e63ff)}",
-      "id": "MOVE-07824"
+      "id": "MOVE-07832"
     },
     {
       "file": "styles.css",
       "line": 280,
       "text": ".v81-grim-layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:14px;align-items:start}.v81-grim-nav{position:sticky;top:72px;display:grid;gap:12px}.v81-grim-nav>div{display:grid;gap:6px}.v81-grim-nav button{border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--text);border-radius:10px;padding:10px 12px;text-align:left;display:flex;justify-content:space-between;gap:8px;cursor:pointer}.v81-grim-nav button.active{border-color:var(--accent);background:rgba(255,126,3",
-      "id": "MOVE-07825"
+      "id": "MOVE-07833"
     },
     {
       "file": "styles.css",
       "line": 285,
       "text": ".v81-router-panel{margin-bottom:16px}.v81-route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin:12px 0}.v81-route-grid>div{border:1px solid var(--line);border-radius:9px;padding:9px;background:rgba(255,255,255,.02);display:grid;gap:3px}.v81-route-grid small{color:var(--muted)}.v81-route-grid b{color:#fff}.v81-router-panel details{margin-top:12px}.v81-router-panel .code{white-space:pre-wrap;margin-top:8px}",
-      "id": "MOVE-07826"
+      "id": "MOVE-07834"
     },
     {
       "file": "styles.css",
       "line": 286,
       "text": ".kurai-context{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.rpg-sheet-v76 .v8-progress-card{margin-top:10px}.rpg-sheet-v76 .v8-xp-table{max-height:165px;overflow:auto}.rpg-action-list.v76{scrollbar-width:thin}.rpg-action-card img{object-position:center}.rpg-palette-v76 .rpg-tabs.v76{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.rpg-palette-v76 .rpg-tabs.v76 button{min-width:0;font-size:11px}.rpg-palette-v76 .rpg-tabs.v76 button b{margin-left:4px}",
-      "id": "MOVE-07827"
+      "id": "MOVE-07835"
     },
     {
       "file": "styles.css",
       "line": 287,
       "text": "@media(max-width:1180px){.v81-grim-layout{grid-template-columns:1fr}.v81-grim-nav{position:static}.v81-grim-nav>div{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.v81-codex-hero{grid-template-columns:1fr}.v81-codex-hero>img{height:300px}.v81-private-overview{grid-template-columns:1fr 1fr}.v81-xp-main{grid-template-columns:1fr}}",
-      "id": "MOVE-07828"
+      "id": "MOVE-07836"
     },
     {
       "file": "styles.css",
       "line": 289,
       "text": ".v81-ai-route-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:10px 13px}.v81-ai-route-strip>div{display:grid;gap:3px;min-width:0}.v81-ai-route-strip b{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}",
-      "id": "MOVE-07829"
+      "id": "MOVE-07837"
     },
     {
       "file": "styles.css",
       "line": 295,
       "text": ".v81-command-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.v81-command-grid button{min-width:0}.v81-command-grid button:disabled{opacity:.38;cursor:not-allowed}.v81-command-grid .move-command{cursor:default}.v81-combat-tech-panel{min-width:0}.v81-combat-tabs{display:flex;gap:5px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}.v81-combat-tabs button{flex:0 0 auto;border:1px solid var(--line);background:#130e0c;color:var(--text);border-radius:999px;padding:6px 9px;cursor:pointer;fon",
-      "id": "MOVE-07830"
+      "id": "MOVE-07838"
     },
     {
       "file": "styles.css",
       "line": 305,
       "text": ".v82-ai-health{display:grid;text-align:right;color:#75d49a}.v82-ai-health small{color:var(--muted);max-width:520px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.v82-ai-layout{display:grid;grid-template-columns:270px minmax(420px,1fr) 390px;gap:10px;align-items:start}.v82-live-sheet,.v82-action-drawer{position:sticky;top:77px;max-height:calc(100vh - 90px);overflow:auto}.v82-story{display:grid;gap:9px}.v82-scene{min-height:390px}.v82-narrative{font-size:15px;line-height:1.75;padding:1",
-      "id": "MOVE-07831"
+      "id": "MOVE-07839"
     },
     {
       "file": "styles.css",
       "line": 306,
       "text": ".v82-codex-title{margin:10px 0 14px}.v82-codex-title h1{font-size:38px;margin:0}.v82-rules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}.v82-rules-grid p{color:var(--muted);line-height:1.55}.v82-provider-grid,.v82-route-list{display:grid;gap:7px}.v82-provider-grid>div,.v82-route-list>div{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:9px}.v82-provider-grid small{color:var(-",
-      "id": "MOVE-07832"
+      "id": "MOVE-07840"
     },
     {
       "file": "styles.css",
       "line": 307,
       "text": ".v82-combat-layout{display:grid;grid-template-columns:minmax(500px,1fr) minmax(390px,.72fr);gap:12px;align-items:start}.v82-combat-layout>main,.v82-combat-layout>aside{display:grid;gap:10px}.v82-board{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;min-height:430px;background:linear-gradient(rgba(15,25,16,.72),rgba(13,13,10,.82)),url('assets/original/ui/layout_combate_bg_log.png');background-size:cover;padding:10px;border-radius:12px}.v82-board button{min-height:70px;border:1px solid rg",
-      "id": "MOVE-07833"
+      "id": "MOVE-07841"
     },
     {
       "file": "styles.css",
       "line": 308,
       "text": "@media(max-width:1280px){.v82-ai-layout{grid-template-columns:240px 1fr}.v82-action-drawer{grid-column:1/-1;position:static;max-height:none}.v82-ai-quick{grid-template-columns:repeat(2,1fr)}.v82-combat-layout{grid-template-columns:1fr}.v82-dashboard{grid-template-columns:1fr}.v82-action-launcher{grid-template-columns:repeat(2,1fr)}}",
-      "id": "MOVE-07834"
+      "id": "MOVE-07842"
     },
     {
       "file": "styles.css",
       "line": 309,
       "text": "@media(max-width:800px){.v82-page-head{align-items:flex-start;flex-direction:column}.v82-toolbar{grid-template-columns:1fr}.v82-ai-layout{grid-template-columns:1fr}.v82-live-sheet{position:static;max-height:none}.v82-ai-quick{grid-template-columns:1fr}.v82-action-launcher{grid-template-columns:1fr 1fr}.v82-milestones{grid-template-columns:repeat(2,1fr)}.v82-xp-main{grid-template-columns:1fr}.v82-board{min-height:340px}.v82-board button{min-height:48px}.v82-turn-summary{grid-template-columns:1fr ",
-      "id": "MOVE-07835"
+      "id": "MOVE-07843"
     },
     {
       "file": "styles.css",
       "line": 310,
       "text": ".v82-sheet-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:12px;align-items:start}.v82-sheet-profile{position:sticky;top:77px}.v82-sheet-profile>img{width:100%;height:285px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}.v82-resource-stack{display:grid;gap:6px;margin-top:12px}.v82-resource-stack span{display:flex;justify-content:space-between;padding:8px 9px;border:1px solid var(--line);border-radius:9px}.v82-sheet-main{display:grid;gap:12px}.v82-stat-cards{di",
-      "id": "MOVE-07836"
+      "id": "MOVE-07844"
     },
     {
       "file": "styles.css",
       "line": 311,
       "text": "@media(max-width:900px){.v82-sheet-layout{grid-template-columns:1fr}.v82-sheet-profile{position:static}.v82-sheet-links{grid-template-columns:1fr 1fr}}",
-      "id": "MOVE-07837"
+      "id": "MOVE-07845"
     },
     {
       "file": "styles.css",
       "line": 323,
       "text": ".v84-scene-stage{position:relative;min-height:330px;border:1px solid rgba(255,149,55,.38);border-radius:16px;background-position:center;background-size:cover;overflow:hidden;display:grid;grid-template-columns:minmax(250px,.7fr) 1fr;align-items:end;padding:20px;margin:10px 0 14px;box-shadow:0 18px 35px rgba(0,0,0,.3)}.v84-stage-copy{position:relative;z-index:2;max-width:560px}.v84-stage-copy h2{font-size:clamp(25px,3vw,43px);margin:5px 0}.v84-stage-copy p{color:#dccbbd;text-shadow:0 2px 8px #000}",
-      "id": "MOVE-07838"
+      "id": "MOVE-07846"
     },
     {
       "file": "styles.css",
       "line": 324,
       "text": ".v84-battlefield-shell{margin:10px 0;display:grid;gap:10px;background:linear-gradient(145deg,rgba(63,36,20,.16),rgba(26,19,34,.13)),#110d0c}.v84-battlefield-shell.compact{max-width:1050px}.v84-field-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px}.v84-field-head h2{margin:3px 0}.v84-field-head p{margin:0;color:var(--muted)}.v84-field-tools,.v84-field-presets{display:flex;gap:6px;flex-wrap:wrap}.v84-field-tools button{border:1px solid var(--line);background:#100c0b;c",
-      "id": "MOVE-07839"
+      "id": "MOVE-07847"
     },
     {
       "file": "styles.css",
       "line": 335,
       "text": ".v841-auth-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 18px}.v841-auth-gallery figure{position:relative;margin:0;border:1px solid #744323;border-radius:18px;overflow:hidden;background:#120d0a;min-height:210px}.v841-auth-gallery img{width:100%;height:100%;min-height:210px;object-fit:cover;display:block}.v841-auth-gallery figcaption{position:absolute;inset:auto 0 0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(4,3,3,.94));font-weight:800;col",
-      "id": "MOVE-07840"
+      "id": "MOVE-07848"
     },
     {
       "file": "styles.css",
       "line": 342,
       "text": ".v841-inline-art{display:block;width:100%;height:168px;object-fit:cover;border:1px solid rgba(255,255,255,.09);border-radius:11px;margin:0 0 11px;background:#090707}.select-card>.v841-inline-art,.apt-create>.v841-inline-art,.skill-create>.v841-inline-art{height:142px}.v841-training-art{width:112px;height:112px;object-fit:cover;border:1px solid rgba(255,148,48,.38);border-radius:13px;align-self:start}.training-card:has(.v841-training-art){display:grid;grid-template-columns:112px minmax(0,1fr);gap",
-      "id": "MOVE-07841"
+      "id": "MOVE-07849"
     },
     {
       "file": "styles.css",
       "line": 343,
       "text": "@media(max-width:760px){.training-card:has(.v841-training-art){grid-template-columns:82px minmax(0,1fr)}.v841-training-art{width:82px;height:82px}.v841-inline-art{height:145px}.v841-atlas-tabs{position:static;max-height:220px}}",
-      "id": "MOVE-07842"
+      "id": "MOVE-07850"
     },
     {
       "file": "styles.css",
       "line": 360,
       "text": ".r28-auth-stage{position:relative;min-height:100vh;overflow:hidden;border-right:1px solid rgba(255,142,46,.22)}",
-      "id": "MOVE-07843"
+      "id": "MOVE-07851"
     },
     {
       "file": "styles.css",
       "line": 361,
       "text": ".r28-auth-stage-bg{position:absolute;inset:0;background-image:url('assets/maps/folha.jpg');background-size:cover;background-position:center;filter:saturate(.82) contrast(1.06) brightness(.55);transform:scale(1.03)}",
-      "id": "MOVE-07844"
+      "id": "MOVE-07852"
     },
     {
       "file": "styles.css",
       "line": 362,
       "text": ".r28-auth-stage-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.96) 0%,rgba(7,7,7,.73) 42%,rgba(7,7,7,.25) 72%,rgba(7,7,7,.72) 100%),linear-gradient(0deg,#070707 0%,transparent 35%,rgba(7,7,7,.28) 100%)}",
-      "id": "MOVE-07845"
+      "id": "MOVE-07853"
     },
     {
       "file": "styles.css",
       "line": 363,
       "text": ".r28-auth-stage-content{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(42px,6vw,88px);max-width:1100px}",
-      "id": "MOVE-07846"
+      "id": "MOVE-07854"
     },
     {
       "file": "styles.css",
       "line": 367,
       "text": ".r28-auth-cast{display:grid;grid-template-columns:1.18fr repeat(4,1fr);gap:10px;max-width:960px}.r28-auth-cast figure{position:relative;margin:0;height:210px;border:1px solid rgba(255,142,46,.28);border-radius:14px;overflow:hidden;background:#0b0908;box-shadow:0 18px 42px rgba(0,0,0,.28);transition:.2s transform,.2s border-color}.r28-auth-cast figure:hover{transform:translateY(-4px);border-color:#ff8b2d}.r28-auth-cast figure.lead{height:232px;margin-top:-22px}.r28-auth-cast img{width:100%;height",
-      "id": "MOVE-07847"
+      "id": "MOVE-07855"
     },
     {
       "file": "styles.css",
       "line": 377,
       "text": ".r29-story-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(280px,.7fr);gap:16px;align-items:start}.r29-current-arc{display:grid;grid-template-columns:minmax(240px,.75fr) 1.25fr;gap:18px;overflow:hidden}.r29-current-arc>img{width:100%;height:260px;object-fit:cover;border-radius:12px}.r29-timeline{display:grid;gap:8px}.r29-timeline-row{display:grid;grid-template-columns:80px 1fr auto;gap:12px;padding:12px;border:1px solid #51331f;border-radius:10px;align-items:center}.r29-timeline",
-      "id": "MOVE-07848"
+      "id": "MOVE-07856"
     },
     {
       "file": "styles.css",
       "line": 385,
       "text": "object-position:center center !important;",
-      "id": "MOVE-07849"
+      "id": "MOVE-07857"
     },
     {
       "file": "styles.css",
       "line": 433,
       "text": ".r41-online-actions .travel-log{max-height:310px;overflow:auto;margin-top:12px}",
-      "id": "MOVE-07850"
+      "id": "MOVE-07858"
     },
     {
       "file": "styles.css",
       "line": 434,
       "text": ".r41-online-actions .travel-log>div{padding:10px 0;border-bottom:1px solid rgba(126,82,48,.35)}",
-      "id": "MOVE-07851"
+      "id": "MOVE-07859"
     },
     {
       "file": "styles.css",
       "line": 435,
       "text": ".r41-ambient-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:5;mix-blend-mode:screen;border-radius:inherit}",
-      "id": "MOVE-07852"
+      "id": "MOVE-07860"
     },
     {
       "file": "styles.css",
       "line": 437,
       "text": ".r41-ambient-layer.rain i{position:absolute;top:-10%;height:34%;width:1px;background:rgba(185,215,255,.55);animation:r41-rain 1.15s linear infinite;transform:rotate(12deg)}",
-      "id": "MOVE-07853"
+      "id": "MOVE-07861"
     },
     {
       "file": "styles.css",
       "line": 445,
       "text": ".r41-minigame-stage{position:relative;min-height:300px;border:1px solid #604027;border-radius:16px;background:radial-gradient(circle at 50% 25%,rgba(81,49,28,.5),rgba(15,10,8,.94));overflow:hidden;padding:18px}",
-      "id": "MOVE-07854"
+      "id": "MOVE-07862"
     },
     {
       "file": "styles.css",
       "line": 448,
       "text": ".r41-timing-track{position:relative;height:64px;margin:66px 10px;border-radius:14px;background:#0e0a08;border:1px solid #68462f;overflow:hidden}",
-      "id": "MOVE-07855"
+      "id": "MOVE-07863"
     },
     {
       "file": "styles.css",
       "line": 449,
       "text": ".r41-timing-zone{position:absolute;top:0;bottom:0;background:rgba(46,162,87,.32);border-left:2px solid #55ca7b;border-right:2px solid #55ca7b}",
-      "id": "MOVE-07856"
+      "id": "MOVE-07864"
     },
     {
       "file": "styles.css",
       "line": 450,
       "text": ".r41-timing-cursor{position:absolute;top:6px;bottom:6px;width:5px;border-radius:4px;background:#f28a2b;box-shadow:0 0 18px #f28a2b}",
-      "id": "MOVE-07857"
+      "id": "MOVE-07865"
     },
     {
       "file": "styles.css",
       "line": 451,
       "text": ".r41-targets{position:relative;min-height:250px}.r41-target{position:absolute;width:52px;height:52px;border-radius:50%;border:3px solid #f28a2b;background:radial-gradient(circle,#f6d493 0 20%,#9e451f 22% 40%,#21100a 42%);box-shadow:0 0 18px rgba(242,138,43,.45);cursor:crosshair}.r41-target.hit{opacity:.2;transform:scale(.5);pointer-events:none}",
-      "id": "MOVE-07858"
+      "id": "MOVE-07866"
     },
     {
       "file": "styles.css",
       "line": 455,
       "text": ".r41-route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}.r41-route button{min-height:120px;white-space:normal}.r41-route .risk-high{border-color:#9c473b}.r41-route .risk-low{border-color:#3b8855}",
-      "id": "MOVE-07859"
+      "id": "MOVE-07867"
     },
     {
       "file": "styles.css",
       "line": 459,
       "text": ".r41-minigame{min-width:0}.r41-minigame-stage{min-height:250px;padding:12px}.r41-route{grid-template-columns:1fr}.r41-odd-grid{grid-template-columns:repeat(3,1fr)}.r41-timing-track{margin:50px 4px}.r41-online-actions textarea{font-size:16px}",
-      "id": "MOVE-07860"
+      "id": "MOVE-07868"
     },
     {
       "file": "styles.css",
       "line": 463,
       "text": ".r41-timing{position:relative;height:64px;margin:54px 8px;border-radius:14px;background:#0d0907;border:1px solid #67432b;overflow:hidden}.r41-timing .zone{position:absolute;top:0;bottom:0;width:20%;background:rgba(52,168,91,.30);border-left:2px solid #55c97a;border-right:2px solid #55c97a}.r41-timing .marker{position:absolute;top:7px;bottom:7px;width:5px;background:#ff8a1d;box-shadow:0 0 18px #ff8a1d;border-radius:5px;transform:translateX(-50%)}",
-      "id": "MOVE-07861"
+      "id": "MOVE-07869"
     },
     {
       "file": "styles.css",
       "line": 467,
       "text": ".r41-route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.r41-route-grid button{display:grid;gap:6px;min-height:120px;padding:14px;border:1px solid #69452e;border-radius:14px;background:#1c120d;color:#f4e9df;text-align:left}.r41-route-grid button:hover{border-color:#f28a2b;transform:translateY(-2px)}",
-      "id": "MOVE-07862"
+      "id": "MOVE-07870"
     },
     {
       "file": "styles.css",
       "line": 469,
       "text": ".r41-combat-present{position:fixed;z-index:5000;inset:auto 50% 9% auto;transform:translateX(50%);pointer-events:none;display:flex;gap:10px;align-items:center;padding:12px 18px;border:1px solid #8f5b33;border-radius:999px;background:rgba(15,9,7,.92);box-shadow:0 12px 44px rgba(0,0,0,.5);animation:r41-combat-pop .9s ease both}.r41-combat-present.hit{border-color:#a64637}.r41-combat-present.block,.r41-combat-present.dodge{border-color:#3a8b5c}.r41-combat-present b{font-size:17px}.r41-combat-present",
-      "id": "MOVE-07863"
+      "id": "MOVE-07871"
     },
     {
       "file": "styles.css",
       "line": 471,
       "text": "@media(max-width:760px){.r41-target-grid{grid-template-columns:repeat(3,1fr)}.r41-route-grid{grid-template-columns:1fr}.r41-combat-present{bottom:4%;max-width:90vw;text-align:center}}",
-      "id": "MOVE-07864"
+      "id": "MOVE-07872"
     },
     {
       "file": "styles.css",
       "line": 472,
       "text": ".r41-avatar-composite{position:relative;width:min(320px,100%);aspect-ratio:1;margin:12px auto;border:1px solid #5d3d28;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#38271d,#130c09 70%)}.r41-avatar-composite>img.layer{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.r41-avatar-composite .equipped-visual{position:absolute;right:8px;bottom:8px;width:84px;height:84px;object-fit:contain;border:1px solid #735036;border-radius:12px;background:rgba(",
-      "id": "MOVE-07865"
+      "id": "MOVE-07873"
     }
   ],
   "scripts": [
@@ -124646,42 +125647,50 @@
     {
       "id": "SCRIPT-00032",
       "order": 32,
-      "src": "src/r41-v82-combat-bridge.js?v=R41-V82-TERION-20260824",
-      "local": "src/r41-v82-combat-bridge.js",
+      "src": "src/r41-account-active-slot.js?v=R41-ACTIVE-ACCOUNT-SLOT-20260824",
+      "local": "src/r41-account-active-slot.js",
       "exists": true,
       "line": 33
     },
     {
       "id": "SCRIPT-00033",
       "order": 33,
-      "src": "src/r41-local-reset-fix.js?v=SHINOBI-NO-SHO",
-      "local": "src/r41-local-reset-fix.js",
+      "src": "src/r41-v82-combat-bridge.js?v=R41-V82-TERION-20260824",
+      "local": "src/r41-v82-combat-bridge.js",
       "exists": true,
       "line": 34
     },
     {
       "id": "SCRIPT-00034",
       "order": 34,
-      "src": "src/r41-final-ui-repair.js?v=SHINOBI-NO-SHO",
-      "local": "src/r41-final-ui-repair.js",
+      "src": "src/r41-local-reset-fix.js?v=SHINOBI-NO-SHO",
+      "local": "src/r41-local-reset-fix.js",
       "exists": true,
       "line": 35
     },
     {
       "id": "SCRIPT-00035",
       "order": 35,
-      "src": "r41-account-ui.js?v=ACCOUNT-UI-20260822-V2",
-      "local": "r41-account-ui.js",
+      "src": "src/r41-final-ui-repair.js?v=SHINOBI-NO-SHO",
+      "local": "src/r41-final-ui-repair.js",
       "exists": true,
       "line": 36
     },
     {
       "id": "SCRIPT-00036",
       "order": 36,
+      "src": "r41-account-ui.js?v=ACCOUNT-UI-20260822-V2",
+      "local": "r41-account-ui.js",
+      "exists": true,
+      "line": 37
+    },
+    {
+      "id": "SCRIPT-00037",
+      "order": 37,
       "src": "r41-account-deeplink-fix.js?v=ACCOUNT-DEEPLINK-20260822-V1",
       "local": "r41-account-deeplink-fix.js",
       "exists": true,
-      "line": 37
+      "line": 38
     }
   ],
   "assets": [
@@ -235132,255 +236141,262 @@
       "exists": true
     },
     {
+      "file": "src/r41-account-active-slot.js",
+      "line": 47,
+      "value": "assets/ui/avatar.png",
+      "id": "ASSETREF-15779",
+      "exists": true
+    },
+    {
       "file": "src/r41-canonical-repair.js",
       "line": 8,
       "value": "assets/r40/atlas_verified/iruka-umino.webp",
-      "id": "ASSETREF-15779",
+      "id": "ASSETREF-15780",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 9,
       "value": "assets/r40/atlas_verified/tenten.webp",
-      "id": "ASSETREF-15780",
+      "id": "ASSETREF-15781",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 10,
       "value": "assets/r40/atlas_verified/kotetsu-hagane.webp",
-      "id": "ASSETREF-15781",
+      "id": "ASSETREF-15782",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 11,
       "value": "assets/r40/atlas_verified/shizune.webp",
-      "id": "ASSETREF-15782",
+      "id": "ASSETREF-15783",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 30,
       "value": "assets/r40/atlas_verified/naruto-uzumaki.webp",
-      "id": "ASSETREF-15783",
+      "id": "ASSETREF-15784",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 31,
       "value": "assets/r40/atlas_verified/naruto-uzumaki.webp",
-      "id": "ASSETREF-15784",
+      "id": "ASSETREF-15785",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 32,
       "value": "assets/r40/atlas_verified/sasuke-uchiha.webp",
-      "id": "ASSETREF-15785",
+      "id": "ASSETREF-15786",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 33,
       "value": "assets/r40/atlas_verified/sasuke-uchiha.webp",
-      "id": "ASSETREF-15786",
+      "id": "ASSETREF-15787",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 34,
       "value": "assets/r40/atlas_verified/kakashi-hatake.webp",
-      "id": "ASSETREF-15787",
+      "id": "ASSETREF-15788",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 35,
       "value": "assets/r40/atlas_verified/kakashi-hatake.webp",
-      "id": "ASSETREF-15788",
+      "id": "ASSETREF-15789",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 36,
       "value": "assets/r40/atlas_verified/orochimaru.webp",
-      "id": "ASSETREF-15789",
+      "id": "ASSETREF-15790",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 37,
       "value": "assets/final_generated/mestre_dargan_saudacao.svg",
-      "id": "ASSETREF-15790",
+      "id": "ASSETREF-15791",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 38,
       "value": "assets/r40/story/vila_mulher_icone.svg",
-      "id": "ASSETREF-15791",
+      "id": "ASSETREF-15792",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 39,
       "value": "assets/r40/story/vila_comerciante_icone.svg",
-      "id": "ASSETREF-15792",
+      "id": "ASSETREF-15793",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 40,
       "value": "assets/r29/examiner.svg",
-      "id": "ASSETREF-15793",
+      "id": "ASSETREF-15794",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 41,
       "value": "assets/r29/examiner.svg",
-      "id": "ASSETREF-15794",
+      "id": "ASSETREF-15795",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 42,
       "value": "assets/r29/nukenin-inimigo.svg",
-      "id": "ASSETREF-15795",
+      "id": "ASSETREF-15796",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 43,
       "value": "assets/r29/nukenin-inimigo.svg",
-      "id": "ASSETREF-15796",
+      "id": "ASSETREF-15797",
       "exists": true
     },
     {
       "file": "src/r41-canonical-repair.js",
       "line": 44,
       "value": "assets/user-provided/maps/Mapa tático da vila ninja dourada.webp",
-      "id": "ASSETREF-15797",
+      "id": "ASSETREF-15798",
       "exists": true
     },
     {
       "file": "src/r41-core-bundle.js",
       "line": 3,
       "value": "assets/ui/media-pendente.svg",
-      "id": "ASSETREF-15798",
+      "id": "ASSETREF-15799",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 78,
       "value": "assets/original/ui/layout_home_1.jpg",
-      "id": "ASSETREF-15799",
+      "id": "ASSETREF-15800",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 83,
       "value": "assets/original/ui/layout_bg_home.png",
-      "id": "ASSETREF-15800",
+      "id": "ASSETREF-15801",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 184,
       "value": "assets/maps/world_v74.svg",
-      "id": "ASSETREF-15801",
+      "id": "ASSETREF-15802",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 307,
       "value": "assets/original/ui/layout_combate_bg_log.png",
-      "id": "ASSETREF-15802",
+      "id": "ASSETREF-15803",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 361,
       "value": "assets/maps/folha.jpg",
-      "id": "ASSETREF-15803",
+      "id": "ASSETREF-15804",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 377,
       "value": "assets/original_v7/layout_dojo_1.png",
-      "id": "ASSETREF-15804",
+      "id": "ASSETREF-15805",
       "exists": true
     },
     {
       "file": "styles.css",
       "line": 383,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15805",
+      "id": "ASSETREF-15806",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 389,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15806",
+      "id": "ASSETREF-15807",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 390,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15807",
+      "id": "ASSETREF-15808",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 391,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15808",
+      "id": "ASSETREF-15809",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 398,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15809",
+      "id": "ASSETREF-15810",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 399,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15810",
+      "id": "ASSETREF-15811",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 406,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15811",
+      "id": "ASSETREF-15812",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 407,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15812",
+      "id": "ASSETREF-15813",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 408,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15813",
+      "id": "ASSETREF-15814",
       "exists": false
     },
     {
       "file": "styles.css",
       "line": 409,
       "value": "assets/r31/entities/",
-      "id": "ASSETREF-15814",
+      "id": "ASSETREF-15815",
       "exists": false
     }
   ],
@@ -236137,32 +237153,32 @@
     "excludedDocumentation": true,
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
-      "gameRuntime": 1025,
-      "tooling": 110,
+      "gameRuntime": 1054,
+      "tooling": 117,
       "otherSource": 0
     },
     "before": {
-      "functions": 1135,
-      "routes": 33,
+      "functions": 1171,
+      "routes": 34,
       "models": 3,
       "collections": 13,
-      "storage": 32,
+      "storage": 42,
       "uiActions": 223,
       "events": 12,
-      "movement": 8024,
-      "assets": 15821,
+      "movement": 8040,
+      "assets": 15823,
       "environment": 147
     },
     "after": {
-      "functions": 1135,
+      "functions": 1171,
       "routes": 33,
       "models": 2,
       "collections": 12,
       "storage": 17,
-      "uiActions": 221,
+      "uiActions": 222,
       "events": 12,
-      "movement": 7865,
-      "assets": 15814,
+      "movement": 7873,
+      "assets": 15815,
       "environment": 122
     }
   },

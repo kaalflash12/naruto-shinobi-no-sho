@@ -3549,7 +3549,7 @@ Nenhuma referência literal obrigatória ausente fora do overlay.
 - PASS_PATH `assets/ui_v8/special/kusenro_hero.jpg` — `data/v83-integrated-config.js:9`
 - PASS_PATH `assets/ui_v8/special/suirin_hero.jpg` — `app.js:2390`, `app.js:2399`, `app.js:2432`, `app.js:2638`, `app.js:2743`, `data/v83-integrated-config.js:5`
 - PASS_PATH `assets/ui_v8/techniques/grade_tecnicas.png` — `app.js:1953`
-- PASS_PATH `assets/ui/avatar.png` — `app.js:782`, `app.js:934`, `app.js:987`, `app.js:996`, `app.js:1033`, `app.js:1057`, `app.js:1072`, `app.js:1150`, `app.js:1162`, `app.js:1167`, `app.js:1339`, `app.js:1811`, `app.js:1869`, `app.js:2201`, `app.js:2500`, `app.js:3239`, `app.js:3442`, `app.js:3670`, `app.js:5281`, `data/v5-content.js:108`
+- PASS_PATH `assets/ui/avatar.png` — `app.js:782`, `app.js:934`, `app.js:987`, `app.js:996`, `app.js:1033`, `app.js:1057`, `app.js:1072`, `app.js:1150`, `app.js:1162`, `app.js:1167`, `app.js:1339`, `app.js:1811`, `app.js:1869`, `app.js:2201`, `app.js:2500`, `app.js:3239`, `app.js:3442`, `app.js:3670`, `app.js:5281`, `data/v5-content.js:108`, `src/r41-account-active-slot.js:47`
 - PASS_PATH `assets/ui/banner-akatsuki.jpg` — `data/conteudo-livros.js:25`
 - PASS_PATH `assets/ui/banner-areia.jpg` — `data/conteudo-livros.js:19`
 - PASS_PATH `assets/ui/banner-folha.jpg` — `app.js:789`, `data/conteudo-livros.js:18`
