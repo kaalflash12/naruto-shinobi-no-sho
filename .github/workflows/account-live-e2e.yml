@@ -2,15 +2,6 @@ name: Account Live E2E - Cloudflare MongoDB
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'r41-api-config.js'
-      - 'r41-github-api.js'
-      - 'r41-account-ui.js'
-      - 'tools/account-live-e2e.mjs'
-      - 'tools/browser-account-live.mjs'
-      - '.github/workflows/account-live-e2e.yml'
 
 permissions:
   contents: write
