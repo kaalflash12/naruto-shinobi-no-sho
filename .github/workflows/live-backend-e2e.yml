@@ -1,87 +1,207 @@
-name: Live Backend E2E - Supabase
+name: Live Backend Cloudflare + MongoDB E2E
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/live-backend-e2e.yml'
+      - 'cloudflare/r41-api/**'
+      - 'tools/live-worker-e2e.mjs'
+      - 'tools/browser-live-api.mjs'
       - 'r41-api-config.js'
       - 'r41-github-api.js'
-      - 'tools/supabase-live-e2e.mjs'
-      - '.github/workflows/live-backend-e2e.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: shinobi-live-supabase-e2e
+  group: shinobi-cloudflare-mongodb-live
   cancel-in-progress: false
 
 jobs:
-  live:
+  live-backend:
     if: github.actor != 'github-actions[bot]'
-    runs-on: ubuntu-latest
-    timeout-minutes: 12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+      LEON_PRIVATE_CODE: ${{ secrets.LEON_PRIVATE_CODE }}
+      LIVE_API_ORIGIN: ${{ vars.LIVE_API_ORIGIN }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: Node 24
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
-      - name: Syntax gate
-        run: |
-          node --check tools/supabase-live-e2e.mjs
-          node --check r41-api-config.js
-          node --check r41-github-api.js
-
-      - name: Run Supabase Postgres + Edge Function live E2E
-        id: live
-        continue-on-error: true
-        env:
-          API_ORIGIN: https://rlyiwlwzrdgvcwawrnpl.supabase.co/functions/v1/shinobi-api
-          SUPABASE_PUBLISHABLE_KEY: sb_publishable_S9LtSpLhLKFOU9iSd8b4yQ_EziH1Arr
-          LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
-          ACCOUNT_REPORT: audit/ACCOUNT-LIVE-E2E.json
-        run: node tools/supabase-live-e2e.mjs
-
-      - name: Commit live evidence
-        if: always()
+      - name: Enforce allowed backend architecture
         shell: bash
         run: |
           set -euo pipefail
-          test -f audit/LIVE-BACKEND.json
-          test -f audit/ACCOUNT-LIVE-E2E.json
-          live="$(node -e "const r=require('./audit/LIVE-BACKEND.json');process.stdout.write(r.status||'UNKNOWN')")"
-          account="$(node -e "const r=require('./audit/ACCOUNT-LIVE-E2E.json');process.stdout.write(r.status||'UNKNOWN')")"
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/LIVE-BACKEND.json audit/ACCOUNT-LIVE-E2E.json
-          if ! git diff --cached --quiet; then
-            git commit -m "test: Supabase live ${live} ${account}"
-            git pull --rebase origin main
-            git push origin HEAD:main
+          grep -q 'NARUTO-SHINOBI-NO-SHO-CLOUDFLARE-MONGODB' r41-api-config.js
+          grep -q 'cloudflare-mongodb-durable-objects' r41-github-api.js
+          grep -q 'MONGODB_DB = "naruto_shinobi_no_sho"' cloudflare/r41-api/wrangler.toml
+          grep -q 'main = "src/entry-authoritative.js"' cloudflare/r41-api/wrangler.toml
+          if grep -Eiq '(supabase|vercel|turso)' r41-api-config.js r41-github-api.js cloudflare/r41-api/wrangler.toml; then
+            echo 'Backend proibido encontrado no runtime ativo.' >&2
+            exit 1
+          fi
+          echo 'PASS_BACKEND_IDENTITY_CLOUDFLARE_MONGODB'
+
+      - name: Verify Cloudflare token
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p audit
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MISSING_CLOUDFLARE_TOKEN',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['CLOUDFLARE_API_TOKEN'],failures:['GitHub Actions secret CLOUDFLARE_API_TOKEN ausente.']},null,2)+'\n');
+          NODE
+            exit 1
           fi
 
-      - name: Upload live evidence
+      - name: Resolve Cloudflare account automatically
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then exit 0; fi
+          response="$(curl -fsS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' https://api.cloudflare.com/client/v4/accounts)"
+          account="$(ACCOUNT_JSON="$response" node --input-type=module <<'NODE'
+          const data=JSON.parse(process.env.ACCOUNT_JSON||'{}');const rows=Array.isArray(data.result)?data.result:[];
+          if(data.success!==true||rows.length!==1)process.exit(3);process.stdout.write(String(rows[0].id||''));
+          NODE
+          )"
+          test -n "$account"
+          echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
+
+      - name: Install Worker dependencies
+        working-directory: cloudflare/r41-api
+        run: npm install --no-audit --no-fund
+
+      - name: Worker syntax and TERION unit gates
+        working-directory: cloudflare/r41-api
+        run: |
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir /tmp/shinobi-worker-dry
+
+      - name: Initial Worker deploy
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee /tmp/shinobi-deploy-initial.log
+
+      - name: Reuse or configure Worker secrets
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          secret_json="$(npx wrangler secret list --format json)"
+          has_mongo="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='MONGODB_URI')?'true':'false')")"
+          has_auth="$(SECRET_JSON="$secret_json" node -e "const a=JSON.parse(process.env.SECRET_JSON||'[]');process.stdout.write(a.some(x=>x.name==='AUTH_SECRET')?'true':'false')")"
+          if [ -n "${MONGODB_URI:-}" ]; then printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI; has_mongo=true; fi
+          if [ "$has_mongo" != "true" ]; then
+            cd ../..; mkdir -p audit
+            node --input-type=module <<'NODE'
+          import fs from 'node:fs';fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_MONGODB_URI_NOT_CONFIGURED',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',missing:['MONGODB_URI'],failures:['MONGODB_URI não existe nem no GitHub Actions nem nos secrets persistidos do Worker.']},null,2)+'\n');
+          NODE
+            exit 1
+          fi
+          if [ -n "${AUTH_SECRET:-}" ]; then printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET; has_auth=true;
+          elif [ "$has_auth" != "true" ]; then generated_auth="$(openssl rand -hex 48)"; printf '%s' "$generated_auth" | npx wrangler secret put AUTH_SECRET; unset generated_auth; has_auth=true; fi
+          if [ -n "${LEON_PRIVATE_CODE:-}" ]; then printf '%s' "$LEON_PRIVATE_CODE" | npx wrangler secret put LEON_PRIVATE_CODE; fi
+          test "$has_mongo" = "true"; test "$has_auth" = "true"
+
+      - name: Final Worker deploy and discover URL
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee /tmp/shinobi-deploy-final.log
+          if [ -n "${LIVE_API_ORIGIN:-}" ]; then api="${LIVE_API_ORIGIN%/}"; else api="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' /tmp/shinobi-deploy-final.log | tail -n 1 || true)"; fi
+          test -n "$api"
+          echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
+          echo "Worker URL: $api"
+
+      - name: Wait for configured Worker
+        shell: bash
+        run: |
+          set -euo pipefail
+          ok=0
+          for i in $(seq 1 60); do
+            body="$(curl -fsS --max-time 10 "$API_ORIGIN/api/status" 2>/dev/null || true)"
+            if BODY="$body" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.BODY||'{}');if(!(d.ok===true&&d.configured===true&&d.cloudSave===true&&d.onlineRooms===true&&d.storage==='mongodb-atlas'&&d.realtime==='cloudflare-durable-objects'&&d.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'))process.exit(1);
+          NODE
+            then ok=1;break;fi
+            sleep 3
+          done
+          test "$ok" -eq 1
+
+      - name: Run MongoDB Durable Objects TERION live E2E
+        env:
+          LIVE_BACKEND_REPORT: audit/LIVE-BACKEND.json
+        run: node tools/live-worker-e2e.mjs
+
+      - name: Install Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Prove GitHub Pages to Worker live
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          BROWSER_LIVE_REPORT: audit/BROWSER-LIVE-API.json
+        run: node tools/browser-live-api.mjs
+
+      - name: Enforce live authority contracts
+        run: |
+          node - <<'NODE'
+          const live=require('./audit/LIVE-BACKEND.json');const browser=require('./audit/BROWSER-LIVE-API.json');
+          if(!live.ok||live.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(JSON.stringify(live.failures||[]));
+          if(!browser.ok||browser.status!=='PASS_BROWSER_LIVE_API')throw new Error(JSON.stringify(browser.failures||[]));
+          const required=['statusConfigured','authoritativeBoundariesAdvertised','v6PerCharacterAuthorityAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected','mongoSaveRoundTrip','multipleCharacterSlotsPersisted','slotListing','roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','multipleMechanicalProfilesSameAccount','profileSelectorMatchesPlayerAndCampaign','continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging','intentActionAccepted','terionUsesLockedMechanicalProfile','terionSelectsCorrectProfilePerCharacter','clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave','leaderboardSeparatesCharacters','worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','slotDeleteCleansOnlyMatchingMechanicalProfile','sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'];
+          for(const k of required)if(live.checks?.[k]!==true)throw new Error(`Gate live ausente: ${k}`);
+          console.log('PASS_CLOUDFLARE_MONGODB_LIVE',live.status,browser.status);
+          NODE
+
+      - name: Bake verified Worker URL into public game
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';const p='r41-api-config.js',origin=String(process.env.API_ORIGIN||'').replace(/\/+$/g,'');if(!/^https:\/\//.test(origin))throw new Error('API_ORIGIN inválido');let s=fs.readFileSync(p,'utf8');s=s.replace(/const baked="[^"]*"; \/\/ preenchido automaticamente pelo CI apos deploy Cloudflare \+ MongoDB verificado/,`const baked=${JSON.stringify(origin)}; // preenchido automaticamente pelo CI apos deploy Cloudflare + MongoDB verificado`);if(!s.includes(`const baked=${JSON.stringify(origin)};`))throw new Error('Falha ao gravar Worker URL');fs.writeFileSync(p,s);
+          NODE
+
+      - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: shinobi-supabase-live-evidence
+          name: shinobi-cloudflare-mongodb-live-evidence
           path: |
             audit/LIVE-BACKEND.json
-            audit/ACCOUNT-LIVE-E2E.json
+            audit/BROWSER-LIVE-API.json
           if-no-files-found: warn
 
-      - name: Enforce live backend PASS
-        if: always()
+      - name: Commit verified evidence and Worker URL
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
         run: |
-          node - <<'NODE'
-          const live=require('./audit/LIVE-BACKEND.json');
-          const account=require('./audit/ACCOUNT-LIVE-E2E.json');
-          if(!live.ok||live.status!=='PASS_LIVE_BACKEND_E2E')throw new Error(JSON.stringify(live.failures||[]));
-          if(live.backend!=='supabase-edge-postgres')throw new Error('backend live não é Supabase');
-          if(!account.ok||account.status!=='PASS_ACCOUNT_LIVE_E2E')throw new Error(JSON.stringify(account.failures||[]));
-          console.log(live.status,account.status);
-          NODE
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/LIVE-BACKEND.json audit/BROWSER-LIVE-API.json r41-api-config.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record verified Cloudflare MongoDB live backend'
+          git pull --rebase origin main
+          git push origin HEAD:main
