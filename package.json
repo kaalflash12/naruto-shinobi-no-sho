@@ -3,6 +3,7 @@
   "version": "8.20.0",
   "private": true,
   "engines": { "node": ">=20" },
+  "releaseGate": "public-release-fingerprint-v1",
   "scripts": {
     "docs:generate": "node tools/generate-technical-spec.mjs && node tools/ast-index-functions.mjs && node tools/refine-technical-spec.mjs && node tools/reconcile-asset-references.mjs",
     "docs:audit": "node tools/audit-ast-function-index.mjs && node tools/audit-documentation-coverage.mjs && node tools/audit-operational-static-contracts.mjs && node tools/finalize-canonical-ui-trace.mjs && node tools/repair-canonical-markdown-after-trace.mjs && node tools/audit-final-canonical-spec.mjs",
