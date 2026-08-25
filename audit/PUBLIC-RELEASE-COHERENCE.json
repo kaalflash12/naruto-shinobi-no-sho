@@ -1,0 +1,409 @@
+{
+  "generatedAt": "2026-08-25T11:47:41.733Z",
+  "status": "PASS_PUBLIC_RELEASE_COHERENCE",
+  "ok": true,
+  "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
+  "releaseFingerprint": "c7f47235311f4f69bfcf80a0cf797f1a9caab94dc7bd1ede2b897e67521140b9",
+  "localMarker": "c7f47235311f4f69bfcf80a0cf797f1a9caab94dc7bd1ede2b897e67521140b9",
+  "publicMarkerMatch": true,
+  "files": 44,
+  "checks": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "ok": true,
+      "localSha256": "1672200806bd9772a887d071dcb2fe9fdeb9f7622016401f2538f206ebd156fe",
+      "remoteSha256": "1672200806bd9772a887d071dcb2fe9fdeb9f7622016401f2538f206ebd156fe",
+      "bytesLocal": 4236,
+      "bytesRemote": 4236
+    },
+    {
+      "file": "PUBLIC-RELEASE-FINGERPRINT.txt",
+      "status": 200,
+      "ok": true,
+      "localSha256": "b840b020daa28627e316f8455542fc545b3bc0beac58f157c1897d7fdb1acb2e",
+      "remoteSha256": "b840b020daa28627e316f8455542fc545b3bc0beac58f157c1897d7fdb1acb2e",
+      "bytesLocal": 65,
+      "bytesRemote": 65
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "ok": true,
+      "localSha256": "6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab",
+      "remoteSha256": "6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab",
+      "bytesLocal": 153759,
+      "bytesRemote": 153759
+    },
+    {
+      "file": "r31.css",
+      "status": 200,
+      "ok": true,
+      "localSha256": "9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1",
+      "remoteSha256": "9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1",
+      "bytesLocal": 6504,
+      "bytesRemote": 6504
+    },
+    {
+      "file": "r41-map-hitfix.css",
+      "status": 200,
+      "ok": true,
+      "localSha256": "1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9",
+      "remoteSha256": "1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9",
+      "bytesLocal": 383,
+      "bytesRemote": 383
+    },
+    {
+      "file": "assets/ui/logo.png",
+      "status": 200,
+      "ok": true,
+      "localSha256": "90f2b06dd809fcc75bd9a624768aed3a30b9340fb81c6409d3ad0fb5443eadc0",
+      "remoteSha256": "90f2b06dd809fcc75bd9a624768aed3a30b9340fb81c6409d3ad0fb5443eadc0",
+      "bytesLocal": 52281,
+      "bytesRemote": 52281
+    },
+    {
+      "file": "data/catalogo.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "f7b198ec2917b416d6e3d6a88ec9beaec0a135cd0415261c3e746935a8402e1e",
+      "remoteSha256": "f7b198ec2917b416d6e3d6a88ec9beaec0a135cd0415261c3e746935a8402e1e",
+      "bytesLocal": 940971,
+      "bytesRemote": 940971
+    },
+    {
+      "file": "data/conteudo-livros.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "ab05a176f67168df93e98869ae7e0518951d3bf77ee300febf2c92a49984a3f3",
+      "remoteSha256": "ab05a176f67168df93e98869ae7e0518951d3bf77ee300febf2c92a49984a3f3",
+      "bytesLocal": 28464,
+      "bytesRemote": 28464
+    },
+    {
+      "file": "data/v5-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "dc9412391bbc4e6e822b9ebee47d6b7b7965160ec2d0248b6721549e4743c9c8",
+      "remoteSha256": "dc9412391bbc4e6e822b9ebee47d6b7b7965160ec2d0248b6721549e4743c9c8",
+      "bytesLocal": 15746,
+      "bytesRemote": 15746
+    },
+    {
+      "file": "data/v6-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "0a8ce31a1c74f4ae83823cefe2020a5c095052ea72a3ae47ee9b6dd01ac04483",
+      "remoteSha256": "0a8ce31a1c74f4ae83823cefe2020a5c095052ea72a3ae47ee9b6dd01ac04483",
+      "bytesLocal": 2726,
+      "bytesRemote": 2726
+    },
+    {
+      "file": "data/v7-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "f54a6a89c8d61421a4b2d0c206f6ea8a2b06d7732883967d00388157eb262e13",
+      "remoteSha256": "f54a6a89c8d61421a4b2d0c206f6ea8a2b06d7732883967d00388157eb262e13",
+      "bytesLocal": 51600,
+      "bytesRemote": 51600
+    },
+    {
+      "file": "data/v74-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "55772c1b6edf6b91cad17e4e6885d5520f215e1cbcf33f03b21adf87d1935fbb",
+      "remoteSha256": "55772c1b6edf6b91cad17e4e6885d5520f215e1cbcf33f03b21adf87d1935fbb",
+      "bytesLocal": 14194,
+      "bytesRemote": 14194
+    },
+    {
+      "file": "data/v75-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "16f57dc51cdf7adc082fddf246dc8584aab1fcf57d1865eeeac2d32905876969",
+      "remoteSha256": "16f57dc51cdf7adc082fddf246dc8584aab1fcf57d1865eeeac2d32905876969",
+      "bytesLocal": 106243,
+      "bytesRemote": 106243
+    },
+    {
+      "file": "data/v81-leon-content.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "ac35aea88a4bd7f789be3704aeb9f33130dd19d88970bd6f1876e70f7bb16cf1",
+      "remoteSha256": "ac35aea88a4bd7f789be3704aeb9f33130dd19d88970bd6f1876e70f7bb16cf1",
+      "bytesLocal": 166502,
+      "bytesRemote": 166502
+    },
+    {
+      "file": "src/r41-leon-state-repair.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "eaf36dd4b485c8ec1746a5f188d314bd0adf0a4bd4ba620edc64958daa15f67a",
+      "remoteSha256": "eaf36dd4b485c8ec1746a5f188d314bd0adf0a4bd4ba620edc64958daa15f67a",
+      "bytesLocal": 1886,
+      "bytesRemote": 1886
+    },
+    {
+      "file": "data/v84-visual-manifest.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "736232844cffbb8d0377bfaecd3857d5cb0b378f73a295844696706fa8848eab",
+      "remoteSha256": "736232844cffbb8d0377bfaecd3857d5cb0b378f73a295844696706fa8848eab",
+      "bytesLocal": 242316,
+      "bytesRemote": 242316
+    },
+    {
+      "file": "data/v84-live-world.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "02b7a54e1d27499047618d51e3e01308d276d259c42667527449227849b92ae2",
+      "remoteSha256": "02b7a54e1d27499047618d51e3e01308d276d259c42667527449227849b92ae2",
+      "bytesLocal": 894903,
+      "bytesRemote": 894903
+    },
+    {
+      "file": "data/r27-canon-events.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "cc8a348e2b7f05191e87f6669c518608f48595a4594beb86a607e168c2019841",
+      "remoteSha256": "cc8a348e2b7f05191e87f6669c518608f48595a4594beb86a607e168c2019841",
+      "bytesLocal": 44102,
+      "bytesRemote": 44102
+    },
+    {
+      "file": "data/r27-downloaded-canon-portraits.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "ebd4bf65b03ab3a8ac4ef01bc24635e211fc060bdc623fdc7a4fd275cca63ed5",
+      "remoteSha256": "ebd4bf65b03ab3a8ac4ef01bc24635e211fc060bdc623fdc7a4fd275cca63ed5",
+      "bytesLocal": 85,
+      "bytesRemote": 85
+    },
+    {
+      "file": "data/v84-knowledge-catalog.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "4df8d9db089af3d26a2d59db3a9af83c947aebba1b78d965d9b8ba6e170441a2",
+      "remoteSha256": "4df8d9db089af3d26a2d59db3a9af83c947aebba1b78d965d9b8ba6e170441a2",
+      "bytesLocal": 438049,
+      "bytesRemote": 438049
+    },
+    {
+      "file": "data/r38-master-loader.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "5e5adb64d16c3d4338a3a95f6f892cbbfb7ca803ebb3ab0b22f03af12172ca10",
+      "remoteSha256": "5e5adb64d16c3d4338a3a95f6f892cbbfb7ca803ebb3ab0b22f03af12172ca10",
+      "bytesLocal": 1108,
+      "bytesRemote": 1108
+    },
+    {
+      "file": "data/v83-integrated-config.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "d6d9a707b5ae1eeb3ddaf8b4ee133f14f493f7751c7b0f9914ef62127b488123",
+      "remoteSha256": "d6d9a707b5ae1eeb3ddaf8b4ee133f14f493f7751c7b0f9914ef62127b488123",
+      "bytesLocal": 4549,
+      "bytesRemote": 4549
+    },
+    {
+      "file": "data/v84-integrated-config.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "c5bf582ad26f1fa6dcea7d4c3ac61dd66a97c20954061b75d5e5a6f71be88441",
+      "remoteSha256": "c5bf582ad26f1fa6dcea7d4c3ac61dd66a97c20954061b75d5e5a6f71be88441",
+      "bytesLocal": 7177,
+      "bytesRemote": 7177
+    },
+    {
+      "file": "data/r29-user-assets.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "f7729460b09c9102d8d3ec9be1341ea47b965cec7faed90bdf07bb1725994145",
+      "remoteSha256": "f7729460b09c9102d8d3ec9be1341ea47b965cec7faed90bdf07bb1725994145",
+      "bytesLocal": 47505,
+      "bytesRemote": 47505
+    },
+    {
+      "file": "data/r30-assets.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "9b50a4c54e95a50084c358ac9abb214eb5e379e9362d882204fc14c3f0b162ba",
+      "remoteSha256": "9b50a4c54e95a50084c358ac9abb214eb5e379e9362d882204fc14c3f0b162ba",
+      "bytesLocal": 5688,
+      "bytesRemote": 5688
+    },
+    {
+      "file": "data/r31-assets.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "0eb80e299f4ccdf83ba0073259b6b106e918c88594d80d97c93532c50ebcd8f2",
+      "remoteSha256": "0eb80e299f4ccdf83ba0073259b6b106e918c88594d80d97c93532c50ebcd8f2",
+      "bytesLocal": 269513,
+      "bytesRemote": 269513
+    },
+    {
+      "file": "data/r33-mission-scripts.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "d67f2fe56236956871192ddc836d53afe9d52d68afb6a70ef9d92d2f9ff00668",
+      "remoteSha256": "d67f2fe56236956871192ddc836d53afe9d52d68afb6a70ef9d92d2f9ff00668",
+      "bytesLocal": 3731805,
+      "bytesRemote": 3731805
+    },
+    {
+      "file": "data/r41-data-delta.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "4fe6fff7cc81fb915b34eaa85fe77eebb81bf7da8281756fb68a3025210b24cb",
+      "remoteSha256": "4fe6fff7cc81fb915b34eaa85fe77eebb81bf7da8281756fb68a3025210b24cb",
+      "bytesLocal": 2644,
+      "bytesRemote": 2644
+    },
+    {
+      "file": "data/r41-verified-visuals.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "38242a7cc4bc83780f2fd5b73f9f1a0ef1673085446cd9e8a63be9a0c243ab08",
+      "remoteSha256": "38242a7cc4bc83780f2fd5b73f9f1a0ef1673085446cd9e8a63be9a0c243ab08",
+      "bytesLocal": 8226,
+      "bytesRemote": 8226
+    },
+    {
+      "file": "data/r41-exact-visuals.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "ae197bd02a7847422c76c030b7da5a0ba66ae5a5dacfde3364a9c5faaa30f54d",
+      "remoteSha256": "ae197bd02a7847422c76c030b7da5a0ba66ae5a5dacfde3364a9c5faaa30f54d",
+      "bytesLocal": 97588,
+      "bytesRemote": 97588
+    },
+    {
+      "file": "data/r41-user-visuals.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "3f2605518e611d00d1f88735c0fe51bd5813ebaf20e3e75e8c97f503ebf04f17",
+      "remoteSha256": "3f2605518e611d00d1f88735c0fe51bd5813ebaf20e3e75e8c97f503ebf04f17",
+      "bytesLocal": 4321,
+      "bytesRemote": 4321
+    },
+    {
+      "file": "src/r41-core-bundle.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558",
+      "remoteSha256": "59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558",
+      "bytesLocal": 14187,
+      "bytesRemote": 14187
+    },
+    {
+      "file": "src/r41-canonical-repair.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1",
+      "remoteSha256": "9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1",
+      "bytesLocal": 4765,
+      "bytesRemote": 4765
+    },
+    {
+      "file": "r41-api-config.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732",
+      "remoteSha256": "5c9a2dc701d1ae576466942310d50f7ff84f1a229702134d70bea3ff15b59732",
+      "bytesLocal": 1041,
+      "bytesRemote": 1041
+    },
+    {
+      "file": "r41-github-api.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1",
+      "remoteSha256": "f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1",
+      "bytesLocal": 6207,
+      "bytesRemote": 6207
+    },
+    {
+      "file": "src/r41-asset-path-repair.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "d0eaa291e2ce01e74aebdf2b02201143674b8199aaea0cae93947a7f42448132",
+      "remoteSha256": "d0eaa291e2ce01e74aebdf2b02201143674b8199aaea0cae93947a7f42448132",
+      "bytesLocal": 3632,
+      "bytesRemote": 3632
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06",
+      "remoteSha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06",
+      "bytesLocal": 1084160,
+      "bytesRemote": 1084160
+    },
+    {
+      "file": "src/r41-account-active-slot.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "64b5461473de7d4f421127fedf803a2e7fe4f492e56767c17c0c6209322b96f6",
+      "remoteSha256": "64b5461473de7d4f421127fedf803a2e7fe4f492e56767c17c0c6209322b96f6",
+      "bytesLocal": 16951,
+      "bytesRemote": 16951
+    },
+    {
+      "file": "src/r41-online-bridge-recovery.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "fdfc30e80d45683691bd45a3808ed1114e59d5a16305c0500f477daf64858379",
+      "remoteSha256": "fdfc30e80d45683691bd45a3808ed1114e59d5a16305c0500f477daf64858379",
+      "bytesLocal": 6570,
+      "bytesRemote": 6570
+    },
+    {
+      "file": "src/r41-v82-combat-bridge.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "771607cf769588b9bd2b6e8004d2f3b1196865cce555860c7a550b4ec9d04511",
+      "remoteSha256": "771607cf769588b9bd2b6e8004d2f3b1196865cce555860c7a550b4ec9d04511",
+      "bytesLocal": 10105,
+      "bytesRemote": 10105
+    },
+    {
+      "file": "src/r41-local-reset-fix.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487",
+      "remoteSha256": "6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487",
+      "bytesLocal": 1605,
+      "bytesRemote": 1605
+    },
+    {
+      "file": "src/r41-final-ui-repair.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "87dd13b8f0571f53625d87bd5506f32d31fbef7ab5368a2eca7e08adbf6aad8c",
+      "remoteSha256": "87dd13b8f0571f53625d87bd5506f32d31fbef7ab5368a2eca7e08adbf6aad8c",
+      "bytesLocal": 3922,
+      "bytesRemote": 3922
+    },
+    {
+      "file": "r41-account-ui.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "a19b31871cd677b30e881b3728e2e304d4a4adcd63be611b80534a4d9e90dcab",
+      "remoteSha256": "a19b31871cd677b30e881b3728e2e304d4a4adcd63be611b80534a4d9e90dcab",
+      "bytesLocal": 12242,
+      "bytesRemote": 12242
+    },
+    {
+      "file": "r41-account-deeplink-fix.js",
+      "status": 200,
+      "ok": true,
+      "localSha256": "656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2",
+      "remoteSha256": "656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2",
+      "bytesLocal": 587,
+      "bytesRemote": 587
+    }
+  ],
+  "failures": []
+}
