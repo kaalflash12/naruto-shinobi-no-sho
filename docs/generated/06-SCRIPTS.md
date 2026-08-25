@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-25T21:27:21.906Z`
+Gerado em: `2026-08-25T23:59:13.337Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -62,10 +62,10 @@ Gerado em: `2026-08-25T21:27:21.906Z`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 6129 bytes — SHA-256 `ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8`
 - `.github/workflows/sync-public-release-fingerprint.yml` — domínio `tooling` — 1753 bytes — SHA-256 `0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
-- `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 8066 bytes — SHA-256 `3b350f85e32459164724091d774706cbcd262ff761f28f6c77448c6dcd2ff6b8`
+- `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 13353 bytes — SHA-256 `8dff1dcfe3de9a1c8360debe09f6b6d3aa61dd66166fa33e868d106849ef3e26`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2558 bytes — SHA-256 `f9c3525b8ce80f98460dd767aa12dcfed5634ddd6a0553d36a89a082a2be1510`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `b49f0f36315e1b2a6cd86a62cfa57b92608681fc5ff41de0b0d368ae2b8d4ec1`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `a9491f289e8bc8ec73a733a67dc9f65d6bd35176c8e7e0dfe8917db97a4aa66b`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `c0f1d0b010cfa64e9852105c86d9bfb85aec47232f2542b8c20c230d3261fc01`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `2fe6b727c37b9f28b68d5cf23473cda0caae36dadd84dd10b1407a63e402a685`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`

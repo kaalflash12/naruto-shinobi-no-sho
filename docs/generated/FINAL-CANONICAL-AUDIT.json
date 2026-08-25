@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T21:27:31.235Z",
+  "generatedAt": "2026-08-25T23:59:27.648Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T21:27:21.906Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T23:59:13.337Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -39883,8 +39883,8 @@
     },
     {
       "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
-      "size": 8066,
-      "sha256": "3b350f85e32459164724091d774706cbcd262ff761f28f6c77448c6dcd2ff6b8"
+      "size": 13353,
+      "sha256": "8dff1dcfe3de9a1c8360debe09f6b6d3aa61dd66166fa33e868d106849ef3e26"
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
@@ -39894,12 +39894,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "b49f0f36315e1b2a6cd86a62cfa57b92608681fc5ff41de0b0d368ae2b8d4ec1"
+      "sha256": "c0f1d0b010cfa64e9852105c86d9bfb85aec47232f2542b8c20c230d3261fc01"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "a9491f289e8bc8ec73a733a67dc9f65d6bd35176c8e7e0dfe8917db97a4aa66b"
+      "sha256": "2fe6b727c37b9f28b68d5cf23473cda0caae36dadd84dd10b1407a63e402a685"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
