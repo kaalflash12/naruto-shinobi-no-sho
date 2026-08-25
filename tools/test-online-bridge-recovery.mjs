@@ -33,7 +33,7 @@ function makeHarness({responseRoomId='room-1',responseOk=true}={}){
   class CustomEventMock{constructor(type,init={}){this.type=type;this.detail=init.detail;}}
   class MutationObserverMock{constructor(fn){this.fn=fn;}observe(){}disconnect(){}}
   const document={
-    readyState:'complete',
+    readyState:'loading',
     documentElement:{},
     addEventListener:(name,fn)=>documentListeners.set(name,fn),
     dispatchEvent:event=>{documentEvents.push(event);return true;}
