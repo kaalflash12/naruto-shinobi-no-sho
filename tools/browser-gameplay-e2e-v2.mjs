@@ -165,15 +165,18 @@ async function seedNormalV2(page){
 async function navigateV2(page,screen){
   const selector=`[data-screen="${screen}"]`;
   const b=page.locator(selector).first();
-  const count=await b.count();
-  if(!count){
-    const diag=await page.evaluate(()=>({
+  try{
+    await b.waitFor({state:'visible',timeout:20000});
+  }catch{
+    const diag=await page.evaluate(wanted=>({
+      wanted,
       title:document.title,
       nav:(document.querySelector('#main-nav')?.innerText||'').slice(0,1200),
+      navTargets:[...document.querySelectorAll('#main-nav [data-screen]')].map(el=>({screen:el.getAttribute('data-screen'),text:String(el.textContent||'').trim().slice(0,120)})).slice(0,120),
       screen:(document.querySelector('#screen')?.innerText||'').slice(0,1200),
       accountOpen:!!document.querySelector('#sns-account-overlay'),
       r41:window.__NARUTO_R41__?.version||''
-    }));
+    }),screen);
     throw new Error(`NAV_NOT_RENDERED ${screen}: ${JSON.stringify(diag)}`);
   }
   await b.evaluate(el=>el.click());
