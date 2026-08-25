@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T20:50:51.261Z",
+  "generatedAt": "2026-08-25T21:08:14.396Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -45,8 +45,8 @@
     },
     {
       "path": ".github/public-release-coherence-trigger.txt",
-      "size": 112,
-      "sha256": "60d39b77c5811392682317d5bcebf2888d8f401e665e36c3b896cb0917ab6f1c",
+      "size": 114,
+      "sha256": "2ceba12aec54934cbec01254832b17ef72733a20967edfd99e18160e303a7ea9",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -69,8 +69,8 @@
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
-      "size": 4183,
-      "sha256": "54778a0ba5a0bdce1d68d867250a5d2d471d57bd2fe4f61f2c5396d24f15cfc3",
+      "size": 5093,
+      "sha256": "f3cf3000ff267f60d38d2c2504aeaae1b4a77f2d1dca3c8cabe0d9a5334f9047",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43645,8 +43645,8 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 2194,
-      "sha256": "7d112ab0a412d977fe4d410fc06f46b320aa940ffeee7249aaeae8db0d6c4b06",
+      "size": 2558,
+      "sha256": "536a420775582560fc9a012395fc7e48ad4fe4b0bcc7a1e751920d95e8693820",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43694,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "18a860f50ead07e916b7bcb71a186e038f15b38dc30ef11c240babd3c7cbc55d",
+      "sha256": "450d65e4c5098bc4d20a9ffad7d75555f47e41cd24e5f972ec72cdfcfca44c4d",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44182,7 +44182,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "6915bf3596f36b29e3ad43622e143527705e296903a409e5ed90b86d0beca62d",
+      "sha256": "9540643e8caa33d9f2d2417d1cc57651edacd4752ca1e9482f68e2dbbcc9ef3a",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -363640,7 +363640,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T20:50:53.730Z",
+    "generatedAt": "2026-08-25T21:08:16.520Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
