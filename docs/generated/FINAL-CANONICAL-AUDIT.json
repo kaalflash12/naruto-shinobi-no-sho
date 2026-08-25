@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T00:22:02.342Z",
+  "generatedAt": "2026-08-25T01:01:21.676Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T00:21:58.561Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T01:01:17.173Z",
   "counts": {
     "functions": 1197,
     "functionsWithExactCode": 1197,
@@ -15784,47 +15784,47 @@
     {
       "path": ".github/workflows/account-live-e2e.yml",
       "size": 8221,
-      "sha256": "c725a4108c678ae68fa4c8521b5ff375d1edcde547aebf9ade113f73f14a46d1"
+      "sha256": "1f64bbc603c71836cda55e770b050d85c913b35191a76cb8974244bd6de224b2"
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
       "size": 6059,
-      "sha256": "c857a75b6e2390b079ca5489d3f68b91a9895cce616af606b20f89bd216ce978"
+      "sha256": "685c944f12516281e3c83cb57188ff4d93b072e206d18fe0b17f4a571541a49f"
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
       "size": 4183,
-      "sha256": "5f0f7ebcf59e0f7cab3e09816e714e17f4e76f46e2458ec5bcee47d615af4a6e"
+      "sha256": "54778a0ba5a0bdce1d68d867250a5d2d471d57bd2fe4f61f2c5396d24f15cfc3"
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
       "size": 7431,
-      "sha256": "80180ce9b7152e98c3b4e521c7beb1608c1a8d4c1e35197e66d3d0b1fa84c114"
+      "sha256": "961e0b7b33c290eabe0b25494176ba2682a52d55e5b85204a7475024fbddd825"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
-      "size": 4399,
-      "sha256": "8ba7569a5e0536a2bcf94e990726ab0372529b9267b9c93c6c5688e17decbec6"
+      "size": 5272,
+      "sha256": "d28de6ad207f171ccde9c5e52694f56c8bd2c119069d0880f0f836fd8a951149"
     },
     {
       "path": ".github/workflows/final-readiness-orchestration.yml",
       "size": 5545,
-      "sha256": "44c1f8723e093476c1c50cdc437fc21a9fd4ccfa98057d3a68d471881d728adf"
+      "sha256": "3cd488ca27c35b9630bcb88079276d8952515f16f3a6ce558cfe5f2cb760dd41"
     },
     {
       "path": ".github/workflows/final-readiness.yml",
       "size": 7412,
-      "sha256": "704107a5ff8979d5844d93c93e6518fa0b4f9b2fe02b5381d83ad0ba5c69b863"
+      "sha256": "32726b70e31d284a2a292b37b5081c4fbf12e41677f7cd180ed6166d5266a01f"
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
       "size": 13494,
-      "sha256": "826b272731b46ae8307bf40d4cb575447b4957f70cd942d4be2902974315ba90"
+      "sha256": "3ee4b4371ef20d9a3280378cedf6a20ef0a234588e60def17b3048ec84eeb2ba"
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
       "size": 3652,
-      "sha256": "f4771091db58cbe139f314bb5e51b8014790888f918ae525dc1b8a6cd2941c05"
+      "sha256": "f8af550388ed4b45e0040eff35b3979744e0a18b2a520afd92b80c0eae993635"
     },
     {
       "path": ".github/workflows/post-live-backend-orchestration.yml",
@@ -15834,7 +15834,7 @@
     {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 5991,
-      "sha256": "d82aa62b89396541c40a90da2a7e68078dac3f72addd72e847f68d739268767e"
+      "sha256": "b264baf2d9fb9fbd913f3b974ec5311311870765f31f64aca0fcf6992d49b7ee"
     },
     {
       "path": "app.js",
@@ -15844,17 +15844,17 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 1098,
-      "sha256": "63061c05f6b4d9a628dc03608da03a4c19f909b7e32dfbaaf350058146e5a8c6"
+      "sha256": "e29d92a8c3e203d7a7383dd1510d79e192c9d213aaf9dcd9e54028a17439858e"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 6449,
-      "sha256": "21c2128ed2ad89526194797332c60bf33dd3f7fb3c413f787fc7e2b0593797af"
+      "size": 5567,
+      "sha256": "83a240746a1a4ac5be90f0b144e5de9fede0fe035184a5e2ed477d23b809369c"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "e1eb157916b64edb82766da21d493aabd174d622b629c0815122b7476d0f2825"
+      "sha256": "367155dcb6645aa32b7a97aa5b210f254f5b91b86f6f82d3b186de4b82fbd65f"
     },
     {
       "path": "audit/LIVE-BACKEND.json",

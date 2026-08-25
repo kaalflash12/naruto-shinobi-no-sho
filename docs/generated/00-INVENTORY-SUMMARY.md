@@ -2,7 +2,7 @@
 
 Funções são inventariadas em toda fonte não documental; semântica do jogo (IA/API/DB/UI/movimento/assets/env) é extraída somente do runtime, excluindo docs, ferramentas e workflows.
 
-Gerado em: `2026-08-25T00:21:58.561Z`
+Gerado em: `2026-08-25T01:01:17.173Z`
 
 ## Totais
 
