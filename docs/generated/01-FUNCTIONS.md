@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-25T00:10:09.203Z`
+Gerado em: `2026-08-25T00:21:58.561Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -15958,7 +15958,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 
 ## FUNC-00998 — `rewrite`
 
-- **Fonte:** `src/r41-asset-path-repair.js:19`
+- **Fonte:** `src/r41-asset-path-repair.js:28`
 - **Domínio:** `game-runtime`
 - **Forma:** arrow-one
 - **Parâmetros:** `value`
@@ -15974,7 +15974,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 
 ## FUNC-00999 — `set`
 
-- **Fonte:** `src/r41-asset-path-repair.js:31`
+- **Fonte:** `src/r41-asset-path-repair.js:40`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `value`
@@ -15990,7 +15990,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 
 ## FUNC-01000 — `set`
 
-- **Fonte:** `src/r41-asset-path-repair.js:53`
+- **Fonte:** `src/r41-asset-path-repair.js:62`
 - **Domínio:** `game-runtime`
 - **Forma:** method
 - **Parâmetros:** `value`
@@ -17898,7 +17898,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `browser`
-- **Chamadas internas detectadas:** `setItem`, `key`, `fetch`, `close`, `text`, `status`, `resolve`
+- **Chamadas internas detectadas:** `setItem`, `key`, `fetch`, `close`, `text`, `status`, `test`, `resolve`
 - **Rotas referidas:** `/api/account/save`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —
@@ -17914,7 +17914,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `context`
-- **Chamadas internas detectadas:** `setItem`, `key`, `fetch`, `close`, `text`, `status`, `resolve`
+- **Chamadas internas detectadas:** `setItem`, `key`, `fetch`, `close`, `text`, `status`, `test`, `resolve`
 - **Rotas referidas:** `/api/account/save`
 - **Coleções MongoDB:** —
 - **Modelos IA:** —

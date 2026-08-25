@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-25T00:10:09.203Z`
+Gerado em: `2026-08-25T00:21:58.561Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -1003,9 +1003,9 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 | FUNC-00995 | função | `repairAndRecover` | `src/r41-account-active-slot.js:263` | game-runtime / STATICALLY_TRACED |
 | FUNC-00996 | função | `start` | `src/r41-account-active-slot.js:298` | game-runtime / STATICALLY_TRACED |
 | FUNC-00997 | função | `path` | `src/r41-asset-path-repair.js:9` | game-runtime / STATICALLY_TRACED |
-| FUNC-00998 | função | `rewrite` | `src/r41-asset-path-repair.js:19` | game-runtime / STATICALLY_TRACED |
-| FUNC-00999 | função | `set` | `src/r41-asset-path-repair.js:31` | game-runtime / STATICALLY_TRACED |
-| FUNC-01000 | função | `set` | `src/r41-asset-path-repair.js:53` | game-runtime / STATICALLY_TRACED |
+| FUNC-00998 | função | `rewrite` | `src/r41-asset-path-repair.js:28` | game-runtime / STATICALLY_TRACED |
+| FUNC-00999 | função | `set` | `src/r41-asset-path-repair.js:40` | game-runtime / STATICALLY_TRACED |
+| FUNC-01000 | função | `set` | `src/r41-asset-path-repair.js:62` | game-runtime / STATICALLY_TRACED |
 | FUNC-01001 | função | `slug` | `src/r41-canonical-repair.js:28` | game-runtime / STATICALLY_TRACED |
 | FUNC-01002 | função | `normalize` | `src/r41-core-bundle.js:5` | game-runtime / STATICALLY_TRACED |
 | FUNC-01003 | função | `getJson` | `src/r41-core-bundle.js:6` | game-runtime / STATICALLY_TRACED |

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T00:10:13.515Z",
+  "generatedAt": "2026-08-25T00:22:02.342Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T00:10:09.203Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T00:21:58.561Z",
   "counts": {
     "functions": 1197,
     "functionsWithExactCode": 1197,
@@ -15,7 +15,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 109,
+    "sourceFiles": 110,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -8012,7 +8012,7 @@
     {
       "id": "FUNC-00998",
       "file": "src/r41-asset-path-repair.js",
-      "line": 19,
+      "line": 28,
       "name": "rewrite",
       "exactCode": true,
       "snippetSha256": "75fbd9b1e947c43c716d8364f79b0e68c9e302e555500f520af703478c89163f"
@@ -8020,7 +8020,7 @@
     {
       "id": "FUNC-00999",
       "file": "src/r41-asset-path-repair.js",
-      "line": 31,
+      "line": 40,
       "name": "set",
       "exactCode": true,
       "snippetSha256": "04d3e081336575c4e6d392f66e714d2e5b617036350378dd0d08a33443eab373"
@@ -8028,7 +8028,7 @@
     {
       "id": "FUNC-01000",
       "file": "src/r41-asset-path-repair.js",
-      "line": 53,
+      "line": 62,
       "name": "set",
       "exactCode": true,
       "snippetSha256": "1394bdf274209a727f08437f69bfc1fd081721101fcfb5e8e67c0be6f2c195ae"
@@ -8983,7 +8983,7 @@
       "line": 86,
       "name": "testKurai",
       "exactCode": true,
-      "snippetSha256": "ca25c17435e2a24b138ca522ab260ceb5193542872bee5f9996695b1f3217e16"
+      "snippetSha256": "107a4688d40b8aee312657c2241b84415e893f3f28ad8a238fe1754609b10a7f"
     },
     {
       "id": "FUNC-01120",
@@ -8991,7 +8991,7 @@
       "line": 88,
       "name": "testKurai",
       "exactCode": true,
-      "snippetSha256": "906cb03b4eac6ebb4f0ee65e4b5fd5e8f452045fb9eefa5ecc2ca7656762136f"
+      "snippetSha256": "9edc62225b2eed25cbd5f130c3de9c50988c9fb4c176358b6059048e0bede93d"
     },
     {
       "id": "FUNC-01121",
@@ -15848,13 +15848,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "2c22f9c60a54330ecd7efb09643b8733e48572a3006efea6a99d9ef2e29279cd"
+      "size": 6449,
+      "sha256": "21c2128ed2ad89526194797332c60bf33dd3f7fb3c413f787fc7e2b0593797af"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "6f3a7b1c2839d45f32aa750629b0ae7efaefe9fb92c2cb7cdd7c73a5319006a6"
+      "sha256": "e1eb157916b64edb82766da21d493aabd174d622b629c0815122b7476d0f2825"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -16113,8 +16113,8 @@
     },
     {
       "path": "package.json",
-      "size": 1775,
-      "sha256": "970abf21dd75e469dda8127fbaaab75057476a9893ebc1cf52683d8097ac9bbb"
+      "size": 1865,
+      "sha256": "67dacbcc455dbea0f4924daffd74f22ce4b24418040d4b476c0d68d0d993dc87"
     },
     {
       "path": "r31.css",
@@ -16158,8 +16158,8 @@
     },
     {
       "path": "src/r41-asset-path-repair.js",
-      "size": 3126,
-      "sha256": "819b549845882723160287e73a8bb64c6391e15015695d29bc0a59d418d53e46"
+      "size": 3632,
+      "sha256": "d0eaa291e2ce01e74aebdf2b02201143674b8199aaea0cae93947a7f42448132"
     },
     {
       "path": "src/r41-canonical-repair.js",
@@ -16258,8 +16258,8 @@
     },
     {
       "path": "tools/browser-gameplay-local-e2e.mjs",
-      "size": 9417,
-      "sha256": "9673fc6d878551640bec6e8e05379e4dca27d4aff60acfc55c07f11e30178587"
+      "size": 9901,
+      "sha256": "77add8dc589cb01d113a32f0ab12b95cff28cd518c74f1951e403e6821d12cb4"
     },
     {
       "path": "tools/browser-live-api.mjs",
@@ -16320,6 +16320,11 @@
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
       "size": 4413,
       "sha256": "b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586"
+    },
+    {
+      "path": "tools/test-asset-path-repair.mjs",
+      "size": 2093,
+      "sha256": "d67db03dbd37a4a8d31abf7607b6fffe8ac228387c91d940baf95da1fb6b96ad"
     },
     {
       "path": "tools/test-online-bridge-recovery.mjs",

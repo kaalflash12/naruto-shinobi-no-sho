@@ -222,7 +222,7 @@ Nenhuma referência literal obrigatória ausente fora do overlay.
 - PASS_PATH `assets/original/vilas/layout_mapa_7.jpg` — `data/v5-content.js:12`, `data/v6-content.js:22`
 - PASS_PATH `assets/original/vilas/layout_mapa_8.jpg` — `data/v5-content.js:13`, `data/v6-content.js:23`
 - PASS_PATH `assets/private/kurai_fragmento.svg` — `data/v74-content.js:1`, `data/v83-integrated-config.js:17`
-- PASS_PATH `assets/private/kurai.svg` — `app.js:1490`, `app.js:3115`, `data/v74-content.js:1`, `data/v83-integrated-config.js:14`
+- PASS_PATH `assets/private/kurai.svg` — `app.js:1490`, `app.js:3115`, `data/v74-content.js:1`, `data/v83-integrated-config.js:14`, `src/r41-asset-path-repair.js:24`
 - PASS_PATH `assets/private/leon_kosmo_avatar.jpg` — `app.js:779`, `app.js:1134`, `app.js:1167`, `app.js:1808`, `app.js:2345`, `app.js:2743`, `app.js:2883`, `data/v81-leon-content.js:2`
 - PASS_PATH `assets/private/leon_kosmo_dossie.jpg` — `app.js:1138`, `app.js:1239`, `app.js:1350`, `app.js:2432`, `app.js:4429`, `app.js:4483`, `app.js:4783`, `app.js:4915`, `data/v81-leon-content.js:2`, `data/v84-visual-manifest.js:1`
 - PASS_PATH `assets/r25/characters/a-quarto-raikage.jpg` — `data/v84-visual-manifest.js:1`

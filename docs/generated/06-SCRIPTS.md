@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-25T00:10:09.203Z`
+Gerado em: `2026-08-25T00:21:58.561Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -60,8 +60,8 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 5991 bytes — SHA-256 `d82aa62b89396541c40a90da2a7e68078dac3f72addd72e847f68d739268767e`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 1098 bytes — SHA-256 `63061c05f6b4d9a628dc03608da03a4c19f909b7e32dfbaaf350058146e5a8c6`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `2c22f9c60a54330ecd7efb09643b8733e48572a3006efea6a99d9ef2e29279cd`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `6f3a7b1c2839d45f32aa750629b0ae7efaefe9fb92c2cb7cdd7c73a5319006a6`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 6449 bytes — SHA-256 `21c2128ed2ad89526194797332c60bf33dd3f7fb3c413f787fc7e2b0593797af`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `e1eb157916b64edb82766da21d493aabd174d622b629c0815122b7476d0f2825`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
@@ -113,7 +113,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - `data/v84-live-world.json` — domínio `game-runtime` — 1446635 bytes — SHA-256 `4cd5d0cf319e01d4cdefde444b74b3e1ae5b9eea2e8fba75e4fd3efd649f833c`
 - `data/v84-visual-manifest.js` — domínio `game-runtime` — 242316 bytes — SHA-256 `736232844cffbb8d0377bfaecd3857d5cb0b378f73a295844696706fa8848eab`
 - `index.html` — domínio `game-runtime` — 4236 bytes — SHA-256 `1672200806bd9772a887d071dcb2fe9fdeb9f7622016401f2538f206ebd156fe`
-- `package.json` — domínio `game-runtime` — 1775 bytes — SHA-256 `970abf21dd75e469dda8127fbaaab75057476a9893ebc1cf52683d8097ac9bbb`
+- `package.json` — domínio `game-runtime` — 1865 bytes — SHA-256 `67dacbcc455dbea0f4924daffd74f22ce4b24418040d4b476c0d68d0d993dc87`
 - `r31.css` — domínio `game-runtime` — 6504 bytes — SHA-256 `9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-account-deeplink-fix.js` — domínio `game-runtime` — 587 bytes — SHA-256 `656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2`
@@ -122,7 +122,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - `r41-github-api.js` — domínio `game-runtime` — 6207 bytes — SHA-256 `f80a8fa6aef11669c68bb7375029b0fa6d009dfc305da1983624ef452371abc1`
 - `r41-map-hitfix.css` — domínio `game-runtime` — 383 bytes — SHA-256 `1aceb18f0852afbac48ff228cbcad79c47213feddb8cb313008e531d0b035ea9`
 - `src/r41-account-active-slot.js` — domínio `game-runtime` — 16951 bytes — SHA-256 `64b5461473de7d4f421127fedf803a2e7fe4f492e56767c17c0c6209322b96f6`
-- `src/r41-asset-path-repair.js` — domínio `game-runtime` — 3126 bytes — SHA-256 `819b549845882723160287e73a8bb64c6391e15015695d29bc0a59d418d53e46`
+- `src/r41-asset-path-repair.js` — domínio `game-runtime` — 3632 bytes — SHA-256 `d0eaa291e2ce01e74aebdf2b02201143674b8199aaea0cae93947a7f42448132`
 - `src/r41-canonical-repair.js` — domínio `game-runtime` — 4765 bytes — SHA-256 `9190baa9900f56bdaa04050095cf8f873f33ed94f807c836875a79d43a9783a1`
 - `src/r41-core-bundle.js` — domínio `game-runtime` — 14187 bytes — SHA-256 `59dff7a7cd24d1446d426525c93e22ca9e64e091dbd98ad4419e92feb181c558`
 - `src/r41-final-ui-repair.js` — domínio `game-runtime` — 3922 bytes — SHA-256 `87dd13b8f0571f53625d87bd5506f32d31fbef7ab5368a2eca7e08adbf6aad8c`
@@ -142,7 +142,7 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - `tools/browser-gameplay-e2e-v3.mjs` — domínio `tooling` — 5034 bytes — SHA-256 `2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa`
 - `tools/browser-gameplay-e2e-v4.mjs` — domínio `tooling` — 9122 bytes — SHA-256 `08023f1fde71ae53eee36549d8e3dcbba7927c892483b9ba557fd3960a6ff1a2`
 - `tools/browser-gameplay-e2e.mjs` — domínio `tooling` — 24505 bytes — SHA-256 `3b71f9eef487aea41b1232571fb54caa259739640355d801899fe46fbeb2c0ea`
-- `tools/browser-gameplay-local-e2e.mjs` — domínio `tooling` — 9417 bytes — SHA-256 `9673fc6d878551640bec6e8e05379e4dca27d4aff60acfc55c07f11e30178587`
+- `tools/browser-gameplay-local-e2e.mjs` — domínio `tooling` — 9901 bytes — SHA-256 `77add8dc589cb01d113a32f0ab12b95cff28cd518c74f1951e403e6821d12cb4`
 - `tools/browser-live-api.mjs` — domínio `tooling` — 5129 bytes — SHA-256 `22093535386cd41b289baafa512755b3305c50f638b971dcd49972590bd3bd1a`
 - `tools/browser-smoke.mjs` — domínio `tooling` — 5273 bytes — SHA-256 `89c7117cbb3d71ad33508a38e271e5f614d4077630170563ecfb8cb5f0f203ee`
 - `tools/build-final-canonical-spec.mjs` — domínio `tooling` — 15497 bytes — SHA-256 `5b7420296866c75d337670d0bbe8bf118311e7298857fb883272976df19763ba`
@@ -155,4 +155,5 @@ Gerado em: `2026-08-25T00:10:09.203Z`
 - `tools/reconcile-asset-references.mjs` — domínio `tooling` — 4671 bytes — SHA-256 `50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11`
 - `tools/refine-technical-spec.mjs` — domínio `tooling` — 12478 bytes — SHA-256 `36ca9a7dbcf3637489252d8003f88f1c17b60e7747a002e842885345332311e4`
 - `tools/repair-canonical-markdown-after-trace.mjs` — domínio `tooling` — 4413 bytes — SHA-256 `b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586`
+- `tools/test-asset-path-repair.mjs` — domínio `tooling` — 2093 bytes — SHA-256 `d67db03dbd37a4a8d31abf7607b6fffe8ac228387c91d940baf95da1fb6b96ad`
 - `tools/test-online-bridge-recovery.mjs` — domínio `tooling` — 4000 bytes — SHA-256 `1554980f4f7c58fdf6ef38d3d46dbd45c4c0c8259b8e7fabbf27dab0e6ee8686`
