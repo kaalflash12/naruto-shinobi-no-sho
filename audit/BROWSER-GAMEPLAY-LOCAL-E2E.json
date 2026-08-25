@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T00:57:21.592Z",
+  "generatedAt": "2026-08-25T01:09:49.674Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt7yfrhcdzl57",
-  "slotId": "gameplay-mt7yfrhc",
+  "temporaryAccount": "play_mt7yvqaltt0i5",
+  "slotId": "gameplay-mt7yvqal",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,7 +15,8 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true
+    "allOperationalContractsGameplayE2E": true,
+    "temporaryAccountDeleted": true
   },
   "contracts": [
     {
@@ -88,7 +89,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.8,
+          "time": 4.9,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -96,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787619414818,
+          "at": 1787620160729,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 19,
+          "total": 21,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -122,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 36,
-          "enemyHpAfter": 36,
+          "enemyHpBefore": 30,
+          "enemyHpAfter": 30,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -147,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 618,
-          "success": true,
-          "errors": 2,
+          "score": 438,
+          "success": false,
+          "errors": 4,
           "time": 0.8,
           "performanceTags": [
-            "estavel",
+            "impreciso",
             "com_erros"
           ],
           "meta": {}
@@ -170,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt7yfrhcdzl57",
+        "intent": "Cobrir saída E2E mt7yvqaltt0i5",
         "persistedAcrossReload": true
       }
     },
@@ -189,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787619423301,
-        "cloudAt": 1787619412437,
+        "localAt": 1787620165227,
+        "cloudAt": 1787620158241,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
