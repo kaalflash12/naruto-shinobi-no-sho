@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T11:43:05.925Z",
+  "generatedAt": "2026-08-25T11:47:37.173Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5569,
+    "files": 5570,
     "runtimeFiles": 104,
     "assetFiles": 5434,
-    "textFiles": 130,
+    "textFiles": 131,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 119,
+    "sourceFiles": 120,
     "gameRuntimeSourceFiles": 67,
-    "toolingSourceFiles": 52,
+    "toolingSourceFiles": 53,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -119,6 +119,14 @@
       "path": ".github/workflows/post-live-backend-orchestration.yml",
       "size": 1054,
       "sha256": "7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/public-release-coherence.yml",
+      "size": 3335,
+      "sha256": "2bf3f79239efb6ece602351f3fc3a11087e63d6e981757820a7cefa865197163",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43629,16 +43637,16 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 1390,
-      "sha256": "e2baae90805b4ab007995209e35769e949bdc9e4d2a7145342a45e44968af451",
+      "size": 2194,
+      "sha256": "8c1fe11ce14fc74bd93641c1a5bdd7d2591994d81ec03924a9f17f7486cc424e",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5567,
-      "sha256": "53de9d3e85ad2a625dd1b2dd81caf99be24d7b1bae9ca1cb4e3c27622a78ac08",
+      "size": 5607,
+      "sha256": "5b5fb9ddfd2886a628d542c0bbf0911243211f56952dd26514dd76ebf23578f8",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43646,7 +43654,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "62a4decdb45e1dc86f04e6ce96741a4b89bb18fa44ec742be2ba1940d1396d0b",
+      "sha256": "98ab7b84a4b98ce93a12f9e37a1c93c63b117986fd8adf8a1564284495d1a68a",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363616,7 +363624,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T11:43:08.684Z",
+    "generatedAt": "2026-08-25T11:47:39.667Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364143,7 +364151,7 @@
       "events": 14,
       "movement": 8065,
       "assets": 15837,
-      "environment": 192
+      "environment": 193
     },
     "after": {
       "functions": 3360,

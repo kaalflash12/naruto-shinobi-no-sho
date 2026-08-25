@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-25T11:43:05.925Z`
+Gerado em: `2026-08-25T11:47:37.173Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|

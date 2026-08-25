@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T11:43:21.188Z",
+  "generatedAt": "2026-08-25T11:47:51.704Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T11:43:05.925Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T11:47:37.173Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 119,
+    "sourceFiles": 120,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39857,6 +39857,11 @@
       "sha256": "7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad"
     },
     {
+      "path": ".github/workflows/public-release-coherence.yml",
+      "size": 3335,
+      "sha256": "2bf3f79239efb6ece602351f3fc3a11087e63d6e981757820a7cefa865197163"
+    },
+    {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 6129,
       "sha256": "ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8"
@@ -39873,18 +39878,18 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 1390,
-      "sha256": "e2baae90805b4ab007995209e35769e949bdc9e4d2a7145342a45e44968af451"
+      "size": 2194,
+      "sha256": "8c1fe11ce14fc74bd93641c1a5bdd7d2591994d81ec03924a9f17f7486cc424e"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5567,
-      "sha256": "53de9d3e85ad2a625dd1b2dd81caf99be24d7b1bae9ca1cb4e3c27622a78ac08"
+      "size": 5607,
+      "sha256": "5b5fb9ddfd2886a628d542c0bbf0911243211f56952dd26514dd76ebf23578f8"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "62a4decdb45e1dc86f04e6ce96741a4b89bb18fa44ec742be2ba1940d1396d0b"
+      "sha256": "98ab7b84a4b98ce93a12f9e37a1c93c63b117986fd8adf8a1564284495d1a68a"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
