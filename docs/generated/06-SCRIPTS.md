@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-25T11:56:48.545Z`
+Gerado em: `2026-08-25T11:58:22.412Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -61,9 +61,9 @@ Gerado em: `2026-08-25T11:56:48.545Z`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 6129 bytes — SHA-256 `ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8`
 - `.github/workflows/sync-public-release-fingerprint.yml` — domínio `tooling` — 1753 bytes — SHA-256 `0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
-- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2194 bytes — SHA-256 `7dc18d2475acea75fdc14e7022b6a920d8903c2ad1823322932c7b8a02465ef2`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `b360249783df8d40ae737d2f70d48224c0f287a080fb2d178b1b9219df6c513a`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `34ddb00553360e0567dccf34b901f9e00cef7860601383d8636811e28d953b87`
+- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2194 bytes — SHA-256 `7d112ab0a412d977fe4d410fc06f46b320aa940ffeee7249aaeae8db0d6c4b06`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `f72f45d4179eaa748b467d5c31bb417803af0d7da0357dfb6f760e2256704a8e`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `02f10c1608dc8329c8b2cfabe5d94cbd581909a752e47d617a927a2c4fa689f8`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T11:56:48.545Z",
+  "generatedAt": "2026-08-25T11:58:22.412Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -46,7 +46,7 @@
     {
       "path": ".github/public-release-coherence-trigger.txt",
       "size": 82,
-      "sha256": "fe0b9ca546e8635df5a7a8ae5ed383fe7f1ce52f81566e6ff90a350285c57e3d",
+      "sha256": "696be6a3d299d8a1e5f5bae4b3364e1bdd9d405ee472be4742dc8d1c2abce2a6",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -43646,7 +43646,7 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2194,
-      "sha256": "7dc18d2475acea75fdc14e7022b6a920d8903c2ad1823322932c7b8a02465ef2",
+      "sha256": "7d112ab0a412d977fe4d410fc06f46b320aa940ffeee7249aaeae8db0d6c4b06",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43654,7 +43654,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "b360249783df8d40ae737d2f70d48224c0f287a080fb2d178b1b9219df6c513a",
+      "sha256": "f72f45d4179eaa748b467d5c31bb417803af0d7da0357dfb6f760e2256704a8e",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43662,7 +43662,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "34ddb00553360e0567dccf34b901f9e00cef7860601383d8636811e28d953b87",
+      "sha256": "02f10c1608dc8329c8b2cfabe5d94cbd581909a752e47d617a927a2c4fa689f8",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44182,7 +44182,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "74cac112c96f84fc40f501e53235a21868515057fa8f85039d8e7a223a1266d3",
+      "sha256": "436cc9c7695d77f3615e7f29ec87b04884e27c60475824fb45c144f8c32d96cd",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -363640,7 +363640,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T11:56:51.116Z",
+    "generatedAt": "2026-08-25T11:58:24.289Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
