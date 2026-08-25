@@ -37,6 +37,14 @@ const onlineDiagWait=`  try{await page.locator('#r41-online-intent').waitFor({st
       return {heading:String(document.querySelector('#screen h1')?.textContent||''),screen:String(document.querySelector('#screen')?.innerText||'').slice(0,5000),nav:String(document.querySelector('#main-nav')?.innerText||'').slice(0,2000),active,accountRows:accountRows.map(x=>({key:x.key,online:x.save?.online||null,character:x.save?.character?.name||null,updatedAt:x.save?.updatedAt||null})),legacy:parse(localStorage.getItem('narutoShinobiNoShoPcV4'))?.online||null,r41:window.__NARUTO_R41__?.state?.()||null,toasts:String(document.querySelector('#toast-root')?.innerText||'').slice(0,2000)};
     });
     throw new Error('ONLINE_INTENT_UI_MISSING '+JSON.stringify(onlineDiag));
+  }
+  try{await page.waitForFunction(()=>window.__NARUTO_R41__?.state?.()?.online?.ready===true,{timeout:30000});}catch{
+    const onlineReadyDiag=await page.evaluate(()=>({
+      screen:String(document.querySelector('#screen')?.innerText||'').slice(0,5000),
+      r41Online:window.__NARUTO_R41__?.state?.()?.online||null,
+      toasts:String(document.querySelector('#toast-root')?.innerText||'').slice(0,2000)
+    }));
+    throw new Error('ONLINE_SYNC_NOT_READY '+JSON.stringify(onlineReadyDiag));
   }`;
 if(!base.includes(onlineWait))throw new Error('GAMEPLAY_E2E_V4_ONLINE_WAIT_TARGET_MISSING');
 base=base.replaceAll(onlineWait,onlineDiagWait);
