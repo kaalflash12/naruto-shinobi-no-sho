@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T11:58:34.000Z",
+  "generatedAt": "2026-08-25T20:46:31.397Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T11:58:22.412Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T20:46:15.367Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -29877,32 +29877,32 @@
     {
       "id": "FUNC-02985",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 33,
+      "line": 32,
       "name": "<callback:Object.entries().filter().map#0>",
       "exactCode": true,
       "snippetSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
-      "astStart": 1345,
-      "astEnd": 1359
+      "astStart": 1310,
+      "astEnd": 1324
     },
     {
       "id": "FUNC-02986",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 33,
+      "line": 32,
       "name": "<callback:Object.entries().filter#0>",
       "exactCode": true,
       "snippetSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
-      "astStart": 1317,
-      "astEnd": 1339
+      "astStart": 1282,
+      "astEnd": 1304
     },
     {
       "id": "FUNC-02987",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 89,
+      "line": 96,
       "name": "semantic",
       "exactCode": true,
-      "snippetSha256": "61bbc74462621992a1b0c3d590ad6b1e22afd0f5a8326c5427640d62a38aa22e",
-      "astStart": 5030,
-      "astEnd": 5597
+      "snippetSha256": "55cbde07427d1a5587fe2453e71dcbfdcbb6781f1af5b3423a41960b9c4228bf",
+      "astStart": 5410,
+      "astEnd": 6016
     },
     {
       "id": "FUNC-02988",
@@ -39843,8 +39843,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 13494,
-      "sha256": "3ee4b4371ef20d9a3280378cedf6a20ef0a234588e60def17b3048ec84eeb2ba"
+      "size": 15790,
+      "sha256": "3c37b4b108fdc6db58bc6b0c678845256def07e6b478a48f176b5115ce167b3c"
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
@@ -39884,12 +39884,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "f72f45d4179eaa748b467d5c31bb417803af0d7da0357dfb6f760e2256704a8e"
+      "sha256": "16d4882c767f4ad073601261b4975e9c6f5f0733a6010bbe439bc626d12ff8c8"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "02f10c1608dc8329c8b2cfabe5d94cbd581909a752e47d617a927a2c4fa689f8"
+      "sha256": "dfdb6a5dc695db45c768bb000f8f10a913cc60cbce29fd1843d288ed396e6521"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -39909,7 +39909,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "827ae77217e3d5686872ec8540a51322d91dcdd22abb38e5c0c1b5619f2d0a62"
+      "sha256": "007a3ae3455f4dd7c0bc83ee35d4d8bda5e01c062d0d330d1cfb763c561b685e"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -40278,8 +40278,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 6253,
-      "sha256": "df6c06656acdb710b9b42963669fd5e2ed8046fa0541766b1834b96ba33cab64"
+      "size": 6696,
+      "sha256": "03e6b4228cb1799a173de666d41ebc75e43a055d4fe932f03abac1bb92459d31"
     },
     {
       "path": "tools/browser-account-live.mjs",

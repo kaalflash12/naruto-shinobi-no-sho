@@ -2994,9 +2994,9 @@ Parser: `Acorn 8.15.0`. Delimitação por AST; regex não define início/fim de 
 | FUNC-02982 | `has` | `tools/backend-presence-audit.mjs:3-3` | arrow | `8369f7d43db129fa64135bc2080fad928a6cba2b97f2c97aa075baf8558fda20` |
 | FUNC-02983 | `isHash` | `tools/backend-presence-audit.mjs:4-4` | arrow | `27f96ba28d7085b45570a0c8ee29d5bd1577ddd76757891fa8c1ebd965bd933f` |
 | FUNC-02984 | `read` | `tools/backend-presence-audit.mjs:5-5` | arrow | `b2ba630c6b6eecd323484f703f58079dc8f088c6ec5ad69b5e8dfa8d54902b9f` |
-| FUNC-02985 | `<callback:Object.entries().filter#0>` | `tools/backend-presence-audit.mjs:33-33` | arrow | `ac3d1ec39d3f5f45ba30dd0d5de90418695feae4d877e6bbdf242948d72e2891` |
-| FUNC-02986 | `<callback:Object.entries().filter().map#0>` | `tools/backend-presence-audit.mjs:33-33` | arrow | `82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89` |
-| FUNC-02987 | `semantic` | `tools/backend-presence-audit.mjs:89-89` | arrow | `659b6d493a4c88359f19df89cfb958027237d92972233e8a594c76e0ddb33125` |
+| FUNC-02985 | `<callback:Object.entries().filter#0>` | `tools/backend-presence-audit.mjs:32-32` | arrow | `ac3d1ec39d3f5f45ba30dd0d5de90418695feae4d877e6bbdf242948d72e2891` |
+| FUNC-02986 | `<callback:Object.entries().filter().map#0>` | `tools/backend-presence-audit.mjs:32-32` | arrow | `82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89` |
+| FUNC-02987 | `semantic` | `tools/backend-presence-audit.mjs:96-96` | arrow | `d13275aa2036d2009ad39ad72ca47963881320181b345661be0cbee4d02ed1d8` |
 | FUNC-02988 | `assert` | `tools/browser-account-live.mjs:11-11` | declaration | `654badc026af4f362979928f7eef1baa17de82962bc813a36aaca7f07d6b1bbe` |
 | FUNC-02989 | `<callback:page.on#1>` | `tools/browser-account-live.mjs:13-13` | arrow | `c20484284eb660f2b1fd61b5d222e84460011a2dc4fe304df7aaa1f81f591437` |
 | FUNC-02990 | `<callback:page.on#1>` | `tools/browser-account-live.mjs:13-13` | arrow | `9f8ea3d743940350f72de6e0318366973451da7a877c98af37dd04a31d2f1b8c` |

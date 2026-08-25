@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-25T11:58:22.412Z`
+Gerado em: `2026-08-25T20:46:15.367Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -2990,9 +2990,9 @@ Gerado em: `2026-08-25T11:58:22.412Z`
 | FUNC-02982 | função | `has` | `tools/backend-presence-audit.mjs:3` | tooling / STATICALLY_TRACED |
 | FUNC-02983 | função | `isHash` | `tools/backend-presence-audit.mjs:4` | tooling / STATICALLY_TRACED |
 | FUNC-02984 | função | `read` | `tools/backend-presence-audit.mjs:5` | tooling / STATICALLY_TRACED |
-| FUNC-02985 | função | `<callback:Object.entries().filter().map#0>` | `tools/backend-presence-audit.mjs:33` | tooling / STATICALLY_TRACED |
-| FUNC-02986 | função | `<callback:Object.entries().filter#0>` | `tools/backend-presence-audit.mjs:33` | tooling / STATICALLY_TRACED |
-| FUNC-02987 | função | `semantic` | `tools/backend-presence-audit.mjs:89` | tooling / STATICALLY_TRACED |
+| FUNC-02985 | função | `<callback:Object.entries().filter().map#0>` | `tools/backend-presence-audit.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-02986 | função | `<callback:Object.entries().filter#0>` | `tools/backend-presence-audit.mjs:32` | tooling / STATICALLY_TRACED |
+| FUNC-02987 | função | `semantic` | `tools/backend-presence-audit.mjs:96` | tooling / STATICALLY_TRACED |
 | FUNC-02988 | função | `assert` | `tools/browser-account-live.mjs:11` | tooling / STATICALLY_TRACED |
 | FUNC-02989 | função | `<callback:page.on#1>` | `tools/browser-account-live.mjs:13` | tooling / STATICALLY_TRACED |
 | FUNC-02990 | função | `<callback:page.on#1>` | `tools/browser-account-live.mjs:13` | tooling / STATICALLY_TRACED |

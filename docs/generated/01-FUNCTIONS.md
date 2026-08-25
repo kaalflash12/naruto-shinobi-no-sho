@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-25T11:58:22.412Z`
+Gerado em: `2026-08-25T20:46:15.367Z`
 
 ## FUNC-00001 — `<anonymous@1:1>`
 
@@ -47750,7 +47750,7 @@ Gerado em: `2026-08-25T11:58:22.412Z`
 
 ## FUNC-02985 — `<callback:Object.entries().filter().map#0>`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:33`
+- **Fonte:** `tools/backend-presence-audit.mjs:32`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `[name]`
@@ -47766,7 +47766,7 @@ Gerado em: `2026-08-25T11:58:22.412Z`
 
 ## FUNC-02986 — `<callback:Object.entries().filter#0>`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:33`
+- **Fonte:** `tools/backend-presence-audit.mjs:32`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `[,present]`
@@ -47782,7 +47782,7 @@ Gerado em: `2026-08-25T11:58:22.412Z`
 
 ## FUNC-02987 — `semantic`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:89`
+- **Fonte:** `tools/backend-presence-audit.mjs:96`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `r`

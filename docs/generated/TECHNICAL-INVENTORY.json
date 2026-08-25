@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T11:58:22.412Z",
+  "generatedAt": "2026-08-25T20:46:15.367Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -46,7 +46,7 @@
     {
       "path": ".github/public-release-coherence-trigger.txt",
       "size": 82,
-      "sha256": "696be6a3d299d8a1e5f5bae4b3364e1bdd9d405ee472be4742dc8d1c2abce2a6",
+      "sha256": "71a264f091d164a31a8021c86129bad3f50ce233aee29c532ec011a81006913a",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -109,8 +109,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 13494,
-      "sha256": "3ee4b4371ef20d9a3280378cedf6a20ef0a234588e60def17b3048ec84eeb2ba",
+      "size": 15790,
+      "sha256": "3c37b4b108fdc6db58bc6b0c678845256def07e6b478a48f176b5115ce167b3c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43654,7 +43654,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "f72f45d4179eaa748b467d5c31bb417803af0d7da0357dfb6f760e2256704a8e",
+      "sha256": "16d4882c767f4ad073601261b4975e9c6f5f0733a6010bbe439bc626d12ff8c8",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43662,7 +43662,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "02f10c1608dc8329c8b2cfabe5d94cbd581909a752e47d617a927a2c4fa689f8",
+      "sha256": "dfdb6a5dc695db45c768bb000f8f10a913cc60cbce29fd1843d288ed396e6521",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43694,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "827ae77217e3d5686872ec8540a51322d91dcdd22abb38e5c0c1b5619f2d0a62",
+      "sha256": "007a3ae3455f4dd7c0bc83ee35d4d8bda5e01c062d0d330d1cfb763c561b685e",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44182,7 +44182,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "436cc9c7695d77f3615e7f29ec87b04884e27c60475824fb45c144f8c32d96cd",
+      "sha256": "6915bf3596f36b29e3ad43622e143527705e296903a409e5ed90b86d0beca62d",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -44397,8 +44397,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 6253,
-      "sha256": "df6c06656acdb710b9b42963669fd5e2ed8046fa0541766b1834b96ba33cab64",
+      "size": 6696,
+      "sha256": "03e6b4228cb1799a173de666d41ebc75e43a055d4fe932f03abac1bb92459d31",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -182324,8 +182324,8 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 33,
-      "endLine": 33,
+      "line": 32,
+      "endLine": 32,
       "column": 94,
       "endColumn": 108,
       "name": "<callback:Object.entries().filter().map#0>",
@@ -182346,10 +182346,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1345,
-        "end": 1359,
-        "bodyStart": 1355,
-        "bodyEnd": 1359,
+        "start": 1310,
+        "end": 1324,
+        "bodyStart": 1320,
+        "bodyEnd": 1324,
         "functionSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
         "bodySha256": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
         "async": false,
@@ -182365,8 +182365,8 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 33,
-      "endLine": 33,
+      "line": 32,
+      "endLine": 32,
       "column": 66,
       "endColumn": 88,
       "name": "<callback:Object.entries().filter#0>",
@@ -182387,10 +182387,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1317,
-        "end": 1339,
-        "bodyStart": 1331,
-        "bodyEnd": 1339,
+        "start": 1282,
+        "end": 1304,
+        "bodyStart": 1296,
+        "bodyEnd": 1304,
         "functionSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
         "bodySha256": "ac3d1ec39d3f5f45ba30dd0d5de90418695feae4d877e6bbdf242948d72e2891",
         "async": false,
@@ -182406,10 +182406,10 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 89,
-      "endLine": 89,
+      "line": 96,
+      "endLine": 96,
       "column": 15,
-      "endColumn": 582,
+      "endColumn": 621,
       "name": "semantic",
       "kind": "arrow",
       "params": "r",
@@ -182430,12 +182430,12 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5030,
-        "end": 5597,
-        "bodyStart": 5033,
-        "bodyEnd": 5597,
-        "functionSha256": "61bbc74462621992a1b0c3d590ad6b1e22afd0f5a8326c5427640d62a38aa22e",
-        "bodySha256": "659b6d493a4c88359f19df89cfb958027237d92972233e8a594c76e0ddb33125",
+        "start": 5410,
+        "end": 6016,
+        "bodyStart": 5413,
+        "bodyEnd": 6016,
+        "functionSha256": "55cbde07427d1a5587fe2453e71dcbfdcbb6781f1af5b3423a41960b9c4228bf",
+        "bodySha256": "d13275aa2036d2009ad39ad72ca47963881320181b345661be0cbee4d02ed1d8",
         "async": false,
         "generator": false,
         "expressionBody": true,
@@ -363640,7 +363640,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T11:58:24.289Z",
+    "generatedAt": "2026-08-25T20:46:17.626Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -363973,7 +363973,7 @@
         "file": "tools/backend-presence-audit.mjs",
         "sourceType": "module",
         "functions": 6,
-        "bytes": 6253
+        "bytes": 6696
       },
       {
         "file": "tools/browser-account-live.mjs",
@@ -364167,7 +364167,7 @@
       "events": 14,
       "movement": 8066,
       "assets": 15838,
-      "environment": 193
+      "environment": 196
     },
     "after": {
       "functions": 3360,
