@@ -12,6 +12,7 @@ const publicRefs = [...html.matchAll(/(?:src|href)="([^"#]+)"/g)]
 const evidenceSources = [
   'tools/release-source-fingerprint.mjs',
   'tools/public-release-coherence.mjs',
+  'tools/wait-public-release-coherence.mjs',
   'tools/account-live-e2e.mjs',
   'tools/browser-account-live.mjs',
   'tools/browser-gameplay-e2e-v4.mjs',
