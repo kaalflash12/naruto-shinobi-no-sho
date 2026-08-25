@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  # The marker is excluded from the release hash; marker-only commits cannot create a sync loop.
+  # The marker is excluded from the release hash; this workflow may be used as a non-release validation trigger without changing the marker.
   group: shinobi-sync-public-release-fingerprint-${{ github.ref }}
   cancel-in-progress: true
 
