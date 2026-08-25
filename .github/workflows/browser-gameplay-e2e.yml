@@ -28,6 +28,8 @@ jobs:
           set -euo pipefail
           node --check tools/live-source-fingerprint.mjs
           node --check tools/release-source-fingerprint.mjs
+          node --check tools/public-release-coherence.mjs
+          node --check tools/wait-public-release-coherence.mjs
           node --check tools/gameplay-live-provenance.mjs
           fingerprint="$(node tools/live-source-fingerprint.mjs)"
           release="$(node tools/release-source-fingerprint.mjs)"
@@ -48,6 +50,12 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.62.1
           npx playwright install --with-deps chromium
+
+      - name: Wait until GitHub Pages serves this exact release
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          PUBLIC_RELEASE_REPORT: audit/PUBLIC-RELEASE-COHERENCE.json
+        run: node tools/wait-public-release-coherence.mjs
 
       - name: Wait for coherent GitHub Pages plus Cloudflare backend
         shell: bash
@@ -100,6 +108,7 @@ jobs:
         if: always()
         env:
           BROWSER_GAMEPLAY_REPORT: audit/BROWSER-GAMEPLAY-E2E.json
+          PUBLIC_RELEASE_REPORT: audit/PUBLIC-RELEASE-COHERENCE.json
         run: node tools/gameplay-live-provenance.mjs
 
       - name: Commit gameplay evidence
@@ -123,7 +132,9 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: browser-gameplay-e2e
-          path: audit/BROWSER-GAMEPLAY-E2E.json
+          path: |
+            audit/BROWSER-GAMEPLAY-E2E.json
+            audit/PUBLIC-RELEASE-COHERENCE.json
           if-no-files-found: warn
 
       - name: Enforce gameplay gate
@@ -136,6 +147,7 @@ jobs:
           if(r.scope!=='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY')throw new Error(`GAMEPLAY_SCOPE_NOT_PUBLIC ${r.scope||'null'}`);
           if(r.site!=='https://kaalflash12.github.io/naruto-shinobi-no-sho/')throw new Error(`GAMEPLAY_SITE_NOT_CANONICAL ${r.site||'null'}`);
           if(r.provenance?.kind!=='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE')throw new Error('GAMEPLAY_LIVE_PROVENANCE_MISSING');
+          if(r.provenance?.publicReleaseCoherence!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error('GAMEPLAY_PUBLIC_RELEASE_COHERENCE_MISSING');
           if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
           if(r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
           const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
