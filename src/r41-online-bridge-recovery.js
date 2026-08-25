@@ -67,7 +67,11 @@
     lastRecoveryAt=now;
     recovering=true;
     try{
-      const response=await window.fetch(`/api/room/${encodeURIComponent(ctx.roomId)}`,{method:'GET',headers:{accept:'application/json'}});
+      const response=await window.fetch('/api/online/room',{
+        method:'POST',
+        headers:{'content-type':'application/json','accept':'application/json'},
+        body:JSON.stringify({roomId:ctx.roomId})
+      });
       const data=await response?.json?.().catch(()=>null);
       const room=data?.room;
       const responseRoomId=String(room?.roomId||room?.id||'').trim();
@@ -83,7 +87,7 @@
       online.error=null;
 
       // A presença `data.online` é transitória e não define se a bridge está utilizável.
-      // O runtime principal também conclui `ready=true` depois de obter estado válido da sala.
+      // Estado válido retornado pela rota canônica /api/online/room é suficiente para liberar a bridge.
       online.ready=true;
       sessionStorage.removeItem(RELOAD_MARKER);
       reloadQueued=false;
@@ -145,7 +149,7 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 
   window.__SNS_ONLINE_BRIDGE_RECOVERY__={
-    version:'R41-ONLINE-BRIDGE-RECOVERY-20260824-V2',
+    version:'R41-ONLINE-BRIDGE-RECOVERY-20260825-V3',
     state:()=>({context:roomContext(),bridge:bridge(),reloadMarker:sessionStorage.getItem(RELOAD_MARKER)||'',reloadQueued,recovering}),
     check:tick,
     recover:recoverBridge
