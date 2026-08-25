@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Node 20
         uses: actions/setup-node@v7
@@ -88,15 +88,34 @@ jobs:
           node -e "const r=require('./docs/generated/OPERATIONAL-STATIC-AUDIT.json'); if(!r.ok||r.status!=='PASS_OPERATIONAL_STATIC_CONTRACTS') process.exit(1); console.log(r.status, r.gates)"
           node -e "const r=require('./docs/generated/FINAL-CANONICAL-AUDIT.json'); if(!r.ok||r.status!=='PASS_FINAL_CANONICAL_SPEC') process.exit(1); console.log(r.status)"
 
+      - name: Validate race-safe documentation publisher
+        run: |
+          grep -F 'fetch-depth: 0' .github/workflows/documentation-audit.yml
+          grep -F 'git pull --rebase origin main' .github/workflows/documentation-audit.yml
+          grep -F 'for attempt in 1 2 3; do' .github/workflows/documentation-audit.yml
+          grep -F 'git push origin HEAD:main' .github/workflows/documentation-audit.yml
+
       - name: Commit generated documentation and canonical report
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/generated
           if git diff --cached --quiet; then
             echo 'Generated documentation is already current.'
-          else
-            git commit -m 'docs: regenerate canonical full specification after all gates'
-            git push
+            exit 0
           fi
+          git commit -m 'docs: regenerate canonical full specification after all gates'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              echo "DOCUMENTATION_PUBLISH_SUCCESS attempt=$attempt"
+              exit 0
+            fi
+            echo "DOCUMENTATION_PUBLISH_RETRY attempt=$attempt" >&2
+            sleep $((attempt * 2))
+          done
+          echo 'DOCUMENTATION_PUBLISH_FAILED_AFTER_RETRIES' >&2
+          exit 1
