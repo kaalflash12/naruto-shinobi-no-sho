@@ -3,11 +3,14 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const ROOT=process.cwd();
-const GATE_VERSION='CLOUDFLARE-MONGODB-AUTHORITATIVE-V6';
+const GATE_VERSION='CLOUDFLARE-MONGODB-AUTHORITATIVE-V7-RELEASE-FINGERPRINT';
 const failures=[];
 const pass=(cond,msg)=>{if(!cond)failures.push(msg);};
 const normalizedOrigin=value=>String(value||'').trim().replace(/\/+$/,'');
+const isHash=value=>/^[a-f0-9]{64}$/.test(String(value||''));
 function readJson(p){const full=path.join(ROOT,p);if(!fs.existsSync(full)){failures.push(`evidência ausente: ${p}`);return {};}try{return JSON.parse(fs.readFileSync(full,'utf8'));}catch(e){failures.push(`JSON inválido: ${p}: ${e.message}`);return {};}}
+function fingerprint(script,label){try{return execFileSync(process.execPath,[path.join(ROOT,script)],{cwd:ROOT,encoding:'utf8'}).trim();}catch(e){failures.push(`falha ao calcular ${label}: ${e.message}`);return '';}}
+
 const canonical=readJson('docs/generated/FINAL-CANONICAL-AUDIT.json');
 const operational=readJson('docs/generated/OPERATIONAL-STATIC-AUDIT.json');
 const documentation=readJson('docs/generated/DOCUMENTATION-AUDIT.json');
@@ -19,9 +22,10 @@ const browserSmoke=readJson('audit/BROWSER-SMOKE.json');
 const gameplay=readJson('audit/BROWSER-GAMEPLAY-E2E.json');
 const apiConfig=fs.readFileSync(path.join(ROOT,'r41-api-config.js'),'utf8');
 const githubApi=fs.readFileSync(path.join(ROOT,'r41-github-api.js'),'utf8');
-let currentSourceFingerprint='';
-try{currentSourceFingerprint=execFileSync(process.execPath,[path.join(ROOT,'tools/live-source-fingerprint.mjs')],{cwd:ROOT,encoding:'utf8'}).trim();}catch(e){failures.push(`falha ao calcular fingerprint live atual: ${e.message}`);}
-pass(/^[a-f0-9]{64}$/.test(currentSourceFingerprint),'fingerprint live atual inválido');
+const currentSourceFingerprint=fingerprint('tools/live-source-fingerprint.mjs','fingerprint live atual');
+const currentReleaseFingerprint=fingerprint('tools/release-source-fingerprint.mjs','fingerprint da release atual');
+pass(isHash(currentSourceFingerprint),'fingerprint live atual inválido');
+pass(isHash(currentReleaseFingerprint),'fingerprint da release atual inválido');
 
 pass(canonical.ok===true&&canonical.status==='PASS_FINAL_CANONICAL_SPEC','canonical spec sem PASS_FINAL_CANONICAL_SPEC');
 pass(canonical.counts?.functions===canonical.counts?.functionsWithExactCode,'funções sem código exato');
@@ -42,7 +46,7 @@ pass(browserSmoke.checks?.backendIdentity===true,'browser smoke não confirmou i
 pass(Array.isArray(browserSmoke.failures)&&browserSmoke.failures.length===0,'browser smoke possui falhas');
 
 pass(live.ok===true&&live.status==='PASS_LIVE_BACKEND_E2E','Cloudflare + MongoDB live E2E sem PASS');
-pass(/^[a-f0-9]{64}$/.test(String(live.sourceFingerprint||'')),'backend live sem sourceFingerprint válido');
+pass(isHash(live.sourceFingerprint),'backend live sem sourceFingerprint válido');
 pass(String(live.sourceFingerprint||'')===currentSourceFingerprint,'backend live stale: fingerprint não corresponde à fonte atual');
 const liveRequired=['statusConfigured','authoritativeBoundariesAdvertised','v6PerCharacterAuthorityAdvertised','registerTwoAccounts','authenticatedSessions','accountEmailPersisted','unauthorizedRejected','mongoSaveRoundTrip','multipleCharacterSlotsPersisted','slotListing','roomCreate','mechanicalBaselineLockedAtFirstAuthorityUse','multipleMechanicalProfilesSameAccount','profileSelectorMatchesPlayerAndCampaign','continuitySaveSeparatedFromMechanicalAuthority','roomJoinSecondAccount','roomHeartbeat','roomMessaging','intentActionAccepted','terionUsesLockedMechanicalProfile','terionSelectsCorrectProfilePerCharacter','clientMechanicalResultRejected','roomStateSynchronized','forgedHeartbeatIgnored','leaderboardIgnoresForgedAutosave','leaderboardSeparatesCharacters','worldEventPersisted','worldMechanicalPayloadSanitizedLive','worldSavePointPersisted','workersAiLive','e2eSaveCleanup','slotDeleteCleansOnlyMatchingMechanicalProfile','sessionRevocation','emailLoginLive','accountDeleteCleansMechanicalProfile','e2eAccountCleanup'];
 for(const key of liveRequired)pass(live.checks?.[key]===true,`gate Cloudflare/MongoDB ausente: ${key}`);
@@ -59,24 +63,28 @@ pass(browserLive.cors?.allowOrigin==='https://kaalflash12.github.io','Access-Con
 pass(Array.isArray(browserLive.pageErrors)&&browserLive.pageErrors.length===0,'browser live possui exceções JS');
 pass(Array.isArray(browserLive.failures)&&browserLive.failures.length===0,'browser live possui falhas');
 
+const accountProvenance=accountLive.provenance||{};
 pass(accountLive.ok===true&&accountLive.status==='PASS_ACCOUNT_LIVE_E2E','contas Cloudflare/MongoDB sem PASS_ACCOUNT_LIVE_E2E');
 pass(accountLive.backend==='cloudflare-workers-mongodb-atlas','evidência de conta não usa Cloudflare/MongoDB Atlas');
-const accountProvenance=accountLive.provenance||{};
 pass(accountProvenance.kind==='ACCOUNT_LIVE_CLOUDFLARE_MONGODB','evidência de conta sem proveniência live atual');
 pass(accountProvenance.sourceFingerprint===currentSourceFingerprint,'evidência de conta stale: sourceFingerprint divergente');
 pass(accountProvenance.sourceFingerprint===live.sourceFingerprint,'evidência de conta não corresponde ao backend live validado');
+pass(accountProvenance.releaseFingerprint===currentReleaseFingerprint,'evidência de conta stale: releaseFingerprint divergente');
+pass(accountProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','evidência de conta sem coerência pública da release');
 pass(accountProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência de conta não confirma Cloudflare/MongoDB Atlas');
 pass(accountProvenance.realtime==='cloudflare-durable-objects','proveniência de conta não confirma Durable Objects');
 pass(accountProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência de conta não confirma autoridade TERION V6');
 const accountRequired=['apiOriginConfigured','backendStatus','mongodbAtlas','durableObjects','register','meAfterRegister','saveMongo','logout','loginByUsername','rotateRecoveryCode','recoverPassword','oldPasswordRejected','loginAfterRecovery','saveSurvivesRelogin','deleteSave','deleteAccount','deletedAccountRejected'];
 for(const key of accountRequired)pass(accountLive.checks?.[key]===true,`gate de conta ausente: ${key}`);
 
+const browserAccountProvenance=browserAccount.provenance||{};
 pass(browserAccount.ok===true&&browserAccount.status==='PASS_BROWSER_ACCOUNT_LIVE','browser de conta Cloudflare/MongoDB sem PASS');
 pass(browserAccount.backend==='cloudflare-workers-mongodb-atlas','browser de conta não confirmou Cloudflare/MongoDB Atlas');
-const browserAccountProvenance=browserAccount.provenance||{};
 pass(browserAccountProvenance.kind==='BROWSER_ACCOUNT_LIVE_CLOUDFLARE_MONGODB','browser de conta sem proveniência live atual');
 pass(browserAccountProvenance.sourceFingerprint===currentSourceFingerprint,'browser de conta stale: sourceFingerprint divergente');
 pass(browserAccountProvenance.sourceFingerprint===live.sourceFingerprint,'browser de conta não corresponde ao backend live validado');
+pass(browserAccountProvenance.releaseFingerprint===currentReleaseFingerprint,'browser de conta stale: releaseFingerprint divergente');
+pass(browserAccountProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','browser de conta sem coerência pública da release');
 pass(browserAccountProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência browser de conta não confirma Cloudflare/MongoDB Atlas');
 pass(browserAccountProvenance.realtime==='cloudflare-durable-objects','proveniência browser de conta não confirma Durable Objects');
 pass(browserAccountProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência browser de conta não confirma autoridade TERION V6');
@@ -85,13 +93,15 @@ for(const key of browserAccountRequired)pass(browserAccount.checks?.[key]===true
 pass(Array.isArray(browserAccount.pageErrors)&&browserAccount.pageErrors.length===0,'browser de conta possui exceções JS');
 pass(Array.isArray(browserAccount.failures)&&browserAccount.failures.length===0,'browser de conta possui falhas');
 
-pass(gameplay.ok===true&&gameplay.status==='PASS_BROWSER_GAMEPLAY_E2E','gameplay Chromium E2E sem PASS');
 const gameplayProvenance=gameplay.provenance||{};
+pass(gameplay.ok===true&&gameplay.status==='PASS_BROWSER_GAMEPLAY_E2E','gameplay Chromium E2E sem PASS');
 pass(gameplay.scope==='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY','gameplay final não é público');
 pass(gameplay.site==='https://kaalflash12.github.io/naruto-shinobi-no-sho/','gameplay final não usa o site canônico');
 pass(gameplayProvenance.kind==='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE','gameplay sem proveniência Cloudflare/MongoDB live');
 pass(gameplayProvenance.sourceFingerprint===currentSourceFingerprint,'gameplay stale: sourceFingerprint divergente');
 pass(gameplayProvenance.sourceFingerprint===live.sourceFingerprint,'gameplay não corresponde ao backend live validado');
+pass(gameplayProvenance.releaseFingerprint===currentReleaseFingerprint,'gameplay stale: releaseFingerprint divergente');
+pass(gameplayProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','gameplay sem coerência pública da release');
 pass(gameplayProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência gameplay não confirma Cloudflare/MongoDB Atlas');
 pass(gameplayProvenance.realtime==='cloudflare-durable-objects','proveniência gameplay não confirma Durable Objects');
 pass(gameplayProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência gameplay não confirma autoridade TERION V6');
@@ -120,5 +130,29 @@ pass(githubApi.includes('cloudflare-mongodb-durable-objects'),'r41-github-api n�
 
 const consumerFingerprints={account:accountProvenance.sourceFingerprint||null,browserAccount:browserAccountProvenance.sourceFingerprint||null,gameplay:gameplayProvenance.sourceFingerprint||null};
 const allConsumerFingerprintsMatch=[consumerFingerprints.account,consumerFingerprints.browserAccount,consumerFingerprints.gameplay].every(x=>x===currentSourceFingerprint&&x===String(live.sourceFingerprint||''));
-const report={generatedAt:new Date().toISOString(),gateVersion:GATE_VERSION,status:failures.length?'FAIL_FINAL_READINESS':'PASS_FINAL_READINESS',ok:failures.length===0,repository:'kaalflash12/naruto-shinobi-no-sho',publicGame:'https://kaalflash12.github.io/naruto-shinobi-no-sho/',backend:baked||null,stack:'GitHub Pages + Cloudflare Workers + MongoDB Atlas + Durable Objects + Workers AI',sourceFingerprint:{current:currentSourceFingerprint||null,live:String(live.sourceFingerprint||'')||null,match:Boolean(currentSourceFingerprint)&&String(live.sourceFingerprint||'')===currentSourceFingerprint,consumers:consumerFingerprints,allConsumersMatch:allConsumerFingerprintsMatch},gates:{canonical:canonical.status||null,documentation:documentation.status||null,operationalStatic:operational.status||null,assetPaths:operational.assetAudit?.status||null,browserSmoke:browserSmoke.status||null,liveBackend:live.status||null,browserLive:browserLive.status||null,accountLive:accountLive.status||null,browserAccount:browserAccount.status||null,gameplay:gameplay.status||null},coverage:{functions:canonical.counts?.functions,functionsWithExactCode:canonical.counts?.functionsWithExactCode,concreteUIActions:canonical.counts?.concreteUIActions,concreteUIActionsWithHandler:canonical.counts?.concreteUIActionsWithHandler,unresolvedConcreteUIActions:canonical.counts?.unresolvedConcreteUIActions,routes:canonical.counts?.routes,models:canonical.counts?.models,collections:canonical.counts?.collections,assetFiles:canonical.counts?.assetFiles,uniqueAssetReferences:documentation.staticCoverage?.uniqueAssetReferences,missingLiteralAssetReferences:documentation.staticCoverage?.missingLiteralAssetReferences},liveChecks:live.checks||{},accountChecks:accountLive.checks||{},browserAccountChecks:browserAccount.checks||{},gameplayContracts:gameplay.contracts||[],failures};
-fs.mkdirSync(path.join(ROOT,'audit'),{recursive:true});fs.writeFileSync(path.join(ROOT,'audit/FINAL-READINESS.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(!report.ok)process.exitCode=1;
+const consumerReleaseFingerprints={account:accountProvenance.releaseFingerprint||null,browserAccount:browserAccountProvenance.releaseFingerprint||null,gameplay:gameplayProvenance.releaseFingerprint||null};
+const allConsumerReleaseFingerprintsMatch=[consumerReleaseFingerprints.account,consumerReleaseFingerprints.browserAccount,consumerReleaseFingerprints.gameplay].every(x=>x===currentReleaseFingerprint);
+
+const report={
+  generatedAt:new Date().toISOString(),
+  gateVersion:GATE_VERSION,
+  status:failures.length?'FAIL_FINAL_READINESS':'PASS_FINAL_READINESS',
+  ok:failures.length===0,
+  repository:'kaalflash12/naruto-shinobi-no-sho',
+  publicGame:'https://kaalflash12.github.io/naruto-shinobi-no-sho/',
+  backend:baked||null,
+  stack:'GitHub Pages + Cloudflare Workers + MongoDB Atlas + Durable Objects + Workers AI',
+  sourceFingerprint:{current:currentSourceFingerprint||null,live:String(live.sourceFingerprint||'')||null,match:Boolean(currentSourceFingerprint)&&String(live.sourceFingerprint||'')===currentSourceFingerprint,consumers:consumerFingerprints,allConsumersMatch:allConsumerFingerprintsMatch},
+  releaseFingerprint:{current:currentReleaseFingerprint||null,consumers:consumerReleaseFingerprints,allConsumersMatch:allConsumerReleaseFingerprintsMatch},
+  gates:{canonical:canonical.status||null,documentation:documentation.status||null,operationalStatic:operational.status||null,assetPaths:operational.assetAudit?.status||null,browserSmoke:browserSmoke.status||null,liveBackend:live.status||null,browserLive:browserLive.status||null,accountLive:accountLive.status||null,browserAccount:browserAccount.status||null,gameplay:gameplay.status||null},
+  coverage:{functions:canonical.counts?.functions,functionsWithExactCode:canonical.counts?.functionsWithExactCode,concreteUIActions:canonical.counts?.concreteUIActions,concreteUIActionsWithHandler:canonical.counts?.concreteUIActionsWithHandler,unresolvedConcreteUIActions:canonical.counts?.unresolvedConcreteUIActions,routes:canonical.counts?.routes,models:canonical.counts?.models,collections:canonical.counts?.collections,assetFiles:canonical.counts?.assetFiles,uniqueAssetReferences:documentation.staticCoverage?.uniqueAssetReferences,missingLiteralAssetReferences:documentation.staticCoverage?.missingLiteralAssetReferences},
+  liveChecks:live.checks||{},
+  accountChecks:accountLive.checks||{},
+  browserAccountChecks:browserAccount.checks||{},
+  gameplayContracts:gameplay.contracts||[],
+  failures
+};
+fs.mkdirSync(path.join(ROOT,'audit'),{recursive:true});
+fs.writeFileSync(path.join(ROOT,'audit/FINAL-READINESS.json'),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));
+if(!report.ok)process.exitCode=1;

@@ -19,6 +19,7 @@ jobs:
       PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
       ACCOUNT_REPORT: audit/ACCOUNT-LIVE-E2E.json
       BROWSER_ACCOUNT_REPORT: audit/BROWSER-ACCOUNT-LIVE.json
+      PUBLIC_RELEASE_REPORT: audit/PUBLIC-RELEASE-COHERENCE.json
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -44,12 +45,14 @@ jobs:
           [[ "$api" =~ ^https:// ]] || exit 1
           if [[ "$api" =~ (supabase|vercel|turso) ]]; then echo 'Backend proibido.' >&2; exit 1; fi
           echo "API_ORIGIN=$api" >> "$GITHUB_ENV"
-      - name: Require fresh live backend fingerprint
+      - name: Require fresh live backend and release fingerprints
         shell: bash
         run: |
           set -euo pipefail
           fingerprint="$(node tools/live-source-fingerprint.mjs)"
+          release="$(node tools/release-source-fingerprint.mjs)"
           test "${#fingerprint}" -eq 64
+          test "${#release}" -eq 64
           SOURCE_FINGERPRINT="$fingerprint" node - <<'NODE'
           const fs=require('fs');
           const live=JSON.parse(fs.readFileSync('audit/LIVE-BACKEND.json','utf8'));
@@ -63,6 +66,7 @@ jobs:
           if(!api||!baked||api!==baked)throw new Error(`ACCOUNT_WORKER_MISMATCH baked=${baked||'null'} api=${api||'null'}`);
           NODE
           echo "SOURCE_FINGERPRINT=$fingerprint" >> "$GITHUB_ENV"
+          echo "RELEASE_FINGERPRINT=$release" >> "$GITHUB_ENV"
       - name: Syntax gates
         run: |
           node --check r41-api-config.js
@@ -71,23 +75,32 @@ jobs:
           node --check tools/account-live-e2e.mjs
           node --check tools/browser-account-live.mjs
           node --check tools/live-source-fingerprint.mjs
+          node --check tools/release-source-fingerprint.mjs
+          node --check tools/public-release-coherence.mjs
+          node --check tools/wait-public-release-coherence.mjs
       - name: Backend account lifecycle live
         run: node tools/account-live-e2e.mjs
       - name: Install Chromium
         run: |
           npm install --no-save --package-lock=false playwright@1.62.1
           npx playwright install --with-deps chromium
+      - name: Wait until GitHub Pages serves this exact release
+        run: node tools/wait-public-release-coherence.mjs
       - name: Browser account lifecycle on public site
         run: node tools/browser-account-live.mjs
-      - name: Bind account evidence to live backend fingerprint
+      - name: Bind account evidence to live backend and release fingerprints
         shell: bash
         run: |
           set -euo pipefail
           node - <<'NODE'
           const fs=require('fs');
           const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          const releaseFingerprint=String(process.env.RELEASE_FINGERPRINT||'').trim();
           const apiOrigin=String(process.env.API_ORIGIN||'').trim().replace(/\/+$/,'');
+          const coherence=JSON.parse(fs.readFileSync('audit/PUBLIC-RELEASE-COHERENCE.json','utf8'));
           if(!/^[a-f0-9]{64}$/.test(fingerprint))throw new Error('ACCOUNT_PROVENANCE_FINGERPRINT_INVALID');
+          if(!/^[a-f0-9]{64}$/.test(releaseFingerprint))throw new Error('ACCOUNT_PROVENANCE_RELEASE_FINGERPRINT_INVALID');
+          if(coherence?.ok!==true||coherence?.status!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error('ACCOUNT_PUBLIC_RELEASE_NOT_COHERENT');
           if(!/^https:\/\//i.test(apiOrigin))throw new Error('ACCOUNT_PROVENANCE_API_INVALID');
           const specs=[
             ['audit/ACCOUNT-LIVE-E2E.json','PASS_ACCOUNT_LIVE_E2E','ACCOUNT_LIVE_CLOUDFLARE_MONGODB'],
@@ -98,7 +111,7 @@ jobs:
             if(r?.ok!==true||r?.status!==status)throw new Error(`ACCOUNT_PROVENANCE_REPORT_NOT_PASS ${p} ${r?.status||'null'}`);
             const reportApi=String(r?.apiOrigin||'').replace(/\/+$/,'');
             if(reportApi!==apiOrigin)throw new Error(`ACCOUNT_PROVENANCE_API_MISMATCH ${p}`);
-            r.provenance={kind,sourceFingerprint:fingerprint,apiOrigin,backend:'cloudflare-workers-mongodb-atlas',realtime:'cloudflare-durable-objects',buildAuthority:'R41-AUTHORITATIVE-TERION-20260823-V6'};
+            r.provenance={kind,sourceFingerprint:fingerprint,releaseFingerprint,publicReleaseCoherence:'PASS_PUBLIC_RELEASE_COHERENCE',apiOrigin,backend:'cloudflare-workers-mongodb-atlas',realtime:'cloudflare-durable-objects',buildAuthority:'R41-AUTHORITATIVE-TERION-20260823-V6'};
             fs.writeFileSync(p,JSON.stringify(r,null,2)+'\n');
           }
           NODE
@@ -109,11 +122,15 @@ jobs:
           if(!a.ok||a.status!=='PASS_ACCOUNT_LIVE_E2E'||a.backend!=='cloudflare-workers-mongodb-atlas')throw new Error(JSON.stringify(a.failures||[]));
           if(!b.ok||b.status!=='PASS_BROWSER_ACCOUNT_LIVE'||b.backend!=='cloudflare-workers-mongodb-atlas')throw new Error(JSON.stringify(b.failures||[]));
           const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          const releaseFingerprint=String(process.env.RELEASE_FINGERPRINT||'').trim();
           const api=String(process.env.API_ORIGIN||'').replace(/\/+$/,'');
           if(!/^[a-f0-9]{64}$/.test(fingerprint))throw new Error('ACCOUNT_SOURCE_FINGERPRINT_INVALID');
+          if(!/^[a-f0-9]{64}$/.test(releaseFingerprint))throw new Error('ACCOUNT_RELEASE_FINGERPRINT_INVALID');
           for(const [name,r,kind] of [['backend',a,'ACCOUNT_LIVE_CLOUDFLARE_MONGODB'],['browser',b,'BROWSER_ACCOUNT_LIVE_CLOUDFLARE_MONGODB']]){
             if(r.provenance?.kind!==kind)throw new Error(`${name} provenance kind inválido`);
             if(r.provenance?.sourceFingerprint!==fingerprint)throw new Error(`${name} sourceFingerprint stale`);
+            if(r.provenance?.releaseFingerprint!==releaseFingerprint)throw new Error(`${name} releaseFingerprint stale`);
+            if(r.provenance?.publicReleaseCoherence!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error(`${name} public release coherence ausente`);
             if(String(r.provenance?.apiOrigin||'').replace(/\/+$/,'')!==api)throw new Error(`${name} apiOrigin provenance mismatch`);
             if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects'||r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error(`${name} provenance backend inválida`);
           }
@@ -121,7 +138,7 @@ jobs:
           const browser=['publicAccountUiLoaded','cloudflareBackendSelected','apiOriginConfigured','registerUi','recoveryCodeShown','sessionPersistsReload','accountButtonVisibleAfterReload','rotateRecoveryCodeUi','logoutUi','loginByEmailUi','deleteUi'];
           for(const k of backend)if(a.checks?.[k]!==true)throw new Error(`backend gate ausente: ${k}`);
           for(const k of browser)if(b.checks?.[k]!==true)throw new Error(`browser gate ausente: ${k}`);
-          console.log(a.status,b.status,'sourceFingerprint=',fingerprint);
+          console.log(a.status,b.status,'sourceFingerprint=',fingerprint,'releaseFingerprint=',releaseFingerprint);
           NODE
       - name: Upload account evidence
         if: always()
@@ -131,6 +148,7 @@ jobs:
           path: |
             audit/ACCOUNT-LIVE-E2E.json
             audit/BROWSER-ACCOUNT-LIVE.json
+            audit/PUBLIC-RELEASE-COHERENCE.json
           if-no-files-found: warn
       - name: Commit account evidence
         if: success() && github.ref == 'refs/heads/main'

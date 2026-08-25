@@ -1,0 +1,53 @@
+name: Sync Public Release Fingerprint
+
+on:
+  push:
+    branches:
+      - main
+      - fix/final-readiness-release-fingerprint-20260825
+    paths-ignore:
+      - 'PUBLIC-RELEASE-FINGERPRINT.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shinobi-sync-public-release-fingerprint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Calculate and write marker
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check tools/live-source-fingerprint.mjs
+          node --check tools/release-source-fingerprint.mjs
+          fingerprint="$(node tools/release-source-fingerprint.mjs)"
+          [[ "$fingerprint" =~ ^[a-f0-9]{64}$ ]]
+          printf '%s\n' "$fingerprint" > PUBLIC-RELEASE-FINGERPRINT.txt
+          echo "PUBLIC_RELEASE_FINGERPRINT=$fingerprint"
+      - name: Commit marker when stale
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add PUBLIC-RELEASE-FINGERPRINT.txt
+          if git diff --cached --quiet; then
+            echo 'PUBLIC_RELEASE_FINGERPRINT_CURRENT'
+            exit 0
+          fi
+          git commit -m 'chore: sync public release fingerprint'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
