@@ -22,12 +22,17 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Require fresh live backend fingerprint
+      - name: Require fresh live backend and release fingerprints
         shell: bash
         run: |
           set -euo pipefail
+          node --check tools/live-source-fingerprint.mjs
+          node --check tools/release-source-fingerprint.mjs
+          node --check tools/gameplay-live-provenance.mjs
           fingerprint="$(node tools/live-source-fingerprint.mjs)"
+          release="$(node tools/release-source-fingerprint.mjs)"
           test "${#fingerprint}" -eq 64
+          test "${#release}" -eq 64
           SOURCE_FINGERPRINT="$fingerprint" node - <<'NODE'
           const fs=require('fs');
           const live=JSON.parse(fs.readFileSync('audit/LIVE-BACKEND.json','utf8'));
@@ -37,6 +42,7 @@ jobs:
           if(String(live?.sourceFingerprint||'')!==current)throw new Error('GAMEPLAY_LIVE_BACKEND_STALE');
           NODE
           echo "SOURCE_FINGERPRINT=$fingerprint" >> "$GITHUB_ENV"
+          echo "RELEASE_FINGERPRINT=$release" >> "$GITHUB_ENV"
 
       - name: Install Playwright Chromium
         run: |
@@ -133,9 +139,11 @@ jobs:
           if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects')throw new Error('GAMEPLAY_LIVE_BACKEND_IDENTITY_INVALID');
           if(r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error('GAMEPLAY_LIVE_AUTHORITY_INVALID');
           const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
+          const releaseFingerprint=String(process.env.RELEASE_FINGERPRINT||'').trim();
           if(!/^[a-f0-9]{64}$/.test(fingerprint)||r.provenance?.sourceFingerprint!==fingerprint)throw new Error('GAMEPLAY_LIVE_SOURCE_FINGERPRINT_MISMATCH');
+          if(!/^[a-f0-9]{64}$/.test(releaseFingerprint)||r.provenance?.releaseFingerprint!==releaseFingerprint)throw new Error('GAMEPLAY_RELEASE_FINGERPRINT_MISMATCH');
           const api=String(process.env.API_ORIGIN||'').replace(/\/+$/,'');
           if(!api||String(r.provenance?.apiOrigin||'').replace(/\/+$/,'')!==api)throw new Error('GAMEPLAY_LIVE_API_ORIGIN_MISMATCH');
           if(!Array.isArray(r.contracts)||r.contracts.length<11||r.contracts.some(x=>x.status!=='PASS_GAMEPLAY_E2E'))throw new Error('11 gameplay contracts not proven');
-          console.log(r.status,'contracts=',r.contracts.length,'provenance=',r.provenance.kind,'sourceFingerprint=',fingerprint);
+          console.log(r.status,'contracts=',r.contracts.length,'provenance=',r.provenance.kind,'sourceFingerprint=',fingerprint,'releaseFingerprint=',releaseFingerprint);
           NODE
