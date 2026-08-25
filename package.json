@@ -5,7 +5,7 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "docs:generate": "node tools/generate-technical-spec.mjs && node tools/ast-index-functions.mjs && node tools/refine-technical-spec.mjs && node tools/reconcile-asset-references.mjs",
-    "docs:audit": "node tools/audit-documentation-coverage.mjs && node tools/audit-operational-static-contracts.mjs && node tools/finalize-canonical-ui-trace.mjs && node tools/repair-canonical-markdown-after-trace.mjs && node tools/audit-final-canonical-spec.mjs",
+    "docs:audit": "node tools/audit-ast-function-index.mjs && node tools/audit-documentation-coverage.mjs && node tools/audit-operational-static-contracts.mjs && node tools/finalize-canonical-ui-trace.mjs && node tools/repair-canonical-markdown-after-trace.mjs && node tools/audit-final-canonical-spec.mjs",
     "docs:check": "npm run docs:generate && npm run docs:audit",
     "check:assets": "node tools/audit-r41-assets.mjs",
     "check:terion": "node cloudflare/r41-api/test/terion-mechanics.test.mjs",
