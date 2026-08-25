@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T00:11:20.244Z",
+  "generatedAt": "2026-08-25T00:23:12.956Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt7wshul2ck2l",
-  "slotId": "gameplay-mt7wshul",
+  "temporaryAccount": "play_mt7x7stnyml4w",
+  "slotId": "gameplay-mt7x7stn",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,8 +15,7 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true,
-    "temporaryAccountDeleted": true
+    "allOperationalContractsGameplayE2E": true
   },
   "contracts": [
     {
@@ -97,11 +96,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787616650872,
+          "at": 1787617364784,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 15,
+          "total": 26,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +122,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 36,
-          "enemyHpAfter": 36,
+          "enemyHpBefore": 26,
+          "enemyHpAfter": 26,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,9 +147,9 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 305,
+          "score": 306,
           "success": false,
-          "errors": 4,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
             "impreciso",
@@ -171,7 +170,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt7wshul2ck2l",
+        "intent": "Cobrir saída E2E mt7x7stnyml4w",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +189,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787616659949,
-        "cloudAt": 1787616648259,
+        "localAt": 1787617373920,
+        "cloudAt": 1787617362287,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
@@ -212,17 +211,6 @@
   ],
   "evidence": {},
   "pageErrors": [],
-  "consoleErrors": [
-    "HTTP_404 http://127.0.0.1:4173/assets/ui_v8/events/cards/event_07.jpg",
-    "Failed to load resource: the server responded with a status of 404 (File not found)",
-    "HTTP_404 http://127.0.0.1:4173/assets/ui_v8/events/cards/event_07.jpg",
-    "Failed to load resource: the server responded with a status of 404 (File not found)",
-    "HTTP_404 http://127.0.0.1:4173/assets/ui_v8/events/cards/event_07.jpg",
-    "Failed to load resource: the server responded with a status of 404 (File not found)",
-    "HTTP_404 http://127.0.0.1:4173/assets/ui_v8/events/cards/event_07.jpg",
-    "Failed to load resource: the server responded with a status of 404 (File not found)",
-    "HTTP_404 http://127.0.0.1:4173/assets/ui_v8/events/cards/event_07.jpg",
-    "Failed to load resource: the server responded with a status of 404 (File not found)"
-  ],
+  "consoleErrors": [],
   "failures": []
 }
