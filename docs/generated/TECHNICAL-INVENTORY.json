@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-25T10:07:41.564Z",
+  "generatedAt": "2026-08-25T10:41:09.049Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5561,
-    "runtimeFiles": 98,
+    "files": 5569,
+    "runtimeFiles": 104,
     "assetFiles": 5434,
-    "textFiles": 122,
-    "functions": 3335,
+    "textFiles": 130,
+    "functions": 3358,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -21,14 +21,14 @@
     "scriptTags": 38,
     "assetReferences": 15816,
     "missingLiteralAssetReferences": 0,
-    "astParsedJsFiles": 74,
+    "astParsedJsFiles": 80,
     "astParseFailures": 0,
     "gameRuntimeFunctions": 2912,
-    "toolingFunctions": 423,
+    "toolingFunctions": 446,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 112,
+    "sourceFiles": 119,
     "gameRuntimeSourceFiles": 67,
-    "toolingSourceFiles": 45,
+    "toolingSourceFiles": 52,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -45,16 +45,16 @@
     },
     {
       "path": ".github/workflows/account-live-e2e.yml",
-      "size": 8221,
-      "sha256": "1f64bbc603c71836cda55e770b050d85c913b35191a76cb8974244bd6de224b2",
+      "size": 9864,
+      "sha256": "803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
-      "size": 6059,
-      "sha256": "685c944f12516281e3c83cb57188ff4d93b072e206d18fe0b17f4a571541a49f",
+      "size": 5055,
+      "sha256": "eedecc17c6458fc8a2e5b700b7c8a3d7abef010be0b747e1f5c587df17fe17ec",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -69,8 +69,8 @@
     },
     {
       "path": ".github/workflows/browser-gameplay-e2e.yml",
-      "size": 7431,
-      "sha256": "961e0b7b33c290eabe0b25494176ba2682a52d55e5b85204a7475024fbddd825",
+      "size": 8763,
+      "sha256": "ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -85,16 +85,16 @@
     },
     {
       "path": ".github/workflows/final-readiness-orchestration.yml",
-      "size": 5545,
-      "sha256": "3cd488ca27c35b9630bcb88079276d8952515f16f3a6ce558cfe5f2cb760dd41",
+      "size": 1612,
+      "sha256": "b6066a2bc1d120eb8ae201c3d14a7972edb8231fbc63f8d9a774b79f5453b531",
       "extension": ".yml",
       "runtime": false,
       "asset": false
     },
     {
       "path": ".github/workflows/final-readiness.yml",
-      "size": 7412,
-      "sha256": "32726b70e31d284a2a292b37b5081c4fbf12e41677f7cd180ed6166d5266a01f",
+      "size": 3417,
+      "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -127,6 +127,14 @@
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 6129,
       "sha256": "ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/sync-public-release-fingerprint.yml",
+      "size": 1669,
+      "sha256": "62cac276c37a871fb758da7e26ef77925bfa2169b3a11bb4cac580effd55012c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43630,7 +43638,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "36f4a9741acbd9e867ac4ee501df4c5e42f89af26f268ac07bdd875880e49f1c",
+      "sha256": "7b08d6a619557f1e854e6441aee356f65cde160864ee109ad50ba954ded19f22",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43638,7 +43646,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "efb19552e859cc941cd58148f3f78b3b7c96bd1806f88ee4f8c98adb69db20bd",
+      "sha256": "d5ede9c11af95f590dc1a04eec42040e9237256782c5ef4d46df62d5279d3ac0",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44141,10 +44149,18 @@
     },
     {
       "path": "package.json",
-      "size": 1990,
-      "sha256": "602ae0839d72cb725649773cdc11c172e8519f53776022d9ba55870e22c63b67",
+      "size": 2508,
+      "sha256": "78b24477095a3c25af50116b005eeaa2410c1138568f90bd32e04d4a137529bd",
       "extension": ".json",
       "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
+      "size": 65,
+      "sha256": "cf4845cb2629e7db3c63018267d698b1d157a18f41a06e88de1141a084b5aa3e",
+      "extension": ".txt",
+      "runtime": false,
       "asset": false
     },
     {
@@ -44356,6 +44372,14 @@
       "asset": false
     },
     {
+      "path": "tools/backend-presence-audit.mjs",
+      "size": 5210,
+      "sha256": "2f03afd56e00d98202d117e36206a6ab25a5d2fd523f4925a58742a153f13efb",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "tools/browser-account-live.mjs",
       "size": 5191,
       "sha256": "1d62144ef47d69f22aa9c8efac15adfb66e8c25abda0a89d8928dd78b0552f2f",
@@ -44436,9 +44460,25 @@
       "asset": false
     },
     {
+      "path": "tools/check-public-release-fingerprint.mjs",
+      "size": 671,
+      "sha256": "3975608c3849c9722d06b95a3abf02550c1435e0c0941756fac6b39c70916403",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/final-readiness-orchestration-gate.mjs",
+      "size": 5155,
+      "sha256": "ba380e2557e8663468b3b29c473ff9d7199461def6774735b4c06be16079dabd",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "tools/final-readiness.mjs",
-      "size": 15174,
-      "sha256": "201f30ceb145130dad542b689d5f8b47d6fe39104c99635fb0f1f0d5da87e3a9",
+      "size": 16885,
+      "sha256": "26be0a81bd86020b139502a6b7bfab5fb2edc3939f2d567966fb911105f6bfb1",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44453,8 +44493,8 @@
     },
     {
       "path": "tools/gameplay-live-provenance.mjs",
-      "size": 2125,
-      "sha256": "4a5cdf072bdb240db6583c0ee05832f8d6c39b27a66bd94f68b3fb7cce0d4c0c",
+      "size": 2894,
+      "sha256": "c23c9f1d69ce7e1bd5f648b28464972dd7101c9f0bd8f9a3cd142db1e0f3bdb3",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44484,6 +44524,14 @@
       "asset": false
     },
     {
+      "path": "tools/public-release-coherence.mjs",
+      "size": 2950,
+      "sha256": "48b817fee7eb0e6c0a36eb02fb0f964257e863dd94b7611ece70db6fab93131d",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "tools/reconcile-asset-references.mjs",
       "size": 4671,
       "sha256": "50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11",
@@ -44495,6 +44543,14 @@
       "path": "tools/refine-technical-spec.mjs",
       "size": 12478,
       "sha256": "36ca9a7dbcf3637489252d8003f88f1c17b60e7747a002e842885345332311e4",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/release-source-fingerprint.mjs",
+      "size": 2465,
+      "sha256": "05a9412b64a1a8d36bf535fd87dbc3d5c30a15e56dd66d19ad4ebbdb5180043d",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44519,6 +44575,14 @@
       "path": "tools/test-online-bridge-recovery.mjs",
       "size": 4000,
       "sha256": "1554980f4f7c58fdf6ef38d3d46dbd45c4c0c8259b8e7fabbf27dab0e6ee8686",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "tools/wait-public-release-coherence.mjs",
+      "size": 927,
+      "sha256": "b6d9ef843506a2a7eb120574f1474c9ae25061f27ef5f7f07b841118478e6669",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -182141,6 +182205,182 @@
       "domain": "tooling"
     },
     {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 3,
+      "endLine": 3,
+      "column": 10,
+      "endColumn": 61,
+      "name": "has",
+      "kind": "arrow",
+      "params": "name",
+      "calls": [
+        "Boolean",
+        "String().trim",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 37,
+        "end": 88,
+        "bodyStart": 43,
+        "bodyEnd": 88,
+        "functionSha256": "41b2477c63488a03e8fe87255d545d79606b9dbbdf5c494eb895ea59ac0da11f",
+        "bodySha256": "8369f7d43db129fa64135bc2080fad928a6cba2b97f2c97aa075baf8558fda20",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-02983",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 4,
+      "endLine": 4,
+      "column": 13,
+      "endColumn": 60,
+      "name": "isHash",
+      "kind": "arrow",
+      "params": "value",
+      "calls": [
+        "/^[a-f0-9]{64}$/.test",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 103,
+        "end": 150,
+        "bodyStart": 110,
+        "bodyEnd": 150,
+        "functionSha256": "31e8ebff396ff889ffeeed614bcd839d57ad5b7212793a3ef181ccc2405b5ce4",
+        "bodySha256": "27f96ba28d7085b45570a0c8ee29d5bd1577ddd76757891fa8c1ebd965bd933f",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-02984",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 5,
+      "endLine": 5,
+      "column": 11,
+      "endColumn": 85,
+      "name": "read",
+      "kind": "arrow",
+      "params": "p",
+      "calls": [
+        "JSON.parse",
+        "fs.readFileSync"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 163,
+        "end": 237,
+        "bodyStart": 166,
+        "bodyEnd": 237,
+        "functionSha256": "1f08420ce84801fb58ad1272533896b1e1b615d86a027484bf3b335e975303de",
+        "bodySha256": "b2ba630c6b6eecd323484f703f58079dc8f088c6ec5ad69b5e8dfa8d54902b9f",
+        "async": false,
+        "generator": false,
+        "expressionBody": false,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-02985",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 71,
+      "endLine": 71,
+      "column": 15,
+      "endColumn": 454,
+      "name": "semantic",
+      "kind": "arrow",
+      "params": "r",
+      "calls": [
+        "JSON.stringify"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 4161,
+        "end": 4600,
+        "bodyStart": 4164,
+        "bodyEnd": 4600,
+        "functionSha256": "d66cd3e8335f26150d2d6c3563e322e6ad42d420949117d17ee9b079c94cb2a3",
+        "bodySha256": "31e9578c4dfeb3fd465669d1313194ecb9b423c966dfefa4ba9597f5b0783b44",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-02986",
+      "domain": "tooling"
+    },
+    {
       "file": "tools/browser-account-live.mjs",
       "line": 11,
       "endLine": 11,
@@ -182180,7 +182420,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-02983",
+      "id": "FUNC-02987",
       "domain": "tooling"
     },
     {
@@ -182224,7 +182464,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02984",
+      "id": "FUNC-02988",
       "domain": "tooling"
     },
     {
@@ -182269,7 +182509,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02985",
+      "id": "FUNC-02989",
       "domain": "tooling"
     },
     {
@@ -182310,7 +182550,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02986",
+      "id": "FUNC-02990",
       "domain": "tooling"
     },
     {
@@ -182351,7 +182591,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02987",
+      "id": "FUNC-02991",
       "domain": "tooling"
     },
     {
@@ -182392,7 +182632,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02988",
+      "id": "FUNC-02992",
       "domain": "tooling"
     },
     {
@@ -182436,7 +182676,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02989",
+      "id": "FUNC-02993",
       "domain": "tooling"
     },
     {
@@ -182479,7 +182719,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02990",
+      "id": "FUNC-02994",
       "domain": "tooling"
     },
     {
@@ -182522,7 +182762,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02991",
+      "id": "FUNC-02995",
       "domain": "tooling"
     },
     {
@@ -182563,7 +182803,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02992",
+      "id": "FUNC-02996",
       "domain": "tooling"
     },
     {
@@ -182604,7 +182844,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02993",
+      "id": "FUNC-02997",
       "domain": "tooling"
     },
     {
@@ -182647,7 +182887,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02994",
+      "id": "FUNC-02998",
       "domain": "tooling"
     },
     {
@@ -182690,7 +182930,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02995",
+      "id": "FUNC-02999",
       "domain": "tooling"
     },
     {
@@ -182733,7 +182973,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02996",
+      "id": "FUNC-03000",
       "domain": "tooling"
     },
     {
@@ -182777,7 +183017,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02997",
+      "id": "FUNC-03001",
       "domain": "tooling"
     },
     {
@@ -182824,7 +183064,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02998",
+      "id": "FUNC-03002",
       "domain": "tooling"
     },
     {
@@ -182871,7 +183111,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02999",
+      "id": "FUNC-03003",
       "domain": "tooling"
     },
     {
@@ -182923,7 +183163,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03000",
+      "id": "FUNC-03004",
       "domain": "tooling"
     },
     {
@@ -182967,7 +183207,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03001",
+      "id": "FUNC-03005",
       "domain": "tooling"
     },
     {
@@ -183015,7 +183255,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03002",
+      "id": "FUNC-03006",
       "domain": "tooling"
     },
     {
@@ -183056,7 +183296,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03003",
+      "id": "FUNC-03007",
       "domain": "tooling"
     },
     {
@@ -183106,7 +183346,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03004",
+      "id": "FUNC-03008",
       "domain": "tooling"
     },
     {
@@ -183151,7 +183391,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03005",
+      "id": "FUNC-03009",
       "domain": "tooling"
     },
     {
@@ -183194,7 +183434,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03006",
+      "id": "FUNC-03010",
       "domain": "tooling"
     },
     {
@@ -183238,7 +183478,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03007",
+      "id": "FUNC-03011",
       "domain": "tooling"
     },
     {
@@ -183279,7 +183519,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03008",
+      "id": "FUNC-03012",
       "domain": "tooling"
     },
     {
@@ -183322,7 +183562,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-03009",
+      "id": "FUNC-03013",
       "domain": "tooling"
     },
     {
@@ -183372,7 +183612,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03010",
+      "id": "FUNC-03014",
       "domain": "tooling"
     },
     {
@@ -183415,7 +183655,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03011",
+      "id": "FUNC-03015",
       "domain": "tooling"
     },
     {
@@ -183479,7 +183719,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-03012",
+      "id": "FUNC-03016",
       "domain": "tooling"
     },
     {
@@ -183524,7 +183764,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03013",
+      "id": "FUNC-03017",
       "domain": "tooling"
     },
     {
@@ -183571,7 +183811,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03014",
+      "id": "FUNC-03018",
       "domain": "tooling"
     },
     {
@@ -183643,7 +183883,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-03015",
+      "id": "FUNC-03019",
       "domain": "tooling"
     },
     {
@@ -183691,7 +183931,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03016",
+      "id": "FUNC-03020",
       "domain": "tooling"
     },
     {
@@ -183732,7 +183972,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03017",
+      "id": "FUNC-03021",
       "domain": "tooling"
     },
     {
@@ -183779,7 +184019,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03018",
+      "id": "FUNC-03022",
       "domain": "tooling"
     },
     {
@@ -183820,7 +184060,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03019",
+      "id": "FUNC-03023",
       "domain": "tooling"
     },
     {
@@ -183863,7 +184103,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03020",
+      "id": "FUNC-03024",
       "domain": "tooling"
     },
     {
@@ -183904,7 +184144,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03021",
+      "id": "FUNC-03025",
       "domain": "tooling"
     },
     {
@@ -183948,7 +184188,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03022",
+      "id": "FUNC-03026",
       "domain": "tooling"
     },
     {
@@ -183992,7 +184232,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03023",
+      "id": "FUNC-03027",
       "domain": "tooling"
     },
     {
@@ -184035,7 +184275,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03024",
+      "id": "FUNC-03028",
       "domain": "tooling"
     },
     {
@@ -184076,7 +184316,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03025",
+      "id": "FUNC-03029",
       "domain": "tooling"
     },
     {
@@ -184117,7 +184357,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03026",
+      "id": "FUNC-03030",
       "domain": "tooling"
     },
     {
@@ -184160,7 +184400,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03027",
+      "id": "FUNC-03031",
       "domain": "tooling"
     },
     {
@@ -184201,7 +184441,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03028",
+      "id": "FUNC-03032",
       "domain": "tooling"
     },
     {
@@ -184252,7 +184492,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03029",
+      "id": "FUNC-03033",
       "domain": "tooling"
     },
     {
@@ -184297,7 +184537,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03030",
+      "id": "FUNC-03034",
       "domain": "tooling"
     },
     {
@@ -184340,7 +184580,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03031",
+      "id": "FUNC-03035",
       "domain": "tooling"
     },
     {
@@ -184385,7 +184625,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03032",
+      "id": "FUNC-03036",
       "domain": "tooling"
     },
     {
@@ -184444,7 +184684,7 @@
         "parentIndex": 13,
         "eventTypes": []
       },
-      "id": "FUNC-03033",
+      "id": "FUNC-03037",
       "domain": "tooling"
     },
     {
@@ -184496,7 +184736,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03034",
+      "id": "FUNC-03038",
       "domain": "tooling"
     },
     {
@@ -184542,7 +184782,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03035",
+      "id": "FUNC-03039",
       "domain": "tooling"
     },
     {
@@ -184585,7 +184825,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03036",
+      "id": "FUNC-03040",
       "domain": "tooling"
     },
     {
@@ -184626,7 +184866,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03037",
+      "id": "FUNC-03041",
       "domain": "tooling"
     },
     {
@@ -184701,7 +184941,7 @@
         "parentIndex": 5,
         "eventTypes": []
       },
-      "id": "FUNC-03038",
+      "id": "FUNC-03042",
       "domain": "tooling"
     },
     {
@@ -184749,7 +184989,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03039",
+      "id": "FUNC-03043",
       "domain": "tooling"
     },
     {
@@ -184790,7 +185030,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03040",
+      "id": "FUNC-03044",
       "domain": "tooling"
     },
     {
@@ -184837,7 +185077,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03041",
+      "id": "FUNC-03045",
       "domain": "tooling"
     },
     {
@@ -184878,7 +185118,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03042",
+      "id": "FUNC-03046",
       "domain": "tooling"
     },
     {
@@ -184921,7 +185161,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03043",
+      "id": "FUNC-03047",
       "domain": "tooling"
     },
     {
@@ -184962,7 +185202,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03044",
+      "id": "FUNC-03048",
       "domain": "tooling"
     },
     {
@@ -185006,7 +185246,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03045",
+      "id": "FUNC-03049",
       "domain": "tooling"
     },
     {
@@ -185050,7 +185290,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03046",
+      "id": "FUNC-03050",
       "domain": "tooling"
     },
     {
@@ -185093,7 +185333,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03047",
+      "id": "FUNC-03051",
       "domain": "tooling"
     },
     {
@@ -185134,7 +185374,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03048",
+      "id": "FUNC-03052",
       "domain": "tooling"
     },
     {
@@ -185175,7 +185415,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03049",
+      "id": "FUNC-03053",
       "domain": "tooling"
     },
     {
@@ -185218,7 +185458,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03050",
+      "id": "FUNC-03054",
       "domain": "tooling"
     },
     {
@@ -185259,7 +185499,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03051",
+      "id": "FUNC-03055",
       "domain": "tooling"
     },
     {
@@ -185310,7 +185550,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03052",
+      "id": "FUNC-03056",
       "domain": "tooling"
     },
     {
@@ -185355,7 +185595,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03053",
+      "id": "FUNC-03057",
       "domain": "tooling"
     },
     {
@@ -185398,7 +185638,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03054",
+      "id": "FUNC-03058",
       "domain": "tooling"
     },
     {
@@ -185445,7 +185685,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03055",
+      "id": "FUNC-03059",
       "domain": "tooling"
     },
     {
@@ -185488,7 +185728,7 @@
         "parentIndex": 15,
         "eventTypes": []
       },
-      "id": "FUNC-03056",
+      "id": "FUNC-03060",
       "domain": "tooling"
     },
     {
@@ -185529,7 +185769,7 @@
         "parentIndex": 16,
         "eventTypes": []
       },
-      "id": "FUNC-03057",
+      "id": "FUNC-03061",
       "domain": "tooling"
     },
     {
@@ -185573,7 +185813,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03058",
+      "id": "FUNC-03062",
       "domain": "tooling"
     },
     {
@@ -185616,7 +185856,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03059",
+      "id": "FUNC-03063",
       "domain": "tooling"
     },
     {
@@ -185659,7 +185899,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03060",
+      "id": "FUNC-03064",
       "domain": "tooling"
     },
     {
@@ -185702,7 +185942,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03061",
+      "id": "FUNC-03065",
       "domain": "tooling"
     },
     {
@@ -185743,7 +185983,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03062",
+      "id": "FUNC-03066",
       "domain": "tooling"
     },
     {
@@ -185787,7 +186027,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03063",
+      "id": "FUNC-03067",
       "domain": "tooling"
     },
     {
@@ -185830,7 +186070,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03064",
+      "id": "FUNC-03068",
       "domain": "tooling"
     },
     {
@@ -185873,7 +186113,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03065",
+      "id": "FUNC-03069",
       "domain": "tooling"
     },
     {
@@ -185916,7 +186156,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03066",
+      "id": "FUNC-03070",
       "domain": "tooling"
     },
     {
@@ -185959,7 +186199,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-03067",
+      "id": "FUNC-03071",
       "domain": "tooling"
     },
     {
@@ -186006,7 +186246,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-03068",
+      "id": "FUNC-03072",
       "domain": "tooling"
     },
     {
@@ -186063,7 +186303,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-03069",
+      "id": "FUNC-03073",
       "domain": "tooling"
     },
     {
@@ -186119,7 +186359,7 @@
         "parentIndex": 26,
         "eventTypes": []
       },
-      "id": "FUNC-03070",
+      "id": "FUNC-03074",
       "domain": "tooling"
     },
     {
@@ -186164,7 +186404,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03071",
+      "id": "FUNC-03075",
       "domain": "tooling"
     },
     {
@@ -186214,7 +186454,7 @@
         "parentIndex": 27,
         "eventTypes": []
       },
-      "id": "FUNC-03072",
+      "id": "FUNC-03076",
       "domain": "tooling"
     },
     {
@@ -186258,7 +186498,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03073",
+      "id": "FUNC-03077",
       "domain": "tooling"
     },
     {
@@ -186299,7 +186539,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03074",
+      "id": "FUNC-03078",
       "domain": "tooling"
     },
     {
@@ -186433,7 +186673,7 @@
         "parentIndex": 28,
         "eventTypes": []
       },
-      "id": "FUNC-03075",
+      "id": "FUNC-03079",
       "domain": "tooling"
     },
     {
@@ -186476,7 +186716,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03076",
+      "id": "FUNC-03080",
       "domain": "tooling"
     },
     {
@@ -186517,7 +186757,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03077",
+      "id": "FUNC-03081",
       "domain": "tooling"
     },
     {
@@ -186558,7 +186798,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03078",
+      "id": "FUNC-03082",
       "domain": "tooling"
     },
     {
@@ -186599,7 +186839,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03079",
+      "id": "FUNC-03083",
       "domain": "tooling"
     },
     {
@@ -186640,7 +186880,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03080",
+      "id": "FUNC-03084",
       "domain": "tooling"
     },
     {
@@ -186681,7 +186921,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03081",
+      "id": "FUNC-03085",
       "domain": "tooling"
     },
     {
@@ -186722,7 +186962,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03082",
+      "id": "FUNC-03086",
       "domain": "tooling"
     },
     {
@@ -186765,7 +187005,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03083",
+      "id": "FUNC-03087",
       "domain": "tooling"
     },
     {
@@ -186806,7 +187046,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03084",
+      "id": "FUNC-03088",
       "domain": "tooling"
     },
     {
@@ -186847,7 +187087,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03085",
+      "id": "FUNC-03089",
       "domain": "tooling"
     },
     {
@@ -186890,7 +187130,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03086",
+      "id": "FUNC-03090",
       "domain": "tooling"
     },
     {
@@ -186937,7 +187177,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03087",
+      "id": "FUNC-03091",
       "domain": "tooling"
     },
     {
@@ -186978,7 +187218,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03088",
+      "id": "FUNC-03092",
       "domain": "tooling"
     },
     {
@@ -187019,7 +187259,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03089",
+      "id": "FUNC-03093",
       "domain": "tooling"
     },
     {
@@ -187086,7 +187326,7 @@
         "parentIndex": 29,
         "eventTypes": []
       },
-      "id": "FUNC-03090",
+      "id": "FUNC-03094",
       "domain": "tooling"
     },
     {
@@ -187130,7 +187370,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03091",
+      "id": "FUNC-03095",
       "domain": "tooling"
     },
     {
@@ -187171,7 +187411,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03092",
+      "id": "FUNC-03096",
       "domain": "tooling"
     },
     {
@@ -187215,7 +187455,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03093",
+      "id": "FUNC-03097",
       "domain": "tooling"
     },
     {
@@ -187268,7 +187508,7 @@
         "parentIndex": 30,
         "eventTypes": []
       },
-      "id": "FUNC-03094",
+      "id": "FUNC-03098",
       "domain": "tooling"
     },
     {
@@ -187311,7 +187551,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03095",
+      "id": "FUNC-03099",
       "domain": "tooling"
     },
     {
@@ -187355,7 +187595,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03096",
+      "id": "FUNC-03100",
       "domain": "tooling"
     },
     {
@@ -187400,7 +187640,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03097",
+      "id": "FUNC-03101",
       "domain": "tooling"
     },
     {
@@ -187441,7 +187681,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03098",
+      "id": "FUNC-03102",
       "domain": "tooling"
     },
     {
@@ -187484,7 +187724,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03099",
+      "id": "FUNC-03103",
       "domain": "tooling"
     },
     {
@@ -187527,7 +187767,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03100",
+      "id": "FUNC-03104",
       "domain": "tooling"
     },
     {
@@ -187571,7 +187811,7 @@
         "parentIndex": 7,
         "eventTypes": []
       },
-      "id": "FUNC-03101",
+      "id": "FUNC-03105",
       "domain": "tooling"
     },
     {
@@ -187615,7 +187855,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03102",
+      "id": "FUNC-03106",
       "domain": "tooling"
     },
     {
@@ -187660,7 +187900,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03103",
+      "id": "FUNC-03107",
       "domain": "tooling"
     },
     {
@@ -187701,7 +187941,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03104",
+      "id": "FUNC-03108",
       "domain": "tooling"
     },
     {
@@ -187742,7 +187982,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03105",
+      "id": "FUNC-03109",
       "domain": "tooling"
     },
     {
@@ -187783,7 +188023,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03106",
+      "id": "FUNC-03110",
       "domain": "tooling"
     },
     {
@@ -187828,7 +188068,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03107",
+      "id": "FUNC-03111",
       "domain": "tooling"
     },
     {
@@ -187872,7 +188112,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03108",
+      "id": "FUNC-03112",
       "domain": "tooling"
     },
     {
@@ -187915,7 +188155,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03109",
+      "id": "FUNC-03113",
       "domain": "tooling"
     },
     {
@@ -187958,7 +188198,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03110",
+      "id": "FUNC-03114",
       "domain": "tooling"
     },
     {
@@ -188002,7 +188242,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03111",
+      "id": "FUNC-03115",
       "domain": "tooling"
     },
     {
@@ -188046,7 +188286,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03112",
+      "id": "FUNC-03116",
       "domain": "tooling"
     },
     {
@@ -188091,7 +188331,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03113",
+      "id": "FUNC-03117",
       "domain": "tooling"
     },
     {
@@ -188138,7 +188378,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03114",
+      "id": "FUNC-03118",
       "domain": "tooling"
     },
     {
@@ -188185,7 +188425,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03115",
+      "id": "FUNC-03119",
       "domain": "tooling"
     },
     {
@@ -188226,7 +188466,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03116",
+      "id": "FUNC-03120",
       "domain": "tooling"
     },
     {
@@ -188267,7 +188507,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03117",
+      "id": "FUNC-03121",
       "domain": "tooling"
     },
     {
@@ -188314,7 +188554,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03118",
+      "id": "FUNC-03122",
       "domain": "tooling"
     },
     {
@@ -188361,7 +188601,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03119",
+      "id": "FUNC-03123",
       "domain": "tooling"
     },
     {
@@ -188404,7 +188644,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03120",
+      "id": "FUNC-03124",
       "domain": "tooling"
     },
     {
@@ -188449,7 +188689,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03121",
+      "id": "FUNC-03125",
       "domain": "tooling"
     },
     {
@@ -188492,7 +188732,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03122",
+      "id": "FUNC-03126",
       "domain": "tooling"
     },
     {
@@ -188537,7 +188777,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03123",
+      "id": "FUNC-03127",
       "domain": "tooling"
     },
     {
@@ -188581,7 +188821,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03124",
+      "id": "FUNC-03128",
       "domain": "tooling"
     },
     {
@@ -188625,7 +188865,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03125",
+      "id": "FUNC-03129",
       "domain": "tooling"
     },
     {
@@ -188672,7 +188912,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03126",
+      "id": "FUNC-03130",
       "domain": "tooling"
     },
     {
@@ -188716,7 +188956,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03127",
+      "id": "FUNC-03131",
       "domain": "tooling"
     },
     {
@@ -188760,7 +189000,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03128",
+      "id": "FUNC-03132",
       "domain": "tooling"
     },
     {
@@ -188803,7 +189043,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03129",
+      "id": "FUNC-03133",
       "domain": "tooling"
     },
     {
@@ -188847,7 +189087,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03130",
+      "id": "FUNC-03134",
       "domain": "tooling"
     },
     {
@@ -188895,7 +189135,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03131",
+      "id": "FUNC-03135",
       "domain": "tooling"
     },
     {
@@ -188936,7 +189176,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03132",
+      "id": "FUNC-03136",
       "domain": "tooling"
     },
     {
@@ -188977,7 +189217,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03133",
+      "id": "FUNC-03137",
       "domain": "tooling"
     },
     {
@@ -189036,7 +189276,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-03134",
+      "id": "FUNC-03138",
       "domain": "tooling"
     },
     {
@@ -189079,7 +189319,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03135",
+      "id": "FUNC-03139",
       "domain": "tooling"
     },
     {
@@ -189120,7 +189360,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03136",
+      "id": "FUNC-03140",
       "domain": "tooling"
     },
     {
@@ -189163,7 +189403,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03137",
+      "id": "FUNC-03141",
       "domain": "tooling"
     },
     {
@@ -189204,7 +189444,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03138",
+      "id": "FUNC-03142",
       "domain": "tooling"
     },
     {
@@ -189249,7 +189489,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03139",
+      "id": "FUNC-03143",
       "domain": "tooling"
     },
     {
@@ -189290,7 +189530,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03140",
+      "id": "FUNC-03144",
       "domain": "tooling"
     },
     {
@@ -189331,7 +189571,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03141",
+      "id": "FUNC-03145",
       "domain": "tooling"
     },
     {
@@ -189376,7 +189616,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03142",
+      "id": "FUNC-03146",
       "domain": "tooling"
     },
     {
@@ -189417,7 +189657,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03143",
+      "id": "FUNC-03147",
       "domain": "tooling"
     },
     {
@@ -189458,7 +189698,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03144",
+      "id": "FUNC-03148",
       "domain": "tooling"
     },
     {
@@ -189499,7 +189739,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03145",
+      "id": "FUNC-03149",
       "domain": "tooling"
     },
     {
@@ -189540,7 +189780,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03146",
+      "id": "FUNC-03150",
       "domain": "tooling"
     },
     {
@@ -189581,7 +189821,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03147",
+      "id": "FUNC-03151",
       "domain": "tooling"
     },
     {
@@ -189622,7 +189862,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03148",
+      "id": "FUNC-03152",
       "domain": "tooling"
     },
     {
@@ -189663,7 +189903,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03149",
+      "id": "FUNC-03153",
       "domain": "tooling"
     },
     {
@@ -189704,7 +189944,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03150",
+      "id": "FUNC-03154",
       "domain": "tooling"
     },
     {
@@ -189745,7 +189985,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03151",
+      "id": "FUNC-03155",
       "domain": "tooling"
     },
     {
@@ -189786,7 +190026,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03152",
+      "id": "FUNC-03156",
       "domain": "tooling"
     },
     {
@@ -189827,7 +190067,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03153",
+      "id": "FUNC-03157",
       "domain": "tooling"
     },
     {
@@ -189870,7 +190110,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03154",
+      "id": "FUNC-03158",
       "domain": "tooling"
     },
     {
@@ -189913,7 +190153,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03155",
+      "id": "FUNC-03159",
       "domain": "tooling"
     },
     {
@@ -189956,7 +190196,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03156",
+      "id": "FUNC-03160",
       "domain": "tooling"
     },
     {
@@ -189999,7 +190239,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03157",
+      "id": "FUNC-03161",
       "domain": "tooling"
     },
     {
@@ -190042,7 +190282,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03158",
+      "id": "FUNC-03162",
       "domain": "tooling"
     },
     {
@@ -190085,7 +190325,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03159",
+      "id": "FUNC-03163",
       "domain": "tooling"
     },
     {
@@ -190128,7 +190368,224 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03160",
+      "id": "FUNC-03164",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness-orchestration-gate.mjs",
+      "line": 4,
+      "endLine": 7,
+      "column": 13,
+      "endColumn": 1,
+      "name": "read",
+      "kind": "arrow",
+      "params": "p",
+      "calls": [
+        "JSON.parse",
+        "fs.readFileSync"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 91,
+        "end": 181,
+        "bodyStart": 96,
+        "bodyEnd": 181,
+        "functionSha256": "2b6e3f02a60c7df1d106bccf410109510f1de2eabba3b2ea928feaa473799eb1",
+        "bodySha256": "d5abbb06a1ca63cb9e6dd13c8f637e71d112dd788b03efc7a1d15710ff5ad436",
+        "async": false,
+        "generator": false,
+        "expressionBody": false,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03165",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness-orchestration-gate.mjs",
+      "line": 8,
+      "endLine": 8,
+      "column": 18,
+      "endColumn": 58,
+      "name": "normalize",
+      "kind": "arrow",
+      "params": "v",
+      "calls": [
+        "String().replace",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 201,
+        "end": 241,
+        "bodyStart": 206,
+        "bodyEnd": 241,
+        "functionSha256": "debea7d9edcf637da0bf22d08e3e835eee1685f102b69627cf71cfe490e8c792",
+        "bodySha256": "445d09a4ac93735bfba6200ee61aa526e02511590c80c6b4d09ba2102c0220de",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03166",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness-orchestration-gate.mjs",
+      "line": 9,
+      "endLine": 9,
+      "column": 15,
+      "endColumn": 58,
+      "name": "isHash",
+      "kind": "arrow",
+      "params": "v",
+      "calls": [
+        "/^[a-f0-9]{64}$/.test",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 258,
+        "end": 301,
+        "bodyStart": 263,
+        "bodyEnd": 301,
+        "functionSha256": "4ef0435193080f25fe869ef19b6c763ec618171d4e84aa77fbcc2ff7248a876f",
+        "bodySha256": "efd2a0b34fca611a9dd5d4ce92a68922ed98dd981f4443a50fc0d510b7e75d01",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03167",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness-orchestration-gate.mjs",
+      "line": 10,
+      "endLine": 13,
+      "column": 16,
+      "endColumn": 1,
+      "name": "runHash",
+      "kind": "arrow",
+      "params": "script",
+      "calls": [
+        "execFileSync().trim",
+        "execFileSync"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 319,
+        "end": 443,
+        "bodyStart": 329,
+        "bodyEnd": 443,
+        "functionSha256": "ee00bdceaad73affd7796f4fbf2e5033f5bd7ec31ba4f82909f0cda4c933f648",
+        "bodySha256": "f3abe183a0ee245e01b66cc2e69c09fd12472a66a02b536dd79ff0d5d1c99318",
+        "async": false,
+        "generator": false,
+        "expressionBody": false,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03168",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness-orchestration-gate.mjs",
+      "line": 62,
+      "endLine": 62,
+      "column": 100,
+      "endColumn": 137,
+      "name": "<callback:gameplay.contracts.every#0>",
+      "kind": "arrow",
+      "params": "x",
+      "calls": [],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 3684,
+        "end": 3721,
+        "bodyStart": 3689,
+        "bodyEnd": 3721,
+        "functionSha256": "b07d1ad80884a9f9f6e25f8ba312fc9a4c0e5317855ae9764fe6ad046ef2b084",
+        "bodySha256": "2dd8588dc2ad38315a50543c5caf5e9da0cc0dfabd827eeb35588fd232d9438b",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03169",
       "domain": "tooling"
     },
     {
@@ -190157,10 +190614,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 222,
-        "end": 264,
-        "bodyStart": 234,
-        "bodyEnd": 264,
+        "start": 242,
+        "end": 284,
+        "bodyStart": 254,
+        "bodyEnd": 284,
         "functionSha256": "725720a41f4b375a428909b1a9452bc1def8115178c8c15454301ad27325371c",
         "bodySha256": "d50b8a91af47016d572e6184d9476fea647afb707265b15cdddcaf169ac24cc2",
         "async": false,
@@ -190171,7 +190628,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03161",
+      "id": "FUNC-03170",
       "domain": "tooling"
     },
     {
@@ -190202,10 +190659,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 289,
-        "end": 339,
-        "bodyStart": 296,
-        "bodyEnd": 339,
+        "start": 309,
+        "end": 359,
+        "bodyStart": 316,
+        "bodyEnd": 359,
         "functionSha256": "43046f3b126b50e34e1f56830b76db2b6ea97bad9a6b69c01bc2437ff43411f2",
         "bodySha256": "2d3bf9eea2e468820e4992d8f20b44b4b4111055a36e69fb9cfde87350c0830d",
         "async": false,
@@ -190216,13 +190673,57 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03162",
+      "id": "FUNC-03171",
       "domain": "tooling"
     },
     {
       "file": "tools/final-readiness.mjs",
       "line": 10,
       "endLine": 10,
+      "column": 13,
+      "endColumn": 60,
+      "name": "isHash",
+      "kind": "arrow",
+      "params": "value",
+      "calls": [
+        "/^[a-f0-9]{64}$/.test",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 374,
+        "end": 421,
+        "bodyStart": 381,
+        "bodyEnd": 421,
+        "functionSha256": "31e8ebff396ff889ffeeed614bcd839d57ad5b7212793a3ef181ccc2405b5ce4",
+        "bodySha256": "27f96ba28d7085b45570a0c8ee29d5bd1577ddd76757891fa8c1ebd965bd933f",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03172",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness.mjs",
+      "line": 11,
+      "endLine": 11,
       "column": 0,
       "endColumn": 252,
       "name": "readJson",
@@ -190249,10 +190750,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionDeclaration",
-        "start": 341,
-        "end": 593,
-        "bodyStart": 361,
-        "bodyEnd": 593,
+        "start": 423,
+        "end": 675,
+        "bodyStart": 443,
+        "bodyEnd": 675,
         "functionSha256": "d3d245d08a907ce974c4e369172ac250d35781c6f13842d1e6908948715a8a4a",
         "bodySha256": "6a2b23107f8af8cd2ccc6a062a0cce1420ee173c93d6bd964e963e4cef39cc4c",
         "async": false,
@@ -190260,16 +190761,62 @@
         "expressionBody": false,
         "parentType": "Program",
         "parentKey": "body",
-        "parentIndex": 8,
+        "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-03163",
+      "id": "FUNC-03173",
       "domain": "tooling"
     },
     {
       "file": "tools/final-readiness.mjs",
-      "line": 37,
-      "endLine": 37,
+      "line": 12,
+      "endLine": 12,
+      "column": 0,
+      "endColumn": 216,
+      "name": "fingerprint",
+      "kind": "declaration",
+      "params": "script, label",
+      "calls": [
+        "execFileSync().trim",
+        "execFileSync",
+        "path.join",
+        "failures.push"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "FunctionDeclaration",
+        "start": 676,
+        "end": 892,
+        "bodyStart": 710,
+        "bodyEnd": 892,
+        "functionSha256": "794dddfd965fb0baeef1c499e7c979840c84ea438ea01a306dc2757e7da9747c",
+        "bodySha256": "98b66e6fb7e4ac6b224b356c56bf11a0e26515ff475e166a76a00fa2fb259755",
+        "async": false,
+        "generator": false,
+        "expressionBody": false,
+        "parentType": "Program",
+        "parentKey": "body",
+        "parentIndex": 10,
+        "eventTypes": []
+      },
+      "id": "FUNC-03174",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness.mjs",
+      "line": 41,
+      "endLine": 41,
       "column": 71,
       "endColumn": 104,
       "name": "<callback:operational.contracts.every#0>",
@@ -190290,10 +190837,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2916,
-        "end": 2949,
-        "bodyStart": 2919,
-        "bodyEnd": 2949,
+        "start": 3239,
+        "end": 3272,
+        "bodyStart": 3242,
+        "bodyEnd": 3272,
         "functionSha256": "7078161854beb7811641b496bd519f116702f25a27c21b011e69cb0d4eb359f2",
         "bodySha256": "ba42899344ea0123120b1d85f6226329897b35e3a21b691b8b5a46c11942c764",
         "async": false,
@@ -190304,13 +190851,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03164",
+      "id": "FUNC-03175",
       "domain": "tooling"
     },
     {
       "file": "tools/final-readiness.mjs",
-      "line": 99,
-      "endLine": 99,
+      "line": 109,
+      "endLine": 109,
       "column": 65,
       "endColumn": 98,
       "name": "<callback:gameplay.contracts.every#0>",
@@ -190331,10 +190878,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 10751,
-        "end": 10784,
-        "bodyStart": 10754,
-        "bodyEnd": 10784,
+        "start": 11837,
+        "end": 11870,
+        "bodyStart": 11840,
+        "bodyEnd": 11870,
         "functionSha256": "38bc8e3c6d7a2f79eeac45ffd7d30124c348fa8957d6fc8708dcf4b9123549a5",
         "bodySha256": "36bfa95106e52b13fd87b8ffbcd946989bfda9e70aaf56ec2e0b9f1c2c270fc6",
         "async": false,
@@ -190345,13 +190892,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03165",
+      "id": "FUNC-03176",
       "domain": "tooling"
     },
     {
       "file": "tools/final-readiness.mjs",
-      "line": 122,
-      "endLine": 122,
+      "line": 132,
+      "endLine": 132,
       "column": 138,
       "endColumn": 209,
       "name": "<callback:[consumerFingerprints.account,consumerFingerprints.browserAccount,consumerFingerprints.gameplay].every#0>",
@@ -190374,10 +190921,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 12929,
-        "end": 13000,
-        "bodyStart": 12932,
-        "bodyEnd": 13000,
+        "start": 14015,
+        "end": 14086,
+        "bodyStart": 14018,
+        "bodyEnd": 14086,
         "functionSha256": "17d76850d81996a705d77db41055f868f8fec305a1760ebf0cb5919bdaae8ea0",
         "bodySha256": "6c07dc86e6dcbe8c2a52a9c79645494cf591523201e6fdd608d7e712bb061a57",
         "async": false,
@@ -190388,7 +190935,48 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03166",
+      "id": "FUNC-03177",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/final-readiness.mjs",
+      "line": 134,
+      "endLine": 134,
+      "column": 166,
+      "endColumn": 198,
+      "name": "<callback:[consumerReleaseFingerprints.account,consumerReleaseFingerprints.browserAccount,consumerReleaseFingerprints.gameplay].every#0>",
+      "kind": "arrow",
+      "params": "x",
+      "calls": [],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 14461,
+        "end": 14493,
+        "bodyStart": 14464,
+        "bodyEnd": 14493,
+        "functionSha256": "3d8107b20a3eb302b6cff441b176cf299ac1d289f4143dc5212d4d785eed0bde",
+        "bodySha256": "3e8d3605c5520e0c2a56050f92ac964438400d3d032d37a12add751b9fd9df9a",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03178",
       "domain": "tooling"
     },
     {
@@ -190439,7 +191027,7 @@
         "parentIndex": 14,
         "eventTypes": []
       },
-      "id": "FUNC-03167",
+      "id": "FUNC-03179",
       "domain": "tooling"
     },
     {
@@ -190483,7 +191071,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03168",
+      "id": "FUNC-03180",
       "domain": "tooling"
     },
     {
@@ -190526,7 +191114,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03169",
+      "id": "FUNC-03181",
       "domain": "tooling"
     },
     {
@@ -190571,7 +191159,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03170",
+      "id": "FUNC-03182",
       "domain": "tooling"
     },
     {
@@ -190615,7 +191203,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03171",
+      "id": "FUNC-03183",
       "domain": "tooling"
     },
     {
@@ -190659,7 +191247,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03172",
+      "id": "FUNC-03184",
       "domain": "tooling"
     },
     {
@@ -190703,7 +191291,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03173",
+      "id": "FUNC-03185",
       "domain": "tooling"
     },
     {
@@ -190767,7 +191355,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03174",
+      "id": "FUNC-03186",
       "domain": "tooling"
     },
     {
@@ -190808,7 +191396,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03175",
+      "id": "FUNC-03187",
       "domain": "tooling"
     },
     {
@@ -190849,7 +191437,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03176",
+      "id": "FUNC-03188",
       "domain": "tooling"
     },
     {
@@ -190890,7 +191478,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03177",
+      "id": "FUNC-03189",
       "domain": "tooling"
     },
     {
@@ -190931,7 +191519,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03178",
+      "id": "FUNC-03190",
       "domain": "tooling"
     },
     {
@@ -190972,7 +191560,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03179",
+      "id": "FUNC-03191",
       "domain": "tooling"
     },
     {
@@ -191013,7 +191601,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03180",
+      "id": "FUNC-03192",
       "domain": "tooling"
     },
     {
@@ -191054,7 +191642,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03181",
+      "id": "FUNC-03193",
       "domain": "tooling"
     },
     {
@@ -191095,7 +191683,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03182",
+      "id": "FUNC-03194",
       "domain": "tooling"
     },
     {
@@ -191139,7 +191727,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03183",
+      "id": "FUNC-03195",
       "domain": "tooling"
     },
     {
@@ -191183,7 +191771,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03184",
+      "id": "FUNC-03196",
       "domain": "tooling"
     },
     {
@@ -191227,7 +191815,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03185",
+      "id": "FUNC-03197",
       "domain": "tooling"
     },
     {
@@ -191273,7 +191861,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03186",
+      "id": "FUNC-03198",
       "domain": "tooling"
     },
     {
@@ -191317,7 +191905,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03187",
+      "id": "FUNC-03199",
       "domain": "tooling"
     },
     {
@@ -191361,7 +191949,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03188",
+      "id": "FUNC-03200",
       "domain": "tooling"
     },
     {
@@ -191406,7 +191994,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03189",
+      "id": "FUNC-03201",
       "domain": "tooling"
     },
     {
@@ -191455,7 +192043,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03190",
+      "id": "FUNC-03202",
       "domain": "tooling"
     },
     {
@@ -191499,7 +192087,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03191",
+      "id": "FUNC-03203",
       "domain": "tooling"
     },
     {
@@ -191540,7 +192128,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03192",
+      "id": "FUNC-03204",
       "domain": "tooling"
     },
     {
@@ -191587,7 +192175,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03193",
+      "id": "FUNC-03205",
       "domain": "tooling"
     },
     {
@@ -191628,7 +192216,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03194",
+      "id": "FUNC-03206",
       "domain": "tooling"
     },
     {
@@ -191673,7 +192261,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03195",
+      "id": "FUNC-03207",
       "domain": "tooling"
     },
     {
@@ -191718,7 +192306,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03196",
+      "id": "FUNC-03208",
       "domain": "tooling"
     },
     {
@@ -191762,7 +192350,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-03197",
+      "id": "FUNC-03209",
       "domain": "tooling"
     },
     {
@@ -191814,7 +192402,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-03198",
+      "id": "FUNC-03210",
       "domain": "tooling"
     },
     {
@@ -191857,7 +192445,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03199",
+      "id": "FUNC-03211",
       "domain": "tooling"
     },
     {
@@ -191901,7 +192489,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03200",
+      "id": "FUNC-03212",
       "domain": "tooling"
     },
     {
@@ -191942,7 +192530,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03201",
+      "id": "FUNC-03213",
       "domain": "tooling"
     },
     {
@@ -191985,7 +192573,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03202",
+      "id": "FUNC-03214",
       "domain": "tooling"
     },
     {
@@ -192031,7 +192619,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03203",
+      "id": "FUNC-03215",
       "domain": "tooling"
     },
     {
@@ -192072,7 +192660,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03204",
+      "id": "FUNC-03216",
       "domain": "tooling"
     },
     {
@@ -192113,7 +192701,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03205",
+      "id": "FUNC-03217",
       "domain": "tooling"
     },
     {
@@ -192154,7 +192742,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03206",
+      "id": "FUNC-03218",
       "domain": "tooling"
     },
     {
@@ -192195,7 +192783,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03207",
+      "id": "FUNC-03219",
       "domain": "tooling"
     },
     {
@@ -192236,7 +192824,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03208",
+      "id": "FUNC-03220",
       "domain": "tooling"
     },
     {
@@ -192277,7 +192865,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03209",
+      "id": "FUNC-03221",
       "domain": "tooling"
     },
     {
@@ -192318,7 +192906,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03210",
+      "id": "FUNC-03222",
       "domain": "tooling"
     },
     {
@@ -192359,7 +192947,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03211",
+      "id": "FUNC-03223",
       "domain": "tooling"
     },
     {
@@ -192405,7 +192993,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03212",
+      "id": "FUNC-03224",
       "domain": "tooling"
     },
     {
@@ -192455,7 +193043,7 @@
         "parentIndex": 39,
         "eventTypes": []
       },
-      "id": "FUNC-03213",
+      "id": "FUNC-03225",
       "domain": "tooling"
     },
     {
@@ -192498,7 +193086,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03214",
+      "id": "FUNC-03226",
       "domain": "tooling"
     },
     {
@@ -192541,7 +193129,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03215",
+      "id": "FUNC-03227",
       "domain": "tooling"
     },
     {
@@ -192582,7 +193170,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03216",
+      "id": "FUNC-03228",
       "domain": "tooling"
     },
     {
@@ -192623,7 +193211,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03217",
+      "id": "FUNC-03229",
       "domain": "tooling"
     },
     {
@@ -192664,7 +193252,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03218",
+      "id": "FUNC-03230",
       "domain": "tooling"
     },
     {
@@ -192707,7 +193295,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03219",
+      "id": "FUNC-03231",
       "domain": "tooling"
     },
     {
@@ -192750,7 +193338,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03220",
+      "id": "FUNC-03232",
       "domain": "tooling"
     },
     {
@@ -192793,7 +193381,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03221",
+      "id": "FUNC-03233",
       "domain": "tooling"
     },
     {
@@ -192836,7 +193424,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03222",
+      "id": "FUNC-03234",
       "domain": "tooling"
     },
     {
@@ -192877,7 +193465,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03223",
+      "id": "FUNC-03235",
       "domain": "tooling"
     },
     {
@@ -192918,7 +193506,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03224",
+      "id": "FUNC-03236",
       "domain": "tooling"
     },
     {
@@ -192959,7 +193547,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03225",
+      "id": "FUNC-03237",
       "domain": "tooling"
     },
     {
@@ -193002,7 +193590,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03226",
+      "id": "FUNC-03238",
       "domain": "tooling"
     },
     {
@@ -193043,7 +193631,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03227",
+      "id": "FUNC-03239",
       "domain": "tooling"
     },
     {
@@ -193084,7 +193672,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03228",
+      "id": "FUNC-03240",
       "domain": "tooling"
     },
     {
@@ -193125,7 +193713,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03229",
+      "id": "FUNC-03241",
       "domain": "tooling"
     },
     {
@@ -193169,7 +193757,7 @@
         "parentIndex": 60,
         "eventTypes": []
       },
-      "id": "FUNC-03230",
+      "id": "FUNC-03242",
       "domain": "tooling"
     },
     {
@@ -193212,7 +193800,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03231",
+      "id": "FUNC-03243",
       "domain": "tooling"
     },
     {
@@ -193256,7 +193844,7 @@
         "parentIndex": 61,
         "eventTypes": []
       },
-      "id": "FUNC-03232",
+      "id": "FUNC-03244",
       "domain": "tooling"
     },
     {
@@ -193300,7 +193888,7 @@
         "parentIndex": 62,
         "eventTypes": []
       },
-      "id": "FUNC-03233",
+      "id": "FUNC-03245",
       "domain": "tooling"
     },
     {
@@ -193341,7 +193929,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03234",
+      "id": "FUNC-03246",
       "domain": "tooling"
     },
     {
@@ -193384,7 +193972,7 @@
         "parentIndex": 8,
         "eventTypes": []
       },
-      "id": "FUNC-03235",
+      "id": "FUNC-03247",
       "domain": "tooling"
     },
     {
@@ -193425,7 +194013,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-03236",
+      "id": "FUNC-03248",
       "domain": "tooling"
     },
     {
@@ -193475,7 +194063,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-03237",
+      "id": "FUNC-03249",
       "domain": "tooling"
     },
     {
@@ -193518,7 +194106,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-03238",
+      "id": "FUNC-03250",
       "domain": "tooling"
     },
     {
@@ -193567,7 +194155,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-03239",
+      "id": "FUNC-03251",
       "domain": "tooling"
     },
     {
@@ -193608,7 +194196,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03240",
+      "id": "FUNC-03252",
       "domain": "tooling"
     },
     {
@@ -193649,7 +194237,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03241",
+      "id": "FUNC-03253",
       "domain": "tooling"
     },
     {
@@ -193692,7 +194280,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03242",
+      "id": "FUNC-03254",
       "domain": "tooling"
     },
     {
@@ -193735,7 +194323,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03243",
+      "id": "FUNC-03255",
       "domain": "tooling"
     },
     {
@@ -193776,7 +194364,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03244",
+      "id": "FUNC-03256",
       "domain": "tooling"
     },
     {
@@ -193817,7 +194405,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03245",
+      "id": "FUNC-03257",
       "domain": "tooling"
     },
     {
@@ -193860,7 +194448,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03246",
+      "id": "FUNC-03258",
       "domain": "tooling"
     },
     {
@@ -193901,7 +194489,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03247",
+      "id": "FUNC-03259",
       "domain": "tooling"
     },
     {
@@ -193942,7 +194530,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03248",
+      "id": "FUNC-03260",
       "domain": "tooling"
     },
     {
@@ -193983,7 +194571,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03249",
+      "id": "FUNC-03261",
       "domain": "tooling"
     },
     {
@@ -194024,7 +194612,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03250",
+      "id": "FUNC-03262",
       "domain": "tooling"
     },
     {
@@ -194065,7 +194653,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03251",
+      "id": "FUNC-03263",
       "domain": "tooling"
     },
     {
@@ -194108,7 +194696,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03252",
+      "id": "FUNC-03264",
       "domain": "tooling"
     },
     {
@@ -194149,7 +194737,223 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03253",
+      "id": "FUNC-03265",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/public-release-coherence.mjs",
+      "line": 12,
+      "endLine": 12,
+      "column": 7,
+      "endColumn": 48,
+      "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map#0>",
+      "kind": "arrow",
+      "params": "m",
+      "calls": [
+        "m[1].split()[0].replace",
+        "m[1].split"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 716,
+        "end": 757,
+        "bodyStart": 719,
+        "bodyEnd": 757,
+        "functionSha256": "da876c7af602ff2e5f1517e4c2b2ec6c06705a51fed3087167ebf98e75c8b294",
+        "bodySha256": "67c9a3b87ff09091e15293fa008cc0380ca29bcf59e8ec606fd668baf99f04b3",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03266",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/public-release-coherence.mjs",
+      "line": 13,
+      "endLine": 13,
+      "column": 10,
+      "endColumn": 51,
+      "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map().filter#0>",
+      "kind": "arrow",
+      "params": "v",
+      "calls": [
+        "/^(?:https?:|data:|\\/\\/)/i.test"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 769,
+        "end": 810,
+        "bodyStart": 772,
+        "bodyEnd": 810,
+        "functionSha256": "7b8d7e78d2f5fc63ee058b8b4608d163204c161e4b03edafd5b1c38d564fad78",
+        "bodySha256": "b34e6a9f264c596d658247d9a4de8f3bc5def2c15d8fba7b0c0576b3e7533f1c",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03267",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/public-release-coherence.mjs",
+      "line": 14,
+      "endLine": 14,
+      "column": 67,
+      "endColumn": 86,
+      "name": "<callback:[...new Set(['index.html',markerPath,...refs])].filter#0>",
+      "kind": "arrow",
+      "params": "p",
+      "calls": [
+        "fs.existsSync"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 880,
+        "end": 899,
+        "bodyStart": 883,
+        "bodyEnd": 899,
+        "functionSha256": "264a9bf12d3c83155ea8ec493aa9f7ce83ab7acad926a01b83cca9291ef23462",
+        "bodySha256": "8ab530380c3641fba58f10a69c24db35a928f81d7c8ff343cef51104cec832a3",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03268",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/public-release-coherence.mjs",
+      "line": 15,
+      "endLine": 15,
+      "column": 13,
+      "endColumn": 67,
+      "name": "sha256",
+      "kind": "arrow",
+      "params": "b",
+      "calls": [
+        "crypto.createHash().update().digest",
+        "crypto.createHash().update",
+        "crypto.createHash"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 915,
+        "end": 969,
+        "bodyStart": 918,
+        "bodyEnd": 969,
+        "functionSha256": "b4bd70739cd7c79133fdc34296b491cf42394c5100ceb1f21f78c9153b419f35",
+        "bodySha256": "d4f01c7e1dee731af210c094bc642ce3f002113401b0215e06fdababa21ab689",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03269",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/public-release-coherence.mjs",
+      "line": 41,
+      "endLine": 41,
+      "column": 30,
+      "endColumn": 52,
+      "name": "<callback:checks.find#0>",
+      "kind": "arrow",
+      "params": "x",
+      "calls": [],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 2211,
+        "end": 2233,
+        "bodyStart": 2214,
+        "bodyEnd": 2233,
+        "functionSha256": "47101affcae3827e327e5a285ae646dbe47e968b671e15a556b7d43abeaf63b8",
+        "bodySha256": "669953b9b4640b55e47a0443290e42928671ba826d96614362ee66d40f749b28",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03270",
       "domain": "tooling"
     },
     {
@@ -194194,7 +194998,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03254",
+      "id": "FUNC-03271",
       "domain": "tooling"
     },
     {
@@ -194240,7 +195044,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03255",
+      "id": "FUNC-03272",
       "domain": "tooling"
     },
     {
@@ -194286,7 +195090,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03256",
+      "id": "FUNC-03273",
       "domain": "tooling"
     },
     {
@@ -194330,7 +195134,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03257",
+      "id": "FUNC-03274",
       "domain": "tooling"
     },
     {
@@ -194373,7 +195177,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03258",
+      "id": "FUNC-03275",
       "domain": "tooling"
     },
     {
@@ -194417,7 +195221,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03259",
+      "id": "FUNC-03276",
       "domain": "tooling"
     },
     {
@@ -194460,7 +195264,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03260",
+      "id": "FUNC-03277",
       "domain": "tooling"
     },
     {
@@ -194501,7 +195305,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03261",
+      "id": "FUNC-03278",
       "domain": "tooling"
     },
     {
@@ -194542,7 +195346,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03262",
+      "id": "FUNC-03279",
       "domain": "tooling"
     },
     {
@@ -194583,7 +195387,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03263",
+      "id": "FUNC-03280",
       "domain": "tooling"
     },
     {
@@ -194624,7 +195428,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03264",
+      "id": "FUNC-03281",
       "domain": "tooling"
     },
     {
@@ -194668,7 +195472,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03265",
+      "id": "FUNC-03282",
       "domain": "tooling"
     },
     {
@@ -194714,7 +195518,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03266",
+      "id": "FUNC-03283",
       "domain": "tooling"
     },
     {
@@ -194758,7 +195562,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03267",
+      "id": "FUNC-03284",
       "domain": "tooling"
     },
     {
@@ -194802,7 +195606,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03268",
+      "id": "FUNC-03285",
       "domain": "tooling"
     },
     {
@@ -194846,7 +195650,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03269",
+      "id": "FUNC-03286",
       "domain": "tooling"
     },
     {
@@ -194890,7 +195694,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03270",
+      "id": "FUNC-03287",
       "domain": "tooling"
     },
     {
@@ -194934,7 +195738,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03271",
+      "id": "FUNC-03288",
       "domain": "tooling"
     },
     {
@@ -194978,7 +195782,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03272",
+      "id": "FUNC-03289",
       "domain": "tooling"
     },
     {
@@ -195024,7 +195828,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03273",
+      "id": "FUNC-03290",
       "domain": "tooling"
     },
     {
@@ -195067,7 +195871,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03274",
+      "id": "FUNC-03291",
       "domain": "tooling"
     },
     {
@@ -195111,7 +195915,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03275",
+      "id": "FUNC-03292",
       "domain": "tooling"
     },
     {
@@ -195155,7 +195959,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03276",
+      "id": "FUNC-03293",
       "domain": "tooling"
     },
     {
@@ -195199,7 +196003,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03277",
+      "id": "FUNC-03294",
       "domain": "tooling"
     },
     {
@@ -195243,7 +196047,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03278",
+      "id": "FUNC-03295",
       "domain": "tooling"
     },
     {
@@ -195286,7 +196090,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03279",
+      "id": "FUNC-03296",
       "domain": "tooling"
     },
     {
@@ -195331,7 +196135,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03280",
+      "id": "FUNC-03297",
       "domain": "tooling"
     },
     {
@@ -195374,7 +196178,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03281",
+      "id": "FUNC-03298",
       "domain": "tooling"
     },
     {
@@ -195417,7 +196221,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03282",
+      "id": "FUNC-03299",
       "domain": "tooling"
     },
     {
@@ -195460,7 +196264,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03283",
+      "id": "FUNC-03300",
       "domain": "tooling"
     },
     {
@@ -195503,7 +196307,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03284",
+      "id": "FUNC-03301",
       "domain": "tooling"
     },
     {
@@ -195546,7 +196350,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03285",
+      "id": "FUNC-03302",
       "domain": "tooling"
     },
     {
@@ -195590,7 +196394,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03286",
+      "id": "FUNC-03303",
       "domain": "tooling"
     },
     {
@@ -195634,7 +196438,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03287",
+      "id": "FUNC-03304",
       "domain": "tooling"
     },
     {
@@ -195678,7 +196482,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03288",
+      "id": "FUNC-03305",
       "domain": "tooling"
     },
     {
@@ -195722,7 +196526,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03289",
+      "id": "FUNC-03306",
       "domain": "tooling"
     },
     {
@@ -195766,7 +196570,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03290",
+      "id": "FUNC-03307",
       "domain": "tooling"
     },
     {
@@ -195810,7 +196614,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03291",
+      "id": "FUNC-03308",
       "domain": "tooling"
     },
     {
@@ -195854,7 +196658,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03292",
+      "id": "FUNC-03309",
       "domain": "tooling"
     },
     {
@@ -195898,7 +196702,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03293",
+      "id": "FUNC-03310",
       "domain": "tooling"
     },
     {
@@ -195942,7 +196746,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03294",
+      "id": "FUNC-03311",
       "domain": "tooling"
     },
     {
@@ -195986,7 +196790,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03295",
+      "id": "FUNC-03312",
       "domain": "tooling"
     },
     {
@@ -196030,7 +196834,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03296",
+      "id": "FUNC-03313",
       "domain": "tooling"
     },
     {
@@ -196073,7 +196877,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03297",
+      "id": "FUNC-03314",
       "domain": "tooling"
     },
     {
@@ -196114,7 +196918,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03298",
+      "id": "FUNC-03315",
       "domain": "tooling"
     },
     {
@@ -196155,7 +196959,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03299",
+      "id": "FUNC-03316",
       "domain": "tooling"
     },
     {
@@ -196196,7 +197000,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03300",
+      "id": "FUNC-03317",
       "domain": "tooling"
     },
     {
@@ -196237,7 +197041,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03301",
+      "id": "FUNC-03318",
       "domain": "tooling"
     },
     {
@@ -196280,7 +197084,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03302",
+      "id": "FUNC-03319",
       "domain": "tooling"
     },
     {
@@ -196323,7 +197127,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03303",
+      "id": "FUNC-03320",
       "domain": "tooling"
     },
     {
@@ -196367,7 +197171,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03304",
+      "id": "FUNC-03321",
       "domain": "tooling"
     },
     {
@@ -196410,7 +197214,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03305",
+      "id": "FUNC-03322",
       "domain": "tooling"
     },
     {
@@ -196451,7 +197255,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03306",
+      "id": "FUNC-03323",
       "domain": "tooling"
     },
     {
@@ -196492,7 +197296,180 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03307",
+      "id": "FUNC-03324",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/release-source-fingerprint.mjs",
+      "line": 45,
+      "endLine": 45,
+      "column": 41,
+      "endColumn": 89,
+      "name": "<callback:records.map#0>",
+      "kind": "arrow",
+      "params": "record",
+      "calls": [
+        "record.slice",
+        "record.indexOf"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1677,
+        "end": 1725,
+        "bodyStart": 1687,
+        "bodyEnd": 1725,
+        "functionSha256": "b79e0747296477c9f4101689e2db47f24d0ae7109f8fca3e59d23623bd80e259",
+        "bodySha256": "b15ca3b21203e25ac2e0555d57f4abe41862648c1c91a3b985b644f7ed8a5748",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03325",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/release-source-fingerprint.mjs",
+      "line": 46,
+      "endLine": 46,
+      "column": 47,
+      "endColumn": 88,
+      "name": "<callback:publicRuntime.filter#0>",
+      "kind": "arrow",
+      "params": "p",
+      "calls": [
+        "['data','src','assets'].includes"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1776,
+        "end": 1817,
+        "bodyStart": 1781,
+        "bodyEnd": 1817,
+        "functionSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
+        "bodySha256": "2277d07c98538ae8d67b7c2dd2e1409c0847c943b4303766ed123608f352f6f9",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03326",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/release-source-fingerprint.mjs",
+      "line": 47,
+      "endLine": 47,
+      "column": 42,
+      "endColumn": 73,
+      "name": "<callback:requiredFiles.filter#0>",
+      "kind": "arrow",
+      "params": "file",
+      "calls": [
+        "trackedPaths.has"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1883,
+        "end": 1914,
+        "bodyStart": 1891,
+        "bodyEnd": 1914,
+        "functionSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
+        "bodySha256": "472ce01f7c8b0aa9aa7b1a03cf1f110c36e763502eeffeaf5d5d7747e4696a4a",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03327",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/release-source-fingerprint.mjs",
+      "line": 50,
+      "endLine": 50,
+      "column": 30,
+      "endColumn": 64,
+      "name": "<callback:[...trackedPaths].some#0>",
+      "kind": "arrow",
+      "params": "file",
+      "calls": [
+        "file.startsWith"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 2088,
+        "end": 2122,
+        "bodyStart": 2096,
+        "bodyEnd": 2122,
+        "functionSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
+        "bodySha256": "a81e6ab5a6610b4089f84e4563e0673159446495c0b6b121c3c7da3135981ee7",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03328",
       "domain": "tooling"
     },
     {
@@ -196533,7 +197510,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03308",
+      "id": "FUNC-03329",
       "domain": "tooling"
     },
     {
@@ -196577,7 +197554,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03309",
+      "id": "FUNC-03330",
       "domain": "tooling"
     },
     {
@@ -196618,7 +197595,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03310",
+      "id": "FUNC-03331",
       "domain": "tooling"
     },
     {
@@ -196661,7 +197638,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03311",
+      "id": "FUNC-03332",
       "domain": "tooling"
     },
     {
@@ -196706,7 +197683,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03312",
+      "id": "FUNC-03333",
       "domain": "tooling"
     },
     {
@@ -196750,7 +197727,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03313",
+      "id": "FUNC-03334",
       "domain": "tooling"
     },
     {
@@ -196794,7 +197771,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03314",
+      "id": "FUNC-03335",
       "domain": "tooling"
     },
     {
@@ -196841,7 +197818,7 @@
         "parentIndex": 4,
         "eventTypes": []
       },
-      "id": "FUNC-03315",
+      "id": "FUNC-03336",
       "domain": "tooling"
     },
     {
@@ -196882,7 +197859,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03316",
+      "id": "FUNC-03337",
       "domain": "tooling"
     },
     {
@@ -196923,7 +197900,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03317",
+      "id": "FUNC-03338",
       "domain": "tooling"
     },
     {
@@ -196964,7 +197941,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03318",
+      "id": "FUNC-03339",
       "domain": "tooling"
     },
     {
@@ -197007,7 +197984,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03319",
+      "id": "FUNC-03340",
       "domain": "tooling"
     },
     {
@@ -197050,7 +198027,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03320",
+      "id": "FUNC-03341",
       "domain": "tooling"
     },
     {
@@ -197091,7 +198068,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03321",
+      "id": "FUNC-03342",
       "domain": "tooling"
     },
     {
@@ -197132,7 +198109,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03322",
+      "id": "FUNC-03343",
       "domain": "tooling"
     },
     {
@@ -197173,7 +198150,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03323",
+      "id": "FUNC-03344",
       "domain": "tooling"
     },
     {
@@ -197214,7 +198191,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03324",
+      "id": "FUNC-03345",
       "domain": "tooling"
     },
     {
@@ -197257,7 +198234,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03325",
+      "id": "FUNC-03346",
       "domain": "tooling"
     },
     {
@@ -197300,7 +198277,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03326",
+      "id": "FUNC-03347",
       "domain": "tooling"
     },
     {
@@ -197341,7 +198318,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03327",
+      "id": "FUNC-03348",
       "domain": "tooling"
     },
     {
@@ -197382,7 +198359,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03328",
+      "id": "FUNC-03349",
       "domain": "tooling"
     },
     {
@@ -197423,7 +198400,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03329",
+      "id": "FUNC-03350",
       "domain": "tooling"
     },
     {
@@ -197466,7 +198443,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03330",
+      "id": "FUNC-03351",
       "domain": "tooling"
     },
     {
@@ -197507,7 +198484,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03331",
+      "id": "FUNC-03352",
       "domain": "tooling"
     },
     {
@@ -197548,7 +198525,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03332",
+      "id": "FUNC-03353",
       "domain": "tooling"
     },
     {
@@ -197591,7 +198568,7 @@
         "parentIndex": 5,
         "eventTypes": []
       },
-      "id": "FUNC-03333",
+      "id": "FUNC-03354",
       "domain": "tooling"
     },
     {
@@ -197632,7 +198609,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03334",
+      "id": "FUNC-03355",
       "domain": "tooling"
     },
     {
@@ -197673,7 +198650,93 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03335",
+      "id": "FUNC-03356",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/wait-public-release-coherence.mjs",
+      "line": 5,
+      "endLine": 5,
+      "column": 28,
+      "endColumn": 59,
+      "name": "<callback:new Promise#0>",
+      "kind": "arrow",
+      "params": "resolve",
+      "calls": [
+        "setTimeout"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 237,
+        "end": 268,
+        "bodyStart": 246,
+        "bodyEnd": 268,
+        "functionSha256": "e29de0fe64068ba25e5bf153fb2a5586875b921ab97f0b151bada7c8dd63326e",
+        "bodySha256": "593e7f3d8d8f1ddac3ce7109cb4390b14a56587399232ad134af6735e4a9db36",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "NewExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-03357",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/wait-public-release-coherence.mjs",
+      "line": 5,
+      "endLine": 5,
+      "column": 12,
+      "endColumn": 60,
+      "name": "sleep",
+      "kind": "arrow",
+      "params": "ms",
+      "calls": [
+        "Promise"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 221,
+        "end": 269,
+        "bodyStart": 225,
+        "bodyEnd": 269,
+        "functionSha256": "3b6526182e8b425651993d038ccf6ede18f5e8a420c6f47908f110b2f5519be9",
+        "bodySha256": "b6d77cfb045b49a40df8ec8a082398e4725a5195039cdd18f673bff4271ca64f",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03358",
       "domain": "tooling"
     }
   ],
@@ -362463,16 +363526,16 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T10:07:43.482Z",
+    "generatedAt": "2026-08-25T10:41:11.827Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
-    "sourceFiles": 74,
-    "parsedFiles": 74,
+    "sourceFiles": 80,
+    "parsedFiles": 80,
     "parseFailures": 0,
-    "functions": 3335,
+    "functions": 3358,
     "anonymousFunctions": 35,
-    "callbackFunctions": 1503,
+    "callbackFunctions": 1514,
     "files": [
       {
         "file": "app.js",
@@ -362793,6 +363856,12 @@
         "bytes": 4125
       },
       {
+        "file": "tools/backend-presence-audit.mjs",
+        "sourceType": "module",
+        "functions": 4,
+        "bytes": 5210
+      },
+      {
         "file": "tools/browser-account-live.mjs",
         "sourceType": "module",
         "functions": 13,
@@ -362853,10 +363922,22 @@
         "bytes": 13890
       },
       {
+        "file": "tools/check-public-release-fingerprint.mjs",
+        "sourceType": "module",
+        "functions": 0,
+        "bytes": 671
+      },
+      {
+        "file": "tools/final-readiness-orchestration-gate.mjs",
+        "sourceType": "module",
+        "functions": 5,
+        "bytes": 5155
+      },
+      {
         "file": "tools/final-readiness.mjs",
         "sourceType": "module",
-        "functions": 6,
-        "bytes": 15174
+        "functions": 9,
+        "bytes": 16885
       },
       {
         "file": "tools/finalize-canonical-ui-trace.mjs",
@@ -362868,7 +363949,7 @@
         "file": "tools/gameplay-live-provenance.mjs",
         "sourceType": "module",
         "functions": 0,
-        "bytes": 2125
+        "bytes": 2894
       },
       {
         "file": "tools/generate-technical-spec.mjs",
@@ -362889,6 +363970,12 @@
         "bytes": 20160
       },
       {
+        "file": "tools/public-release-coherence.mjs",
+        "sourceType": "module",
+        "functions": 5,
+        "bytes": 2950
+      },
+      {
         "file": "tools/reconcile-asset-references.mjs",
         "sourceType": "module",
         "functions": 11,
@@ -362899,6 +363986,12 @@
         "sourceType": "module",
         "functions": 43,
         "bytes": 12478
+      },
+      {
+        "file": "tools/release-source-fingerprint.mjs",
+        "sourceType": "module",
+        "functions": 4,
+        "bytes": 2465
       },
       {
         "file": "tools/repair-canonical-markdown-after-trace.mjs",
@@ -362917,6 +364010,12 @@
         "sourceType": "module",
         "functions": 27,
         "bytes": 4000
+      },
+      {
+        "file": "tools/wait-public-release-coherence.mjs",
+        "sourceType": "module",
+        "functions": 2,
+        "bytes": 927
       }
     ],
     "failures": []
@@ -362941,23 +364040,23 @@
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
       "gameRuntime": 2912,
-      "tooling": 423,
+      "tooling": 446,
       "otherSource": 0
     },
     "before": {
-      "functions": 3335,
+      "functions": 3358,
       "routes": 34,
       "models": 3,
       "collections": 13,
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8060,
-      "assets": 15836,
-      "environment": 179
+      "movement": 8064,
+      "assets": 15837,
+      "environment": 192
     },
     "after": {
-      "functions": 3335,
+      "functions": 3358,
       "routes": 33,
       "models": 2,
       "collections": 12,
