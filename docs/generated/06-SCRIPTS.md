@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-24T23:52:46.502Z`
+Gerado em: `2026-08-25T00:10:09.203Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -113,7 +113,7 @@ Gerado em: `2026-08-24T23:52:46.502Z`
 - `data/v84-live-world.json` — domínio `game-runtime` — 1446635 bytes — SHA-256 `4cd5d0cf319e01d4cdefde444b74b3e1ae5b9eea2e8fba75e4fd3efd649f833c`
 - `data/v84-visual-manifest.js` — domínio `game-runtime` — 242316 bytes — SHA-256 `736232844cffbb8d0377bfaecd3857d5cb0b378f73a295844696706fa8848eab`
 - `index.html` — domínio `game-runtime` — 4236 bytes — SHA-256 `1672200806bd9772a887d071dcb2fe9fdeb9f7622016401f2538f206ebd156fe`
-- `package.json` — domínio `game-runtime` — 1578 bytes — SHA-256 `c4c0a71015a9fc1fba04a06cb9f1ce2a8a320a99b8f1bde07a9918bbddcbb82d`
+- `package.json` — domínio `game-runtime` — 1775 bytes — SHA-256 `970abf21dd75e469dda8127fbaaab75057476a9893ebc1cf52683d8097ac9bbb`
 - `r31.css` — domínio `game-runtime` — 6504 bytes — SHA-256 `9245dcd7ffd0a7537f86fb80ce5cba141f5a62cf10bee53a42b06139e5c422d1`
 - `R41_GITHUB_MATERIALIZATION.json` — domínio `game-runtime` — 818 bytes — SHA-256 `7b87369d1b1a9025b4ef6f5cc190a879edb9ed4198ac6ef89609ae67d00c7ac2`
 - `r41-account-deeplink-fix.js` — domínio `game-runtime` — 587 bytes — SHA-256 `656a130f1d83215e8d650cf6c0c9034afc7fc45af24a551985b6f0054f912bf2`
@@ -128,7 +128,7 @@ Gerado em: `2026-08-24T23:52:46.502Z`
 - `src/r41-final-ui-repair.js` — domínio `game-runtime` — 3922 bytes — SHA-256 `87dd13b8f0571f53625d87bd5506f32d31fbef7ab5368a2eca7e08adbf6aad8c`
 - `src/r41-leon-state-repair.js` — domínio `game-runtime` — 1886 bytes — SHA-256 `eaf36dd4b485c8ec1746a5f188d314bd0adf0a4bd4ba620edc64958daa15f67a`
 - `src/r41-local-reset-fix.js` — domínio `game-runtime` — 1605 bytes — SHA-256 `6ed3b5d05431c3669834a48f3c6c1d8a10fe631329628ad2b61249fce127a487`
-- `src/r41-online-bridge-recovery.js` — domínio `game-runtime` — 3416 bytes — SHA-256 `44e084b03b760e0d8d67c9607fd5e33c924c3c143df10f46b2cb894febfe606b`
+- `src/r41-online-bridge-recovery.js` — domínio `game-runtime` — 6015 bytes — SHA-256 `80c869d503e7fb15b5a675a7cd35ac027c78c5ad3ecb9f906ad6dbb3d84400ea`
 - `src/r41-v82-combat-bridge.js` — domínio `game-runtime` — 10105 bytes — SHA-256 `771607cf769588b9bd2b6e8004d2f3b1196865cce555860c7a550b4ec9d04511`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/account-live-e2e.mjs` — domínio `tooling` — 4937 bytes — SHA-256 `e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7`
@@ -155,3 +155,4 @@ Gerado em: `2026-08-24T23:52:46.502Z`
 - `tools/reconcile-asset-references.mjs` — domínio `tooling` — 4671 bytes — SHA-256 `50d182a279199d7c78709eda1cba9b8ba256265749fa038dd570dfa148d21d11`
 - `tools/refine-technical-spec.mjs` — domínio `tooling` — 12478 bytes — SHA-256 `36ca9a7dbcf3637489252d8003f88f1c17b60e7747a002e842885345332311e4`
 - `tools/repair-canonical-markdown-after-trace.mjs` — domínio `tooling` — 4413 bytes — SHA-256 `b11ad92071c66b1b218e1c872ec860e5daa9864bd78e9eabfa31ccba8b534586`
+- `tools/test-online-bridge-recovery.mjs` — domínio `tooling` — 4000 bytes — SHA-256 `1554980f4f7c58fdf6ef38d3d46dbd45c4c0c8259b8e7fabbf27dab0e6ee8686`
