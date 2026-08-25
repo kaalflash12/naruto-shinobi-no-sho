@@ -16,11 +16,11 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: Validate backend identity and gate syntax
@@ -93,7 +93,7 @@ jobs:
           NODE
       - name: Upload final readiness evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: shinobi-final-readiness
           path: audit/FINAL-READINESS.json
