@@ -2,7 +2,7 @@
 
 Cada item aponta para evidência concreta; funções informam domínio, semântica do jogo vem apenas do runtime.
 
-Gerado em: `2026-08-25T11:47:37.173Z`
+Gerado em: `2026-08-25T11:50:54.880Z`
 
 | ID | Tipo | Elemento | Evidência | Domínio/Status |
 |---|---|---|---|---|
@@ -3331,10 +3331,10 @@ Gerado em: `2026-08-25T11:47:37.173Z`
 | FUNC-03323 | função | `<callback:inv.files||[].filter#0>` | `tools/refine-technical-spec.mjs:189` | tooling / STATICALLY_TRACED |
 | FUNC-03324 | função | `<callback:assetReferences.filter#0>` | `tools/refine-technical-spec.mjs:205` | tooling / STATICALLY_TRACED |
 | FUNC-03325 | função | `<callback:inv.models.map#0>` | `tools/refine-technical-spec.mjs:220` | tooling / STATICALLY_TRACED |
-| FUNC-03326 | função | `<callback:records.map#0>` | `tools/release-source-fingerprint.mjs:55` | tooling / STATICALLY_TRACED |
-| FUNC-03327 | função | `<callback:publicRuntime.filter#0>` | `tools/release-source-fingerprint.mjs:56` | tooling / STATICALLY_TRACED |
-| FUNC-03328 | função | `<callback:requiredFiles.filter#0>` | `tools/release-source-fingerprint.mjs:57` | tooling / STATICALLY_TRACED |
-| FUNC-03329 | função | `<callback:[...trackedPaths].some#0>` | `tools/release-source-fingerprint.mjs:60` | tooling / STATICALLY_TRACED |
+| FUNC-03326 | função | `<callback:records.map#0>` | `tools/release-source-fingerprint.mjs:56` | tooling / STATICALLY_TRACED |
+| FUNC-03327 | função | `<callback:publicRuntime.filter#0>` | `tools/release-source-fingerprint.mjs:57` | tooling / STATICALLY_TRACED |
+| FUNC-03328 | função | `<callback:requiredFiles.filter#0>` | `tools/release-source-fingerprint.mjs:58` | tooling / STATICALLY_TRACED |
+| FUNC-03329 | função | `<callback:[...trackedPaths].some#0>` | `tools/release-source-fingerprint.mjs:61` | tooling / STATICALLY_TRACED |
 | FUNC-03330 | função | `<callback:trace.evidence || [].map#0>` | `tools/repair-canonical-markdown-after-trace.mjs:51` | tooling / STATICALLY_TRACED |
 | FUNC-03331 | função | `constructor` | `tools/test-online-bridge-recovery.mjs:7` | tooling / STATICALLY_TRACED |
 | FUNC-03332 | função | `length` | `tools/test-online-bridge-recovery.mjs:8` | tooling / STATICALLY_TRACED |

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T11:47:37.173Z",
+  "generatedAt": "2026-08-25T11:50:54.880Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5570,
-    "runtimeFiles": 104,
+    "files": 5571,
+    "runtimeFiles": 105,
     "assetFiles": 5434,
-    "textFiles": 131,
+    "textFiles": 132,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 120,
+    "sourceFiles": 121,
     "gameRuntimeSourceFiles": 67,
-    "toolingSourceFiles": 53,
+    "toolingSourceFiles": 54,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -125,8 +125,8 @@
     },
     {
       "path": ".github/workflows/public-release-coherence.yml",
-      "size": 3335,
-      "sha256": "2bf3f79239efb6ece602351f3fc3a11087e63d6e981757820a7cefa865197163",
+      "size": 3376,
+      "sha256": "91f5cab234975d5d65a29f29fb3c69660f9d991034aae174d9e012f54fd9a785",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43646,7 +43646,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "5b5fb9ddfd2886a628d542c0bbf0911243211f56952dd26514dd76ebf23578f8",
+      "sha256": "2bee90364445424e961e8e0caff3edcf4084707601d74dfb61799bda328e6573",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43654,7 +43654,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "98ab7b84a4b98ce93a12f9e37a1c93c63b117986fd8adf8a1564284495d1a68a",
+      "sha256": "5c1b4e142542f45cae4ffd7ae2904b6f490cd0a392f505495c9453e8dbdef181",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43679,6 +43679,14 @@
       "path": "audit/PR39-BROWSER-SMOKE.json",
       "size": 1032,
       "sha256": "4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2",
+      "extension": ".json",
+      "runtime": true,
+      "asset": false
+    },
+    {
+      "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
+      "size": 14718,
+      "sha256": "6da384951cd8c3ebb971a0dccc226c5431058195b47bbc4e8f07592b197248f0",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44557,8 +44565,8 @@
     },
     {
       "path": "tools/release-source-fingerprint.mjs",
-      "size": 2835,
-      "sha256": "8fc10748389e36e36d27d1e4ab682b27ab0c843d73aee98659b326e8a2677fe7",
+      "size": 2887,
+      "sha256": "9d8cc1a80339bd2f236479b7f1b92d07743f017d58201f8f3febc2361aeb1fea",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -197352,8 +197360,8 @@
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 55,
-      "endLine": 55,
+      "line": 56,
+      "endLine": 56,
       "column": 41,
       "endColumn": 89,
       "name": "<callback:records.map#0>",
@@ -197377,10 +197385,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2047,
-        "end": 2095,
-        "bodyStart": 2057,
-        "bodyEnd": 2095,
+        "start": 2099,
+        "end": 2147,
+        "bodyStart": 2109,
+        "bodyEnd": 2147,
         "functionSha256": "b79e0747296477c9f4101689e2db47f24d0ae7109f8fca3e59d23623bd80e259",
         "bodySha256": "b15ca3b21203e25ac2e0555d57f4abe41862648c1c91a3b985b644f7ed8a5748",
         "async": false,
@@ -197396,8 +197404,8 @@
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 56,
-      "endLine": 56,
+      "line": 57,
+      "endLine": 57,
       "column": 47,
       "endColumn": 88,
       "name": "<callback:publicRuntime.filter#0>",
@@ -197420,10 +197428,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2146,
-        "end": 2187,
-        "bodyStart": 2151,
-        "bodyEnd": 2187,
+        "start": 2198,
+        "end": 2239,
+        "bodyStart": 2203,
+        "bodyEnd": 2239,
         "functionSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
         "bodySha256": "2277d07c98538ae8d67b7c2dd2e1409c0847c943b4303766ed123608f352f6f9",
         "async": false,
@@ -197439,8 +197447,8 @@
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 57,
-      "endLine": 57,
+      "line": 58,
+      "endLine": 58,
       "column": 42,
       "endColumn": 73,
       "name": "<callback:requiredFiles.filter#0>",
@@ -197463,10 +197471,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2253,
-        "end": 2284,
-        "bodyStart": 2261,
-        "bodyEnd": 2284,
+        "start": 2305,
+        "end": 2336,
+        "bodyStart": 2313,
+        "bodyEnd": 2336,
         "functionSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
         "bodySha256": "472ce01f7c8b0aa9aa7b1a03cf1f110c36e763502eeffeaf5d5d7747e4696a4a",
         "async": false,
@@ -197482,8 +197490,8 @@
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 60,
-      "endLine": 60,
+      "line": 61,
+      "endLine": 61,
       "column": 30,
       "endColumn": 64,
       "name": "<callback:[...trackedPaths].some#0>",
@@ -197506,10 +197514,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2458,
-        "end": 2492,
-        "bodyStart": 2466,
-        "bodyEnd": 2492,
+        "start": 2510,
+        "end": 2544,
+        "bodyStart": 2518,
+        "bodyEnd": 2544,
         "functionSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
         "bodySha256": "a81e6ab5a6610b4089f84e4563e0673159446495c0b6b121c3c7da3135981ee7",
         "async": false,
@@ -363624,7 +363632,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T11:47:39.667Z",
+    "generatedAt": "2026-08-25T11:50:56.854Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364089,7 +364097,7 @@
         "file": "tools/release-source-fingerprint.mjs",
         "sourceType": "module",
         "functions": 4,
-        "bytes": 2835
+        "bytes": 2887
       },
       {
         "file": "tools/repair-canonical-markdown-after-trace.mjs",
@@ -364149,8 +364157,8 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8065,
-      "assets": 15837,
+      "movement": 8066,
+      "assets": 15838,
       "environment": 193
     },
     "after": {

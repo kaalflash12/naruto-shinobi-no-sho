@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T11:47:51.704Z",
+  "generatedAt": "2026-08-25T11:51:09.453Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T11:47:37.173Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T11:50:54.880Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 120,
+    "sourceFiles": 121,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -33287,42 +33287,42 @@
     {
       "id": "FUNC-03326",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 55,
+      "line": 56,
       "name": "<callback:records.map#0>",
       "exactCode": true,
       "snippetSha256": "b79e0747296477c9f4101689e2db47f24d0ae7109f8fca3e59d23623bd80e259",
-      "astStart": 2047,
-      "astEnd": 2095
+      "astStart": 2099,
+      "astEnd": 2147
     },
     {
       "id": "FUNC-03327",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 56,
+      "line": 57,
       "name": "<callback:publicRuntime.filter#0>",
       "exactCode": true,
       "snippetSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
-      "astStart": 2146,
-      "astEnd": 2187
+      "astStart": 2198,
+      "astEnd": 2239
     },
     {
       "id": "FUNC-03328",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 57,
+      "line": 58,
       "name": "<callback:requiredFiles.filter#0>",
       "exactCode": true,
       "snippetSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
-      "astStart": 2253,
-      "astEnd": 2284
+      "astStart": 2305,
+      "astEnd": 2336
     },
     {
       "id": "FUNC-03329",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 60,
+      "line": 61,
       "name": "<callback:[...trackedPaths].some#0>",
       "exactCode": true,
       "snippetSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
-      "astStart": 2458,
-      "astEnd": 2492
+      "astStart": 2510,
+      "astEnd": 2544
     },
     {
       "id": "FUNC-03330",
@@ -39858,8 +39858,8 @@
     },
     {
       "path": ".github/workflows/public-release-coherence.yml",
-      "size": 3335,
-      "sha256": "2bf3f79239efb6ece602351f3fc3a11087e63d6e981757820a7cefa865197163"
+      "size": 3376,
+      "sha256": "91f5cab234975d5d65a29f29fb3c69660f9d991034aae174d9e012f54fd9a785"
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
@@ -39884,12 +39884,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "5b5fb9ddfd2886a628d542c0bbf0911243211f56952dd26514dd76ebf23578f8"
+      "sha256": "2bee90364445424e961e8e0caff3edcf4084707601d74dfb61799bda328e6573"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "98ab7b84a4b98ce93a12f9e37a1c93c63b117986fd8adf8a1564284495d1a68a"
+      "sha256": "5c1b4e142542f45cae4ffd7ae2904b6f490cd0a392f505495c9453e8dbdef181"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -39905,6 +39905,11 @@
       "path": "audit/PR39-BROWSER-SMOKE.json",
       "size": 1032,
       "sha256": "4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2"
+    },
+    {
+      "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
+      "size": 14718,
+      "sha256": "6da384951cd8c3ebb971a0dccc226c5431058195b47bbc4e8f07592b197248f0"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
@@ -40383,8 +40388,8 @@
     },
     {
       "path": "tools/release-source-fingerprint.mjs",
-      "size": 2835,
-      "sha256": "8fc10748389e36e36d27d1e4ab682b27ab0c843d73aee98659b326e8a2677fe7"
+      "size": 2887,
+      "sha256": "9d8cc1a80339bd2f236479b7f1b92d07743f017d58201f8f3febc2361aeb1fea"
     },
     {
       "path": "tools/repair-canonical-markdown-after-trace.mjs",

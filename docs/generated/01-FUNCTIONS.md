@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-25T11:47:37.173Z`
+Gerado em: `2026-08-25T11:50:54.880Z`
 
 ## FUNC-00001 — `<anonymous@1:1>`
 
@@ -53206,7 +53206,7 @@ Gerado em: `2026-08-25T11:47:37.173Z`
 
 ## FUNC-03326 — `<callback:records.map#0>`
 
-- **Fonte:** `tools/release-source-fingerprint.mjs:55`
+- **Fonte:** `tools/release-source-fingerprint.mjs:56`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `record`
@@ -53222,7 +53222,7 @@ Gerado em: `2026-08-25T11:47:37.173Z`
 
 ## FUNC-03327 — `<callback:publicRuntime.filter#0>`
 
-- **Fonte:** `tools/release-source-fingerprint.mjs:56`
+- **Fonte:** `tools/release-source-fingerprint.mjs:57`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `p`
@@ -53238,7 +53238,7 @@ Gerado em: `2026-08-25T11:47:37.173Z`
 
 ## FUNC-03328 — `<callback:requiredFiles.filter#0>`
 
-- **Fonte:** `tools/release-source-fingerprint.mjs:57`
+- **Fonte:** `tools/release-source-fingerprint.mjs:58`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `file`
@@ -53254,7 +53254,7 @@ Gerado em: `2026-08-25T11:47:37.173Z`
 
 ## FUNC-03329 — `<callback:[...trackedPaths].some#0>`
 
-- **Fonte:** `tools/release-source-fingerprint.mjs:60`
+- **Fonte:** `tools/release-source-fingerprint.mjs:61`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `file`

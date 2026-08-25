@@ -3335,10 +3335,10 @@ Parser: `Acorn 8.15.0`. Delimitação por AST; regex não define início/fim de 
 | FUNC-03323 | `<callback:inv.files||[].filter#0>` | `tools/refine-technical-spec.mjs:189-189` | arrow | `ea71ef9644ed6c83e58d3ce28be6c9fce1b582cdd38830948a5c9ce3e0756d52` |
 | FUNC-03324 | `<callback:assetReferences.filter#0>` | `tools/refine-technical-spec.mjs:205-205` | arrow | `ca5455b58e48d13a722edd719eeafa56d2719fc294ac29bcb906068cd46159c1` |
 | FUNC-03325 | `<callback:inv.models.map#0>` | `tools/refine-technical-spec.mjs:220-220` | arrow | `347b9984e74a6f565ef14b8928ba87785beff07a2f2958b02529d1a4d3515155` |
-| FUNC-03326 | `<callback:records.map#0>` | `tools/release-source-fingerprint.mjs:55-55` | arrow | `b15ca3b21203e25ac2e0555d57f4abe41862648c1c91a3b985b644f7ed8a5748` |
-| FUNC-03327 | `<callback:publicRuntime.filter#0>` | `tools/release-source-fingerprint.mjs:56-56` | arrow | `2277d07c98538ae8d67b7c2dd2e1409c0847c943b4303766ed123608f352f6f9` |
-| FUNC-03328 | `<callback:requiredFiles.filter#0>` | `tools/release-source-fingerprint.mjs:57-57` | arrow | `472ce01f7c8b0aa9aa7b1a03cf1f110c36e763502eeffeaf5d5d7747e4696a4a` |
-| FUNC-03329 | `<callback:[...trackedPaths].some#0>` | `tools/release-source-fingerprint.mjs:60-60` | arrow | `a81e6ab5a6610b4089f84e4563e0673159446495c0b6b121c3c7da3135981ee7` |
+| FUNC-03326 | `<callback:records.map#0>` | `tools/release-source-fingerprint.mjs:56-56` | arrow | `b15ca3b21203e25ac2e0555d57f4abe41862648c1c91a3b985b644f7ed8a5748` |
+| FUNC-03327 | `<callback:publicRuntime.filter#0>` | `tools/release-source-fingerprint.mjs:57-57` | arrow | `2277d07c98538ae8d67b7c2dd2e1409c0847c943b4303766ed123608f352f6f9` |
+| FUNC-03328 | `<callback:requiredFiles.filter#0>` | `tools/release-source-fingerprint.mjs:58-58` | arrow | `472ce01f7c8b0aa9aa7b1a03cf1f110c36e763502eeffeaf5d5d7747e4696a4a` |
+| FUNC-03329 | `<callback:[...trackedPaths].some#0>` | `tools/release-source-fingerprint.mjs:61-61` | arrow | `a81e6ab5a6610b4089f84e4563e0673159446495c0b6b121c3c7da3135981ee7` |
 | FUNC-03330 | `<callback:trace.evidence || [].map#0>` | `tools/repair-canonical-markdown-after-trace.mjs:51-51` | arrow | `4edcac2fc2a0b9cee8f88c8dbb339ab98a30b35625621accdb955fd355847846` |
 | FUNC-03331 | `constructor` | `tools/test-online-bridge-recovery.mjs:7-7` | class-method | `e9407ad3358930384e8af1d6f4c501879a32161d2b45566ddd27247ba90320dc` |
 | FUNC-03332 | `length` | `tools/test-online-bridge-recovery.mjs:8-8` | class-method | `798bfc9995f343b9a8e81a3d9bbc0eaad8ca5c1870ad657d5092d4e6143e840b` |
