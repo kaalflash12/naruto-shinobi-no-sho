@@ -11,9 +11,14 @@
   let lastRoom='';
   let recovering=false;
   let lastRecoveryAt=0;
+  let recoveredRoomId='';
+  let recoveredRoom=null;
+  let recoveryError='';
 
   const parse=raw=>{try{return raw?JSON.parse(raw):null}catch{return null}};
 
+  // __NARUTO_R41__.state() é um snapshot clonado por contrato; esta bridge nunca depende
+  // de mutar esse snapshot. A autoridade de recuperação fica no próprio módulo.
   function runtimeOnline(){
     try{return window.__NARUTO_R41__?.state?.()?.online||null}catch{return null}
   }
@@ -45,7 +50,17 @@
 
   function bridge(){
     const online=runtimeOnline()||{};
-    return {ready:online.ready===true,roomId:runtimeRoomId(online),actionCursor:Number(online.actionCursor||0)};
+    const runtimeRoom=runtimeRoomId(online);
+    const roomId=runtimeRoom||recoveredRoomId;
+    const recoveredReady=Boolean(recoveredRoomId&&(!runtimeRoom||runtimeRoom===recoveredRoomId));
+    return {
+      ready:online.ready===true||recoveredReady,
+      roomId,
+      actionCursor:Number(online.actionCursor||0),
+      source:online.ready===true?'runtime':recoveredReady?'recovery':'none',
+      recoveredRoomId,
+      error:recoveryError||String(online.error||'')
+    };
   }
 
   function marker(ctx){return `${ctx.id||'legacy'}:${ctx.roomId}`;}
@@ -66,34 +81,32 @@
     if(now-lastRecoveryAt<150)return false;
     lastRecoveryAt=now;
     recovering=true;
+    recoveryError='';
     try{
-      const response=await window.fetch(`/api/room/${encodeURIComponent(ctx.roomId)}`,{method:'GET',headers:{accept:'application/json'}});
+      const response=await window.fetch('/api/online/room',{
+        method:'POST',
+        headers:{'content-type':'application/json','accept':'application/json'},
+        body:JSON.stringify({roomId:ctx.roomId})
+      });
       const data=await response?.json?.().catch(()=>null);
       const room=data?.room;
       const responseRoomId=String(room?.roomId||room?.id||'').trim();
-      if(!response?.ok||data?.ok===false||!room||!responseRoomId||responseRoomId!==ctx.roomId)return false;
+      if(!response?.ok||data?.ok===false||!room||!responseRoomId||responseRoomId!==ctx.roomId){
+        recoveryError=`ONLINE_ROOM_RECOVERY_INVALID:${responseRoomId||'NO_ROOM'}`;
+        return false;
+      }
 
-      const online=runtimeOnline();
-      if(!online)return false;
-      online.room=room;
-      online.state=room;
-      if(!online.roomId)online.roomId=ctx.roomId;
-      if(Array.isArray(room.messages))online.actionLog=room.messages.slice(-50).map(payload=>({kind:'message',payload}));
-      if(Array.isArray(data.leaderboard))online.leaderboard=data.leaderboard;
-      online.error=null;
-
-      // A presença `data.online` é transitória e não define se a bridge está utilizável.
-      // O runtime principal também conclui `ready=true` depois de obter estado válido da sala.
-      online.ready=true;
+      recoveredRoomId=ctx.roomId;
+      recoveredRoom=room;
+      recoveryError='';
       sessionStorage.removeItem(RELOAD_MARKER);
       reloadQueued=false;
       lastRoom=ctx.roomId;
-      document.dispatchEvent(new CustomEvent('r41:online:state',{detail:{roomId:ctx.roomId,source:'recovery'}}));
-      window.dispatchEvent(new CustomEvent('sns:online-bridge-recovered',{detail:{roomId:ctx.roomId,online:data?.online===true}}));
+      document.dispatchEvent(new CustomEvent('r41:online:state',{detail:{roomId:ctx.roomId,source:'recovery',room}}));
+      window.dispatchEvent(new CustomEvent('sns:online-bridge-recovered',{detail:{roomId:ctx.roomId,online:data?.online===true,source:'canonical-room-api'}}));
       return true;
     }catch(error){
-      const online=runtimeOnline();
-      if(online)online.error=String(error?.message||error||'ONLINE_BRIDGE_RECOVERY_FAILED');
+      recoveryError=String(error?.message||error||'ONLINE_BRIDGE_RECOVERY_FAILED');
       return false;
     }finally{
       recovering=false;
@@ -117,7 +130,15 @@
     if(!ctx.roomId){
       sessionStorage.removeItem(RELOAD_MARKER);
       lastRoom='';
+      recoveredRoomId='';
+      recoveredRoom=null;
+      recoveryError='';
       return false;
+    }
+    if(recoveredRoomId&&recoveredRoomId!==ctx.roomId){
+      recoveredRoomId='';
+      recoveredRoom=null;
+      recoveryError='';
     }
     if(clearSatisfied(ctx,b)){lastRoom=ctx.roomId;return true;}
 
@@ -145,8 +166,8 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 
   window.__SNS_ONLINE_BRIDGE_RECOVERY__={
-    version:'R41-ONLINE-BRIDGE-RECOVERY-20260824-V2',
-    state:()=>({context:roomContext(),bridge:bridge(),reloadMarker:sessionStorage.getItem(RELOAD_MARKER)||'',reloadQueued,recovering}),
+    version:'R41-ONLINE-BRIDGE-RECOVERY-20260825-V4',
+    state:()=>({context:roomContext(),bridge:bridge(),recoveredRoom:recoveredRoom?{roomId:recoveredRoomId}:null,reloadMarker:sessionStorage.getItem(RELOAD_MARKER)||'',reloadQueued,recovering}),
     check:tick,
     recover:recoverBridge
   };
