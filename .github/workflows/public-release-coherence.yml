@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/public-release-coherence.yml'
+      - '.github/public-release-coherence-trigger.txt'
       - 'PUBLIC-RELEASE-FINGERPRINT.txt'
   workflow_dispatch:
 
