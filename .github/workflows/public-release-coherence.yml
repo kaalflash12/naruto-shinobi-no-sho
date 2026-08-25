@@ -1,0 +1,87 @@
+name: Public Release Coherence
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/public-release-coherence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-release-coherence-main
+  cancel-in-progress: false
+
+jobs:
+  coherence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Validate release fingerprint tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check tools/live-source-fingerprint.mjs
+          node --check tools/release-source-fingerprint.mjs
+          node --check tools/public-release-coherence.mjs
+          node --check tools/wait-public-release-coherence.mjs
+          expected="$(node tools/release-source-fingerprint.mjs)"
+          marker="$(tr -d '\r\n' < PUBLIC-RELEASE-FINGERPRINT.txt)"
+          [[ "$expected" =~ ^[a-f0-9]{64}$ ]]
+          test "$marker" = "$expected"
+          echo "RELEASE_FINGERPRINT=$expected" >> "$GITHUB_ENV"
+
+      - name: Wait until GitHub Pages serves this exact release
+        env:
+          PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
+          PUBLIC_RELEASE_REPORT: audit/PUBLIC-RELEASE-COHERENCE.json
+          PUBLIC_RELEASE_MAX_ATTEMPTS: '120'
+          PUBLIC_RELEASE_DELAY_MS: '5000'
+        run: node tools/wait-public-release-coherence.mjs
+
+      - name: Enforce public release coherence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const r=JSON.parse(fs.readFileSync('audit/PUBLIC-RELEASE-COHERENCE.json','utf8'));
+          const expected=String(process.env.RELEASE_FINGERPRINT||'').trim();
+          if(r.ok!==true||r.status!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error(`PUBLIC_RELEASE_NOT_COHERENT ${r.status}`);
+          if(r.site!=='https://kaalflash12.github.io/naruto-shinobi-no-sho/')throw new Error(`PUBLIC_SITE_NOT_CANONICAL ${r.site}`);
+          if(r.releaseFingerprint!==expected||r.localMarker!==expected||r.publicMarkerMatch!==true)throw new Error('PUBLIC_RELEASE_FINGERPRINT_MISMATCH');
+          if(!Array.isArray(r.checks)||!r.checks.length||r.checks.some(x=>x.ok!==true))throw new Error('PUBLIC_RELEASE_FILE_MISMATCH');
+          console.log(r.status,'files=',r.files,'releaseFingerprint=',r.releaseFingerprint);
+          NODE
+
+      - name: Commit public release evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PUBLIC-RELEASE-COHERENCE.json
+          if git diff --cached --quiet; then
+            echo 'PUBLIC_RELEASE_EVIDENCE_CURRENT'
+            exit 0
+          fi
+          git commit -m 'test: public release coherence PASS'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload public release evidence
+        uses: actions/upload-artifact@v6
+        with:
+          name: public-release-coherence
+          path: audit/PUBLIC-RELEASE-COHERENCE.json
+          if-no-files-found: error
