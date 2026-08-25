@@ -92,6 +92,18 @@ function Get-CloudflareToken {
   return $token.Trim()
 }
 
+function Get-MongoUri {
+  Write-Step 'MongoDB ainda nao configurado no Worker'
+  Write-Host 'O backend confirmou que nao existe MONGODB_URI persistida no Worker.' -ForegroundColor Yellow
+  Write-Host 'Cole a connection string do MongoDB Atlas. A entrada fica oculta e sera gravada somente como GitHub Secret.' -ForegroundColor White
+  $secure = Read-Host 'MONGODB_URI' -AsSecureString
+  $uri = ConvertFrom-SecureValue $secure
+  if ([string]::IsNullOrWhiteSpace($uri) -or $uri -notmatch '^mongodb(\+srv)?://') {
+    throw 'MONGODB_URI vazia ou invalida.'
+  }
+  return $uri.Trim()
+}
+
 function Test-CloudflareToken([string]$Token) {
   Write-Step 'Validando token diretamente na Cloudflare'
   $headers = @{ Authorization = "Bearer $Token"; 'Content-Type' = 'application/json' }
@@ -114,7 +126,6 @@ function Resolve-CloudflareAccount([string]$Token) {
     return [string]$accounts[0].id
   }
 
-  # Quando houver varias contas, tenta identificar automaticamente a que ja possui o Worker canonico.
   $matches = @()
   foreach ($account in $accounts) {
     try {
@@ -141,33 +152,140 @@ function Resolve-CloudflareAccount([string]$Token) {
   return [string]$accounts[$parsed - 1].id
 }
 
-function Start-BackendBootstrap([string]$Gh) {
-  Write-Step 'Disparando pipeline live'
+function Get-NewRunId([string]$Gh, [string]$Workflow, [DateTime]$SinceUtc, [int]$WaitSeconds = 600) {
+  $deadline = [DateTime]::UtcNow.AddSeconds($WaitSeconds)
+  while ([DateTime]::UtcNow -lt $deadline) {
+    $json = & $Gh run list --repo $Repo --workflow $Workflow --limit 30 --json databaseId,createdAt,status,conclusion,event 2>$null
+    if ($LASTEXITCODE -eq 0 -and $json) {
+      $runs = @($json | ConvertFrom-Json)
+      $candidate = $runs |
+        Where-Object { ([DateTime]$_.createdAt).ToUniversalTime() -ge $SinceUtc.AddSeconds(-5) } |
+        Sort-Object { [DateTime]$_.createdAt } -Descending |
+        Select-Object -First 1
+      if ($candidate) { return [long]$candidate.databaseId }
+    }
+    Start-Sleep -Seconds 2
+  }
+  throw "Workflow $Workflow nao apareceu dentro de $WaitSeconds segundos."
+}
+
+function Watch-Run([string]$Gh, [long]$RunId, [string]$Label, [switch]$AllowFailure) {
+  Write-Host "$Label run: $RunId" -ForegroundColor Green
+  & $Gh run watch $RunId --repo $Repo --exit-status
+  $ok = ($LASTEXITCODE -eq 0)
+  if (-not $ok -and -not $AllowFailure) { throw "$Label falhou. Run $RunId" }
+  return $ok
+}
+
+function Invoke-Workflow([string]$Gh, [string]$Workflow, [string]$Label) {
+  $started = [DateTime]::UtcNow
+  & $Gh workflow run $Workflow --repo $Repo --ref main
+  if ($LASTEXITCODE -ne 0) { throw "Falha ao disparar $Label." }
+  $runId = Get-NewRunId $Gh $Workflow $started 600
+  [void](Watch-Run $Gh $runId $Label)
+  return $runId
+}
+
+function Get-RunEvidenceJson([string]$Gh, [long]$RunId, [string]$FileName) {
+  $root = Join-Path $env:TEMP ("shinobi-run-{0}-{1}" -f $RunId, [Guid]::NewGuid().ToString('N'))
+  New-Item -ItemType Directory -Path $root -Force | Out-Null
+  try {
+    & $Gh run download $RunId --repo $Repo --dir $root *> $null
+    if ($LASTEXITCODE -ne 0) { return $null }
+    $file = Get-ChildItem $root -Recurse -File -Filter $FileName | Select-Object -First 1
+    if (-not $file) { return $null }
+    return (Get-Content $file.FullName -Raw | ConvertFrom-Json)
+  }
+  finally {
+    if (Test-Path $root) { Remove-Item $root -Recurse -Force -ErrorAction SilentlyContinue }
+  }
+}
+
+function Get-RepoJson([string]$Gh, [string]$Path) {
+  $raw = & $Gh api "repos/$Repo/contents/$Path`?ref=main" 2>$null
+  if ($LASTEXITCODE -ne 0 -or -not $raw) { return $null }
+  $meta = $raw | ConvertFrom-Json
+  if (-not $meta.content) { return $null }
+  $bytes = [Convert]::FromBase64String(([string]$meta.content -replace '\s', ''))
+  $text = [Text.Encoding]::UTF8.GetString($bytes)
+  return ($text | ConvertFrom-Json)
+}
+
+function Start-AuditAndGetLiveRun([string]$Gh) {
+  Write-Step 'Disparando auditor de credenciais'
   $started = [DateTime]::UtcNow
   & $Gh workflow run backend-secret-presence.yml --repo $Repo --ref main
   if ($LASTEXITCODE -ne 0) { throw 'Falha ao disparar Backend Secret Presence Audit.' }
+  $auditId = Get-NewRunId $Gh 'backend-secret-presence.yml' $started 600
+  [void](Watch-Run $Gh $auditId 'Backend Secret Presence Audit')
 
-  $runId = $null
-  for ($i = 0; $i -lt 90 -and -not $runId; $i++) {
-    Start-Sleep -Seconds 2
-    $json = & $Gh run list --repo $Repo --workflow backend-secret-presence.yml --limit 10 --json databaseId,createdAt,status,conclusion,event 2>$null
-    if ($LASTEXITCODE -ne 0 -or -not $json) { continue }
-    $runs = @($json | ConvertFrom-Json)
-    $candidate = $runs |
-      Where-Object { ([DateTime]$_.createdAt).ToUniversalTime() -ge $started.AddSeconds(-5) } |
-      Sort-Object { [DateTime]$_.createdAt } -Descending |
-      Select-Object -First 1
-    if ($candidate) { $runId = [long]$candidate.databaseId }
+  Write-Step 'Aguardando Backend Live'
+  return (Get-NewRunId $Gh 'live-backend-e2e.yml' $started 600)
+}
+
+function Complete-LiveBackend([string]$Gh) {
+  $liveId = Start-AuditAndGetLiveRun $Gh
+  $liveOk = Watch-Run $Gh $liveId 'Live Backend Cloudflare + MongoDB E2E' -AllowFailure
+  if ($liveOk) { return $liveId }
+
+  $live = Get-RunEvidenceJson $Gh $liveId 'LIVE-BACKEND.json'
+  $preflight = Get-RunEvidenceJson $Gh $liveId 'MONGODB-PREFLIGHT.json'
+  $missingMongo = ($null -ne $live -and [string]$live.status -eq 'BLOCKED_MONGODB_URI_NOT_CONFIGURED') -or
+                  ($null -ne $preflight -and [string]$preflight.status -eq 'BLOCKED_MONGODB_URI_NOT_CONFIGURED')
+  if (-not $missingMongo) {
+    $status = if ($live) { [string]$live.status } else { 'SEM_EVIDENCIA_LIVE' }
+    throw "Backend Live falhou por causa diferente de MONGODB_URI ausente. Status: $status. Run $liveId"
   }
-  if (-not $runId) { throw 'O workflow foi disparado, mas a execucao nova nao apareceu no GitHub Actions.' }
 
-  Write-Host "Backend Secret Presence run: $runId" -ForegroundColor Green
-  & $Gh run watch $runId --repo $Repo --exit-status
-  if ($LASTEXITCODE -ne 0) { throw "Backend Secret Presence Audit falhou. Run $runId" }
+  $mongo = $null
+  try {
+    $mongo = Get-MongoUri
+    Set-GhSecret $Gh 'MONGODB_URI' $mongo
+    Write-Host 'MONGODB_URI gravada como GitHub Secret.' -ForegroundColor Green
+  }
+  finally {
+    if ($mongo) { $mongo = $null }
+    [GC]::Collect()
+  }
 
-  Write-Host ''
-  Write-Host 'CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID estao no GitHub Secrets.' -ForegroundColor Green
-  Write-Host 'O workflow existente agora dispara automaticamente o Live Backend quando o auditor confirmar readiness.' -ForegroundColor Green
+  Write-Step 'Repetindo backend live com MongoDB configurado'
+  $retryId = Start-AuditAndGetLiveRun $Gh
+  [void](Watch-Run $Gh $retryId 'Live Backend Cloudflare + MongoDB E2E')
+  return $retryId
+}
+
+function Complete-LiveConsumers([string]$Gh, [DateTime]$SinceUtc) {
+  Write-Step 'Aguardando consumidores live'
+  $accountId = Get-NewRunId $Gh 'account-live-e2e.yml' $SinceUtc 900
+  $gameplayId = Get-NewRunId $Gh 'browser-gameplay-e2e.yml' $SinceUtc 900
+
+  [void](Watch-Run $Gh $accountId 'Account Live E2E')
+  [void](Watch-Run $Gh $gameplayId 'Browser Gameplay E2E')
+  return @{ Account = $accountId; Gameplay = $gameplayId }
+}
+
+function Complete-FinalReadiness([string]$Gh) {
+  Write-Step 'Executando orquestracao final'
+  $orchestrationStarted = [DateTime]::UtcNow
+  & $Gh workflow run final-readiness-orchestration.yml --repo $Repo --ref main
+  if ($LASTEXITCODE -ne 0) { throw 'Falha ao disparar Final Readiness Orchestration.' }
+  $orchestrationId = Get-NewRunId $Gh 'final-readiness-orchestration.yml' $orchestrationStarted 600
+  [void](Watch-Run $Gh $orchestrationId 'Final Readiness Orchestration')
+
+  $finalId = Get-NewRunId $Gh 'final-readiness.yml' $orchestrationStarted 600
+  [void](Watch-Run $Gh $finalId 'Final Readiness')
+
+  $report = $null
+  for ($i = 0; $i -lt 60 -and -not $report; $i++) {
+    $report = Get-RepoJson $Gh 'audit/FINAL-READINESS.json'
+    if ($report -and [string]$report.status -eq 'PASS_FINAL_READINESS' -and $report.ok -eq $true) { break }
+    $report = $null
+    Start-Sleep -Seconds 2
+  }
+  if (-not $report) { throw 'Final Readiness terminou, mas audit/FINAL-READINESS.json nao confirmou PASS_FINAL_READINESS.' }
+
+  Write-Host 'PASS_FINAL_READINESS confirmado no repositorio.' -ForegroundColor Green
+  return $finalId
 }
 
 $gh = Get-GhExecutable
@@ -182,9 +300,17 @@ try {
   Write-Step 'Gravando secrets sem persistir o token em arquivo'
   Set-GhSecret $gh 'CLOUDFLARE_API_TOKEN' $token
   Set-GhSecret $gh 'CLOUDFLARE_ACCOUNT_ID' $accountId
-  Write-Host 'GitHub Secrets gravados.' -ForegroundColor Green
+  Write-Host 'GitHub Secrets Cloudflare gravados.' -ForegroundColor Green
 
-  Start-BackendBootstrap $gh
+  $chainStarted = [DateTime]::UtcNow
+  $liveRun = Complete-LiveBackend $gh
+  Write-Host "Backend Live PASS. Run $liveRun" -ForegroundColor Green
+
+  $consumers = Complete-LiveConsumers $gh $chainStarted
+  Write-Host ("Consumidores Live PASS. Account={0} Gameplay={1}" -f $consumers.Account, $consumers.Gameplay) -ForegroundColor Green
+
+  $finalRun = Complete-FinalReadiness $gh
+  Write-Host "Final Readiness PASS. Run $finalRun" -ForegroundColor Green
 }
 finally {
   if ($token) { $token = $null }
@@ -192,4 +318,4 @@ finally {
 }
 
 Write-Host ''
-Write-Host 'BOOTSTRAP_CLOUDFLARE_LIVE_DISPARADO' -ForegroundColor Green
+Write-Host 'PASS_FINAL_READINESS' -ForegroundColor Green
