@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-25T01:01:17.173Z`
+Gerado em: `2026-08-25T01:08:33.898Z`
 
 ## FUNC-00001 — `accountToken`
 
@@ -17530,7 +17530,7 @@ Gerado em: `2026-08-25T01:01:17.173Z`
 - **Domínio:** `tooling`
 - **Forma:** declaration
 - **Parâmetros:** `page,screen`
-- **Chamadas internas detectadas:** `count`, `assert`, `test`
+- **Chamadas internas detectadas:** `assert`, `test`
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
 - **Modelos IA:** —

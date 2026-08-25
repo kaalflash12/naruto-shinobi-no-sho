@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:01:17.173Z",
+  "generatedAt": "2026-08-25T01:08:33.898Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -44355,8 +44355,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v2.mjs",
-      "size": 9066,
-      "sha256": "1e4f4da345fd560b253054e35b81fa9ce99932b5ee497806512e788d92476a12",
+      "size": 9309,
+      "sha256": "670e38ea4666b7d99411aa2d9f2a443bdaea2d09b5e401ed2467f7a70e00e4b5",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -71073,7 +71073,6 @@
         "actions": []
       },
       "calls": [
-        "count",
         "assert",
         "test"
       ],
@@ -238055,7 +238054,7 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8054,
+      "movement": 8055,
       "assets": 15836,
       "environment": 179
     },

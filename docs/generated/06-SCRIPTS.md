@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-25T01:01:17.173Z`
+Gerado em: `2026-08-25T01:08:33.898Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -138,7 +138,7 @@ Gerado em: `2026-08-25T01:01:17.173Z`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 4125 bytes — SHA-256 `39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a`
 - `tools/browser-account-live.mjs` — domínio `tooling` — 5191 bytes — SHA-256 `1d62144ef47d69f22aa9c8efac15adfb66e8c25abda0a89d8928dd78b0552f2f`
 - `tools/browser-combat-local-e2e.mjs` — domínio `tooling` — 8444 bytes — SHA-256 `e30a710e5ef378e068eaabad8fe77cdd481175994b77b7b372a9ea97f3961d21`
-- `tools/browser-gameplay-e2e-v2.mjs` — domínio `tooling` — 9066 bytes — SHA-256 `1e4f4da345fd560b253054e35b81fa9ce99932b5ee497806512e788d92476a12`
+- `tools/browser-gameplay-e2e-v2.mjs` — domínio `tooling` — 9309 bytes — SHA-256 `670e38ea4666b7d99411aa2d9f2a443bdaea2d09b5e401ed2467f7a70e00e4b5`
 - `tools/browser-gameplay-e2e-v3.mjs` — domínio `tooling` — 5034 bytes — SHA-256 `2a047e3da2b029183c654fdbc5cba970133a72de0b91ce018ec60c46d5ee22aa`
 - `tools/browser-gameplay-e2e-v4.mjs` — domínio `tooling` — 9122 bytes — SHA-256 `08023f1fde71ae53eee36549d8e3dcbba7927c892483b9ba557fd3960a6ff1a2`
 - `tools/browser-gameplay-e2e.mjs` — domínio `tooling` — 24505 bytes — SHA-256 `3b71f9eef487aea41b1232571fb54caa259739640355d801899fe46fbeb2c0ea`
