@@ -91,3 +91,4 @@ if (process.env.GITHUB_OUTPUT) {
     `same_backend=${sameBackend ? 'true' : 'false'}\n`);
 }
 console.log(JSON.stringify(result, null, 2));
+if (process.env.REQUIRE_FINAL_READY === '1' && !ready) process.exitCode = 1;
