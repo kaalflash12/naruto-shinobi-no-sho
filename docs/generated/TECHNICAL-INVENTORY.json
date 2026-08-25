@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T21:08:14.396Z",
+  "generatedAt": "2026-08-25T21:27:21.906Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5572,
-    "runtimeFiles": 105,
+    "files": 5574,
+    "runtimeFiles": 106,
     "assetFiles": 5434,
-    "textFiles": 133,
+    "textFiles": 135,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 121,
-    "gameRuntimeSourceFiles": 67,
-    "toolingSourceFiles": 54,
+    "sourceFiles": 123,
+    "gameRuntimeSourceFiles": 68,
+    "toolingSourceFiles": 55,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -79,6 +79,14 @@
       "path": ".github/workflows/browser-gameplay-e2e.yml",
       "size": 8763,
       "sha256": "ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
+      "size": 1184,
+      "sha256": "53c36ab4f9bb03c93ddf0ce3b37dd46755b3f17baf9254a3a5b33d7b9b70b2b7",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43644,9 +43652,17 @@
       "asset": true
     },
     {
+      "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
+      "size": 8066,
+      "sha256": "3b350f85e32459164724091d774706cbcd262ff761f28f6c77448c6dcd2ff6b8",
+      "extension": ".ps1",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2558,
-      "sha256": "536a420775582560fc9a012395fc7e48ad4fe4b0bcc7a1e751920d95e8693820",
+      "sha256": "f9c3525b8ce80f98460dd767aa12dcfed5634ddd6a0553d36a89a082a2be1510",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43654,7 +43670,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "3d0f375d66ff4f4d143a6246b5a4d5882e474824edc27abd1db129abed85050b",
+      "sha256": "b49f0f36315e1b2a6cd86a62cfa57b92608681fc5ff41de0b0d368ae2b8d4ec1",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43662,7 +43678,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "8b97d0d6f2fab21ad0509722977fa1e82657f0271b0012f6f5335cda53bfd11f",
+      "sha256": "a9491f289e8bc8ec73a733a67dc9f65d6bd35176c8e7e0dfe8917db97a4aa66b",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43710,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "450d65e4c5098bc4d20a9ffad7d75555f47e41cd24e5f972ec72cdfcfca44c4d",
+      "sha256": "0e0b0ac28ddaa5fbe1ea512df392dacdb0a51d82c9278a7eff89ea1911abbd76",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363640,7 +363656,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T21:08:16.520Z",
+    "generatedAt": "2026-08-25T21:27:23.301Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",

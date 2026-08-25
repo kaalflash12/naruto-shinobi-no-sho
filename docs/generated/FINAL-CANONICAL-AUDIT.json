@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-25T21:08:25.769Z",
+  "generatedAt": "2026-08-25T21:27:31.235Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T21:08:14.396Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T21:27:21.906Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 121,
+    "sourceFiles": 123,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39827,6 +39827,11 @@
       "sha256": "ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43"
     },
     {
+      "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
+      "size": 1184,
+      "sha256": "53c36ab4f9bb03c93ddf0ce3b37dd46755b3f17baf9254a3a5b33d7b9b70b2b7"
+    },
+    {
       "path": ".github/workflows/documentation-audit.yml",
       "size": 6488,
       "sha256": "95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9"
@@ -39877,19 +39882,24 @@
       "sha256": "88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06"
     },
     {
+      "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
+      "size": 8066,
+      "sha256": "3b350f85e32459164724091d774706cbcd262ff761f28f6c77448c6dcd2ff6b8"
+    },
+    {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2558,
-      "sha256": "536a420775582560fc9a012395fc7e48ad4fe4b0bcc7a1e751920d95e8693820"
+      "sha256": "f9c3525b8ce80f98460dd767aa12dcfed5634ddd6a0553d36a89a082a2be1510"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "3d0f375d66ff4f4d143a6246b5a4d5882e474824edc27abd1db129abed85050b"
+      "sha256": "b49f0f36315e1b2a6cd86a62cfa57b92608681fc5ff41de0b0d368ae2b8d4ec1"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "8b97d0d6f2fab21ad0509722977fa1e82657f0271b0012f6f5335cda53bfd11f"
+      "sha256": "a9491f289e8bc8ec73a733a67dc9f65d6bd35176c8e7e0dfe8917db97a4aa66b"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -39909,7 +39919,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "450d65e4c5098bc4d20a9ffad7d75555f47e41cd24e5f972ec72cdfcfca44c4d"
+      "sha256": "0e0b0ac28ddaa5fbe1ea512df392dacdb0a51d82c9278a7eff89ea1911abbd76"
     },
     {
       "path": "cloudflare/oneclick-backend/package.json",
