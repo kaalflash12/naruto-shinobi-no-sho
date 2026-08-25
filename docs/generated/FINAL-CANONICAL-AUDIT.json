@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-25T10:41:23.991Z",
+  "generatedAt": "2026-08-25T11:43:21.188Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-25T10:41:09.049Z",
+  "sourceInventoryGeneratedAt": "2026-08-25T11:43:05.925Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
-    "functions": 3358,
-    "functionsWithExactCode": 3358,
+    "functions": 3360,
+    "functionsWithExactCode": 3360,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -28600,262 +28600,252 @@
       "line": 1,
       "name": "<anonymous@1:1>",
       "exactCode": true,
-      "snippetSha256": "e8990aa81a954c37372e538fee2b0fa47e4a6e03882257af3c40086ffe859c9a",
+      "snippetSha256": "48751ea8bb86745eaa59840c627ec436ace102c1234ceab685c94fc03ec75ee0",
       "astStart": 1,
-      "astEnd": 6000
+      "astEnd": 6558
     },
     {
       "id": "FUNC-02858",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 15,
+      "line": 18,
       "name": "parse",
       "exactCode": true,
       "snippetSha256": "e547ba2940cba00e66d007a1e9a1904f43b8cb5d0aad863778eaad629c94c62f",
-      "astStart": 413,
-      "astEnd": 474
+      "astStart": 489,
+      "astEnd": 550
     },
     {
       "id": "FUNC-02859",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 17,
+      "line": 22,
       "name": "runtimeOnline",
       "exactCode": true,
       "snippetSha256": "6b2992e6803a19a4ddd832aaebd655390f88229beb84a431ef0856e2c4a5beb0",
-      "astStart": 479,
-      "astEnd": 589
+      "astStart": 726,
+      "astEnd": 836
     },
     {
       "id": "FUNC-02860",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 21,
+      "line": 26,
       "name": "runtimeRoomId",
       "exactCode": true,
       "snippetSha256": "0f7a49c248eedadbdf75e6b7a9652c52707c206802e63f4eb560b1786dfd05d0",
-      "astStart": 593,
-      "astEnd": 735
+      "astStart": 840,
+      "astEnd": 982
     },
     {
       "id": "FUNC-02861",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 25,
+      "line": 30,
       "name": "activeEntry",
       "exactCode": true,
       "snippetSha256": "12c1ea7ca70a845946f5e19bf72339963bd685c5fc143d59866ad5bc475f1c66",
-      "astStart": 739,
-      "astEnd": 1170
+      "astStart": 986,
+      "astEnd": 1417
     },
     {
       "id": "FUNC-02862",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 37,
+      "line": 42,
       "name": "roomContext",
       "exactCode": true,
       "snippetSha256": "169c036a4e2475dff1d0d274a534c7fbd3fca541d9eaf5899ae18c693030f989",
-      "astStart": 1174,
-      "astEnd": 1567
+      "astStart": 1421,
+      "astEnd": 1814
     },
     {
       "id": "FUNC-02863",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 46,
+      "line": 51,
       "name": "bridge",
       "exactCode": true,
-      "snippetSha256": "fac35c0e70f9833e8842163aa4eb4322c7e25c1b379da961a46b95f0b320c3d2",
-      "astStart": 1571,
-      "astEnd": 1744
+      "snippetSha256": "9c539800e03aecf9f16be02eb87d7e0423f95cd4c5b18cb0e3a2057923f159c2",
+      "astStart": 1818,
+      "astEnd": 2354
     },
     {
       "id": "FUNC-02864",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 51,
+      "line": 66,
       "name": "marker",
       "exactCode": true,
       "snippetSha256": "ca551987db7108f970cf68c626a97bd02632d82398938573796ec71a9091a0e9",
-      "astStart": 1748,
-      "astEnd": 1813
+      "astStart": 2358,
+      "astEnd": 2423
     },
     {
       "id": "FUNC-02865",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 53,
+      "line": 68,
       "name": "clearSatisfied",
       "exactCode": true,
       "snippetSha256": "e674f3e675b3f9f491359e4285aae295ff75b103df442b1ec8b39cb23c8d0a10",
-      "astStart": 1817,
-      "astEnd": 2055
+      "astStart": 2427,
+      "astEnd": 2665
     },
     {
       "id": "FUNC-02866",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 63,
+      "line": 78,
       "name": "recoverBridge",
       "exactCode": true,
-      "snippetSha256": "ee57faf343beefdfe3444658ee89771eb3b3ddd3c483c80ee5c4bee3381bc8a4",
-      "astStart": 2059,
-      "astEnd": 3901
+      "snippetSha256": "26a9a1f6e7392270f462a5426f478216e435d18827084631b4486102eda1950d",
+      "astStart": 2669,
+      "astEnd": 4188
     },
     {
       "id": "FUNC-02867",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 71,
+      "line": 91,
       "name": "<callback:response.json().catch#0>",
       "exactCode": true,
       "snippetSha256": "9717c1301c84862d2db159e5e204ad5520dc342de5ae8595036d79b29bf0f50c",
-      "astStart": 2498,
-      "astEnd": 2506
+      "astStart": 3215,
+      "astEnd": 3223
     },
     {
       "id": "FUNC-02868",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 81,
-      "name": "<callback:room.messages.slice().map#0>",
+      "line": 116,
+      "name": "requestOneRecovery",
       "exactCode": true,
-      "snippetSha256": "0b0486882e0426fef83e714d3cb175718b3ed53ce1b14b2babe57c75833ea466",
-      "astStart": 2967,
-      "astEnd": 3002
+      "snippetSha256": "f4664d0774596665564ae0645fcd3da33e83a27a409e9af49f934cc24cd994ce",
+      "astStart": 4192,
+      "astEnd": 4716
     },
     {
       "id": "FUNC-02869",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 103,
-      "name": "requestOneRecovery",
+      "line": 124,
+      "name": "<callback:setTimeout#0>",
       "exactCode": true,
-      "snippetSha256": "f4664d0774596665564ae0645fcd3da33e83a27a409e9af49f934cc24cd994ce",
-      "astStart": 3905,
-      "astEnd": 4429
+      "snippetSha256": "2932280f3d9243e5aa268bf61cbd9edac365d48db22707f3628eafd333940199",
+      "astStart": 4669,
+      "astEnd": 4690
     },
     {
       "id": "FUNC-02870",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 111,
-      "name": "<callback:setTimeout#0>",
+      "line": 128,
+      "name": "tick",
       "exactCode": true,
-      "snippetSha256": "2932280f3d9243e5aa268bf61cbd9edac365d48db22707f3628eafd333940199",
-      "astStart": 4382,
-      "astEnd": 4403
+      "snippetSha256": "81fe1d46603d4eae2dda3db77e7b3596df8e8afd978df0b875590f440d4712fd",
+      "astStart": 4720,
+      "astEnd": 5475
     },
     {
       "id": "FUNC-02871",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 115,
-      "name": "tick",
+      "line": 155,
+      "name": "start",
       "exactCode": true,
-      "snippetSha256": "3e7aa94a8ac9da2080ff0a170d09a0705fc4cf214b3692fd2848df7ac5904a03",
-      "astStart": 4433,
-      "astEnd": 4975
+      "snippetSha256": "ba9b29716786f1b6d4f679ea63ce94ae57b188d77982b4fca24c1b8ccb74af5f",
+      "astStart": 5491,
+      "astEnd": 6101
     },
     {
       "id": "FUNC-02872",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 134,
-      "name": "start",
+      "line": 157,
+      "name": "<callback:setInterval#0>",
       "exactCode": true,
-      "snippetSha256": "ba9b29716786f1b6d4f679ea63ce94ae57b188d77982b4fca24c1b8ccb74af5f",
-      "astStart": 4991,
-      "astEnd": 5601
+      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
+      "astStart": 5530,
+      "astEnd": 5548
     },
     {
       "id": "FUNC-02873",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 136,
-      "name": "<callback:setInterval#0>",
+      "line": 158,
+      "name": "<callback:setTimeout#0>",
       "exactCode": true,
       "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5030,
-      "astEnd": 5048
+      "astStart": 5620,
+      "astEnd": 5638
     },
     {
       "id": "FUNC-02874",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 137,
-      "name": "<callback:setTimeout#0>",
+      "line": 158,
+      "name": "<callback:window.addEventListener#1>",
       "exactCode": true,
-      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5120,
-      "astEnd": 5138
+      "snippetSha256": "1df57eb46a7e1046ddf8cf1946490d5a871a2fe7b7ef473ffdbaf0ade3c6fc0d",
+      "astStart": 5605,
+      "astEnd": 5642
     },
     {
       "id": "FUNC-02875",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 137,
-      "name": "<callback:window.addEventListener#1>",
+      "line": 159,
+      "name": "<callback:setTimeout#0>",
       "exactCode": true,
-      "snippetSha256": "1df57eb46a7e1046ddf8cf1946490d5a871a2fe7b7ef473ffdbaf0ade3c6fc0d",
-      "astStart": 5105,
-      "astEnd": 5142
+      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
+      "astStart": 5786,
+      "astEnd": 5804
     },
     {
       "id": "FUNC-02876",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 138,
-      "name": "<callback:setTimeout#0>",
+      "line": 159,
+      "name": "<callback:window.addEventListener#1>",
       "exactCode": true,
-      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5286,
-      "astEnd": 5304
+      "snippetSha256": "2be8a06adbae7c2bcda2cb688483786fadf8a071a3993d6196196325d9a65722",
+      "astStart": 5683,
+      "astEnd": 5810
     },
     {
       "id": "FUNC-02877",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 138,
+      "line": 160,
       "name": "<callback:window.addEventListener#1>",
       "exactCode": true,
-      "snippetSha256": "2be8a06adbae7c2bcda2cb688483786fadf8a071a3993d6196196325d9a65722",
-      "astStart": 5183,
-      "astEnd": 5310
+      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
+      "astStart": 5850,
+      "astEnd": 5868
     },
     {
       "id": "FUNC-02878",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 139,
-      "name": "<callback:window.addEventListener#1>",
+      "line": 161,
+      "name": "<callback:document.addEventListener#1>",
       "exactCode": true,
       "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5350,
-      "astEnd": 5368
+      "astStart": 5920,
+      "astEnd": 5938
     },
     {
       "id": "FUNC-02879",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 140,
-      "name": "<callback:document.addEventListener#1>",
+      "line": 162,
+      "name": "<callback:new MutationObserver#0>",
       "exactCode": true,
-      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5420,
-      "astEnd": 5438
+      "snippetSha256": "47a85d29e5409f518e51335201f87b9982a7ae95fb71bede9057806a981402d7",
+      "astStart": 5981,
+      "astEnd": 6017
     },
     {
       "id": "FUNC-02880",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 141,
-      "name": "<callback:new MutationObserver#0>",
+      "line": 162,
+      "name": "<callback:setTimeout#0>",
       "exactCode": true,
-      "snippetSha256": "47a85d29e5409f518e51335201f87b9982a7ae95fb71bede9057806a981402d7",
-      "astStart": 5481,
-      "astEnd": 5517
+      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
+      "astStart": 5996,
+      "astEnd": 6014
     },
     {
       "id": "FUNC-02881",
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 141,
-      "name": "<callback:setTimeout#0>",
+      "line": 170,
+      "name": "state",
       "exactCode": true,
-      "snippetSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
-      "astStart": 5496,
-      "astEnd": 5514
+      "snippetSha256": "4a0665ec626e9fd04f891af5cdefeedf51e31c47659c77abcbea219e594bfa70",
+      "astStart": 6326,
+      "astEnd": 6508
     },
     {
       "id": "FUNC-02882",
-      "file": "src/r41-online-bridge-recovery.js",
-      "line": 149,
-      "name": "state",
-      "exactCode": true,
-      "snippetSha256": "220b6f065194e6b1060568db5487d335a19e5b1b594b9d3a10c6c4900ecb6875",
-      "astStart": 5826,
-      "astEnd": 5950
-    },
-    {
-      "id": "FUNC-02883",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28865,7 +28855,7 @@
       "astEnd": 10093
     },
     {
-      "id": "FUNC-02884",
+      "id": "FUNC-02883",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 14,
       "name": "clone",
@@ -28875,7 +28865,7 @@
       "astEnd": 672
     },
     {
-      "id": "FUNC-02885",
+      "id": "FUNC-02884",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 15,
       "name": "parseSave",
@@ -28885,7 +28875,7 @@
       "astEnd": 757
     },
     {
-      "id": "FUNC-02886",
+      "id": "FUNC-02885",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 16,
       "name": "activeSlotId",
@@ -28895,7 +28885,7 @@
       "astEnd": 849
     },
     {
-      "id": "FUNC-02887",
+      "id": "FUNC-02886",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 17,
       "name": "legacySlotKey",
@@ -28905,7 +28895,7 @@
       "astEnd": 937
     },
     {
-      "id": "FUNC-02888",
+      "id": "FUNC-02887",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 18,
       "name": "accountEntries",
@@ -28915,7 +28905,7 @@
       "astEnd": 1499
     },
     {
-      "id": "FUNC-02889",
+      "id": "FUNC-02888",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 28,
       "name": "<callback:rows.sort#0>",
@@ -28925,7 +28915,7 @@
       "astEnd": 1476
     },
     {
-      "id": "FUNC-02890",
+      "id": "FUNC-02889",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 31,
       "name": "readSaveEntry",
@@ -28935,7 +28925,7 @@
       "astEnd": 1943
     },
     {
-      "id": "FUNC-02891",
+      "id": "FUNC-02890",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 39,
       "name": "readRuntimeSave",
@@ -28945,7 +28935,7 @@
       "astEnd": 2009
     },
     {
-      "id": "FUNC-02892",
+      "id": "FUNC-02891",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 40,
       "name": "readPersistedSave",
@@ -28955,7 +28945,7 @@
       "astEnd": 2067
     },
     {
-      "id": "FUNC-02893",
+      "id": "FUNC-02892",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 41,
       "name": "writeSave",
@@ -28965,7 +28955,7 @@
       "astEnd": 2511
     },
     {
-      "id": "FUNC-02894",
+      "id": "FUNC-02893",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 52,
       "name": "readDomVitals",
@@ -28975,7 +28965,7 @@
       "astEnd": 2867
     },
     {
-      "id": "FUNC-02895",
+      "id": "FUNC-02894",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 54,
       "name": "value",
@@ -28985,7 +28975,7 @@
       "astEnd": 2768
     },
     {
-      "id": "FUNC-02896",
+      "id": "FUNC-02895",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 57,
       "name": "readFeedback",
@@ -28995,7 +28985,7 @@
       "astEnd": 3085
     },
     {
-      "id": "FUNC-02897",
+      "id": "FUNC-02896",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 59,
       "name": "<callback:[...document.querySelectorAll('#toast-root,.toast-root,[role=\"alert\"]')].map#0>",
@@ -29005,7 +28995,7 @@
       "astEnd": 3038
     },
     {
-      "id": "FUNC-02898",
+      "id": "FUNC-02897",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 63,
       "name": "readCharacterVitals",
@@ -29015,7 +29005,7 @@
       "astEnd": 3270
     },
     {
-      "id": "FUNC-02899",
+      "id": "FUNC-02898",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 67,
       "name": "makeResult",
@@ -29025,7 +29015,7 @@
       "astEnd": 5152
     },
     {
-      "id": "FUNC-02900",
+      "id": "FUNC-02899",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 78,
       "name": "<callback:afterLines.filter#0>",
@@ -29035,7 +29025,7 @@
       "astEnd": 4406
     },
     {
-      "id": "FUNC-02901",
+      "id": "FUNC-02900",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 91,
       "name": "makePresentation",
@@ -29045,7 +29035,7 @@
       "astEnd": 5763
     },
     {
-      "id": "FUNC-02902",
+      "id": "FUNC-02901",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 99,
       "name": "renderPresentation",
@@ -29055,7 +29045,7 @@
       "astEnd": 6355
     },
     {
-      "id": "FUNC-02903",
+      "id": "FUNC-02902",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 100,
       "name": "<callback:document.querySelectorAll().forEach#0>",
@@ -29065,7 +29055,7 @@
       "astEnd": 5872
     },
     {
-      "id": "FUNC-02904",
+      "id": "FUNC-02903",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 106,
       "name": "<callback:setTimeout#0>",
@@ -29075,7 +29065,7 @@
       "astEnd": 6344
     },
     {
-      "id": "FUNC-02905",
+      "id": "FUNC-02904",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 108,
       "name": "persistPresentation",
@@ -29085,7 +29075,7 @@
       "astEnd": 7558
     },
     {
-      "id": "FUNC-02906",
+      "id": "FUNC-02905",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 121,
       "name": "installPublicApiBridge",
@@ -29095,7 +29085,7 @@
       "astEnd": 8361
     },
     {
-      "id": "FUNC-02907",
+      "id": "FUNC-02906",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 127,
       "name": "wrapped",
@@ -29105,7 +29095,7 @@
       "astEnd": 8186
     },
     {
-      "id": "FUNC-02908",
+      "id": "FUNC-02907",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 137,
       "name": "finishAction",
@@ -29115,7 +29105,7 @@
       "astEnd": 9351
     },
     {
-      "id": "FUNC-02909",
+      "id": "FUNC-02908",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 138,
       "name": "<callback:new Promise#0>",
@@ -29125,7 +29115,7 @@
       "astEnd": 8490
     },
     {
-      "id": "FUNC-02910",
+      "id": "FUNC-02909",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 151,
       "name": "<callback:document.addEventListener#1>",
@@ -29135,7 +29125,7 @@
       "astEnd": 9857
     },
     {
-      "id": "FUNC-02911",
+      "id": "FUNC-02910",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 156,
       "name": "<callback:queueMicrotask#0>",
@@ -29145,7 +29135,7 @@
       "astEnd": 9851
     },
     {
-      "id": "FUNC-02912",
+      "id": "FUNC-02911",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 158,
       "name": "boot",
@@ -29155,7 +29145,7 @@
       "astEnd": 9906
     },
     {
-      "id": "FUNC-02913",
+      "id": "FUNC-02912",
       "file": "tools/account-live-e2e.mjs",
       "line": 11,
       "name": "ok",
@@ -29165,7 +29155,7 @@
       "astEnd": 555
     },
     {
-      "id": "FUNC-02914",
+      "id": "FUNC-02913",
       "file": "tools/account-live-e2e.mjs",
       "line": 12,
       "name": "call",
@@ -29175,7 +29165,7 @@
       "astEnd": 1133
     },
     {
-      "id": "FUNC-02915",
+      "id": "FUNC-02914",
       "file": "tools/account-live-e2e.mjs",
       "line": 21,
       "name": "write",
@@ -29185,7 +29175,7 @@
       "astEnd": 1472
     },
     {
-      "id": "FUNC-02916",
+      "id": "FUNC-02915",
       "file": "tools/ast-index-functions.mjs",
       "line": 12,
       "name": "uniq",
@@ -29195,7 +29185,7 @@
       "astEnd": 513
     },
     {
-      "id": "FUNC-02917",
+      "id": "FUNC-02916",
       "file": "tools/ast-index-functions.mjs",
       "line": 13,
       "name": "clean",
@@ -29205,7 +29195,7 @@
       "astEnd": 592
     },
     {
-      "id": "FUNC-02918",
+      "id": "FUNC-02917",
       "file": "tools/ast-index-functions.mjs",
       "line": 14,
       "name": "sha",
@@ -29215,7 +29205,7 @@
       "astEnd": 666
     },
     {
-      "id": "FUNC-02919",
+      "id": "FUNC-02918",
       "file": "tools/ast-index-functions.mjs",
       "line": 15,
       "name": "code",
@@ -29225,7 +29215,7 @@
       "astEnd": 723
     },
     {
-      "id": "FUNC-02920",
+      "id": "FUNC-02919",
       "file": "tools/ast-index-functions.mjs",
       "line": 16,
       "name": "norm",
@@ -29235,7 +29225,7 @@
       "astEnd": 771
     },
     {
-      "id": "FUNC-02921",
+      "id": "FUNC-02920",
       "file": "tools/ast-index-functions.mjs",
       "line": 17,
       "name": "isNode",
@@ -29245,7 +29235,7 @@
       "astEnd": 889
     },
     {
-      "id": "FUNC-02922",
+      "id": "FUNC-02921",
       "file": "tools/ast-index-functions.mjs",
       "line": 18,
       "name": "isFunction",
@@ -29255,7 +29245,7 @@
       "astEnd": 999
     },
     {
-      "id": "FUNC-02923",
+      "id": "FUNC-02922",
       "file": "tools/ast-index-functions.mjs",
       "line": 19,
       "name": "read",
@@ -29265,7 +29255,7 @@
       "astEnd": 1062
     },
     {
-      "id": "FUNC-02924",
+      "id": "FUNC-02923",
       "file": "tools/ast-index-functions.mjs",
       "line": 21,
       "name": "parseJs",
@@ -29275,7 +29265,7 @@
       "astEnd": 1799
     },
     {
-      "id": "FUNC-02925",
+      "id": "FUNC-02924",
       "file": "tools/ast-index-functions.mjs",
       "line": 24,
       "name": "opts",
@@ -29285,7 +29275,7 @@
       "astEnd": 1402
     },
     {
-      "id": "FUNC-02926",
+      "id": "FUNC-02925",
       "file": "tools/ast-index-functions.mjs",
       "line": 40,
       "name": "walk",
@@ -29295,7 +29285,7 @@
       "astEnd": 2245
     },
     {
-      "id": "FUNC-02927",
+      "id": "FUNC-02926",
       "file": "tools/ast-index-functions.mjs",
       "line": 55,
       "name": "walkFunctionBody",
@@ -29305,7 +29295,7 @@
       "astEnd": 2729
     },
     {
-      "id": "FUNC-02928",
+      "id": "FUNC-02927",
       "file": "tools/ast-index-functions.mjs",
       "line": 56,
       "name": "rec",
@@ -29315,7 +29305,7 @@
       "astEnd": 2709
     },
     {
-      "id": "FUNC-02929",
+      "id": "FUNC-02928",
       "file": "tools/ast-index-functions.mjs",
       "line": 74,
       "name": "literal",
@@ -29325,7 +29315,7 @@
       "astEnd": 2981
     },
     {
-      "id": "FUNC-02930",
+      "id": "FUNC-02929",
       "file": "tools/ast-index-functions.mjs",
       "line": 77,
       "name": "<callback:n.quasis.map#0>",
@@ -29335,7 +29325,7 @@
       "astEnd": 2953
     },
     {
-      "id": "FUNC-02931",
+      "id": "FUNC-02930",
       "file": "tools/ast-index-functions.mjs",
       "line": 81,
       "name": "propName",
@@ -29345,7 +29335,7 @@
       "astEnd": 3236
     },
     {
-      "id": "FUNC-02932",
+      "id": "FUNC-02931",
       "file": "tools/ast-index-functions.mjs",
       "line": 89,
       "name": "exprName",
@@ -29355,7 +29345,7 @@
       "astEnd": 3872
     },
     {
-      "id": "FUNC-02933",
+      "id": "FUNC-02932",
       "file": "tools/ast-index-functions.mjs",
       "line": 103,
       "name": "patternName",
@@ -29365,7 +29355,7 @@
       "astEnd": 4196
     },
     {
-      "id": "FUNC-02934",
+      "id": "FUNC-02933",
       "file": "tools/ast-index-functions.mjs",
       "line": 111,
       "name": "contextName",
@@ -29375,7 +29365,7 @@
       "astEnd": 5273
     },
     {
-      "id": "FUNC-02935",
+      "id": "FUNC-02934",
       "file": "tools/ast-index-functions.mjs",
       "line": 125,
       "name": "kindOf",
@@ -29385,7 +29375,7 @@
       "astEnd": 5590
     },
     {
-      "id": "FUNC-02936",
+      "id": "FUNC-02935",
       "file": "tools/ast-index-functions.mjs",
       "line": 133,
       "name": "refs",
@@ -29395,7 +29385,7 @@
       "astEnd": 6386
     },
     {
-      "id": "FUNC-02937",
+      "id": "FUNC-02936",
       "file": "tools/ast-index-functions.mjs",
       "line": 134,
       "name": "cap",
@@ -29405,7 +29395,7 @@
       "astEnd": 5755
     },
     {
-      "id": "FUNC-02938",
+      "id": "FUNC-02937",
       "file": "tools/ast-index-functions.mjs",
       "line": 158,
       "name": "analyze",
@@ -29415,7 +29405,7 @@
       "astEnd": 6830
     },
     {
-      "id": "FUNC-02939",
+      "id": "FUNC-02938",
       "file": "tools/ast-index-functions.mjs",
       "line": 161,
       "name": "<callback:walkFunctionBody#1>",
@@ -29425,7 +29415,7 @@
       "astEnd": 6768
     },
     {
-      "id": "FUNC-02940",
+      "id": "FUNC-02939",
       "file": "tools/ast-index-functions.mjs",
       "line": 174,
       "name": "<callback:inv.files||[].filter#0>",
@@ -29435,7 +29425,7 @@
       "astEnd": 6987
     },
     {
-      "id": "FUNC-02941",
+      "id": "FUNC-02940",
       "file": "tools/ast-index-functions.mjs",
       "line": 193,
       "name": "<callback:walk#4>",
@@ -29445,7 +29435,7 @@
       "astEnd": 8564
     },
     {
-      "id": "FUNC-02942",
+      "id": "FUNC-02941",
       "file": "tools/ast-index-functions.mjs",
       "line": 207,
       "name": "<callback:node.params||[].map#0>",
@@ -29455,7 +29445,7 @@
       "astEnd": 7895
     },
     {
-      "id": "FUNC-02943",
+      "id": "FUNC-02942",
       "file": "tools/ast-index-functions.mjs",
       "line": 234,
       "name": "<callback:functions.sort#0>",
@@ -29465,7 +29455,7 @@
       "astEnd": 8778
     },
     {
-      "id": "FUNC-02944",
+      "id": "FUNC-02943",
       "file": "tools/ast-index-functions.mjs",
       "line": 235,
       "name": "<callback:functions.forEach#0>",
@@ -29475,7 +29465,7 @@
       "astEnd": 8846
     },
     {
-      "id": "FUNC-02945",
+      "id": "FUNC-02944",
       "file": "tools/ast-index-functions.mjs",
       "line": 247,
       "name": "<callback:functions.filter#0>",
@@ -29485,7 +29475,7 @@
       "astEnd": 9341
     },
     {
-      "id": "FUNC-02946",
+      "id": "FUNC-02945",
       "file": "tools/ast-index-functions.mjs",
       "line": 248,
       "name": "<callback:functions.filter#0>",
@@ -29495,7 +29485,7 @@
       "astEnd": 9422
     },
     {
-      "id": "FUNC-02947",
+      "id": "FUNC-02946",
       "file": "tools/audit-ast-function-index.mjs",
       "line": 10,
       "name": "sha",
@@ -29505,7 +29495,7 @@
       "astEnd": 359
     },
     {
-      "id": "FUNC-02948",
+      "id": "FUNC-02947",
       "file": "tools/audit-ast-function-index.mjs",
       "line": 11,
       "name": "fail",
@@ -29515,7 +29505,7 @@
       "astEnd": 391
     },
     {
-      "id": "FUNC-02949",
+      "id": "FUNC-02948",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 10,
       "name": "fail",
@@ -29525,7 +29515,7 @@
       "astEnd": 255
     },
     {
-      "id": "FUNC-02950",
+      "id": "FUNC-02949",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 11,
       "name": "warn",
@@ -29535,7 +29525,7 @@
       "astEnd": 287
     },
     {
-      "id": "FUNC-02951",
+      "id": "FUNC-02950",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 12,
       "name": "exists",
@@ -29545,7 +29535,7 @@
       "astEnd": 337
     },
     {
-      "id": "FUNC-02952",
+      "id": "FUNC-02951",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 13,
       "name": "norm",
@@ -29555,7 +29545,7 @@
       "astEnd": 385
     },
     {
-      "id": "FUNC-02953",
+      "id": "FUNC-02952",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 14,
       "name": "isDoc",
@@ -29565,7 +29555,7 @@
       "astEnd": 429
     },
     {
-      "id": "FUNC-02954",
+      "id": "FUNC-02953",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 15,
       "name": "isTooling",
@@ -29575,7 +29565,7 @@
       "astEnd": 510
     },
     {
-      "id": "FUNC-02955",
+      "id": "FUNC-02954",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 16,
       "name": "isGameRuntime",
@@ -29585,7 +29575,7 @@
       "astEnd": 559
     },
     {
-      "id": "FUNC-02956",
+      "id": "FUNC-02955",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 37,
       "name": "auditGameGrouped",
@@ -29595,7 +29585,7 @@
       "astEnd": 3294
     },
     {
-      "id": "FUNC-02957",
+      "id": "FUNC-02956",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 44,
       "name": "<callback:inv.files||[].filter#0>",
@@ -29605,7 +29595,7 @@
       "astEnd": 4474
     },
     {
-      "id": "FUNC-02958",
+      "id": "FUNC-02957",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 72,
       "name": "<callback:inv.models||[].map#0>",
@@ -29615,7 +29605,7 @@
       "astEnd": 9369
     },
     {
-      "id": "FUNC-02959",
+      "id": "FUNC-02958",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 72,
       "name": "<callback:modelNames.some#0>",
@@ -29625,7 +29615,7 @@
       "astEnd": 9432
     },
     {
-      "id": "FUNC-02960",
+      "id": "FUNC-02959",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 76,
       "name": "<callback:failures.some#0>",
@@ -29635,7 +29625,7 @@
       "astEnd": 10945
     },
     {
-      "id": "FUNC-02961",
+      "id": "FUNC-02960",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:failures.map#0>",
@@ -29645,7 +29635,7 @@
       "astEnd": 12943
     },
     {
-      "id": "FUNC-02962",
+      "id": "FUNC-02961",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:modelNames.map#0>",
@@ -29655,7 +29645,7 @@
       "astEnd": 12549
     },
     {
-      "id": "FUNC-02963",
+      "id": "FUNC-02962",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:warnings.map#0>",
@@ -29665,7 +29655,7 @@
       "astEnd": 12862
     },
     {
-      "id": "FUNC-02964",
+      "id": "FUNC-02963",
       "file": "tools/audit-final-canonical-spec.mjs",
       "line": 10,
       "name": "sha256",
@@ -29675,7 +29665,7 @@
       "astEnd": 440
     },
     {
-      "id": "FUNC-02965",
+      "id": "FUNC-02964",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 11,
       "name": "<callback:inv.files || [].map#0>",
@@ -29685,7 +29675,7 @@
       "astEnd": 381
     },
     {
-      "id": "FUNC-02966",
+      "id": "FUNC-02965",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 12,
       "name": "<callback:inv.files || [].map().filter#0>",
@@ -29695,7 +29685,7 @@
       "astEnd": 513
     },
     {
-      "id": "FUNC-02967",
+      "id": "FUNC-02966",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 13,
       "name": "<callback:inv.files || [].map().filter().filter#0>",
@@ -29705,7 +29695,7 @@
       "astEnd": 563
     },
     {
-      "id": "FUNC-02968",
+      "id": "FUNC-02967",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 14,
       "name": "<callback:runtimeFiles.map#0>",
@@ -29715,7 +29705,7 @@
       "astEnd": 675
     },
     {
-      "id": "FUNC-02969",
+      "id": "FUNC-02968",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 30,
       "name": "<callback:contracts.map#0>",
@@ -29725,7 +29715,7 @@
       "astEnd": 1622
     },
     {
-      "id": "FUNC-02970",
+      "id": "FUNC-02969",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 33,
       "name": "<callback:needles.filter#0>",
@@ -29735,7 +29725,7 @@
       "astEnd": 1511
     },
     {
-      "id": "FUNC-02971",
+      "id": "FUNC-02970",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 34,
       "name": "<callback:needles.every#0>",
@@ -29745,7 +29735,7 @@
       "astEnd": 1566
     },
     {
-      "id": "FUNC-02972",
+      "id": "FUNC-02971",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 39,
       "name": "<callback:[ 'assets/user-provided/reference-ui/' ].flatMap#0>",
@@ -29755,7 +29745,7 @@
       "astEnd": 1870
     },
     {
-      "id": "FUNC-02973",
+      "id": "FUNC-02972",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 39,
       "name": "<callback:runtimeFiles.flatMap#0>",
@@ -29765,7 +29755,7 @@
       "astEnd": 1869
     },
     {
-      "id": "FUNC-02974",
+      "id": "FUNC-02973",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 46,
       "name": "<callback:contractResults.every#0>",
@@ -29775,7 +29765,7 @@
       "astEnd": 2043
     },
     {
-      "id": "FUNC-02975",
+      "id": "FUNC-02974",
       "file": "tools/audit-r41-assets.mjs",
       "line": 17,
       "name": "walk",
@@ -29785,7 +29775,7 @@
       "astEnd": 1244
     },
     {
-      "id": "FUNC-02976",
+      "id": "FUNC-02975",
       "file": "tools/audit-r41-assets.mjs",
       "line": 26,
       "name": "cleanRef",
@@ -29795,7 +29785,7 @@
       "astEnd": 1394
     },
     {
-      "id": "FUNC-02977",
+      "id": "FUNC-02976",
       "file": "tools/audit-r41-assets.mjs",
       "line": 31,
       "name": "isDynamic",
@@ -29805,7 +29795,7 @@
       "astEnd": 1462
     },
     {
-      "id": "FUNC-02978",
+      "id": "FUNC-02977",
       "file": "tools/audit-r41-assets.mjs",
       "line": 32,
       "name": "addRef",
@@ -29815,7 +29805,7 @@
       "astEnd": 1777
     },
     {
-      "id": "FUNC-02979",
+      "id": "FUNC-02978",
       "file": "tools/audit-r41-assets.mjs",
       "line": 53,
       "name": "<callback:[...refs.values()].sort#0>",
@@ -29825,7 +29815,7 @@
       "astEnd": 2150
     },
     {
-      "id": "FUNC-02980",
+      "id": "FUNC-02979",
       "file": "tools/audit-r41-assets.mjs",
       "line": 60,
       "name": "<callback:rows.filter#0>",
@@ -29835,7 +29825,7 @@
       "astEnd": 2472
     },
     {
-      "id": "FUNC-02981",
+      "id": "FUNC-02980",
       "file": "tools/audit-r41-assets.mjs",
       "line": 61,
       "name": "<callback:missing.filter#0>",
@@ -29845,7 +29835,7 @@
       "astEnd": 2527
     },
     {
-      "id": "FUNC-02982",
+      "id": "FUNC-02981",
       "file": "tools/audit-r41-assets.mjs",
       "line": 62,
       "name": "<callback:missing.filter#0>",
@@ -29855,7 +29845,7 @@
       "astEnd": 2607
     },
     {
-      "id": "FUNC-02983",
+      "id": "FUNC-02982",
       "file": "tools/backend-presence-audit.mjs",
       "line": 3,
       "name": "has",
@@ -29865,7 +29855,7 @@
       "astEnd": 88
     },
     {
-      "id": "FUNC-02984",
+      "id": "FUNC-02983",
       "file": "tools/backend-presence-audit.mjs",
       "line": 4,
       "name": "isHash",
@@ -29875,7 +29865,7 @@
       "astEnd": 150
     },
     {
-      "id": "FUNC-02985",
+      "id": "FUNC-02984",
       "file": "tools/backend-presence-audit.mjs",
       "line": 5,
       "name": "read",
@@ -29885,17 +29875,37 @@
       "astEnd": 237
     },
     {
+      "id": "FUNC-02985",
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 33,
+      "name": "<callback:Object.entries().filter().map#0>",
+      "exactCode": true,
+      "snippetSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
+      "astStart": 1345,
+      "astEnd": 1359
+    },
+    {
       "id": "FUNC-02986",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 71,
-      "name": "semantic",
+      "line": 33,
+      "name": "<callback:Object.entries().filter#0>",
       "exactCode": true,
-      "snippetSha256": "d66cd3e8335f26150d2d6c3563e322e6ad42d420949117d17ee9b079c94cb2a3",
-      "astStart": 4161,
-      "astEnd": 4600
+      "snippetSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
+      "astStart": 1317,
+      "astEnd": 1339
     },
     {
       "id": "FUNC-02987",
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 89,
+      "name": "semantic",
+      "exactCode": true,
+      "snippetSha256": "61bbc74462621992a1b0c3d590ad6b1e22afd0f5a8326c5427640d62a38aa22e",
+      "astStart": 5030,
+      "astEnd": 5597
+    },
+    {
+      "id": "FUNC-02988",
       "file": "tools/browser-account-live.mjs",
       "line": 11,
       "name": "assert",
@@ -29905,7 +29915,7 @@
       "astEnd": 662
     },
     {
-      "id": "FUNC-02988",
+      "id": "FUNC-02989",
       "file": "tools/browser-account-live.mjs",
       "line": 13,
       "name": "<callback:page.on#1>",
@@ -29915,7 +29925,7 @@
       "astEnd": 886
     },
     {
-      "id": "FUNC-02989",
+      "id": "FUNC-02990",
       "file": "tools/browser-account-live.mjs",
       "line": 13,
       "name": "<callback:page.on#1>",
@@ -29925,7 +29935,7 @@
       "astEnd": 962
     },
     {
-      "id": "FUNC-02990",
+      "id": "FUNC-02991",
       "file": "tools/browser-account-live.mjs",
       "line": 17,
       "name": "<callback:page.evaluate#0>",
@@ -29935,7 +29945,7 @@
       "astEnd": 1525
     },
     {
-      "id": "FUNC-02991",
+      "id": "FUNC-02992",
       "file": "tools/browser-account-live.mjs",
       "line": 18,
       "name": "<callback:page.evaluate#0>",
@@ -29945,7 +29955,7 @@
       "astEnd": 1683
     },
     {
-      "id": "FUNC-02992",
+      "id": "FUNC-02993",
       "file": "tools/browser-account-live.mjs",
       "line": 19,
       "name": "<callback:page.evaluate#0>",
@@ -29955,7 +29965,7 @@
       "astEnd": 1884
     },
     {
-      "id": "FUNC-02993",
+      "id": "FUNC-02994",
       "file": "tools/browser-account-live.mjs",
       "line": 23,
       "name": "<callback:page.waitForFunction#0>",
@@ -29965,7 +29975,7 @@
       "astEnd": 3373
     },
     {
-      "id": "FUNC-02994",
+      "id": "FUNC-02995",
       "file": "tools/browser-account-live.mjs",
       "line": 26,
       "name": "<callback:page.once#1>",
@@ -29975,7 +29985,7 @@
       "astEnd": 3928
     },
     {
-      "id": "FUNC-02995",
+      "id": "FUNC-02996",
       "file": "tools/browser-account-live.mjs",
       "line": 27,
       "name": "<callback:consoleErrors.filter#0>",
@@ -29985,7 +29995,7 @@
       "astEnd": 4301
     },
     {
-      "id": "FUNC-02996",
+      "id": "FUNC-02997",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate().catch#0>",
@@ -29995,7 +30005,7 @@
       "astEnd": 4654
     },
     {
-      "id": "FUNC-02997",
+      "id": "FUNC-02998",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate#0>",
@@ -30005,7 +30015,7 @@
       "astEnd": 4549
     },
     {
-      "id": "FUNC-02998",
+      "id": "FUNC-02999",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate#0>",
@@ -30015,7 +30025,7 @@
       "astEnd": 4640
     },
     {
-      "id": "FUNC-02999",
+      "id": "FUNC-03000",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.once#1>",
@@ -30025,7 +30035,7 @@
       "astEnd": 4584
     },
     {
-      "id": "FUNC-03000",
+      "id": "FUNC-03001",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 39,
       "name": "isImage",
@@ -30035,7 +30045,7 @@
       "astEnd": 2996
     },
     {
-      "id": "FUNC-03001",
+      "id": "FUNC-03002",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 40,
       "name": "<callback:page.on#1>",
@@ -30045,7 +30055,7 @@
       "astEnd": 3059
     },
     {
-      "id": "FUNC-03002",
+      "id": "FUNC-03003",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 41,
       "name": "<callback:page.on#1>",
@@ -30055,7 +30065,7 @@
       "astEnd": 3225
     },
     {
-      "id": "FUNC-03003",
+      "id": "FUNC-03004",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 42,
       "name": "<callback:page.on#1>",
@@ -30065,7 +30075,7 @@
       "astEnd": 3396
     },
     {
-      "id": "FUNC-03004",
+      "id": "FUNC-03005",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 43,
       "name": "<callback:page.route#1>",
@@ -30075,7 +30085,7 @@
       "astEnd": 4118
     },
     {
-      "id": "FUNC-03005",
+      "id": "FUNC-03006",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 46,
       "name": "json",
@@ -30085,7 +30095,7 @@
       "astEnd": 3634
     },
     {
-      "id": "FUNC-03006",
+      "id": "FUNC-03007",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 57,
       "name": "<callback:page.evaluate#0>",
@@ -30095,7 +30105,7 @@
       "astEnd": 5071
     },
     {
-      "id": "FUNC-03007",
+      "id": "FUNC-03008",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 67,
       "name": "<callback:page.waitForFunction#0>",
@@ -30105,7 +30115,7 @@
       "astEnd": 5382
     },
     {
-      "id": "FUNC-03008",
+      "id": "FUNC-03009",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 73,
       "name": "<callback:page.evaluate#0>",
@@ -30115,7 +30125,7 @@
       "astEnd": 6172
     },
     {
-      "id": "FUNC-03009",
+      "id": "FUNC-03010",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 76,
       "name": "<callback:[...document.querySelectorAll('[data-action]')].map#0>",
@@ -30125,7 +30135,7 @@
       "astEnd": 6164
     },
     {
-      "id": "FUNC-03010",
+      "id": "FUNC-03011",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 100,
       "name": "<callback:page.evaluate#0>",
@@ -30135,7 +30145,7 @@
       "astEnd": 6921
     },
     {
-      "id": "FUNC-03011",
+      "id": "FUNC-03012",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 101,
       "name": "<callback:page.evaluate#0>",
@@ -30145,7 +30155,7 @@
       "astEnd": 7165
     },
     {
-      "id": "FUNC-03012",
+      "id": "FUNC-03013",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 111,
       "name": "<callback:failedImages.map#0>",
@@ -30155,7 +30165,7 @@
       "astEnd": 8121
     },
     {
-      "id": "FUNC-03013",
+      "id": "FUNC-03014",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 16,
       "name": "readSaveV2",
@@ -30165,7 +30175,7 @@
       "astEnd": 1929
     },
     {
-      "id": "FUNC-03014",
+      "id": "FUNC-03015",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 17,
       "name": "<callback:page.evaluate#0>",
@@ -30175,7 +30185,7 @@
       "astEnd": 1810
     },
     {
-      "id": "FUNC-03015",
+      "id": "FUNC-03016",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 18,
       "name": "tryParse",
@@ -30185,7 +30195,7 @@
       "astEnd": 1010
     },
     {
-      "id": "FUNC-03016",
+      "id": "FUNC-03017",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 48,
       "name": "registerV2",
@@ -30195,7 +30205,7 @@
       "astEnd": 3064
     },
     {
-      "id": "FUNC-03017",
+      "id": "FUNC-03018",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 59,
       "name": "<callback:page.waitForFunction#0>",
@@ -30205,7 +30215,7 @@
       "astEnd": 2757
     },
     {
-      "id": "FUNC-03018",
+      "id": "FUNC-03019",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 60,
       "name": "<callback:page.evaluate#0>",
@@ -30215,7 +30225,7 @@
       "astEnd": 2939
     },
     {
-      "id": "FUNC-03019",
+      "id": "FUNC-03020",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 66,
       "name": "seedNormalV2",
@@ -30225,7 +30235,7 @@
       "astEnd": 6676
     },
     {
-      "id": "FUNC-03020",
+      "id": "FUNC-03021",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 69,
       "name": "<callback:page.evaluate#0>",
@@ -30235,7 +30245,7 @@
       "astEnd": 3491
     },
     {
-      "id": "FUNC-03021",
+      "id": "FUNC-03022",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 75,
       "name": "<callback:r.json().catch#0>",
@@ -30245,7 +30255,7 @@
       "astEnd": 3450
     },
     {
-      "id": "FUNC-03022",
+      "id": "FUNC-03023",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 82,
       "name": "<callback:page.evaluate#0>",
@@ -30255,7 +30265,7 @@
       "astEnd": 3873
     },
     {
-      "id": "FUNC-03023",
+      "id": "FUNC-03024",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 84,
       "name": "<callback:r.json().catch#0>",
@@ -30265,7 +30275,7 @@
       "astEnd": 3832
     },
     {
-      "id": "FUNC-03024",
+      "id": "FUNC-03025",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 90,
       "name": "<callback:listed.data.slots.some#0>",
@@ -30275,7 +30285,7 @@
       "astEnd": 4031
     },
     {
-      "id": "FUNC-03025",
+      "id": "FUNC-03026",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 96,
       "name": "<callback:page.waitForFunction#0>",
@@ -30285,7 +30295,7 @@
       "astEnd": 4303
     },
     {
-      "id": "FUNC-03026",
+      "id": "FUNC-03027",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 98,
       "name": "<callback:page.waitForFunction#0>",
@@ -30295,7 +30305,7 @@
       "astEnd": 4605
     },
     {
-      "id": "FUNC-03027",
+      "id": "FUNC-03028",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 99,
       "name": "<callback:[...document.querySelectorAll('[data-id],[data-slot-id],[data-slot]')].some#0>",
@@ -30305,7 +30315,7 @@
       "astEnd": 4594
     },
     {
-      "id": "FUNC-03028",
+      "id": "FUNC-03029",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 101,
       "name": "<callback:[el.getAttribute('data-id'),el.getAttribute('data-slot-id'),el.getAttribute('data-slot')].some#0>",
@@ -30315,7 +30325,7 @@
       "astEnd": 4593
     },
     {
-      "id": "FUNC-03029",
+      "id": "FUNC-03030",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 103,
       "name": "<callback:page.waitForFunction().catch#0>",
@@ -30325,7 +30335,7 @@
       "astEnd": 4643
     },
     {
-      "id": "FUNC-03030",
+      "id": "FUNC-03031",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 117,
       "name": "<callback:el.evaluate().catch#0>",
@@ -30335,7 +30345,7 @@
       "astEnd": 5033
     },
     {
-      "id": "FUNC-03031",
+      "id": "FUNC-03032",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 117,
       "name": "<callback:el.evaluate#0>",
@@ -30345,7 +30355,7 @@
       "astEnd": 5019
     },
     {
-      "id": "FUNC-03032",
+      "id": "FUNC-03033",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 118,
       "name": "<callback:el.getAttribute().catch#0>",
@@ -30355,7 +30365,7 @@
       "astEnd": 5097
     },
     {
-      "id": "FUNC-03033",
+      "id": "FUNC-03034",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 133,
       "name": "<callback:page.evaluate#0>",
@@ -30365,7 +30375,7 @@
       "astEnd": 6105
     },
     {
-      "id": "FUNC-03034",
+      "id": "FUNC-03035",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 140,
       "name": "<callback:[...document.querySelectorAll('button,a,[role=\"button\"]')].slice().map#0>",
@@ -30375,7 +30385,7 @@
       "astEnd": 6097
     },
     {
-      "id": "FUNC-03035",
+      "id": "FUNC-03036",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 152,
       "name": "<callback:slotButton.evaluate#0>",
@@ -30385,7 +30395,7 @@
       "astEnd": 6249
     },
     {
-      "id": "FUNC-03036",
+      "id": "FUNC-03037",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 154,
       "name": "<callback:page.waitForFunction#0>",
@@ -30395,7 +30405,7 @@
       "astEnd": 6391
     },
     {
-      "id": "FUNC-03037",
+      "id": "FUNC-03038",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 165,
       "name": "navigateV2",
@@ -30405,7 +30415,7 @@
       "astEnd": 7816
     },
     {
-      "id": "FUNC-03038",
+      "id": "FUNC-03039",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 171,
       "name": "<callback:page.evaluate#0>",
@@ -30415,7 +30425,7 @@
       "astEnd": 7433
     },
     {
-      "id": "FUNC-03039",
+      "id": "FUNC-03040",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 175,
       "name": "<callback:[...document.querySelectorAll('#main-nav [data-screen]')].map#0>",
@@ -30425,7 +30435,7 @@
       "astEnd": 7219
     },
     {
-      "id": "FUNC-03040",
+      "id": "FUNC-03041",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 182,
       "name": "<callback:b.evaluate#0>",
@@ -30435,7 +30445,7 @@
       "astEnd": 7556
     },
     {
-      "id": "FUNC-03041",
+      "id": "FUNC-03042",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 185,
       "name": "<callback:page.locator().first().textContent().catch#0>",
@@ -30445,7 +30455,7 @@
       "astEnd": 7708
     },
     {
-      "id": "FUNC-03042",
+      "id": "FUNC-03043",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 10,
       "name": "seedNormalV3",
@@ -30455,7 +30465,7 @@
       "astEnd": 4364
     },
     {
-      "id": "FUNC-03043",
+      "id": "FUNC-03044",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 13,
       "name": "<callback:page.evaluate#0>",
@@ -30465,7 +30475,7 @@
       "astEnd": 792
     },
     {
-      "id": "FUNC-03044",
+      "id": "FUNC-03045",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 19,
       "name": "<callback:r.json().catch#0>",
@@ -30475,7 +30485,7 @@
       "astEnd": 751
     },
     {
-      "id": "FUNC-03045",
+      "id": "FUNC-03046",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 30,
       "name": "<callback:page.evaluate#0>",
@@ -30485,7 +30495,7 @@
       "astEnd": 1255
     },
     {
-      "id": "FUNC-03046",
+      "id": "FUNC-03047",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 32,
       "name": "<callback:r.json().catch#0>",
@@ -30495,7 +30505,7 @@
       "astEnd": 1214
     },
     {
-      "id": "FUNC-03047",
+      "id": "FUNC-03048",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 38,
       "name": "<callback:slots.data.slots.some#0>",
@@ -30505,7 +30515,7 @@
       "astEnd": 1410
     },
     {
-      "id": "FUNC-03048",
+      "id": "FUNC-03049",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 44,
       "name": "<callback:page.waitForFunction#0>",
@@ -30515,7 +30525,7 @@
       "astEnd": 1680
     },
     {
-      "id": "FUNC-03049",
+      "id": "FUNC-03050",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 48,
       "name": "<callback:page.waitForFunction#0>",
@@ -30525,7 +30535,7 @@
       "astEnd": 2132
     },
     {
-      "id": "FUNC-03050",
+      "id": "FUNC-03051",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 49,
       "name": "<callback:[...document.querySelectorAll('[data-id],[data-slot-id],[data-slot]')].some#0>",
@@ -30535,7 +30545,7 @@
       "astEnd": 2121
     },
     {
-      "id": "FUNC-03051",
+      "id": "FUNC-03052",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 51,
       "name": "<callback:[el.getAttribute('data-id'),el.getAttribute('data-slot-id'),el.getAttribute('data-slot')].some#0>",
@@ -30545,7 +30555,7 @@
       "astEnd": 2120
     },
     {
-      "id": "FUNC-03052",
+      "id": "FUNC-03053",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 53,
       "name": "<callback:page.waitForFunction().catch#0>",
@@ -30555,7 +30565,7 @@
       "astEnd": 2170
     },
     {
-      "id": "FUNC-03053",
+      "id": "FUNC-03054",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 67,
       "name": "<callback:el.evaluate().catch#0>",
@@ -30565,7 +30575,7 @@
       "astEnd": 2562
     },
     {
-      "id": "FUNC-03054",
+      "id": "FUNC-03055",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 67,
       "name": "<callback:el.evaluate#0>",
@@ -30575,7 +30585,7 @@
       "astEnd": 2548
     },
     {
-      "id": "FUNC-03055",
+      "id": "FUNC-03056",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 68,
       "name": "<callback:el.getAttribute().catch#0>",
@@ -30585,7 +30595,7 @@
       "astEnd": 2626
     },
     {
-      "id": "FUNC-03056",
+      "id": "FUNC-03057",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 83,
       "name": "<callback:page.evaluate#0>",
@@ -30595,7 +30605,7 @@
       "astEnd": 3634
     },
     {
-      "id": "FUNC-03057",
+      "id": "FUNC-03058",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 90,
       "name": "<callback:[...document.querySelectorAll('button,a,[role=\"button\"]')].slice().map#0>",
@@ -30605,7 +30615,7 @@
       "astEnd": 3626
     },
     {
-      "id": "FUNC-03058",
+      "id": "FUNC-03059",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 102,
       "name": "<callback:slotButton.evaluate#0>",
@@ -30615,7 +30625,7 @@
       "astEnd": 3778
     },
     {
-      "id": "FUNC-03059",
+      "id": "FUNC-03060",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 104,
       "name": "<callback:page.waitForFunction#0>",
@@ -30625,7 +30635,7 @@
       "astEnd": 3979
     },
     {
-      "id": "FUNC-03060",
+      "id": "FUNC-03061",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 18,
       "name": "assert",
@@ -30635,7 +30645,7 @@
       "astEnd": 827
     },
     {
-      "id": "FUNC-03061",
+      "id": "FUNC-03062",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 19,
       "name": "pass",
@@ -30645,7 +30655,7 @@
       "astEnd": 892
     },
     {
-      "id": "FUNC-03062",
+      "id": "FUNC-03063",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 20,
       "name": "contract",
@@ -30655,7 +30665,7 @@
       "astEnd": 1098
     },
     {
-      "id": "FUNC-03063",
+      "id": "FUNC-03064",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 21,
       "name": "<callback:new Promise#0>",
@@ -30665,7 +30675,7 @@
       "astEnd": 1156
     },
     {
-      "id": "FUNC-03064",
+      "id": "FUNC-03065",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 21,
       "name": "sleep",
@@ -30675,7 +30685,7 @@
       "astEnd": 1159
     },
     {
-      "id": "FUNC-03065",
+      "id": "FUNC-03066",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 23,
       "name": "normalFixture",
@@ -30685,7 +30695,7 @@
       "astEnd": 3170
     },
     {
-      "id": "FUNC-03066",
+      "id": "FUNC-03067",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 55,
       "name": "leonFixture",
@@ -30695,7 +30705,7 @@
       "astEnd": 4452
     },
     {
-      "id": "FUNC-03067",
+      "id": "FUNC-03068",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 65,
       "name": "<callback:page.evaluate#0>",
@@ -30705,7 +30715,7 @@
       "astEnd": 4587
     },
     {
-      "id": "FUNC-03068",
+      "id": "FUNC-03069",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 65,
       "name": "readSave",
@@ -30715,7 +30725,7 @@
       "astEnd": 4599
     },
     {
-      "id": "FUNC-03069",
+      "id": "FUNC-03070",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 66,
       "name": "<callback:page.evaluate#0>",
@@ -30725,7 +30735,7 @@
       "astEnd": 4693
     },
     {
-      "id": "FUNC-03070",
+      "id": "FUNC-03071",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 66,
       "name": "r41State",
@@ -30735,7 +30745,7 @@
       "astEnd": 4696
     },
     {
-      "id": "FUNC-03071",
+      "id": "FUNC-03072",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 67,
       "name": "masterState",
@@ -30745,7 +30755,7 @@
       "astEnd": 4816
     },
     {
-      "id": "FUNC-03072",
+      "id": "FUNC-03073",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 68,
       "name": "navigate",
@@ -30755,7 +30765,7 @@
       "astEnd": 5009
     },
     {
-      "id": "FUNC-03073",
+      "id": "FUNC-03074",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 70,
       "name": "playVisibleMinigame",
@@ -30765,7 +30775,7 @@
       "astEnd": 6076
     },
     {
-      "id": "FUNC-03074",
+      "id": "FUNC-03075",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 89,
       "name": "register",
@@ -30775,7 +30785,7 @@
       "astEnd": 7100
     },
     {
-      "id": "FUNC-03075",
+      "id": "FUNC-03076",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 101,
       "name": "<callback:page.evaluate#0>",
@@ -30785,7 +30795,7 @@
       "astEnd": 6984
     },
     {
-      "id": "FUNC-03076",
+      "id": "FUNC-03077",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 107,
       "name": "seedNormal",
@@ -30795,7 +30805,7 @@
       "astEnd": 7719
     },
     {
-      "id": "FUNC-03077",
+      "id": "FUNC-03078",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 109,
       "name": "<callback:page.evaluate#0>",
@@ -30805,7 +30815,7 @@
       "astEnd": 7311
     },
     {
-      "id": "FUNC-03078",
+      "id": "FUNC-03079",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 111,
       "name": "<callback:page.waitForFunction#0>",
@@ -30815,7 +30825,7 @@
       "astEnd": 7543
     },
     {
-      "id": "FUNC-03079",
+      "id": "FUNC-03080",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 118,
       "name": "testNormalGameplay",
@@ -30825,7 +30835,7 @@
       "astEnd": 20338
     },
     {
-      "id": "FUNC-03080",
+      "id": "FUNC-03081",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 126,
       "name": "<callback:page.evaluate#0>",
@@ -30835,7 +30845,7 @@
       "astEnd": 8241
     },
     {
-      "id": "FUNC-03081",
+      "id": "FUNC-03082",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 127,
       "name": "<callback:injuriesBefore.map#0>",
@@ -30845,7 +30855,7 @@
       "astEnd": 8445
     },
     {
-      "id": "FUNC-03082",
+      "id": "FUNC-03083",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 127,
       "name": "<callback:injuriesBefore.some#0>",
@@ -30855,7 +30865,7 @@
       "astEnd": 8324
     },
     {
-      "id": "FUNC-03083",
+      "id": "FUNC-03084",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 146,
       "name": "<callback:afterHospital.character.injuries.find#0>",
@@ -30865,7 +30875,7 @@
       "astEnd": 9649
     },
     {
-      "id": "FUNC-03084",
+      "id": "FUNC-03085",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 167,
       "name": "<callback:afterLong.character.injuries||[].some#0>",
@@ -30875,7 +30885,7 @@
       "astEnd": 11540
     },
     {
-      "id": "FUNC-03085",
+      "id": "FUNC-03086",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 196,
       "name": "<callback:page.locator().waitFor().catch#0>",
@@ -30885,7 +30895,7 @@
       "astEnd": 13795
     },
     {
-      "id": "FUNC-03086",
+      "id": "FUNC-03087",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 230,
       "name": "<callback:missionState?.minigames?.history||[].slice().reverse().find#0>",
@@ -30895,7 +30905,7 @@
       "astEnd": 16168
     },
     {
-      "id": "FUNC-03087",
+      "id": "FUNC-03088",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 244,
       "name": "<callback:page.waitForFunction#0>",
@@ -30905,7 +30915,7 @@
       "astEnd": 17209
     },
     {
-      "id": "FUNC-03088",
+      "id": "FUNC-03089",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 246,
       "name": "<callback:onlineState?.online?.actions||[].some#0>",
@@ -30915,7 +30925,7 @@
       "astEnd": 17392
     },
     {
-      "id": "FUNC-03089",
+      "id": "FUNC-03090",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 250,
       "name": "<callback:page.waitForFunction#0>",
@@ -30925,7 +30935,7 @@
       "astEnd": 17645
     },
     {
-      "id": "FUNC-03090",
+      "id": "FUNC-03091",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 253,
       "name": "<callback:page.waitForFunction#0>",
@@ -30935,7 +30945,7 @@
       "astEnd": 17855
     },
     {
-      "id": "FUNC-03091",
+      "id": "FUNC-03092",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 273,
       "name": "<callback:page.evaluate#0>",
@@ -30945,7 +30955,7 @@
       "astEnd": 19598
     },
     {
-      "id": "FUNC-03092",
+      "id": "FUNC-03093",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 275,
       "name": "<callback:cloudSave?.character?.injuries||[].some#0>",
@@ -30955,7 +30965,7 @@
       "astEnd": 19830
     },
     {
-      "id": "FUNC-03093",
+      "id": "FUNC-03094",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 276,
       "name": "<callback:cloudSave.character.injuries.find#0>",
@@ -30965,7 +30975,7 @@
       "astEnd": 20131
     },
     {
-      "id": "FUNC-03094",
+      "id": "FUNC-03095",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 283,
       "name": "testKurai",
@@ -30975,7 +30985,7 @@
       "astEnd": 22041
     },
     {
-      "id": "FUNC-03095",
+      "id": "FUNC-03096",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 289,
       "name": "<callback:page.evaluate#0>",
@@ -30985,7 +30995,7 @@
       "astEnd": 20722
     },
     {
-      "id": "FUNC-03096",
+      "id": "FUNC-03097",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 291,
       "name": "<callback:page.waitForFunction#0>",
@@ -30995,7 +31005,7 @@
       "astEnd": 20884
     },
     {
-      "id": "FUNC-03097",
+      "id": "FUNC-03098",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 301,
       "name": "<callback:kuraiPanel.innerText().catch#0>",
@@ -31005,7 +31015,7 @@
       "astEnd": 21495
     },
     {
-      "id": "FUNC-03098",
+      "id": "FUNC-03099",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 308,
       "name": "cleanupAccount",
@@ -31015,7 +31025,7 @@
       "astEnd": 22533
     },
     {
-      "id": "FUNC-03099",
+      "id": "FUNC-03100",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 315,
       "name": "<callback:page.once#1>",
@@ -31025,7 +31035,7 @@
       "astEnd": 22380
     },
     {
-      "id": "FUNC-03100",
+      "id": "FUNC-03101",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 324,
       "name": "<callback:page.on#1>",
@@ -31035,7 +31045,7 @@
       "astEnd": 22788
     },
     {
-      "id": "FUNC-03101",
+      "id": "FUNC-03102",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 325,
       "name": "<callback:page.on#1>",
@@ -31045,7 +31055,7 @@
       "astEnd": 22867
     },
     {
-      "id": "FUNC-03102",
+      "id": "FUNC-03103",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 332,
       "name": "<callback:contracts.some#0>",
@@ -31055,7 +31065,7 @@
       "astEnd": 23349
     },
     {
-      "id": "FUNC-03103",
+      "id": "FUNC-03104",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 332,
       "name": "<callback:required.filter#0>",
@@ -31065,7 +31075,7 @@
       "astEnd": 23350
     },
     {
-      "id": "FUNC-03104",
+      "id": "FUNC-03105",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 342,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31075,7 +31085,7 @@
       "astEnd": 23745
     },
     {
-      "id": "FUNC-03105",
+      "id": "FUNC-03106",
       "file": "tools/browser-live-api.mjs",
       "line": 9,
       "name": "assert",
@@ -31085,7 +31095,7 @@
       "astEnd": 516
     },
     {
-      "id": "FUNC-03106",
+      "id": "FUNC-03107",
       "file": "tools/browser-live-api.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31095,7 +31105,7 @@
       "astEnd": 753
     },
     {
-      "id": "FUNC-03107",
+      "id": "FUNC-03108",
       "file": "tools/browser-live-api.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31105,7 +31115,7 @@
       "astEnd": 829
     },
     {
-      "id": "FUNC-03108",
+      "id": "FUNC-03109",
       "file": "tools/browser-live-api.mjs",
       "line": 17,
       "name": "<callback:page.goto().catch#0>",
@@ -31115,7 +31125,7 @@
       "astEnd": 1349
     },
     {
-      "id": "FUNC-03109",
+      "id": "FUNC-03110",
       "file": "tools/browser-live-api.mjs",
       "line": 19,
       "name": "<callback:page.locator().innerText().catch#0>",
@@ -31125,7 +31135,7 @@
       "astEnd": 1628
     },
     {
-      "id": "FUNC-03110",
+      "id": "FUNC-03111",
       "file": "tools/browser-live-api.mjs",
       "line": 20,
       "name": "<callback:page.evaluate#0>",
@@ -31135,7 +31145,7 @@
       "astEnd": 1991
     },
     {
-      "id": "FUNC-03111",
+      "id": "FUNC-03112",
       "file": "tools/browser-live-api.mjs",
       "line": 22,
       "name": "<callback:page.evaluate#0>",
@@ -31145,7 +31155,7 @@
       "astEnd": 2696
     },
     {
-      "id": "FUNC-03112",
+      "id": "FUNC-03113",
       "file": "tools/browser-live-api.mjs",
       "line": 25,
       "name": "<callback:page.evaluate#0>",
@@ -31155,7 +31165,7 @@
       "astEnd": 3946
     },
     {
-      "id": "FUNC-03113",
+      "id": "FUNC-03114",
       "file": "tools/browser-live-api.mjs",
       "line": 26,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31165,7 +31175,7 @@
       "astEnd": 4296
     },
     {
-      "id": "FUNC-03114",
+      "id": "FUNC-03115",
       "file": "tools/browser-smoke.mjs",
       "line": 7,
       "name": "assert",
@@ -31175,7 +31185,7 @@
       "astEnd": 382
     },
     {
-      "id": "FUNC-03115",
+      "id": "FUNC-03116",
       "file": "tools/browser-smoke.mjs",
       "line": 7,
       "name": "fail",
@@ -31185,7 +31195,7 @@
       "astEnd": 345
     },
     {
-      "id": "FUNC-03116",
+      "id": "FUNC-03117",
       "file": "tools/browser-smoke.mjs",
       "line": 9,
       "name": "<callback:page.on#1>",
@@ -31195,7 +31205,7 @@
       "astEnd": 620
     },
     {
-      "id": "FUNC-03117",
+      "id": "FUNC-03118",
       "file": "tools/browser-smoke.mjs",
       "line": 9,
       "name": "<callback:page.on#1>",
@@ -31205,7 +31215,7 @@
       "astEnd": 696
     },
     {
-      "id": "FUNC-03118",
+      "id": "FUNC-03119",
       "file": "tools/browser-smoke.mjs",
       "line": 10,
       "name": "<callback:page.on#1>",
@@ -31215,7 +31225,7 @@
       "astEnd": 896
     },
     {
-      "id": "FUNC-03119",
+      "id": "FUNC-03120",
       "file": "tools/browser-smoke.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31225,7 +31235,7 @@
       "astEnd": 1073
     },
     {
-      "id": "FUNC-03120",
+      "id": "FUNC-03121",
       "file": "tools/browser-smoke.mjs",
       "line": 14,
       "name": "<callback:page.locator().innerText().catch#0>",
@@ -31235,7 +31245,7 @@
       "astEnd": 1378
     },
     {
-      "id": "FUNC-03121",
+      "id": "FUNC-03122",
       "file": "tools/browser-smoke.mjs",
       "line": 15,
       "name": "<callback:page.evaluate#0>",
@@ -31245,7 +31255,7 @@
       "astEnd": 1877
     },
     {
-      "id": "FUNC-03122",
+      "id": "FUNC-03123",
       "file": "tools/browser-smoke.mjs",
       "line": 20,
       "name": "<callback:page.evaluate#0>",
@@ -31255,7 +31265,7 @@
       "astEnd": 2635
     },
     {
-      "id": "FUNC-03123",
+      "id": "FUNC-03124",
       "file": "tools/browser-smoke.mjs",
       "line": 21,
       "name": "<callback:page.evaluate#0>",
@@ -31265,7 +31275,7 @@
       "astEnd": 2854
     },
     {
-      "id": "FUNC-03124",
+      "id": "FUNC-03125",
       "file": "tools/browser-smoke.mjs",
       "line": 22,
       "name": "<callback:page.once#1>",
@@ -31275,7 +31285,7 @@
       "astEnd": 3006
     },
     {
-      "id": "FUNC-03125",
+      "id": "FUNC-03126",
       "file": "tools/browser-smoke.mjs",
       "line": 23,
       "name": "<callback:page.evaluate#0>",
@@ -31285,7 +31295,7 @@
       "astEnd": 3349
     },
     {
-      "id": "FUNC-03126",
+      "id": "FUNC-03127",
       "file": "tools/browser-smoke.mjs",
       "line": 24,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31295,7 +31305,7 @@
       "astEnd": 3829
     },
     {
-      "id": "FUNC-03127",
+      "id": "FUNC-03128",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 18,
       "name": "sha256",
@@ -31305,7 +31315,7 @@
       "astEnd": 827
     },
     {
-      "id": "FUNC-03128",
+      "id": "FUNC-03129",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 19,
       "name": "norm",
@@ -31315,7 +31325,7 @@
       "astEnd": 882
     },
     {
-      "id": "FUNC-03129",
+      "id": "FUNC-03130",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 20,
       "name": "isDocs",
@@ -31325,7 +31335,7 @@
       "astEnd": 931
     },
     {
-      "id": "FUNC-03130",
+      "id": "FUNC-03131",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 21,
       "name": "isSource",
@@ -31335,7 +31345,7 @@
       "astEnd": 1020
     },
     {
-      "id": "FUNC-03131",
+      "id": "FUNC-03132",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 22,
       "name": "esc",
@@ -31345,7 +31355,7 @@
       "astEnd": 1087
     },
     {
-      "id": "FUNC-03132",
+      "id": "FUNC-03133",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 23,
       "name": "code",
@@ -31355,7 +31365,7 @@
       "astEnd": 1155
     },
     {
-      "id": "FUNC-03133",
+      "id": "FUNC-03134",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 24,
       "name": "fence",
@@ -31365,7 +31375,7 @@
       "astEnd": 1254
     },
     {
-      "id": "FUNC-03134",
+      "id": "FUNC-03135",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 25,
       "name": "langFor",
@@ -31375,7 +31385,7 @@
       "astEnd": 1514
     },
     {
-      "id": "FUNC-03135",
+      "id": "FUNC-03136",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 42,
       "name": "exactFunctionRecord",
@@ -31385,7 +31395,7 @@
       "astEnd": 2876
     },
     {
-      "id": "FUNC-03136",
+      "id": "FUNC-03137",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 74,
       "name": "<callback:functionRecords.filter#0>",
@@ -31395,7 +31405,7 @@
       "astEnd": 3021
     },
     {
-      "id": "FUNC-03137",
+      "id": "FUNC-03138",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 75,
       "name": "<callback:functionRecords.filter().map#0>",
@@ -31405,7 +31415,7 @@
       "astEnd": 3118
     },
     {
-      "id": "FUNC-03138",
+      "id": "FUNC-03139",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 77,
       "name": "actionHandlerEvidence",
@@ -31415,7 +31425,7 @@
       "astEnd": 4909
     },
     {
-      "id": "FUNC-03139",
+      "id": "FUNC-03140",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 97,
       "name": "<callback:explicit.some#0>",
@@ -31425,7 +31435,7 @@
       "astEnd": 4172
     },
     {
-      "id": "FUNC-03140",
+      "id": "FUNC-03141",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 101,
       "name": "<callback:action.sources || [].every#0>",
@@ -31435,7 +31445,7 @@
       "astEnd": 4378
     },
     {
-      "id": "FUNC-03141",
+      "id": "FUNC-03142",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 117,
       "name": "<callback:inv.uiActions || [].map#0>",
@@ -31445,7 +31455,7 @@
       "astEnd": 4998
     },
     {
-      "id": "FUNC-03142",
+      "id": "FUNC-03143",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 118,
       "name": "<callback:uiTraces.filter#0>",
@@ -31455,7 +31465,7 @@
       "astEnd": 5093
     },
     {
-      "id": "FUNC-03143",
+      "id": "FUNC-03144",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 119,
       "name": "<callback:MANUAL_DOCS.map#0>",
@@ -31465,7 +31475,7 @@
       "astEnd": 5293
     },
     {
-      "id": "FUNC-03144",
+      "id": "FUNC-03145",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 124,
       "name": "<callback:manualDocs.filter().map#0>",
@@ -31475,7 +31485,7 @@
       "astEnd": 5371
     },
     {
-      "id": "FUNC-03145",
+      "id": "FUNC-03146",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 124,
       "name": "<callback:manualDocs.filter#0>",
@@ -31485,7 +31495,7 @@
       "astEnd": 5354
     },
     {
-      "id": "FUNC-03146",
+      "id": "FUNC-03147",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 125,
       "name": "<callback:inv.files || [].filter#0>",
@@ -31495,7 +31505,7 @@
       "astEnd": 5482
     },
     {
-      "id": "FUNC-03147",
+      "id": "FUNC-03148",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 126,
       "name": "<callback:inv.files || [].filter#0>",
@@ -31505,7 +31515,7 @@
       "astEnd": 5541
     },
     {
-      "id": "FUNC-03148",
+      "id": "FUNC-03149",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 127,
       "name": "<callback:uiTraces.filter#0>",
@@ -31515,7 +31525,7 @@
       "astEnd": 5599
     },
     {
-      "id": "FUNC-03149",
+      "id": "FUNC-03150",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 131,
       "name": "gate",
@@ -31525,7 +31535,7 @@
       "astEnd": 5857
     },
     {
-      "id": "FUNC-03150",
+      "id": "FUNC-03151",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 141,
       "name": "<callback:functionRecords.filter#0>",
@@ -31535,7 +31545,7 @@
       "astEnd": 6194
     },
     {
-      "id": "FUNC-03151",
+      "id": "FUNC-03152",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 147,
       "name": "<callback:uiTraces.filter#0>",
@@ -31545,7 +31555,7 @@
       "astEnd": 6483
     },
     {
-      "id": "FUNC-03152",
+      "id": "FUNC-03153",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 148,
       "name": "<callback:concreteActions.filter#0>",
@@ -31555,7 +31565,7 @@
       "astEnd": 6584
     },
     {
-      "id": "FUNC-03153",
+      "id": "FUNC-03154",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 166,
       "name": "<callback:unresolvedUIActions.map#0>",
@@ -31565,7 +31575,7 @@
       "astEnd": 7251
     },
     {
-      "id": "FUNC-03154",
+      "id": "FUNC-03155",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 167,
       "name": "<callback:functionRecords.map#0>",
@@ -31575,7 +31585,7 @@
       "astEnd": 7479
     },
     {
-      "id": "FUNC-03155",
+      "id": "FUNC-03156",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 171,
       "name": "<callback:uiTraces.map#0>",
@@ -31585,7 +31595,7 @@
       "astEnd": 7622
     },
     {
-      "id": "FUNC-03156",
+      "id": "FUNC-03157",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 172,
       "name": "<callback:sourceFiles.map#0>",
@@ -31595,7 +31605,7 @@
       "astEnd": 7711
     },
     {
-      "id": "FUNC-03157",
+      "id": "FUNC-03158",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 173,
       "name": "<callback:assetFiles.map#0>",
@@ -31605,7 +31615,7 @@
       "astEnd": 7798
     },
     {
-      "id": "FUNC-03158",
+      "id": "FUNC-03159",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 215,
       "name": "<callback:r.sources || [].map#0>",
@@ -31615,7 +31625,7 @@
       "astEnd": 9987
     },
     {
-      "id": "FUNC-03159",
+      "id": "FUNC-03160",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 217,
       "name": "<callback:a.sources || [].map#0>",
@@ -31625,7 +31635,7 @@
       "astEnd": 10201
     },
     {
-      "id": "FUNC-03160",
+      "id": "FUNC-03161",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 219,
       "name": "<callback:c.sources || [].map#0>",
@@ -31635,7 +31645,7 @@
       "astEnd": 10422
     },
     {
-      "id": "FUNC-03161",
+      "id": "FUNC-03162",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 228,
       "name": "<callback:a.sources || [].map#0>",
@@ -31645,7 +31655,7 @@
       "astEnd": 11027
     },
     {
-      "id": "FUNC-03162",
+      "id": "FUNC-03163",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 229,
       "name": "<callback:a.evidence || [].map#0>",
@@ -31655,7 +31665,7 @@
       "astEnd": 11146
     },
     {
-      "id": "FUNC-03163",
+      "id": "FUNC-03164",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 233,
       "name": "<callback:e.sources || [].map#0>",
@@ -31665,7 +31675,7 @@
       "astEnd": 11418
     },
     {
-      "id": "FUNC-03164",
+      "id": "FUNC-03165",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 256,
       "name": "<callback:a.sources || [].map#0>",
@@ -31675,7 +31685,7 @@
       "astEnd": 13217
     },
     {
-      "id": "FUNC-03165",
+      "id": "FUNC-03166",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 4,
       "name": "read",
@@ -31685,7 +31695,7 @@
       "astEnd": 181
     },
     {
-      "id": "FUNC-03166",
+      "id": "FUNC-03167",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 8,
       "name": "normalize",
@@ -31695,7 +31705,7 @@
       "astEnd": 241
     },
     {
-      "id": "FUNC-03167",
+      "id": "FUNC-03168",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 9,
       "name": "isHash",
@@ -31705,7 +31715,7 @@
       "astEnd": 301
     },
     {
-      "id": "FUNC-03168",
+      "id": "FUNC-03169",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 10,
       "name": "runHash",
@@ -31715,7 +31725,7 @@
       "astEnd": 443
     },
     {
-      "id": "FUNC-03169",
+      "id": "FUNC-03170",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 62,
       "name": "<callback:gameplay.contracts.every#0>",
@@ -31725,7 +31735,7 @@
       "astEnd": 3721
     },
     {
-      "id": "FUNC-03170",
+      "id": "FUNC-03171",
       "file": "tools/final-readiness.mjs",
       "line": 8,
       "name": "pass",
@@ -31735,7 +31745,7 @@
       "astEnd": 284
     },
     {
-      "id": "FUNC-03171",
+      "id": "FUNC-03172",
       "file": "tools/final-readiness.mjs",
       "line": 9,
       "name": "normalizedOrigin",
@@ -31745,7 +31755,7 @@
       "astEnd": 359
     },
     {
-      "id": "FUNC-03172",
+      "id": "FUNC-03173",
       "file": "tools/final-readiness.mjs",
       "line": 10,
       "name": "isHash",
@@ -31755,7 +31765,7 @@
       "astEnd": 421
     },
     {
-      "id": "FUNC-03173",
+      "id": "FUNC-03174",
       "file": "tools/final-readiness.mjs",
       "line": 11,
       "name": "readJson",
@@ -31765,7 +31775,7 @@
       "astEnd": 675
     },
     {
-      "id": "FUNC-03174",
+      "id": "FUNC-03175",
       "file": "tools/final-readiness.mjs",
       "line": 12,
       "name": "fingerprint",
@@ -31775,7 +31785,7 @@
       "astEnd": 892
     },
     {
-      "id": "FUNC-03175",
+      "id": "FUNC-03176",
       "file": "tools/final-readiness.mjs",
       "line": 41,
       "name": "<callback:operational.contracts.every#0>",
@@ -31785,7 +31795,7 @@
       "astEnd": 3272
     },
     {
-      "id": "FUNC-03176",
+      "id": "FUNC-03177",
       "file": "tools/final-readiness.mjs",
       "line": 109,
       "name": "<callback:gameplay.contracts.every#0>",
@@ -31795,7 +31805,7 @@
       "astEnd": 11870
     },
     {
-      "id": "FUNC-03177",
+      "id": "FUNC-03178",
       "file": "tools/final-readiness.mjs",
       "line": 132,
       "name": "<callback:[consumerFingerprints.account,consumerFingerprints.browserAccount,consumerFingerprints.gameplay].every#0>",
@@ -31805,7 +31815,7 @@
       "astEnd": 14086
     },
     {
-      "id": "FUNC-03178",
+      "id": "FUNC-03179",
       "file": "tools/final-readiness.mjs",
       "line": 134,
       "name": "<callback:[consumerReleaseFingerprints.account,consumerReleaseFingerprints.browserAccount,consumerReleaseFingerprints.gameplay].every#0>",
@@ -31815,7 +31825,7 @@
       "astEnd": 14493
     },
     {
-      "id": "FUNC-03179",
+      "id": "FUNC-03180",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 26,
       "name": "walk",
@@ -31825,7 +31835,7 @@
       "astEnd": 1539
     },
     {
-      "id": "FUNC-03180",
+      "id": "FUNC-03181",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 40,
       "name": "reEsc",
@@ -31835,7 +31845,7 @@
       "astEnd": 1620
     },
     {
-      "id": "FUNC-03181",
+      "id": "FUNC-03182",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 41,
       "name": "lineAt",
@@ -31845,7 +31855,7 @@
       "astEnd": 1749
     },
     {
-      "id": "FUNC-03182",
+      "id": "FUNC-03183",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 46,
       "name": "occurrences",
@@ -31855,7 +31865,7 @@
       "astEnd": 1943
     },
     {
-      "id": "FUNC-03183",
+      "id": "FUNC-03184",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 55,
       "name": "uniqEvidence",
@@ -31865,7 +31875,7 @@
       "astEnd": 2153
     },
     {
-      "id": "FUNC-03184",
+      "id": "FUNC-03185",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 57,
       "name": "<callback:items.filter#0>",
@@ -31875,7 +31885,7 @@
       "astEnd": 2149
     },
     {
-      "id": "FUNC-03185",
+      "id": "FUNC-03186",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 65,
       "name": "aliasesForDatasetAction",
@@ -31885,7 +31895,7 @@
       "astEnd": 2418
     },
     {
-      "id": "FUNC-03186",
+      "id": "FUNC-03187",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 73,
       "name": "handlerEvidence",
@@ -31895,7 +31905,7 @@
       "astEnd": 5904
     },
     {
-      "id": "FUNC-03187",
+      "id": "FUNC-03188",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 145,
       "name": "<callback:report.uiTraces || [].map#0>",
@@ -31905,7 +31915,7 @@
       "astEnd": 5974
     },
     {
-      "id": "FUNC-03188",
+      "id": "FUNC-03189",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 156,
       "name": "<callback:report.uiTraces || [].filter#0>",
@@ -31915,7 +31925,7 @@
       "astEnd": 6358
     },
     {
-      "id": "FUNC-03189",
+      "id": "FUNC-03190",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 157,
       "name": "<callback:concrete.filter#0>",
@@ -31925,7 +31935,7 @@
       "astEnd": 6430
     },
     {
-      "id": "FUNC-03190",
+      "id": "FUNC-03191",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 158,
       "name": "<callback:unresolved.map#0>",
@@ -31935,7 +31945,7 @@
       "astEnd": 6560
     },
     {
-      "id": "FUNC-03191",
+      "id": "FUNC-03192",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 159,
       "name": "<callback:concrete.filter#0>",
@@ -31945,7 +31955,7 @@
       "astEnd": 6658
     },
     {
-      "id": "FUNC-03192",
+      "id": "FUNC-03193",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 179,
       "name": "<callback:trace.evidence || [].map#0>",
@@ -31955,7 +31965,7 @@
       "astEnd": 7797
     },
     {
-      "id": "FUNC-03193",
+      "id": "FUNC-03194",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 198,
       "name": "<callback:a.sources || [].map#0>",
@@ -31965,7 +31975,7 @@
       "astEnd": 8941
     },
     {
-      "id": "FUNC-03194",
+      "id": "FUNC-03195",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 218,
       "name": "<callback:unresolved.map#0>",
@@ -31975,7 +31985,7 @@
       "astEnd": 9675
     },
     {
-      "id": "FUNC-03195",
+      "id": "FUNC-03196",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -31985,7 +31995,7 @@
       "astEnd": 590
     },
     {
-      "id": "FUNC-03196",
+      "id": "FUNC-03197",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -31995,7 +32005,7 @@
       "astEnd": 630
     },
     {
-      "id": "FUNC-03197",
+      "id": "FUNC-03198",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -32005,7 +32015,7 @@
       "astEnd": 687
     },
     {
-      "id": "FUNC-03198",
+      "id": "FUNC-03199",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -32015,7 +32025,7 @@
       "astEnd": 767
     },
     {
-      "id": "FUNC-03199",
+      "id": "FUNC-03200",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -32025,7 +32035,7 @@
       "astEnd": 814
     },
     {
-      "id": "FUNC-03200",
+      "id": "FUNC-03201",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -32035,7 +32045,7 @@
       "astEnd": 876
     },
     {
-      "id": "FUNC-03201",
+      "id": "FUNC-03202",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -32045,7 +32055,7 @@
       "astEnd": 943
     },
     {
-      "id": "FUNC-03202",
+      "id": "FUNC-03203",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -32055,7 +32065,7 @@
       "astEnd": 1246
     },
     {
-      "id": "FUNC-03203",
+      "id": "FUNC-03204",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -32065,7 +32075,7 @@
       "astEnd": 1529
     },
     {
-      "id": "FUNC-03204",
+      "id": "FUNC-03205",
       "file": "tools/generate-technical-spec.mjs",
       "line": 35,
       "name": "<anonymous@35:9>",
@@ -32075,7 +32085,7 @@
       "astEnd": 1526
     },
     {
-      "id": "FUNC-03205",
+      "id": "FUNC-03206",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -32085,7 +32095,7 @@
       "astEnd": 1718
     },
     {
-      "id": "FUNC-03206",
+      "id": "FUNC-03207",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -32095,7 +32105,7 @@
       "astEnd": 2455
     },
     {
-      "id": "FUNC-03207",
+      "id": "FUNC-03208",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -32105,7 +32115,7 @@
       "astEnd": 2614
     },
     {
-      "id": "FUNC-03208",
+      "id": "FUNC-03209",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -32115,7 +32125,7 @@
       "astEnd": 2756
     },
     {
-      "id": "FUNC-03209",
+      "id": "FUNC-03210",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -32125,7 +32135,7 @@
       "astEnd": 3498
     },
     {
-      "id": "FUNC-03210",
+      "id": "FUNC-03211",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -32135,7 +32145,7 @@
       "astEnd": 4637
     },
     {
-      "id": "FUNC-03211",
+      "id": "FUNC-03212",
       "file": "tools/generate-technical-spec.mjs",
       "line": 133,
       "name": "<callback:files.sort#0>",
@@ -32145,7 +32155,7 @@
       "astEnd": 5112
     },
     {
-      "id": "FUNC-03212",
+      "id": "FUNC-03213",
       "file": "tools/generate-technical-spec.mjs",
       "line": 137,
       "name": "<callback:functions.sort#0>",
@@ -32155,7 +32165,7 @@
       "astEnd": 5365
     },
     {
-      "id": "FUNC-03213",
+      "id": "FUNC-03214",
       "file": "tools/generate-technical-spec.mjs",
       "line": 138,
       "name": "<callback:functions.map#0>",
@@ -32165,7 +32175,7 @@
       "astEnd": 5416
     },
     {
-      "id": "FUNC-03214",
+      "id": "FUNC-03215",
       "file": "tools/generate-technical-spec.mjs",
       "line": 144,
       "name": "<callback:functions.forEach#0>",
@@ -32175,7 +32185,7 @@
       "astEnd": 5692
     },
     {
-      "id": "FUNC-03215",
+      "id": "FUNC-03216",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -32185,7 +32195,7 @@
       "astEnd": 5984
     },
     {
-      "id": "FUNC-03216",
+      "id": "FUNC-03217",
       "file": "tools/generate-technical-spec.mjs",
       "line": 150,
       "name": "<callback:add#2>",
@@ -32195,7 +32205,7 @@
       "astEnd": 6081
     },
     {
-      "id": "FUNC-03217",
+      "id": "FUNC-03218",
       "file": "tools/generate-technical-spec.mjs",
       "line": 151,
       "name": "<callback:add#2>",
@@ -32205,7 +32215,7 @@
       "astEnd": 6173
     },
     {
-      "id": "FUNC-03218",
+      "id": "FUNC-03219",
       "file": "tools/generate-technical-spec.mjs",
       "line": 152,
       "name": "<callback:add#2>",
@@ -32215,7 +32225,7 @@
       "astEnd": 6277
     },
     {
-      "id": "FUNC-03219",
+      "id": "FUNC-03220",
       "file": "tools/generate-technical-spec.mjs",
       "line": 153,
       "name": "<callback:add#2>",
@@ -32225,7 +32235,7 @@
       "astEnd": 6445
     },
     {
-      "id": "FUNC-03220",
+      "id": "FUNC-03221",
       "file": "tools/generate-technical-spec.mjs",
       "line": 154,
       "name": "<callback:add#2>",
@@ -32235,7 +32245,7 @@
       "astEnd": 6542
     },
     {
-      "id": "FUNC-03221",
+      "id": "FUNC-03222",
       "file": "tools/generate-technical-spec.mjs",
       "line": 155,
       "name": "<callback:add#2>",
@@ -32245,7 +32255,7 @@
       "astEnd": 6642
     },
     {
-      "id": "FUNC-03222",
+      "id": "FUNC-03223",
       "file": "tools/generate-technical-spec.mjs",
       "line": 156,
       "name": "<callback:add#2>",
@@ -32255,7 +32265,7 @@
       "astEnd": 6733
     },
     {
-      "id": "FUNC-03223",
+      "id": "FUNC-03224",
       "file": "tools/generate-technical-spec.mjs",
       "line": 157,
       "name": "<callback:add#2>",
@@ -32265,7 +32275,7 @@
       "astEnd": 6814
     },
     {
-      "id": "FUNC-03224",
+      "id": "FUNC-03225",
       "file": "tools/generate-technical-spec.mjs",
       "line": 158,
       "name": "<callback:text.split().forEach#0>",
@@ -32275,7 +32285,7 @@
       "astEnd": 7074
     },
     {
-      "id": "FUNC-03225",
+      "id": "FUNC-03226",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -32285,7 +32295,7 @@
       "astEnd": 7411
     },
     {
-      "id": "FUNC-03226",
+      "id": "FUNC-03227",
       "file": "tools/generate-technical-spec.mjs",
       "line": 166,
       "name": "<callback:[...map.entries()].sort().map#0>",
@@ -32295,7 +32305,7 @@
       "astEnd": 7407
     },
     {
-      "id": "FUNC-03227",
+      "id": "FUNC-03228",
       "file": "tools/generate-technical-spec.mjs",
       "line": 166,
       "name": "<callback:[...map.entries()].sort#0>",
@@ -32305,7 +32315,7 @@
       "astEnd": 7342
     },
     {
-      "id": "FUNC-03228",
+      "id": "FUNC-03229",
       "file": "tools/generate-technical-spec.mjs",
       "line": 168,
       "name": "<callback:grouped().map#0>",
@@ -32315,7 +32325,7 @@
       "astEnd": 7501
     },
     {
-      "id": "FUNC-03229",
+      "id": "FUNC-03230",
       "file": "tools/generate-technical-spec.mjs",
       "line": 169,
       "name": "<callback:grouped().map#0>",
@@ -32325,7 +32335,7 @@
       "astEnd": 7592
     },
     {
-      "id": "FUNC-03230",
+      "id": "FUNC-03231",
       "file": "tools/generate-technical-spec.mjs",
       "line": 170,
       "name": "<callback:grouped().map#0>",
@@ -32335,7 +32345,7 @@
       "astEnd": 7692
     },
     {
-      "id": "FUNC-03231",
+      "id": "FUNC-03232",
       "file": "tools/generate-technical-spec.mjs",
       "line": 173,
       "name": "<callback:occ.storage.forEach#0>",
@@ -32345,7 +32355,7 @@
       "astEnd": 7825
     },
     {
-      "id": "FUNC-03232",
+      "id": "FUNC-03233",
       "file": "tools/generate-technical-spec.mjs",
       "line": 174,
       "name": "<callback:occ.movement.forEach#0>",
@@ -32355,7 +32365,7 @@
       "astEnd": 7878
     },
     {
-      "id": "FUNC-03233",
+      "id": "FUNC-03234",
       "file": "tools/generate-technical-spec.mjs",
       "line": 175,
       "name": "<callback:occ.assets.forEach#0>",
@@ -32365,7 +32375,7 @@
       "astEnd": 7933
     },
     {
-      "id": "FUNC-03234",
+      "id": "FUNC-03235",
       "file": "tools/generate-technical-spec.mjs",
       "line": 176,
       "name": "<callback:occ.env.forEach#0>",
@@ -32375,7 +32385,7 @@
       "astEnd": 7980
     },
     {
-      "id": "FUNC-03235",
+      "id": "FUNC-03236",
       "file": "tools/generate-technical-spec.mjs",
       "line": 179,
       "name": "<anonymous@179:49>",
@@ -32385,7 +32395,7 @@
       "astEnd": 8079
     },
     {
-      "id": "FUNC-03236",
+      "id": "FUNC-03237",
       "file": "tools/generate-technical-spec.mjs",
       "line": 186,
       "name": "<callback:files.filter().map#0>",
@@ -32395,7 +32405,7 @@
       "astEnd": 8466
     },
     {
-      "id": "FUNC-03237",
+      "id": "FUNC-03238",
       "file": "tools/generate-technical-spec.mjs",
       "line": 186,
       "name": "<callback:files.filter#0>",
@@ -32405,7 +32415,7 @@
       "astEnd": 8451
     },
     {
-      "id": "FUNC-03238",
+      "id": "FUNC-03239",
       "file": "tools/generate-technical-spec.mjs",
       "line": 187,
       "name": "<callback:occ.assets.map#0>",
@@ -32415,7 +32425,7 @@
       "astEnd": 8543
     },
     {
-      "id": "FUNC-03239",
+      "id": "FUNC-03240",
       "file": "tools/generate-technical-spec.mjs",
       "line": 195,
       "name": "<callback:files.filter#0>",
@@ -32425,7 +32435,7 @@
       "astEnd": 8873
     },
     {
-      "id": "FUNC-03240",
+      "id": "FUNC-03241",
       "file": "tools/generate-technical-spec.mjs",
       "line": 196,
       "name": "<callback:files.filter#0>",
@@ -32435,7 +32445,7 @@
       "astEnd": 8921
     },
     {
-      "id": "FUNC-03241",
+      "id": "FUNC-03242",
       "file": "tools/generate-technical-spec.mjs",
       "line": 208,
       "name": "<callback:assetRefs.filter#0>",
@@ -32445,7 +32455,7 @@
       "astEnd": 9352
     },
     {
-      "id": "FUNC-03242",
+      "id": "FUNC-03243",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -32455,7 +32465,7 @@
       "astEnd": 9770
     },
     {
-      "id": "FUNC-03243",
+      "id": "FUNC-03244",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "<callback:a.map#0>",
@@ -32465,7 +32475,7 @@
       "astEnd": 9830
     },
     {
-      "id": "FUNC-03244",
+      "id": "FUNC-03245",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -32475,7 +32485,7 @@
       "astEnd": 9844
     },
     {
-      "id": "FUNC-03245",
+      "id": "FUNC-03246",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -32485,7 +32495,7 @@
       "astEnd": 9912
     },
     {
-      "id": "FUNC-03246",
+      "id": "FUNC-03247",
       "file": "tools/generate-technical-spec.mjs",
       "line": 265,
       "name": "<callback:files.filter#0>",
@@ -32495,7 +32505,7 @@
       "astEnd": 13248
     },
     {
-      "id": "FUNC-03247",
+      "id": "FUNC-03248",
       "file": "tools/live-worker-e2e.mjs",
       "line": 11,
       "name": "assert",
@@ -32505,7 +32515,7 @@
       "astEnd": 385
     },
     {
-      "id": "FUNC-03248",
+      "id": "FUNC-03249",
       "file": "tools/live-worker-e2e.mjs",
       "line": 12,
       "name": "record",
@@ -32515,7 +32525,7 @@
       "astEnd": 449
     },
     {
-      "id": "FUNC-03249",
+      "id": "FUNC-03250",
       "file": "tools/live-worker-e2e.mjs",
       "line": 13,
       "name": "request",
@@ -32525,7 +32535,7 @@
       "astEnd": 1173
     },
     {
-      "id": "FUNC-03250",
+      "id": "FUNC-03251",
       "file": "tools/live-worker-e2e.mjs",
       "line": 23,
       "name": "safe",
@@ -32535,7 +32545,7 @@
       "astEnd": 1401
     },
     {
-      "id": "FUNC-03251",
+      "id": "FUNC-03252",
       "file": "tools/live-worker-e2e.mjs",
       "line": 29,
       "name": "writeReport",
@@ -32545,7 +32555,7 @@
       "astEnd": 1827
     },
     {
-      "id": "FUNC-03252",
+      "id": "FUNC-03253",
       "file": "tools/live-worker-e2e.mjs",
       "line": 123,
       "name": "<callback:slots.data.slots.some#0>",
@@ -32555,7 +32565,7 @@
       "astEnd": 8130
     },
     {
-      "id": "FUNC-03253",
+      "id": "FUNC-03254",
       "file": "tools/live-worker-e2e.mjs",
       "line": 123,
       "name": "<callback:slots.data.slots.some#0>",
@@ -32565,7 +32575,7 @@
       "astEnd": 8184
     },
     {
-      "id": "FUNC-03254",
+      "id": "FUNC-03255",
       "file": "tools/live-worker-e2e.mjs",
       "line": 132,
       "name": "<callback:create.data?.members || [].find#0>",
@@ -32575,7 +32585,7 @@
       "astEnd": 8685
     },
     {
-      "id": "FUNC-03255",
+      "id": "FUNC-03256",
       "file": "tools/live-worker-e2e.mjs",
       "line": 144,
       "name": "<callback:createAlt.data?.members || [].find#0>",
@@ -32585,7 +32595,7 @@
       "astEnd": 9401
     },
     {
-      "id": "FUNC-03256",
+      "id": "FUNC-03257",
       "file": "tools/live-worker-e2e.mjs",
       "line": 171,
       "name": "<callback:messages.data.messages.some#0>",
@@ -32595,7 +32605,7 @@
       "astEnd": 11386
     },
     {
-      "id": "FUNC-03257",
+      "id": "FUNC-03258",
       "file": "tools/live-worker-e2e.mjs",
       "line": 207,
       "name": "<callback:actions.some#0>",
@@ -32605,7 +32615,7 @@
       "astEnd": 13814
     },
     {
-      "id": "FUNC-03258",
+      "id": "FUNC-03259",
       "file": "tools/live-worker-e2e.mjs",
       "line": 208,
       "name": "<callback:members.find#0>",
@@ -32615,7 +32625,7 @@
       "astEnd": 13948
     },
     {
-      "id": "FUNC-03259",
+      "id": "FUNC-03260",
       "file": "tools/live-worker-e2e.mjs",
       "line": 217,
       "name": "<callback:leaderboard.data?.leaderboard || [].filter#0>",
@@ -32625,7 +32635,7 @@
       "astEnd": 14644
     },
     {
-      "id": "FUNC-03260",
+      "id": "FUNC-03261",
       "file": "tools/live-worker-e2e.mjs",
       "line": 218,
       "name": "<callback:ranksA.find#0>",
@@ -32635,7 +32645,7 @@
       "astEnd": 14719
     },
     {
-      "id": "FUNC-03261",
+      "id": "FUNC-03262",
       "file": "tools/live-worker-e2e.mjs",
       "line": 219,
       "name": "<callback:ranksA.find#0>",
@@ -32645,7 +32655,7 @@
       "astEnd": 14795
     },
     {
-      "id": "FUNC-03262",
+      "id": "FUNC-03263",
       "file": "tools/live-worker-e2e.mjs",
       "line": 263,
       "name": "<callback:rankAfterSlotDelete.data?.leaderboard || [].filter#0>",
@@ -32655,7 +32665,7 @@
       "astEnd": 18045
     },
     {
-      "id": "FUNC-03263",
+      "id": "FUNC-03264",
       "file": "tools/live-worker-e2e.mjs",
       "line": 264,
       "name": "<callback:afterRows.some#0>",
@@ -32665,7 +32675,7 @@
       "astEnd": 18114
     },
     {
-      "id": "FUNC-03264",
+      "id": "FUNC-03265",
       "file": "tools/live-worker-e2e.mjs",
       "line": 265,
       "name": "<callback:afterRows.some#0>",
@@ -32675,7 +32685,7 @@
       "astEnd": 18273
     },
     {
-      "id": "FUNC-03265",
+      "id": "FUNC-03266",
       "file": "tools/live-worker-e2e.mjs",
       "line": 284,
       "name": "<callback:afterDeleteRank.data?.leaderboard || [].some#0>",
@@ -32685,7 +32695,7 @@
       "astEnd": 19523
     },
     {
-      "id": "FUNC-03266",
+      "id": "FUNC-03267",
       "file": "tools/public-release-coherence.mjs",
       "line": 12,
       "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map#0>",
@@ -32695,7 +32705,7 @@
       "astEnd": 757
     },
     {
-      "id": "FUNC-03267",
+      "id": "FUNC-03268",
       "file": "tools/public-release-coherence.mjs",
       "line": 13,
       "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map().filter#0>",
@@ -32705,7 +32715,7 @@
       "astEnd": 810
     },
     {
-      "id": "FUNC-03268",
+      "id": "FUNC-03269",
       "file": "tools/public-release-coherence.mjs",
       "line": 14,
       "name": "<callback:[...new Set(['index.html',markerPath,...refs])].filter#0>",
@@ -32715,7 +32725,7 @@
       "astEnd": 899
     },
     {
-      "id": "FUNC-03269",
+      "id": "FUNC-03270",
       "file": "tools/public-release-coherence.mjs",
       "line": 15,
       "name": "sha256",
@@ -32725,7 +32735,7 @@
       "astEnd": 969
     },
     {
-      "id": "FUNC-03270",
+      "id": "FUNC-03271",
       "file": "tools/public-release-coherence.mjs",
       "line": 41,
       "name": "<callback:checks.find#0>",
@@ -32735,7 +32745,7 @@
       "astEnd": 2233
     },
     {
-      "id": "FUNC-03271",
+      "id": "FUNC-03272",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -32745,7 +32755,7 @@
       "astEnd": 482
     },
     {
-      "id": "FUNC-03272",
+      "id": "FUNC-03273",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -32755,7 +32765,7 @@
       "astEnd": 621
     },
     {
-      "id": "FUNC-03273",
+      "id": "FUNC-03274",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -32765,7 +32775,7 @@
       "astEnd": 765
     },
     {
-      "id": "FUNC-03274",
+      "id": "FUNC-03275",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -32775,7 +32785,7 @@
       "astEnd": 841
     },
     {
-      "id": "FUNC-03275",
+      "id": "FUNC-03276",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "<callback:refs || [].map#0>",
@@ -32785,7 +32795,7 @@
       "astEnd": 913
     },
     {
-      "id": "FUNC-03276",
+      "id": "FUNC-03277",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -32795,7 +32805,7 @@
       "astEnd": 925
     },
     {
-      "id": "FUNC-03277",
+      "id": "FUNC-03278",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 32,
       "name": "<callback:[...byPath.values()].sort#0>",
@@ -32805,7 +32815,7 @@
       "astEnd": 1261
     },
     {
-      "id": "FUNC-03278",
+      "id": "FUNC-03279",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 41,
       "name": "<callback:refs.filter#0>",
@@ -32815,7 +32825,7 @@
       "astEnd": 1702
     },
     {
-      "id": "FUNC-03279",
+      "id": "FUNC-03280",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 42,
       "name": "<callback:refs.filter#0>",
@@ -32825,7 +32835,7 @@
       "astEnd": 1747
     },
     {
-      "id": "FUNC-03280",
+      "id": "FUNC-03281",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 43,
       "name": "<callback:literal.filter#0>",
@@ -32835,7 +32845,7 @@
       "astEnd": 1819
     },
     {
-      "id": "FUNC-03281",
+      "id": "FUNC-03282",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 44,
       "name": "<callback:literal.filter#0>",
@@ -32845,7 +32855,7 @@
       "astEnd": 1889
     },
     {
-      "id": "FUNC-03282",
+      "id": "FUNC-03283",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -32855,7 +32865,7 @@
       "astEnd": 578
     },
     {
-      "id": "FUNC-03283",
+      "id": "FUNC-03284",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -32865,7 +32875,7 @@
       "astEnd": 653
     },
     {
-      "id": "FUNC-03284",
+      "id": "FUNC-03285",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -32875,7 +32885,7 @@
       "astEnd": 707
     },
     {
-      "id": "FUNC-03285",
+      "id": "FUNC-03286",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -32885,7 +32895,7 @@
       "astEnd": 818
     },
     {
-      "id": "FUNC-03286",
+      "id": "FUNC-03287",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -32895,7 +32905,7 @@
       "astEnd": 874
     },
     {
-      "id": "FUNC-03287",
+      "id": "FUNC-03288",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -32905,7 +32915,7 @@
       "astEnd": 931
     },
     {
-      "id": "FUNC-03288",
+      "id": "FUNC-03289",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -32915,7 +32925,7 @@
       "astEnd": 1028
     },
     {
-      "id": "FUNC-03289",
+      "id": "FUNC-03290",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -32925,7 +32935,7 @@
       "astEnd": 1085
     },
     {
-      "id": "FUNC-03290",
+      "id": "FUNC-03291",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -32935,7 +32945,7 @@
       "astEnd": 1165
     },
     {
-      "id": "FUNC-03291",
+      "id": "FUNC-03292",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "<callback:a||[].map#0>",
@@ -32945,7 +32955,7 @@
       "astEnd": 1219
     },
     {
-      "id": "FUNC-03292",
+      "id": "FUNC-03293",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -32955,7 +32965,7 @@
       "astEnd": 1231
     },
     {
-      "id": "FUNC-03293",
+      "id": "FUNC-03294",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -32965,7 +32975,7 @@
       "astEnd": 1288
     },
     {
-      "id": "FUNC-03294",
+      "id": "FUNC-03295",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -32975,7 +32985,7 @@
       "astEnd": 1390
     },
     {
-      "id": "FUNC-03295",
+      "id": "FUNC-03296",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
@@ -32985,7 +32995,7 @@
       "astEnd": 1619
     },
     {
-      "id": "FUNC-03296",
+      "id": "FUNC-03297",
       "file": "tools/refine-technical-spec.mjs",
       "line": 29,
       "name": "<callback:item.sources||[].filter#0>",
@@ -32995,7 +33005,7 @@
       "astEnd": 1546
     },
     {
-      "id": "FUNC-03297",
+      "id": "FUNC-03298",
       "file": "tools/refine-technical-spec.mjs",
       "line": 51,
       "name": "<callback:inv.functions||[].filter#0>",
@@ -33005,7 +33015,7 @@
       "astEnd": 2367
     },
     {
-      "id": "FUNC-03298",
+      "id": "FUNC-03299",
       "file": "tools/refine-technical-spec.mjs",
       "line": 52,
       "name": "<callback:inv.functions||[].filter().map#0>",
@@ -33015,7 +33025,7 @@
       "astEnd": 2411
     },
     {
-      "id": "FUNC-03299",
+      "id": "FUNC-03300",
       "file": "tools/refine-technical-spec.mjs",
       "line": 56,
       "name": "<callback:inv.storage||[].filter#0>",
@@ -33025,7 +33035,7 @@
       "astEnd": 2665
     },
     {
-      "id": "FUNC-03300",
+      "id": "FUNC-03301",
       "file": "tools/refine-technical-spec.mjs",
       "line": 59,
       "name": "<callback:inv.movement||[].filter#0>",
@@ -33035,7 +33045,7 @@
       "astEnd": 2859
     },
     {
-      "id": "FUNC-03301",
+      "id": "FUNC-03302",
       "file": "tools/refine-technical-spec.mjs",
       "line": 60,
       "name": "<callback:inv.assets||[].filter#0>",
@@ -33045,7 +33055,7 @@
       "astEnd": 2927
     },
     {
-      "id": "FUNC-03302",
+      "id": "FUNC-03303",
       "file": "tools/refine-technical-spec.mjs",
       "line": 61,
       "name": "<callback:inv.environment||[].filter#0>",
@@ -33055,7 +33065,7 @@
       "astEnd": 3005
     },
     {
-      "id": "FUNC-03303",
+      "id": "FUNC-03304",
       "file": "tools/refine-technical-spec.mjs",
       "line": 63,
       "name": "<callback:inv.functions.sort#0>",
@@ -33065,7 +33075,7 @@
       "astEnd": 3108
     },
     {
-      "id": "FUNC-03304",
+      "id": "FUNC-03305",
       "file": "tools/refine-technical-spec.mjs",
       "line": 64,
       "name": "<callback:inv.functions.forEach#0>",
@@ -33075,7 +33085,7 @@
       "astEnd": 3180
     },
     {
-      "id": "FUNC-03305",
+      "id": "FUNC-03306",
       "file": "tools/refine-technical-spec.mjs",
       "line": 65,
       "name": "<callback:inv.routes.forEach#0>",
@@ -33085,7 +33095,7 @@
       "astEnd": 3248
     },
     {
-      "id": "FUNC-03306",
+      "id": "FUNC-03307",
       "file": "tools/refine-technical-spec.mjs",
       "line": 66,
       "name": "<callback:inv.models.forEach#0>",
@@ -33095,7 +33105,7 @@
       "astEnd": 3315
     },
     {
-      "id": "FUNC-03307",
+      "id": "FUNC-03308",
       "file": "tools/refine-technical-spec.mjs",
       "line": 67,
       "name": "<callback:inv.collections.forEach#0>",
@@ -33105,7 +33115,7 @@
       "astEnd": 3387
     },
     {
-      "id": "FUNC-03308",
+      "id": "FUNC-03309",
       "file": "tools/refine-technical-spec.mjs",
       "line": 68,
       "name": "<callback:inv.storage.forEach#0>",
@@ -33115,7 +33125,7 @@
       "astEnd": 3458
     },
     {
-      "id": "FUNC-03309",
+      "id": "FUNC-03310",
       "file": "tools/refine-technical-spec.mjs",
       "line": 69,
       "name": "<callback:inv.uiActions.forEach#0>",
@@ -33125,7 +33135,7 @@
       "astEnd": 3528
     },
     {
-      "id": "FUNC-03310",
+      "id": "FUNC-03311",
       "file": "tools/refine-technical-spec.mjs",
       "line": 70,
       "name": "<callback:inv.events.forEach#0>",
@@ -33135,7 +33145,7 @@
       "astEnd": 3598
     },
     {
-      "id": "FUNC-03311",
+      "id": "FUNC-03312",
       "file": "tools/refine-technical-spec.mjs",
       "line": 71,
       "name": "<callback:inv.movement.forEach#0>",
@@ -33145,7 +33155,7 @@
       "astEnd": 3669
     },
     {
-      "id": "FUNC-03312",
+      "id": "FUNC-03313",
       "file": "tools/refine-technical-spec.mjs",
       "line": 72,
       "name": "<callback:inv.assets.forEach#0>",
@@ -33155,7 +33165,7 @@
       "astEnd": 3742
     },
     {
-      "id": "FUNC-03313",
+      "id": "FUNC-03314",
       "file": "tools/refine-technical-spec.mjs",
       "line": 73,
       "name": "<callback:inv.environment.forEach#0>",
@@ -33165,7 +33175,7 @@
       "astEnd": 3815
     },
     {
-      "id": "FUNC-03314",
+      "id": "FUNC-03315",
       "file": "tools/refine-technical-spec.mjs",
       "line": 82,
       "name": "<callback:[...assetByPath.values()].sort#0>",
@@ -33175,7 +33185,7 @@
       "astEnd": 4198
     },
     {
-      "id": "FUNC-03315",
+      "id": "FUNC-03316",
       "file": "tools/refine-technical-spec.mjs",
       "line": 84,
       "name": "<callback:inv.functions.filter#0>",
@@ -33185,7 +33195,7 @@
       "astEnd": 4288
     },
     {
-      "id": "FUNC-03316",
+      "id": "FUNC-03317",
       "file": "tools/refine-technical-spec.mjs",
       "line": 85,
       "name": "<callback:inv.functions.filter#0>",
@@ -33195,7 +33205,7 @@
       "astEnd": 4352
     },
     {
-      "id": "FUNC-03317",
+      "id": "FUNC-03318",
       "file": "tools/refine-technical-spec.mjs",
       "line": 86,
       "name": "<callback:inv.functions.filter#0>",
@@ -33205,7 +33215,7 @@
       "astEnd": 4425
     },
     {
-      "id": "FUNC-03318",
+      "id": "FUNC-03319",
       "file": "tools/refine-technical-spec.mjs",
       "line": 103,
       "name": "<callback:assetReferences.filter#0>",
@@ -33215,7 +33225,7 @@
       "astEnd": 4987
     },
     {
-      "id": "FUNC-03319",
+      "id": "FUNC-03320",
       "file": "tools/refine-technical-spec.mjs",
       "line": 104,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33225,7 +33235,7 @@
       "astEnd": 5053
     },
     {
-      "id": "FUNC-03320",
+      "id": "FUNC-03321",
       "file": "tools/refine-technical-spec.mjs",
       "line": 105,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33235,7 +33245,7 @@
       "astEnd": 5141
     },
     {
-      "id": "FUNC-03321",
+      "id": "FUNC-03322",
       "file": "tools/refine-technical-spec.mjs",
       "line": 106,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33245,7 +33255,7 @@
       "astEnd": 5237
     },
     {
-      "id": "FUNC-03322",
+      "id": "FUNC-03323",
       "file": "tools/refine-technical-spec.mjs",
       "line": 189,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33255,7 +33265,7 @@
       "astEnd": 9866
     },
     {
-      "id": "FUNC-03323",
+      "id": "FUNC-03324",
       "file": "tools/refine-technical-spec.mjs",
       "line": 205,
       "name": "<callback:assetReferences.filter#0>",
@@ -33265,7 +33275,7 @@
       "astEnd": 11653
     },
     {
-      "id": "FUNC-03324",
+      "id": "FUNC-03325",
       "file": "tools/refine-technical-spec.mjs",
       "line": 220,
       "name": "<callback:inv.models.map#0>",
@@ -33275,47 +33285,47 @@
       "astEnd": 12305
     },
     {
-      "id": "FUNC-03325",
+      "id": "FUNC-03326",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 45,
+      "line": 55,
       "name": "<callback:records.map#0>",
       "exactCode": true,
       "snippetSha256": "b79e0747296477c9f4101689e2db47f24d0ae7109f8fca3e59d23623bd80e259",
-      "astStart": 1677,
-      "astEnd": 1725
-    },
-    {
-      "id": "FUNC-03326",
-      "file": "tools/release-source-fingerprint.mjs",
-      "line": 46,
-      "name": "<callback:publicRuntime.filter#0>",
-      "exactCode": true,
-      "snippetSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
-      "astStart": 1776,
-      "astEnd": 1817
+      "astStart": 2047,
+      "astEnd": 2095
     },
     {
       "id": "FUNC-03327",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 47,
-      "name": "<callback:requiredFiles.filter#0>",
+      "line": 56,
+      "name": "<callback:publicRuntime.filter#0>",
       "exactCode": true,
-      "snippetSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
-      "astStart": 1883,
-      "astEnd": 1914
+      "snippetSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
+      "astStart": 2146,
+      "astEnd": 2187
     },
     {
       "id": "FUNC-03328",
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 50,
-      "name": "<callback:[...trackedPaths].some#0>",
+      "line": 57,
+      "name": "<callback:requiredFiles.filter#0>",
       "exactCode": true,
-      "snippetSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
-      "astStart": 2088,
-      "astEnd": 2122
+      "snippetSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
+      "astStart": 2253,
+      "astEnd": 2284
     },
     {
       "id": "FUNC-03329",
+      "file": "tools/release-source-fingerprint.mjs",
+      "line": 60,
+      "name": "<callback:[...trackedPaths].some#0>",
+      "exactCode": true,
+      "snippetSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
+      "astStart": 2458,
+      "astEnd": 2492
+    },
+    {
+      "id": "FUNC-03330",
       "file": "tools/repair-canonical-markdown-after-trace.mjs",
       "line": 51,
       "name": "<callback:trace.evidence || [].map#0>",
@@ -33325,7 +33335,7 @@
       "astEnd": 2383
     },
     {
-      "id": "FUNC-03330",
+      "id": "FUNC-03331",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 7,
       "name": "constructor",
@@ -33335,7 +33345,7 @@
       "astEnd": 238
     },
     {
-      "id": "FUNC-03331",
+      "id": "FUNC-03332",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 8,
       "name": "length",
@@ -33345,7 +33355,7 @@
       "astEnd": 276
     },
     {
-      "id": "FUNC-03332",
+      "id": "FUNC-03333",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 9,
       "name": "key",
@@ -33355,7 +33365,7 @@
       "astEnd": 324
     },
     {
-      "id": "FUNC-03333",
+      "id": "FUNC-03334",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 10,
       "name": "getItem",
@@ -33365,7 +33375,7 @@
       "astEnd": 399
     },
     {
-      "id": "FUNC-03334",
+      "id": "FUNC-03335",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 11,
       "name": "setItem",
@@ -33375,7 +33385,7 @@
       "astEnd": 450
     },
     {
-      "id": "FUNC-03335",
+      "id": "FUNC-03336",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 12,
       "name": "removeItem",
@@ -33385,217 +33395,227 @@
       "astEnd": 495
     },
     {
-      "id": "FUNC-03336",
+      "id": "FUNC-03337",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 15,
       "name": "makeHarness",
       "exactCode": true,
-      "snippetSha256": "9b7efa4b810561780018df9512651fbc0832365efbc38514a28831ddb9e69ff9",
+      "snippetSha256": "bea03515f323b349f944eaa886ed7e7a04fd2eaa3695be7149147c19e3c582d4",
       "astStart": 499,
-      "astEnd": 2254
-    },
-    {
-      "id": "FUNC-03337",
-      "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 25,
-      "name": "state",
-      "exactCode": true,
-      "snippetSha256": "40417c5bf1a0fb0632869a46cbb7c9fde56f2336b361f083d3ee97babaa01af8",
-      "astStart": 1012,
-      "astEnd": 1026
+      "astEnd": 2576
     },
     {
       "id": "FUNC-03338",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 26,
-      "name": "fetch",
+      "line": 25,
+      "name": "clone",
       "exactCode": true,
-      "snippetSha256": "a218ff0f2f3ddae9e4e258a1ca818bd9ad8842c74cf1c019e3f7ad446001ae23",
-      "astStart": 1039,
-      "astEnd": 1189
+      "snippetSha256": "c749dbb7e82fa90bbc4e1166a019becdc10477a2bbdcc93f130775a580ce5be2",
+      "astStart": 1006,
+      "astEnd": 1038
     },
     {
       "id": "FUNC-03339",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 28,
-      "name": "json",
+      "name": "state",
       "exactCode": true,
-      "snippetSha256": "de3e85b1efedff7eb1bf8980460e59b626149d2f380821e74a81763f71712b9d",
-      "astStart": 1083,
-      "astEnd": 1182
+      "snippetSha256": "ee9cabc9492aad4736a27b943ada296bb845eb79760b4fc641e29b10088ff7b4",
+      "astStart": 1173,
+      "astEnd": 1201
     },
     {
       "id": "FUNC-03340",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 30,
-      "name": "addEventListener",
+      "line": 29,
+      "name": "fetch",
       "exactCode": true,
-      "snippetSha256": "a4982ca8884e6a721e2793f3906ca962277f0ad350e63293860ef7222d00b645",
-      "astStart": 1212,
-      "astEnd": 1245
+      "snippetSha256": "119532f93fb04a0cec86e69091b07700f4cd315ebbbea4aed63c7b53c2200ac9",
+      "astStart": 1214,
+      "astEnd": 1490
     },
     {
       "id": "FUNC-03341",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 31,
-      "name": "dispatchEvent",
+      "line": 33,
+      "name": "json",
       "exactCode": true,
-      "snippetSha256": "53ffa459d1899d7d201e45bd0fe6aec6168d73b9578b83065c8be12f3e44495e",
-      "astStart": 1265,
-      "astEnd": 1311
+      "snippetSha256": "de3e85b1efedff7eb1bf8980460e59b626149d2f380821e74a81763f71712b9d",
+      "astStart": 1376,
+      "astEnd": 1475
     },
     {
       "id": "FUNC-03342",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 33,
-      "name": "constructor",
+      "line": 36,
+      "name": "addEventListener",
       "exactCode": true,
-      "snippetSha256": "f85b4248f0b53aaa2fef3a4a99e2f6825096d0f40b8d51e1bf605dc37dfbbeea",
-      "astStart": 1352,
-      "astEnd": 1407
+      "snippetSha256": "a4982ca8884e6a721e2793f3906ca962277f0ad350e63293860ef7222d00b645",
+      "astStart": 1513,
+      "astEnd": 1546
     },
     {
       "id": "FUNC-03343",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "name": "constructor",
+      "line": 37,
+      "name": "dispatchEvent",
       "exactCode": true,
-      "snippetSha256": "a58843cc0f8a78c62cbfe0e1e934011fd65993760b4eea8eb7e7dd5835dc84f5",
-      "astStart": 1449,
-      "astEnd": 1466
+      "snippetSha256": "53ffa459d1899d7d201e45bd0fe6aec6168d73b9578b83065c8be12f3e44495e",
+      "astStart": 1566,
+      "astEnd": 1612
     },
     {
       "id": "FUNC-03344",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "name": "disconnect",
+      "line": 39,
+      "name": "constructor",
       "exactCode": true,
-      "snippetSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
-      "astStart": 1487,
-      "astEnd": 1491
+      "snippetSha256": "f85b4248f0b53aaa2fef3a4a99e2f6825096d0f40b8d51e1bf605dc37dfbbeea",
+      "astStart": 1653,
+      "astEnd": 1708
     },
     {
       "id": "FUNC-03345",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "name": "observe",
+      "line": 40,
+      "name": "constructor",
       "exactCode": true,
-      "snippetSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
-      "astStart": 1473,
-      "astEnd": 1477
+      "snippetSha256": "a58843cc0f8a78c62cbfe0e1e934011fd65993760b4eea8eb7e7dd5835dc84f5",
+      "astStart": 1750,
+      "astEnd": 1767
     },
     {
       "id": "FUNC-03346",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 38,
-      "name": "addEventListener",
+      "line": 40,
+      "name": "disconnect",
       "exactCode": true,
-      "snippetSha256": "d6e672a251f84b9ddb5cdd24163f7612eaeaca5ff080081e98f70815242ef40e",
-      "astStart": 1583,
-      "astEnd": 1624
+      "snippetSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
+      "astStart": 1788,
+      "astEnd": 1792
     },
     {
       "id": "FUNC-03347",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 39,
-      "name": "dispatchEvent",
+      "line": 40,
+      "name": "observe",
       "exactCode": true,
-      "snippetSha256": "b153d53790cd7f2af987cb3b551833ba8b7f48d2939208a3554cbd78353b6b49",
-      "astStart": 1644,
-      "astEnd": 1692
+      "snippetSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
+      "astStart": 1774,
+      "astEnd": 1778
     },
     {
       "id": "FUNC-03348",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 43,
-      "name": "reload",
+      "line": 44,
+      "name": "addEventListener",
       "exactCode": true,
-      "snippetSha256": "eb69f2cb6123bc2a377bb3acbdfe3bc76c5aacdcafcbadbbceff716199c3ce62",
-      "astStart": 1803,
-      "astEnd": 1819
+      "snippetSha256": "d6e672a251f84b9ddb5cdd24163f7612eaeaca5ff080081e98f70815242ef40e",
+      "astStart": 1884,
+      "astEnd": 1925
     },
     {
       "id": "FUNC-03349",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 46,
-      "name": "setInterval",
+      "line": 45,
+      "name": "dispatchEvent",
       "exactCode": true,
-      "snippetSha256": "7224eeebda4478f630710b84788dd1527e5c371c664457735cc8ac374d9afcd7",
-      "astStart": 1914,
-      "astEnd": 1919
+      "snippetSha256": "b153d53790cd7f2af987cb3b551833ba8b7f48d2939208a3554cbd78353b6b49",
+      "astStart": 1945,
+      "astEnd": 1993
     },
     {
       "id": "FUNC-03350",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 47,
-      "name": "clearInterval",
+      "line": 49,
+      "name": "reload",
       "exactCode": true,
-      "snippetSha256": "dec7a076dec41531da7f2d40bd4b896e27d45dd09ecd541190941bf88e6de894",
-      "astStart": 1939,
-      "astEnd": 1945
+      "snippetSha256": "eb69f2cb6123bc2a377bb3acbdfe3bc76c5aacdcafcbadbbceff716199c3ce62",
+      "astStart": 2104,
+      "astEnd": 2120
     },
     {
       "id": "FUNC-03351",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 48,
-      "name": "setTimeout",
+      "line": 52,
+      "name": "setInterval",
       "exactCode": true,
-      "snippetSha256": "f0168ad785a23fbd0678d898d742e9645812ef8b883204f0da74ada32ac6640d",
-      "astStart": 1962,
-      "astEnd": 1984
+      "snippetSha256": "7224eeebda4478f630710b84788dd1527e5c371c664457735cc8ac374d9afcd7",
+      "astStart": 2215,
+      "astEnd": 2220
     },
     {
       "id": "FUNC-03352",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 49,
-      "name": "clearTimeout",
+      "line": 53,
+      "name": "clearInterval",
       "exactCode": true,
       "snippetSha256": "dec7a076dec41531da7f2d40bd4b896e27d45dd09ecd541190941bf88e6de894",
-      "astStart": 2003,
-      "astEnd": 2009
+      "astStart": 2240,
+      "astEnd": 2246
     },
     {
       "id": "FUNC-03353",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 55,
-      "name": "reloads",
+      "line": 54,
+      "name": "setTimeout",
       "exactCode": true,
-      "snippetSha256": "84018ca3799e3076eed1a6dad69370b13610b111fc94bfb0e61370a916fcda60",
-      "astStart": 2231,
-      "astEnd": 2250
+      "snippetSha256": "f0168ad785a23fbd0678d898d742e9645812ef8b883204f0da74ada32ac6640d",
+      "astStart": 2263,
+      "astEnd": 2285
     },
     {
       "id": "FUNC-03354",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 58,
-      "name": "assert",
+      "line": 55,
+      "name": "clearTimeout",
       "exactCode": true,
-      "snippetSha256": "72b20b947f921d05a9bb0287b9bfd230dc41d8524a8fefe2c81700e2a1911ff6",
-      "astStart": 2256,
-      "astEnd": 2331
+      "snippetSha256": "dec7a076dec41531da7f2d40bd4b896e27d45dd09ecd541190941bf88e6de894",
+      "astStart": 2304,
+      "astEnd": 2310
     },
     {
       "id": "FUNC-03355",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 69,
-      "name": "<callback:h.documentEvents.some#0>",
+      "line": 62,
+      "name": "reloads",
       "exactCode": true,
-      "snippetSha256": "988b44b0d61cbc1f26be72d58cd24710a9e69c4c73c61920b35a976ed07e9526",
-      "astStart": 3031,
-      "astEnd": 3061
+      "snippetSha256": "84018ca3799e3076eed1a6dad69370b13610b111fc94bfb0e61370a916fcda60",
+      "astStart": 2553,
+      "astEnd": 2572
     },
     {
       "id": "FUNC-03356",
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 70,
-      "name": "<callback:h.windowEvents.some#0>",
+      "line": 65,
+      "name": "assert",
       "exactCode": true,
-      "snippetSha256": "5bb1fbfb0cc7c64393c08833274046672341c3cf3fb8a9aa1eb1d14311737e8c",
-      "astStart": 3132,
-      "astEnd": 3173
+      "snippetSha256": "72b20b947f921d05a9bb0287b9bfd230dc41d8524a8fefe2c81700e2a1911ff6",
+      "astStart": 2578,
+      "astEnd": 2653
     },
     {
       "id": "FUNC-03357",
+      "file": "tools/test-online-bridge-recovery.mjs",
+      "line": 85,
+      "name": "<callback:h.documentEvents.some#0>",
+      "exactCode": true,
+      "snippetSha256": "988b44b0d61cbc1f26be72d58cd24710a9e69c4c73c61920b35a976ed07e9526",
+      "astStart": 4129,
+      "astEnd": 4159
+    },
+    {
+      "id": "FUNC-03358",
+      "file": "tools/test-online-bridge-recovery.mjs",
+      "line": 86,
+      "name": "<callback:h.windowEvents.some#0>",
+      "exactCode": true,
+      "snippetSha256": "5bb1fbfb0cc7c64393c08833274046672341c3cf3fb8a9aa1eb1d14311737e8c",
+      "astStart": 4230,
+      "astEnd": 4271
+    },
+    {
+      "id": "FUNC-03359",
       "file": "tools/wait-public-release-coherence.mjs",
       "line": 5,
       "name": "<callback:new Promise#0>",
@@ -33605,7 +33625,7 @@
       "astEnd": 268
     },
     {
-      "id": "FUNC-03358",
+      "id": "FUNC-03360",
       "file": "tools/wait-public-release-coherence.mjs",
       "line": 5,
       "name": "sleep",
@@ -39828,8 +39848,8 @@
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
-      "size": 3652,
-      "sha256": "f8af550388ed4b45e0040eff35b3979744e0a18b2a520afd92b80c0eae993635"
+      "size": 4337,
+      "sha256": "8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc"
     },
     {
       "path": ".github/workflows/post-live-backend-orchestration.yml",
@@ -39843,8 +39863,8 @@
     },
     {
       "path": ".github/workflows/sync-public-release-fingerprint.yml",
-      "size": 1669,
-      "sha256": "62cac276c37a871fb758da7e26ef77925bfa2169b3a11bb4cac580effd55012c"
+      "size": 1753,
+      "sha256": "0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4"
     },
     {
       "path": "app.js",
@@ -39853,18 +39873,18 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 1098,
-      "sha256": "e29d92a8c3e203d7a7383dd1510d79e192c9d213aaf9dcd9e54028a17439858e"
+      "size": 1390,
+      "sha256": "e2baae90805b4ab007995209e35769e949bdc9e4d2a7145342a45e44968af451"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "7b08d6a619557f1e854e6441aee356f65cde160864ee109ad50ba954ded19f22"
+      "size": 5567,
+      "sha256": "53de9d3e85ad2a625dd1b2dd81caf99be24d7b1bae9ca1cb4e3c27622a78ac08"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "d5ede9c11af95f590dc1a04eec42040e9237256782c5ef4d46df62d5279d3ac0"
+      "sha256": "62a4decdb45e1dc86f04e6ce96741a4b89bb18fa44ec742be2ba1940d1396d0b"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40198,8 +40218,8 @@
     },
     {
       "path": "src/r41-online-bridge-recovery.js",
-      "size": 6015,
-      "sha256": "80c869d503e7fb15b5a675a7cd35ac027c78c5ad3ecb9f906ad6dbb3d84400ea"
+      "size": 6570,
+      "sha256": "fdfc30e80d45683691bd45a3808ed1114e59d5a16305c0500f477daf64858379"
     },
     {
       "path": "src/r41-v82-combat-bridge.js",
@@ -40248,8 +40268,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 5210,
-      "sha256": "2f03afd56e00d98202d117e36206a6ab25a5d2fd523f4925a58742a153f13efb"
+      "size": 6253,
+      "sha256": "df6c06656acdb710b9b42963669fd5e2ed8046fa0541766b1834b96ba33cab64"
     },
     {
       "path": "tools/browser-account-live.mjs",
@@ -40273,8 +40293,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 9122,
-      "sha256": "08023f1fde71ae53eee36549d8e3dcbba7927c892483b9ba557fd3960a6ff1a2"
+      "size": 9847,
+      "sha256": "1b33857bf6c85f34ad60ad86592e95186f99ab62dd400fff8197dcd6d960339d"
     },
     {
       "path": "tools/browser-gameplay-e2e.mjs",
@@ -40358,8 +40378,8 @@
     },
     {
       "path": "tools/release-source-fingerprint.mjs",
-      "size": 2465,
-      "sha256": "05a9412b64a1a8d36bf535fd87dbc3d5c30a15e56dd66d19ad4ebbdb5180043d"
+      "size": 2835,
+      "sha256": "8fc10748389e36e36d27d1e4ab682b27ab0c843d73aee98659b326e8a2677fe7"
     },
     {
       "path": "tools/repair-canonical-markdown-after-trace.mjs",
@@ -40373,8 +40393,8 @@
     },
     {
       "path": "tools/test-online-bridge-recovery.mjs",
-      "size": 4000,
-      "sha256": "1554980f4f7c58fdf6ef38d3d46dbd45c4c0c8259b8e7fabbf27dab0e6ee8686"
+      "size": 5362,
+      "sha256": "7b36c99b5298c1eb7e36f319932dd2f263910e7a76ecb6bf3e429da8fca2b252"
     },
     {
       "path": "tools/wait-public-release-coherence.mjs",

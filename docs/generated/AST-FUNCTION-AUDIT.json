@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T10:41:20.066Z",
+  "generatedAt": "2026-08-25T11:43:16.964Z",
   "ok": true,
   "status": "PASS_AST_FUNCTION_INDEX",
   "parser": "acorn",
@@ -7,9 +7,9 @@
   "sourceFiles": 80,
   "parsedFiles": 80,
   "parseFailures": 0,
-  "functions": 3358,
-  "exactFunctions": 3358,
-  "callbacks": 1514,
+  "functions": 3360,
+  "exactFunctions": 3360,
+  "callbacks": 1515,
   "anonymous": 35,
   "failures": []
 }

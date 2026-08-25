@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T10:41:09.049Z",
+  "generatedAt": "2026-08-25T11:43:05.925Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -10,21 +10,21 @@
     "runtimeFiles": 104,
     "assetFiles": 5434,
     "textFiles": 130,
-    "functions": 3358,
+    "functions": 3360,
     "routes": 33,
     "models": 2,
     "collections": 12,
     "storageOccurrences": 17,
     "uiActions": 223,
     "events": 14,
-    "movementEvidence": 7878,
+    "movementEvidence": 7877,
     "scriptTags": 38,
     "assetReferences": 15816,
     "missingLiteralAssetReferences": 0,
     "astParsedJsFiles": 80,
     "astParseFailures": 0,
-    "gameRuntimeFunctions": 2912,
-    "toolingFunctions": 446,
+    "gameRuntimeFunctions": 2911,
+    "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
     "sourceFiles": 119,
     "gameRuntimeSourceFiles": 67,
@@ -109,8 +109,8 @@
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
-      "size": 3652,
-      "sha256": "f8af550388ed4b45e0040eff35b3979744e0a18b2a520afd92b80c0eae993635",
+      "size": 4337,
+      "sha256": "8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -133,8 +133,8 @@
     },
     {
       "path": ".github/workflows/sync-public-release-fingerprint.yml",
-      "size": 1669,
-      "sha256": "62cac276c37a871fb758da7e26ef77925bfa2169b3a11bb4cac580effd55012c",
+      "size": 1753,
+      "sha256": "0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43629,16 +43629,16 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 1098,
-      "sha256": "e29d92a8c3e203d7a7383dd1510d79e192c9d213aaf9dcd9e54028a17439858e",
+      "size": 1390,
+      "sha256": "e2baae90805b4ab007995209e35769e949bdc9e4d2a7145342a45e44968af451",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "7b08d6a619557f1e854e6441aee356f65cde160864ee109ad50ba954ded19f22",
+      "size": 5567,
+      "sha256": "53de9d3e85ad2a625dd1b2dd81caf99be24d7b1bae9ca1cb4e3c27622a78ac08",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43646,7 +43646,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "d5ede9c11af95f590dc1a04eec42040e9237256782c5ef4d46df62d5279d3ac0",
+      "sha256": "62a4decdb45e1dc86f04e6ce96741a4b89bb18fa44ec742be2ba1940d1396d0b",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44158,7 +44158,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "cf4845cb2629e7db3c63018267d698b1d157a18f41a06e88de1141a084b5aa3e",
+      "sha256": "b840b020daa28627e316f8455542fc545b3bc0beac58f157c1897d7fdb1acb2e",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -44293,8 +44293,8 @@
     },
     {
       "path": "src/r41-online-bridge-recovery.js",
-      "size": 6015,
-      "sha256": "80c869d503e7fb15b5a675a7cd35ac027c78c5ad3ecb9f906ad6dbb3d84400ea",
+      "size": 6570,
+      "sha256": "fdfc30e80d45683691bd45a3808ed1114e59d5a16305c0500f477daf64858379",
       "extension": ".js",
       "runtime": true,
       "asset": false
@@ -44373,8 +44373,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 5210,
-      "sha256": "2f03afd56e00d98202d117e36206a6ab25a5d2fd523f4925a58742a153f13efb",
+      "size": 6253,
+      "sha256": "df6c06656acdb710b9b42963669fd5e2ed8046fa0541766b1834b96ba33cab64",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44413,8 +44413,8 @@
     },
     {
       "path": "tools/browser-gameplay-e2e-v4.mjs",
-      "size": 9122,
-      "sha256": "08023f1fde71ae53eee36549d8e3dcbba7927c892483b9ba557fd3960a6ff1a2",
+      "size": 9847,
+      "sha256": "1b33857bf6c85f34ad60ad86592e95186f99ab62dd400fff8197dcd6d960339d",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44549,8 +44549,8 @@
     },
     {
       "path": "tools/release-source-fingerprint.mjs",
-      "size": 2465,
-      "sha256": "05a9412b64a1a8d36bf535fd87dbc3d5c30a15e56dd66d19ad4ebbdb5180043d",
+      "size": 2835,
+      "sha256": "8fc10748389e36e36d27d1e4ab682b27ab0c843d73aee98659b326e8a2677fe7",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44573,8 +44573,8 @@
     },
     {
       "path": "tools/test-online-bridge-recovery.mjs",
-      "size": 4000,
-      "sha256": "1554980f4f7c58fdf6ef38d3d46dbd45c4c0c8259b8e7fabbf27dab0e6ee8686",
+      "size": 5362,
+      "sha256": "7b36c99b5298c1eb7e36f319932dd2f263910e7a76ecb6bf3e429da8fca2b252",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -176559,7 +176559,7 @@
     {
       "file": "src/r41-online-bridge-recovery.js",
       "line": 1,
-      "endLine": 153,
+      "endLine": 174,
       "column": 1,
       "endColumn": 1,
       "name": "<anonymous@1:1>",
@@ -176571,7 +176571,9 @@
         "start"
       ],
       "refs": {
-        "routes": [],
+        "routes": [
+          "/api/online/room"
+        ],
         "collections": [],
         "models": [],
         "storageKeys": [],
@@ -176585,11 +176587,11 @@
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
         "start": 1,
-        "end": 6000,
+        "end": 6558,
         "bodyStart": 7,
-        "bodyEnd": 6000,
-        "functionSha256": "e8990aa81a954c37372e538fee2b0fa47e4a6e03882257af3c40086ffe859c9a",
-        "bodySha256": "a796cc1da72bb0378b1c7eb2a80e2359576fbf73ac60a8cba253b163d7d6e8da",
+        "bodyEnd": 6558,
+        "functionSha256": "48751ea8bb86745eaa59840c627ec436ace102c1234ceab685c94fc03ec75ee0",
+        "bodySha256": "6833a35eecb274791859c7c923baf71f41d826d031e209e0e0eb436687ff9d5e",
         "async": false,
         "generator": false,
         "expressionBody": false,
@@ -176605,8 +176607,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 15,
-      "endLine": 15,
+      "line": 18,
+      "endLine": 18,
       "column": 14,
       "endColumn": 75,
       "name": "parse",
@@ -176629,10 +176631,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 413,
-        "end": 474,
-        "bodyStart": 418,
-        "bodyEnd": 474,
+        "start": 489,
+        "end": 550,
+        "bodyStart": 494,
+        "bodyEnd": 550,
         "functionSha256": "e547ba2940cba00e66d007a1e9a1904f43b8cb5d0aad863778eaad629c94c62f",
         "bodySha256": "50978c3f1ccf9bab5ce186321134f0120ed36be9b22ef6a5e127bbf0ee6e12fb",
         "async": false,
@@ -176648,8 +176650,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 17,
-      "endLine": 19,
+      "line": 22,
+      "endLine": 24,
       "column": 2,
       "endColumn": 3,
       "name": "runtimeOnline",
@@ -176672,10 +176674,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 479,
-        "end": 589,
-        "bodyStart": 503,
-        "bodyEnd": 589,
+        "start": 726,
+        "end": 836,
+        "bodyStart": 750,
+        "bodyEnd": 836,
         "functionSha256": "6b2992e6803a19a4ddd832aaebd655390f88229beb84a431ef0856e2c4a5beb0",
         "bodySha256": "82f4429733e6a0dc637ce718b1c08d8c50d0ffc1640a2ebc0f0692f7480acc96",
         "async": false,
@@ -176683,7 +176685,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 12,
+        "parentIndex": 15,
         "eventTypes": []
       },
       "id": "FUNC-02859",
@@ -176691,8 +176693,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 21,
-      "endLine": 23,
+      "line": 26,
+      "endLine": 28,
       "column": 2,
       "endColumn": 3,
       "name": "runtimeRoomId",
@@ -176716,10 +176718,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 593,
-        "end": 735,
-        "bodyStart": 639,
-        "bodyEnd": 735,
+        "start": 840,
+        "end": 982,
+        "bodyStart": 886,
+        "bodyEnd": 982,
         "functionSha256": "0f7a49c248eedadbdf75e6b7a9652c52707c206802e63f4eb560b1786dfd05d0",
         "bodySha256": "3c010855d578e354bd7d4f819f6762a0f687d4249392204ee913ee4a6a7fabe2",
         "async": false,
@@ -176727,7 +176729,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 13,
+        "parentIndex": 16,
         "eventTypes": []
       },
       "id": "FUNC-02860",
@@ -176735,8 +176737,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 25,
-      "endLine": 35,
+      "line": 30,
+      "endLine": 40,
       "column": 2,
       "endColumn": 3,
       "name": "activeEntry",
@@ -176765,10 +176767,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 739,
-        "end": 1170,
-        "bodyStart": 761,
-        "bodyEnd": 1170,
+        "start": 986,
+        "end": 1417,
+        "bodyStart": 1008,
+        "bodyEnd": 1417,
         "functionSha256": "12c1ea7ca70a845946f5e19bf72339963bd685c5fc143d59866ad5bc475f1c66",
         "bodySha256": "0336479c9375e42aae2e2fdea4134cf11d45bb035d1cb1a96d4a5e0f8f4d0799",
         "async": false,
@@ -176776,7 +176778,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 14,
+        "parentIndex": 17,
         "eventTypes": []
       },
       "id": "FUNC-02861",
@@ -176784,8 +176786,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 37,
-      "endLine": 44,
+      "line": 42,
+      "endLine": 49,
       "column": 2,
       "endColumn": 3,
       "name": "roomContext",
@@ -176813,10 +176815,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 1174,
-        "end": 1567,
-        "bodyStart": 1196,
-        "bodyEnd": 1567,
+        "start": 1421,
+        "end": 1814,
+        "bodyStart": 1443,
+        "bodyEnd": 1814,
         "functionSha256": "169c036a4e2475dff1d0d274a534c7fbd3fca541d9eaf5899ae18c693030f989",
         "bodySha256": "72984df270a4588cb468c8ba3cd2aff589e144cad538ebcff1a5bdc93aa60ff7",
         "async": false,
@@ -176824,7 +176826,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 15,
+        "parentIndex": 18,
         "eventTypes": []
       },
       "id": "FUNC-02862",
@@ -176832,8 +176834,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 46,
-      "endLine": 49,
+      "line": 51,
+      "endLine": 64,
       "column": 2,
       "endColumn": 3,
       "name": "bridge",
@@ -176842,7 +176844,9 @@
       "calls": [
         "runtimeOnline",
         "runtimeRoomId",
-        "Number"
+        "Boolean",
+        "Number",
+        "String"
       ],
       "refs": {
         "routes": [],
@@ -176858,18 +176862,18 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 1571,
-        "end": 1744,
-        "bodyStart": 1588,
-        "bodyEnd": 1744,
-        "functionSha256": "fac35c0e70f9833e8842163aa4eb4322c7e25c1b379da961a46b95f0b320c3d2",
-        "bodySha256": "fca0aadc48cb4f5563a8ff5ba45d94dda131fbfb1cddc69198a96297ebe2fcb4",
+        "start": 1818,
+        "end": 2354,
+        "bodyStart": 1835,
+        "bodyEnd": 2354,
+        "functionSha256": "9c539800e03aecf9f16be02eb87d7e0423f95cd4c5b18cb0e3a2057923f159c2",
+        "bodySha256": "f933c3230c334b2341ed242c8e6bc88e49545a6061ed2e324edf165be0446a9b",
         "async": false,
         "generator": false,
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 16,
+        "parentIndex": 19,
         "eventTypes": []
       },
       "id": "FUNC-02863",
@@ -176877,8 +176881,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 51,
-      "endLine": 51,
+      "line": 66,
+      "endLine": 66,
       "column": 2,
       "endColumn": 67,
       "name": "marker",
@@ -176899,10 +176903,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 1748,
-        "end": 1813,
-        "bodyStart": 1768,
-        "bodyEnd": 1813,
+        "start": 2358,
+        "end": 2423,
+        "bodyStart": 2378,
+        "bodyEnd": 2423,
         "functionSha256": "ca551987db7108f970cf68c626a97bd02632d82398938573796ec71a9091a0e9",
         "bodySha256": "8774f99cf58961d6dd0a888f5a53678b7aa1e1c566388c4de4ea7c189bc2790f",
         "async": false,
@@ -176910,7 +176914,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 17,
+        "parentIndex": 20,
         "eventTypes": []
       },
       "id": "FUNC-02864",
@@ -176918,8 +176922,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 53,
-      "endLine": 61,
+      "line": 68,
+      "endLine": 76,
       "column": 2,
       "endColumn": 3,
       "name": "clearSatisfied",
@@ -176942,10 +176946,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 1817,
-        "end": 2055,
-        "bodyStart": 1847,
-        "bodyEnd": 2055,
+        "start": 2427,
+        "end": 2665,
+        "bodyStart": 2457,
+        "bodyEnd": 2665,
         "functionSha256": "e674f3e675b3f9f491359e4285aae295ff75b103df442b1ec8b39cb23c8d0a10",
         "bodySha256": "e90e57ebd586aabb6ed649f8a9dc1ac63e770aba12eb41216b74b67b4c0115ad",
         "async": false,
@@ -176953,7 +176957,7 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 18,
+        "parentIndex": 21,
         "eventTypes": []
       },
       "id": "FUNC-02865",
@@ -176961,8 +176965,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 63,
-      "endLine": 101,
+      "line": 78,
+      "endLine": 114,
       "column": 2,
       "endColumn": 3,
       "name": "recoverBridge",
@@ -176971,22 +176975,20 @@
       "calls": [
         "Date.now",
         "window.fetch",
-        "encodeURIComponent",
+        "JSON.stringify",
         "response.json().catch",
         "response.json",
         "String().trim",
         "String",
-        "runtimeOnline",
-        "Array.isArray",
-        "room.messages.slice().map",
-        "room.messages.slice",
         "sessionStorage.removeItem",
         "document.dispatchEvent",
         "CustomEvent",
         "window.dispatchEvent"
       ],
       "refs": {
-        "routes": [],
+        "routes": [
+          "/api/online/room"
+        ],
         "collections": [],
         "models": [],
         "storageKeys": [],
@@ -176999,18 +177001,18 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 2059,
-        "end": 3901,
-        "bodyStart": 2106,
-        "bodyEnd": 3901,
-        "functionSha256": "ee57faf343beefdfe3444658ee89771eb3b3ddd3c483c80ee5c4bee3381bc8a4",
-        "bodySha256": "31a450ac110c341cbdb9442dd0f1e3b3782617b91e55deb8c562c9a9c8293d80",
+        "start": 2669,
+        "end": 4188,
+        "bodyStart": 2716,
+        "bodyEnd": 4188,
+        "functionSha256": "26a9a1f6e7392270f462a5426f478216e435d18827084631b4486102eda1950d",
+        "bodySha256": "b5e90b48601a9d07a112942b1472f4b0085810f6312681b17dcf2c8e4cda3da1",
         "async": true,
         "generator": false,
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 19,
+        "parentIndex": 22,
         "eventTypes": []
       },
       "id": "FUNC-02866",
@@ -177018,8 +177020,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 71,
-      "endLine": 71,
+      "line": 91,
+      "endLine": 91,
       "column": 48,
       "endColumn": 56,
       "name": "<callback:response.json().catch#0>",
@@ -177040,10 +177042,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2498,
-        "end": 2506,
-        "bodyStart": 2502,
-        "bodyEnd": 2506,
+        "start": 3215,
+        "end": 3223,
+        "bodyStart": 3219,
+        "bodyEnd": 3223,
         "functionSha256": "9717c1301c84862d2db159e5e204ad5520dc342de5ae8595036d79b29bf0f50c",
         "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
         "async": false,
@@ -177059,49 +177061,8 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 81,
-      "endLine": 81,
-      "column": 84,
-      "endColumn": 119,
-      "name": "<callback:room.messages.slice().map#0>",
-      "kind": "arrow",
-      "params": "payload",
-      "calls": [],
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "ast": {
-        "parser": "acorn",
-        "parserVersion": "8.15.0",
-        "sourceType": "script",
-        "nodeType": "ArrowFunctionExpression",
-        "start": 2967,
-        "end": 3002,
-        "bodyStart": 2977,
-        "bodyEnd": 3001,
-        "functionSha256": "0b0486882e0426fef83e714d3cb175718b3ed53ce1b14b2babe57c75833ea466",
-        "bodySha256": "df7ebed743750bc3c919730f0e993b60c710e75a9e37f973f31d2b9330ceccb6",
-        "async": false,
-        "generator": false,
-        "expressionBody": true,
-        "parentType": "CallExpression",
-        "parentKey": "arguments",
-        "parentIndex": 0,
-        "eventTypes": []
-      },
-      "id": "FUNC-02868",
-      "domain": "game-runtime"
-    },
-    {
-      "file": "src/r41-online-bridge-recovery.js",
-      "line": 103,
-      "endLine": 113,
+      "line": 116,
+      "endLine": 126,
       "column": 2,
       "endColumn": 3,
       "name": "requestOneRecovery",
@@ -177129,10 +177090,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 3905,
-        "end": 4429,
-        "bodyStart": 3937,
-        "bodyEnd": 4429,
+        "start": 4192,
+        "end": 4716,
+        "bodyStart": 4224,
+        "bodyEnd": 4716,
         "functionSha256": "f4664d0774596665564ae0645fcd3da33e83a27a409e9af49f934cc24cd994ce",
         "bodySha256": "24a085e4eb09ac030b617a5ee5329a4c43d34641adc156bf3d6ee7db366325fa",
         "async": false,
@@ -177140,16 +177101,16 @@
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 20,
+        "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-02869",
+      "id": "FUNC-02868",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 111,
-      "endLine": 111,
+      "line": 124,
+      "endLine": 124,
       "column": 15,
       "endColumn": 36,
       "name": "<callback:setTimeout#0>",
@@ -177172,10 +177133,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 4382,
-        "end": 4403,
-        "bodyStart": 4386,
-        "bodyEnd": 4403,
+        "start": 4669,
+        "end": 4690,
+        "bodyStart": 4673,
+        "bodyEnd": 4690,
         "functionSha256": "2932280f3d9243e5aa268bf61cbd9edac365d48db22707f3628eafd333940199",
         "bodySha256": "f603811aa11020d343b9db3eb645db3738a1ea495bcfe29e0b2c448f82912de3",
         "async": false,
@@ -177186,13 +177147,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02870",
+      "id": "FUNC-02869",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 115,
-      "endLine": 132,
+      "line": 128,
+      "endLine": 153,
       "column": 2,
       "endColumn": 3,
       "name": "tick",
@@ -177221,27 +177182,27 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "FunctionDeclaration",
-        "start": 4433,
-        "end": 4975,
-        "bodyStart": 4454,
-        "bodyEnd": 4975,
-        "functionSha256": "3e7aa94a8ac9da2080ff0a170d09a0705fc4cf214b3692fd2848df7ac5904a03",
-        "bodySha256": "1e17673d2f4ee73943f096b242191fff682fa35340fa584d46e8abc61f1dc118",
+        "start": 4720,
+        "end": 5475,
+        "bodyStart": 4741,
+        "bodyEnd": 5475,
+        "functionSha256": "81fe1d46603d4eae2dda3db77e7b3596df8e8afd978df0b875590f440d4712fd",
+        "bodySha256": "4b36719cb344ac64c7489d1a325378987c60f346a9847e6f9831f289c04676f9",
         "async": true,
         "generator": false,
         "expressionBody": false,
         "parentType": "BlockStatement",
         "parentKey": "body",
-        "parentIndex": 21,
+        "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-02871",
+      "id": "FUNC-02870",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 134,
-      "endLine": 143,
+      "line": 155,
+      "endLine": 164,
       "column": 14,
       "endColumn": 3,
       "name": "start",
@@ -177269,10 +177230,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 4991,
-        "end": 5601,
-        "bodyStart": 4995,
-        "bodyEnd": 5601,
+        "start": 5491,
+        "end": 6101,
+        "bodyStart": 5495,
+        "bodyEnd": 6101,
         "functionSha256": "ba9b29716786f1b6d4f679ea63ce94ae57b188d77982b4fca24c1b8ccb74af5f",
         "bodySha256": "95d1111214e70a232ef60bb666c291a0a0f6c62196f8caf02be9f047345d286c",
         "async": false,
@@ -177288,13 +177249,13 @@
           "r41:online:error"
         ]
       },
-      "id": "FUNC-02872",
+      "id": "FUNC-02871",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 136,
-      "endLine": 136,
+      "line": 157,
+      "endLine": 157,
       "column": 16,
       "endColumn": 34,
       "name": "<callback:setInterval#0>",
@@ -177317,10 +177278,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5030,
-        "end": 5048,
-        "bodyStart": 5034,
-        "bodyEnd": 5048,
+        "start": 5530,
+        "end": 5548,
+        "bodyStart": 5534,
+        "bodyEnd": 5548,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177331,13 +177292,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02873",
+      "id": "FUNC-02872",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 137,
-      "endLine": 137,
+      "line": 158,
+      "endLine": 158,
       "column": 65,
       "endColumn": 83,
       "name": "<callback:setTimeout#0>",
@@ -177360,10 +177321,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5120,
-        "end": 5138,
-        "bodyStart": 5124,
-        "bodyEnd": 5138,
+        "start": 5620,
+        "end": 5638,
+        "bodyStart": 5624,
+        "bodyEnd": 5638,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177374,13 +177335,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02874",
+      "id": "FUNC-02873",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 137,
-      "endLine": 137,
+      "line": 158,
+      "endLine": 158,
       "column": 50,
       "endColumn": 87,
       "name": "<callback:window.addEventListener#1>",
@@ -177403,10 +177364,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5105,
-        "end": 5142,
-        "bodyStart": 5109,
-        "bodyEnd": 5142,
+        "start": 5605,
+        "end": 5642,
+        "bodyStart": 5609,
+        "bodyEnd": 5642,
         "functionSha256": "1df57eb46a7e1046ddf8cf1946490d5a871a2fe7b7ef473ffdbaf0ade3c6fc0d",
         "bodySha256": "dc805f067abb76d243de05f73a5a52e95386a31120ef498b622faf5f80471d37",
         "async": false,
@@ -177417,13 +177378,13 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02875",
+      "id": "FUNC-02874",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 138,
-      "endLine": 138,
+      "line": 159,
+      "endLine": 159,
       "column": 141,
       "endColumn": 159,
       "name": "<callback:setTimeout#0>",
@@ -177446,10 +177407,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5286,
-        "end": 5304,
-        "bodyStart": 5290,
-        "bodyEnd": 5304,
+        "start": 5786,
+        "end": 5804,
+        "bodyStart": 5790,
+        "bodyEnd": 5804,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177460,13 +177421,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02876",
+      "id": "FUNC-02875",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 138,
-      "endLine": 138,
+      "line": 159,
+      "endLine": 159,
       "column": 38,
       "endColumn": 165,
       "name": "<callback:window.addEventListener#1>",
@@ -177491,10 +177452,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5183,
-        "end": 5310,
-        "bodyStart": 5186,
-        "bodyEnd": 5310,
+        "start": 5683,
+        "end": 5810,
+        "bodyStart": 5686,
+        "bodyEnd": 5810,
         "functionSha256": "2be8a06adbae7c2bcda2cb688483786fadf8a071a3993d6196196325d9a65722",
         "bodySha256": "2c0c74f5fda19a6b9262d902f7072ec0f559f73a2e50014b5b31d14a4158a05d",
         "async": false,
@@ -177505,13 +177466,13 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02877",
+      "id": "FUNC-02876",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 139,
-      "endLine": 139,
+      "line": 160,
+      "endLine": 160,
       "column": 37,
       "endColumn": 55,
       "name": "<callback:window.addEventListener#1>",
@@ -177534,10 +177495,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5350,
-        "end": 5368,
-        "bodyStart": 5354,
-        "bodyEnd": 5368,
+        "start": 5850,
+        "end": 5868,
+        "bodyStart": 5854,
+        "bodyEnd": 5868,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177548,13 +177509,13 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02878",
+      "id": "FUNC-02877",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 140,
-      "endLine": 140,
+      "line": 161,
+      "endLine": 161,
       "column": 49,
       "endColumn": 67,
       "name": "<callback:document.addEventListener#1>",
@@ -177577,10 +177538,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5420,
-        "end": 5438,
-        "bodyStart": 5424,
-        "bodyEnd": 5438,
+        "start": 5920,
+        "end": 5938,
+        "bodyStart": 5924,
+        "bodyEnd": 5938,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177591,13 +177552,13 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02879",
+      "id": "FUNC-02878",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 141,
-      "endLine": 141,
+      "line": 162,
+      "endLine": 162,
       "column": 40,
       "endColumn": 76,
       "name": "<callback:new MutationObserver#0>",
@@ -177620,10 +177581,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5481,
-        "end": 5517,
-        "bodyStart": 5485,
-        "bodyEnd": 5517,
+        "start": 5981,
+        "end": 6017,
+        "bodyStart": 5985,
+        "bodyEnd": 6017,
         "functionSha256": "47a85d29e5409f518e51335201f87b9982a7ae95fb71bede9057806a981402d7",
         "bodySha256": "4f006dd6b1bf6e507bd065775de2384872adb526ba3ec9d88b990bd2f657b385",
         "async": false,
@@ -177634,13 +177595,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02880",
+      "id": "FUNC-02879",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 141,
-      "endLine": 141,
+      "line": 162,
+      "endLine": 162,
       "column": 55,
       "endColumn": 73,
       "name": "<callback:setTimeout#0>",
@@ -177663,10 +177624,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5496,
-        "end": 5514,
-        "bodyStart": 5500,
-        "bodyEnd": 5514,
+        "start": 5996,
+        "end": 6014,
+        "bodyStart": 6000,
+        "bodyEnd": 6014,
         "functionSha256": "1bb0cd988688b23fadec983784281548d3429f9dd78039d7173b8174a3284f0b",
         "bodySha256": "e0b50cdd6c2310c703f4128c1b15c0456abbd5161e86d80bcc3e8dd3c799233b",
         "async": false,
@@ -177677,15 +177638,15 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02881",
+      "id": "FUNC-02880",
       "domain": "game-runtime"
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 149,
-      "endLine": 149,
+      "line": 170,
+      "endLine": 170,
       "column": 10,
-      "endColumn": 134,
+      "endColumn": 192,
       "name": "state",
       "kind": "arrow",
       "params": "",
@@ -177708,12 +177669,12 @@
         "parserVersion": "8.15.0",
         "sourceType": "script",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5826,
-        "end": 5950,
-        "bodyStart": 5831,
-        "bodyEnd": 5949,
-        "functionSha256": "220b6f065194e6b1060568db5487d335a19e5b1b594b9d3a10c6c4900ecb6875",
-        "bodySha256": "4f8d6983d1c429430338ae8702f5b20ca5cf3f3139565eaeca6277e51ae32152",
+        "start": 6326,
+        "end": 6508,
+        "bodyStart": 6331,
+        "bodyEnd": 6507,
+        "functionSha256": "4a0665ec626e9fd04f891af5cdefeedf51e31c47659c77abcbea219e594bfa70",
+        "bodySha256": "0097730d0a5ea962033da6c78139d8f377dff6422e5b0380bd3c79502e0e2686",
         "async": false,
         "generator": false,
         "expressionBody": true,
@@ -177722,7 +177683,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02882",
+      "id": "FUNC-02881",
       "domain": "game-runtime"
     },
     {
@@ -177772,7 +177733,7 @@
           "DOMContentLoaded"
         ]
       },
-      "id": "FUNC-02883",
+      "id": "FUNC-02882",
       "domain": "game-runtime"
     },
     {
@@ -177816,7 +177777,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02884",
+      "id": "FUNC-02883",
       "domain": "game-runtime"
     },
     {
@@ -177859,7 +177820,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-02885",
+      "id": "FUNC-02884",
       "domain": "game-runtime"
     },
     {
@@ -177904,7 +177865,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-02886",
+      "id": "FUNC-02885",
       "domain": "game-runtime"
     },
     {
@@ -177947,7 +177908,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-02887",
+      "id": "FUNC-02886",
       "domain": "game-runtime"
     },
     {
@@ -177998,7 +177959,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-02888",
+      "id": "FUNC-02887",
       "domain": "game-runtime"
     },
     {
@@ -178041,7 +178002,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02889",
+      "id": "FUNC-02888",
       "domain": "game-runtime"
     },
     {
@@ -178088,7 +178049,7 @@
         "parentIndex": 13,
         "eventTypes": []
       },
-      "id": "FUNC-02890",
+      "id": "FUNC-02889",
       "domain": "game-runtime"
     },
     {
@@ -178131,7 +178092,7 @@
         "parentIndex": 14,
         "eventTypes": []
       },
-      "id": "FUNC-02891",
+      "id": "FUNC-02890",
       "domain": "game-runtime"
     },
     {
@@ -178174,7 +178135,7 @@
         "parentIndex": 15,
         "eventTypes": []
       },
-      "id": "FUNC-02892",
+      "id": "FUNC-02891",
       "domain": "game-runtime"
     },
     {
@@ -178222,7 +178183,7 @@
         "parentIndex": 16,
         "eventTypes": []
       },
-      "id": "FUNC-02893",
+      "id": "FUNC-02892",
       "domain": "game-runtime"
     },
     {
@@ -178266,7 +178227,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-02894",
+      "id": "FUNC-02893",
       "domain": "game-runtime"
     },
     {
@@ -178311,7 +178272,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02895",
+      "id": "FUNC-02894",
       "domain": "game-runtime"
     },
     {
@@ -178357,7 +178318,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-02896",
+      "id": "FUNC-02895",
       "domain": "game-runtime"
     },
     {
@@ -178401,7 +178362,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02897",
+      "id": "FUNC-02896",
       "domain": "game-runtime"
     },
     {
@@ -178444,7 +178405,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-02898",
+      "id": "FUNC-02897",
       "domain": "game-runtime"
     },
     {
@@ -178497,7 +178458,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-02899",
+      "id": "FUNC-02898",
       "domain": "game-runtime"
     },
     {
@@ -178540,7 +178501,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02900",
+      "id": "FUNC-02899",
       "domain": "game-runtime"
     },
     {
@@ -178588,7 +178549,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-02901",
+      "id": "FUNC-02900",
       "domain": "game-runtime"
     },
     {
@@ -178636,7 +178597,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-02902",
+      "id": "FUNC-02901",
       "domain": "game-runtime"
     },
     {
@@ -178679,7 +178640,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02903",
+      "id": "FUNC-02902",
       "domain": "game-runtime"
     },
     {
@@ -178722,7 +178683,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02904",
+      "id": "FUNC-02903",
       "domain": "game-runtime"
     },
     {
@@ -178769,7 +178730,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-02905",
+      "id": "FUNC-02904",
       "domain": "game-runtime"
     },
     {
@@ -178813,7 +178774,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-02906",
+      "id": "FUNC-02905",
       "domain": "game-runtime"
     },
     {
@@ -178859,7 +178820,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02907",
+      "id": "FUNC-02906",
       "domain": "game-runtime"
     },
     {
@@ -178919,7 +178880,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-02908",
+      "id": "FUNC-02907",
       "domain": "game-runtime"
     },
     {
@@ -178962,7 +178923,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02909",
+      "id": "FUNC-02908",
       "domain": "game-runtime"
     },
     {
@@ -179015,7 +178976,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02910",
+      "id": "FUNC-02909",
       "domain": "game-runtime"
     },
     {
@@ -179058,7 +179019,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02911",
+      "id": "FUNC-02910",
       "domain": "game-runtime"
     },
     {
@@ -179101,7 +179062,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02912",
+      "id": "FUNC-02911",
       "domain": "game-runtime"
     },
     {
@@ -179144,7 +179105,7 @@
         "parentIndex": 8,
         "eventTypes": []
       },
-      "id": "FUNC-02913",
+      "id": "FUNC-02912",
       "domain": "tooling"
     },
     {
@@ -179193,7 +179154,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-02914",
+      "id": "FUNC-02913",
       "domain": "tooling"
     },
     {
@@ -179242,7 +179203,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-02915",
+      "id": "FUNC-02914",
       "domain": "tooling"
     },
     {
@@ -179286,7 +179247,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02916",
+      "id": "FUNC-02915",
       "domain": "tooling"
     },
     {
@@ -179332,7 +179293,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02917",
+      "id": "FUNC-02916",
       "domain": "tooling"
     },
     {
@@ -179378,7 +179339,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02918",
+      "id": "FUNC-02917",
       "domain": "tooling"
     },
     {
@@ -179422,7 +179383,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02919",
+      "id": "FUNC-02918",
       "domain": "tooling"
     },
     {
@@ -179466,7 +179427,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02920",
+      "id": "FUNC-02919",
       "domain": "tooling"
     },
     {
@@ -179509,7 +179470,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02921",
+      "id": "FUNC-02920",
       "domain": "tooling"
     },
     {
@@ -179552,7 +179513,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02922",
+      "id": "FUNC-02921",
       "domain": "tooling"
     },
     {
@@ -179596,7 +179557,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02923",
+      "id": "FUNC-02922",
       "domain": "tooling"
     },
     {
@@ -179643,7 +179604,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-02924",
+      "id": "FUNC-02923",
       "domain": "tooling"
     },
     {
@@ -179684,7 +179645,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02925",
+      "id": "FUNC-02924",
       "domain": "tooling"
     },
     {
@@ -179732,7 +179693,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-02926",
+      "id": "FUNC-02925",
       "domain": "tooling"
     },
     {
@@ -179775,7 +179736,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-02927",
+      "id": "FUNC-02926",
       "domain": "tooling"
     },
     {
@@ -179824,7 +179785,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02928",
+      "id": "FUNC-02927",
       "domain": "tooling"
     },
     {
@@ -179868,7 +179829,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-02929",
+      "id": "FUNC-02928",
       "domain": "tooling"
     },
     {
@@ -179909,7 +179870,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02930",
+      "id": "FUNC-02929",
       "domain": "tooling"
     },
     {
@@ -179954,7 +179915,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-02931",
+      "id": "FUNC-02930",
       "domain": "tooling"
     },
     {
@@ -180001,7 +179962,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-02932",
+      "id": "FUNC-02931",
       "domain": "tooling"
     },
     {
@@ -180046,7 +180007,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-02933",
+      "id": "FUNC-02932",
       "domain": "tooling"
     },
     {
@@ -180091,7 +180052,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-02934",
+      "id": "FUNC-02933",
       "domain": "tooling"
     },
     {
@@ -180132,7 +180093,7 @@
         "parentIndex": 26,
         "eventTypes": []
       },
-      "id": "FUNC-02935",
+      "id": "FUNC-02934",
       "domain": "tooling"
     },
     {
@@ -180176,7 +180137,7 @@
         "parentIndex": 27,
         "eventTypes": []
       },
-      "id": "FUNC-02936",
+      "id": "FUNC-02935",
       "domain": "tooling"
     },
     {
@@ -180221,7 +180182,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02937",
+      "id": "FUNC-02936",
       "domain": "tooling"
     },
     {
@@ -180265,7 +180226,7 @@
         "parentIndex": 28,
         "eventTypes": []
       },
-      "id": "FUNC-02938",
+      "id": "FUNC-02937",
       "domain": "tooling"
     },
     {
@@ -180312,7 +180273,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02939",
+      "id": "FUNC-02938",
       "domain": "tooling"
     },
     {
@@ -180359,7 +180320,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02940",
+      "id": "FUNC-02939",
       "domain": "tooling"
     },
     {
@@ -180412,7 +180373,7 @@
         "parentIndex": 4,
         "eventTypes": []
       },
-      "id": "FUNC-02941",
+      "id": "FUNC-02940",
       "domain": "tooling"
     },
     {
@@ -180455,7 +180416,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02942",
+      "id": "FUNC-02941",
       "domain": "tooling"
     },
     {
@@ -180499,7 +180460,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02943",
+      "id": "FUNC-02942",
       "domain": "tooling"
     },
     {
@@ -180543,7 +180504,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02944",
+      "id": "FUNC-02943",
       "domain": "tooling"
     },
     {
@@ -180586,7 +180547,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02945",
+      "id": "FUNC-02944",
       "domain": "tooling"
     },
     {
@@ -180629,7 +180590,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02946",
+      "id": "FUNC-02945",
       "domain": "tooling"
     },
     {
@@ -180675,7 +180636,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02947",
+      "id": "FUNC-02946",
       "domain": "tooling"
     },
     {
@@ -180718,7 +180679,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02948",
+      "id": "FUNC-02947",
       "domain": "tooling"
     },
     {
@@ -180761,7 +180722,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02949",
+      "id": "FUNC-02948",
       "domain": "tooling"
     },
     {
@@ -180804,7 +180765,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02950",
+      "id": "FUNC-02949",
       "domain": "tooling"
     },
     {
@@ -180848,7 +180809,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02951",
+      "id": "FUNC-02950",
       "domain": "tooling"
     },
     {
@@ -180892,7 +180853,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02952",
+      "id": "FUNC-02951",
       "domain": "tooling"
     },
     {
@@ -180936,7 +180897,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02953",
+      "id": "FUNC-02952",
       "domain": "tooling"
     },
     {
@@ -180980,7 +180941,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02954",
+      "id": "FUNC-02953",
       "domain": "tooling"
     },
     {
@@ -181024,7 +180985,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02955",
+      "id": "FUNC-02954",
       "domain": "tooling"
     },
     {
@@ -181070,7 +181031,7 @@
         "parentIndex": 27,
         "eventTypes": []
       },
-      "id": "FUNC-02956",
+      "id": "FUNC-02955",
       "domain": "tooling"
     },
     {
@@ -181113,7 +181074,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02957",
+      "id": "FUNC-02956",
       "domain": "tooling"
     },
     {
@@ -181154,7 +181115,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02958",
+      "id": "FUNC-02957",
       "domain": "tooling"
     },
     {
@@ -181199,7 +181160,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02959",
+      "id": "FUNC-02958",
       "domain": "tooling"
     },
     {
@@ -181242,7 +181203,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02960",
+      "id": "FUNC-02959",
       "domain": "tooling"
     },
     {
@@ -181283,7 +181244,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02961",
+      "id": "FUNC-02960",
       "domain": "tooling"
     },
     {
@@ -181324,7 +181285,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02962",
+      "id": "FUNC-02961",
       "domain": "tooling"
     },
     {
@@ -181365,7 +181326,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02963",
+      "id": "FUNC-02962",
       "domain": "tooling"
     },
     {
@@ -181410,7 +181371,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02964",
+      "id": "FUNC-02963",
       "domain": "tooling"
     },
     {
@@ -181451,7 +181412,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02965",
+      "id": "FUNC-02964",
       "domain": "tooling"
     },
     {
@@ -181495,7 +181456,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02966",
+      "id": "FUNC-02965",
       "domain": "tooling"
     },
     {
@@ -181539,7 +181500,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02967",
+      "id": "FUNC-02966",
       "domain": "tooling"
     },
     {
@@ -181583,7 +181544,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02968",
+      "id": "FUNC-02967",
       "domain": "tooling"
     },
     {
@@ -181627,7 +181588,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02969",
+      "id": "FUNC-02968",
       "domain": "tooling"
     },
     {
@@ -181670,7 +181631,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02970",
+      "id": "FUNC-02969",
       "domain": "tooling"
     },
     {
@@ -181713,7 +181674,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02971",
+      "id": "FUNC-02970",
       "domain": "tooling"
     },
     {
@@ -181756,7 +181717,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02972",
+      "id": "FUNC-02971",
       "domain": "tooling"
     },
     {
@@ -181801,7 +181762,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02973",
+      "id": "FUNC-02972",
       "domain": "tooling"
     },
     {
@@ -181842,7 +181803,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02974",
+      "id": "FUNC-02973",
       "domain": "tooling"
     },
     {
@@ -181893,7 +181854,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-02975",
+      "id": "FUNC-02974",
       "domain": "tooling"
     },
     {
@@ -181940,7 +181901,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-02976",
+      "id": "FUNC-02975",
       "domain": "tooling"
     },
     {
@@ -181983,7 +181944,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-02977",
+      "id": "FUNC-02976",
       "domain": "tooling"
     },
     {
@@ -182035,7 +181996,7 @@
         "parentIndex": 13,
         "eventTypes": []
       },
-      "id": "FUNC-02978",
+      "id": "FUNC-02977",
       "domain": "tooling"
     },
     {
@@ -182078,7 +182039,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02979",
+      "id": "FUNC-02978",
       "domain": "tooling"
     },
     {
@@ -182119,7 +182080,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02980",
+      "id": "FUNC-02979",
       "domain": "tooling"
     },
     {
@@ -182160,7 +182121,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02981",
+      "id": "FUNC-02980",
       "domain": "tooling"
     },
     {
@@ -182201,7 +182162,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02982",
+      "id": "FUNC-02981",
       "domain": "tooling"
     },
     {
@@ -182246,7 +182207,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02983",
+      "id": "FUNC-02982",
       "domain": "tooling"
     },
     {
@@ -182290,7 +182251,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02984",
+      "id": "FUNC-02983",
       "domain": "tooling"
     },
     {
@@ -182334,15 +182295,97 @@
         "parentIndex": null,
         "eventTypes": []
       },
+      "id": "FUNC-02984",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 33,
+      "endLine": 33,
+      "column": 94,
+      "endColumn": 108,
+      "name": "<callback:Object.entries().filter().map#0>",
+      "kind": "arrow",
+      "params": "[name]",
+      "calls": [],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1345,
+        "end": 1359,
+        "bodyStart": 1355,
+        "bodyEnd": 1359,
+        "functionSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
+        "bodySha256": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
       "id": "FUNC-02985",
       "domain": "tooling"
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 71,
-      "endLine": 71,
+      "line": 33,
+      "endLine": 33,
+      "column": 66,
+      "endColumn": 88,
+      "name": "<callback:Object.entries().filter#0>",
+      "kind": "arrow",
+      "params": "[,present]",
+      "calls": [],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1317,
+        "end": 1339,
+        "bodyStart": 1331,
+        "bodyEnd": 1339,
+        "functionSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
+        "bodySha256": "ac3d1ec39d3f5f45ba30dd0d5de90418695feae4d877e6bbdf242948d72e2891",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "CallExpression",
+        "parentKey": "arguments",
+        "parentIndex": 0,
+        "eventTypes": []
+      },
+      "id": "FUNC-02986",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/backend-presence-audit.mjs",
+      "line": 89,
+      "endLine": 89,
       "column": 15,
-      "endColumn": 454,
+      "endColumn": 582,
       "name": "semantic",
       "kind": "arrow",
       "params": "r",
@@ -182363,12 +182406,12 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 4161,
-        "end": 4600,
-        "bodyStart": 4164,
-        "bodyEnd": 4600,
-        "functionSha256": "d66cd3e8335f26150d2d6c3563e322e6ad42d420949117d17ee9b079c94cb2a3",
-        "bodySha256": "31e9578c4dfeb3fd465669d1313194ecb9b423c966dfefa4ba9597f5b0783b44",
+        "start": 5030,
+        "end": 5597,
+        "bodyStart": 5033,
+        "bodyEnd": 5597,
+        "functionSha256": "61bbc74462621992a1b0c3d590ad6b1e22afd0f5a8326c5427640d62a38aa22e",
+        "bodySha256": "659b6d493a4c88359f19df89cfb958027237d92972233e8a594c76e0ddb33125",
         "async": false,
         "generator": false,
         "expressionBody": true,
@@ -182377,7 +182420,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-02986",
+      "id": "FUNC-02987",
       "domain": "tooling"
     },
     {
@@ -182420,7 +182463,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-02987",
+      "id": "FUNC-02988",
       "domain": "tooling"
     },
     {
@@ -182464,7 +182507,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02988",
+      "id": "FUNC-02989",
       "domain": "tooling"
     },
     {
@@ -182509,7 +182552,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02989",
+      "id": "FUNC-02990",
       "domain": "tooling"
     },
     {
@@ -182550,7 +182593,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02990",
+      "id": "FUNC-02991",
       "domain": "tooling"
     },
     {
@@ -182591,7 +182634,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02991",
+      "id": "FUNC-02992",
       "domain": "tooling"
     },
     {
@@ -182632,7 +182675,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02992",
+      "id": "FUNC-02993",
       "domain": "tooling"
     },
     {
@@ -182676,7 +182719,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02993",
+      "id": "FUNC-02994",
       "domain": "tooling"
     },
     {
@@ -182719,7 +182762,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02994",
+      "id": "FUNC-02995",
       "domain": "tooling"
     },
     {
@@ -182762,7 +182805,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02995",
+      "id": "FUNC-02996",
       "domain": "tooling"
     },
     {
@@ -182803,7 +182846,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02996",
+      "id": "FUNC-02997",
       "domain": "tooling"
     },
     {
@@ -182844,7 +182887,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02997",
+      "id": "FUNC-02998",
       "domain": "tooling"
     },
     {
@@ -182887,7 +182930,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-02998",
+      "id": "FUNC-02999",
       "domain": "tooling"
     },
     {
@@ -182930,7 +182973,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-02999",
+      "id": "FUNC-03000",
       "domain": "tooling"
     },
     {
@@ -182973,7 +183016,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03000",
+      "id": "FUNC-03001",
       "domain": "tooling"
     },
     {
@@ -183017,7 +183060,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03001",
+      "id": "FUNC-03002",
       "domain": "tooling"
     },
     {
@@ -183064,7 +183107,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03002",
+      "id": "FUNC-03003",
       "domain": "tooling"
     },
     {
@@ -183111,7 +183154,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03003",
+      "id": "FUNC-03004",
       "domain": "tooling"
     },
     {
@@ -183163,7 +183206,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03004",
+      "id": "FUNC-03005",
       "domain": "tooling"
     },
     {
@@ -183207,7 +183250,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03005",
+      "id": "FUNC-03006",
       "domain": "tooling"
     },
     {
@@ -183255,7 +183298,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03006",
+      "id": "FUNC-03007",
       "domain": "tooling"
     },
     {
@@ -183296,7 +183339,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03007",
+      "id": "FUNC-03008",
       "domain": "tooling"
     },
     {
@@ -183346,7 +183389,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03008",
+      "id": "FUNC-03009",
       "domain": "tooling"
     },
     {
@@ -183391,7 +183434,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03009",
+      "id": "FUNC-03010",
       "domain": "tooling"
     },
     {
@@ -183434,7 +183477,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03010",
+      "id": "FUNC-03011",
       "domain": "tooling"
     },
     {
@@ -183478,7 +183521,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03011",
+      "id": "FUNC-03012",
       "domain": "tooling"
     },
     {
@@ -183519,7 +183562,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03012",
+      "id": "FUNC-03013",
       "domain": "tooling"
     },
     {
@@ -183562,7 +183605,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-03013",
+      "id": "FUNC-03014",
       "domain": "tooling"
     },
     {
@@ -183612,7 +183655,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03014",
+      "id": "FUNC-03015",
       "domain": "tooling"
     },
     {
@@ -183655,7 +183698,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03015",
+      "id": "FUNC-03016",
       "domain": "tooling"
     },
     {
@@ -183719,7 +183762,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-03016",
+      "id": "FUNC-03017",
       "domain": "tooling"
     },
     {
@@ -183764,7 +183807,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03017",
+      "id": "FUNC-03018",
       "domain": "tooling"
     },
     {
@@ -183811,7 +183854,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03018",
+      "id": "FUNC-03019",
       "domain": "tooling"
     },
     {
@@ -183883,7 +183926,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-03019",
+      "id": "FUNC-03020",
       "domain": "tooling"
     },
     {
@@ -183931,7 +183974,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03020",
+      "id": "FUNC-03021",
       "domain": "tooling"
     },
     {
@@ -183972,7 +184015,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03021",
+      "id": "FUNC-03022",
       "domain": "tooling"
     },
     {
@@ -184019,7 +184062,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03022",
+      "id": "FUNC-03023",
       "domain": "tooling"
     },
     {
@@ -184060,7 +184103,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03023",
+      "id": "FUNC-03024",
       "domain": "tooling"
     },
     {
@@ -184103,7 +184146,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03024",
+      "id": "FUNC-03025",
       "domain": "tooling"
     },
     {
@@ -184144,7 +184187,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03025",
+      "id": "FUNC-03026",
       "domain": "tooling"
     },
     {
@@ -184188,7 +184231,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03026",
+      "id": "FUNC-03027",
       "domain": "tooling"
     },
     {
@@ -184232,7 +184275,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03027",
+      "id": "FUNC-03028",
       "domain": "tooling"
     },
     {
@@ -184275,7 +184318,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03028",
+      "id": "FUNC-03029",
       "domain": "tooling"
     },
     {
@@ -184316,7 +184359,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03029",
+      "id": "FUNC-03030",
       "domain": "tooling"
     },
     {
@@ -184357,7 +184400,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03030",
+      "id": "FUNC-03031",
       "domain": "tooling"
     },
     {
@@ -184400,7 +184443,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03031",
+      "id": "FUNC-03032",
       "domain": "tooling"
     },
     {
@@ -184441,7 +184484,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03032",
+      "id": "FUNC-03033",
       "domain": "tooling"
     },
     {
@@ -184492,7 +184535,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03033",
+      "id": "FUNC-03034",
       "domain": "tooling"
     },
     {
@@ -184537,7 +184580,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03034",
+      "id": "FUNC-03035",
       "domain": "tooling"
     },
     {
@@ -184580,7 +184623,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03035",
+      "id": "FUNC-03036",
       "domain": "tooling"
     },
     {
@@ -184625,7 +184668,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03036",
+      "id": "FUNC-03037",
       "domain": "tooling"
     },
     {
@@ -184684,7 +184727,7 @@
         "parentIndex": 13,
         "eventTypes": []
       },
-      "id": "FUNC-03037",
+      "id": "FUNC-03038",
       "domain": "tooling"
     },
     {
@@ -184736,7 +184779,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03038",
+      "id": "FUNC-03039",
       "domain": "tooling"
     },
     {
@@ -184782,7 +184825,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03039",
+      "id": "FUNC-03040",
       "domain": "tooling"
     },
     {
@@ -184825,7 +184868,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03040",
+      "id": "FUNC-03041",
       "domain": "tooling"
     },
     {
@@ -184866,7 +184909,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03041",
+      "id": "FUNC-03042",
       "domain": "tooling"
     },
     {
@@ -184941,7 +184984,7 @@
         "parentIndex": 5,
         "eventTypes": []
       },
-      "id": "FUNC-03042",
+      "id": "FUNC-03043",
       "domain": "tooling"
     },
     {
@@ -184989,7 +185032,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03043",
+      "id": "FUNC-03044",
       "domain": "tooling"
     },
     {
@@ -185030,7 +185073,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03044",
+      "id": "FUNC-03045",
       "domain": "tooling"
     },
     {
@@ -185077,7 +185120,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03045",
+      "id": "FUNC-03046",
       "domain": "tooling"
     },
     {
@@ -185118,7 +185161,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03046",
+      "id": "FUNC-03047",
       "domain": "tooling"
     },
     {
@@ -185161,7 +185204,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03047",
+      "id": "FUNC-03048",
       "domain": "tooling"
     },
     {
@@ -185202,7 +185245,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03048",
+      "id": "FUNC-03049",
       "domain": "tooling"
     },
     {
@@ -185246,7 +185289,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03049",
+      "id": "FUNC-03050",
       "domain": "tooling"
     },
     {
@@ -185290,7 +185333,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03050",
+      "id": "FUNC-03051",
       "domain": "tooling"
     },
     {
@@ -185333,7 +185376,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03051",
+      "id": "FUNC-03052",
       "domain": "tooling"
     },
     {
@@ -185374,7 +185417,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03052",
+      "id": "FUNC-03053",
       "domain": "tooling"
     },
     {
@@ -185415,7 +185458,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03053",
+      "id": "FUNC-03054",
       "domain": "tooling"
     },
     {
@@ -185458,7 +185501,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03054",
+      "id": "FUNC-03055",
       "domain": "tooling"
     },
     {
@@ -185499,7 +185542,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03055",
+      "id": "FUNC-03056",
       "domain": "tooling"
     },
     {
@@ -185550,7 +185593,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03056",
+      "id": "FUNC-03057",
       "domain": "tooling"
     },
     {
@@ -185595,7 +185638,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03057",
+      "id": "FUNC-03058",
       "domain": "tooling"
     },
     {
@@ -185638,7 +185681,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03058",
+      "id": "FUNC-03059",
       "domain": "tooling"
     },
     {
@@ -185685,7 +185728,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03059",
+      "id": "FUNC-03060",
       "domain": "tooling"
     },
     {
@@ -185728,7 +185771,7 @@
         "parentIndex": 15,
         "eventTypes": []
       },
-      "id": "FUNC-03060",
+      "id": "FUNC-03061",
       "domain": "tooling"
     },
     {
@@ -185769,7 +185812,7 @@
         "parentIndex": 16,
         "eventTypes": []
       },
-      "id": "FUNC-03061",
+      "id": "FUNC-03062",
       "domain": "tooling"
     },
     {
@@ -185813,7 +185856,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03062",
+      "id": "FUNC-03063",
       "domain": "tooling"
     },
     {
@@ -185856,7 +185899,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03063",
+      "id": "FUNC-03064",
       "domain": "tooling"
     },
     {
@@ -185899,7 +185942,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03064",
+      "id": "FUNC-03065",
       "domain": "tooling"
     },
     {
@@ -185942,7 +185985,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03065",
+      "id": "FUNC-03066",
       "domain": "tooling"
     },
     {
@@ -185983,7 +186026,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03066",
+      "id": "FUNC-03067",
       "domain": "tooling"
     },
     {
@@ -186027,7 +186070,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03067",
+      "id": "FUNC-03068",
       "domain": "tooling"
     },
     {
@@ -186070,7 +186113,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03068",
+      "id": "FUNC-03069",
       "domain": "tooling"
     },
     {
@@ -186113,7 +186156,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03069",
+      "id": "FUNC-03070",
       "domain": "tooling"
     },
     {
@@ -186156,7 +186199,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03070",
+      "id": "FUNC-03071",
       "domain": "tooling"
     },
     {
@@ -186199,7 +186242,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-03071",
+      "id": "FUNC-03072",
       "domain": "tooling"
     },
     {
@@ -186246,7 +186289,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-03072",
+      "id": "FUNC-03073",
       "domain": "tooling"
     },
     {
@@ -186303,7 +186346,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-03073",
+      "id": "FUNC-03074",
       "domain": "tooling"
     },
     {
@@ -186359,7 +186402,7 @@
         "parentIndex": 26,
         "eventTypes": []
       },
-      "id": "FUNC-03074",
+      "id": "FUNC-03075",
       "domain": "tooling"
     },
     {
@@ -186404,7 +186447,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03075",
+      "id": "FUNC-03076",
       "domain": "tooling"
     },
     {
@@ -186454,7 +186497,7 @@
         "parentIndex": 27,
         "eventTypes": []
       },
-      "id": "FUNC-03076",
+      "id": "FUNC-03077",
       "domain": "tooling"
     },
     {
@@ -186498,7 +186541,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03077",
+      "id": "FUNC-03078",
       "domain": "tooling"
     },
     {
@@ -186539,7 +186582,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03078",
+      "id": "FUNC-03079",
       "domain": "tooling"
     },
     {
@@ -186673,7 +186716,7 @@
         "parentIndex": 28,
         "eventTypes": []
       },
-      "id": "FUNC-03079",
+      "id": "FUNC-03080",
       "domain": "tooling"
     },
     {
@@ -186716,7 +186759,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03080",
+      "id": "FUNC-03081",
       "domain": "tooling"
     },
     {
@@ -186757,7 +186800,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03081",
+      "id": "FUNC-03082",
       "domain": "tooling"
     },
     {
@@ -186798,7 +186841,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03082",
+      "id": "FUNC-03083",
       "domain": "tooling"
     },
     {
@@ -186839,7 +186882,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03083",
+      "id": "FUNC-03084",
       "domain": "tooling"
     },
     {
@@ -186880,7 +186923,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03084",
+      "id": "FUNC-03085",
       "domain": "tooling"
     },
     {
@@ -186921,7 +186964,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03085",
+      "id": "FUNC-03086",
       "domain": "tooling"
     },
     {
@@ -186962,7 +187005,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03086",
+      "id": "FUNC-03087",
       "domain": "tooling"
     },
     {
@@ -187005,7 +187048,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03087",
+      "id": "FUNC-03088",
       "domain": "tooling"
     },
     {
@@ -187046,7 +187089,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03088",
+      "id": "FUNC-03089",
       "domain": "tooling"
     },
     {
@@ -187087,7 +187130,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03089",
+      "id": "FUNC-03090",
       "domain": "tooling"
     },
     {
@@ -187130,7 +187173,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03090",
+      "id": "FUNC-03091",
       "domain": "tooling"
     },
     {
@@ -187177,7 +187220,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03091",
+      "id": "FUNC-03092",
       "domain": "tooling"
     },
     {
@@ -187218,7 +187261,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03092",
+      "id": "FUNC-03093",
       "domain": "tooling"
     },
     {
@@ -187259,7 +187302,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03093",
+      "id": "FUNC-03094",
       "domain": "tooling"
     },
     {
@@ -187326,7 +187369,7 @@
         "parentIndex": 29,
         "eventTypes": []
       },
-      "id": "FUNC-03094",
+      "id": "FUNC-03095",
       "domain": "tooling"
     },
     {
@@ -187370,7 +187413,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03095",
+      "id": "FUNC-03096",
       "domain": "tooling"
     },
     {
@@ -187411,7 +187454,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03096",
+      "id": "FUNC-03097",
       "domain": "tooling"
     },
     {
@@ -187455,7 +187498,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03097",
+      "id": "FUNC-03098",
       "domain": "tooling"
     },
     {
@@ -187508,7 +187551,7 @@
         "parentIndex": 30,
         "eventTypes": []
       },
-      "id": "FUNC-03098",
+      "id": "FUNC-03099",
       "domain": "tooling"
     },
     {
@@ -187551,7 +187594,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03099",
+      "id": "FUNC-03100",
       "domain": "tooling"
     },
     {
@@ -187595,7 +187638,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03100",
+      "id": "FUNC-03101",
       "domain": "tooling"
     },
     {
@@ -187640,7 +187683,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03101",
+      "id": "FUNC-03102",
       "domain": "tooling"
     },
     {
@@ -187681,7 +187724,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03102",
+      "id": "FUNC-03103",
       "domain": "tooling"
     },
     {
@@ -187724,7 +187767,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03103",
+      "id": "FUNC-03104",
       "domain": "tooling"
     },
     {
@@ -187767,7 +187810,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03104",
+      "id": "FUNC-03105",
       "domain": "tooling"
     },
     {
@@ -187811,7 +187854,7 @@
         "parentIndex": 7,
         "eventTypes": []
       },
-      "id": "FUNC-03105",
+      "id": "FUNC-03106",
       "domain": "tooling"
     },
     {
@@ -187855,7 +187898,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03106",
+      "id": "FUNC-03107",
       "domain": "tooling"
     },
     {
@@ -187900,7 +187943,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03107",
+      "id": "FUNC-03108",
       "domain": "tooling"
     },
     {
@@ -187941,7 +187984,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03108",
+      "id": "FUNC-03109",
       "domain": "tooling"
     },
     {
@@ -187982,7 +188025,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03109",
+      "id": "FUNC-03110",
       "domain": "tooling"
     },
     {
@@ -188023,7 +188066,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03110",
+      "id": "FUNC-03111",
       "domain": "tooling"
     },
     {
@@ -188068,7 +188111,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03111",
+      "id": "FUNC-03112",
       "domain": "tooling"
     },
     {
@@ -188112,7 +188155,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03112",
+      "id": "FUNC-03113",
       "domain": "tooling"
     },
     {
@@ -188155,7 +188198,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03113",
+      "id": "FUNC-03114",
       "domain": "tooling"
     },
     {
@@ -188198,7 +188241,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03114",
+      "id": "FUNC-03115",
       "domain": "tooling"
     },
     {
@@ -188242,7 +188285,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03115",
+      "id": "FUNC-03116",
       "domain": "tooling"
     },
     {
@@ -188286,7 +188329,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03116",
+      "id": "FUNC-03117",
       "domain": "tooling"
     },
     {
@@ -188331,7 +188374,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03117",
+      "id": "FUNC-03118",
       "domain": "tooling"
     },
     {
@@ -188378,7 +188421,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03118",
+      "id": "FUNC-03119",
       "domain": "tooling"
     },
     {
@@ -188425,7 +188468,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03119",
+      "id": "FUNC-03120",
       "domain": "tooling"
     },
     {
@@ -188466,7 +188509,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03120",
+      "id": "FUNC-03121",
       "domain": "tooling"
     },
     {
@@ -188507,7 +188550,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03121",
+      "id": "FUNC-03122",
       "domain": "tooling"
     },
     {
@@ -188554,7 +188597,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03122",
+      "id": "FUNC-03123",
       "domain": "tooling"
     },
     {
@@ -188601,7 +188644,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03123",
+      "id": "FUNC-03124",
       "domain": "tooling"
     },
     {
@@ -188644,7 +188687,7 @@
         "parentIndex": 1,
         "eventTypes": []
       },
-      "id": "FUNC-03124",
+      "id": "FUNC-03125",
       "domain": "tooling"
     },
     {
@@ -188689,7 +188732,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03125",
+      "id": "FUNC-03126",
       "domain": "tooling"
     },
     {
@@ -188732,7 +188775,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03126",
+      "id": "FUNC-03127",
       "domain": "tooling"
     },
     {
@@ -188777,7 +188820,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03127",
+      "id": "FUNC-03128",
       "domain": "tooling"
     },
     {
@@ -188821,7 +188864,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03128",
+      "id": "FUNC-03129",
       "domain": "tooling"
     },
     {
@@ -188865,7 +188908,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03129",
+      "id": "FUNC-03130",
       "domain": "tooling"
     },
     {
@@ -188912,7 +188955,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03130",
+      "id": "FUNC-03131",
       "domain": "tooling"
     },
     {
@@ -188956,7 +188999,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03131",
+      "id": "FUNC-03132",
       "domain": "tooling"
     },
     {
@@ -189000,7 +189043,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03132",
+      "id": "FUNC-03133",
       "domain": "tooling"
     },
     {
@@ -189043,7 +189086,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03133",
+      "id": "FUNC-03134",
       "domain": "tooling"
     },
     {
@@ -189087,7 +189130,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03134",
+      "id": "FUNC-03135",
       "domain": "tooling"
     },
     {
@@ -189135,7 +189178,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03135",
+      "id": "FUNC-03136",
       "domain": "tooling"
     },
     {
@@ -189176,7 +189219,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03136",
+      "id": "FUNC-03137",
       "domain": "tooling"
     },
     {
@@ -189217,7 +189260,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03137",
+      "id": "FUNC-03138",
       "domain": "tooling"
     },
     {
@@ -189276,7 +189319,7 @@
         "parentIndex": 25,
         "eventTypes": []
       },
-      "id": "FUNC-03138",
+      "id": "FUNC-03139",
       "domain": "tooling"
     },
     {
@@ -189319,7 +189362,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03139",
+      "id": "FUNC-03140",
       "domain": "tooling"
     },
     {
@@ -189360,7 +189403,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03140",
+      "id": "FUNC-03141",
       "domain": "tooling"
     },
     {
@@ -189403,7 +189446,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03141",
+      "id": "FUNC-03142",
       "domain": "tooling"
     },
     {
@@ -189444,7 +189487,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03142",
+      "id": "FUNC-03143",
       "domain": "tooling"
     },
     {
@@ -189489,7 +189532,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03143",
+      "id": "FUNC-03144",
       "domain": "tooling"
     },
     {
@@ -189530,7 +189573,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03144",
+      "id": "FUNC-03145",
       "domain": "tooling"
     },
     {
@@ -189571,7 +189614,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03145",
+      "id": "FUNC-03146",
       "domain": "tooling"
     },
     {
@@ -189616,7 +189659,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03146",
+      "id": "FUNC-03147",
       "domain": "tooling"
     },
     {
@@ -189657,7 +189700,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03147",
+      "id": "FUNC-03148",
       "domain": "tooling"
     },
     {
@@ -189698,7 +189741,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03148",
+      "id": "FUNC-03149",
       "domain": "tooling"
     },
     {
@@ -189739,7 +189782,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03149",
+      "id": "FUNC-03150",
       "domain": "tooling"
     },
     {
@@ -189780,7 +189823,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03150",
+      "id": "FUNC-03151",
       "domain": "tooling"
     },
     {
@@ -189821,7 +189864,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03151",
+      "id": "FUNC-03152",
       "domain": "tooling"
     },
     {
@@ -189862,7 +189905,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03152",
+      "id": "FUNC-03153",
       "domain": "tooling"
     },
     {
@@ -189903,7 +189946,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03153",
+      "id": "FUNC-03154",
       "domain": "tooling"
     },
     {
@@ -189944,7 +189987,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03154",
+      "id": "FUNC-03155",
       "domain": "tooling"
     },
     {
@@ -189985,7 +190028,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03155",
+      "id": "FUNC-03156",
       "domain": "tooling"
     },
     {
@@ -190026,7 +190069,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03156",
+      "id": "FUNC-03157",
       "domain": "tooling"
     },
     {
@@ -190067,7 +190110,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03157",
+      "id": "FUNC-03158",
       "domain": "tooling"
     },
     {
@@ -190110,7 +190153,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03158",
+      "id": "FUNC-03159",
       "domain": "tooling"
     },
     {
@@ -190153,7 +190196,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03159",
+      "id": "FUNC-03160",
       "domain": "tooling"
     },
     {
@@ -190196,7 +190239,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03160",
+      "id": "FUNC-03161",
       "domain": "tooling"
     },
     {
@@ -190239,7 +190282,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03161",
+      "id": "FUNC-03162",
       "domain": "tooling"
     },
     {
@@ -190282,7 +190325,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03162",
+      "id": "FUNC-03163",
       "domain": "tooling"
     },
     {
@@ -190325,7 +190368,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03163",
+      "id": "FUNC-03164",
       "domain": "tooling"
     },
     {
@@ -190368,7 +190411,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03164",
+      "id": "FUNC-03165",
       "domain": "tooling"
     },
     {
@@ -190412,7 +190455,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03165",
+      "id": "FUNC-03166",
       "domain": "tooling"
     },
     {
@@ -190456,7 +190499,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03166",
+      "id": "FUNC-03167",
       "domain": "tooling"
     },
     {
@@ -190500,7 +190543,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03167",
+      "id": "FUNC-03168",
       "domain": "tooling"
     },
     {
@@ -190544,7 +190587,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03168",
+      "id": "FUNC-03169",
       "domain": "tooling"
     },
     {
@@ -190585,7 +190628,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03169",
+      "id": "FUNC-03170",
       "domain": "tooling"
     },
     {
@@ -190628,7 +190671,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03170",
+      "id": "FUNC-03171",
       "domain": "tooling"
     },
     {
@@ -190673,7 +190716,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03171",
+      "id": "FUNC-03172",
       "domain": "tooling"
     },
     {
@@ -190717,7 +190760,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03172",
+      "id": "FUNC-03173",
       "domain": "tooling"
     },
     {
@@ -190764,7 +190807,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-03173",
+      "id": "FUNC-03174",
       "domain": "tooling"
     },
     {
@@ -190810,7 +190853,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-03174",
+      "id": "FUNC-03175",
       "domain": "tooling"
     },
     {
@@ -190851,7 +190894,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03175",
+      "id": "FUNC-03176",
       "domain": "tooling"
     },
     {
@@ -190892,7 +190935,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03176",
+      "id": "FUNC-03177",
       "domain": "tooling"
     },
     {
@@ -190935,7 +190978,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03177",
+      "id": "FUNC-03178",
       "domain": "tooling"
     },
     {
@@ -190976,7 +191019,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03178",
+      "id": "FUNC-03179",
       "domain": "tooling"
     },
     {
@@ -191027,7 +191070,7 @@
         "parentIndex": 14,
         "eventTypes": []
       },
-      "id": "FUNC-03179",
+      "id": "FUNC-03180",
       "domain": "tooling"
     },
     {
@@ -191071,7 +191114,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03180",
+      "id": "FUNC-03181",
       "domain": "tooling"
     },
     {
@@ -191114,7 +191157,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03181",
+      "id": "FUNC-03182",
       "domain": "tooling"
     },
     {
@@ -191159,7 +191202,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03182",
+      "id": "FUNC-03183",
       "domain": "tooling"
     },
     {
@@ -191203,7 +191246,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03183",
+      "id": "FUNC-03184",
       "domain": "tooling"
     },
     {
@@ -191247,7 +191290,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03184",
+      "id": "FUNC-03185",
       "domain": "tooling"
     },
     {
@@ -191291,7 +191334,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03185",
+      "id": "FUNC-03186",
       "domain": "tooling"
     },
     {
@@ -191355,7 +191398,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03186",
+      "id": "FUNC-03187",
       "domain": "tooling"
     },
     {
@@ -191396,7 +191439,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03187",
+      "id": "FUNC-03188",
       "domain": "tooling"
     },
     {
@@ -191437,7 +191480,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03188",
+      "id": "FUNC-03189",
       "domain": "tooling"
     },
     {
@@ -191478,7 +191521,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03189",
+      "id": "FUNC-03190",
       "domain": "tooling"
     },
     {
@@ -191519,7 +191562,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03190",
+      "id": "FUNC-03191",
       "domain": "tooling"
     },
     {
@@ -191560,7 +191603,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03191",
+      "id": "FUNC-03192",
       "domain": "tooling"
     },
     {
@@ -191601,7 +191644,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03192",
+      "id": "FUNC-03193",
       "domain": "tooling"
     },
     {
@@ -191642,7 +191685,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03193",
+      "id": "FUNC-03194",
       "domain": "tooling"
     },
     {
@@ -191683,7 +191726,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03194",
+      "id": "FUNC-03195",
       "domain": "tooling"
     },
     {
@@ -191727,7 +191770,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03195",
+      "id": "FUNC-03196",
       "domain": "tooling"
     },
     {
@@ -191771,7 +191814,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03196",
+      "id": "FUNC-03197",
       "domain": "tooling"
     },
     {
@@ -191815,7 +191858,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03197",
+      "id": "FUNC-03198",
       "domain": "tooling"
     },
     {
@@ -191861,7 +191904,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03198",
+      "id": "FUNC-03199",
       "domain": "tooling"
     },
     {
@@ -191905,7 +191948,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03199",
+      "id": "FUNC-03200",
       "domain": "tooling"
     },
     {
@@ -191949,7 +191992,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03200",
+      "id": "FUNC-03201",
       "domain": "tooling"
     },
     {
@@ -191994,7 +192037,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03201",
+      "id": "FUNC-03202",
       "domain": "tooling"
     },
     {
@@ -192043,7 +192086,7 @@
         "parentIndex": 17,
         "eventTypes": []
       },
-      "id": "FUNC-03202",
+      "id": "FUNC-03203",
       "domain": "tooling"
     },
     {
@@ -192087,7 +192130,7 @@
         "parentIndex": 18,
         "eventTypes": []
       },
-      "id": "FUNC-03203",
+      "id": "FUNC-03204",
       "domain": "tooling"
     },
     {
@@ -192128,7 +192171,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03204",
+      "id": "FUNC-03205",
       "domain": "tooling"
     },
     {
@@ -192175,7 +192218,7 @@
         "parentIndex": 19,
         "eventTypes": []
       },
-      "id": "FUNC-03205",
+      "id": "FUNC-03206",
       "domain": "tooling"
     },
     {
@@ -192216,7 +192259,7 @@
         "parentIndex": 20,
         "eventTypes": []
       },
-      "id": "FUNC-03206",
+      "id": "FUNC-03207",
       "domain": "tooling"
     },
     {
@@ -192261,7 +192304,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03207",
+      "id": "FUNC-03208",
       "domain": "tooling"
     },
     {
@@ -192306,7 +192349,7 @@
         "parentIndex": 22,
         "eventTypes": []
       },
-      "id": "FUNC-03208",
+      "id": "FUNC-03209",
       "domain": "tooling"
     },
     {
@@ -192350,7 +192393,7 @@
         "parentIndex": 23,
         "eventTypes": []
       },
-      "id": "FUNC-03209",
+      "id": "FUNC-03210",
       "domain": "tooling"
     },
     {
@@ -192402,7 +192445,7 @@
         "parentIndex": 24,
         "eventTypes": []
       },
-      "id": "FUNC-03210",
+      "id": "FUNC-03211",
       "domain": "tooling"
     },
     {
@@ -192445,7 +192488,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03211",
+      "id": "FUNC-03212",
       "domain": "tooling"
     },
     {
@@ -192489,7 +192532,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03212",
+      "id": "FUNC-03213",
       "domain": "tooling"
     },
     {
@@ -192530,7 +192573,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03213",
+      "id": "FUNC-03214",
       "domain": "tooling"
     },
     {
@@ -192573,7 +192616,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03214",
+      "id": "FUNC-03215",
       "domain": "tooling"
     },
     {
@@ -192619,7 +192662,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03215",
+      "id": "FUNC-03216",
       "domain": "tooling"
     },
     {
@@ -192660,7 +192703,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03216",
+      "id": "FUNC-03217",
       "domain": "tooling"
     },
     {
@@ -192701,7 +192744,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03217",
+      "id": "FUNC-03218",
       "domain": "tooling"
     },
     {
@@ -192742,7 +192785,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03218",
+      "id": "FUNC-03219",
       "domain": "tooling"
     },
     {
@@ -192783,7 +192826,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03219",
+      "id": "FUNC-03220",
       "domain": "tooling"
     },
     {
@@ -192824,7 +192867,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03220",
+      "id": "FUNC-03221",
       "domain": "tooling"
     },
     {
@@ -192865,7 +192908,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03221",
+      "id": "FUNC-03222",
       "domain": "tooling"
     },
     {
@@ -192906,7 +192949,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03222",
+      "id": "FUNC-03223",
       "domain": "tooling"
     },
     {
@@ -192947,7 +192990,7 @@
         "parentIndex": 2,
         "eventTypes": []
       },
-      "id": "FUNC-03223",
+      "id": "FUNC-03224",
       "domain": "tooling"
     },
     {
@@ -192993,7 +193036,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03224",
+      "id": "FUNC-03225",
       "domain": "tooling"
     },
     {
@@ -193043,7 +193086,7 @@
         "parentIndex": 39,
         "eventTypes": []
       },
-      "id": "FUNC-03225",
+      "id": "FUNC-03226",
       "domain": "tooling"
     },
     {
@@ -193086,7 +193129,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03226",
+      "id": "FUNC-03227",
       "domain": "tooling"
     },
     {
@@ -193129,7 +193172,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03227",
+      "id": "FUNC-03228",
       "domain": "tooling"
     },
     {
@@ -193170,7 +193213,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03228",
+      "id": "FUNC-03229",
       "domain": "tooling"
     },
     {
@@ -193211,7 +193254,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03229",
+      "id": "FUNC-03230",
       "domain": "tooling"
     },
     {
@@ -193252,7 +193295,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03230",
+      "id": "FUNC-03231",
       "domain": "tooling"
     },
     {
@@ -193295,7 +193338,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03231",
+      "id": "FUNC-03232",
       "domain": "tooling"
     },
     {
@@ -193338,7 +193381,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03232",
+      "id": "FUNC-03233",
       "domain": "tooling"
     },
     {
@@ -193381,7 +193424,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03233",
+      "id": "FUNC-03234",
       "domain": "tooling"
     },
     {
@@ -193424,7 +193467,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03234",
+      "id": "FUNC-03235",
       "domain": "tooling"
     },
     {
@@ -193465,7 +193508,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03235",
+      "id": "FUNC-03236",
       "domain": "tooling"
     },
     {
@@ -193506,7 +193549,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03236",
+      "id": "FUNC-03237",
       "domain": "tooling"
     },
     {
@@ -193547,7 +193590,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03237",
+      "id": "FUNC-03238",
       "domain": "tooling"
     },
     {
@@ -193590,7 +193633,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03238",
+      "id": "FUNC-03239",
       "domain": "tooling"
     },
     {
@@ -193631,7 +193674,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03239",
+      "id": "FUNC-03240",
       "domain": "tooling"
     },
     {
@@ -193672,7 +193715,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03240",
+      "id": "FUNC-03241",
       "domain": "tooling"
     },
     {
@@ -193713,7 +193756,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03241",
+      "id": "FUNC-03242",
       "domain": "tooling"
     },
     {
@@ -193757,7 +193800,7 @@
         "parentIndex": 60,
         "eventTypes": []
       },
-      "id": "FUNC-03242",
+      "id": "FUNC-03243",
       "domain": "tooling"
     },
     {
@@ -193800,7 +193843,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03243",
+      "id": "FUNC-03244",
       "domain": "tooling"
     },
     {
@@ -193844,7 +193887,7 @@
         "parentIndex": 61,
         "eventTypes": []
       },
-      "id": "FUNC-03244",
+      "id": "FUNC-03245",
       "domain": "tooling"
     },
     {
@@ -193888,7 +193931,7 @@
         "parentIndex": 62,
         "eventTypes": []
       },
-      "id": "FUNC-03245",
+      "id": "FUNC-03246",
       "domain": "tooling"
     },
     {
@@ -193929,7 +193972,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03246",
+      "id": "FUNC-03247",
       "domain": "tooling"
     },
     {
@@ -193972,7 +194015,7 @@
         "parentIndex": 8,
         "eventTypes": []
       },
-      "id": "FUNC-03247",
+      "id": "FUNC-03248",
       "domain": "tooling"
     },
     {
@@ -194013,7 +194056,7 @@
         "parentIndex": 9,
         "eventTypes": []
       },
-      "id": "FUNC-03248",
+      "id": "FUNC-03249",
       "domain": "tooling"
     },
     {
@@ -194063,7 +194106,7 @@
         "parentIndex": 10,
         "eventTypes": []
       },
-      "id": "FUNC-03249",
+      "id": "FUNC-03250",
       "domain": "tooling"
     },
     {
@@ -194106,7 +194149,7 @@
         "parentIndex": 11,
         "eventTypes": []
       },
-      "id": "FUNC-03250",
+      "id": "FUNC-03251",
       "domain": "tooling"
     },
     {
@@ -194155,7 +194198,7 @@
         "parentIndex": 12,
         "eventTypes": []
       },
-      "id": "FUNC-03251",
+      "id": "FUNC-03252",
       "domain": "tooling"
     },
     {
@@ -194196,7 +194239,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03252",
+      "id": "FUNC-03253",
       "domain": "tooling"
     },
     {
@@ -194237,7 +194280,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03253",
+      "id": "FUNC-03254",
       "domain": "tooling"
     },
     {
@@ -194280,7 +194323,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03254",
+      "id": "FUNC-03255",
       "domain": "tooling"
     },
     {
@@ -194323,7 +194366,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03255",
+      "id": "FUNC-03256",
       "domain": "tooling"
     },
     {
@@ -194364,7 +194407,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03256",
+      "id": "FUNC-03257",
       "domain": "tooling"
     },
     {
@@ -194405,7 +194448,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03257",
+      "id": "FUNC-03258",
       "domain": "tooling"
     },
     {
@@ -194448,7 +194491,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03258",
+      "id": "FUNC-03259",
       "domain": "tooling"
     },
     {
@@ -194489,7 +194532,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03259",
+      "id": "FUNC-03260",
       "domain": "tooling"
     },
     {
@@ -194530,7 +194573,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03260",
+      "id": "FUNC-03261",
       "domain": "tooling"
     },
     {
@@ -194571,7 +194614,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03261",
+      "id": "FUNC-03262",
       "domain": "tooling"
     },
     {
@@ -194612,7 +194655,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03262",
+      "id": "FUNC-03263",
       "domain": "tooling"
     },
     {
@@ -194653,7 +194696,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03263",
+      "id": "FUNC-03264",
       "domain": "tooling"
     },
     {
@@ -194696,7 +194739,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03264",
+      "id": "FUNC-03265",
       "domain": "tooling"
     },
     {
@@ -194737,7 +194780,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03265",
+      "id": "FUNC-03266",
       "domain": "tooling"
     },
     {
@@ -194781,7 +194824,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03266",
+      "id": "FUNC-03267",
       "domain": "tooling"
     },
     {
@@ -194824,7 +194867,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03267",
+      "id": "FUNC-03268",
       "domain": "tooling"
     },
     {
@@ -194867,7 +194910,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03268",
+      "id": "FUNC-03269",
       "domain": "tooling"
     },
     {
@@ -194912,7 +194955,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03269",
+      "id": "FUNC-03270",
       "domain": "tooling"
     },
     {
@@ -194953,7 +194996,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03270",
+      "id": "FUNC-03271",
       "domain": "tooling"
     },
     {
@@ -194998,7 +195041,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03271",
+      "id": "FUNC-03272",
       "domain": "tooling"
     },
     {
@@ -195044,7 +195087,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03272",
+      "id": "FUNC-03273",
       "domain": "tooling"
     },
     {
@@ -195090,7 +195133,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03273",
+      "id": "FUNC-03274",
       "domain": "tooling"
     },
     {
@@ -195134,7 +195177,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03274",
+      "id": "FUNC-03275",
       "domain": "tooling"
     },
     {
@@ -195177,7 +195220,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03275",
+      "id": "FUNC-03276",
       "domain": "tooling"
     },
     {
@@ -195221,7 +195264,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03276",
+      "id": "FUNC-03277",
       "domain": "tooling"
     },
     {
@@ -195264,7 +195307,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03277",
+      "id": "FUNC-03278",
       "domain": "tooling"
     },
     {
@@ -195305,7 +195348,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03278",
+      "id": "FUNC-03279",
       "domain": "tooling"
     },
     {
@@ -195346,7 +195389,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03279",
+      "id": "FUNC-03280",
       "domain": "tooling"
     },
     {
@@ -195387,7 +195430,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03280",
+      "id": "FUNC-03281",
       "domain": "tooling"
     },
     {
@@ -195428,7 +195471,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03281",
+      "id": "FUNC-03282",
       "domain": "tooling"
     },
     {
@@ -195472,7 +195515,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03282",
+      "id": "FUNC-03283",
       "domain": "tooling"
     },
     {
@@ -195518,7 +195561,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03283",
+      "id": "FUNC-03284",
       "domain": "tooling"
     },
     {
@@ -195562,7 +195605,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03284",
+      "id": "FUNC-03285",
       "domain": "tooling"
     },
     {
@@ -195606,7 +195649,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03285",
+      "id": "FUNC-03286",
       "domain": "tooling"
     },
     {
@@ -195650,7 +195693,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03286",
+      "id": "FUNC-03287",
       "domain": "tooling"
     },
     {
@@ -195694,7 +195737,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03287",
+      "id": "FUNC-03288",
       "domain": "tooling"
     },
     {
@@ -195738,7 +195781,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03288",
+      "id": "FUNC-03289",
       "domain": "tooling"
     },
     {
@@ -195782,7 +195825,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03289",
+      "id": "FUNC-03290",
       "domain": "tooling"
     },
     {
@@ -195828,7 +195871,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03290",
+      "id": "FUNC-03291",
       "domain": "tooling"
     },
     {
@@ -195871,7 +195914,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03291",
+      "id": "FUNC-03292",
       "domain": "tooling"
     },
     {
@@ -195915,7 +195958,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03292",
+      "id": "FUNC-03293",
       "domain": "tooling"
     },
     {
@@ -195959,7 +196002,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03293",
+      "id": "FUNC-03294",
       "domain": "tooling"
     },
     {
@@ -196003,7 +196046,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03294",
+      "id": "FUNC-03295",
       "domain": "tooling"
     },
     {
@@ -196047,7 +196090,7 @@
         "parentIndex": 21,
         "eventTypes": []
       },
-      "id": "FUNC-03295",
+      "id": "FUNC-03296",
       "domain": "tooling"
     },
     {
@@ -196090,7 +196133,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03296",
+      "id": "FUNC-03297",
       "domain": "tooling"
     },
     {
@@ -196135,7 +196178,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03297",
+      "id": "FUNC-03298",
       "domain": "tooling"
     },
     {
@@ -196178,7 +196221,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03298",
+      "id": "FUNC-03299",
       "domain": "tooling"
     },
     {
@@ -196221,7 +196264,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03299",
+      "id": "FUNC-03300",
       "domain": "tooling"
     },
     {
@@ -196264,7 +196307,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03300",
+      "id": "FUNC-03301",
       "domain": "tooling"
     },
     {
@@ -196307,7 +196350,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03301",
+      "id": "FUNC-03302",
       "domain": "tooling"
     },
     {
@@ -196350,7 +196393,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03302",
+      "id": "FUNC-03303",
       "domain": "tooling"
     },
     {
@@ -196394,7 +196437,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03303",
+      "id": "FUNC-03304",
       "domain": "tooling"
     },
     {
@@ -196438,7 +196481,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03304",
+      "id": "FUNC-03305",
       "domain": "tooling"
     },
     {
@@ -196482,7 +196525,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03305",
+      "id": "FUNC-03306",
       "domain": "tooling"
     },
     {
@@ -196526,7 +196569,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03306",
+      "id": "FUNC-03307",
       "domain": "tooling"
     },
     {
@@ -196570,7 +196613,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03307",
+      "id": "FUNC-03308",
       "domain": "tooling"
     },
     {
@@ -196614,7 +196657,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03308",
+      "id": "FUNC-03309",
       "domain": "tooling"
     },
     {
@@ -196658,7 +196701,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03309",
+      "id": "FUNC-03310",
       "domain": "tooling"
     },
     {
@@ -196702,7 +196745,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03310",
+      "id": "FUNC-03311",
       "domain": "tooling"
     },
     {
@@ -196746,7 +196789,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03311",
+      "id": "FUNC-03312",
       "domain": "tooling"
     },
     {
@@ -196790,7 +196833,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03312",
+      "id": "FUNC-03313",
       "domain": "tooling"
     },
     {
@@ -196834,7 +196877,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03313",
+      "id": "FUNC-03314",
       "domain": "tooling"
     },
     {
@@ -196877,7 +196920,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03314",
+      "id": "FUNC-03315",
       "domain": "tooling"
     },
     {
@@ -196918,7 +196961,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03315",
+      "id": "FUNC-03316",
       "domain": "tooling"
     },
     {
@@ -196959,7 +197002,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03316",
+      "id": "FUNC-03317",
       "domain": "tooling"
     },
     {
@@ -197000,7 +197043,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03317",
+      "id": "FUNC-03318",
       "domain": "tooling"
     },
     {
@@ -197041,7 +197084,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03318",
+      "id": "FUNC-03319",
       "domain": "tooling"
     },
     {
@@ -197084,7 +197127,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03319",
+      "id": "FUNC-03320",
       "domain": "tooling"
     },
     {
@@ -197127,7 +197170,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03320",
+      "id": "FUNC-03321",
       "domain": "tooling"
     },
     {
@@ -197171,7 +197214,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03321",
+      "id": "FUNC-03322",
       "domain": "tooling"
     },
     {
@@ -197214,7 +197257,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03322",
+      "id": "FUNC-03323",
       "domain": "tooling"
     },
     {
@@ -197255,7 +197298,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03323",
+      "id": "FUNC-03324",
       "domain": "tooling"
     },
     {
@@ -197296,13 +197339,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03324",
+      "id": "FUNC-03325",
       "domain": "tooling"
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 45,
-      "endLine": 45,
+      "line": 55,
+      "endLine": 55,
       "column": 41,
       "endColumn": 89,
       "name": "<callback:records.map#0>",
@@ -197326,10 +197369,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1677,
-        "end": 1725,
-        "bodyStart": 1687,
-        "bodyEnd": 1725,
+        "start": 2047,
+        "end": 2095,
+        "bodyStart": 2057,
+        "bodyEnd": 2095,
         "functionSha256": "b79e0747296477c9f4101689e2db47f24d0ae7109f8fca3e59d23623bd80e259",
         "bodySha256": "b15ca3b21203e25ac2e0555d57f4abe41862648c1c91a3b985b644f7ed8a5748",
         "async": false,
@@ -197340,13 +197383,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03325",
+      "id": "FUNC-03326",
       "domain": "tooling"
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 46,
-      "endLine": 46,
+      "line": 56,
+      "endLine": 56,
       "column": 47,
       "endColumn": 88,
       "name": "<callback:publicRuntime.filter#0>",
@@ -197369,10 +197412,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1776,
-        "end": 1817,
-        "bodyStart": 1781,
-        "bodyEnd": 1817,
+        "start": 2146,
+        "end": 2187,
+        "bodyStart": 2151,
+        "bodyEnd": 2187,
         "functionSha256": "dd91c39b0440445e171ef23ef81835d24d57967d99337d0660a1364a793e2a55",
         "bodySha256": "2277d07c98538ae8d67b7c2dd2e1409c0847c943b4303766ed123608f352f6f9",
         "async": false,
@@ -197383,13 +197426,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03326",
+      "id": "FUNC-03327",
       "domain": "tooling"
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 47,
-      "endLine": 47,
+      "line": 57,
+      "endLine": 57,
       "column": 42,
       "endColumn": 73,
       "name": "<callback:requiredFiles.filter#0>",
@@ -197412,10 +197455,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1883,
-        "end": 1914,
-        "bodyStart": 1891,
-        "bodyEnd": 1914,
+        "start": 2253,
+        "end": 2284,
+        "bodyStart": 2261,
+        "bodyEnd": 2284,
         "functionSha256": "5b278221337306259a9cc0f2dbc5bd059e3429b1ba7b9a47a330beb6f779d8d9",
         "bodySha256": "472ce01f7c8b0aa9aa7b1a03cf1f110c36e763502eeffeaf5d5d7747e4696a4a",
         "async": false,
@@ -197426,13 +197469,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03327",
+      "id": "FUNC-03328",
       "domain": "tooling"
     },
     {
       "file": "tools/release-source-fingerprint.mjs",
-      "line": 50,
-      "endLine": 50,
+      "line": 60,
+      "endLine": 60,
       "column": 30,
       "endColumn": 64,
       "name": "<callback:[...trackedPaths].some#0>",
@@ -197455,10 +197498,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2088,
-        "end": 2122,
-        "bodyStart": 2096,
-        "bodyEnd": 2122,
+        "start": 2458,
+        "end": 2492,
+        "bodyStart": 2466,
+        "bodyEnd": 2492,
         "functionSha256": "f413443f2b2391553f02418573fa683acd49e6b9030f83571b2461d7e8182d11",
         "bodySha256": "a81e6ab5a6610b4089f84e4563e0673159446495c0b6b121c3c7da3135981ee7",
         "async": false,
@@ -197469,7 +197512,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03328",
+      "id": "FUNC-03329",
       "domain": "tooling"
     },
     {
@@ -197510,7 +197553,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03329",
+      "id": "FUNC-03330",
       "domain": "tooling"
     },
     {
@@ -197554,7 +197597,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03330",
+      "id": "FUNC-03331",
       "domain": "tooling"
     },
     {
@@ -197595,7 +197638,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03331",
+      "id": "FUNC-03332",
       "domain": "tooling"
     },
     {
@@ -197638,7 +197681,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03332",
+      "id": "FUNC-03333",
       "domain": "tooling"
     },
     {
@@ -197683,7 +197726,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03333",
+      "id": "FUNC-03334",
       "domain": "tooling"
     },
     {
@@ -197727,7 +197770,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03334",
+      "id": "FUNC-03335",
       "domain": "tooling"
     },
     {
@@ -197771,13 +197814,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03335",
+      "id": "FUNC-03336",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 15,
-      "endLine": 56,
+      "endLine": 63,
       "column": 0,
       "endColumn": 1,
       "name": "makeHarness",
@@ -197805,11 +197848,11 @@
         "sourceType": "module",
         "nodeType": "FunctionDeclaration",
         "start": 499,
-        "end": 2254,
+        "end": 2576,
         "bodyStart": 565,
-        "bodyEnd": 2254,
-        "functionSha256": "9b7efa4b810561780018df9512651fbc0832365efbc38514a28831ddb9e69ff9",
-        "bodySha256": "10aa8bcd6459d469a174f2833fa95b01c5438708eb26374bd4c1abb8fde577d1",
+        "bodyEnd": 2576,
+        "functionSha256": "bea03515f323b349f944eaa886ed7e7a04fd2eaa3695be7149147c19e3c582d4",
+        "bodySha256": "789dcaf116e5e065229c1042380878f059ea092ab218008ddef4ac7f9f729f13",
         "async": false,
         "generator": false,
         "expressionBody": false,
@@ -197818,19 +197861,22 @@
         "parentIndex": 4,
         "eventTypes": []
       },
-      "id": "FUNC-03336",
+      "id": "FUNC-03337",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 25,
       "endLine": 25,
-      "column": 26,
-      "endColumn": 40,
-      "name": "state",
+      "column": 14,
+      "endColumn": 46,
+      "name": "clone",
       "kind": "arrow",
-      "params": "",
-      "calls": [],
+      "params": "v",
+      "calls": [
+        "JSON.parse",
+        "JSON.stringify"
+      ],
       "refs": {
         "routes": [],
         "collections": [],
@@ -197845,58 +197891,17 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1012,
-        "end": 1026,
-        "bodyStart": 1017,
-        "bodyEnd": 1025,
-        "functionSha256": "40417c5bf1a0fb0632869a46cbb7c9fde56f2336b361f083d3ee97babaa01af8",
-        "bodySha256": "a67ed2d3902db40aeccf4f9562925d47c928c62a2859f75dc5d78885b201ee79",
+        "start": 1006,
+        "end": 1038,
+        "bodyStart": 1009,
+        "bodyEnd": 1038,
+        "functionSha256": "c749dbb7e82fa90bbc4e1166a019becdc10477a2bbdcc93f130775a580ce5be2",
+        "bodySha256": "b96bddc37bb204e9d9fbad0bee9d8444ceb9b9beedf7eae5ff07bf7d19f90005",
         "async": false,
         "generator": false,
         "expressionBody": true,
-        "parentType": "Property",
-        "parentKey": "value",
-        "parentIndex": null,
-        "eventTypes": []
-      },
-      "id": "FUNC-03337",
-      "domain": "tooling"
-    },
-    {
-      "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 26,
-      "endLine": 29,
-      "column": 10,
-      "endColumn": 6,
-      "name": "fetch",
-      "kind": "arrow",
-      "params": "",
-      "calls": [],
-      "refs": {
-        "routes": [],
-        "collections": [],
-        "models": [],
-        "storageKeys": [],
-        "env": [],
-        "domIds": [],
-        "actions": []
-      },
-      "ast": {
-        "parser": "acorn",
-        "parserVersion": "8.15.0",
-        "sourceType": "module",
-        "nodeType": "ArrowFunctionExpression",
-        "start": 1039,
-        "end": 1189,
-        "bodyStart": 1049,
-        "bodyEnd": 1188,
-        "functionSha256": "a218ff0f2f3ddae9e4e258a1ca818bd9ad8842c74cf1c019e3f7ad446001ae23",
-        "bodySha256": "ead09422c3078669364cc613f5b986df4094e9171f553f87d386ee8bad41ae47",
-        "async": true,
-        "generator": false,
-        "expressionBody": true,
-        "parentType": "Property",
-        "parentKey": "value",
+        "parentType": "VariableDeclarator",
+        "parentKey": "init",
         "parentIndex": null,
         "eventTypes": []
       },
@@ -197907,8 +197912,95 @@
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 28,
       "endLine": 28,
-      "column": 11,
-      "endColumn": 110,
+      "column": 26,
+      "endColumn": 54,
+      "name": "state",
+      "kind": "arrow",
+      "params": "",
+      "calls": [
+        "clone"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1173,
+        "end": 1201,
+        "bodyStart": 1178,
+        "bodyEnd": 1200,
+        "functionSha256": "ee9cabc9492aad4736a27b943ada296bb845eb79760b4fc641e29b10088ff7b4",
+        "bodySha256": "2d26857c08baf534861680c9c08bfb64e7fc2c79748e904716fe1005bc63ff96",
+        "async": false,
+        "generator": false,
+        "expressionBody": true,
+        "parentType": "Property",
+        "parentKey": "value",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03339",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/test-online-bridge-recovery.mjs",
+      "line": 29,
+      "endLine": 35,
+      "column": 10,
+      "endColumn": 5,
+      "name": "fetch",
+      "kind": "arrow",
+      "params": "url, init={}",
+      "calls": [
+        "fetchCalls.push",
+        "String"
+      ],
+      "refs": {
+        "routes": [],
+        "collections": [],
+        "models": [],
+        "storageKeys": [],
+        "env": [],
+        "domIds": [],
+        "actions": []
+      },
+      "ast": {
+        "parser": "acorn",
+        "parserVersion": "8.15.0",
+        "sourceType": "module",
+        "nodeType": "ArrowFunctionExpression",
+        "start": 1214,
+        "end": 1490,
+        "bodyStart": 1234,
+        "bodyEnd": 1490,
+        "functionSha256": "119532f93fb04a0cec86e69091b07700f4cd315ebbbea4aed63c7b53c2200ac9",
+        "bodySha256": "cf71f4950fe781aeff0ff9e246d1ba04aacf38c7d396e1587efce498497e6b96",
+        "async": true,
+        "generator": false,
+        "expressionBody": false,
+        "parentType": "Property",
+        "parentKey": "value",
+        "parentIndex": null,
+        "eventTypes": []
+      },
+      "id": "FUNC-03340",
+      "domain": "tooling"
+    },
+    {
+      "file": "tools/test-online-bridge-recovery.mjs",
+      "line": 33,
+      "endLine": 33,
+      "column": 13,
+      "endColumn": 112,
       "name": "json",
       "kind": "arrow",
       "params": "",
@@ -197927,10 +198019,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1083,
-        "end": 1182,
-        "bodyStart": 1093,
-        "bodyEnd": 1181,
+        "start": 1376,
+        "end": 1475,
+        "bodyStart": 1386,
+        "bodyEnd": 1474,
         "functionSha256": "de3e85b1efedff7eb1bf8980460e59b626149d2f380821e74a81763f71712b9d",
         "bodySha256": "a9093b8c01bd31773ae32cfe09288ec9efb91f17cc41d652a9c58bd6e5b7db10",
         "async": true,
@@ -197941,13 +198033,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03339",
+      "id": "FUNC-03341",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 30,
-      "endLine": 30,
+      "line": 36,
+      "endLine": 36,
       "column": 21,
       "endColumn": 54,
       "name": "addEventListener",
@@ -197970,10 +198062,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1212,
-        "end": 1245,
-        "bodyStart": 1223,
-        "bodyEnd": 1245,
+        "start": 1513,
+        "end": 1546,
+        "bodyStart": 1524,
+        "bodyEnd": 1546,
         "functionSha256": "a4982ca8884e6a721e2793f3906ca962277f0ad350e63293860ef7222d00b645",
         "bodySha256": "c44913e54a305a7450dd359ce8a2e0e667f207af2d406452c95edbcb88968b9e",
         "async": false,
@@ -197984,13 +198076,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03340",
+      "id": "FUNC-03342",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 31,
-      "endLine": 31,
+      "line": 37,
+      "endLine": 37,
       "column": 18,
       "endColumn": 64,
       "name": "dispatchEvent",
@@ -198013,10 +198105,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1265,
-        "end": 1311,
-        "bodyStart": 1272,
-        "bodyEnd": 1311,
+        "start": 1566,
+        "end": 1612,
+        "bodyStart": 1573,
+        "bodyEnd": 1612,
         "functionSha256": "53ffa459d1899d7d201e45bd0fe6aec6168d73b9578b83065c8be12f3e44495e",
         "bodySha256": "ad18e526fe7554d78ec086c4124e66c90f40e999ce8aa0ec20985f3a8a25c2fb",
         "async": false,
@@ -198027,13 +198119,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03341",
+      "id": "FUNC-03343",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 33,
-      "endLine": 33,
+      "line": 39,
+      "endLine": 39,
       "column": 35,
       "endColumn": 90,
       "name": "constructor",
@@ -198054,10 +198146,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionExpression",
-        "start": 1352,
-        "end": 1407,
-        "bodyStart": 1366,
-        "bodyEnd": 1407,
+        "start": 1653,
+        "end": 1708,
+        "bodyStart": 1667,
+        "bodyEnd": 1708,
         "functionSha256": "f85b4248f0b53aaa2fef3a4a99e2f6825096d0f40b8d51e1bf605dc37dfbbeea",
         "bodySha256": "a5b8b70206c4b7129080e5eb2fa4a2c7a835a93f158cb6dbd191b0d1cb3944ed",
         "async": false,
@@ -198068,13 +198160,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03342",
+      "id": "FUNC-03344",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "endLine": 34,
+      "line": 40,
+      "endLine": 40,
       "column": 40,
       "endColumn": 57,
       "name": "constructor",
@@ -198095,10 +198187,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionExpression",
-        "start": 1449,
-        "end": 1466,
-        "bodyStart": 1453,
-        "bodyEnd": 1466,
+        "start": 1750,
+        "end": 1767,
+        "bodyStart": 1754,
+        "bodyEnd": 1767,
         "functionSha256": "a58843cc0f8a78c62cbfe0e1e934011fd65993760b4eea8eb7e7dd5835dc84f5",
         "bodySha256": "840a6a7a9e2d45dc995402a45946bc5ccabfad4964871034a2bc3162c376ebe2",
         "async": false,
@@ -198109,13 +198201,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03343",
+      "id": "FUNC-03345",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "endLine": 34,
+      "line": 40,
+      "endLine": 40,
       "column": 78,
       "endColumn": 82,
       "name": "disconnect",
@@ -198136,10 +198228,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionExpression",
-        "start": 1487,
-        "end": 1491,
-        "bodyStart": 1489,
-        "bodyEnd": 1491,
+        "start": 1788,
+        "end": 1792,
+        "bodyStart": 1790,
+        "bodyEnd": 1792,
         "functionSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
         "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "async": false,
@@ -198150,13 +198242,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03344",
+      "id": "FUNC-03346",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 34,
-      "endLine": 34,
+      "line": 40,
+      "endLine": 40,
       "column": 64,
       "endColumn": 68,
       "name": "observe",
@@ -198177,10 +198269,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionExpression",
-        "start": 1473,
-        "end": 1477,
-        "bodyStart": 1475,
-        "bodyEnd": 1477,
+        "start": 1774,
+        "end": 1778,
+        "bodyStart": 1776,
+        "bodyEnd": 1778,
         "functionSha256": "4f888e090430fea81ed3e2f31a2824445a98e2877f0048502d57d8ead350cb5b",
         "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "async": false,
@@ -198191,13 +198283,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03345",
+      "id": "FUNC-03347",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 38,
-      "endLine": 38,
+      "line": 44,
+      "endLine": 44,
       "column": 21,
       "endColumn": 62,
       "name": "addEventListener",
@@ -198220,10 +198312,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1583,
-        "end": 1624,
-        "bodyStart": 1594,
-        "bodyEnd": 1624,
+        "start": 1884,
+        "end": 1925,
+        "bodyStart": 1895,
+        "bodyEnd": 1925,
         "functionSha256": "d6e672a251f84b9ddb5cdd24163f7612eaeaca5ff080081e98f70815242ef40e",
         "bodySha256": "5af0573244e5480666d02eb65a99304c67c537539c46d537b221c4729895b189",
         "async": false,
@@ -198234,13 +198326,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03346",
+      "id": "FUNC-03348",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 39,
-      "endLine": 39,
+      "line": 45,
+      "endLine": 45,
       "column": 18,
       "endColumn": 66,
       "name": "dispatchEvent",
@@ -198263,10 +198355,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1644,
-        "end": 1692,
-        "bodyStart": 1651,
-        "bodyEnd": 1692,
+        "start": 1945,
+        "end": 1993,
+        "bodyStart": 1952,
+        "bodyEnd": 1993,
         "functionSha256": "b153d53790cd7f2af987cb3b551833ba8b7f48d2939208a3554cbd78353b6b49",
         "bodySha256": "598a87037e176250983c44fae76c57e1ba967cff8ba831df491e73701df61679",
         "async": false,
@@ -198277,13 +198369,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03347",
+      "id": "FUNC-03349",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 43,
-      "endLine": 43,
+      "line": 49,
+      "endLine": 49,
       "column": 21,
       "endColumn": 37,
       "name": "reload",
@@ -198304,10 +198396,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1803,
-        "end": 1819,
-        "bodyStart": 1807,
-        "bodyEnd": 1819,
+        "start": 2104,
+        "end": 2120,
+        "bodyStart": 2108,
+        "bodyEnd": 2120,
         "functionSha256": "eb69f2cb6123bc2a377bb3acbdfe3bc76c5aacdcafcbadbbceff716199c3ce62",
         "bodySha256": "b976cb4be900d9571dfe2847da3579ae87c1bdd5fbdc42d402f707d377334d73",
         "async": false,
@@ -198318,13 +198410,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03348",
+      "id": "FUNC-03350",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 46,
-      "endLine": 46,
+      "line": 52,
+      "endLine": 52,
       "column": 16,
       "endColumn": 21,
       "name": "setInterval",
@@ -198345,10 +198437,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1914,
-        "end": 1919,
-        "bodyStart": 1918,
-        "bodyEnd": 1919,
+        "start": 2215,
+        "end": 2220,
+        "bodyStart": 2219,
+        "bodyEnd": 2220,
         "functionSha256": "7224eeebda4478f630710b84788dd1527e5c371c664457735cc8ac374d9afcd7",
         "bodySha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
         "async": false,
@@ -198359,13 +198451,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03349",
+      "id": "FUNC-03351",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 47,
-      "endLine": 47,
+      "line": 53,
+      "endLine": 53,
       "column": 18,
       "endColumn": 24,
       "name": "clearInterval",
@@ -198386,10 +198478,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1939,
-        "end": 1945,
-        "bodyStart": 1943,
-        "bodyEnd": 1945,
+        "start": 2240,
+        "end": 2246,
+        "bodyStart": 2244,
+        "bodyEnd": 2246,
         "functionSha256": "dec7a076dec41531da7f2d40bd4b896e27d45dd09ecd541190941bf88e6de894",
         "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "async": false,
@@ -198400,13 +198492,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03350",
+      "id": "FUNC-03352",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 48,
-      "endLine": 48,
+      "line": 54,
+      "endLine": 54,
       "column": 15,
       "endColumn": 37,
       "name": "setTimeout",
@@ -198429,10 +198521,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1962,
-        "end": 1984,
-        "bodyStart": 1968,
-        "bodyEnd": 1984,
+        "start": 2263,
+        "end": 2285,
+        "bodyStart": 2269,
+        "bodyEnd": 2285,
         "functionSha256": "f0168ad785a23fbd0678d898d742e9645812ef8b883204f0da74ada32ac6640d",
         "bodySha256": "5ced27f37dca7fb65d40b0741fe39d4e0accd64a4d60319968968f4ef68c65f7",
         "async": false,
@@ -198443,13 +198535,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03351",
+      "id": "FUNC-03353",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 49,
-      "endLine": 49,
+      "line": 55,
+      "endLine": 55,
       "column": 17,
       "endColumn": 23,
       "name": "clearTimeout",
@@ -198470,10 +198562,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 2003,
-        "end": 2009,
-        "bodyStart": 2007,
-        "bodyEnd": 2009,
+        "start": 2304,
+        "end": 2310,
+        "bodyStart": 2308,
+        "bodyEnd": 2310,
         "functionSha256": "dec7a076dec41531da7f2d40bd4b896e27d45dd09ecd541190941bf88e6de894",
         "bodySha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "async": false,
@@ -198484,15 +198576,15 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03352",
+      "id": "FUNC-03354",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 55,
-      "endLine": 55,
-      "column": 86,
-      "endColumn": 105,
+      "line": 62,
+      "endLine": 62,
+      "column": 97,
+      "endColumn": 116,
       "name": "reloads",
       "kind": "function-expression",
       "params": "",
@@ -198511,10 +198603,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionExpression",
-        "start": 2231,
-        "end": 2250,
-        "bodyStart": 2233,
-        "bodyEnd": 2250,
+        "start": 2553,
+        "end": 2572,
+        "bodyStart": 2555,
+        "bodyEnd": 2572,
         "functionSha256": "84018ca3799e3076eed1a6dad69370b13610b111fc94bfb0e61370a916fcda60",
         "bodySha256": "f455536636f3a9860fcf6013c52fd17810b717a6bc232a77c3bb82ce22f44a44",
         "async": false,
@@ -198525,13 +198617,13 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03353",
+      "id": "FUNC-03355",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 58,
-      "endLine": 58,
+      "line": 65,
+      "endLine": 65,
       "column": 0,
       "endColumn": 75,
       "name": "assert",
@@ -198554,10 +198646,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionDeclaration",
-        "start": 2256,
-        "end": 2331,
-        "bodyStart": 2290,
-        "bodyEnd": 2331,
+        "start": 2578,
+        "end": 2653,
+        "bodyStart": 2612,
+        "bodyEnd": 2653,
         "functionSha256": "72b20b947f921d05a9bb0287b9bfd230dc41d8524a8fefe2c81700e2a1911ff6",
         "bodySha256": "2e20e6fd53331fed4afca8c0ddebeaf2cfe1728b8df65e272224427b990e9ab9",
         "async": false,
@@ -198568,13 +198660,13 @@
         "parentIndex": 5,
         "eventTypes": []
       },
-      "id": "FUNC-03354",
+      "id": "FUNC-03356",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 69,
-      "endLine": 69,
+      "line": 85,
+      "endLine": 85,
       "column": 31,
       "endColumn": 61,
       "name": "<callback:h.documentEvents.some#0>",
@@ -198595,10 +198687,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 3031,
-        "end": 3061,
-        "bodyStart": 3034,
-        "bodyEnd": 3061,
+        "start": 4129,
+        "end": 4159,
+        "bodyStart": 4132,
+        "bodyEnd": 4159,
         "functionSha256": "988b44b0d61cbc1f26be72d58cd24710a9e69c4c73c61920b35a976ed07e9526",
         "bodySha256": "9a32a9a2c6fdfae4875eaf5069e23ef73530345462834fa935273f6cf2e72168",
         "async": false,
@@ -198609,13 +198701,13 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03355",
+      "id": "FUNC-03357",
       "domain": "tooling"
     },
     {
       "file": "tools/test-online-bridge-recovery.mjs",
-      "line": 70,
-      "endLine": 70,
+      "line": 86,
+      "endLine": 86,
       "column": 29,
       "endColumn": 70,
       "name": "<callback:h.windowEvents.some#0>",
@@ -198636,10 +198728,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 3132,
-        "end": 3173,
-        "bodyStart": 3135,
-        "bodyEnd": 3173,
+        "start": 4230,
+        "end": 4271,
+        "bodyStart": 4233,
+        "bodyEnd": 4271,
         "functionSha256": "5bb1fbfb0cc7c64393c08833274046672341c3cf3fb8a9aa1eb1d14311737e8c",
         "bodySha256": "9f713aa3c3e384ef8e4ce6d2cdf6028b9602ac0678ee10473f973013d5094e00",
         "async": false,
@@ -198650,7 +198742,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03356",
+      "id": "FUNC-03358",
       "domain": "tooling"
     },
     {
@@ -198693,7 +198785,7 @@
         "parentIndex": 0,
         "eventTypes": []
       },
-      "id": "FUNC-03357",
+      "id": "FUNC-03359",
       "domain": "tooling"
     },
     {
@@ -198736,7 +198828,7 @@
         "parentIndex": null,
         "eventTypes": []
       },
-      "id": "FUNC-03358",
+      "id": "FUNC-03360",
       "domain": "tooling"
     }
   ],
@@ -199332,6 +199424,10 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 122
+        },
+        {
+          "file": "src/r41-online-bridge-recovery.js",
+          "line": 86
         }
       ]
     },
@@ -204324,7 +204420,7 @@
         },
         {
           "file": "src/r41-online-bridge-recovery.js",
-          "line": 145
+          "line": 166
         },
         {
           "file": "src/r41-v82-combat-bridge.js",
@@ -204400,7 +204496,7 @@
       "sources": [
         {
           "file": "src/r41-online-bridge-recovery.js",
-          "line": 139
+          "line": 160
         }
       ]
     },
@@ -204410,7 +204506,7 @@
       "sources": [
         {
           "file": "src/r41-online-bridge-recovery.js",
-          "line": 140
+          "line": 161
         }
       ]
     },
@@ -204432,7 +204528,7 @@
         },
         {
           "file": "src/r41-online-bridge-recovery.js",
-          "line": 137
+          "line": 158
         }
       ]
     },
@@ -204446,7 +204542,7 @@
         },
         {
           "file": "src/r41-online-bridge-recovery.js",
-          "line": 138
+          "line": 159
         }
       ]
     },
@@ -251118,645 +251214,639 @@
     },
     {
       "file": "src/r41-online-bridge-recovery.js",
-      "line": 81,
-      "text": "if(Array.isArray(room.messages))online.actionLog=room.messages.slice(-50).map(payload=>({kind:'message',payload}));",
-      "id": "MOVE-07772"
-    },
-    {
-      "file": "src/r41-online-bridge-recovery.js",
-      "line": 111,
+      "line": 124,
       "text": "setTimeout(()=>location.reload(),25);",
-      "id": "MOVE-07773"
+      "id": "MOVE-07772"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
       "line": 13,
       "text": "const BLOCKED_RE=/fora do alcance\\|mova-se primeiro\\|exige adjac\\|não pode\\|impedido\\|sem alvo\\|movimento permitido\\|terreno custa movimento/i;",
-      "id": "MOVE-07774"
+      "id": "MOVE-07773"
     },
     {
       "file": "src/r41-v82-combat-bridge.js",
       "line": 59,
       "text": ".map(n=>String(n.innerText\\|\\|n.textContent\\|\\|'').trim())",
-      "id": "MOVE-07775"
+      "id": "MOVE-07774"
     },
     {
       "file": "styles.css",
       "line": 15,
       "text": ".v83-tech-grid{align-items:stretch}.v83-tech-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border-color:#50321f}",
-      "id": "MOVE-07776"
+      "id": "MOVE-07775"
     },
     {
       "file": "styles.css",
       "line": 28,
       "text": ".v83-mentor{position:relative;display:flex;flex-direction:column;gap:7px}.v83-mentor>img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid #593821}.v83-mentor.unavailable{opacity:.7}.v83-mentor h3,.v83-mentor p{margin:0}.v83-mentor small{color:#9d8b7d}",
-      "id": "MOVE-07777"
+      "id": "MOVE-07776"
     },
     {
       "file": "styles.css",
       "line": 30,
       "text": ".v83-big-clock{font-size:2rem;font-weight:900;color:#ff9a3d;margin:14px 0}.v83-catalog-card{position:relative;display:flex;flex-direction:column;gap:8px}.v83-catalog-card.owned{box-shadow:inset 0 3px 0 #2f9c5a}.v83-catalog-card.trainable{box-shadow:inset 0 3px 0 #2f79a8}.v83-catalog-card.blocked{box-shadow:inset 0 3px 0 #895326}.v83-load-more{display:block;margin:18px auto}",
-      "id": "MOVE-07778"
+      "id": "MOVE-07777"
     },
     {
       "file": "styles.css",
       "line": 35,
       "text": "*{box-sizing:border-box}html,body{height:100%;margin:0;background:radial-gradient(circle at 70% 0,#29170c 0,#0f0c0a 45%);color:var(--text);font-family:Segoe UI,Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app-shell{min-height:100vh;display:grid;grid-template-columns:280px 1fr}.sidebar{position:sticky;top:0;height:100vh;background:linear-gradient(180deg,#21150e,#120e0b);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:20;box-",
-      "id": "MOVE-07779"
+      "id": "MOVE-07778"
     },
     {
       "file": "styles.css",
       "line": 36,
       "text": "@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.sticky-card{position:static}}",
-      "id": "MOVE-07780"
+      "id": "MOVE-07779"
     },
     {
       "file": "styles.css",
       "line": 37,
       "text": "@media(max-width:820px){.app-shell{grid-template-columns:1fr}.sidebar{position:fixed;left:-290px;width:280px;transition:left .2s}.sidebar.open{left:0}.mobile-only{display:inline-flex}.screen{padding:14px}.topbar{padding:9px 12px}.grid-2,.grid-3,.grid-4,.battle-layout,.form-grid{grid-template-columns:1fr}.hero-content{padding:22px}.hero{min-height:200px}.top-resources{max-width:calc(100vw - 110px);overflow:auto;flex-wrap:nowrap}.resource-pill{white-space:nowrap}.catalog-grid{grid-template-columns",
-      "id": "MOVE-07781"
+      "id": "MOVE-07780"
     },
     {
       "file": "styles.css",
       "line": 45,
       "text": ".creation-shell{display:grid;gap:18px}.creation-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#2d1d12,#17100c);box-shadow:var(--shadow)}.creation-head h1{margin:4px 0 6px;font-size:clamp(25px,4vw,42px)}.creation-head p{margin:0;color:var(--muted);max-width:820px;line-height:1.55}.creation-head img{width:110px;height:72px;object-fit:contain;opacity:.9}.wizard-progr",
-      "id": "MOVE-07782"
+      "id": "MOVE-07781"
     },
     {
       "file": "styles.css",
       "line": 49,
       "text": ".item-ref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:10px}.item-ref-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#16110e;display:grid;grid-template-columns:86px 1fr;min-height:120px}.item-ref-image{width:86px;height:100%;min-height:120px;object-fit:cover;background:#0d0a08}.item-ref-placeholder{width:86px;min-height:120px;display:grid;place-items:center;font-size:34px;background:linear-gradient(145deg,#261a12,#0f0c0a)}.item-",
-      "id": "MOVE-07783"
+      "id": "MOVE-07782"
     },
     {
       "file": "styles.css",
       "line": 52,
       "text": ".village-hero{position:relative;min-height:245px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:28px;box-shadow:var(--shadow);margin-bottom:16px}.village-hero:before{content:\"\";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,7,5,.93),rgba(10,7,5,.55),rgba(10,7,5,.08))}.village-hero>div{position:relative;z-index:1;max-width:720px}.village-hero h1{font-size:clamp(30px,5vw,",
-      "id": "MOVE-07784"
+      "id": "MOVE-07783"
     },
     {
       "file": "styles.css",
       "line": 53,
       "text": ".ai-router-card{margin:0 0 16px;border-color:#355d79;background:linear-gradient(180deg,#14202a,#121514)}.provider-strip{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.provider-chip{display:grid;gap:2px;border:1px solid #36566d;background:#0d1820;border-radius:10px;padding:8px 10px}.provider-chip small{font-size:10px;color:#a9cce3;max-width:190px;overflow:hidden;text-overflow:ellipsis}.route-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:7px}.provider-list{dis",
-      "id": "MOVE-07785"
+      "id": "MOVE-07784"
     },
     {
       "file": "styles.css",
       "line": 54,
       "text": ".visual-catalog-card{overflow:hidden;padding:0}.visual-catalog-card .visual-top{height:130px;background:linear-gradient(145deg,#302014,#100d0b);position:relative;display:grid;place-items:center}.visual-catalog-card .visual-top img{width:100%;height:100%;object-fit:cover}.visual-catalog-card .visual-top .visual-placeholder{font-size:45px;opacity:.7}.visual-catalog-card .visual-body{padding:14px}.origin-info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:10px}.orig",
-      "id": "MOVE-07786"
+      "id": "MOVE-07785"
     },
     {
       "file": "styles.css",
       "line": 57,
       "text": "@media(max-width:820px){.creation-head{padding:16px}.creation-head img,.launcher-hero>img{display:none}.launcher-hero{padding:20px;min-height:0}.slot-grid{grid-template-columns:1fr}.slot-card{grid-template-columns:84px 1fr}.slot-card>img{width:84px;height:105px}.profile-sheet{grid-template-columns:1fr;text-align:center}.avatar-editor{grid-template-columns:1fr;justify-items:center;text-align:center}.summary-grid,.location-grid{grid-template-columns:1fr}.wizard-actions{bottom:6px}.wizard-actions .",
-      "id": "MOVE-07787"
+      "id": "MOVE-07786"
     },
     {
       "file": "styles.css",
       "line": 58,
       "text": "@media(max-width:560px){.skill-create-grid,.apt-create-grid,.profession-grid{grid-template-columns:1fr}.inline-form{flex-direction:column}.slot-card{grid-template-columns:1fr}.slot-card>img{width:100%;height:210px}.creation-head h1,.launcher-hero h1,.village-hero h1{font-size:28px}.wizard-actions{position:static}.village-hero{padding:20px;min-height:220px}}",
-      "id": "MOVE-07788"
+      "id": "MOVE-07787"
     },
     {
       "file": "styles.css",
       "line": 78,
       "text": ".launcher-hero{position:relative;overflow:hidden;background-image:linear-gradient(100deg,rgba(20,13,9,.97) 0%,rgba(24,15,10,.9) 46%,rgba(14,11,9,.4) 100%),url('assets/original/ui/layout_home_1.jpg');background-size:cover;background-position:center}",
-      "id": "MOVE-07789"
+      "id": "MOVE-07788"
     },
     {
       "file": "styles.css",
       "line": 79,
       "text": ".launcher-hero:after{content:\"\";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(244,123,32,.16),transparent 35%);pointer-events:none}",
-      "id": "MOVE-07790"
+      "id": "MOVE-07789"
     },
     {
       "file": "styles.css",
       "line": 80,
       "text": ".launcher-hero>div,.launcher-hero>img{position:relative;z-index:1}.launcher-hero>img{filter:drop-shadow(0 12px 25px rgba(0,0,0,.5))}",
-      "id": "MOVE-07791"
+      "id": "MOVE-07790"
     },
     {
       "file": "styles.css",
       "line": 83,
       "text": ".creation-head{background-image:linear-gradient(105deg,rgba(45,29,18,.96),rgba(23,16,12,.92)),url('assets/original/ui/layout_bg_home.png');background-size:cover;background-position:center}",
-      "id": "MOVE-07792"
+      "id": "MOVE-07791"
     },
     {
       "file": "styles.css",
       "line": 111,
       "text": ".location-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}.location-card{padding:9px}",
-      "id": "MOVE-07793"
+      "id": "MOVE-07792"
     },
     {
       "file": "styles.css",
       "line": 113,
       "text": ".map-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.map-tabs .btn.active{box-shadow:inset 0 -3px var(--accent2)}",
-      "id": "MOVE-07794"
+      "id": "MOVE-07793"
     },
     {
       "file": "styles.css",
       "line": 114,
       "text": ".map-workspace{display:grid;grid-template-columns:minmax(0,1.55fr) 330px;gap:11px;align-items:start}",
-      "id": "MOVE-07795"
+      "id": "MOVE-07794"
     },
     {
       "file": "styles.css",
       "line": 115,
       "text": ".play-map{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:13px;background:#110d0a;aspect-ratio:16/10;min-height:430px}",
-      "id": "MOVE-07796"
+      "id": "MOVE-07795"
     },
     {
       "file": "styles.css",
       "line": 116,
       "text": ".play-map>img.map-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.86) brightness(.7)}",
-      "id": "MOVE-07797"
+      "id": "MOVE-07796"
     },
     {
       "file": "styles.css",
       "line": 117,
       "text": ".play-map:after{content:\"\";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,5,4,.1),rgba(7,5,4,.32))}",
-      "id": "MOVE-07798"
+      "id": "MOVE-07797"
     },
     {
       "file": "styles.css",
       "line": 118,
       "text": ".map-grid-cells{position:absolute;inset:0;display:grid;z-index:2}.map-cell{border:1px solid rgba(255,255,255,.055);background:transparent;min-width:0;padding:0}.map-cell:hover{background:rgba(244,123,32,.12);border-color:rgba(255,179,71,.35)}",
-      "id": "MOVE-07799"
+      "id": "MOVE-07798"
     },
     {
       "file": "styles.css",
       "line": 119,
       "text": ".map-pin{position:absolute;z-index:5;transform:translate(-50%,-100%);border:1px solid rgba(255,179,71,.7);background:rgba(17,12,9,.92);color:var(--text);border-radius:9px;padding:5px 7px;font-size:11px;box-shadow:0 5px 16px rgba(0,0,0,.35);white-space:nowrap}",
-      "id": "MOVE-07800"
+      "id": "MOVE-07799"
     },
     {
       "file": "styles.css",
       "line": 120,
       "text": ".map-pin:hover,.map-pin.selected{background:rgba(244,123,32,.9);color:#fff}.map-pin span{font-size:16px;margin-right:4px}",
-      "id": "MOVE-07801"
+      "id": "MOVE-07800"
     },
     {
       "file": "styles.css",
       "line": 121,
       "text": ".player-marker{position:absolute;z-index:7;transform:translate(-50%,-50%);width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:#0d68ae;border:3px solid #d9f2ff;box-shadow:0 0 0 4px rgba(14,116,184,.25),0 5px 18px #000;font-size:15px;pointer-events:none}",
-      "id": "MOVE-07802"
+      "id": "MOVE-07801"
     },
     {
       "file": "styles.css",
       "line": 122,
       "text": ".map-legend{position:absolute;left:8px;bottom:8px;z-index:8;padding:6px 8px;border-radius:8px;background:rgba(10,8,7,.86);border:1px solid var(--line);font-size:11px;color:var(--muted)}",
-      "id": "MOVE-07803"
+      "id": "MOVE-07802"
     },
     {
       "file": "styles.css",
       "line": 123,
       "text": ".map-side{display:grid;gap:10px}.map-side .card{margin:0}.map-locations{display:grid;gap:6px;max-height:370px;overflow:auto}.map-location-row{display:grid;grid-template-columns:33px minmax(0,1fr) auto;gap:7px;align-items:center;border:1px solid var(--line);background:#15100d;color:var(--text);border-radius:9px;padding:7px;text-align:left}.map-location-row:hover,.map-location-row.selected{border-color:var(--accent);background:rgba(244,123,32,.09)}.map-location-row .ico{font-size:20px}.map-locatio",
-      "id": "MOVE-07804"
+      "id": "MOVE-07803"
     },
     {
       "file": "styles.css",
       "line": 124,
       "text": ".world-map{background:radial-gradient(circle at 52% 62%,rgba(44,89,44,.38),transparent 19%),radial-gradient(circle at 22% 72%,rgba(149,113,53,.34),transparent 23%),radial-gradient(circle at 78% 68%,rgba(40,91,116,.34),transparent 22%),radial-gradient(circle at 66% 21%,rgba(117,116,145,.3),transparent 19%),linear-gradient(145deg,#1b2118,#202219 42%,#171b18)}",
-      "id": "MOVE-07805"
+      "id": "MOVE-07804"
     },
     {
       "file": "styles.css",
       "line": 125,
       "text": ".world-map .terrain-lines{position:absolute;inset:0;z-index:1;width:100%;height:100%;opacity:.7}.world-node{position:absolute;z-index:5;transform:translate(-50%,-50%);width:62px;border:0;background:transparent;color:#fff;text-align:center;padding:0}.world-node img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid #e9d2b6;box-shadow:0 5px 15px #000}.world-node b{display:block;margin-top:3px;font-size:10px;text-shadow:0 2px 4px #000}.world-node.selected img{border-color:va",
-      "id": "MOVE-07806"
+      "id": "MOVE-07805"
     },
     {
       "file": "styles.css",
       "line": 126,
       "text": ".travel-card .route-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.route-meta div{background:#110e0c;border:1px solid var(--line);border-radius:8px;padding:6px;text-align:center}.route-meta b,.route-meta small{display:block}.route-meta small{color:var(--muted);font-size:10px}",
-      "id": "MOVE-07807"
+      "id": "MOVE-07806"
     },
     {
       "file": "styles.css",
       "line": 127,
       "text": ".travel-log{display:grid;gap:5px;max-height:160px;overflow:auto}.travel-log div{font-size:11px;padding:6px;border-left:2px solid var(--line);background:#120e0c}",
-      "id": "MOVE-07808"
+      "id": "MOVE-07807"
     },
     {
       "file": "styles.css",
       "line": 128,
       "text": ".mission-travel-list{display:grid;gap:6px;max-height:300px;overflow:auto}.mission-travel-row{border:1px solid var(--line);border-radius:8px;padding:7px;background:#15100d}.mission-travel-row strong,.mission-travel-row small{display:block}.mission-travel-row small{color:var(--muted)}",
-      "id": "MOVE-07809"
+      "id": "MOVE-07808"
     },
     {
       "file": "styles.css",
       "line": 131,
       "text": "@media(max-width:1050px){.map-workspace{grid-template-columns:1fr}.map-side{grid-template-columns:repeat(2,minmax(0,1fr))}.play-map{min-height:380px}}",
-      "id": "MOVE-07810"
+      "id": "MOVE-07809"
     },
     {
       "file": "styles.css",
       "line": 132,
       "text": "@media(max-width:680px){.screen{padding:9px}.topbar{padding:6px 8px}.map-side{grid-template-columns:1fr}.play-map{min-height:330px;aspect-ratio:4/5}.map-pin{font-size:0;padding:4px}.map-pin span{font-size:17px;margin:0}.world-node{width:46px}.world-node img{width:36px;height:36px}.world-node b{font-size:8px}.ai-sheet-snapshot{grid-template-columns:55px minmax(0,1fr)}.ai-sheet-snapshot img{width:55px;height:55px}}",
-      "id": "MOVE-07811"
+      "id": "MOVE-07810"
     },
     {
       "file": "styles.css",
       "line": 147,
       "text": ".map-tabs{margin-bottom:7px}.map-tabs .btn{padding:6px 9px}",
-      "id": "MOVE-07812"
+      "id": "MOVE-07811"
     },
     {
       "file": "styles.css",
       "line": 148,
       "text": ".map-workspace{grid-template-columns:minmax(0,1fr) 292px;gap:8px}",
-      "id": "MOVE-07813"
+      "id": "MOVE-07812"
     },
     {
       "file": "styles.css",
       "line": 149,
       "text": ".play-map{aspect-ratio:auto;height:calc(100vh - 225px);min-height:525px;border-radius:10px}",
-      "id": "MOVE-07814"
+      "id": "MOVE-07813"
     },
     {
       "file": "styles.css",
       "line": 150,
       "text": ".map-side{gap:7px}.map-side .card{padding:9px}.map-side h2,.map-side h3{margin:0 0 6px;font-size:15px}",
-      "id": "MOVE-07815"
+      "id": "MOVE-07814"
     },
     {
       "file": "styles.css",
       "line": 151,
       "text": ".map-locations{max-height:calc(100vh - 380px)}.map-location-row{padding:6px}.map-location-row .ico{font-size:17px}.map-location-row b{font-size:11px}.map-location-row small{font-size:9px}",
-      "id": "MOVE-07816"
+      "id": "MOVE-07815"
     },
     {
       "file": "styles.css",
       "line": 152,
       "text": ".map-pin{padding:4px 6px;font-size:10px}.map-pin span{font-size:14px}",
-      "id": "MOVE-07817"
+      "id": "MOVE-07816"
     },
     {
       "file": "styles.css",
       "line": 172,
       "text": ".tactical-layout{display:grid;grid-template-columns:minmax(470px,1.35fr) minmax(310px,.65fr);gap:10px}.tactical-board{position:relative;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(5,1fr);gap:2px;aspect-ratio:7/5;min-height:390px;background:#080706;border:1px solid var(--line);padding:5px;border-radius:12px;overflow:hidden}.tactical-cell{position:relative;border:1px solid rgba(255,255,255,.08);border-radius:5px;background:rgba(68,58,44,.35);min-width:0}.tactical-cel",
-      "id": "MOVE-07818"
+      "id": "MOVE-07817"
     },
     {
       "file": "styles.css",
       "line": 176,
       "text": ".mission-mini{border:1px solid rgba(217,150,69,.35);border-radius:10px;padding:9px;background:#130f0d;margin:8px 0}.route-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.route-mini-grid button{min-height:92px;border:1px solid var(--line);border-radius:8px;background:#0e0c0b;color:var(--text);padding:7px;text-align:left}.route-mini-grid button:hover{border-color:var(--accent);background:rgba(217,150,69,.08)}",
-      "id": "MOVE-07819"
+      "id": "MOVE-07818"
     },
     {
       "file": "styles.css",
       "line": 178,
       "text": "@media(max-width:980px){.inventory-layout,.shop-layout,.training-layout,.tactical-layout{grid-template-columns:1fr}.tactical-board{min-height:350px}}@media(max-width:620px){.inventory-grid,.shop-grid,.training-grid{grid-template-columns:1fr}.tactical-board{min-height:300px}.jutsu-combat-grid{grid-template-columns:1fr}.route-mini-grid{grid-template-columns:1fr}.combat-hud{grid-template-columns:1fr}}",
-      "id": "MOVE-07820"
+      "id": "MOVE-07819"
     },
     {
       "file": "styles.css",
       "line": 184,
       "text": ".screen{padding:14px 16px 30px}.section-title.compact-title{margin-bottom:10px}.compact-title h1{margin:0 0 2px;font-size:28px}.compact-title p{margin:0;max-width:900px}.card{padding:13px}.world-map.world-v74{background-image:linear-gradient(rgba(10,15,14,.12),rgba(10,10,8,.38)),url('assets/maps/world_v74.svg')!important;background-size:cover!important;background-position:center!important}.world-map.world-v74 .map-grid-cells{background:rgba(6,9,8,.14)}",
-      "id": "MOVE-07821"
+      "id": "MOVE-07820"
     },
     {
       "file": "styles.css",
       "line": 185,
       "text": ".event-map-pin{position:absolute;transform:translate(-50%,-50%);z-index:9;display:flex;align-items:center;gap:5px;max-width:180px;padding:5px 8px;border-radius:999px;border:1px solid #ed9a42;background:#1a100bcc;color:#fff8e9;box-shadow:0 5px 18px #0009;cursor:pointer}.event-map-pin span{font-size:17px}.event-map-pin b{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.event-map-pin.tipo-canonico{border-color:#f3bf55}.event-map-pin.tipo-sazonal{border-color:#d86df0}.event-",
-      "id": "MOVE-07822"
+      "id": "MOVE-07821"
     },
     {
       "file": "styles.css",
       "line": 186,
       "text": ".shop-layout-v74{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:10px}.shop-topline{display:flex;align-items:center;gap:8px;justify-content:space-between;position:sticky;top:0;z-index:5;background:#100b08e8;backdrop-filter:blur(10px);padding:6px;border-radius:9px}.compact-tabs{display:flex;gap:5px;overflow:auto;padding:6px 0}.compact-tabs .btn{padding:6px 9px;font-size:11px;white-space:nowrap}.shop-grid-v74{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:7px",
-      "id": "MOVE-07823"
+      "id": "MOVE-07822"
     },
     {
       "file": "styles.css",
       "line": 190,
       "text": "@media(max-width:1150px){.shop-layout-v74,.inventory-layout-v74{grid-template-columns:1fr}.shop-side-v74{position:static}.kurai-card{grid-template-columns:190px 1fr}.kurai-techs{grid-column:1/-1}.shop-grid-v74{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}@media(max-width:720px){.screen{padding:10px}.shop-card-v74{grid-template-columns:72px 1fr}.shop-card-v74>img{width:72px;height:72px}.kurai-card{grid-template-columns:1fr}.event-map-pin b{display:none}.dojo-strip-v74{align-items:fl",
-      "id": "MOVE-07824"
+      "id": "MOVE-07823"
     },
     {
       "file": "styles.css",
       "line": 196,
       "text": ".rpg-desk-v75{display:grid;grid-template-columns:minmax(230px,280px) minmax(420px,1fr) minmax(300px,390px);gap:10px;align-items:start;max-width:1800px;margin:0 auto}.rpg-sheet-v75{position:sticky;top:8px;max-height:calc(100vh - 80px);overflow:auto;padding:12px}.rpg-palette-v75{position:sticky;top:8px;max-height:calc(100vh - 80px);display:flex;flex-direction:column;gap:8px}.rpg-narrative-v75{min-width:0;display:flex;flex-direction:column;gap:8px}",
-      "id": "MOVE-07825"
+      "id": "MOVE-07824"
     },
     {
       "file": "styles.css",
       "line": 205,
       "text": ".creation-nav-v75{position:sticky;top:0;z-index:5;display:flex;gap:4px;overflow-x:auto;background:var(--bg);padding:7px 0;border-bottom:1px solid var(--line);margin-bottom:8px}.creation-nav-v75 button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:8px;padding:6px 8px;display:flex;gap:5px;align-items:center;white-space:nowrap;font-size:10px}.creation-nav-v75 button span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:rgba(",
-      "id": "MOVE-07826"
+      "id": "MOVE-07825"
     },
     {
       "file": "styles.css",
       "line": 207,
       "text": "@media(max-width:1350px){.rpg-desk-v75{grid-template-columns:230px minmax(380px,1fr) 320px}.creation-live-v75{position:static;width:auto;max-height:none}.creation-live-v75 .card{box-shadow:none}body:has(.creation-live-v75) .screen{padding-right:var(--screen-pad,16px)}}",
-      "id": "MOVE-07827"
+      "id": "MOVE-07826"
     },
     {
       "file": "styles.css",
       "line": 208,
       "text": "@media(max-width:1050px){.rpg-desk-v75{grid-template-columns:220px minmax(0,1fr)}.rpg-palette-v75{position:static;grid-column:1/-1;max-height:none}.rpg-action-list{grid-template-columns:repeat(2,minmax(0,1fr));max-height:520px}.rpg-sheet-v75{top:4px}.rpg-desk-title{align-items:flex-start;flex-direction:column}.kurai-actions-grid{grid-template-columns:1fr 1fr}}",
-      "id": "MOVE-07828"
+      "id": "MOVE-07827"
     },
     {
       "file": "styles.css",
       "line": 209,
       "text": "@media(max-width:720px){.rpg-desk-v75{grid-template-columns:1fr}.rpg-sheet-v75,.rpg-palette-v75{position:static;max-height:none}.rpg-action-list{grid-template-columns:1fr}.rpg-desk-title .button-row{width:100%}.rpg-desk-title .btn{flex:1}.kurai-hero{grid-template-columns:1fr}.kurai-hero>img{width:100%;height:140px}.kurai-actions-grid{grid-template-columns:1fr}.rinne-progress-v75 .card-header{grid-template-columns:1fr}.rinne-progress-v75 .card-header img{width:100%;height:110px}.creation-nav-v75{",
-      "id": "MOVE-07829"
+      "id": "MOVE-07828"
     },
     {
       "file": "styles.css",
       "line": 222,
       "text": ".rpg-desk-v76{display:grid;grid-template-columns:minmax(245px,285px) minmax(430px,1fr) minmax(340px,405px);gap:10px;align-items:start}.rpg-sheet-v76{position:sticky;top:78px;max-height:calc(100vh - 92px);overflow:auto;padding:11px}.rpg-narrative-v76{display:grid;gap:9px;min-width:0}.rpg-palette-v76{position:sticky;top:78px;max-height:calc(100vh - 92px);display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:7px;min-width:0}.rpg-action-list.v76{overflow:auto;display:grid;gap:6px;padding-right",
-      "id": "MOVE-07830"
+      "id": "MOVE-07829"
     },
     {
       "file": "styles.css",
       "line": 223,
       "text": ".search-wrap-v76{position:relative;margin-top:7px}.search-wrap-v76>span{position:absolute;left:10px;top:9px;color:var(--muted);z-index:1}.search-wrap-v76 .input{padding-left:30px;margin:0}.selected-action-v76{padding:9px;border-color:rgba(244,123,32,.6)}.selected-action-v76 p{font-size:10px;line-height:1.4;margin:6px 0 0}.selected-action-head-v76{display:grid;grid-template-columns:64px 1fr;gap:7px;align-items:center;margin-top:5px}.selected-action-head-v76 img{width:64px;height:44px;border-radiu",
-      "id": "MOVE-07831"
+      "id": "MOVE-07830"
     },
     {
       "file": "styles.css",
       "line": 224,
       "text": ".narrative-stage.v76{padding:15px}.narrative-text.v76{max-width:none;font-size:15px;line-height:1.78;padding:18px 4px;white-space:normal}.rpg-compose.v76{position:sticky;bottom:6px;z-index:5;box-shadow:0 -9px 28px rgba(0,0,0,.25)}.spend-flash-v76{margin:-2px 0 10px;padding:8px 11px;border-radius:9px;border:1px solid rgba(97,174,242,.45);background:rgba(23,110,180,.13);font-size:11px;color:#d9efff}.spend-flash-v76 b{color:#fff}",
-      "id": "MOVE-07832"
+      "id": "MOVE-07831"
     },
     {
       "file": "styles.css",
       "line": 228,
       "text": "@media(max-width:1370px){.rpg-desk-v76{grid-template-columns:245px minmax(400px,1fr) 350px}.creation-live-v75.v76{position:static;width:auto;max-height:none}body:has(.creation-live-v75.v76) .screen{padding-right:24px}}",
-      "id": "MOVE-07833"
+      "id": "MOVE-07832"
     },
     {
       "file": "styles.css",
       "line": 229,
       "text": "@media(max-width:1100px){.rpg-desk-v76{grid-template-columns:235px minmax(0,1fr)}.rpg-palette-v76{position:static;grid-column:1/-1;max-height:none;grid-template-rows:auto auto auto}.rpg-action-list.v76{grid-template-columns:repeat(2,minmax(0,1fr));max-height:580px}.rpg-sheet-v76{top:76px}}",
-      "id": "MOVE-07834"
+      "id": "MOVE-07833"
     },
     {
       "file": "styles.css",
       "line": 230,
       "text": "@media(max-width:760px){.rpg-desk-v76{grid-template-columns:1fr}.rpg-sheet-v76,.rpg-palette-v76{position:static;max-height:none}.rpg-action-list.v76{grid-template-columns:1fr;max-height:none}.rpg-tabs.v76{grid-template-columns:repeat(2,minmax(0,1fr))}.action-confirm-v76{grid-template-columns:1fr}.action-confirm-v76>img{width:100%;height:145px}.rpg-compose.v76{position:static}}",
-      "id": "MOVE-07835"
+      "id": "MOVE-07834"
     },
     {
       "file": "styles.css",
       "line": 274,
       "text": ".v8-router-live{display:grid;grid-template-columns:1fr 1.4fr;gap:14px;margin-bottom:12px}.v8-route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.v8-route-grid div{padding:7px 9px;border:1px solid rgba(255,255,255,.07);border-radius:9px;background:rgba(0,0,0,.18);display:flex;flex-direction:column}.v8-route-grid small{text-transform:uppercase;color:#c2a78d}.v8-route-grid b{color:#ffb15f}",
-      "id": "MOVE-07836"
+      "id": "MOVE-07835"
     },
     {
       "file": "styles.css",
       "line": 279,
       "text": ".resource-pill.live.xp{position:relative;overflow:hidden;min-width:150px}.resource-pill.live.xp i{position:absolute;left:0;bottom:0;height:2px;width:var(--p);background:linear-gradient(90deg,#ff7a18,#9e63ff)}",
-      "id": "MOVE-07837"
+      "id": "MOVE-07836"
     },
     {
       "file": "styles.css",
       "line": 280,
       "text": ".v81-grim-layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:14px;align-items:start}.v81-grim-nav{position:sticky;top:72px;display:grid;gap:12px}.v81-grim-nav>div{display:grid;gap:6px}.v81-grim-nav button{border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--text);border-radius:10px;padding:10px 12px;text-align:left;display:flex;justify-content:space-between;gap:8px;cursor:pointer}.v81-grim-nav button.active{border-color:var(--accent);background:rgba(255,126,3",
-      "id": "MOVE-07838"
+      "id": "MOVE-07837"
     },
     {
       "file": "styles.css",
       "line": 285,
       "text": ".v81-router-panel{margin-bottom:16px}.v81-route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin:12px 0}.v81-route-grid>div{border:1px solid var(--line);border-radius:9px;padding:9px;background:rgba(255,255,255,.02);display:grid;gap:3px}.v81-route-grid small{color:var(--muted)}.v81-route-grid b{color:#fff}.v81-router-panel details{margin-top:12px}.v81-router-panel .code{white-space:pre-wrap;margin-top:8px}",
-      "id": "MOVE-07839"
+      "id": "MOVE-07838"
     },
     {
       "file": "styles.css",
       "line": 286,
       "text": ".kurai-context{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.rpg-sheet-v76 .v8-progress-card{margin-top:10px}.rpg-sheet-v76 .v8-xp-table{max-height:165px;overflow:auto}.rpg-action-list.v76{scrollbar-width:thin}.rpg-action-card img{object-position:center}.rpg-palette-v76 .rpg-tabs.v76{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.rpg-palette-v76 .rpg-tabs.v76 button{min-width:0;font-size:11px}.rpg-palette-v76 .rpg-tabs.v76 button b{margin-left:4px}",
-      "id": "MOVE-07840"
+      "id": "MOVE-07839"
     },
     {
       "file": "styles.css",
       "line": 287,
       "text": "@media(max-width:1180px){.v81-grim-layout{grid-template-columns:1fr}.v81-grim-nav{position:static}.v81-grim-nav>div{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.v81-codex-hero{grid-template-columns:1fr}.v81-codex-hero>img{height:300px}.v81-private-overview{grid-template-columns:1fr 1fr}.v81-xp-main{grid-template-columns:1fr}}",
-      "id": "MOVE-07841"
+      "id": "MOVE-07840"
     },
     {
       "file": "styles.css",
       "line": 289,
       "text": ".v81-ai-route-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:10px 13px}.v81-ai-route-strip>div{display:grid;gap:3px;min-width:0}.v81-ai-route-strip b{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}",
-      "id": "MOVE-07842"
+      "id": "MOVE-07841"
     },
     {
       "file": "styles.css",
       "line": 295,
       "text": ".v81-command-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.v81-command-grid button{min-width:0}.v81-command-grid button:disabled{opacity:.38;cursor:not-allowed}.v81-command-grid .move-command{cursor:default}.v81-combat-tech-panel{min-width:0}.v81-combat-tabs{display:flex;gap:5px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}.v81-combat-tabs button{flex:0 0 auto;border:1px solid var(--line);background:#130e0c;color:var(--text);border-radius:999px;padding:6px 9px;cursor:pointer;fon",
-      "id": "MOVE-07843"
+      "id": "MOVE-07842"
     },
     {
       "file": "styles.css",
       "line": 305,
       "text": ".v82-ai-health{display:grid;text-align:right;color:#75d49a}.v82-ai-health small{color:var(--muted);max-width:520px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.v82-ai-layout{display:grid;grid-template-columns:270px minmax(420px,1fr) 390px;gap:10px;align-items:start}.v82-live-sheet,.v82-action-drawer{position:sticky;top:77px;max-height:calc(100vh - 90px);overflow:auto}.v82-story{display:grid;gap:9px}.v82-scene{min-height:390px}.v82-narrative{font-size:15px;line-height:1.75;padding:1",
-      "id": "MOVE-07844"
+      "id": "MOVE-07843"
     },
     {
       "file": "styles.css",
       "line": 306,
       "text": ".v82-codex-title{margin:10px 0 14px}.v82-codex-title h1{font-size:38px;margin:0}.v82-rules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}.v82-rules-grid p{color:var(--muted);line-height:1.55}.v82-provider-grid,.v82-route-list{display:grid;gap:7px}.v82-provider-grid>div,.v82-route-list>div{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:9px}.v82-provider-grid small{color:var(-",
-      "id": "MOVE-07845"
+      "id": "MOVE-07844"
     },
     {
       "file": "styles.css",
       "line": 307,
       "text": ".v82-combat-layout{display:grid;grid-template-columns:minmax(500px,1fr) minmax(390px,.72fr);gap:12px;align-items:start}.v82-combat-layout>main,.v82-combat-layout>aside{display:grid;gap:10px}.v82-board{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;min-height:430px;background:linear-gradient(rgba(15,25,16,.72),rgba(13,13,10,.82)),url('assets/original/ui/layout_combate_bg_log.png');background-size:cover;padding:10px;border-radius:12px}.v82-board button{min-height:70px;border:1px solid rg",
-      "id": "MOVE-07846"
+      "id": "MOVE-07845"
     },
     {
       "file": "styles.css",
       "line": 308,
       "text": "@media(max-width:1280px){.v82-ai-layout{grid-template-columns:240px 1fr}.v82-action-drawer{grid-column:1/-1;position:static;max-height:none}.v82-ai-quick{grid-template-columns:repeat(2,1fr)}.v82-combat-layout{grid-template-columns:1fr}.v82-dashboard{grid-template-columns:1fr}.v82-action-launcher{grid-template-columns:repeat(2,1fr)}}",
-      "id": "MOVE-07847"
+      "id": "MOVE-07846"
     },
     {
       "file": "styles.css",
       "line": 309,
       "text": "@media(max-width:800px){.v82-page-head{align-items:flex-start;flex-direction:column}.v82-toolbar{grid-template-columns:1fr}.v82-ai-layout{grid-template-columns:1fr}.v82-live-sheet{position:static;max-height:none}.v82-ai-quick{grid-template-columns:1fr}.v82-action-launcher{grid-template-columns:1fr 1fr}.v82-milestones{grid-template-columns:repeat(2,1fr)}.v82-xp-main{grid-template-columns:1fr}.v82-board{min-height:340px}.v82-board button{min-height:48px}.v82-turn-summary{grid-template-columns:1fr ",
-      "id": "MOVE-07848"
+      "id": "MOVE-07847"
     },
     {
       "file": "styles.css",
       "line": 310,
       "text": ".v82-sheet-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:12px;align-items:start}.v82-sheet-profile{position:sticky;top:77px}.v82-sheet-profile>img{width:100%;height:285px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}.v82-resource-stack{display:grid;gap:6px;margin-top:12px}.v82-resource-stack span{display:flex;justify-content:space-between;padding:8px 9px;border:1px solid var(--line);border-radius:9px}.v82-sheet-main{display:grid;gap:12px}.v82-stat-cards{di",
-      "id": "MOVE-07849"
+      "id": "MOVE-07848"
     },
     {
       "file": "styles.css",
       "line": 311,
       "text": "@media(max-width:900px){.v82-sheet-layout{grid-template-columns:1fr}.v82-sheet-profile{position:static}.v82-sheet-links{grid-template-columns:1fr 1fr}}",
-      "id": "MOVE-07850"
+      "id": "MOVE-07849"
     },
     {
       "file": "styles.css",
       "line": 323,
       "text": ".v84-scene-stage{position:relative;min-height:330px;border:1px solid rgba(255,149,55,.38);border-radius:16px;background-position:center;background-size:cover;overflow:hidden;display:grid;grid-template-columns:minmax(250px,.7fr) 1fr;align-items:end;padding:20px;margin:10px 0 14px;box-shadow:0 18px 35px rgba(0,0,0,.3)}.v84-stage-copy{position:relative;z-index:2;max-width:560px}.v84-stage-copy h2{font-size:clamp(25px,3vw,43px);margin:5px 0}.v84-stage-copy p{color:#dccbbd;text-shadow:0 2px 8px #000}",
-      "id": "MOVE-07851"
+      "id": "MOVE-07850"
     },
     {
       "file": "styles.css",
       "line": 324,
       "text": ".v84-battlefield-shell{margin:10px 0;display:grid;gap:10px;background:linear-gradient(145deg,rgba(63,36,20,.16),rgba(26,19,34,.13)),#110d0c}.v84-battlefield-shell.compact{max-width:1050px}.v84-field-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px}.v84-field-head h2{margin:3px 0}.v84-field-head p{margin:0;color:var(--muted)}.v84-field-tools,.v84-field-presets{display:flex;gap:6px;flex-wrap:wrap}.v84-field-tools button{border:1px solid var(--line);background:#100c0b;c",
-      "id": "MOVE-07852"
+      "id": "MOVE-07851"
     },
     {
       "file": "styles.css",
       "line": 335,
       "text": ".v841-auth-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 18px}.v841-auth-gallery figure{position:relative;margin:0;border:1px solid #744323;border-radius:18px;overflow:hidden;background:#120d0a;min-height:210px}.v841-auth-gallery img{width:100%;height:100%;min-height:210px;object-fit:cover;display:block}.v841-auth-gallery figcaption{position:absolute;inset:auto 0 0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(4,3,3,.94));font-weight:800;col",
-      "id": "MOVE-07853"
+      "id": "MOVE-07852"
     },
     {
       "file": "styles.css",
       "line": 342,
       "text": ".v841-inline-art{display:block;width:100%;height:168px;object-fit:cover;border:1px solid rgba(255,255,255,.09);border-radius:11px;margin:0 0 11px;background:#090707}.select-card>.v841-inline-art,.apt-create>.v841-inline-art,.skill-create>.v841-inline-art{height:142px}.v841-training-art{width:112px;height:112px;object-fit:cover;border:1px solid rgba(255,148,48,.38);border-radius:13px;align-self:start}.training-card:has(.v841-training-art){display:grid;grid-template-columns:112px minmax(0,1fr);gap",
-      "id": "MOVE-07854"
+      "id": "MOVE-07853"
     },
     {
       "file": "styles.css",
       "line": 343,
       "text": "@media(max-width:760px){.training-card:has(.v841-training-art){grid-template-columns:82px minmax(0,1fr)}.v841-training-art{width:82px;height:82px}.v841-inline-art{height:145px}.v841-atlas-tabs{position:static;max-height:220px}}",
-      "id": "MOVE-07855"
+      "id": "MOVE-07854"
     },
     {
       "file": "styles.css",
       "line": 360,
       "text": ".r28-auth-stage{position:relative;min-height:100vh;overflow:hidden;border-right:1px solid rgba(255,142,46,.22)}",
-      "id": "MOVE-07856"
+      "id": "MOVE-07855"
     },
     {
       "file": "styles.css",
       "line": 361,
       "text": ".r28-auth-stage-bg{position:absolute;inset:0;background-image:url('assets/maps/folha.jpg');background-size:cover;background-position:center;filter:saturate(.82) contrast(1.06) brightness(.55);transform:scale(1.03)}",
-      "id": "MOVE-07857"
+      "id": "MOVE-07856"
     },
     {
       "file": "styles.css",
       "line": 362,
       "text": ".r28-auth-stage-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.96) 0%,rgba(7,7,7,.73) 42%,rgba(7,7,7,.25) 72%,rgba(7,7,7,.72) 100%),linear-gradient(0deg,#070707 0%,transparent 35%,rgba(7,7,7,.28) 100%)}",
-      "id": "MOVE-07858"
+      "id": "MOVE-07857"
     },
     {
       "file": "styles.css",
       "line": 363,
       "text": ".r28-auth-stage-content{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(42px,6vw,88px);max-width:1100px}",
-      "id": "MOVE-07859"
+      "id": "MOVE-07858"
     },
     {
       "file": "styles.css",
       "line": 367,
       "text": ".r28-auth-cast{display:grid;grid-template-columns:1.18fr repeat(4,1fr);gap:10px;max-width:960px}.r28-auth-cast figure{position:relative;margin:0;height:210px;border:1px solid rgba(255,142,46,.28);border-radius:14px;overflow:hidden;background:#0b0908;box-shadow:0 18px 42px rgba(0,0,0,.28);transition:.2s transform,.2s border-color}.r28-auth-cast figure:hover{transform:translateY(-4px);border-color:#ff8b2d}.r28-auth-cast figure.lead{height:232px;margin-top:-22px}.r28-auth-cast img{width:100%;height",
-      "id": "MOVE-07860"
+      "id": "MOVE-07859"
     },
     {
       "file": "styles.css",
       "line": 377,
       "text": ".r29-story-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(280px,.7fr);gap:16px;align-items:start}.r29-current-arc{display:grid;grid-template-columns:minmax(240px,.75fr) 1.25fr;gap:18px;overflow:hidden}.r29-current-arc>img{width:100%;height:260px;object-fit:cover;border-radius:12px}.r29-timeline{display:grid;gap:8px}.r29-timeline-row{display:grid;grid-template-columns:80px 1fr auto;gap:12px;padding:12px;border:1px solid #51331f;border-radius:10px;align-items:center}.r29-timeline",
-      "id": "MOVE-07861"
+      "id": "MOVE-07860"
     },
     {
       "file": "styles.css",
       "line": 385,
       "text": "object-position:center center !important;",
-      "id": "MOVE-07862"
+      "id": "MOVE-07861"
     },
     {
       "file": "styles.css",
       "line": 433,
       "text": ".r41-online-actions .travel-log{max-height:310px;overflow:auto;margin-top:12px}",
-      "id": "MOVE-07863"
+      "id": "MOVE-07862"
     },
     {
       "file": "styles.css",
       "line": 434,
       "text": ".r41-online-actions .travel-log>div{padding:10px 0;border-bottom:1px solid rgba(126,82,48,.35)}",
-      "id": "MOVE-07864"
+      "id": "MOVE-07863"
     },
     {
       "file": "styles.css",
       "line": 435,
       "text": ".r41-ambient-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:5;mix-blend-mode:screen;border-radius:inherit}",
-      "id": "MOVE-07865"
+      "id": "MOVE-07864"
     },
     {
       "file": "styles.css",
       "line": 437,
       "text": ".r41-ambient-layer.rain i{position:absolute;top:-10%;height:34%;width:1px;background:rgba(185,215,255,.55);animation:r41-rain 1.15s linear infinite;transform:rotate(12deg)}",
-      "id": "MOVE-07866"
+      "id": "MOVE-07865"
     },
     {
       "file": "styles.css",
       "line": 445,
       "text": ".r41-minigame-stage{position:relative;min-height:300px;border:1px solid #604027;border-radius:16px;background:radial-gradient(circle at 50% 25%,rgba(81,49,28,.5),rgba(15,10,8,.94));overflow:hidden;padding:18px}",
-      "id": "MOVE-07867"
+      "id": "MOVE-07866"
     },
     {
       "file": "styles.css",
       "line": 448,
       "text": ".r41-timing-track{position:relative;height:64px;margin:66px 10px;border-radius:14px;background:#0e0a08;border:1px solid #68462f;overflow:hidden}",
-      "id": "MOVE-07868"
+      "id": "MOVE-07867"
     },
     {
       "file": "styles.css",
       "line": 449,
       "text": ".r41-timing-zone{position:absolute;top:0;bottom:0;background:rgba(46,162,87,.32);border-left:2px solid #55ca7b;border-right:2px solid #55ca7b}",
-      "id": "MOVE-07869"
+      "id": "MOVE-07868"
     },
     {
       "file": "styles.css",
       "line": 450,
       "text": ".r41-timing-cursor{position:absolute;top:6px;bottom:6px;width:5px;border-radius:4px;background:#f28a2b;box-shadow:0 0 18px #f28a2b}",
-      "id": "MOVE-07870"
+      "id": "MOVE-07869"
     },
     {
       "file": "styles.css",
       "line": 451,
       "text": ".r41-targets{position:relative;min-height:250px}.r41-target{position:absolute;width:52px;height:52px;border-radius:50%;border:3px solid #f28a2b;background:radial-gradient(circle,#f6d493 0 20%,#9e451f 22% 40%,#21100a 42%);box-shadow:0 0 18px rgba(242,138,43,.45);cursor:crosshair}.r41-target.hit{opacity:.2;transform:scale(.5);pointer-events:none}",
-      "id": "MOVE-07871"
+      "id": "MOVE-07870"
     },
     {
       "file": "styles.css",
       "line": 455,
       "text": ".r41-route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}.r41-route button{min-height:120px;white-space:normal}.r41-route .risk-high{border-color:#9c473b}.r41-route .risk-low{border-color:#3b8855}",
-      "id": "MOVE-07872"
+      "id": "MOVE-07871"
     },
     {
       "file": "styles.css",
       "line": 459,
       "text": ".r41-minigame{min-width:0}.r41-minigame-stage{min-height:250px;padding:12px}.r41-route{grid-template-columns:1fr}.r41-odd-grid{grid-template-columns:repeat(3,1fr)}.r41-timing-track{margin:50px 4px}.r41-online-actions textarea{font-size:16px}",
-      "id": "MOVE-07873"
+      "id": "MOVE-07872"
     },
     {
       "file": "styles.css",
       "line": 463,
       "text": ".r41-timing{position:relative;height:64px;margin:54px 8px;border-radius:14px;background:#0d0907;border:1px solid #67432b;overflow:hidden}.r41-timing .zone{position:absolute;top:0;bottom:0;width:20%;background:rgba(52,168,91,.30);border-left:2px solid #55c97a;border-right:2px solid #55c97a}.r41-timing .marker{position:absolute;top:7px;bottom:7px;width:5px;background:#ff8a1d;box-shadow:0 0 18px #ff8a1d;border-radius:5px;transform:translateX(-50%)}",
-      "id": "MOVE-07874"
+      "id": "MOVE-07873"
     },
     {
       "file": "styles.css",
       "line": 467,
       "text": ".r41-route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.r41-route-grid button{display:grid;gap:6px;min-height:120px;padding:14px;border:1px solid #69452e;border-radius:14px;background:#1c120d;color:#f4e9df;text-align:left}.r41-route-grid button:hover{border-color:#f28a2b;transform:translateY(-2px)}",
-      "id": "MOVE-07875"
+      "id": "MOVE-07874"
     },
     {
       "file": "styles.css",
       "line": 469,
       "text": ".r41-combat-present{position:fixed;z-index:5000;inset:auto 50% 9% auto;transform:translateX(50%);pointer-events:none;display:flex;gap:10px;align-items:center;padding:12px 18px;border:1px solid #8f5b33;border-radius:999px;background:rgba(15,9,7,.92);box-shadow:0 12px 44px rgba(0,0,0,.5);animation:r41-combat-pop .9s ease both}.r41-combat-present.hit{border-color:#a64637}.r41-combat-present.block,.r41-combat-present.dodge{border-color:#3a8b5c}.r41-combat-present b{font-size:17px}.r41-combat-present",
-      "id": "MOVE-07876"
+      "id": "MOVE-07875"
     },
     {
       "file": "styles.css",
       "line": 471,
       "text": "@media(max-width:760px){.r41-target-grid{grid-template-columns:repeat(3,1fr)}.r41-route-grid{grid-template-columns:1fr}.r41-combat-present{bottom:4%;max-width:90vw;text-align:center}}",
-      "id": "MOVE-07877"
+      "id": "MOVE-07876"
     },
     {
       "file": "styles.css",
       "line": 472,
       "text": ".r41-avatar-composite{position:relative;width:min(320px,100%);aspect-ratio:1;margin:12px auto;border:1px solid #5d3d28;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#38271d,#130c09 70%)}.r41-avatar-composite>img.layer{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.r41-avatar-composite .equipped-visual{position:absolute;right:8px;bottom:8px;width:84px;height:84px;object-fit:contain;border:1px solid #735036;border-radius:12px;background:rgba(",
-      "id": "MOVE-07878"
+      "id": "MOVE-07877"
     }
   ],
   "scripts": [
@@ -363526,16 +363616,16 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T10:41:11.827Z",
+    "generatedAt": "2026-08-25T11:43:08.684Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
     "sourceFiles": 80,
     "parsedFiles": 80,
     "parseFailures": 0,
-    "functions": 3358,
+    "functions": 3360,
     "anonymousFunctions": 35,
-    "callbackFunctions": 1514,
+    "callbackFunctions": 1515,
     "files": [
       {
         "file": "app.js",
@@ -363804,8 +363894,8 @@
       {
         "file": "src/r41-online-bridge-recovery.js",
         "sourceType": "script",
-        "functions": 26,
-        "bytes": 6015
+        "functions": 25,
+        "bytes": 6570
       },
       {
         "file": "src/r41-v82-combat-bridge.js",
@@ -363858,8 +363948,8 @@
       {
         "file": "tools/backend-presence-audit.mjs",
         "sourceType": "module",
-        "functions": 4,
-        "bytes": 5210
+        "functions": 6,
+        "bytes": 6253
       },
       {
         "file": "tools/browser-account-live.mjs",
@@ -363889,7 +363979,7 @@
         "file": "tools/browser-gameplay-e2e-v4.mjs",
         "sourceType": "module",
         "functions": 0,
-        "bytes": 9122
+        "bytes": 9847
       },
       {
         "file": "tools/browser-gameplay-e2e.mjs",
@@ -363991,7 +364081,7 @@
         "file": "tools/release-source-fingerprint.mjs",
         "sourceType": "module",
         "functions": 4,
-        "bytes": 2465
+        "bytes": 2835
       },
       {
         "file": "tools/repair-canonical-markdown-after-trace.mjs",
@@ -364008,8 +364098,8 @@
       {
         "file": "tools/test-online-bridge-recovery.mjs",
         "sourceType": "module",
-        "functions": 27,
-        "bytes": 4000
+        "functions": 28,
+        "bytes": 5362
       },
       {
         "file": "tools/wait-public-release-coherence.mjs",
@@ -364039,31 +364129,31 @@
     "excludedDocumentation": true,
     "excludedToolingFromGameSemantics": true,
     "functionDomains": {
-      "gameRuntime": 2912,
-      "tooling": 446,
+      "gameRuntime": 2911,
+      "tooling": 449,
       "otherSource": 0
     },
     "before": {
-      "functions": 3358,
+      "functions": 3360,
       "routes": 34,
       "models": 3,
       "collections": 13,
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8064,
+      "movement": 8065,
       "assets": 15837,
       "environment": 192
     },
     "after": {
-      "functions": 3358,
+      "functions": 3360,
       "routes": 33,
       "models": 2,
       "collections": 12,
       "storage": 17,
       "uiActions": 223,
       "events": 14,
-      "movement": 7878,
+      "movement": 7877,
       "assets": 15816,
       "environment": 124
     }

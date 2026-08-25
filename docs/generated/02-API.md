@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-25T10:41:09.049Z`
+Gerado em: `2026-08-25T11:43:05.925Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -116,7 +116,7 @@ Gerado em: `2026-08-25T10:41:09.049Z`
 
 ## API-00023 — `/api/online/room`
 
-- **Referências:** `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:107`, `cloudflare/r41-api/src/index.js:122`
+- **Referências:** `app.js:1155`, `cloudflare/oneclick-backend/src/index.js:83`, `cloudflare/r41-api/src/entry-authoritative.js:107`, `cloudflare/r41-api/src/index.js:122`, `src/r41-online-bridge-recovery.js:86`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00024 — `/api/online/state`
