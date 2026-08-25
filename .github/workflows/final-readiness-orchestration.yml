@@ -30,61 +30,13 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Require fresh live backend and both live consumer evidence files
+      - name: Require fresh backend and release consumer evidence
         id: gates
         shell: bash
         run: |
-          node - <<'NODE'
-          const fs=require('fs');
-          const {execFileSync}=require('child_process');
-          const read=p=>{try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return null}};
-          const live=read('audit/LIVE-BACKEND.json');
-          const account=read('audit/ACCOUNT-LIVE-E2E.json');
-          const browserAccount=read('audit/BROWSER-ACCOUNT-LIVE.json');
-          const gameplay=read('audit/BROWSER-GAMEPLAY-E2E.json');
-          let currentFingerprint='';
-          try{currentFingerprint=execFileSync(process.execPath,['tools/live-source-fingerprint.mjs'],{encoding:'utf8'}).trim();}catch{}
-          const liveFingerprint=String(live?.sourceFingerprint||'');
-          const liveFresh=live?.ok===true&&
-            live?.status==='PASS_LIVE_BACKEND_E2E'&&
-            /^[a-f0-9]{64}$/.test(currentFingerprint)&&
-            liveFingerprint===currentFingerprint;
-          const accountApi=String(account?.provenance?.apiOrigin||'').replace(/\/+$/,'');
-          const browserAccountApi=String(browserAccount?.provenance?.apiOrigin||'').replace(/\/+$/,'');
-          const gameplayApi=String(gameplay?.provenance?.apiOrigin||'').replace(/\/+$/,'');
-          const accountOk=account?.ok===true&&
-            account?.status==='PASS_ACCOUNT_LIVE_E2E'&&
-            browserAccount?.ok===true&&
-            browserAccount?.status==='PASS_BROWSER_ACCOUNT_LIVE'&&
-            account?.provenance?.kind==='ACCOUNT_LIVE_CLOUDFLARE_MONGODB'&&
-            browserAccount?.provenance?.kind==='BROWSER_ACCOUNT_LIVE_CLOUDFLARE_MONGODB'&&
-            account?.provenance?.sourceFingerprint===liveFingerprint&&
-            browserAccount?.provenance?.sourceFingerprint===liveFingerprint&&
-            account?.provenance?.backend==='cloudflare-workers-mongodb-atlas'&&
-            browserAccount?.provenance?.backend==='cloudflare-workers-mongodb-atlas'&&
-            account?.provenance?.realtime==='cloudflare-durable-objects'&&
-            browserAccount?.provenance?.realtime==='cloudflare-durable-objects'&&
-            account?.provenance?.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'&&
-            browserAccount?.provenance?.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'&&
-            /^https:\/\//i.test(accountApi)&&accountApi===browserAccountApi;
-          const gameplayOk=gameplay?.ok===true&&
-            gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&
-            gameplay?.scope==='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'&&
-            gameplay?.site==='https://kaalflash12.github.io/naruto-shinobi-no-sho/'&&
-            gameplay?.provenance?.kind==='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE'&&
-            gameplay?.provenance?.sourceFingerprint===liveFingerprint&&
-            gameplay?.provenance?.backend==='cloudflare-workers-mongodb-atlas'&&
-            gameplay?.provenance?.realtime==='cloudflare-durable-objects'&&
-            gameplay?.provenance?.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6'&&
-            /^https:\/\//i.test(gameplayApi)&&
-            gameplay?.checks?.temporaryAccountRegistered===true&&
-            gameplay?.checks?.temporaryAccountDeleted===true&&
-            Array.isArray(gameplay?.contracts)&&gameplay.contracts.length>=11&&gameplay.contracts.every(x=>x.status==='PASS_GAMEPLAY_E2E');
-          const sameBackend=accountOk&&gameplayOk&&accountApi===gameplayApi;
-          const ready=liveFresh&&accountOk&&gameplayOk&&sameBackend;
-          fs.appendFileSync(process.env.GITHUB_OUTPUT,`ready=${ready?'true':'false'}\nlive=${liveFresh?'true':'false'}\naccount=${accountOk?'true':'false'}\ngameplay=${gameplayOk?'true':'false'}\nsame_backend=${sameBackend?'true':'false'}\n`);
-          console.log(JSON.stringify({liveFresh,currentFingerprint,liveFingerprint,accountOk,gameplayOk,sameBackend,accountFingerprint:account?.provenance?.sourceFingerprint||null,browserAccountFingerprint:browserAccount?.provenance?.sourceFingerprint||null,gameplayFingerprint:gameplay?.provenance?.sourceFingerprint||null,accountApi:accountApi||null,browserAccountApi:browserAccountApi||null,gameplayApi:gameplayApi||null},null,2));
-          NODE
+          node --check tools/release-source-fingerprint.mjs
+          node --check tools/final-readiness-orchestration-gate.mjs
+          node tools/final-readiness-orchestration-gate.mjs
 
       - name: Dispatch final readiness
         if: steps.gates.outputs.ready == 'true'
@@ -94,4 +46,4 @@ jobs:
 
       - name: Wait for remaining live gate
         if: steps.gates.outputs.ready != 'true'
-        run: echo "FINAL_READINESS_WAITING live=${{ steps.gates.outputs.live }} account=${{ steps.gates.outputs.account }} gameplay=${{ steps.gates.outputs.gameplay }} same_backend=${{ steps.gates.outputs.same_backend }}"
+        run: echo "FINAL_READINESS_WAITING live=${{ steps.gates.outputs.live }} release=${{ steps.gates.outputs.release }} account=${{ steps.gates.outputs.account }} gameplay=${{ steps.gates.outputs.gameplay }} same_backend=${{ steps.gates.outputs.same_backend }}"
