@@ -50,13 +50,29 @@ jobs:
           fi
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const missing=[];
-          if(!process.env.CLOUDFLARE_API_TOKEN)missing.push('CLOUDFLARE_API_TOKEN');
-          if(!process.env.MONGODB_URI)missing.push('MONGODB_URI_GITHUB_SECRET');
-          if(!process.env.AUTH_SECRET)missing.push('AUTH_SECRET_GITHUB_SECRET');
-          if(!process.env.LEON_PRIVATE_CODE)missing.push('LEON_PRIVATE_CODE_GITHUB_SECRET');
+          const missingManualRequired=[];
+          if(!process.env.CLOUDFLARE_API_TOKEN)missingManualRequired.push('CLOUDFLARE_API_TOKEN');
+          if(!process.env.MONGODB_URI)missingManualRequired.push('MONGODB_URI');
+          const optional={LEON_PRIVATE_CODE:Boolean(process.env.LEON_PRIVATE_CODE)};
+          const autoManaged={
+            CLOUDFLARE_ACCOUNT_ID:'AUTO_RESOLVE_SINGLE_CLOUDFLARE_ACCOUNT_FROM_ACTIVE_TOKEN',
+            AUTH_SECRET:process.env.AUTH_SECRET?'USE_GITHUB_SECRET':'REUSE_EXISTING_WORKER_SECRET_OR_GENERATE_OPENSSL_RANDOM_48_BYTES',
+            LIVE_API_ORIGIN:'DISCOVER_WORKERS_DEV_URL_FROM_VERIFIED_WRANGLER_DEPLOY'
+          };
           const p='audit/LIVE-BACKEND-DIAGNOSTIC.json';
-          const body={generatedAt:new Date().toISOString(),status:'LIVE_BACKEND_WORKFLOW_FAILED',ok:false,runId:process.env.RUN_ID,conclusion:process.env.RUN_CONCLUSION,runUrl:process.env.RUN_URL,missingAtGithubActions:missing,note:'A lista registra apenas presença/ausência; nenhum valor secreto é exposto.'};
+          const body={
+            generatedAt:new Date().toISOString(),
+            status:'LIVE_BACKEND_WORKFLOW_FAILED',
+            ok:false,
+            runId:process.env.RUN_ID,
+            conclusion:process.env.RUN_CONCLUSION,
+            runUrl:process.env.RUN_URL,
+            missingAtGithubActions:missingManualRequired,
+            missingManualRequired,
+            autoManaged,
+            optional,
+            note:'Somente CLOUDFLARE_API_TOKEN e MONGODB_URI são bloqueios manuais do bootstrap live. Account ID e URL pública são derivados automaticamente; AUTH_SECRET é reutilizado ou gerado no Worker; LEON_PRIVATE_CODE é opcional. Nenhum valor secreto é exposto.'
+          };
           fs.writeFileSync(p,JSON.stringify(body,null,2)+'\n');
           NODE
 
