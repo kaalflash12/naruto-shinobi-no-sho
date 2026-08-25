@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-25T11:50:54.880Z`
+Gerado em: `2026-08-25T11:53:29.926Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -57,11 +57,11 @@ Gerado em: `2026-08-25T11:50:54.880Z`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 13494 bytes — SHA-256 `3ee4b4371ef20d9a3280378cedf6a20ef0a234588e60def17b3048ec84eeb2ba`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 4337 bytes — SHA-256 `8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc`
 - `.github/workflows/post-live-backend-orchestration.yml` — domínio `tooling` — 1054 bytes — SHA-256 `7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad`
-- `.github/workflows/public-release-coherence.yml` — domínio `tooling` — 3376 bytes — SHA-256 `91f5cab234975d5d65a29f29fb3c69660f9d991034aae174d9e012f54fd9a785`
+- `.github/workflows/public-release-coherence.yml` — domínio `tooling` — 3374 bytes — SHA-256 `cd85d363925bbb19834efb4b006e4dda9c3e4b810b36cc7fab0e5831e17af0df`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 6129 bytes — SHA-256 `ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8`
 - `.github/workflows/sync-public-release-fingerprint.yml` — domínio `tooling` — 1753 bytes — SHA-256 `0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
-- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2194 bytes — SHA-256 `8c1fe11ce14fc74bd93641c1a5bdd7d2591994d81ec03924a9f17f7486cc424e`
+- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2194 bytes — SHA-256 `7dc18d2475acea75fdc14e7022b6a920d8903c2ad1823322932c7b8a02465ef2`
 - `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `2bee90364445424e961e8e0caff3edcf4084707601d74dfb61799bda328e6573`
 - `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `5c1b4e142542f45cae4ffd7ae2904b6f490cd0a392f505495c9453e8dbdef181`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`

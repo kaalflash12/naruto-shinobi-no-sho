@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-25T11:50:54.880Z",
+  "generatedAt": "2026-08-25T11:53:29.926Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5571,
+    "files": 5572,
     "runtimeFiles": 105,
     "assetFiles": 5434,
-    "textFiles": 132,
+    "textFiles": 133,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -40,6 +40,14 @@
       "size": 506,
       "sha256": "2fcc54789866d88b6bf8a58d1afb8da2113ae61f7ccc89c8f2ef1a10eb2b626e",
       "extension": ".example",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/public-release-coherence-trigger.txt",
+      "size": 82,
+      "sha256": "fe0b9ca546e8635df5a7a8ae5ed383fe7f1ce52f81566e6ff90a350285c57e3d",
+      "extension": ".txt",
       "runtime": false,
       "asset": false
     },
@@ -125,8 +133,8 @@
     },
     {
       "path": ".github/workflows/public-release-coherence.yml",
-      "size": 3376,
-      "sha256": "91f5cab234975d5d65a29f29fb3c69660f9d991034aae174d9e012f54fd9a785",
+      "size": 3374,
+      "sha256": "cd85d363925bbb19834efb4b006e4dda9c3e4b810b36cc7fab0e5831e17af0df",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43638,7 +43646,7 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2194,
-      "sha256": "8c1fe11ce14fc74bd93641c1a5bdd7d2591994d81ec03924a9f17f7486cc424e",
+      "sha256": "7dc18d2475acea75fdc14e7022b6a920d8903c2ad1823322932c7b8a02465ef2",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44174,7 +44182,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "b840b020daa28627e316f8455542fc545b3bc0beac58f157c1897d7fdb1acb2e",
+      "sha256": "74cac112c96f84fc40f501e53235a21868515057fa8f85039d8e7a223a1266d3",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -363632,7 +363640,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-25T11:50:56.854Z",
+    "generatedAt": "2026-08-25T11:53:32.435Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
