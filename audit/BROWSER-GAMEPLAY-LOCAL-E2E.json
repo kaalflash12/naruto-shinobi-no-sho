@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T20:47:36.174Z",
+  "generatedAt": "2026-08-25T21:09:52.371Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt94yedj2yrb2",
-  "slotId": "gameplay-mt94yedj",
+  "temporaryAccount": "play_mt95r0149evvk",
+  "slotId": "gameplay-mt95r014",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787690828336,
+          "at": 1787692163408,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 17,
+          "total": 21,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,7 +148,7 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 653,
+          "score": 517,
           "success": true,
           "errors": 2,
           "time": 0.8,
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt94yedj2yrb2",
+        "intent": "Cobrir saída E2E mt95r0149evvk",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787690832800,
-        "cloudAt": 1787690825924,
+        "localAt": 1787692167907,
+        "cloudAt": 1787692160955,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
