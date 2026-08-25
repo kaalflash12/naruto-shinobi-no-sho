@@ -4,63 +4,34 @@
   const gameBase=new URL("./",document.baseURI);
   const CLAIM_KEY="sns-r41-leon-claim";
   const TOKEN_KEY="sns-v841-auth-token";
+  const encoder=new TextEncoder();
 
-  function apiOrigin(){return String(window.NARUTO_R41_API_ORIGIN||localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"").replace(/\/+$/g,"");}
-  function token(){
-    const persistent=localStorage.getItem(TOKEN_KEY)||"",session=sessionStorage.getItem(TOKEN_KEY)||"",resolved=persistent||session;
-    if(resolved){if(persistent!==resolved)localStorage.setItem(TOKEN_KEY,resolved);if(session!==resolved)sessionStorage.setItem(TOKEN_KEY,resolved);}return resolved;
-  }
+  function mode(){return String(window.NARUTO_R41_BACKEND_MODE||"cloudflare").toLowerCase();}
+  function workerOrigin(){return String(window.NARUTO_R41_API_ORIGIN||localStorage.getItem("sns-api-origin")||localStorage.getItem("sns-r41-api-origin")||"").replace(/\/+$/g,"");}
+  function neonOrigin(){return String(window.NARUTO_R41_NEON_DATA_API_URL||"").replace(/\/+$/g,"");}
+  function apiOrigin(){return mode()==="neon"?neonOrigin():workerOrigin();}
+  function token(){const persistent=localStorage.getItem(TOKEN_KEY)||"",session=sessionStorage.getItem(TOKEN_KEY)||"",resolved=persistent||session;if(resolved){if(persistent!==resolved)localStorage.setItem(TOKEN_KEY,resolved);if(session!==resolved)sessionStorage.setItem(TOKEN_KEY,resolved);}return resolved;}
   function setToken(value){const t=String(value||"").trim();if(t){localStorage.setItem(TOKEN_KEY,t);sessionStorage.setItem(TOKEN_KEY,t);}else{localStorage.removeItem(TOKEN_KEY);sessionStorage.removeItem(TOKEN_KEY);}}
   function captureClaim(){try{const u=new URL(location.href),claim=String(u.searchParams.get("leonClaim")||"").trim();if(claim){sessionStorage.setItem(CLAIM_KEY,claim);u.searchParams.delete("leonClaim");history.replaceState(null,"",u.pathname+(u.search?u.search:"")+(u.hash||""));}}catch{}}
   captureClaim();
 
-  function mapTarget(raw){
-    if(raw.startsWith("/api/")){const origin=apiOrigin();if(!origin)throw new Error("R41_API_ORIGIN_NOT_CONFIGURED");return {url:origin+raw,api:true,route:raw};}
-    if(raw.startsWith("/assets/")||raw.startsWith("/data/")||raw.startsWith("/_r40/")||raw.startsWith("/src/"))return {url:new URL(raw.slice(1),gameBase).toString(),api:false,route:""};
-    return {url:raw,api:false,route:""};
-  }
-  function withAuth(init,api){
-    if(!api)return init;const out={...(init||{})},headers=new Headers(out.headers||{}),t=token();
-    if(t&&!headers.has("authorization"))headers.set("authorization",`Bearer ${t}`);
-    out.headers=headers;return out;
-  }
-  async function applyLeonClaim(response,mapped){
-    if(!mapped.api||!response.ok||!["/api/auth/login","/api/auth/register"].includes(mapped.route))return response;
-    const claim=sessionStorage.getItem(CLAIM_KEY)||"";if(!claim)return response;
-    let data;try{data=await response.clone().json();}catch{return response;}if(!data?.ok||!data?.token||!data?.account)return response;
-    if(data.account.role==="leon"){sessionStorage.removeItem(CLAIM_KEY);return response;}
-    try{
-      const claimed=await transportFetch(apiOrigin()+"/api/private/claim-leon",{method:"POST",headers:{"content-type":"application/json","authorization":`Bearer ${data.token}`},body:JSON.stringify({code:claim})});
-      const c=await claimed.json().catch(()=>({}));if(!claimed.ok||!c.ok)return response;
-      data.account=Object.assign({},data.account,{role:"leon"});sessionStorage.removeItem(CLAIM_KEY);
-      const responseHeaders=new Headers(response.headers);responseHeaders.set("content-type","application/json; charset=utf-8");return new Response(JSON.stringify(data),{status:response.status,statusText:response.statusText,headers:responseHeaders});
-    }catch{return response;}
-  }
+  function randomHex(bytes=16){const a=new Uint8Array(bytes);crypto.getRandomValues(a);return Array.from(a,b=>b.toString(16).padStart(2,"0")).join("");}
+  function hexBytes(hex){const clean=String(hex||"").replace(/[^a-f0-9]/gi,"");const out=new Uint8Array(clean.length/2);for(let i=0;i<out.length;i++)out[i]=parseInt(clean.slice(i*2,i*2+2),16);return out;}
+  async function deriveAuthKey(password,salt,iterations=210000){const material=await crypto.subtle.importKey("raw",encoder.encode(String(password||"")),"PBKDF2",false,["deriveBits"]);const bits=await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:hexBytes(salt),iterations:Number(iterations)||210000},material,256);return Array.from(new Uint8Array(bits),b=>b.toString(16).padStart(2,"0")).join("");}
+  async function neonRpcRaw(route,method,authToken,body){const endpoint=neonOrigin();if(!endpoint)throw new Error("R41_NEON_DATA_API_NOT_CONFIGURED");const res=await transportFetch(endpoint+"/rpc/sns_api",{method:"POST",headers:{accept:"application/json","content-type":"application/json"},body:JSON.stringify({p_route:route,p_method:method||"POST",p_token:authToken||"",p_body:body&&typeof body==="object"?body:{}})});const raw=await res.text();let data={};try{data=raw?JSON.parse(raw):{};}catch{data={ok:false,error:"INVALID_DATA_API_JSON",raw:raw.slice(0,500)}}if(!res.ok)return new Response(JSON.stringify({ok:false,error:"NEON_DATA_API_HTTP_"+res.status,detail:data}),{status:502,headers:{"content-type":"application/json; charset=utf-8"}});const status=Number(data?._status||200);if(data&&typeof data==="object")delete data._status;return new Response(JSON.stringify(data),{status,headers:{"content-type":"application/json; charset=utf-8","x-sns-backend":"neon-postgres-data-api"}});}
+  async function neonApi(route,method,authToken,body){let payload=body&&typeof body==="object"?{...body}:{};if(route==="/api/auth/register"){const salt=randomHex(16),iterations=210000;payload.authSalt=salt;payload.authIterations=iterations;payload.authKey=await deriveAuthKey(payload.password,salt,iterations);delete payload.password;}else if(route==="/api/auth/login"){const identifier=String(payload.identifier||payload.username||"").trim();const challenge=await neonRpcRaw("/api/auth/challenge","POST","",{identifier});const challengeData=await challenge.clone().json().catch(()=>({}));if(!challenge.ok)return challenge;payload={identifier,username:identifier,authKey:await deriveAuthKey(payload.password,challengeData.salt,challengeData.iterations)};}else if(route==="/api/auth/recover"){const salt=randomHex(16),iterations=210000;payload={identifier:String(payload.identifier||"").trim(),recoveryCode:payload.recoveryCode,authSalt:salt,authIterations:iterations,authKey:await deriveAuthKey(payload.newPassword,salt,iterations)};}return neonRpcRaw(route,method,authToken,payload);}
 
-  window.fetch=async function(input,init){
-    const raw=typeof input==="string"?input:(input&&input.url?input.url:String(input));let mapped;try{mapped=mapTarget(raw);}catch(err){return Promise.reject(err);}let response;
-    if(typeof input==="string")response=await transportFetch(mapped.url,withAuth(init,mapped.api));
-    else if(input instanceof Request){const merged=withAuth(init,mapped.api),headers=new Headers(input.headers);if(merged?.headers)for(const [k,v] of merged.headers.entries())headers.set(k,v);response=await transportFetch(new Request(mapped.url,input),{...merged,headers});}
-    else response=await transportFetch(mapped.url,withAuth(init,mapped.api));
-    return applyLeonClaim(response,mapped);
-  };
+  async function requestBody(input,init){if(init&&init.body!==undefined){if(typeof init.body==="string"){try{return JSON.parse(init.body)}catch{return{}}}return{};}if(input instanceof Request){try{const text=await input.clone().text();return text?JSON.parse(text):{};}catch{return{}}}return{};}
+  function rawInput(input){return typeof input==="string"?input:(input&&input.url?input.url:String(input));}
+  function routeFrom(raw){if(raw.startsWith("/api/"))return raw.split("?")[0];try{const u=new URL(raw,document.baseURI);if(u.origin===location.origin&&u.pathname.startsWith("/api/"))return u.pathname;}catch{}return"";}
+  function mapStatic(raw){if(raw.startsWith("/assets/")||raw.startsWith("/data/")||raw.startsWith("/_r40/")||raw.startsWith("/src/"))return new URL(raw.slice(1),gameBase).toString();return raw;}
+  function withWorkerAuth(init){const out={...(init||{})},headers=new Headers(out.headers||{}),t=token();if(t&&!headers.has("authorization"))headers.set("authorization",`Bearer ${t}`);out.headers=headers;return out;}
+  async function applyLeonClaim(response,route){if(mode()==="neon"||!response.ok||!["/api/auth/login","/api/auth/register"].includes(route))return response;const claim=sessionStorage.getItem(CLAIM_KEY)||"";if(!claim)return response;let data;try{data=await response.clone().json();}catch{return response;}if(!data?.ok||!data?.token||!data?.account)return response;if(data.account.role==="leon"){sessionStorage.removeItem(CLAIM_KEY);return response;}try{const claimed=await transportFetch(workerOrigin()+"/api/private/claim-leon",{method:"POST",headers:{"content-type":"application/json","authorization":`Bearer ${data.token}`},body:JSON.stringify({code:claim})});const c=await claimed.json().catch(()=>({}));if(!claimed.ok||!c.ok)return response;data.account=Object.assign({},data.account,{role:"leon"});sessionStorage.removeItem(CLAIM_KEY);return new Response(JSON.stringify(data),{status:response.status,headers:{"content-type":"application/json; charset=utf-8"}});}catch{return response;}}
 
-  async function request(route,body,method="POST"){
-    const init={method,headers:{"content-type":"application/json"}};if(body!==undefined)init.body=JSON.stringify(body);
-    const res=await window.fetch(route,init),data=await res.json().catch(()=>({ok:false,error:"INVALID_JSON"}));
-    if(!res.ok){const err=new Error(data?.error||`HTTP_${res.status}`);err.status=res.status;err.data=data;throw err;}return data;
-  }
+  window.fetch=async function(input,init){const raw=rawInput(input),route=routeFrom(raw);if(route&&mode()==="neon"){const method=String(init?.method||(input instanceof Request?input.method:"GET")||"GET").toUpperCase(),body=await requestBody(input,init);return neonApi(route,method,token(),body);}if(route){const origin=workerOrigin();if(!origin)return Promise.reject(new Error("R41_API_ORIGIN_NOT_CONFIGURED"));let response;if(typeof input==="string")response=await transportFetch(origin+route,withWorkerAuth(init));else response=await transportFetch(origin+route,withWorkerAuth(init));return applyLeonClaim(response,route);}return transportFetch(mapStatic(raw),init);};
 
-  window.r41Auth={
-    get token(){return token();},get authenticated(){return !!token();},
-    async register(username,password,displayName,email){const payload=typeof username==="object"?username:{username,password,displayName,email};const data=await request("/api/auth/register",payload);if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},
-    async login(identifier,password){const normalized=String(identifier||"").trim(),data=await request("/api/auth/login",{identifier:normalized,username:normalized,password});if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},
-    async me(){if(!token())return {ok:false,error:"UNAUTHORIZED",account:null};try{return await request("/api/auth/me",undefined,"GET");}catch(err){if(err.status===401){setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}throw err;}},
-    async logout(){try{if(token())await request("/api/auth/logout",{});}finally{setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}return {ok:true};},
-    async recover(identifier,recoveryCode,newPassword){return request("/api/auth/recover",{identifier:String(identifier||"").trim(),recoveryCode,newPassword});},
-    async generateRecoveryCode(){return request("/api/auth/recovery-code",{});},
-    async deleteAccount(){const data=await request("/api/auth/delete-account",{});setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));return data;}
-  };
+  async function request(route,body,method="POST"){const init={method,headers:{"content-type":"application/json"}};if(body!==undefined)init.body=JSON.stringify(body);const res=await window.fetch(route,init),data=await res.json().catch(()=>({ok:false,error:"INVALID_JSON"}));if(!res.ok){const err=new Error(data?.error||`HTTP_${res.status}`);err.status=res.status;err.data=data;throw err;}return data;}
+  window.r41Auth={get token(){return token();},get authenticated(){return!!token();},async register(username,password,displayName,email){const payload=typeof username==="object"?username:{username,password,displayName,email};const data=await request("/api/auth/register",payload);if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},async login(identifier,password){const normalized=String(identifier||"").trim(),data=await request("/api/auth/login",{identifier:normalized,username:normalized,password});if(data?.token)setToken(data.token);window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:data?.account||null}));return data;},async me(){if(!token())return{ok:false,error:"UNAUTHORIZED",account:null};try{return await request("/api/auth/me",undefined,"GET");}catch(err){if(err.status===401){setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}throw err;}},async logout(){try{if(token())await request("/api/auth/logout",{});}finally{setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));}return{ok:true};},async recover(identifier,recoveryCode,newPassword){return request("/api/auth/recover",{identifier:String(identifier||"").trim(),recoveryCode,newPassword});},async generateRecoveryCode(){return request("/api/auth/recovery-code",{});},async deleteAccount(){const data=await request("/api/auth/delete-account",{});setToken("");window.dispatchEvent(new CustomEvent("sns:account-changed",{detail:null}));return data;}};
   token();
-  window.__R41_GITHUB_API__={build:"R41-CLOUDFLARE-MONGODB-INTEGRAL-20260824",get apiOrigin(){return apiOrigin();},get authOrigin(){return apiOrigin();},get backend(){return apiOrigin()?"cloudflare-mongodb-durable-objects":"unconfigured";},sameOriginStatic:true,leonClaimPending:()=>!!sessionStorage.getItem(CLAIM_KEY)};
+  window.__R41_GITHUB_API__={build:"R41-NEON-POSTGRES-INTEGRAL-20260825-V1",get apiOrigin(){return apiOrigin();},get authOrigin(){return apiOrigin();},get backend(){return mode()==="neon"?"neon-postgres-data-api":workerOrigin()?"cloudflare-mongodb-durable-objects":"unconfigured";},get mode(){return mode();},sameOriginStatic:true,leonClaimPending:()=>!!sessionStorage.getItem(CLAIM_KEY)};
 })();
