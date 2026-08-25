@@ -35,6 +35,8 @@ const accountOk = account?.ok === true &&
   browserAccount?.provenance?.sourceFingerprint === liveFingerprint &&
   account?.provenance?.releaseFingerprint === currentReleaseFingerprint &&
   browserAccount?.provenance?.releaseFingerprint === currentReleaseFingerprint &&
+  account?.provenance?.publicReleaseCoherence === 'PASS_PUBLIC_RELEASE_COHERENCE' &&
+  browserAccount?.provenance?.publicReleaseCoherence === 'PASS_PUBLIC_RELEASE_COHERENCE' &&
   account?.provenance?.backend === 'cloudflare-workers-mongodb-atlas' &&
   browserAccount?.provenance?.backend === 'cloudflare-workers-mongodb-atlas' &&
   account?.provenance?.realtime === 'cloudflare-durable-objects' &&
@@ -50,6 +52,7 @@ const gameplayOk = gameplay?.ok === true &&
   gameplay?.provenance?.kind === 'PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE' &&
   gameplay?.provenance?.sourceFingerprint === liveFingerprint &&
   gameplay?.provenance?.releaseFingerprint === currentReleaseFingerprint &&
+  gameplay?.provenance?.publicReleaseCoherence === 'PASS_PUBLIC_RELEASE_COHERENCE' &&
   gameplay?.provenance?.backend === 'cloudflare-workers-mongodb-atlas' &&
   gameplay?.provenance?.realtime === 'cloudflare-durable-objects' &&
   gameplay?.provenance?.buildAuthority === 'R41-AUTHORITATIVE-TERION-20260823-V6' &&
