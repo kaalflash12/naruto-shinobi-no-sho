@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Install pinned repository dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+
       - name: Validate JavaScript syntax and TERION unit contracts
         run: npm run check:runtime
 

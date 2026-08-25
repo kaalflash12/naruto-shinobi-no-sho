@@ -30,11 +30,16 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install pinned repository dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+
       - name: Check documentation tools syntax
         run: |
           node --check tools/generate-technical-spec.mjs
+          node --check tools/ast-index-functions.mjs
           node --check tools/refine-technical-spec.mjs
           node --check tools/reconcile-asset-references.mjs
+          node --check tools/audit-ast-function-index.mjs
           node --check tools/audit-documentation-coverage.mjs
           node --check tools/audit-operational-static-contracts.mjs
           node --check tools/build-final-canonical-spec.mjs
@@ -45,11 +50,17 @@ jobs:
       - name: Generate exhaustive source inventory
         run: node tools/generate-technical-spec.mjs
 
+      - name: Build exact AST function and callback index
+        run: node tools/ast-index-functions.mjs
+
       - name: Separate game runtime semantics from tooling
         run: node tools/refine-technical-spec.mjs
 
       - name: Reconcile literal and dynamic asset references
         run: node tools/reconcile-asset-references.mjs
+
+      - name: Enforce exact AST spans and hashes
+        run: node tools/audit-ast-function-index.mjs
 
       - name: Audit documentation coverage
         run: node tools/audit-documentation-coverage.mjs
@@ -80,13 +91,25 @@ jobs:
           test -s docs/generated/08-TRACEABILITY.md
           test -s docs/generated/09-DOCUMENTATION-AUDIT.md
           test -s docs/generated/10-ASSET-REFERENCES.md
+          test -s docs/generated/18-AST-FUNCTION-INDEX.md
+          test -s docs/generated/AST-FUNCTION-AUDIT.json
           test -s docs/generated/DOCUMENTATION-AUDIT.json
           test -s docs/generated/OPERATIONAL-STATIC-AUDIT.json
           test -s docs/generated/NARUTO_SHINOBI_NO_SHO_ESPECIFICACAO_FINAL_COMPLETA.md
           test -s docs/generated/FINAL-CANONICAL-AUDIT.json
+          node -e "const r=require('./docs/generated/AST-FUNCTION-AUDIT.json'); if(!r.ok||r.status!=='PASS_AST_FUNCTION_INDEX'||r.parser!=='acorn'||r.parserVersion!=='8.15.0'||r.parseFailures!==0||r.functions!==r.exactFunctions) process.exit(1); console.log(r.status,{functions:r.functions,callbacks:r.callbacks,parsedFiles:r.parsedFiles})"
           node -e "const r=require('./docs/generated/DOCUMENTATION-AUDIT.json'); if(!r.ok||r.status!=='PASS_STATIC_COVERAGE'||r.discoveryMode!=='runtime-semantics-plus-tooling-functions'||r.semanticDiscovery!=='game-runtime-only'||r.gates.documentationExcludedFromDiscovery!=='PASS'||r.gates.toolingExcludedFromGameSemantics!=='PASS') process.exit(1); console.log(r.staticCoverage, r.modelNames)"
           node -e "const r=require('./docs/generated/OPERATIONAL-STATIC-AUDIT.json'); if(!r.ok||r.status!=='PASS_OPERATIONAL_STATIC_CONTRACTS') process.exit(1); console.log(r.status, r.gates)"
           node -e "const r=require('./docs/generated/FINAL-CANONICAL-AUDIT.json'); if(!r.ok||r.status!=='PASS_FINAL_CANONICAL_SPEC') process.exit(1); console.log(r.status)"
+
+      - name: Preserve generated AST and canonical evidence
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: shinobi-documentation-evidence-${{ github.run_id }}
+          path: docs/generated/**
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Validate race-safe documentation publisher
         run: |
