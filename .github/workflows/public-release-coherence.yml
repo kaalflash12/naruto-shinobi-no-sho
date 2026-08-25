@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '.github/workflows/public-release-coherence.yml'
+      - 'PUBLIC-RELEASE-FINGERPRINT.txt'
   workflow_dispatch:
 
 permissions:
