@@ -3,6 +3,7 @@ name: Sync Public Release Fingerprint
 on:
   push:
     branches:
+      - main
       - fix/final-readiness-release-fingerprint-20260825
     paths-ignore:
       - 'PUBLIC-RELEASE-FINGERPRINT.txt'
