@@ -40,6 +40,7 @@ const evidenceSources = [
   'tools/final-readiness.mjs',
   '.github/workflows/runtime-integrity.yml',
   '.github/workflows/browser-e2e.yml',
+  '.github/workflows/public-release-coherence.yml',
   '.github/workflows/backend-secret-presence.yml',
   '.github/workflows/account-live-e2e.yml',
   '.github/workflows/browser-gameplay-e2e.yml',
