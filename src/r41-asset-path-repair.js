@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const BUILD='R41-ASSET-PATH-REPAIR-20260824-V2';
+  const BUILD='R41-ASSET-PATH-REPAIR-20260824-V3';
   const jpg=['j','p','g'].join('');
   const svg=['s','v','g'].join('');
   const actionBase=['assets','ui_v8','combat','actions'].join('/')+'/action_';
@@ -9,13 +9,22 @@
   const path=(base,id,ext)=>`${base}${String(id).padStart(2,'0')}.${ext}`;
   const MAP=new Map();
   for(const id of [1,2,3,4,9,10,11,12])MAP.set(path(actionBase,id,jpg),path(actionBase,id,svg));
-  MAP.set(path(eventBase,1,jpg),`${eventArtBase}iruka.svg`);
-  MAP.set(path(eventBase,2,jpg),`${eventArtBase}kakashi.svg`);
+
+  // app.js substitui temporariamente a arte semântica de V74.events por event_XX.jpg.
+  // O pacote ui_v8 não contém esses JPGs; reatamos cada índice à arte original válida
+  // do evento V7.4, preservando a ordem real do catálogo.
+  MAP.set(path(eventBase,1,jpg),`${eventArtBase}kakashi.svg`);
+  MAP.set(path(eventBase,2,jpg),`${eventArtBase}iruka.svg`);
   MAP.set(path(eventBase,3,jpg),`${eventArtBase}gai.svg`);
   MAP.set(path(eventBase,4,jpg),`${eventArtBase}festival.svg`);
+  MAP.set(path(eventBase,5,jpg),`${eventArtBase}inverno.svg`);
   MAP.set(path(eventBase,6,jpg),`${eventArtBase}mensageiro.svg`);
+  MAP.set(path(eventBase,7,jpg),`${eventArtBase}ferreiro.svg`);
   MAP.set(path(eventBase,8,jpg),`${eventArtBase}pergaminho.svg`);
+  MAP.set(path(eventBase,9,jpg),'assets/private/kurai.svg');
+  // A arte do lançador "Explorar" existe no pacote ui_v8 apenas como SVG.
   MAP.set(path(eventBase,12,jpg),path(eventBase,12,svg));
+
   const rewrite=value=>{
     if(typeof value!=='string'||!value)return value;
     let out=value;
