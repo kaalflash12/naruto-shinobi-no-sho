@@ -70,6 +70,7 @@ pass(accountProvenance.kind==='ACCOUNT_LIVE_CLOUDFLARE_MONGODB','evidência de c
 pass(accountProvenance.sourceFingerprint===currentSourceFingerprint,'evidência de conta stale: sourceFingerprint divergente');
 pass(accountProvenance.sourceFingerprint===live.sourceFingerprint,'evidência de conta não corresponde ao backend live validado');
 pass(accountProvenance.releaseFingerprint===currentReleaseFingerprint,'evidência de conta stale: releaseFingerprint divergente');
+pass(accountProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','evidência de conta sem coerência pública da release');
 pass(accountProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência de conta não confirma Cloudflare/MongoDB Atlas');
 pass(accountProvenance.realtime==='cloudflare-durable-objects','proveniência de conta não confirma Durable Objects');
 pass(accountProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência de conta não confirma autoridade TERION V6');
@@ -83,6 +84,7 @@ pass(browserAccountProvenance.kind==='BROWSER_ACCOUNT_LIVE_CLOUDFLARE_MONGODB','
 pass(browserAccountProvenance.sourceFingerprint===currentSourceFingerprint,'browser de conta stale: sourceFingerprint divergente');
 pass(browserAccountProvenance.sourceFingerprint===live.sourceFingerprint,'browser de conta não corresponde ao backend live validado');
 pass(browserAccountProvenance.releaseFingerprint===currentReleaseFingerprint,'browser de conta stale: releaseFingerprint divergente');
+pass(browserAccountProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','browser de conta sem coerência pública da release');
 pass(browserAccountProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência browser de conta não confirma Cloudflare/MongoDB Atlas');
 pass(browserAccountProvenance.realtime==='cloudflare-durable-objects','proveniência browser de conta não confirma Durable Objects');
 pass(browserAccountProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência browser de conta não confirma autoridade TERION V6');
@@ -99,6 +101,7 @@ pass(gameplayProvenance.kind==='PUBLIC_GITHUB_PAGES_CLOUDFLARE_MONGODB_LIVE','ga
 pass(gameplayProvenance.sourceFingerprint===currentSourceFingerprint,'gameplay stale: sourceFingerprint divergente');
 pass(gameplayProvenance.sourceFingerprint===live.sourceFingerprint,'gameplay não corresponde ao backend live validado');
 pass(gameplayProvenance.releaseFingerprint===currentReleaseFingerprint,'gameplay stale: releaseFingerprint divergente');
+pass(gameplayProvenance.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE','gameplay sem coerência pública da release');
 pass(gameplayProvenance.backend==='cloudflare-workers-mongodb-atlas','proveniência gameplay não confirma Cloudflare/MongoDB Atlas');
 pass(gameplayProvenance.realtime==='cloudflare-durable-objects','proveniência gameplay não confirma Durable Objects');
 pass(gameplayProvenance.buildAuthority==='R41-AUTHORITATIVE-TERION-20260823-V6','proveniência gameplay não confirma autoridade TERION V6');
