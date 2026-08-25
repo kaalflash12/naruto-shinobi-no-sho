@@ -1,0 +1,38 @@
+name: Cloudflare Bootstrap PowerShell
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+      - '.github/workflows/cloudflare-bootstrap-syntax.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+      - '.github/workflows/cloudflare-bootstrap-syntax.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parse:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Parse bootstrap with Windows PowerShell
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+          if (-not (Test-Path $path)) { throw 'ATIVAR-CLOUDFLARE-LIVE.ps1 ausente' }
+          $tokens = $null
+          $errors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            throw "PowerShell parse failed: $($errors.Count) error(s)"
+          }
+          Write-Host 'PASS_CLOUDFLARE_BOOTSTRAP_POWERSHELL_PARSE'
