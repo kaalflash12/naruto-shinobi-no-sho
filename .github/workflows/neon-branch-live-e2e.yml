@@ -1,0 +1,30 @@
+name: Neon Branch Live E2E
+
+on:
+  push:
+    branches:
+      - feat/neon-live-authoritative-20260825
+    paths:
+      - 'tools/neon-live-e2e.mjs'
+      - '.github/workflows/neon-branch-live-e2e.yml'
+      - 'r41-api-config.js'
+      - 'r41-github-api.js'
+
+permissions:
+  contents: read
+
+jobs:
+  neon-live:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      NEON_DATA_API_URL: https://ep-weathered-brook-aydmbds7.apirest.c-5.us-east-2.aws.neon.tech/neondb/rest/v1
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Syntax
+        run: node --check tools/neon-live-e2e.mjs
+      - name: Credential-free Neon Data API live E2E
+        run: node tools/neon-live-e2e.mjs
