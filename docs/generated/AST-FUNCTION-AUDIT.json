@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-08-25T10:07:50.263Z",
+  "ok": true,
+  "status": "PASS_AST_FUNCTION_INDEX",
+  "parser": "acorn",
+  "parserVersion": "8.15.0",
+  "sourceFiles": 74,
+  "parsedFiles": 74,
+  "parseFailures": 0,
+  "functions": 3335,
+  "exactFunctions": 3335,
+  "callbacks": 1503,
+  "anonymous": 35,
+  "failures": []
+}
