@@ -12,6 +12,7 @@ permissions:
   contents: write
 
 concurrency:
+  # The marker itself is excluded from the release hash, so a sync commit never loops.
   group: shinobi-sync-public-release-fingerprint-${{ github.ref }}
   cancel-in-progress: true
 
