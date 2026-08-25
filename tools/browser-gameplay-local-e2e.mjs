@@ -100,9 +100,13 @@ const scopeMarker="scope:'PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'";
 if(!base.includes(scopeMarker))throw new Error('LOCAL_GAMEPLAY_SCOPE_TARGET_MISSING');
 base=base.replace(scopeMarker,"scope:process.env.GAMEPLAY_SCOPE||'PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'");
 
+// O E2E local também trata 404 de qualquer recurso como erro fatal: um PASS não pode carregar asset inexistente.
 const consoleMarker="  page.on('console',m=>{if(m.type()==='error')consoleErrors.push(m.text());});";
 if(!base.includes(consoleMarker))throw new Error('LOCAL_GAMEPLAY_CONSOLE_MARKER_MISSING');
 base=base.replace(consoleMarker,consoleMarker+"\n  page.on('response',r=>{if(r.status()===404)consoleErrors.push(`HTTP_404 ${r.url()}`);});");
+const fatalConsoleMarker="  const fatalConsole=consoleErrors.filter(x=>/uncaught|referenceerror|syntaxerror/i.test(x));";
+if(!base.includes(fatalConsoleMarker))throw new Error('LOCAL_GAMEPLAY_FATAL_CONSOLE_MARKER_MISSING');
+base=base.replace(fatalConsoleMarker,"  const fatalConsole=consoleErrors.filter(x=>/uncaught|referenceerror|syntaxerror|HTTP_404/i.test(x));");
 
 const patchedBase=path.join(tmpDir,'browser-gameplay-e2e-local-base.mjs');
 fs.writeFileSync(patchedBase,base,'utf8');
