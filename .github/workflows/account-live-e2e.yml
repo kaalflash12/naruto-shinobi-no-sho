@@ -19,6 +19,7 @@ jobs:
       PUBLIC_GAME_URL: https://kaalflash12.github.io/naruto-shinobi-no-sho/
       ACCOUNT_REPORT: audit/ACCOUNT-LIVE-E2E.json
       BROWSER_ACCOUNT_REPORT: audit/BROWSER-ACCOUNT-LIVE.json
+      PUBLIC_RELEASE_REPORT: audit/PUBLIC-RELEASE-COHERENCE.json
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -75,12 +76,16 @@ jobs:
           node --check tools/browser-account-live.mjs
           node --check tools/live-source-fingerprint.mjs
           node --check tools/release-source-fingerprint.mjs
+          node --check tools/public-release-coherence.mjs
+          node --check tools/wait-public-release-coherence.mjs
       - name: Backend account lifecycle live
         run: node tools/account-live-e2e.mjs
       - name: Install Chromium
         run: |
           npm install --no-save --package-lock=false playwright@1.62.1
           npx playwright install --with-deps chromium
+      - name: Wait until GitHub Pages serves this exact release
+        run: node tools/wait-public-release-coherence.mjs
       - name: Browser account lifecycle on public site
         run: node tools/browser-account-live.mjs
       - name: Bind account evidence to live backend and release fingerprints
@@ -92,8 +97,10 @@ jobs:
           const fingerprint=String(process.env.SOURCE_FINGERPRINT||'').trim();
           const releaseFingerprint=String(process.env.RELEASE_FINGERPRINT||'').trim();
           const apiOrigin=String(process.env.API_ORIGIN||'').trim().replace(/\/+$/,'');
+          const coherence=JSON.parse(fs.readFileSync('audit/PUBLIC-RELEASE-COHERENCE.json','utf8'));
           if(!/^[a-f0-9]{64}$/.test(fingerprint))throw new Error('ACCOUNT_PROVENANCE_FINGERPRINT_INVALID');
           if(!/^[a-f0-9]{64}$/.test(releaseFingerprint))throw new Error('ACCOUNT_PROVENANCE_RELEASE_FINGERPRINT_INVALID');
+          if(coherence?.ok!==true||coherence?.status!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error('ACCOUNT_PUBLIC_RELEASE_NOT_COHERENT');
           if(!/^https:\/\//i.test(apiOrigin))throw new Error('ACCOUNT_PROVENANCE_API_INVALID');
           const specs=[
             ['audit/ACCOUNT-LIVE-E2E.json','PASS_ACCOUNT_LIVE_E2E','ACCOUNT_LIVE_CLOUDFLARE_MONGODB'],
@@ -104,7 +111,7 @@ jobs:
             if(r?.ok!==true||r?.status!==status)throw new Error(`ACCOUNT_PROVENANCE_REPORT_NOT_PASS ${p} ${r?.status||'null'}`);
             const reportApi=String(r?.apiOrigin||'').replace(/\/+$/,'');
             if(reportApi!==apiOrigin)throw new Error(`ACCOUNT_PROVENANCE_API_MISMATCH ${p}`);
-            r.provenance={kind,sourceFingerprint:fingerprint,releaseFingerprint,apiOrigin,backend:'cloudflare-workers-mongodb-atlas',realtime:'cloudflare-durable-objects',buildAuthority:'R41-AUTHORITATIVE-TERION-20260823-V6'};
+            r.provenance={kind,sourceFingerprint:fingerprint,releaseFingerprint,publicReleaseCoherence:'PASS_PUBLIC_RELEASE_COHERENCE',apiOrigin,backend:'cloudflare-workers-mongodb-atlas',realtime:'cloudflare-durable-objects',buildAuthority:'R41-AUTHORITATIVE-TERION-20260823-V6'};
             fs.writeFileSync(p,JSON.stringify(r,null,2)+'\n');
           }
           NODE
@@ -123,6 +130,7 @@ jobs:
             if(r.provenance?.kind!==kind)throw new Error(`${name} provenance kind inválido`);
             if(r.provenance?.sourceFingerprint!==fingerprint)throw new Error(`${name} sourceFingerprint stale`);
             if(r.provenance?.releaseFingerprint!==releaseFingerprint)throw new Error(`${name} releaseFingerprint stale`);
+            if(r.provenance?.publicReleaseCoherence!=='PASS_PUBLIC_RELEASE_COHERENCE')throw new Error(`${name} public release coherence ausente`);
             if(String(r.provenance?.apiOrigin||'').replace(/\/+$/,'')!==api)throw new Error(`${name} apiOrigin provenance mismatch`);
             if(r.provenance?.backend!=='cloudflare-workers-mongodb-atlas'||r.provenance?.realtime!=='cloudflare-durable-objects'||r.provenance?.buildAuthority!=='R41-AUTHORITATIVE-TERION-20260823-V6')throw new Error(`${name} provenance backend inválida`);
           }
@@ -140,6 +148,7 @@ jobs:
           path: |
             audit/ACCOUNT-LIVE-E2E.json
             audit/BROWSER-ACCOUNT-LIVE.json
+            audit/PUBLIC-RELEASE-COHERENCE.json
           if-no-files-found: warn
       - name: Commit account evidence
         if: success() && github.ref == 'refs/heads/main'
