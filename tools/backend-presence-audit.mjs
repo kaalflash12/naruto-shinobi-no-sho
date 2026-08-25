@@ -26,7 +26,20 @@ const usable={
   LEON_PRIVATE_CODE:secrets.LEON_PRIVATE_CODE,
   LIVE_API_ORIGIN:variables.LIVE_API_ORIGIN
 };
-const requiredReady=secrets.CLOUDFLARE_API_TOKEN&&secrets.MONGODB_URI;
+const manualRequired={
+  CLOUDFLARE_API_TOKEN:secrets.CLOUDFLARE_API_TOKEN,
+  MONGODB_URI:secrets.MONGODB_URI
+};
+const missingManualRequired=Object.entries(manualRequired).filter(([,present])=>!present).map(([name])=>name);
+const autoManaged={
+  CLOUDFLARE_ACCOUNT_ID:{provided:usable.CLOUDFLARE_ACCOUNT_ID,strategy:'AUTO_RESOLVE_SINGLE_CLOUDFLARE_ACCOUNT_FROM_ACTIVE_TOKEN'},
+  AUTH_SECRET:{provided:secrets.AUTH_SECRET,strategy:'REUSE_EXISTING_WORKER_SECRET_OR_GENERATE_OPENSSL_RANDOM_48_BYTES'},
+  LIVE_API_ORIGIN:{provided:variables.LIVE_API_ORIGIN,strategy:'DISCOVER_WORKERS_DEV_URL_FROM_VERIFIED_WRANGLER_DEPLOY'}
+};
+const optional={
+  LEON_PRIVATE_CODE:{provided:secrets.LEON_PRIVATE_CODE,strategy:'CONFIGURE_WORKER_SECRET_ONLY_WHEN_SUPPLIED'}
+};
+const requiredReady=missingManualRequired.length===0;
 const currentSourceFingerprint=String(process.env.LIVE_SOURCE_FINGERPRINT||'').trim();
 const currentReleaseFingerprint=String(process.env.RELEASE_SOURCE_FINGERPRINT||'').trim();
 if(!isHash(currentSourceFingerprint))throw new Error('BACKEND_PRESENCE_SOURCE_FINGERPRINT_INVALID');
@@ -60,18 +73,23 @@ const report={
   generatedAt:new Date().toISOString(),
   status:'BACKEND_CREDENTIAL_PRESENCE_ONLY',
   ok:true,
-  secrets,variables,usable,requiredReady,livePass,consumersPass,
+  secrets,variables,usable,
+  manualRequired,
+  missingManualRequired,
+  autoManaged,
+  optional,
+  requiredReady,livePass,consumersPass,
   currentSourceFingerprint,liveSourceFingerprint,
   currentReleaseFingerprint,
   consumerReleaseFingerprints:{account:accountReleaseFingerprint,browserAccount:browserAccountReleaseFingerprint,gameplay:gameplayReleaseFingerprint},
-  note:'Somente booleanos de presença e fingerprints SHA-256; nenhum valor secreto ou variável foi gravado. Backend e consumidores live só contam como atuais quando correspondem aos fingerprints da fonte backend e da release pública, incluindo PASS_PUBLIC_RELEASE_COHERENCE.'
+  note:'Somente dois valores exigem configuração manual para iniciar o backend live: CLOUDFLARE_API_TOKEN e MONGODB_URI. CLOUDFLARE_ACCOUNT_ID e LIVE_API_ORIGIN são derivados pelo workflow; AUTH_SECRET é reutilizado do Worker ou gerado criptograficamente; LEON_PRIVATE_CODE é opcional. Nenhum valor secreto é gravado neste relatório.'
 };
 let previous=null;
 try{previous=JSON.parse(fs.readFileSync('audit/BACKEND-SECRET-PRESENCE.json','utf8'));}catch{}
-const semantic=r=>JSON.stringify({status:r?.status,ok:r?.ok,secrets:r?.secrets,variables:r?.variables,usable:r?.usable,requiredReady:r?.requiredReady,livePass:r?.livePass,consumersPass:r?.consumersPass,currentSourceFingerprint:r?.currentSourceFingerprint||null,liveSourceFingerprint:r?.liveSourceFingerprint||null,currentReleaseFingerprint:r?.currentReleaseFingerprint||null,consumerReleaseFingerprints:r?.consumerReleaseFingerprints||null,note:r?.note});
+const semantic=r=>JSON.stringify({status:r?.status,ok:r?.ok,secrets:r?.secrets,variables:r?.variables,usable:r?.usable,manualRequired:r?.manualRequired,missingManualRequired:r?.missingManualRequired,autoManaged:r?.autoManaged,optional:r?.optional,requiredReady:r?.requiredReady,livePass:r?.livePass,consumersPass:r?.consumersPass,currentSourceFingerprint:r?.currentSourceFingerprint||null,liveSourceFingerprint:r?.liveSourceFingerprint||null,currentReleaseFingerprint:r?.currentReleaseFingerprint||null,consumerReleaseFingerprints:r?.consumerReleaseFingerprints||null,note:r?.note});
 fs.mkdirSync('audit',{recursive:true});
 if(!previous||semantic(previous)!==semantic(report))fs.writeFileSync('audit/BACKEND-SECRET-PRESENCE.json',JSON.stringify(report,null,2)+'\n');
 if(process.env.GITHUB_OUTPUT){
   fs.appendFileSync(process.env.GITHUB_OUTPUT,`ready=${requiredReady?'true':'false'}\nlive_pass=${livePass?'true':'false'}\nconsumers_pass=${consumersPass?'true':'false'}\n`);
 }
-console.log(JSON.stringify({requiredReady,livePass,consumersPass,currentSourceFingerprint,liveSourceFingerprint,currentReleaseFingerprint,consumerReleaseFingerprints:report.consumerReleaseFingerprints},null,2));
+console.log(JSON.stringify({requiredReady,missingManualRequired,autoManaged,optional,livePass,consumersPass,currentSourceFingerprint,liveSourceFingerprint,currentReleaseFingerprint,consumerReleaseFingerprints:report.consumerReleaseFingerprints},null,2));
