@@ -21,11 +21,11 @@ jobs:
       BROWSER_ACCOUNT_REPORT: audit/BROWSER-ACCOUNT-LIVE.json
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: Resolve verified Cloudflare Worker URL
@@ -125,7 +125,7 @@ jobs:
           NODE
       - name: Upload account evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: shinobi-account-cloudflare-mongodb-evidence
           path: |
