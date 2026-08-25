@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T12:00:08.102Z",
+  "generatedAt": "2026-08-25T20:47:36.174Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt8m41b156wjf",
-  "slotId": "gameplay-mt8m41b1",
+  "temporaryAccount": "play_mt94yedj2yrb2",
+  "slotId": "gameplay-mt94yedj",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787659179094,
+          "at": 1787690828336,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 24,
+          "total": 17,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 26,
-          "enemyHpAfter": 26,
+          "enemyHpBefore": 30,
+          "enemyHpAfter": 30,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 463,
-          "success": false,
-          "errors": 3,
+          "score": 653,
+          "success": true,
+          "errors": 2,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt8m41b156wjf",
+        "intent": "Cobrir saída E2E mt94yedj2yrb2",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787659183609,
-        "cloudAt": 1787659176637,
+        "localAt": 1787690832800,
+        "cloudAt": 1787690825924,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
