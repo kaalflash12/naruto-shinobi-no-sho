@@ -102,6 +102,15 @@ jobs:
           node -e "const r=require('./docs/generated/OPERATIONAL-STATIC-AUDIT.json'); if(!r.ok||r.status!=='PASS_OPERATIONAL_STATIC_CONTRACTS') process.exit(1); console.log(r.status, r.gates)"
           node -e "const r=require('./docs/generated/FINAL-CANONICAL-AUDIT.json'); if(!r.ok||r.status!=='PASS_FINAL_CANONICAL_SPEC') process.exit(1); console.log(r.status)"
 
+      - name: Preserve generated AST and canonical evidence
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: shinobi-documentation-evidence-${{ github.run_id }}
+          path: docs/generated/**
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Validate race-safe documentation publisher
         run: |
           grep -F 'fetch-depth: 0' .github/workflows/documentation-audit.yml
