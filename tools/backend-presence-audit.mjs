@@ -46,11 +46,14 @@ const accountPass=account?.ok===true&&account?.status==='PASS_ACCOUNT_LIVE_E2E'&
   account?.provenance?.sourceFingerprint===currentSourceFingerprint&&
   browserAccount?.provenance?.sourceFingerprint===currentSourceFingerprint&&
   accountReleaseFingerprint===currentReleaseFingerprint&&
-  browserAccountReleaseFingerprint===currentReleaseFingerprint;
+  browserAccountReleaseFingerprint===currentReleaseFingerprint&&
+  account?.provenance?.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE'&&
+  browserAccount?.provenance?.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE';
 const gameplayPass=gameplay?.ok===true&&gameplay?.status==='PASS_BROWSER_GAMEPLAY_E2E'&&
   gameplay?.scope==='PUBLIC_GITHUB_PAGES_REAL_CHROMIUM_GAMEPLAY'&&
   gameplay?.provenance?.sourceFingerprint===currentSourceFingerprint&&
-  gameplayReleaseFingerprint===currentReleaseFingerprint;
+  gameplayReleaseFingerprint===currentReleaseFingerprint&&
+  gameplay?.provenance?.publicReleaseCoherence==='PASS_PUBLIC_RELEASE_COHERENCE';
 const consumersPass=livePass&&accountPass&&gameplayPass;
 
 const report={
@@ -61,7 +64,7 @@ const report={
   currentSourceFingerprint,liveSourceFingerprint,
   currentReleaseFingerprint,
   consumerReleaseFingerprints:{account:accountReleaseFingerprint,browserAccount:browserAccountReleaseFingerprint,gameplay:gameplayReleaseFingerprint},
-  note:'Somente booleanos de presença e fingerprints SHA-256; nenhum valor secreto ou variável foi gravado. Backend e consumidores live só contam como atuais quando correspondem aos fingerprints da fonte backend e da release pública.'
+  note:'Somente booleanos de presença e fingerprints SHA-256; nenhum valor secreto ou variável foi gravado. Backend e consumidores live só contam como atuais quando correspondem aos fingerprints da fonte backend e da release pública, incluindo PASS_PUBLIC_RELEASE_COHERENCE.'
 };
 let previous=null;
 try{previous=JSON.parse(fs.readFileSync('audit/BACKEND-SECRET-PRESENCE.json','utf8'));}catch{}
