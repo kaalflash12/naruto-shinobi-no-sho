@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-26T21:36:21.305Z`
+Gerado em: `2026-08-26T21:40:15.714Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -46,7 +46,7 @@ Gerado em: `2026-08-26T21:36:21.305Z`
 
 ## API-00009 — `/api/auth/me`
 
-- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:156`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:28`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:51`, `r41-github-api.js:58`
+- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs:30`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:156`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:28`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:51`, `r41-github-api.js:58`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00010 — `/api/auth/recover`
