@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T20:29:46.868Z",
+  "generatedAt": "2026-08-26T20:33:32.962Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5584,
+    "files": 5585,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 144,
+    "textFiles": 145,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 132,
+    "sourceFiles": 133,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 64,
+    "toolingSourceFiles": 65,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -159,6 +159,14 @@
       "path": ".github/workflows/fix-authority-namespace-not-found-once.yml",
       "size": 7550,
       "sha256": "5d7cd0fedb51b6ffb22ee1ed5fbc5e4240b180e52b24f4acde7422c752d09b94",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/fix-cloudflare-auth-runtime-once.yml",
+      "size": 10781,
+      "sha256": "ac5da30f8bbbe4030f3e06fbf903ca6bf243ed4a5a6bb30117637df89e27e424",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43741,8 +43749,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "c5c908201f0a3a632612c84c0b203082c4ab98c93b6a585458325a2997c028b8",
+      "size": 5605,
+      "sha256": "cb36795fc78b1b2a845632d860784c42a42747190d05358a3d2838f65c06f2e9",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43750,7 +43758,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "ab96bc9c02cf3654fbe55277f92b2d1c3433aea2245e1cb9905ad3b163c7a5c8",
+      "sha256": "f7a63c9787f7e658b6a0448e457c61ad5e02811982a49eb7cbfd24ea66cfce7c",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363736,7 +363744,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T20:29:49.281Z",
+    "generatedAt": "2026-08-26T20:33:35.887Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364261,9 +364269,9 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8070,
+      "movement": 8073,
       "assets": 15838,
-      "environment": 225
+      "environment": 227
     },
     "after": {
       "functions": 3360,
