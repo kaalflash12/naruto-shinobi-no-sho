@@ -1,0 +1,154 @@
+name: Fix Authority Namespace Not Found Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-authority-namespace-not-found-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      API_ORIGIN: https://naruto-shinobi-no-sho-api.mestrederpg35.workers.dev
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Patch exact missing-collection failure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('cloudflare/r41-api/src/entry-authoritative.js')
+          s=p.read_text(encoding='utf-8')
+          old='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}'
+          new='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}'
+          if old not in s:
+              raise SystemExit('bloco dropIndex esperado nao localizado')
+          p.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
+          PY
+          grep -q 'code!==26&&code!==27' cloudflare/r41-api/src/entry-authoritative.js
+          grep -q 'NamespaceNotFound' cloudflare/r41-api/src/entry-authoritative.js
+
+      - name: Static and TERION regression gates
+        working-directory: cloudflare/r41-api
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/shinobi-authority-dry"
+
+      - name: Reproduce exact empty namespace against Atlas
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${MONGODB_URI:-}"
+          DIAG_DB="shinobi_authority_diag_${GITHUB_RUN_ID}" node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          const uri=process.env.MONGODB_URI;
+          const dbName=process.env.DIAG_DB;
+          const client=new MongoClient(uri,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+          await client.connect();
+          try{
+            const store=client.db(dbName);
+            const profiles=store.collection('mechanical_profiles');
+            let observedMissingNamespace=false;
+            try{await profiles.dropIndex('uq_mechanical_profile_user');}
+            catch(e){
+              const code=Number(e?.code),codeName=String(e?.codeName||'');
+              observedMissingNamespace=(code===26||codeName==='NamespaceNotFound');
+              if(code!==26&&code!==27&&codeName!=='NamespaceNotFound'&&codeName!=='IndexNotFound')throw e;
+            }
+            if(!observedMissingNamespace) throw new Error('EMPTY_NAMESPACE_NOT_REPRODUCED');
+            await profiles.updateMany({profileKey:{$exists:false}},{$set:{profileKey:'legacy',migration:'v4-single-profile'}});
+            await profiles.updateMany({slotId:{$exists:false},baselineSlotId:{$type:'string'}},[{$set:{slotId:'$baselineSlotId'}}]);
+            await Promise.all([
+              store.collection('users').createIndex({emailLower:1},{unique:true,sparse:true,name:'uq_email'}),
+              profiles.createIndex({userId:1,profileKey:1},{unique:true,name:'uq_mechanical_profile_user_key'}),
+              profiles.createIndex({userId:1,updatedAt:-1},{name:'ix_mechanical_profile_user_updated'}),
+              profiles.createIndex({playerId:1},{sparse:true,name:'ix_mechanical_profile_player'}),
+              profiles.createIndex({userId:1,slotId:1},{sparse:true,name:'ix_mechanical_profile_slot'})
+            ]);
+            const names=(await profiles.indexes()).map(x=>x.name);
+            if(!names.includes('uq_mechanical_profile_user_key')) throw new Error('V6_INDEX_NOT_CREATED');
+            console.log(JSON.stringify({status:'PASS_EMPTY_NAMESPACE_V6_INITIALIZATION',observedMissingNamespace,indexCreated:true},null,2));
+          } finally {
+            try{await client.db(dbName).dropDatabase();}catch{}
+            await client.close();
+          }
+          NODE
+
+      - name: Deploy patched Worker for real register proof
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee "$RUNNER_TEMP/fixed-deploy.log"
+          grep -q 'naruto-shinobi-no-sho-api' "$RUNNER_TEMP/fixed-deploy.log"
+
+      - name: Prove register and clean diagnostic account
+        id: liveproof
+        shell: bash
+        run: |
+          set -euo pipefail
+          suffix="$(date +%s)-${GITHUB_RUN_ID}"
+          username="e2e_fix_${suffix}"; username="${username:0:32}"
+          email="${username}@example.test"
+          password="E2E!${GITHUB_RUN_ID}aA9"
+          body="$(USER="$username" EMAIL="$email" PASS="$password" node --input-type=module <<'NODE'
+          process.stdout.write(JSON.stringify({username:process.env.USER,password:process.env.PASS,displayName:'Namespace Fix E2E',email:process.env.EMAIL}));
+          NODE
+          )"
+          response="$(curl -sS --max-time 25 -X POST "$API_ORIGIN/api/auth/register" -H 'content-type: application/json' --data "$body")"
+          RESPONSE="$response" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.RESPONSE||'{}');
+          if(!(d.ok===true&&d.token&&d.account?.id)) throw new Error(`REGISTER_NOT_FIXED:${JSON.stringify({ok:d.ok,error:d.error})}`);
+          console.log('PASS_AUTHORITATIVE_REGISTER_ON_EMPTY_NAMESPACE');
+          NODE
+          token="$(RESPONSE="$response" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.RESPONSE||'{}');process.stdout.write(String(d.token||''));
+          NODE
+          )"
+          test -n "$token"
+          cleanup="$(curl -sS --max-time 20 -X POST "$API_ORIGIN/api/auth/delete-account" -H "authorization: Bearer $token" -H 'content-type: application/json' --data '{}')"
+          CLEANUP="$cleanup" node --input-type=module <<'NODE'
+          const d=JSON.parse(process.env.CLEANUP||'{}');if(d.deleted!==true)throw new Error('DIAGNOSTIC_ACCOUNT_CLEANUP_FAILED');console.log('PASS_DIAGNOSTIC_ACCOUNT_CLEANUP');
+          NODE
+
+      - name: Roll back deployed Worker if live proof fails
+        if: failure() && steps.liveproof.outcome == 'failure'
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          git checkout -- src/entry-authoritative.js
+          npx wrangler deploy || true
+
+      - name: Publish only after Atlas and Cloudflare live proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/entry-authoritative.js
+          git commit -m 'fix: tolerate empty MongoDB authority namespace'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
