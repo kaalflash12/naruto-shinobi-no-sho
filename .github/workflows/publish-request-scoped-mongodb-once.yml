@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - .github/workflows/publish-request-scoped-mongodb-once.yml
+      - cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs
+      - cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs
+      - cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs
 
 permissions:
   contents: write
@@ -85,12 +88,16 @@ jobs:
           API_ORIGIN: http://127.0.0.1:8787
         run: node test/request-scoped-auth-lifecycle.mjs
 
-      - name: Stop workerd and clean diagnostics
+      - name: Stop workerd, expose diagnostics and clean accounts
         if: always()
         working-directory: cloudflare/r41-api
         shell: bash
         run: |
           set +e
+          if [ -f "$RUNNER_TEMP/request-lifecycle.log" ]; then
+            echo '=== WORKERD REQUEST LIFECYCLE LOG ==='
+            cat "$RUNNER_TEMP/request-lifecycle.log"
+          fi
           if [ -f "$RUNNER_TEMP/request-lifecycle.pid" ]; then
             kill "$(cat "$RUNNER_TEMP/request-lifecycle.pid")" >/dev/null 2>&1 || true
           fi
