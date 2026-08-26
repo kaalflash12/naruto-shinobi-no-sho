@@ -12,6 +12,12 @@ const replaceOnce=(s,before,after,label)=>{
 let index=read('src/index.js');
 index=replaceOnce(
   index,
+  'async function verifyToken(env,db,token){if(!token||!token.includes("."))return null;const [p,s]=token.split(".",2),expected=b64url(await hmac(env.AUTH_SECRET,p));if(!timingSafe(s,expected))return null;try{const data=JSON.parse(dec.decode(unb64url(p)));if(!data.exp||data.exp<Date.now()||!data.sid)return null;const session=await db.collection("sessions").findOne({sid:data.sid,revoked:{$ne:true},expiresAt:{$gt:new Date()}});if(!session)return null;const oid=toObjectId(data.sub);return oid?await db.collection("users").findOne({_id:oid}):null;}catch{return null;}}',
+  'async function verifyToken(env,db,token){if(!token||!token.includes("."))return null;const [p,s]=token.split(".",2),expected=b64url(await hmac(env.AUTH_SECRET,p));if(!timingSafe(s,expected))return null;let data;try{data=JSON.parse(dec.decode(unb64url(p)));}catch{return null;}if(!data.exp||data.exp<Date.now()||!data.sid)return null;const session=await db.collection("sessions").findOne({sid:data.sid,revoked:{$ne:true},expiresAt:{$gt:new Date()}});if(!session)return null;const oid=toObjectId(data.sub);return oid?await db.collection("users").findOne({_id:oid}):null;}',
+  'INDEX_VERIFY_TOKEN_DB_ERRORS'
+);
+index=replaceOnce(
+  index,
   'async function requireUser(req,env,db){return verifyToken(env,db,bearer(req));}',
   'async function requireUser(req,env,db){return verifyToken(env,db,bearer(req));}\nexport async function accountFromRequest(req,env){const db=await mongo(env);await ensureIndexes(db);const user=await requireUser(req,env,db);return user?safeAccount(user):null;}',
   'INDEX_ACCOUNT_HELPER'
@@ -36,7 +42,7 @@ write('src/entry.js',entry);
 let contract=read('test/cloudflare-runtime-contract.test.mjs');
 const anchor='assert.match(authority,/NamespaceNotFound/);';
 if(!contract.includes(anchor))throw new Error('RUNTIME_CONTRACT_ANCHOR_NOT_FOUND');
-contract=contract.replace(anchor,`${anchor}\nassert.match(index,/export async function accountFromRequest/);\nassert.match(entry,/accountFromRequest\\(req,env\\)/);\nassert.doesNotMatch(entry,/pathname=\\"\\/api\\/auth\\/me\\"/);`);
+contract=contract.replace(anchor,`${anchor}\nassert.match(index,/export async function accountFromRequest/);\nassert.match(index,/let data;try\\{data=JSON\\.parse/);\nassert.match(index,/const session=await db\\.collection\\(\\"sessions\\"\\)\\.findOne/);\nassert.match(entry,/accountFromRequest\\(req,env\\)/);\nassert.doesNotMatch(entry,/pathname=\\"\\/api\\/auth\\/me\\"/);`);
 write('test/cloudflare-runtime-contract.test.mjs',contract);
 
 console.log('PASS_APPLY_DIRECT_ACCOUNT_HELPER_FIX');
