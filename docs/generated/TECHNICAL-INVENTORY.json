@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T21:19:36.361Z",
+  "generatedAt": "2026-08-26T21:20:59.104Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5587,
+    "files": 5588,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 147,
+    "textFiles": 148,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 135,
+    "sourceFiles": 136,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 67,
+    "toolingSourceFiles": 68,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -143,6 +143,14 @@
       "path": ".github/workflows/diagnose-base-register-error-once.yml",
       "size": 4194,
       "sha256": "8b5541a5100013976d259a2f7710e208e08981f9055ba7d3ac3b1543b45b8353",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/diagnose-local-workerd-register-once.yml",
+      "size": 6847,
+      "sha256": "6a22090fe7d04f91e3d1f1e57075ddca5e32cac1938f18710c2edd561a8484b3",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -363760,7 +363768,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T21:19:38.969Z",
+    "generatedAt": "2026-08-26T21:21:01.484Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364287,7 +364295,7 @@
       "events": 14,
       "movement": 8074,
       "assets": 15838,
-      "environment": 240
+      "environment": 248
     },
     "after": {
       "functions": 3360,

@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T21:19:36.361Z`
+Gerado em: `2026-08-26T21:20:59.104Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -59,6 +59,7 @@ Gerado em: `2026-08-26T21:19:36.361Z`
 - `.github/workflows/diagnose-authoritative-entry-once.yml` — domínio `tooling` — 3462 bytes — SHA-256 `f9a525500d2312fbc60cc32c8104dcc8530e7532d83abdae8a6c1f2f91bae391`
 - `.github/workflows/diagnose-authoritative-worker-tail-once.yml` — domínio `tooling` — 4051 bytes — SHA-256 `8b8d24daffa5a8d788847b98d5736e90d7e15b2e7a4b4d76904c6ccfb37f21f4`
 - `.github/workflows/diagnose-base-register-error-once.yml` — domínio `tooling` — 4194 bytes — SHA-256 `8b5541a5100013976d259a2f7710e208e08981f9055ba7d3ac3b1543b45b8353`
+- `.github/workflows/diagnose-local-workerd-register-once.yml` — domínio `tooling` — 6847 bytes — SHA-256 `6a22090fe7d04f91e3d1f1e57075ddca5e32cac1938f18710c2edd561a8484b3`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 6488 bytes — SHA-256 `95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9`
 - `.github/workflows/final-readiness-orchestration.yml` — domínio `tooling` — 1612 bytes — SHA-256 `b6066a2bc1d120eb8ae201c3d14a7972edb8231fbc63f8d9a774b79f5453b531`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3417 bytes — SHA-256 `a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6`

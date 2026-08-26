@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T21:19:51.439Z",
+  "generatedAt": "2026-08-26T21:21:13.931Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T21:19:36.361Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T21:20:59.104Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 135,
+    "sourceFiles": 136,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39865,6 +39865,11 @@
       "path": ".github/workflows/diagnose-base-register-error-once.yml",
       "size": 4194,
       "sha256": "8b5541a5100013976d259a2f7710e208e08981f9055ba7d3ac3b1543b45b8353"
+    },
+    {
+      "path": ".github/workflows/diagnose-local-workerd-register-once.yml",
+      "size": 6847,
+      "sha256": "6a22090fe7d04f91e3d1f1e57075ddca5e32cac1938f18710c2edd561a8484b3"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
