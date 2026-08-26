@@ -5,12 +5,14 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'ATIVAR-TUDO.cmd'
       - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
       - 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
       - '.github/workflows/cloudflare-bootstrap-syntax.yml'
   push:
     branches: [main]
     paths:
+      - 'ATIVAR-TUDO.cmd'
       - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
       - 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
       - '.github/workflows/cloudflare-bootstrap-syntax.yml'
@@ -59,3 +61,18 @@ jobs:
           if ($source -notmatch 'Get-MongoUriAutomatic') { throw 'Provisionamento MongoDB automatico ausente.' }
           if ($source -notmatch 'PASS_FINAL_READINESS') { throw 'Gate final ausente.' }
           Write-Host 'PASS_CLOUDFLARE_BOOTSTRAP_ZERO_PASTE'
+
+      - name: Validate one-click launcher
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'ATIVAR-TUDO.cmd'
+          if (-not (Test-Path $path)) { throw 'Launcher ATIVAR-TUDO.cmd ausente.' }
+          $source = Get-Content $path -Raw
+          if ($source -match '(?i)\bset\s+/p\b|\bchoice\b|Read-Host|CLOUDFLARE_API_TOKEN|MONGODB_URI') { throw 'Launcher voltou a exigir entrada manual sensivel.' }
+          if ($source -notmatch 'ATIVAR-CLOUDFLARE-LIVE\.ps1') { throw 'Launcher nao chama o bootstrap canonico.' }
+          if ($source -notmatch 'Invoke-WebRequest') { throw 'Launcher nao baixa a versao atual do bootstrap.' }
+          if ($source -notmatch '--validate-only') { throw 'Modo de validacao do launcher ausente.' }
+          & $env:ComSpec /d /c "`"$path`" --validate-only"
+          if ($LASTEXITCODE -ne 0) { throw "Launcher validate-only falhou: $LASTEXITCODE" }
+          Write-Host 'PASS_ONE_CLICK_LIVE_LAUNCHER_GATE'
