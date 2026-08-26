@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T19:02:51.110Z",
+  "generatedAt": "2026-08-26T19:19:32.564Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T19:02:39.366Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T19:19:20.462Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 125,
+    "sourceFiles": 126,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39852,6 +39852,11 @@
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6"
     },
     {
+      "path": ".github/workflows/fix-atlas-explicit-provisioning-once.yml",
+      "size": 13726,
+      "sha256": "35b6d1e3acbd63cac6c7354dec85ab78c1be4f7bab59ceea5ea4e6dfe9521e2e"
+    },
+    {
       "path": ".github/workflows/live-backend-e2e.yml",
       "size": 16180,
       "sha256": "ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884"
@@ -39899,12 +39904,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "5de33359c1a41b0768e595aef387b5e8439a7aff733626d25a40a866e981b775"
+      "sha256": "c9cbcc26a3d7bf930470b26f8f942faf627efe894c4d6c94db9ab57aeb50135b"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "05c5701c4267c16e716c9b6814b4d4123c590487de2d88b01172607ed3c3cde7"
+      "sha256": "4a669f81b58b6c48f4365b2473ba5c0b199bf80ce5d8a9b9231484822dac3971"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
