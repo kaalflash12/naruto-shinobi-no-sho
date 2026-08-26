@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T20:25:05.203Z",
+  "generatedAt": "2026-08-26T20:30:01.759Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T20:24:47.644Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T20:29:46.868Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 130,
+    "sourceFiles": 132,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39812,6 +39812,11 @@
       "sha256": "803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41"
     },
     {
+      "path": ".github/workflows/audit-auth-hash-iterations-once.yml",
+      "size": 1957,
+      "sha256": "3b9c4d1e8d53f11f0243d21fe5ee80d385f8d48708816943273132a7356cb1f8"
+    },
+    {
       "path": ".github/workflows/backend-secret-presence.yml",
       "size": 6485,
       "sha256": "bebb5d3d2f4e74ca054d9d87c17fac69a9b5707923194f31f6e70efeaf4f8efc"
@@ -39838,8 +39843,8 @@
     },
     {
       "path": ".github/workflows/diagnose-authoritative-entry-once.yml",
-      "size": 2809,
-      "sha256": "ee7b5ef23370bb4c7a16c663ec6ddb2a7748a21868271836d80701e5bfd8a892"
+      "size": 3462,
+      "sha256": "f9a525500d2312fbc60cc32c8104dcc8530e7532d83abdae8a6c1f2f91bae391"
     },
     {
       "path": ".github/workflows/diagnose-authoritative-worker-tail-once.yml",
@@ -39892,6 +39897,11 @@
       "sha256": "3866349c1d84c0e4f77a49cea2fa2f8e1e8d50bf54dbd7b87f4a4a1b6c22f2ff"
     },
     {
+      "path": ".github/workflows/probe-node-pbkdf2-once.yml",
+      "size": 2938,
+      "sha256": "d1f9d12deaa2ed6ac195efa55b4ab12dbfca159993731883cc6c8056180bb6f3"
+    },
+    {
       "path": ".github/workflows/public-release-coherence.yml",
       "size": 4447,
       "sha256": "29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205"
@@ -39923,13 +39933,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5567,
-      "sha256": "c3b5ab22231f65b807c207fd74e086cf971fca3aab6e122711fdbef50ba87dfc"
+      "size": 5604,
+      "sha256": "c5c908201f0a3a632612c84c0b203082c4ab98c93b6a585458325a2997c028b8"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "ad01e4c9c4b6b0fee21459f2c5b3f2b61260def5ef38ded5720d91db75d9b90f"
+      "sha256": "ab96bc9c02cf3654fbe55277f92b2d1c3433aea2245e1cb9905ad3b163c7a5c8"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
