@@ -19,58 +19,67 @@ jobs:
           fetch-depth: 0
 
       - name: Patch Atlas authentication probe in canonical V3
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1')
+          source = path.read_text(encoding='utf-8-sig')
+
+          old_start = """function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
+            & $Atlas auth whoami *> $null
+            if ($LASTEXITCODE -eq 0) { return }
+          """
+          new_start = """function Test-AtlasAuthenticated([string]$Atlas) {
+            $psi = New-Object System.Diagnostics.ProcessStartInfo
+            $psi.FileName = $Atlas
+            $psi.Arguments = 'auth whoami'
+            $psi.UseShellExecute = $false
+            $psi.RedirectStandardOutput = $true
+            $psi.RedirectStandardError = $true
+            $psi.CreateNoWindow = $true
+            $p = New-Object System.Diagnostics.Process
+            $p.StartInfo = $psi
+            try {
+              [void]$p.Start()
+              [void]$p.StandardOutput.ReadToEnd()
+              [void]$p.StandardError.ReadToEnd()
+              $p.WaitForExit()
+              return ($p.ExitCode -eq 0)
+            } catch {
+              return $false
+            } finally {
+              if ($p) { $p.Dispose() }
+            }
+          }
+
+          function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
+            if (Test-AtlasAuthenticated $Atlas) { return }
+          """
+          if source.count(old_start) != 1:
+              raise SystemExit(f'Atlas login start probe match count: {source.count(old_start)}')
+          patched = source.replace(old_start, new_start, 1)
+
+          old_tail = """  & $Atlas auth whoami *> $null
+            if ($LASTEXITCODE -ne 0) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
+          """
+          new_tail = """  if (-not (Test-AtlasAuthenticated $Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
+          """
+          if patched.count(old_tail) != 1:
+              raise SystemExit(f'Atlas login final probe match count: {patched.count(old_tail)}')
+          patched = patched.replace(old_tail, new_tail, 1)
+
+          if 'function Test-AtlasAuthenticated' not in patched:
+              raise SystemExit('Helper Test-AtlasAuthenticated ausente.')
+          if 'auth login --force --skipConfig --noBrowser' not in patched:
+              raise SystemExit('Fluxo Atlas zero-paste foi removido indevidamente.')
+          path.write_text(patched, encoding='utf-8', newline='')
+
+      - name: Validate canonical V3 on Windows PowerShell
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
           $path = Join-Path $PWD 'tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
-          $source = Get-Content $path -Raw
-
-          $startPattern = 'function Ensure-AtlasLoginZeroPaste\(\[string\]\$Atlas\) \{\r?\n  & \$Atlas auth whoami \*> \$null\r?\n  if \(\$LASTEXITCODE -eq 0\) \{ return \}\r?\n'
-          $startMatches = [regex]::Matches($source, $startPattern)
-          if ($startMatches.Count -ne 1) { throw "Atlas login start probe match count: $($startMatches.Count)" }
-
-          $replacement = @'
-function Test-AtlasAuthenticated([string]$Atlas) {
-  $psi = New-Object System.Diagnostics.ProcessStartInfo
-  $psi.FileName = $Atlas
-  $psi.Arguments = 'auth whoami'
-  $psi.UseShellExecute = $false
-  $psi.RedirectStandardOutput = $true
-  $psi.RedirectStandardError = $true
-  $psi.CreateNoWindow = $true
-  $p = New-Object System.Diagnostics.Process
-  $p.StartInfo = $psi
-  try {
-    [void]$p.Start()
-    [void]$p.StandardOutput.ReadToEnd()
-    [void]$p.StandardError.ReadToEnd()
-    $p.WaitForExit()
-    return ($p.ExitCode -eq 0)
-  } catch {
-    return $false
-  } finally {
-    if ($p) { $p.Dispose() }
-  }
-}
-
-function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
-  if (Test-AtlasAuthenticated $Atlas) { return }
-'@
-          $patched = [regex]::Replace($source, $startPattern, $replacement, 1)
-
-          $tailPattern = '  & \$Atlas auth whoami \*> \$null\r?\n  if \(\$LASTEXITCODE -ne 0\) \{ throw ''MongoDB Atlas CLI nao ficou autenticado\.'' \}\r?\n'
-          $tailMatches = [regex]::Matches($patched, $tailPattern)
-          if ($tailMatches.Count -ne 1) { throw "Atlas login final probe match count: $($tailMatches.Count)" }
-          $tailReplacement = "  if (-not (Test-AtlasAuthenticated `$Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }`r`n"
-          $patched = [regex]::Replace($patched, $tailPattern, $tailReplacement, 1)
-
-          if ($patched -eq $source) { throw 'Hotfix nao alterou o V3.' }
-          if ($patched -notmatch 'function Test-AtlasAuthenticated') { throw 'Helper Test-AtlasAuthenticated ausente.' }
-          if ($patched -notmatch "auth login --force --skipConfig --noBrowser") { throw 'Fluxo Atlas zero-paste foi removido indevidamente.' }
-
-          $utf8 = New-Object System.Text.UTF8Encoding($false)
-          [IO.File]::WriteAllText($path, $patched, $utf8)
-
           $tokens = $null
           $errors = $null
           [void][System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
@@ -79,12 +88,7 @@ function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
             throw "PowerShell parse failed: $($errors.Count) error(s)"
           }
           Write-Host 'PASS_CANONICAL_V3_ATLAS_WINPS_PARSE'
-
-      - name: Run canonical V3 deterministic regression gate
-        shell: powershell
-        run: |
-          $ErrorActionPreference = 'Stop'
-          & .\tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateRunParsing
+          & $path -ValidateRunParsing
           if ($LASTEXITCODE -ne 0) { throw 'V3 ValidateRunParsing falhou.' }
 
       - name: Commit canonical hotfix and remove temporary workflow
@@ -99,5 +103,3 @@ function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
           git commit -m 'fix: make Atlas auth probe safe on Windows PowerShell'
           git pull --rebase origin main
           git push origin HEAD:main
-
-# registered-trigger
