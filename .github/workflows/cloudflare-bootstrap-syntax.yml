@@ -1,15 +1,18 @@
 name: Cloudflare Bootstrap PowerShell
 
+# Validation-only workflow: this comment is outside the release fingerprint.
 on:
   pull_request:
     branches: [main]
     paths:
       - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+      - 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
       - '.github/workflows/cloudflare-bootstrap-syntax.yml'
   push:
     branches: [main]
     paths:
       - 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+      - 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
       - '.github/workflows/cloudflare-bootstrap-syntax.yml'
   workflow_dispatch:
 
@@ -26,13 +29,33 @@ jobs:
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
-          $path = Join-Path $PWD 'ATIVAR-CLOUDFLARE-LIVE.ps1'
-          if (-not (Test-Path $path)) { throw 'ATIVAR-CLOUDFLARE-LIVE.ps1 ausente' }
-          $tokens = $null
-          $errors = $null
-          [void][System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
-          if ($errors.Count -gt 0) {
-            $errors | ForEach-Object { Write-Error $_.Message }
-            throw "PowerShell parse failed: $($errors.Count) error(s)"
+          $paths = @(
+            (Join-Path $PWD 'ATIVAR-CLOUDFLARE-LIVE.ps1'),
+            (Join-Path $PWD 'tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1')
+          )
+          foreach ($path in $paths) {
+            if (-not (Test-Path $path)) { throw "PowerShell ausente: $path" }
+            $tokens = $null
+            $errors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error $_.Message }
+              throw "PowerShell parse failed em ${path}: $($errors.Count) error(s)"
+            }
           }
           Write-Host 'PASS_CLOUDFLARE_BOOTSTRAP_POWERSHELL_PARSE'
+
+      - name: Enforce zero-paste bootstrap
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
+          $source = Get-Content $path -Raw
+          if ($source -match '(?i)Read-Host\s+[''\"]CLOUDFLARE_API_TOKEN') { throw 'Cloudflare token manual prompt voltou.' }
+          if ($source -match '(?i)Read-Host\s+[''\"]MONGODB_URI') { throw 'MongoDB URI manual prompt voltou.' }
+          if ($source -match '(?i)Read-Host\s+[''\"]Numero da conta') { throw 'Selecao manual de conta Cloudflare voltou.' }
+          if ($source -notmatch "wrangler@4\.119\.0' login --device") { throw 'Wrangler device OAuth ausente.' }
+          if ($source -notmatch "wrangler@4\.119\.0' auth token --json") { throw 'Captura automatica da credencial Wrangler ausente.' }
+          if ($source -notmatch 'Get-MongoUriAutomatic') { throw 'Provisionamento MongoDB automatico ausente.' }
+          if ($source -notmatch 'PASS_FINAL_READINESS') { throw 'Gate final ausente.' }
+          Write-Host 'PASS_CLOUDFLARE_BOOTSTRAP_ZERO_PASTE'
