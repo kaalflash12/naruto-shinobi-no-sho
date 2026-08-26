@@ -3,46 +3,31 @@ name: Canonical V3 Hardening
 on:
   push:
     branches:
-      - fix/canonical-v3-scalar-output-20260826
+      - main
     paths:
+      - tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+      - ATIVAR-CLOUDFLARE-LIVE.ps1
+      - .github/workflows/canonical-v3-hardening.yml
+  pull_request:
+    paths:
+      - tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+      - ATIVAR-CLOUDFLARE-LIVE.ps1
       - .github/workflows/canonical-v3-hardening.yml
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  patch-canonical-v3:
+  validate-canonical-v3:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: fix/canonical-v3-scalar-output-20260826
-          fetch-depth: 0
 
-      - name: Patch canonical V3 directly
-        shell: pwsh
+      - name: Parse canonical V3 and regression fixture
+        shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
           $path = 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
-          $text = Get-Content $path -Raw
-
-          function Replace-Required([string]$Text, [string]$Old, [string]$New, [string]$Label) {
-            if ($Text.Contains($New)) { return $Text }
-            if (-not $Text.Contains($Old)) { throw "Canonical V3 patch '$Label' did not find expected contract." }
-            return $Text.Replace($Old, $New)
-          }
-
-          $text = Replace-Required $text "    & `$Npx --yes 'wrangler@4.119.0' login --device" "    & `$Npx --yes 'wrangler@4.119.0' login --device | Out-Host" 'wrangler-login-output'
-          $text = Replace-Required $text "    & `$atlas setup --projectId `$projectId --clusterName `$clusterName --provider AWS --region US_EAST_1 --tier M0 --username `$username --password `$password --accessListIp '0.0.0.0/0' --skipSampleData --connectWith skip --force" "    & `$atlas setup --projectId `$projectId --clusterName `$clusterName --provider AWS --region US_EAST_1 --tier M0 --username `$username --password `$password --accessListIp '0.0.0.0/0' --skipSampleData --connectWith skip --force *> `$null" 'atlas-setup-output'
-          $text = Replace-Required $text "  & `$Gh run watch `$RunId --repo `$Repo --exit-status" "  & `$Gh run watch `$RunId --repo `$Repo --exit-status | Out-Host" 'watch-run-scalar-output'
-          $text = Replace-Required $text "  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main" "  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null" 'audit-dispatch-scalar-output'
-          $text = Replace-Required $text "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main" "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null" 'final-dispatch-scalar-output'
-          $text = Replace-Required $text "`$temporaryCloudflareSecretWritten = `$false" "`$temporaryCloudflareSecretWritten = `$false`n`$finalReadinessPassed = `$false" 'final-readiness-state'
-          $text = Replace-Required $text "  `$finalRun = Complete-FinalReadiness `$gh" "  `$finalRun = Complete-FinalReadiness `$gh`n  `$finalReadinessPassed = `$true" 'final-readiness-success-state'
-          $text = Replace-Required $text "  if (`$temporaryCloudflareSecretWritten) {" "  if (`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed) {" 'credential-retention-on-failure'
-
-          Set-Content -Path $path -Value $text -Encoding UTF8
-
           $tokens = $null
           $errors = $null
           [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $path), [ref]$tokens, [ref]$errors)
@@ -50,8 +35,14 @@ jobs:
             $errors | ForEach-Object { Write-Error $_.Message }
             throw "Canonical V3 parse failed with $($errors.Count) error(s)."
           }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File $path -ValidateRunParsing
+          if ($LASTEXITCODE -ne 0) { throw "Canonical V3 regression fixture failed with exit code $LASTEXITCODE." }
 
-          $canonical = Get-Content $path -Raw
+      - name: Require scalar outputs and safe bearer lifetime in canonical source
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
           $required = @(
             "login --device | Out-Host",
             "--connectWith skip --force *> `$null",
@@ -66,23 +57,36 @@ jobs:
             if (-not $canonical.Contains($needle)) { throw "Canonical V3 hardening missing: $needle" }
           }
 
-          if ($canonical.Contains("  & `$Gh run watch `$RunId --repo `$Repo --exit-status`n")) { throw 'Unsafe bare gh run watch remains.' }
-          if ($canonical.Contains("  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main`n")) { throw 'Unsafe bare audit dispatch remains.' }
-          if ($canonical.Contains("  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main`n")) { throw 'Unsafe bare final dispatch remains.' }
-          if ($canonical.Contains("  if (`$temporaryCloudflareSecretWritten) {")) { throw 'Unsafe unconditional bearer cleanup remains.' }
-
+          $unsafe = @(
+            "    & `$Npx --yes 'wrangler@4.119.0' login --device`n",
+            "  & `$Gh run watch `$RunId --repo `$Repo --exit-status`n",
+            "  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main`n",
+            "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main`n",
+            "  if (`$temporaryCloudflareSecretWritten) {"
+          )
+          foreach ($needle in $unsafe) {
+            if ($canonical.Contains($needle)) { throw "Unsafe canonical V3 contract remains: $needle" }
+          }
           Write-Host 'PASS_CANONICAL_V3_SOURCE_HARDENING'
 
-      - name: Commit canonical V3 patch
-        shell: pwsh
+      - name: Verify root launcher is idempotent with hardened canonical V3
+        shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
-          if (-not (git status --porcelain -- tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1)) {
-            Write-Host 'Canonical V3 already hardened.'
-            exit 0
+          $launcher = Get-Content 'ATIVAR-CLOUDFLARE-LIVE.ps1' -Raw
+          if (-not $launcher.Contains('if ($Text.Contains($New)) { return $Text }')) {
+            throw 'Root launcher is not idempotent when canonical V3 is already hardened.'
           }
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
-          git commit -m 'fix: harden canonical V3 scalar outputs and bearer lifetime'
-          git push origin HEAD:fix/canonical-v3-scalar-output-20260826
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+          $required = @(
+            "login --device | Out-Host",
+            "--connectWith skip --force *> `$null",
+            "run watch `$RunId --repo `$Repo --exit-status | Out-Host",
+            "workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null",
+            "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+          )
+          foreach ($needle in $required) {
+            if (-not $canonical.Contains($needle)) { throw "Root launcher would need to repair missing canonical contract: $needle" }
+          }
+          Write-Host 'PASS_CANONICAL_V3_LAUNCHER_IDEMPOTENCE'
