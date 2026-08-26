@@ -1,0 +1,315 @@
+name: Publish Request Scoped MongoDB Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-request-scoped-mongodb-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  prove-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            cloudflare/r41-api
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install dependencies and clean known diagnostics
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          const c=new MongoClient(process.env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await c.connect();
+          try{
+            const db=c.db('naruto_shinobi_no_sho');
+            const rx=/^(?:publish_|authfix_|authdiag_|e2e_fix_|logindiag_|scopeprobe_|lifecycle_)/;
+            const rows=await db.collection('users').find({username:{$regex:rx}},{projection:{_id:1}}).toArray();
+            if(rows.length>30)throw new Error(`DIAGNOSTIC_CLEANUP_REFUSED_${rows.length}`);
+            const ids=rows.map(x=>x._id);
+            if(ids.length)await Promise.all([
+              db.collection('sessions').deleteMany({userId:{$in:ids}}),db.collection('recovery_codes').deleteMany({userId:{$in:ids}}),
+              db.collection('mechanical_profiles').deleteMany({userId:{$in:ids}}),db.collection('saves').deleteMany({userId:{$in:ids}}),
+              db.collection('audit_events').deleteMany({userId:{$in:ids}}),db.collection('users').deleteMany({_id:{$in:ids}})
+            ]);
+            console.log(JSON.stringify({status:'PASS_REQUEST_SCOPE_PRE_CLEANUP',deleted:ids.length}));
+          }finally{await c.close();}
+          NODE
+
+      - name: Apply proven auth fixes and request-scoped MongoDB lifecycle
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re, json
+
+          Path('src/mongo-request.js').write_text(r'''import { MongoClient } from "mongodb";
+
+export const R41_MONGO_REQUEST_SCOPE = Symbol.for("r41.mongo.request.scope.v1");
+
+export function createMongoRequestEnv(env){
+  const scope={client:null,clientPromise:null};
+  return new Proxy(env,{get(target,prop){if(prop===R41_MONGO_REQUEST_SCOPE)return scope;return target[prop];}});
+}
+
+function requestScope(env){
+  const scope=env?.[R41_MONGO_REQUEST_SCOPE];
+  if(!scope)throw new Error("MONGO_REQUEST_SCOPE_MISSING");
+  return scope;
+}
+
+export async function requestMongoDb(env,fallbackDb="naruto_shinobi_no_sho"){
+  const scope=requestScope(env);
+  if(!scope.clientPromise){
+    scope.clientPromise=(async()=>{
+      const client=new MongoClient(env.MONGODB_URI,{maxPoolSize:1,minPoolSize:0,maxIdleTimeMS:0,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+      await client.connect();
+      scope.client=client;
+      return client;
+    })().catch(e=>{scope.client=null;scope.clientPromise=null;throw e;});
+  }
+  const client=await scope.clientPromise;
+  return client.db(env.MONGODB_DB||fallbackDb);
+}
+
+export async function closeMongoRequestEnv(env){
+  const scope=env?.[R41_MONGO_REQUEST_SCOPE];
+  if(!scope)return;
+  let client=scope.client;
+  if(!client&&scope.clientPromise){try{client=await scope.clientPromise;}catch{}}
+  scope.client=null;
+  scope.clientPromise=null;
+  if(client){try{await client.close();}catch{}}
+}
+''',encoding='utf-8',newline='\n')
+
+          # Base API: no module-global Mongo client/promise; one DB client is supplied by outer request scope.
+          p=Path('src/index.js');s=p.read_text(encoding='utf-8')
+          s=s.replace('import { MongoClient, ObjectId } from "mongodb";','import { ObjectId } from "mongodb";\nimport { requestMongoDb } from "./mongo-request.js";',1)
+          s=s.replace('let sharedClient = null;\nlet sharedUri = "";\nlet indexesPromise = null;','let indexesReady = false;',1)
+          old='async function mongo(env){\n  if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");\n  if(!sharedClient || sharedUri!==env.MONGODB_URI){sharedUri=env.MONGODB_URI;sharedClient=new MongoClient(env.MONGODB_URI,{maxPoolSize:6,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await sharedClient.connect();indexesPromise=null;}\n  return sharedClient.db(env.MONGODB_DB||"naruto_shinobi_r41");\n}'
+          new='async function mongo(env){\n  if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");\n  return requestMongoDb(env,"naruto_shinobi_r41");\n}'
+          if old not in s: raise SystemExit('INDEX_MONGO_BLOCK_NOT_FOUND')
+          s=s.replace(old,new,1)
+          old='async function ensureIndexes(db){\n  if(!indexesPromise) indexesPromise=Promise.all(['
+          new='async function ensureIndexes(db){\n  if(indexesReady)return;\n  await Promise.all(['
+          if old not in s: raise SystemExit('INDEX_ENSURE_START_NOT_FOUND')
+          s=s.replace(old,new,1)
+          old='  ]).catch(e=>{indexesPromise=null;throw e;});\n  return indexesPromise;\n}'
+          new='  ]);\n  indexesReady=true;\n}'
+          if old not in s: raise SystemExit('INDEX_ENSURE_END_NOT_FOUND')
+          s=s.replace(old,new,1)
+          for old,new in {
+            'iterations=210000':'iterations=100000','passIter:210000':'passIter:100000',
+            'hashPassword(recoveryCode,recoverySalt,120000)':'hashPassword(recoveryCode,recoverySalt,100000)',
+            'iterations:120000':'iterations:100000','u.passIter||210000':'u.passIter||100000','rc.iterations||120000':'rc.iterations||100000'
+          }.items():
+            if old not in s: raise SystemExit(f'INDEX_AUTH_LITERAL_NOT_FOUND:{old}')
+            s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8',newline='\n')
+
+          # Entry guard/recovery layer: no cross-request Mongo client or promise.
+          p=Path('src/entry.js');s=p.read_text(encoding='utf-8')
+          s=s.replace('import { MongoClient, ObjectId } from "mongodb";','import { ObjectId } from "mongodb";\nimport { requestMongoDb } from "./mongo-request.js";',1)
+          s=s.replace('let guardClient = null;\nlet guardUri = "";\nlet guardIndex = null;','let guardIndexReady = false;',1)
+          old='async function guardDb(env){if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");if(!guardClient||guardUri!==env.MONGODB_URI){guardUri=env.MONGODB_URI;guardClient=new MongoClient(env.MONGODB_URI,{maxPoolSize:3,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await guardClient.connect();guardIndex=null;}const db=guardClient.db(env.MONGODB_DB||"naruto_shinobi_r41");if(!guardIndex)guardIndex=db.collection("room_memberships").createIndex({roomId:1,userId:1},{unique:true,name:"uq_room_membership"}).catch(e=>{guardIndex=null;throw e;});await guardIndex;return db;}'
+          new='async function guardDb(env){if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");const db=await requestMongoDb(env,"naruto_shinobi_r41");if(!guardIndexReady){await db.collection("room_memberships").createIndex({roomId:1,userId:1},{unique:true,name:"uq_room_membership"});guardIndexReady=true;}return db;}'
+          if old not in s: raise SystemExit('ENTRY_GUARD_DB_NOT_FOUND')
+          s=s.replace(old,new,1)
+          if 'iterations=120000' not in s: raise SystemExit('ENTRY_RECOVERY_ITERATION_NOT_FOUND')
+          s=s.replace('iterations=120000','iterations=100000')
+          p.write_text(s,encoding='utf-8',newline='\n')
+
+          # Authoritative outer layer owns the request-scoped Mongo lifecycle and closes it in finally.
+          p=Path('src/entry-authoritative.js');s=p.read_text(encoding='utf-8')
+          s=s.replace('import { MongoClient, ObjectId } from "mongodb";','import { ObjectId } from "mongodb";\nimport { createMongoRequestEnv, requestMongoDb, closeMongoRequestEnv } from "./mongo-request.js";',1)
+          s=s.replace('let client=null,clientUri="",authorityIndexesPromise=null;','let authorityIndexesReady=false;',1)
+          old='    try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}'
+          new='    try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}'
+          if old not in s: raise SystemExit('AUTHORITY_NAMESPACE_BLOCK_NOT_FOUND')
+          s=s.replace(old,new,1)
+          old='async function ensureAuthorityIndexes(store){\n  if(!authorityIndexesPromise)authorityIndexesPromise=(async()=>{'
+          new='async function ensureAuthorityIndexes(store){\n  if(authorityIndexesReady)return;\n  await (async()=>{'
+          if old not in s: raise SystemExit('AUTHORITY_INDEX_START_NOT_FOUND')
+          s=s.replace(old,new,1)
+          old='  })().catch(e=>{authorityIndexesPromise=null;throw e;});\n  await authorityIndexesPromise;\n}'
+          new='  })();\n  authorityIndexesReady=true;\n}'
+          if old not in s: raise SystemExit('AUTHORITY_INDEX_END_NOT_FOUND')
+          s=s.replace(old,new,1)
+          old='async function db(env){\n  if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");\n  if(!client||clientUri!==env.MONGODB_URI){clientUri=env.MONGODB_URI;client=new MongoClient(env.MONGODB_URI,{maxPoolSize:4,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();authorityIndexesPromise=null;}\n  const store=client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");await ensureAuthorityIndexes(store);return store;\n}'
+          new='async function db(env){\n  if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");\n  const store=await requestMongoDb(env,"naruto_shinobi_no_sho");\n  await ensureAuthorityIndexes(store);\n  return store;\n}'
+          if old not in s: raise SystemExit('AUTHORITY_DB_BLOCK_NOT_FOUND')
+          s=s.replace(old,new,1)
+          pattern=r'export default \{async fetch\(req,env,ctx\)\{try\{const path=.*?\}\};\s*$'
+          replacement='''export default {async fetch(req,env,ctx){
+  const requestEnv=createMongoRequestEnv(env);
+  try{
+    const path=new URL(req.url).pathname.replace(/\\/+$/g,"")||"/";
+    if(path==="/"||path==="/api/status")return status(req,requestEnv,ctx);
+    if(path==="/api/auth/me")return augmentAccountEmail(req,requestEnv,await base.fetch(req,requestEnv,ctx));
+    const auth=await emailAwareAuth(req,requestEnv,ctx,path);if(auth)return auth;
+    const deletion=await authoritativeAccountDelete(req,requestEnv,ctx,path);if(deletion)return deletion;
+    const slotDelete=await authoritativeSlotDelete(req,requestEnv,ctx,path);if(slotDelete)return slotDelete;
+    const membership=await authoritativeMembership(req,requestEnv,ctx,path);if(membership)return membership;
+    if(path==="/api/online/action"||/^\\/api\\/(pvp|coop)\\/action$/.test(path))return authoritativeAction(req,requestEnv,ctx);
+    const world=await authoritativeWorld(req,requestEnv,ctx,path);if(world)return world;
+    const leaderboard=await authoritativeLeaderboard(req,requestEnv,ctx,path);if(leaderboard)return leaderboard;
+    return base.fetch(req,requestEnv,ctx);
+  }catch(e){
+    console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);
+    return json(req,requestEnv,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});
+  }finally{
+    await closeMongoRequestEnv(requestEnv);
+  }
+}};
+'''
+          s2,n=re.subn(pattern,replacement,s,flags=re.S)
+          if n!=1: raise SystemExit(f'AUTHORITY_EXPORT_REPLACE_COUNT_{n}')
+          p.write_text(s2,encoding='utf-8',newline='\n')
+
+          # Permanent regression contract.
+          Path('test/cloudflare-runtime-contract.test.mjs').write_text(r'''import assert from "node:assert/strict";
+import fs from "node:fs";
+
+const index=fs.readFileSync(new URL("../src/index.js",import.meta.url),"utf8");
+const entry=fs.readFileSync(new URL("../src/entry.js",import.meta.url),"utf8");
+const authority=fs.readFileSync(new URL("../src/entry-authoritative.js",import.meta.url),"utf8");
+const mongoRequest=fs.readFileSync(new URL("../src/mongo-request.js",import.meta.url),"utf8");
+const wrangler=fs.readFileSync(new URL("../wrangler.toml",import.meta.url),"utf8");
+
+for(const [name,source] of [["index",index],["entry",entry],["authority",authority]]){
+  assert.doesNotMatch(source,/new MongoClient\s*\(/,`${name}: MongoClient must not be created/cached by a route module`);
+}
+assert.match(mongoRequest,/createMongoRequestEnv/);
+assert.match(mongoRequest,/maxPoolSize:1/);
+assert.match(mongoRequest,/client\.close\(\)/);
+assert.match(authority,/finally\s*\{\s*await closeMongoRequestEnv\(requestEnv\)/s);
+assert.match(authority,/code!==26&&code!==27/);
+assert.match(authority,/NamespaceNotFound/);
+assert.match(wrangler,/no_throw_on_not_implemented_tls_options/);
+for(const [name,source] of [["index",index],["entry",entry]]){
+  const nums=[...source.matchAll(/(?:iterations\s*=|iterations\s*:|passIter\s*:|iterations\s*\|\||passIter\s*\|\|)\s*(\d+)/g)].map(m=>Number(m[1]));
+  assert.ok(nums.length>0,`${name}: PBKDF2 iteration contracts missing`);
+  assert.ok(nums.every(n=>n<=100000),`${name}: PBKDF2 exceeds Workers WebCrypto limit: ${nums}`);
+}
+console.log("PASS_CLOUDFLARE_REQUEST_SCOPED_MONGODB_CONTRACT");
+''',encoding='utf-8',newline='\n')
+
+          pkg=Path('package.json');data=json.loads(pkg.read_text(encoding='utf-8'))
+          data['scripts']['check']='node --check src/terion-mechanics.js && node --check src/mongo-request.js && node --check src/index.js && node --check src/entry.js && node --check src/entry-authoritative.js && node --check test/mongodb-live-preflight.mjs'
+          data['scripts']['test']='node test/terion-mechanics.test.mjs && node test/cloudflare-runtime-contract.test.mjs'
+          pkg.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
+          PY
+
+      - name: Static regression and Wrangler dry run
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/request-scope-dry"
+
+      - name: Start official workerd against real Atlas
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > wrangler-lifecycle.toml <<'EOF'
+          name = "shinobi-request-lifecycle-proof"
+          main = "src/entry-authoritative.js"
+          compatibility_date = "2026-08-19"
+          compatibility_flags = ["nodejs_compat", "no_throw_on_not_implemented_tls_options"]
+          [vars]
+          MONGODB_DB = "naruto_shinobi_no_sho"
+          AUTH_SECRET = "LOCAL_REQUEST_LIFECYCLE_PROOF_SECRET"
+          ALLOWED_ORIGINS = "http://127.0.0.1:8787"
+          EOF
+          printf 'MONGODB_URI="%s"\n' "$MONGODB_URI" > .dev.vars
+          chmod 600 .dev.vars
+          npx wrangler dev --local --config wrangler-lifecycle.toml --port 8787 --ip 127.0.0.1 >"$RUNNER_TEMP/request-lifecycle.log" 2>&1 &
+          echo $! > "$RUNNER_TEMP/request-lifecycle.pid"
+          for i in $(seq 1 60); do curl -fsS --max-time 2 http://127.0.0.1:8787/api/status >/dev/null 2>&1 && exit 0; sleep 1; done
+          cat "$RUNNER_TEMP/request-lifecycle.log"; exit 1
+
+      - name: Prove complete multi-request auth lifecycle
+        id: lifecycle
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const origin='http://127.0.0.1:8787';
+          const suffix=`${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
+          const username=`lifecycle_${suffix}`.slice(0,32),email=`${username}@example.test`,password=`Old!${suffix}aA9`,newPassword=`New!${suffix}zZ8`;
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/lifecycle-user.txt',username);
+          async function post(path,body={},token='',expected=[200]){
+            const headers={'content-type':'application/json',accept:'application/json'};if(token)headers.authorization=`Bearer ${token}`;
+            const r=await fetch(origin+path,{method:'POST',headers,body:JSON.stringify(body)});const raw=await r.text();let d={};try{d=raw?JSON.parse(raw):{}}catch{d={raw:raw.slice(0,300)}};
+            console.log(JSON.stringify({path,status:r.status,ok:d?.ok??null,error:d?.error??null}));
+            if(!expected.includes(r.status))throw new Error(`${path}:HTTP_${r.status}:${String(d?.error||'')}`);return d;
+          }
+          const reg=await post('/api/auth/register',{username,password,displayName:'Lifecycle Proof',email},'', [201]);
+          if(!(reg.ok&&reg.token&&reg.recoveryCode&&reg.account?.email===email))throw new Error('REGISTER_INVALID');
+          const login=await post('/api/auth/login',{identifier:username,password});if(!(login.ok&&login.token))throw new Error('LOGIN_INVALID');
+          const me=await post('/api/auth/me',{},login.token);if(me.account?.username!==username||me.account?.email!==email)throw new Error('ME_INVALID');
+          const rotated=await post('/api/auth/recovery-code',{},login.token);if(!(rotated.ok&&rotated.recoveryCode))throw new Error('ROTATE_INVALID');
+          const recovered=await post('/api/auth/recover',{identifier:email,recoveryCode:rotated.recoveryCode,newPassword});if(!(recovered.ok&&recovered.recovered===true))throw new Error('RECOVER_INVALID');
+          await post('/api/auth/login',{identifier:username,password},'', [401]);
+          const login2=await post('/api/auth/login',{identifier:email,password:newPassword});if(!(login2.ok&&login2.token))throw new Error('NEW_LOGIN_INVALID');
+          const del=await post('/api/auth/delete-account',{},login2.token);if(del.deleted!==true)throw new Error('DELETE_INVALID');
+          await post('/api/auth/me',{},login2.token,[401]);
+          console.log('PASS_REQUEST_SCOPED_MONGODB_FULL_AUTH_LIFECYCLE');
+          NODE
+
+      - name: Stop workerd and clean diagnostic account
+        if: always()
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set +e
+          if [ -f "$RUNNER_TEMP/request-lifecycle.pid" ]; then kill "$(cat "$RUNNER_TEMP/request-lifecycle.pid")" >/dev/null 2>&1 || true; fi
+          rm -f .dev.vars wrangler-lifecycle.toml
+          if [ -f "$RUNNER_TEMP/lifecycle-user.txt" ]; then
+            user="$(cat "$RUNNER_TEMP/lifecycle-user.txt")"
+            DIAG_USER="$user" node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          const c=new MongoClient(process.env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await c.connect();
+          try{const db=c.db('naruto_shinobi_no_sho'),u=await db.collection('users').findOne({username:process.env.DIAG_USER},{projection:{_id:1}});if(u?._id){await Promise.all([db.collection('sessions').deleteMany({userId:u._id}),db.collection('recovery_codes').deleteMany({userId:u._id}),db.collection('mechanical_profiles').deleteMany({userId:u._id}),db.collection('audit_events').deleteMany({userId:u._id}),db.collection('users').deleteOne({_id:u._id})]);console.log('PASS_REQUEST_LIFECYCLE_CLEANUP');}}finally{await c.close();}
+          NODE
+          fi
+
+      - name: Publish only after full lifecycle proof
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/mongo-request.js cloudflare/r41-api/src/index.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/test/cloudflare-runtime-contract.test.mjs cloudflare/r41-api/package.json
+          git diff --cached --check
+          git commit -m 'fix: scope MongoDB connections to each Worker request'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
