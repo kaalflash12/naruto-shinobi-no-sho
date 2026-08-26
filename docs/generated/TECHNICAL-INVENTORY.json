@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T20:37:41.763Z",
+  "generatedAt": "2026-08-26T21:17:13.550Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -117,8 +117,8 @@
     },
     {
       "path": ".github/workflows/diagnose-auth-runtime-v3-once.yml",
-      "size": 5613,
-      "sha256": "0ba9d5df9ff3754231f8a2f1249e05d7a134320a44f77856681dba5514d1acd9",
+      "size": 5201,
+      "sha256": "d4899beba4d085c0e9d681a2c7819a772ba279732573fee2d725adcfd08f2e29",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43765,8 +43765,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5605,
-      "sha256": "cb36795fc78b1b2a845632d860784c42a42747190d05358a3d2838f65c06f2e9",
+      "size": 5604,
+      "sha256": "9c58a3587b6875146b0dbf7a3044961a395be9955dd11479152256e28e199972",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43774,7 +43774,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "f7a63c9787f7e658b6a0448e457c61ad5e02811982a49eb7cbfd24ea66cfce7c",
+      "sha256": "71db5053eabd991c54696bb043a785ea4c399c1f328424a6b0264b826064f2a3",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363760,7 +363760,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T20:37:44.153Z",
+    "generatedAt": "2026-08-26T21:17:16.061Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364287,7 +364287,7 @@
       "events": 14,
       "movement": 8073,
       "assets": 15838,
-      "environment": 239
+      "environment": 240
     },
     "after": {
       "functions": 3360,
