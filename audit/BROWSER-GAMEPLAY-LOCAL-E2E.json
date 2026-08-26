@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T21:27:03.725Z",
+  "generatedAt": "2026-08-26T21:29:07.675Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtalsymu4bpdo",
-  "slotId": "gameplay-mtalsymu",
+  "temporaryAccount": "play_mtalvnby94ooo",
+  "slotId": "gameplay-mtalvnby",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787779594820,
+          "at": 1787779719717,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 16,
+          "total": 13,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 483,
-          "success": false,
-          "errors": 5,
+          "score": 541,
+          "success": true,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtalsymu4bpdo",
+        "intent": "Cobrir saída E2E mtalvnby94ooo",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787779599319,
-        "cloudAt": 1787779592368,
+        "localAt": 1787779724163,
+        "cloudAt": 1787779717307,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
