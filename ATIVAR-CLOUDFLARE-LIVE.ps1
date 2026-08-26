@@ -44,5 +44,21 @@ if ($ValidateHotfix) {
   exit 0
 }
 
+# O Atlas CLI portatil pode continuar bloqueado por um processo/auth anterior.
+# Nao apagamos essa pasta: se o executavel ja existe, colocamos seu diretorio no PATH
+# para o V3 reutiliza-lo em vez de tentar Remove-Item no binario em uso.
+$portableAtlasRoot = Join-Path $env:TEMP 'shinobi-atlas-portable'
+if (Test-Path $portableAtlasRoot) {
+  $portableAtlas = Get-ChildItem $portableAtlasRoot -Recurse -Filter atlas.exe -File -ErrorAction SilentlyContinue | Select-Object -First 1
+  if ($portableAtlas) {
+    $atlasDir = $portableAtlas.Directory.FullName
+    $pathParts = @($env:Path -split ';' | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    if ($pathParts -notcontains $atlasDir) {
+      $env:Path = "$atlasDir;$env:Path"
+    }
+    Write-Host ("Reutilizando MongoDB Atlas CLI portatil existente: {0}" -f $portableAtlas.FullName) -ForegroundColor Green
+  }
+}
+
 & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $target -Repo $Repo
 if ($LASTEXITCODE -ne 0) { throw "Bootstrap V3 terminou com exit code $LASTEXITCODE." }
