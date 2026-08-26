@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T18:56:11.388Z",
+  "generatedAt": "2026-08-26T19:02:51.110Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T18:55:56.254Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T19:02:39.366Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 128,
+    "sourceFiles": 125,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39828,8 +39828,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 5073,
-      "sha256": "0c3f6d423b58afde7a4534fdf668f5874a310701cc796d3987d349dca719ecad"
+      "size": 6324,
+      "sha256": "77519bf96d0542d9ac31c71cabad5719ea80d605371e60d9795732473222ae75"
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
@@ -39852,11 +39852,6 @@
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6"
     },
     {
-      "path": ".github/workflows/fix-portable-validator-once.yml",
-      "size": 1465,
-      "sha256": "8b8260870eb607723f3e85c727d3e284fc1c79fc505c1e6256e5f25ec198eba1"
-    },
-    {
       "path": ".github/workflows/live-backend-e2e.yml",
       "size": 16180,
       "sha256": "ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884"
@@ -39865,16 +39860,6 @@
       "path": ".github/workflows/live-backend-failure-evidence.yml",
       "size": 4337,
       "sha256": "8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc"
-    },
-    {
-      "path": ".github/workflows/portable-bootstrap-hardening-fast.yml",
-      "size": 11013,
-      "sha256": "43edf93b2d8a38e2c7095f03ea85a75521749223519caad9bf3ee2a7277bc95e"
-    },
-    {
-      "path": ".github/workflows/portable-bootstrap-hardening-once.yml",
-      "size": 12443,
-      "sha256": "947908e15ebe87a8a178a3fc0d34bfd12a088b02ec4934674eee292b56fc4dc1"
     },
     {
       "path": ".github/workflows/post-live-backend-orchestration.yml",
@@ -39913,13 +39898,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "de8a6424dc3e4ed2fd45d2399c4aa9cb04ce7b055f4228d9c6836e1944beb210"
+      "size": 5604,
+      "sha256": "5de33359c1a41b0768e595aef387b5e8439a7aff733626d25a40a866e981b775"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "4968c6409597d8a6b3766114bc2d648b51dd3f15d9bc5f65e8d65ec3c1ab030c"
+      "sha256": "05c5701c4267c16e716c9b6814b4d4123c590487de2d88b01172607ed3c3cde7"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40283,8 +40268,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 27069,
-      "sha256": "e348663be60e7cf8a56e8665ed19402c05d366b06374ef14bc16a76cf7361a21"
+      "size": 30115,
+      "sha256": "bd44ecac4f17aa3b888c4a86ed8799c6e4676e31e8d1d62fb1ae1251ffd19c50"
     },
     {
       "path": "tools/audit-ast-function-index.mjs",
