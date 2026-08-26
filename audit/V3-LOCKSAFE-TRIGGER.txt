@@ -1,0 +1,1 @@
+Trigger Windows-tested V3 lock-safe publisher. This file is temporary and will be removed after canonical publication.
