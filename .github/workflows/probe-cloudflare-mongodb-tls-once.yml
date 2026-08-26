@@ -1,0 +1,92 @@
+name: Probe Cloudflare MongoDB TLS Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/probe-cloudflare-mongodb-tls-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Create isolated probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/mongo-worker-probe"
+          cd "$RUNNER_TEMP/mongo-worker-probe"
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund mongodb@6.20.0 wrangler@4.126.0 >/dev/null
+          cat > probe.mjs <<'EOF'
+          import { MongoClient } from 'mongodb';
+          export default {
+            async fetch(req, env) {
+              let client;
+              try {
+                client = new MongoClient(env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000,maxPoolSize:1});
+                await client.connect();
+                await client.db('naruto_shinobi_no_sho').command({ping:1});
+                return Response.json({ok:true,status:'PASS_MONGODB_WORKER_PING'});
+              } catch (e) {
+                const msg=String(e?.message||e||'');
+                const category = /ERR_OPTION_NOT_IMPLEMENTED|not implemented|checkServerIdentity|tls/i.test(msg) ? 'TLS_RUNTIME_COMPAT' : /ENOTFOUND|DNS|querySrv|resolve/i.test(msg) ? 'DNS_RUNTIME_COMPAT' : /auth|Authentication|SCRAM/i.test(msg) ? 'AUTH' : /timed out|timeout|server selection/i.test(msg) ? 'CONNECT_TIMEOUT' : 'OTHER';
+                return Response.json({ok:false,status:'FAIL_MONGODB_WORKER_PING',name:String(e?.name||''),code:String(e?.code||''),category},{status:500});
+              } finally { try { await client?.close(); } catch {} }
+            }
+          };
+          EOF
+      - name: Probe current and TLS-compatible modes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${CLOUDFLARE_API_TOKEN:-}"
+          test -n "${CLOUDFLARE_ACCOUNT_ID:-}"
+          test -n "${MONGODB_URI:-}"
+          cd "$RUNNER_TEMP/mongo-worker-probe"
+          probe_name="shinobi-mongodb-probe-${GITHUB_RUN_ID}"
+          cleanup(){ npx wrangler delete --name "$probe_name" --force >/dev/null 2>&1 || true; }
+          trap cleanup EXIT
+          write_config(){
+            mode="$1"
+            if [ "$mode" = current ]; then flags='["nodejs_compat"]'; else flags='["nodejs_compat", "no_throw_on_not_implemented_tls_options"]'; fi
+            cat > wrangler.toml <<EOF
+          name = "$probe_name"
+          main = "probe.mjs"
+          compatibility_date = "2026-08-19"
+          compatibility_flags = $flags
+          workers_dev = true
+          EOF
+          }
+          write_config current
+          npx wrangler deploy >/tmp/probe-current-deploy.log 2>&1
+          printf '%s' "$MONGODB_URI" | npx wrangler secret put MONGODB_URI >/dev/null
+          current_url="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' /tmp/probe-current-deploy.log | tail -n1)"
+          test -n "$current_url"
+          current_body="$(curl -sS --max-time 20 "$current_url")"
+          echo "CURRENT_PROBE=$current_body"
+
+          write_config tlscompat
+          npx wrangler deploy >/tmp/probe-tls-deploy.log 2>&1
+          tls_url="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' /tmp/probe-tls-deploy.log | tail -n1)"
+          test -n "$tls_url"
+          tls_body="$(curl -sS --max-time 20 "$tls_url")"
+          echo "TLS_COMPAT_PROBE=$tls_body"
+
+          CURRENT="$current_body" TLSCOMPAT="$tls_body" node --input-type=module <<'NODE'
+          const current=JSON.parse(process.env.CURRENT||'{}');
+          const tls=JSON.parse(process.env.TLSCOMPAT||'{}');
+          if(tls.ok!==true) throw new Error(`TLS-compatible probe still failed: ${JSON.stringify(tls)}`);
+          console.log(JSON.stringify({status:'PASS_CLOUDFLARE_MONGODB_TLS_COMPAT_PROBE',current,tlsCompatible:tls},null,2));
+          NODE
