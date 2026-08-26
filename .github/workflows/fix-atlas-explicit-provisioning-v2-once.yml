@@ -1,0 +1,126 @@
+name: Fix Atlas Explicit Provisioning V2 Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-atlas-explicit-provisioning-v2-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Reuse production patch without validator self-match
+        shell: powershell
+        run: |
+          @'
+          from pathlib import Path
+
+          source = Path('.github/workflows/fix-atlas-explicit-provisioning-once.yml').read_text(encoding='utf-8')
+          begin_marker = "          @'\n          from pathlib import Path\n"
+          end_marker = "\n          '@ | python -"
+          begin = source.index(begin_marker) + len("          @'\n")
+          end = source.index(end_marker, begin)
+          script = source[begin:end]
+          lines = script.splitlines()
+          script = '\n'.join((line[10:] if line.startswith('          ') else line) for line in lines) + '\n'
+
+          old = '''$source = Get-Content $PSCommandPath -Raw
+            if ($source.Contains("@('setup','--projectId'")) { throw 'Regressao: provisioning ainda usa atlas setup.' }'''
+          new = '''$source = Get-Content $PSCommandPath -Raw
+            $forbiddenSetup = "@('" + "setup','--projectId'"
+            if ($source.Contains($forbiddenSetup)) { throw 'Regressao: provisioning ainda usa atlas setup.' }'''
+          if old not in script:
+              raise SystemExit('fixture Atlas antigo nao localizado no patch reutilizado')
+          script = script.replace(old, new, 1)
+          Path('atlas-explicit-patch.py').write_text(script, encoding='utf-8', newline='\n')
+          '@ | python -
+          python atlas-explicit-patch.py
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Parse patched canonical V3
+        shell: powershell
+        run: |
+          $tokens=$null; $errors=$null
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'),[ref]$tokens,[ref]$errors)
+          if($errors.Count -gt 0){ $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+          Write-Host 'PASS_PATCHED_V3_PARSE'
+
+      - name: Run Atlas explicit provisioning fixture
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateAtlasProvisioning
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Preserve previous Windows fixtures
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidatePortableTools
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateRunParsing
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Validate explicit commands against current Atlas CLI
+        shell: powershell
+        run: |
+          $ErrorActionPreference='Stop'
+          $headers=@{'User-Agent'='naruto-shinobi-no-sho-ci'}
+          $release=Invoke-RestMethod -Headers $headers -Uri 'https://api.github.com/repos/mongodb/mongodb-atlas-cli/releases/latest'
+          $asset=@($release.assets | Where-Object { $_.name -match '^mongodb-atlas-cli_.*_windows_x86_64\.zip$' }) | Select-Object -First 1
+          if(-not $asset){ throw 'Atlas CLI Windows asset nao encontrado.' }
+          $root=Join-Path $env:RUNNER_TEMP 'atlas-cli-current-v2'
+          New-Item -ItemType Directory -Path $root -Force | Out-Null
+          $zip=Join-Path $root 'atlas.zip'
+          Invoke-WebRequest -Headers $headers -Uri $asset.browser_download_url -OutFile $zip
+          Expand-Archive $zip $root -Force
+          $atlas=(Get-ChildItem $root -Recurse -Filter atlas.exe | Select-Object -First 1).FullName
+          foreach($args in @(
+            @('clusters','create','--help'),
+            @('accessLists','create','--help'),
+            @('dbusers','create','--help'),
+            @('dbusers','update','--help'),
+            @('clusters','describe','--help'),
+            @('clusters','connectionStrings','describe','--help')
+          )){
+            $text=(& $atlas @args 2>&1 | Out-String)
+            if($LASTEXITCODE -ne 0){ throw "Atlas help falhou: $($args -join ' ')" }
+            if(-not $text.Contains('--projectId')){ throw "Atlas atual nao anuncia --projectId em: $($args -join ' ')" }
+          }
+          $clusterHelp=(& $atlas clusters create --help 2>&1 | Out-String)
+          foreach($flag in @('--provider','--region','--tier')){ if(-not $clusterHelp.Contains($flag)){ throw "clusters create sem $flag" } }
+          Write-Host 'PASS_CURRENT_ATLAS_CLI_EXPLICIT_COMMAND_SURFACE'
+
+      - name: Enforce no setup dependency and no password diagnostics
+        shell: powershell
+        run: |
+          $source=Get-Content tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -Raw
+          $forbidden="@('" + "setup','--projectId'"
+          if($source.Contains($forbidden)){ throw 'atlas setup ainda presente no provisioning.' }
+          foreach($required in @('Get-AtlasProvisioningPlan','Protect-AtlasDiagnostic','Format-AtlasArgumentsForLog','PASS_ATLAS_EXPLICIT_PROJECT_SCOPED_PROVISIONING')){
+            if(-not $source.Contains($required)){ throw "Contrato Atlas ausente: $required" }
+          }
+          Write-Host 'PASS_ATLAS_EXPLICIT_STATIC_CONTRACTS'
+
+      - name: Publish only after every Windows validation passes
+        shell: powershell
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+          git commit -m 'fix: provision Atlas explicitly without default profile dependency'
+          for($i=0; $i -lt 5; $i++){
+            git pull --rebase origin main
+            if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+            git push origin HEAD:main
+            if($LASTEXITCODE -eq 0){ exit 0 }
+            Start-Sleep -Seconds 2
+          }
+          throw 'Nao foi possivel publicar V3 Atlas explicito.'
