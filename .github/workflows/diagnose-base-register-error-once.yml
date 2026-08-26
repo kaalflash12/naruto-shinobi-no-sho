@@ -1,3 +1,4 @@
+# trigger after workflow registration
 name: Diagnose Base Register Error Once
 
 on:
