@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T20:14:56.254Z",
+  "generatedAt": "2026-08-26T20:16:36.061Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtaj88k90xof5",
-  "slotId": "gameplay-mtaj88k9",
+  "temporaryAccount": "play_mtajacthvao9p",
+  "slotId": "gameplay-mtajacth",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,8 +15,7 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true,
-    "temporaryAccountDeleted": true
+    "allOperationalContractsGameplayE2E": true
   },
   "contracts": [
     {
@@ -89,7 +88,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.8,
+          "time": 4.9,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -97,11 +96,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787775268268,
+          "at": 1787775367753,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 16,
+          "total": 14,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,13 +147,13 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 349,
-          "success": false,
-          "errors": 4,
+          "score": 631,
+          "success": true,
+          "errors": 1,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
-            "com_erros"
+            "estavel",
+            "controlado"
           ],
           "meta": {}
         },
@@ -171,7 +170,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtaj88k90xof5",
+        "intent": "Cobrir saída E2E mtajacthvao9p",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +189,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787775272731,
-        "cloudAt": 1787775265858,
+        "localAt": 1787775372285,
+        "cloudAt": 1787775365220,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
