@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T12:58:53.898Z",
+  "generatedAt": "2026-08-26T13:28:07.374Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -85,8 +85,8 @@
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
-      "size": 4390,
-      "sha256": "425115ee4424956079831a8fbb6be87fdd3550942362328f668646f7972d52b6",
+      "size": 4917,
+      "sha256": "5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43653,8 +43653,8 @@
     },
     {
       "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
-      "size": 993,
-      "sha256": "c2dba81159c678677e5b2d1a9dea91bf16ff7168a63aad93ecf6f94424771608",
+      "size": 4151,
+      "sha256": "bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896",
       "extension": ".ps1",
       "runtime": true,
       "asset": false
@@ -43678,7 +43678,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "ab3d32adbc76bc5b8e9d31ebe2efd47ad3f8aa6b5c90f35f53dc20229f2bd4cb",
+      "sha256": "bccd411cb85be9d9e71762168b0219e8d97e06e4349ae5661f71a5d028525150",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43686,7 +43686,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "16750c117abe59c714106f4d057a40274cb4e5ec82feca30c3bd803c3407b72e",
+      "sha256": "6466f3b751b99e7356ee14b1991114ac65ccbbe72153235e97db18a44b9a6db5",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363672,7 +363672,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T12:58:56.304Z",
+    "generatedAt": "2026-08-26T13:28:10.037Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
