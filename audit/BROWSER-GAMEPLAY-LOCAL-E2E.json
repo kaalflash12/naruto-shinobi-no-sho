@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T20:23:37.723Z",
+  "generatedAt": "2026-08-26T20:27:59.479Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtajjdlri3n75",
-  "slotId": "gameplay-mtajjdlr",
+  "temporaryAccount": "play_mtajoztwwyb2f",
+  "slotId": "gameplay-mtajoztw",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,7 +15,8 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true
+    "allOperationalContractsGameplayE2E": true,
+    "temporaryAccountDeleted": true
   },
   "contracts": [
     {
@@ -96,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787775789096,
+          "at": 1787776050524,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 17,
+          "total": 24,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -147,9 +148,9 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 606,
+          "score": 658,
           "success": true,
-          "errors": 3,
+          "errors": 2,
           "time": 0.8,
           "performanceTags": [
             "estavel",
@@ -170,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtajjdlri3n75",
+        "intent": "Cobrir saída E2E mtajoztwwyb2f",
         "persistedAcrossReload": true
       }
     },
@@ -189,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787775793665,
-        "cloudAt": 1787775786655,
+        "localAt": 1787776055040,
+        "cloudAt": 1787776048068,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
