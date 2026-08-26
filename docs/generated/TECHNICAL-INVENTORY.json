@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T17:31:07.772Z",
+  "generatedAt": "2026-08-26T17:42:15.497Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -85,8 +85,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 4504,
-      "sha256": "4144ff7658f919abd17d62a2ff979eb33c1c90849fa33b19d8e226ab189b2e6c",
+      "size": 4653,
+      "sha256": "442b34ddfef6a42ccac9a2c9ffe177912d880bc0960d6d50856d21b0668e5c42",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43685,8 +43685,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "7846138bd0c0e97a03540b5cd34fb7e6cb91726d273fa1b362316227dbacf800",
+      "size": 5570,
+      "sha256": "0d3bb75fcbf771c9e46f310113844388bc2a5fcec8e11618ed45497aa9421528",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43694,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "0548f172cc38e8c2125a202e6f34e9e2278cacde3a3bfb4797454ad78749937b",
+      "sha256": "51ef2e9be00c74db521ea25ea3e2e8f00431b4e6065e5816c805da791d246e2c",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44389,8 +44389,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 25244,
-      "sha256": "cb6f598fdc5b1b8ae533eeb014184e448dc2f924fbc5f5fa7bd6e0db6a73461a",
+      "size": 27069,
+      "sha256": "e348663be60e7cf8a56e8665ed19402c05d366b06374ef14bc16a76cf7361a21",
       "extension": ".ps1",
       "runtime": true,
       "asset": false
@@ -363680,7 +363680,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T17:31:10.273Z",
+    "generatedAt": "2026-08-26T17:42:18.008Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
