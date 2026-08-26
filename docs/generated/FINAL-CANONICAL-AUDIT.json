@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T13:28:22.519Z",
+  "generatedAt": "2026-08-26T13:53:47.131Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T13:28:07.374Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T13:53:32.425Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 124,
+    "sourceFiles": 125,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39827,6 +39827,11 @@
       "sha256": "ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43"
     },
     {
+      "path": ".github/workflows/canonical-v3-hardening.yml",
+      "size": 4096,
+      "sha256": "171bfd67b4c49c339997670bde7900be228efc2a8273e44455dfa4a1c51a64b7"
+    },
+    {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
       "size": 4917,
       "sha256": "5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa"
@@ -39894,12 +39899,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "bccd411cb85be9d9e71762168b0219e8d97e06e4349ae5661f71a5d028525150"
+      "sha256": "acf09ee6d0b354591288daf9ba924388c29b0a270548f3e2a708c1e2039b36f9"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "6466f3b751b99e7356ee14b1991114ac65ccbbe72153235e97db18a44b9a6db5"
+      "sha256": "78b4ae121b31d4d8c9ccb3e6878af1adee9f40864802d2e0584ad376493c83dd"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40263,8 +40268,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 24531,
-      "sha256": "75070cc956f81fbd70f81804419a8ee5370cc6f43c19a44ce7459a03dbf187c2"
+      "size": 24671,
+      "sha256": "ff0e92e70559bf47aa331321fab5f17aa452c89324fd00d6a4e2c73e50e22a3a"
     },
     {
       "path": "tools/audit-ast-function-index.mjs",
