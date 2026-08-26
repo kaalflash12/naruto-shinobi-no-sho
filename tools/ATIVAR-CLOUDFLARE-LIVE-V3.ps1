@@ -2,7 +2,8 @@ param(
   [string]$Repo = 'kaalflash12/naruto-shinobi-no-sho',
   [string]$PreferredCloudflareAccountId = '2a0d551fcc5064ae91aed8b42513f3a',
   [switch]$ValidateRunParsing,
-  [switch]$ValidatePortableTools
+  [switch]$ValidatePortableTools,
+  [switch]$ValidateAtlasProvisioning
 )
 
 Set-StrictMode -Version Latest
@@ -291,6 +292,47 @@ function Get-JsonRows($Object) {
   return @($Object)
 }
 
+function Format-AtlasArgumentsForLog([string[]]$Arguments) {
+  $safe = New-Object System.Collections.Generic.List[string]
+  $redactNext = $false
+  foreach ($argument in $Arguments) {
+    if ($redactNext) {
+      [void]$safe.Add('<redacted>')
+      $redactNext = $false
+      continue
+    }
+    $text = [string]$argument
+    [void]$safe.Add($text)
+    if ($text -eq '--password' -or $text -eq '-p') { $redactNext = $true }
+  }
+  return ($safe -join ' ')
+}
+
+function Protect-AtlasDiagnostic([string]$Text, [string[]]$Arguments) {
+  $safe = [string]$Text
+  for ($i = 0; $i -lt $Arguments.Count - 1; $i++) {
+    if ([string]$Arguments[$i] -eq '--password' -or [string]$Arguments[$i] -eq '-p') {
+      $secret = [string]$Arguments[$i + 1]
+      if (-not [string]::IsNullOrWhiteSpace($secret)) {
+        $safe = $safe -replace [regex]::Escape($secret), '<redacted>'
+      }
+    }
+  }
+  return $safe
+}
+
+function Get-AtlasProvisioningPlan([string]$ProjectId, [string]$ClusterName, [string]$Username, [string]$Password) {
+  return [PSCustomObject]@{
+    CreateCluster = @('clusters','create',$ClusterName,'--projectId',$ProjectId,'--provider','AWS','--region','US_EAST_1','--tier','M0','--output','json')
+    ListAccess = @('accessLists','list','--projectId',$ProjectId,'--limit','500','--output','json')
+    CreateAccess = @('accessLists','create','0.0.0.0/0','--type','cidrBlock','--projectId',$ProjectId)
+    UpdateUser = @('dbusers','update',$Username,'--password',$Password,'--projectId',$ProjectId)
+    CreateUser = @('dbusers','create','readWriteAnyDatabase','--username',$Username,'--password',$Password,'--projectId',$ProjectId)
+    DescribeCluster = @('clusters','describe',$ClusterName,'--projectId',$ProjectId,'--output','json')
+    ConnectionString = @('clusters','connectionStrings','describe',$ClusterName,'--projectId',$ProjectId,'--output','json')
+  }
+}
+
 function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFailure) {
   $stdoutFile = [IO.Path]::GetTempFileName()
   $stderrFile = [IO.Path]::GetTempFileName()
@@ -304,7 +346,9 @@ function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFai
       StdErr = [string]$stderr
     }
     if ($result.ExitCode -ne 0 -and -not $AllowFailure) {
-      throw ("Atlas CLI falhou: {0}. {1}" -f ($Arguments -join ' '), $result.StdErr)
+      $safeArgs = Format-AtlasArgumentsForLog $Arguments
+      $safeErr = Protect-AtlasDiagnostic $result.StdErr $Arguments
+      throw ("Atlas CLI falhou: {0}. {1}" -f $safeArgs, $safeErr)
     }
     return $result
   } finally {
@@ -349,29 +393,29 @@ function Get-MongoUriAutomatic {
 
   $username = 'shinobi_game'
   $password = New-RandomHex 24
+  $clusterName = if ($cluster) { [string]$cluster.name } else { 'shinobi-no-sho' }
+  $plan = Get-AtlasProvisioningPlan $projectId $clusterName $username $password
+
   if (-not $cluster) {
-    $clusterName = 'shinobi-no-sho'
-    [void](Invoke-AtlasCli $atlas @('setup','--projectId',$projectId,'--clusterName',$clusterName,'--provider','AWS','--region','US_EAST_1','--tier','M0','--username',$username,'--password',$password,'--accessListIp','0.0.0.0/0','--skipSampleData','--connectWith','skip','--force'))
-  } else {
-    $clusterName = [string]$cluster.name
+    [void](Invoke-AtlasCli $atlas $plan.CreateCluster)
+  }
 
-    $accessResult = Invoke-AtlasCli $atlas @('accessLists','list','--projectId',$projectId,'--limit','500','--output','json')
-    $accessRows = @(Get-JsonRows ($accessResult.StdOut | ConvertFrom-Json))
-    $allowAllExists = @($accessRows | Where-Object { [string]$_.cidrBlock -eq '0.0.0.0/0' }).Count -gt 0
-    if (-not $allowAllExists) {
-      [void](Invoke-AtlasCli $atlas @('accessLists','create','0.0.0.0/0','--type','cidrBlock','--projectId',$projectId))
-    }
+  $accessResult = Invoke-AtlasCli $atlas $plan.ListAccess
+  $accessRows = @(Get-JsonRows ($accessResult.StdOut | ConvertFrom-Json))
+  $allowAllExists = @($accessRows | Where-Object { [string]$_.cidrBlock -eq '0.0.0.0/0' }).Count -gt 0
+  if (-not $allowAllExists) {
+    [void](Invoke-AtlasCli $atlas $plan.CreateAccess)
+  }
 
-    $updateUser = Invoke-AtlasCli $atlas @('dbusers','update',$username,'--password',$password,'--projectId',$projectId) -AllowFailure
-    if ($updateUser.ExitCode -ne 0) {
-      [void](Invoke-AtlasCli $atlas @('dbusers','create','readWriteAnyDatabase','--username',$username,'--password',$password,'--projectId',$projectId))
-    }
+  $updateUser = Invoke-AtlasCli $atlas $plan.UpdateUser -AllowFailure
+  if ($updateUser.ExitCode -ne 0) {
+    [void](Invoke-AtlasCli $atlas $plan.CreateUser)
   }
 
   $deadline = [DateTime]::UtcNow.AddMinutes(15)
   $state = $null
   do {
-    $descResult = Invoke-AtlasCli $atlas @('clusters','describe',$clusterName,'--projectId',$projectId,'--output','json') -AllowFailure
+    $descResult = Invoke-AtlasCli $atlas $plan.DescribeCluster -AllowFailure
     if ($descResult.ExitCode -eq 0 -and -not [string]::IsNullOrWhiteSpace($descResult.StdOut)) {
       $desc = $descResult.StdOut | ConvertFrom-Json
       $state = [string]$desc.stateName
@@ -381,7 +425,7 @@ function Get-MongoUriAutomatic {
   } while ([DateTime]::UtcNow -lt $deadline)
   if ($state -ne 'IDLE') { throw "Cluster MongoDB Atlas nao ficou pronto. Estado final: $state" }
 
-  $connResult = Invoke-AtlasCli $atlas @('clusters','connectionStrings','describe',$clusterName,'--projectId',$projectId,'--output','json')
+  $connResult = Invoke-AtlasCli $atlas $plan.ConnectionString
   $match = [regex]::Match($connResult.StdOut, 'mongodb\+srv://[^"\s]+')
   if (-not $match.Success) { throw 'Connection string SRV nao encontrada.' }
   $srv = $match.Value
@@ -562,6 +606,33 @@ function Complete-FinalReadiness([string]$Gh) {
   if (-not $report) { throw 'FINAL-READINESS.json nao confirmou PASS_FINAL_READINESS.' }
   Write-Host 'PASS_FINAL_READINESS confirmado no repositorio.' -ForegroundColor Green
   return $finalId
+}
+
+if ($ValidateAtlasProvisioning) {
+  $fixtureProject = '0123456789abcdef01234567'
+  $fixtureCluster = 'shinobi-no-sho'
+  $fixtureUser = 'shinobi_game'
+  $fixturePassword = 'TOP_SECRET_FIXTURE_VALUE'
+  $plan = Get-AtlasProvisioningPlan $fixtureProject $fixtureCluster $fixtureUser $fixturePassword
+  $commands = @($plan.CreateCluster,$plan.ListAccess,$plan.CreateAccess,$plan.UpdateUser,$plan.CreateUser,$plan.DescribeCluster,$plan.ConnectionString)
+  foreach ($command in $commands) {
+    $joined = @($command) -join ' '
+    if ($joined -notmatch [regex]::Escape("--projectId $fixtureProject")) { throw "Comando Atlas sem projectId explicito: $joined" }
+    if ($joined -match '(^|\s)setup(\s|$)') { throw "Regressao: atlas setup voltou ao provisioning: $joined" }
+  }
+  if ((@($plan.CreateCluster) -join ' ') -notmatch 'clusters create shinobi-no-sho .*--provider AWS .*--region US_EAST_1 .*--tier M0') { throw 'Plano de criacao M0 invalido.' }
+  if ((@($plan.CreateAccess) -join ' ') -notmatch 'accessLists create 0\.0\.0\.0/0 --type cidrBlock') { throw 'Plano de access list invalido.' }
+  if ((@($plan.CreateUser) -join ' ') -notmatch 'dbusers create readWriteAnyDatabase --username shinobi_game') { throw 'Plano de dbuser invalido.' }
+  $safe = Format-AtlasArgumentsForLog $plan.CreateUser
+  if ($safe.Contains($fixturePassword)) { throw 'Senha Atlas vazou no formatter de argumentos.' }
+  if (-not $safe.Contains('<redacted>')) { throw 'Formatter Atlas nao marcou segredo redigido.' }
+  $diag = Protect-AtlasDiagnostic ("erro contendo $fixturePassword") $plan.CreateUser
+  if ($diag.Contains($fixturePassword)) { throw 'Senha Atlas vazou no diagnostico.' }
+  $source = Get-Content $PSCommandPath -Raw
+  $forbiddenSetup = "@('" + "setup','--projectId'"
+  if ($source.Contains($forbiddenSetup)) { throw 'Regressao: provisioning ainda usa atlas setup.' }
+  Write-Host 'PASS_ATLAS_EXPLICIT_PROJECT_SCOPED_PROVISIONING'
+  exit 0
 }
 
 if ($ValidatePortableTools) {
