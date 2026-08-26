@@ -1,5 +1,6 @@
 name: Cloudflare Bootstrap PowerShell
 
+# Validation-only workflow: this comment is outside the release fingerprint.
 on:
   pull_request:
     branches: [main]
