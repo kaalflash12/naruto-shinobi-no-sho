@@ -1,0 +1,216 @@
+name: Fix Cloudflare Auth Runtime Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-cloudflare-auth-runtime-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-live-proof-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      API_ORIGIN: https://naruto-shinobi-no-sho-api.mestrederpg35.workers.dev
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Apply exact runtime fixes locally
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          authority=Path('cloudflare/r41-api/src/entry-authoritative.js')
+          a=authority.read_text(encoding='utf-8')
+          old='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}'
+          new='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}'
+          if old not in a:
+              raise SystemExit('authority dropIndex block not found')
+          authority.write_text(a.replace(old,new,1),encoding='utf-8',newline='\n')
+
+          index=Path('cloudflare/r41-api/src/index.js')
+          s=index.read_text(encoding='utf-8')
+          replacements={
+            'iterations=210000':'iterations=100000',
+            'passIter:210000':'passIter:100000',
+            'hashPassword(recoveryCode,recoverySalt,120000)':'hashPassword(recoveryCode,recoverySalt,100000)',
+            'iterations:120000':'iterations:100000',
+            'u.passIter||210000':'u.passIter||100000',
+            'rc.iterations||120000':'rc.iterations||100000',
+          }
+          for old_text,new_text in replacements.items():
+              count=s.count(old_text)
+              if count < 1:
+                  raise SystemExit(f'index auth literal not found: {old_text}')
+              s=s.replace(old_text,new_text)
+          index.write_text(s,encoding='utf-8',newline='\n')
+
+          entry=Path('cloudflare/r41-api/src/entry.js')
+          e=entry.read_text(encoding='utf-8')
+          for old_text,new_text in {
+            'iterations=120000':'iterations=100000',
+            'iterations=120000,hash=await hashPassword':'iterations=100000,hash=await hashPassword',
+          }.items():
+              if old_text in e:
+                  e=e.replace(old_text,new_text)
+          if 'iterations=120000' in e:
+              raise SystemExit('entry recovery PBKDF2 still exceeds Workers limit')
+          entry.write_text(e,encoding='utf-8',newline='\n')
+          PY
+
+      - name: Enforce runtime compatibility contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const index=fs.readFileSync('cloudflare/r41-api/src/index.js','utf8');
+          const entry=fs.readFileSync('cloudflare/r41-api/src/entry.js','utf8');
+          const authority=fs.readFileSync('cloudflare/r41-api/src/entry-authoritative.js','utf8');
+          const wrangler=fs.readFileSync('cloudflare/r41-api/wrangler.toml','utf8');
+          for(const [label,source] of [['index.js',index],['entry.js',entry]]){
+            const defaults=[...source.matchAll(/hashPassword\([^)]*iterations\s*=\s*(\d+)/g)].map(m=>Number(m[1]));
+            const stored=[...source.matchAll(/(?:passIter|iterations)\s*:\s*(\d+)/g)].map(m=>Number(m[1]));
+            const explicit=[...source.matchAll(/hashPassword\([^\n;]*?,\s*(\d+)\s*\)/g)].map(m=>Number(m[1]));
+            const values=[...defaults,...stored,...explicit];
+            if(values.some(v=>v>100000)) throw new Error(`${label} contains PBKDF2 iteration count above 100000: ${values}`);
+          }
+          if(!authority.includes('code!==26&&code!==27') || !authority.includes('NamespaceNotFound')) throw new Error('NamespaceNotFound tolerance missing');
+          if(!wrangler.includes('no_throw_on_not_implemented_tls_options')) throw new Error('MongoDB TLS compatibility flag missing');
+          console.log('PASS_CLOUDFLARE_AUTH_RUNTIME_STATIC_CONTRACTS');
+          NODE
+
+      - name: Run static and TERION regressions
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/shinobi-auth-runtime-dry"
+
+      - name: Deploy patched Worker temporarily
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee "$RUNNER_TEMP/auth-fixed-deploy.log"
+          grep -q 'naruto-shinobi-no-sho-api' "$RUNNER_TEMP/auth-fixed-deploy.log"
+
+      - name: Prove register login recovery rotation and deletion live
+        id: authproof
+        shell: bash
+        run: |
+          set -euo pipefail
+          API_ORIGIN="$API_ORIGIN" node --input-type=module <<'NODE'
+          const origin=process.env.API_ORIGIN.replace(/\/+$/,'');
+          const suffix=`${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
+          const username=`authfix_${suffix}`.slice(0,32);
+          const email=`${username}@example.test`;
+          const password=`Old!${suffix}aA9`;
+          const newPassword=`New!${suffix}zZ8`;
+          let token=''; let cleanupToken='';
+          async function call(path,{body,token:auth='',expected=[200]}={}){
+            const headers={accept:'application/json'};
+            if(body!==undefined) headers['content-type']='application/json';
+            if(auth) headers.authorization=`Bearer ${auth}`;
+            const res=await fetch(`${origin}${path}`,{method:'POST',headers,body:body===undefined?undefined:JSON.stringify(body)});
+            const raw=await res.text(); let data={}; try{data=raw?JSON.parse(raw):{}}catch{data={raw:raw.slice(0,200)}}
+            if(!expected.includes(res.status)) throw new Error(`${path} HTTP ${res.status} expected ${expected.join('/')} error=${String(data?.error||'')}`);
+            return data;
+          }
+          try{
+            const reg=await call('/api/auth/register',{body:{username,password,displayName:'Auth Runtime E2E',email},expected:[201]});
+            if(!(reg.ok&&reg.token&&reg.recoveryCode&&reg.account?.id)) throw new Error('REGISTER_RESPONSE_INVALID');
+            token=reg.token; cleanupToken=token;
+            console.log('PASS_AUTH_REGISTER_LIVE');
+
+            const login=await call('/api/auth/login',{body:{identifier:username,password}});
+            if(!(login.ok&&login.token&&login.account?.username===username)) throw new Error('LOGIN_RESPONSE_INVALID');
+            cleanupToken=login.token;
+            console.log('PASS_AUTH_LOGIN_LIVE');
+
+            const rotated=await call('/api/auth/recovery-code',{token:cleanupToken,body:{}});
+            if(!(rotated.ok&&rotated.recoveryCode)) throw new Error('RECOVERY_ROTATION_INVALID');
+            console.log('PASS_AUTH_RECOVERY_ROTATION_LIVE');
+
+            const recovered=await call('/api/auth/recover',{body:{identifier:username,recoveryCode:rotated.recoveryCode,newPassword}});
+            if(!(recovered.ok&&recovered.recovered===true)) throw new Error('RECOVERY_RESPONSE_INVALID');
+            console.log('PASS_AUTH_RECOVER_LIVE');
+
+            await call('/api/auth/login',{body:{identifier:username,password},expected:[401]});
+            console.log('PASS_OLD_PASSWORD_REJECTED');
+
+            const newLogin=await call('/api/auth/login',{body:{identifier:email,password:newPassword}});
+            if(!(newLogin.ok&&newLogin.token&&newLogin.account?.username===username)) throw new Error('NEW_PASSWORD_EMAIL_LOGIN_INVALID');
+            cleanupToken=newLogin.token;
+            console.log('PASS_NEW_PASSWORD_EMAIL_LOGIN_LIVE');
+
+            const me=await call('/api/auth/me',{token:cleanupToken,body:{}});
+            if(me.account?.username!==username||me.account?.email!==email) throw new Error('AUTH_ME_AFTER_RECOVERY_INVALID');
+            console.log('PASS_AUTH_ME_AFTER_RECOVERY_LIVE');
+
+            const del=await call('/api/auth/delete-account',{token:cleanupToken,body:{}});
+            if(del.deleted!==true) throw new Error('ACCOUNT_DELETE_INVALID');
+            cleanupToken='';
+            await call('/api/auth/me',{token:newLogin.token,body:{},expected:[401]});
+            console.log('PASS_AUTH_ACCOUNT_DELETE_LIVE');
+          } finally {
+            if(cleanupToken){
+              try{await call('/api/auth/delete-account',{token:cleanupToken,body:{},expected:[200,401]});}catch{}
+            }
+          }
+          NODE
+
+      - name: Run complete backend live E2E on patched Worker
+        id: fulle2e
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/live-evidence"
+          API_ORIGIN="$API_ORIGIN" LIVE_BACKEND_REPORT="$RUNNER_TEMP/live-evidence/LIVE-BACKEND.json" node tools/live-worker-e2e.mjs
+          REPORT="$RUNNER_TEMP/live-evidence/LIVE-BACKEND.json" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const d=JSON.parse(fs.readFileSync(process.env.REPORT,'utf8'));
+          if(!(d.ok===true&&d.status==='PASS_LIVE_BACKEND_E2E')) throw new Error(`FULL_LIVE_E2E_NOT_PASS:${d.status}`);
+          console.log('PASS_FULL_LIVE_BACKEND_E2E_ON_PATCHED_WORKER');
+          NODE
+
+      - name: Restore production Worker if any live proof fails
+        if: failure()
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout -- src/index.js src/entry.js src/entry-authoritative.js
+          npx wrangler deploy || true
+
+      - name: Publish only after both live proofs pass
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/index.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js
+          git commit -m 'fix: make Cloudflare auth runtime compatible with Atlas and WebCrypto'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
