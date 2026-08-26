@@ -185,9 +185,31 @@ function Get-AtlasExecutable {
   return $atlas.FullName
 }
 
+function Test-AtlasAuthenticated([string]$Atlas) {
+  $psi = New-Object System.Diagnostics.ProcessStartInfo
+  $psi.FileName = $Atlas
+  $psi.Arguments = 'auth whoami'
+  $psi.UseShellExecute = $false
+  $psi.RedirectStandardOutput = $true
+  $psi.RedirectStandardError = $true
+  $psi.CreateNoWindow = $true
+  $p = New-Object System.Diagnostics.Process
+  $p.StartInfo = $psi
+  try {
+    [void]$p.Start()
+    [void]$p.StandardOutput.ReadToEnd()
+    [void]$p.StandardError.ReadToEnd()
+    $p.WaitForExit()
+    return ($p.ExitCode -eq 0)
+  } catch {
+    return $false
+  } finally {
+    if ($p) { $p.Dispose() }
+  }
+}
+
 function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
-  & $Atlas auth whoami *> $null
-  if ($LASTEXITCODE -eq 0) { return }
+  if (Test-AtlasAuthenticated $Atlas) { return }
 
   Write-Step 'Autorizando MongoDB Atlas sem copiar codigo no PowerShell'
   $psi = New-Object System.Diagnostics.ProcessStartInfo
@@ -223,8 +245,7 @@ function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
   $stderr = $p.StandardError.ReadToEnd()
   $p.WaitForExit()
   if ($p.ExitCode -ne 0) { throw "Autorizacao MongoDB Atlas falhou. $stderr" }
-  & $Atlas auth whoami *> $null
-  if ($LASTEXITCODE -ne 0) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
+  if (-not (Test-AtlasAuthenticated $Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
 }
 
 function New-RandomHex([int]$Bytes = 24) {
@@ -436,7 +457,7 @@ function Complete-LiveBackend([string]$Gh) {
   $mongo = $null
   try {
     $mongo = Get-MongoUriAutomatic
-    Set-GhSecret $Gh 'MONGODB_URI' $mongo
+    Set-GhSecret $gh 'MONGODB_URI' $mongo
     Write-Host 'MONGODB_URI provisionada automaticamente e gravada como GitHub Secret.' -ForegroundColor Green
   } finally {
     $mongo = $null
@@ -529,4 +550,3 @@ try {
 
 Write-Host ''
 Write-Host 'PASS_FINAL_READINESS' -ForegroundColor Green
-
