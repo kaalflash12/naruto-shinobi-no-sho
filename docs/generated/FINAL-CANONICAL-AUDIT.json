@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T11:54:35.933Z",
+  "generatedAt": "2026-08-26T12:59:08.998Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T11:54:22.945Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T12:58:53.898Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -39828,8 +39828,8 @@
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
-      "size": 3693,
-      "sha256": "1a247aa1462588301a71ccef00238c56f9e0d5212b440011ce91b5ccebe1a3c6"
+      "size": 4390,
+      "sha256": "425115ee4424956079831a8fbb6be87fdd3550942362328f668646f7972d52b6"
     },
     {
       "path": ".github/workflows/documentation-audit.yml",
@@ -39888,18 +39888,18 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 2558,
-      "sha256": "ac064ba258e50f7e75381595ed722292c682a555e276a42d175ab8f85c3efcce"
+      "size": 2521,
+      "sha256": "421623a85c98db7033d21afb8a8b65d5d5c6d911599a914c173aaac96cee53a1"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "7c0e2ae855f9f33a6b74edda8d99138d917a65db98c928a1cbe390d3cf1634d5"
+      "size": 5604,
+      "sha256": "ab3d32adbc76bc5b8e9d31ebe2efd47ad3f8aa6b5c90f35f53dc20229f2bd4cb"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "3534fc6c1b62dcdbf2eeea7b12c4c04a8ac159093bbe862d71d78a7fda895e57"
+      "sha256": "16750c117abe59c714106f4d057a40274cb4e5ec82feca30c3bd803c3407b72e"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40263,8 +40263,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 22082,
-      "sha256": "84e6efb9ae9b09147ccc91301f5d17cf1774ac7e058473c08c2c5ca233c077b5"
+      "size": 24531,
+      "sha256": "75070cc956f81fbd70f81804419a8ee5370cc6f43c19a44ce7459a03dbf187c2"
     },
     {
       "path": "tools/audit-ast-function-index.mjs",
