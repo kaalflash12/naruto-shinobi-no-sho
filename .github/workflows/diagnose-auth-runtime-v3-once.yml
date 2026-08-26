@@ -1,3 +1,4 @@
+# trigger after workflow registration
 name: Diagnose Auth Runtime V3 Once
 
 on:
@@ -81,7 +82,7 @@ jobs:
           echo "REGISTER_HTTP=$code"
           sleep 8
           kill "$tail_pid" >/dev/null 2>&1 || true; wait "$tail_pid" >/dev/null 2>&1 || true
-          TAIL_FILE="$tail_file" HTTP_CODE="$code" node --input-type=module <<'NODE'
+          TAIL_FILE="$tail_file" HTTP_CODE="$code" RESPONSE_FILE="$response_file" node --input-type=module <<'NODE'
           import fs from 'node:fs';
           let raw=fs.readFileSync(process.env.TAIL_FILE,'utf8');
           raw=raw.replace(/mongodb(?:\+srv)?:\/\/[^\s"']+/gi,'<redacted-mongodb-uri>').replace(/Bearer\s+\S+/gi,'Bearer <redacted>');
@@ -90,12 +91,10 @@ jobs:
           const captured=[...new Set(hits)].slice(0,120);
           console.log(JSON.stringify({status:'AUTH_RUNTIME_V3_TAIL',registerHttp:Number(process.env.HTTP_CODE||0),captured},null,2));
           if(Number(process.env.HTTP_CODE||0)===201){
-            const body=JSON.parse(fs.readFileSync(process.env.RESPONSE_FILE||'/dev/null','utf8'));
-            if(body?.token) console.log('REGISTER_UNEXPECTEDLY_PASSED');
+            const body=JSON.parse(fs.readFileSync(process.env.RESPONSE_FILE,'utf8'));
+            console.log(JSON.stringify({status:'REGISTER_UNEXPECTEDLY_PASSED',ok:body?.ok===true,hasToken:Boolean(body?.token),hasRecoveryCode:Boolean(body?.recoveryCode)},null,2));
           } else if(!raw.includes('R41_API_ERROR')) throw new Error('R41_API_ERROR_NOT_CAPTURED');
           NODE
-        env:
-          RESPONSE_FILE: ${{ runner.temp }}/auth-v3-response.json
       - name: Restore production Worker unconditionally
         if: always()
         working-directory: cloudflare/r41-api
