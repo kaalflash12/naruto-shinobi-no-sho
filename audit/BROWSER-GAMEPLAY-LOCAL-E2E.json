@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T21:25:04.065Z",
+  "generatedAt": "2026-08-26T21:27:03.725Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtalqeetnxeo5",
-  "slotId": "gameplay-mtalqeet",
+  "temporaryAccount": "play_mtalsymu4bpdo",
+  "slotId": "gameplay-mtalsymu",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787779475547,
+          "at": 1787779594820,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 19,
+          "total": 16,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 36,
-          "enemyHpAfter": 36,
+          "enemyHpBefore": 26,
+          "enemyHpAfter": 26,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,13 +148,13 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 588,
-          "success": true,
-          "errors": 1,
+          "score": 483,
+          "success": false,
+          "errors": 5,
           "time": 0.8,
           "performanceTags": [
-            "estavel",
-            "controlado"
+            "impreciso",
+            "com_erros"
           ],
           "meta": {}
         },
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtalqeetnxeo5",
+        "intent": "Cobrir saída E2E mtalsymu4bpdo",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787779480077,
-        "cloudAt": 1787779473105,
+        "localAt": 1787779599319,
+        "cloudAt": 1787779592368,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
