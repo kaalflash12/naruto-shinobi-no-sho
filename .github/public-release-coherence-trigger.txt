@@ -2,3 +2,4 @@ validate-release=8ca3c3be259de80233c525a257c2b63ab00f5aa084f25d921f85de14f94fc67
 runtime-retry=2026-08-25T21:00Z
 backend-secret-refresh=2026-08-25T20:54-03:00
 backend-secret-post-pr69=2026-08-26T11:48-03:00
+server-side-secret-recovery=2026-08-26T14:46-03:00
