@@ -1,0 +1,39 @@
+name: Audit Auth Hash Iterations Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/audit-auth-hash-iterations-once.yml
+
+permissions: {}
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+    steps:
+      - name: Read only iteration distribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="$RUNNER_TEMP/hash-audit"; mkdir -p "$root"; cd "$root"
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund mongodb@6.20.0 >/dev/null
+          node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          if(!process.env.MONGODB_URI) throw new Error('MONGODB_URI_MISSING');
+          const client=new MongoClient(process.env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+          await client.connect();
+          try{
+            const db=client.db('naruto_shinobi_no_sho');
+            const users=db.collection('users'), recovery=db.collection('recovery_codes');
+            const userCount=await users.countDocuments({});
+            const recoveryCount=await recovery.countDocuments({});
+            const userDist=await users.aggregate([{$group:{_id:'$passIter',count:{$sum:1}}},{$sort:{_id:1}}]).toArray();
+            const recDist=await recovery.aggregate([{$group:{_id:'$iterations',count:{$sum:1}}},{$sort:{_id:1}}]).toArray();
+            console.log(JSON.stringify({status:'PASS_AUTH_HASH_READ_ONLY_AUDIT',userCount,recoveryCount,usersOver100k:await users.countDocuments({passIter:{$gt:100000}}),recoveryOver100k:await recovery.countDocuments({iterations:{$gt:100000}}),userIterationDistribution:userDist.map(x=>({iterations:x._id??null,count:x.count})),recoveryIterationDistribution:recDist.map(x=>({iterations:x._id??null,count:x.count}))},null,2));
+          }finally{await client.close();}
+          NODE
