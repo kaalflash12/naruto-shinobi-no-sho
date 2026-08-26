@@ -1,4 +1,4 @@
-# trigger after workflow registration
+# trigger raw response capture
 name: Diagnose Auth Runtime V3 Once
 
 on:
@@ -43,15 +43,14 @@ jobs:
           if old not in s: raise SystemExit('authority block missing')
           p.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
           p=Path('src/index.js');s=p.read_text(encoding='utf-8')
-          repl={
+          for old,new in {
             'iterations=210000':'iterations=100000',
             'passIter:210000':'passIter:100000',
             'hashPassword(recoveryCode,recoverySalt,120000)':'hashPassword(recoveryCode,recoverySalt,100000)',
             'iterations:120000':'iterations:100000',
             'u.passIter||210000':'u.passIter||100000',
             'rc.iterations||120000':'rc.iterations||100000',
-          }
-          for old,new in repl.items():
+          }.items():
             if old not in s: raise SystemExit(f'missing index literal {old}')
             s=s.replace(old,new)
           p.write_text(s,encoding='utf-8',newline='\n')
@@ -63,13 +62,13 @@ jobs:
       - name: Deploy patched Worker temporarily
         working-directory: cloudflare/r41-api
         run: npx wrangler deploy
-      - name: Capture next base register exception
+      - name: Capture raw register failure and unfiltered tail
         working-directory: cloudflare/r41-api
         shell: bash
         run: |
           set -euo pipefail
           tail_file="$RUNNER_TEMP/auth-v3-tail.log"; : > "$tail_file"
-          timeout 35s npx wrangler tail naruto-shinobi-no-sho-api --format pretty --method POST --search R41_API_ERROR >"$tail_file" 2>&1 &
+          timeout 35s npx wrangler tail naruto-shinobi-no-sho-api --format pretty --method POST >"$tail_file" 2>&1 &
           tail_pid=$!
           sleep 6
           suffix="${GITHUB_RUN_ID}-${RANDOM}"; username="authdiag_${suffix}"; username="${username:0:32}"; email="${username}@example.test"; password="Diag!${GITHUB_RUN_ID}aA9"
@@ -77,23 +76,18 @@ jobs:
           process.stdout.write(JSON.stringify({username:process.env.USER,password:process.env.PASS,displayName:'Auth V3 Diagnostic',email:process.env.EMAIL}));
           NODE
           )"
-          response_file="$RUNNER_TEMP/auth-v3-response.json"
+          response_file="$RUNNER_TEMP/auth-v3-response.txt"
           code="$(curl -sS --max-time 25 -o "$response_file" -w '%{http_code}' -X POST "$API_ORIGIN/api/auth/register" -H 'content-type: application/json' --data "$payload" || true)"
           echo "REGISTER_HTTP=$code"
           sleep 8
           kill "$tail_pid" >/dev/null 2>&1 || true; wait "$tail_pid" >/dev/null 2>&1 || true
           TAIL_FILE="$tail_file" HTTP_CODE="$code" RESPONSE_FILE="$response_file" node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          let raw=fs.readFileSync(process.env.TAIL_FILE,'utf8');
-          raw=raw.replace(/mongodb(?:\+srv)?:\/\/[^\s"']+/gi,'<redacted-mongodb-uri>').replace(/Bearer\s+\S+/gi,'Bearer <redacted>');
-          const lines=raw.split(/\r?\n/).filter(Boolean),hits=[];
-          for(let i=0;i<lines.length;i++)if(/R41_API_ERROR|Error:|TypeError|Mongo\w*Error|DOMException|OperationError|NotSupportedError|code(Name)?:|ERR_/i.test(lines[i]))for(let j=Math.max(0,i-1);j<=Math.min(lines.length-1,i+8);j++)hits.push(lines[j]);
-          const captured=[...new Set(hits)].slice(0,120);
-          console.log(JSON.stringify({status:'AUTH_RUNTIME_V3_TAIL',registerHttp:Number(process.env.HTTP_CODE||0),captured},null,2));
-          if(Number(process.env.HTTP_CODE||0)===201){
-            const body=JSON.parse(fs.readFileSync(process.env.RESPONSE_FILE,'utf8'));
-            console.log(JSON.stringify({status:'REGISTER_UNEXPECTEDLY_PASSED',ok:body?.ok===true,hasToken:Boolean(body?.token),hasRecoveryCode:Boolean(body?.recoveryCode)},null,2));
-          } else if(!raw.includes('R41_API_ERROR')) throw new Error('R41_API_ERROR_NOT_CAPTURED');
+          const redact=(s)=>String(s||'').replace(/mongodb(?:\+srv)?:\/\/[^\s"']+/gi,'<redacted-mongodb-uri>').replace(/Bearer\s+\S+/gi,'Bearer <redacted>').replace(/authdiag_[A-Za-z0-9_-]+/g,'<redacted-username>').replace(/Diag![A-Za-z0-9!_-]+/g,'<redacted-password>');
+          const body=redact(fs.readFileSync(process.env.RESPONSE_FILE,'utf8')).slice(0,1200);
+          const tail=redact(fs.readFileSync(process.env.TAIL_FILE,'utf8')).split(/\r?\n/).filter(Boolean).slice(-120);
+          console.log(JSON.stringify({status:'AUTH_RUNTIME_RAW_CAPTURE',registerHttp:Number(process.env.HTTP_CODE||0),responseBody:body,tail},null,2));
+          if(Number(process.env.HTTP_CODE||0)!==500) throw new Error(`EXPECTED_CURRENT_500_GOT_${process.env.HTTP_CODE}`);
           NODE
       - name: Restore production Worker unconditionally
         if: always()
