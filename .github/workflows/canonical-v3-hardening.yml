@@ -51,18 +51,34 @@ jobs:
             "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
             'function Test-AtlasAuthenticated([string]$Atlas)',
             'function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFailure)',
+            'function Get-AtlasProvisioningPlan([string]$ProjectId, [string]$ClusterName, [string]$Username, [string]$Password)',
+            'function Format-AtlasArgumentsForLog([string[]]$Arguments)',
+            'function Protect-AtlasDiagnostic([string]$Text, [string[]]$Arguments)',
             "if (Test-AtlasAuthenticated `$Atlas) { return }",
             "if (-not (Test-AtlasAuthenticated `$Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }",
             "`$project = @(`$projects | Where-Object { ([string]`$_.name) -eq 'naruto-shinobi-no-sho' }) | Select-Object -First 1",
             "`$cluster = @(`$clusters | Where-Object { ([string]`$_.name) -eq 'shinobi-no-sho' }) | Select-Object -First 1",
-            "Invoke-AtlasCli `$atlas @('accessLists','list','--projectId',`$projectId,'--limit','500','--output','json')",
-            "Invoke-AtlasCli `$atlas @('dbusers','update',`$username,'--password',`$password,'--projectId',`$projectId) -AllowFailure",
+            "CreateCluster = @('clusters','create',`$ClusterName,'--projectId',`$ProjectId,'--provider','AWS','--region','US_EAST_1','--tier','M0','--output','json')",
+            "ListAccess = @('accessLists','list','--projectId',`$ProjectId,'--limit','500','--output','json')",
+            "CreateAccess = @('accessLists','create','0.0.0.0/0','--type','cidrBlock','--projectId',`$ProjectId)",
+            "UpdateUser = @('dbusers','update',`$Username,'--password',`$Password,'--projectId',`$ProjectId)",
+            "CreateUser = @('dbusers','create','readWriteAnyDatabase','--username',`$Username,'--password',`$Password,'--projectId',`$ProjectId)",
+            "DescribeCluster = @('clusters','describe',`$ClusterName,'--projectId',`$ProjectId,'--output','json')",
+            "ConnectionString = @('clusters','connectionStrings','describe',`$ClusterName,'--projectId',`$ProjectId,'--output','json')",
+            'Invoke-AtlasCli $atlas $plan.CreateCluster',
+            'Invoke-AtlasCli $atlas $plan.ListAccess',
+            'Invoke-AtlasCli $atlas $plan.UpdateUser -AllowFailure',
+            'Invoke-AtlasCli $atlas $plan.DescribeCluster -AllowFailure',
+            'Invoke-AtlasCli $atlas $plan.ConnectionString',
             'Cluster MongoDB Atlas nao ficou pronto. Estado final:',
             "`$finalReadinessPassed = `$false",
             "`$finalReadinessPassed = `$true",
             "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed",
             '[switch]$ValidatePortableTools',
             'PASS_PORTABLE_TOOL_LOCK_REUSE',
+            '[switch]$ValidateAtlasProvisioning',
+            'PASS_ATLAS_EXPLICIT_PROJECT_SCOPED_PROVISIONING',
+            '<redacted>',
             'Reutilizando GitHub CLI portatil existente:',
             'Reutilizando Node.js portatil existente:',
             'Reutilizando MongoDB Atlas CLI portatil existente:',
@@ -91,7 +107,16 @@ jobs:
           foreach ($needle in $unsafe) {
             if ($canonical.Contains($needle)) { throw "Unsafe canonical V3 contract remains: $needle" }
           }
+          $setupNeedle = "@('" + "setup','--projectId'"
+          if ($canonical.Contains($setupNeedle)) { throw 'Unsafe Atlas setup provisioning dependency remains.' }
           Write-Host 'PASS_CANONICAL_V3_CLOUDFLARE_ATLAS_PORTABLE_HARDENING'
+
+      - name: Validate explicit Atlas provisioning on Windows
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateAtlasProvisioning
+          if ($LASTEXITCODE -ne 0) { throw "Atlas explicit provisioning fixture failed with exit code $LASTEXITCODE." }
 
       - name: Reproduce locked portable tools on Windows
         shell: powershell
