@@ -261,64 +261,98 @@ function Get-JsonRows($Object) {
   return @($Object)
 }
 
+function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFailure) {
+  $stdoutFile = [IO.Path]::GetTempFileName()
+  $stderrFile = [IO.Path]::GetTempFileName()
+  try {
+    $process = Start-Process -FilePath $Atlas -ArgumentList $Arguments -NoNewWindow -Wait -PassThru -RedirectStandardOutput $stdoutFile -RedirectStandardError $stderrFile
+    $stdout = if (Test-Path $stdoutFile) { Get-Content $stdoutFile -Raw -ErrorAction SilentlyContinue } else { '' }
+    $stderr = if (Test-Path $stderrFile) { Get-Content $stderrFile -Raw -ErrorAction SilentlyContinue } else { '' }
+    $result = [PSCustomObject]@{
+      ExitCode = [int]$process.ExitCode
+      StdOut = [string]$stdout
+      StdErr = [string]$stderr
+    }
+    if ($result.ExitCode -ne 0 -and -not $AllowFailure) {
+      throw ("Atlas CLI falhou: {0}. {1}" -f ($Arguments -join ' '), $result.StdErr)
+    }
+    return $result
+  } finally {
+    Remove-Item $stdoutFile,$stderrFile -Force -ErrorAction SilentlyContinue
+  }
+}
+
 function Get-MongoUriAutomatic {
   if (-not [string]::IsNullOrWhiteSpace($env:MONGODB_URI)) { return $env:MONGODB_URI.Trim() }
   $atlas = Get-AtlasExecutable
   Ensure-AtlasLoginZeroPaste $atlas
 
   Write-Step 'Provisionando/reutilizando MongoDB Atlas automaticamente'
-  $projectsRaw = (& $atlas projects list --limit 500 --output json 2>$null | Out-String)
-  $projects = @(Get-JsonRows ($projectsRaw | ConvertFrom-Json))
-  $project = @($projects | Where-Object { ([string]$_.name) -match '(?i)(naruto|shinobi)' }) | Select-Object -First 1
-  if (-not $project) { $project = $projects | Select-Object -First 1 }
+  $projectsResult = Invoke-AtlasCli $atlas @('projects','list','--limit','500','--output','json')
+  $projects = @(Get-JsonRows ($projectsResult.StdOut | ConvertFrom-Json))
+  $project = @($projects | Where-Object { ([string]$_.name) -eq 'naruto-shinobi-no-sho' }) | Select-Object -First 1
 
   if (-not $project) {
-    $orgRaw = (& $atlas organizations list --limit 500 --output json 2>$null | Out-String)
-    $orgs = @(Get-JsonRows ($orgRaw | ConvertFrom-Json))
-    $org = $orgs | Select-Object -First 1
-    if (-not $org) { throw 'Atlas autenticado, mas nenhuma organizacao foi encontrada.' }
-    $createdRaw = (& $atlas projects create 'naruto-shinobi-no-sho' --orgId ([string]$org.id) --output json 2>$null | Out-String)
-    if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar projeto MongoDB Atlas.' }
-    $project = $createdRaw | ConvertFrom-Json
+    $orgsResult = Invoke-AtlasCli $atlas @('organizations','list','--limit','500','--output','json')
+    $orgs = @(Get-JsonRows ($orgsResult.StdOut | ConvertFrom-Json))
+    if ($orgs.Count -eq 0) { throw 'Atlas autenticado, mas nenhuma organizacao foi encontrada.' }
+
+    $relatedProject = @($projects | Where-Object { ([string]$_.name) -match '(?i)(naruto|shinobi)' }) | Select-Object -First 1
+    $preferredOrgId = if ($relatedProject -and $relatedProject.PSObject.Properties.Name -contains 'orgId') { [string]$relatedProject.orgId } else { '' }
+    $org = $null
+    if (-not [string]::IsNullOrWhiteSpace($preferredOrgId)) {
+      $org = @($orgs | Where-Object { [string]$_.id -eq $preferredOrgId }) | Select-Object -First 1
+    }
+    if (-not $org -and $orgs.Count -eq 1) { $org = $orgs[0] }
+    if (-not $org) { $org = @($orgs | Sort-Object { [string]$_.id }) | Select-Object -First 1 }
+
+    $createdResult = Invoke-AtlasCli $atlas @('projects','create','naruto-shinobi-no-sho','--orgId',[string]$org.id,'--output','json')
+    $project = $createdResult.StdOut | ConvertFrom-Json
   }
+
   $projectId = [string]$project.id
   if ([string]::IsNullOrWhiteSpace($projectId)) { throw 'Project ID do Atlas vazio.' }
 
-  $clustersRaw = (& $atlas clusters list --projectId $projectId --limit 500 --output json 2>$null | Out-String)
-  $clusters = @(Get-JsonRows ($clustersRaw | ConvertFrom-Json))
-  $cluster = @($clusters | Where-Object { ([string]$_.name) -match '(?i)(naruto|shinobi)' }) | Select-Object -First 1
-  if (-not $cluster) { $cluster = $clusters | Select-Object -First 1 }
+  $clustersResult = Invoke-AtlasCli $atlas @('clusters','list','--projectId',$projectId,'--limit','500','--output','json')
+  $clusters = @(Get-JsonRows ($clustersResult.StdOut | ConvertFrom-Json))
+  $cluster = @($clusters | Where-Object { ([string]$_.name) -eq 'shinobi-no-sho' }) | Select-Object -First 1
 
   $username = 'shinobi_game'
   $password = New-RandomHex 24
   if (-not $cluster) {
     $clusterName = 'shinobi-no-sho'
-    & $atlas setup --projectId $projectId --clusterName $clusterName --provider AWS --region US_EAST_1 --tier M0 --username $username --password $password --accessListIp '0.0.0.0/0' --skipSampleData --connectWith skip --force *> $null
-    if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar cluster M0 gratuito no MongoDB Atlas.' }
+    [void](Invoke-AtlasCli $atlas @('setup','--projectId',$projectId,'--clusterName',$clusterName,'--provider','AWS','--region','US_EAST_1','--tier','M0','--username',$username,'--password',$password,'--accessListIp','0.0.0.0/0','--skipSampleData','--connectWith','skip','--force'))
   } else {
     $clusterName = [string]$cluster.name
-    & $atlas accessLists create '0.0.0.0/0' --type cidrBlock --projectId $projectId --comment 'Cloudflare Workers - Naruto Shinobi no Sho' *> $null
-    & $atlas dbusers update $username --password $password --projectId $projectId *> $null
-    if ($LASTEXITCODE -ne 0) {
-      & $atlas dbusers create readWriteAnyDatabase --username $username --password $password --projectId $projectId *> $null
-      if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar usuario do banco MongoDB Atlas.' }
+
+    $accessResult = Invoke-AtlasCli $atlas @('accessLists','list','--projectId',$projectId,'--limit','500','--output','json')
+    $accessRows = @(Get-JsonRows ($accessResult.StdOut | ConvertFrom-Json))
+    $allowAllExists = @($accessRows | Where-Object { [string]$_.cidrBlock -eq '0.0.0.0/0' }).Count -gt 0
+    if (-not $allowAllExists) {
+      [void](Invoke-AtlasCli $atlas @('accessLists','create','0.0.0.0/0','--type','cidrBlock','--projectId',$projectId))
+    }
+
+    $updateUser = Invoke-AtlasCli $atlas @('dbusers','update',$username,'--password',$password,'--projectId',$projectId) -AllowFailure
+    if ($updateUser.ExitCode -ne 0) {
+      [void](Invoke-AtlasCli $atlas @('dbusers','create','readWriteAnyDatabase','--username',$username,'--password',$password,'--projectId',$projectId))
     }
   }
 
   $deadline = [DateTime]::UtcNow.AddMinutes(15)
+  $state = $null
   do {
-    $descRaw = (& $atlas clusters describe $clusterName --projectId $projectId --output json 2>$null | Out-String)
-    if ($LASTEXITCODE -eq 0 -and $descRaw) {
-      $desc = $descRaw | ConvertFrom-Json
+    $descResult = Invoke-AtlasCli $atlas @('clusters','describe',$clusterName,'--projectId',$projectId,'--output','json') -AllowFailure
+    if ($descResult.ExitCode -eq 0 -and -not [string]::IsNullOrWhiteSpace($descResult.StdOut)) {
+      $desc = $descResult.StdOut | ConvertFrom-Json
       $state = [string]$desc.stateName
       if ($state -eq 'IDLE') { break }
     }
     Start-Sleep -Seconds 10
   } while ([DateTime]::UtcNow -lt $deadline)
+  if ($state -ne 'IDLE') { throw "Cluster MongoDB Atlas nao ficou pronto. Estado final: $state" }
 
-  $connRaw = (& $atlas clusters connectionStrings describe $clusterName --projectId $projectId --output json 2>$null | Out-String)
-  if ($LASTEXITCODE -ne 0) { throw 'Falha ao obter connection string MongoDB Atlas.' }
-  $match = [regex]::Match($connRaw, 'mongodb\+srv://[^"\s]+')
+  $connResult = Invoke-AtlasCli $atlas @('clusters','connectionStrings','describe',$clusterName,'--projectId',$projectId,'--output','json')
+  $match = [regex]::Match($connResult.StdOut, 'mongodb\+srv://[^"\s]+')
   if (-not $match.Success) { throw 'Connection string SRV nao encontrada.' }
   $srv = $match.Value
   $rest = $srv -replace '^mongodb\+srv://([^@/]+@)?', ''
