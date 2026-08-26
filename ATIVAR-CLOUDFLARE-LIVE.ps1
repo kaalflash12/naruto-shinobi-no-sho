@@ -28,23 +28,7 @@ $sourceText = Replace-Required $sourceText "  & `$Gh workflow run backend-secret
 $sourceText = Replace-Required $sourceText "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main" "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null" 'final-dispatch-scalar-output'
 $sourceText = Replace-Required $sourceText "`$temporaryCloudflareSecretWritten = `$false" "`$temporaryCloudflareSecretWritten = `$false`n`$finalReadinessPassed = `$false" 'final-readiness-state'
 $sourceText = Replace-Required $sourceText "  `$finalRun = Complete-FinalReadiness `$gh" "  `$finalRun = Complete-FinalReadiness `$gh`n  `$finalReadinessPassed = `$true" 'final-readiness-success-state'
-
-$oldCleanup = @'
-  if ($temporaryCloudflareSecretWritten) {
-    Write-Step 'Removendo bearer OAuth temporario do GitHub'
-    try { Remove-GhSecret $gh 'CLOUDFLARE_API_TOKEN' } catch { Write-Host 'Nao foi possivel remover automaticamente o bearer temporario.' -ForegroundColor Yellow }
-  }
-'@
-$newCleanup = @'
-  if ($temporaryCloudflareSecretWritten -and $finalReadinessPassed) {
-    Write-Step 'Removendo bearer OAuth temporario do GitHub apos PASS final'
-    try { Remove-GhSecret $gh 'CLOUDFLARE_API_TOKEN' } catch { Write-Host 'Nao foi possivel remover automaticamente o bearer temporario.' -ForegroundColor Yellow }
-  } elseif ($temporaryCloudflareSecretWritten) {
-    Write-Step 'Mantendo bearer temporario no GitHub para permitir retomada automatica'
-    Write-Host 'A credencial sera removida somente depois de PASS_FINAL_READINESS.' -ForegroundColor Yellow
-  }
-'@
-$sourceText = Replace-Required $sourceText $oldCleanup $newCleanup 'credential-retention-on-failure'
+$sourceText = Replace-Required $sourceText "  if (`$temporaryCloudflareSecretWritten) {" "  if (`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed) {" 'credential-retention-on-failure'
 
 Set-Content -Path $target -Value $sourceText -Encoding UTF8
 
@@ -64,8 +48,7 @@ if ($ValidateHotfix) {
     "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
     "login --device | Out-Host",
     "--connectWith skip --force *> `$null",
-    "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed",
-    "Mantendo bearer temporario no GitHub para permitir retomada automatica"
+    "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
   )
   foreach ($needle in $required) {
     if (-not $patched.Contains($needle)) { throw "Hotfix ausente apos transformacao: $needle" }
