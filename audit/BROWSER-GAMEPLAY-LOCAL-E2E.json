@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T17:38:55.059Z",
+  "generatedAt": "2026-08-26T17:43:29.518Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtadnkjdlp3en",
-  "slotId": "gameplay-mtadnkjd",
+  "temporaryAccount": "play_mtadti020383h",
+  "slotId": "gameplay-mtadti02",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -15,7 +15,8 @@
     "restWorldTick": true,
     "minigameWorldTick": true,
     "visualStateReload": true,
-    "allOperationalContractsGameplayE2E": true
+    "allOperationalContractsGameplayE2E": true,
+    "temporaryAccountDeleted": true
   },
   "contracts": [
     {
@@ -96,14 +97,14 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787765906497,
+          "at": 1787766182144,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 16,
+          "total": 10,
           "cd": 11,
-          "ok": true,
-          "reward": "+3 material(is)"
+          "ok": false,
+          "reward": "sem recompensa; tempo foi gasto"
         }
       }
     },
@@ -122,9 +123,9 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 30,
-          "enemyHpAfter": 30,
-          "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
+          "enemyHpBefore": 36,
+          "enemyHpAfter": 36,
+          "reason": "Coleta: falha • sem recompensa; tempo foi gasto.\nAlvo fora do alcance (1)."
         },
         "validation": {
           "ok": true,
@@ -147,7 +148,7 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 205,
+          "score": 381,
           "success": false,
           "errors": 4,
           "time": 0.8,
@@ -170,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtadnkjdlp3en",
+        "intent": "Cobrir saída E2E mtadti020383h",
         "persistedAcrossReload": true
       }
     },
@@ -189,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787765911031,
-        "cloudAt": 1787765904043,
+        "localAt": 1787766186554,
+        "cloudAt": 1787766179762,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
