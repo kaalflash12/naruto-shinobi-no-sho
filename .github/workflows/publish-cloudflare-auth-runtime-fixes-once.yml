@@ -1,0 +1,260 @@
+name: Publish Cloudflare Auth Runtime Fixes Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-cloudflare-auth-runtime-fixes-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            cloudflare/r41-api
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install Worker dependencies
+        working-directory: cloudflare/r41-api
+        run: npm install --no-audit --no-fund
+
+      - name: Clean only known diagnostic accounts
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${MONGODB_URI:-}"
+          node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          const client=new MongoClient(process.env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+          await client.connect();
+          try{
+            const db=client.db('naruto_shinobi_no_sho');
+            const diagnostic=/^(?:authfix_|authdiag_|e2e_fix_)/;
+            const rows=await db.collection('users').find({username:{$regex:diagnostic}},{projection:{_id:1}}).toArray();
+            if(rows.length>20) throw new Error(`DIAGNOSTIC_CLEANUP_REFUSED_COUNT_${rows.length}`);
+            const ids=rows.map(x=>x._id);
+            if(ids.length){
+              await Promise.all([
+                db.collection('sessions').deleteMany({userId:{$in:ids}}),
+                db.collection('recovery_codes').deleteMany({userId:{$in:ids}}),
+                db.collection('mechanical_profiles').deleteMany({userId:{$in:ids}}),
+                db.collection('saves').deleteMany({userId:{$in:ids}}),
+                db.collection('audit_events').deleteMany({userId:{$in:ids}}),
+                db.collection('users').deleteMany({_id:{$in:ids}})
+              ]);
+            }
+            const remaining=await db.collection('users').countDocuments({username:{$regex:diagnostic}});
+            if(remaining!==0) throw new Error(`DIAGNOSTIC_USERS_REMAIN_${remaining}`);
+            console.log(JSON.stringify({status:'PASS_DIAGNOSTIC_ACCOUNT_CLEANUP',deletedDiagnosticUsers:ids.length},null,2));
+          } finally { await client.close(); }
+          NODE
+
+      - name: Apply proven runtime fixes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          authority=Path('cloudflare/r41-api/src/entry-authoritative.js')
+          s=authority.read_text(encoding='utf-8')
+          old='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}'
+          new='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}'
+          if old not in s: raise SystemExit('AUTHORITY_DROPINDEX_EXPECTED_BLOCK_NOT_FOUND')
+          authority.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
+
+          index=Path('cloudflare/r41-api/src/index.js')
+          s=index.read_text(encoding='utf-8')
+          replacements={
+            'iterations=210000':'iterations=100000',
+            'passIter:210000':'passIter:100000',
+            'hashPassword(recoveryCode,recoverySalt,120000)':'hashPassword(recoveryCode,recoverySalt,100000)',
+            'iterations:120000':'iterations:100000',
+            'u.passIter||210000':'u.passIter||100000',
+            'rc.iterations||120000':'rc.iterations||100000',
+          }
+          for old_text,new_text in replacements.items():
+              if old_text not in s: raise SystemExit(f'INDEX_EXPECTED_LITERAL_NOT_FOUND:{old_text}')
+              s=s.replace(old_text,new_text)
+          index.write_text(s,encoding='utf-8',newline='\n')
+
+          entry=Path('cloudflare/r41-api/src/entry.js')
+          s=entry.read_text(encoding='utf-8')
+          if 'iterations=120000' not in s: raise SystemExit('ENTRY_RECOVERY_ITERATION_LITERAL_NOT_FOUND')
+          s=s.replace('iterations=120000','iterations=100000')
+          entry.write_text(s,encoding='utf-8',newline='\n')
+          PY
+
+      - name: Add permanent Cloudflare runtime regression gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > cloudflare/r41-api/test/cloudflare-runtime-contract.test.mjs <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+
+          const index=fs.readFileSync(new URL('../src/index.js',import.meta.url),'utf8');
+          const entry=fs.readFileSync(new URL('../src/entry.js',import.meta.url),'utf8');
+          const authority=fs.readFileSync(new URL('../src/entry-authoritative.js',import.meta.url),'utf8');
+          const wrangler=fs.readFileSync(new URL('../wrangler.toml',import.meta.url),'utf8');
+
+          const iterationValues=(source)=>{
+            const values=[];
+            for(const re of [
+              /iterations\s*=\s*(\d+)/g,
+              /passIter\s*:\s*(\d+)/g,
+              /iterations\s*:\s*(\d+)/g,
+              /passIter\s*\|\|\s*(\d+)/g,
+              /iterations\s*\|\|\s*(\d+)/g,
+              /hashPassword\([^\n;]*?,\s*(\d+)\s*\)/g,
+            ]) for(const m of source.matchAll(re)) values.push(Number(m[1]));
+            return values;
+          };
+
+          for(const [name,source] of [['index.js',index],['entry.js',entry]]){
+            const values=iterationValues(source);
+            assert.ok(values.length>0,`${name}: no PBKDF2 iteration contract found`);
+            assert.ok(values.every(v=>v<=100000),`${name}: PBKDF2 iteration above Workers WebCrypto limit: ${values.join(',')}`);
+          }
+          assert.match(authority,/code!==26&&code!==27/,'authority migration must tolerate MongoDB NamespaceNotFound and IndexNotFound');
+          assert.match(authority,/NamespaceNotFound/,'authority migration must explicitly tolerate NamespaceNotFound');
+          assert.match(wrangler,/no_throw_on_not_implemented_tls_options/,'MongoDB driver requires Cloudflare TLS compatibility flag');
+          console.log('PASS_CLOUDFLARE_AUTH_RUNTIME_CONTRACT');
+          NODE
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p='cloudflare/r41-api/package.json';
+          const d=JSON.parse(fs.readFileSync(p,'utf8'));
+          d.scripts.test='node test/terion-mechanics.test.mjs && node test/cloudflare-runtime-contract.test.mjs';
+          fs.writeFileSync(p,JSON.stringify(d,null,2)+'\n');
+          NODE
+
+      - name: Run static and TERION regressions
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/shinobi-auth-runtime-dry"
+
+      - name: Start official local Cloudflare workerd with real Atlas
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${MONGODB_URI:-}"
+          cat > wrangler-publish-proof.toml <<'EOF'
+          name = "shinobi-auth-publish-proof"
+          main = "src/entry-authoritative.js"
+          compatibility_date = "2026-08-19"
+          compatibility_flags = ["nodejs_compat", "no_throw_on_not_implemented_tls_options"]
+          [vars]
+          MONGODB_DB = "naruto_shinobi_no_sho"
+          AUTH_SECRET = "LOCAL_PUBLISH_PROOF_AUTH_SECRET_NOT_PRODUCTION"
+          ALLOWED_ORIGINS = "http://127.0.0.1:8787"
+          EOF
+          printf 'MONGODB_URI="%s"\n' "$MONGODB_URI" > .dev.vars
+          chmod 600 .dev.vars
+          npx wrangler dev --local --config wrangler-publish-proof.toml --port 8787 --ip 127.0.0.1 >"$RUNNER_TEMP/auth-publish-workerd.log" 2>&1 &
+          echo $! > "$RUNNER_TEMP/auth-publish-workerd.pid"
+          for i in $(seq 1 60); do
+            if curl -fsS --max-time 2 http://127.0.0.1:8787/api/status >/dev/null 2>&1; then exit 0; fi
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/auth-publish-workerd.log"
+          exit 1
+
+      - name: Prove full auth lifecycle in workerd
+        id: workerdproof
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          const origin='http://127.0.0.1:8787';
+          const suffix=`${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
+          const username=`publish_${suffix}`.slice(0,32);
+          const email=`${username}@example.test`;
+          const password=`Old!${suffix}aA9`;
+          const newPassword=`New!${suffix}zZ8`;
+          globalThis.__diagUsername=username;
+          async function call(path,{body,token='',expected=[200]}={}){
+            const headers={accept:'application/json'};
+            if(body!==undefined) headers['content-type']='application/json';
+            if(token) headers.authorization=`Bearer ${token}`;
+            const res=await fetch(`${origin}${path}`,{method:'POST',headers,body:body===undefined?undefined:JSON.stringify(body)});
+            const raw=await res.text();let data={};try{data=raw?JSON.parse(raw):{}}catch{data={raw:raw.slice(0,200)}}
+            if(!expected.includes(res.status)) throw new Error(`${path}:HTTP_${res.status}:${String(data?.error||'')}`);
+            return data;
+          }
+          const reg=await call('/api/auth/register',{body:{username,password,displayName:'Publish Proof',email},expected:[201]});
+          if(!(reg.ok&&reg.token&&reg.recoveryCode&&reg.account?.email===email)) throw new Error('REGISTER_PROOF_INVALID');
+          console.log('PASS_REGISTER_WORKERD_ATLAS');
+
+          const login=await call('/api/auth/login',{body:{identifier:username,password}});
+          if(!(login.ok&&login.token)) throw new Error('LOGIN_PROOF_INVALID');
+          console.log('PASS_LOGIN_WORKERD_ATLAS');
+
+          const me=await call('/api/auth/me',{body:{},token:login.token});
+          if(me.account?.username!==username||me.account?.email!==email) throw new Error('ME_PROOF_INVALID');
+          console.log('PASS_ME_WORKERD_ATLAS');
+
+          const rotated=await call('/api/auth/recovery-code',{body:{},token:login.token});
+          if(!(rotated.ok&&rotated.recoveryCode)) throw new Error('RECOVERY_ROTATION_PROOF_INVALID');
+          console.log('PASS_RECOVERY_ROTATION_WORKERD_ATLAS');
+
+          const recovered=await call('/api/auth/recover',{body:{identifier:email,recoveryCode:rotated.recoveryCode,newPassword}});
+          if(!(recovered.ok&&recovered.recovered===true)) throw new Error('RECOVERY_PROOF_INVALID');
+          console.log('PASS_RECOVER_WORKERD_ATLAS');
+
+          await call('/api/auth/login',{body:{identifier:username,password},expected:[401]});
+          const newLogin=await call('/api/auth/login',{body:{identifier:email,password:newPassword}});
+          if(!(newLogin.ok&&newLogin.token)) throw new Error('NEW_PASSWORD_LOGIN_PROOF_INVALID');
+          console.log('PASS_NEW_PASSWORD_LOGIN_WORKERD_ATLAS');
+
+          const del=await call('/api/auth/delete-account',{body:{},token:newLogin.token});
+          if(del.deleted!==true) throw new Error('DELETE_ACCOUNT_PROOF_INVALID');
+          await call('/api/auth/me',{body:{},token:newLogin.token,expected:[401]});
+          console.log('PASS_DELETE_ACCOUNT_WORKERD_ATLAS');
+          NODE
+
+      - name: Stop workerd and remove local secret file
+        if: always()
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set +e
+          if [ -f "$RUNNER_TEMP/auth-publish-workerd.pid" ]; then kill "$(cat "$RUNNER_TEMP/auth-publish-workerd.pid")" >/dev/null 2>&1 || true; fi
+          rm -f .dev.vars wrangler-publish-proof.toml
+
+      - name: Publish runtime fixes to main only after full proof
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/index.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/test/cloudflare-runtime-contract.test.mjs cloudflare/r41-api/package.json
+          git diff --cached --check
+          git commit -m 'fix: make Cloudflare auth runtime compatible with Atlas'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
