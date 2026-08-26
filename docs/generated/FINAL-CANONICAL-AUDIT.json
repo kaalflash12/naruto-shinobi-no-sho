@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T21:21:13.931Z",
+  "generatedAt": "2026-08-26T21:24:10.193Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T21:20:59.104Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T21:23:55.129Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 136,
+    "sourceFiles": 137,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39927,6 +39927,11 @@
       "sha256": "29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205"
     },
     {
+      "path": ".github/workflows/publish-cloudflare-auth-runtime-fixes-once.yml",
+      "size": 12910,
+      "sha256": "5bf97d2820b0c41bbfd91eb445f58bbec4ea2957f0681183720803704afe1df8"
+    },
+    {
       "path": ".github/workflows/runtime-integrity.yml",
       "size": 6129,
       "sha256": "ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8"
@@ -39953,13 +39958,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "55da32da4fb956293090a5d937c19adca780dc3720bf623d074bf9d3e133fea0"
+      "size": 5604,
+      "sha256": "77f8bcac0e382e523399e2d941244f9618f5999c92dfc2852a23cfcdf883cab5"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "8c6321ef530a2daca8bf951e2bb921b9f4050e2e75175013dd9416752e2ce807"
+      "sha256": "e9c29d18f42b48c9908dba7091794a57d427bede383849149e5c8313d19cdc11"
     },
     {
       "path": "audit/LIVE-BACKEND.json",

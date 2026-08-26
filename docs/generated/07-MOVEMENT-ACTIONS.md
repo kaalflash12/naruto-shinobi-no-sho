@@ -2,7 +2,7 @@
 
 Evidências retiradas somente do runtime do jogo. Não inclui documentação nem scripts de auditoria.
 
-Gerado em: `2026-08-26T21:20:59.104Z`
+Gerado em: `2026-08-26T21:23:55.129Z`
 
 - **MOVE-00001** `app.js:61` — missions:new Map((CAT.missions\\|\\|[]).map(x=>[String(x.id),x])),
 - **MOVE-00002** `app.js:62` — jutsus:new Map((CAT.jutsus\\|\\|[]).map(x=>[String(x.id),x])),
