@@ -1,0 +1,99 @@
+name: TEMP Canonical V3 Atlas WinPS Hotfix
+
+on:
+  push:
+    branches:
+      - fix/canonical-v3-atlas-auth-winps-20260826
+
+permissions:
+  contents: write
+
+jobs:
+  patch-and-validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: fix/canonical-v3-atlas-auth-winps-20260826
+          fetch-depth: 0
+
+      - name: Patch Atlas authentication probe in canonical V3
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
+          $source = Get-Content $path -Raw
+
+          $startPattern = 'function Ensure-AtlasLoginZeroPaste\(\[string\]\$Atlas\) \{\r?\n  & \$Atlas auth whoami \*> \$null\r?\n  if \(\$LASTEXITCODE -eq 0\) \{ return \}\r?\n'
+          $startMatches = [regex]::Matches($source, $startPattern)
+          if ($startMatches.Count -ne 1) { throw "Atlas login start probe match count: $($startMatches.Count)" }
+
+          $replacement = @'
+function Test-AtlasAuthenticated([string]$Atlas) {
+  $psi = New-Object System.Diagnostics.ProcessStartInfo
+  $psi.FileName = $Atlas
+  $psi.Arguments = 'auth whoami'
+  $psi.UseShellExecute = $false
+  $psi.RedirectStandardOutput = $true
+  $psi.RedirectStandardError = $true
+  $psi.CreateNoWindow = $true
+  $p = New-Object System.Diagnostics.Process
+  $p.StartInfo = $psi
+  try {
+    [void]$p.Start()
+    [void]$p.StandardOutput.ReadToEnd()
+    [void]$p.StandardError.ReadToEnd()
+    $p.WaitForExit()
+    return ($p.ExitCode -eq 0)
+  } catch {
+    return $false
+  } finally {
+    if ($p) { $p.Dispose() }
+  }
+}
+
+function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
+  if (Test-AtlasAuthenticated $Atlas) { return }
+'@
+          $patched = [regex]::Replace($source, $startPattern, $replacement, 1)
+
+          $tailPattern = '  & \$Atlas auth whoami \*> \$null\r?\n  if \(\$LASTEXITCODE -ne 0\) \{ throw ''MongoDB Atlas CLI nao ficou autenticado\.'' \}\r?\n'
+          $tailMatches = [regex]::Matches($patched, $tailPattern)
+          if ($tailMatches.Count -ne 1) { throw "Atlas login final probe match count: $($tailMatches.Count)" }
+          $tailReplacement = "  if (-not (Test-AtlasAuthenticated `$Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }`r`n"
+          $patched = [regex]::Replace($patched, $tailPattern, $tailReplacement, 1)
+
+          if ($patched -eq $source) { throw 'Hotfix nao alterou o V3.' }
+          if ($patched -notmatch 'function Test-AtlasAuthenticated') { throw 'Helper Test-AtlasAuthenticated ausente.' }
+          if ($patched -notmatch "auth login --force --skipConfig --noBrowser") { throw 'Fluxo Atlas zero-paste foi removido indevidamente.' }
+
+          $utf8 = New-Object System.Text.UTF8Encoding($false)
+          [IO.File]::WriteAllText($path, $patched, $utf8)
+
+          $tokens = $null
+          $errors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile($path, [ref]$tokens, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            throw "PowerShell parse failed: $($errors.Count) error(s)"
+          }
+          Write-Host 'PASS_CANONICAL_V3_ATLAS_WINPS_PARSE'
+
+      - name: Run canonical V3 deterministic regression gate
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & .\tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateRunParsing
+          if ($LASTEXITCODE -ne 0) { throw 'V3 ValidateRunParsing falhou.' }
+
+      - name: Commit canonical hotfix and remove temporary workflow
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Remove-Item '.github\workflows\_temp-hotfix-v3-atlas-winps.yml' -Force
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 .github/workflows/_temp-hotfix-v3-atlas-winps.yml
+          git diff --cached --check
+          git commit -m 'fix: make Atlas auth probe safe on Windows PowerShell'
+          git push origin HEAD:fix/canonical-v3-atlas-auth-winps-20260826
