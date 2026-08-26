@@ -78,21 +78,29 @@ jobs:
           }
           Write-Host 'PASS_CANONICAL_V3_CLOUDFLARE_ATLAS_HARDENING'
 
-      - name: Verify root launcher remains idempotent
+      - name: Verify root launcher executes canonical V3 directly
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
-          $launcher = Get-Content 'ATIVAR-CLOUDFLARE-LIVE.ps1' -Raw
-          if (-not $launcher.Contains('if ($Text.Contains($New)) { return $Text }')) {
-            throw 'Root launcher is not idempotent when canonical V3 is already hardened.'
+          $path = 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+          $tokens = $null
+          $errors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $path), [ref]$tokens, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            throw "Root launcher parse failed with $($errors.Count) error(s)."
           }
-          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+
+          $launcher = Get-Content $path -Raw
           $required = @(
-            'function Test-AtlasAuthenticated([string]$Atlas)',
-            'function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFailure)',
-            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+            'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1',
+            '[System.Management.Automation.Language.Parser]::ParseFile',
+            'PASS_BOOTSTRAP_CANONICAL_V3_READY',
+            '& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $target -Repo $Repo'
           )
           foreach ($needle in $required) {
-            if (-not $canonical.Contains($needle)) { throw "Root launcher would need repair: $needle" }
+            if (-not $launcher.Contains($needle)) { throw "Root launcher contract missing: $needle" }
           }
-          Write-Host 'PASS_CANONICAL_V3_LAUNCHER_IDEMPOTENCE'
+          if ($launcher.Contains('function Replace-Required')) { throw 'Obsolete text-patching layer remains in root launcher.' }
+          if ($launcher.Contains('Hotfix atlas-setup-output')) { throw 'Obsolete Atlas hotfix contract remains in root launcher.' }
+          Write-Host 'PASS_CANONICAL_V3_ROOT_LAUNCHER_DIRECT'
