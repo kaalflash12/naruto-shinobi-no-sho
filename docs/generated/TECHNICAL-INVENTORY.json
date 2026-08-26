@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T21:41:31.982Z",
+  "generatedAt": "2026-08-26T23:08:00.383Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -269,8 +269,8 @@
     },
     {
       "path": ".github/workflows/publish-request-scoped-mongodb-once.yml",
-      "size": 4299,
-      "sha256": "d0270210a32ecd3d89833ea495bbb2262bbe892455e08145bf83742f7cf49f01",
+      "size": 4705,
+      "sha256": "709e940651cb55d8535af76512672337f590cba4421f6ea6b6e67bf95c42f5f8",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43798,15 +43798,15 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2700,
-      "sha256": "cbbba7ae40f4870469874aeff084082309f4fd040e2b49f26d78ad6b531dd3aa",
+      "sha256": "f92fb4783633a958b77d94f27aeb5a06a3f58802172572e9151458eb0e342522",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "239781321cb990a53d4466645e83bd73f767c743eaf4356466abfb4a088e094d",
+      "size": 5604,
+      "sha256": "438503e0f2113b8344ddf77fefffbe0ca2663cfe4a739691ac91a241b152a88e",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43814,7 +43814,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "707ccd9463ab8b957c4bc82e87ccf9ea76d6bc6609f0367602f6fd189446ec1e",
+      "sha256": "d1b3f7264191a5aef2c2ef30e1dd3d8e4c57963d64366d14f978da6e41bef96d",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43965,8 +43965,8 @@
     },
     {
       "path": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
-      "size": 2118,
-      "sha256": "a22ab86c49d0fb39e8d9fcfff790359364182517b09787b61eb3f3fe6033f541",
+      "size": 3476,
+      "sha256": "b17039b4be635c45bc2036a75d5c97c5d6680c26d2fba980380f86c541bdb06c",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44374,7 +44374,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "7ae8389fbbe5ce9bd72160eabb91591d3623b6a1c5fe6638beb64cfc644bc564",
+      "sha256": "e6c4d4c7b371b55b5f3132c48a068d92d718649cbd84d3d90adf02fedae2ab7a",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -199779,7 +199779,7 @@
         },
         {
           "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
-          "line": 30
+          "line": 36
         },
         {
           "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
@@ -200724,6 +200724,14 @@
           "line": 96
         },
         {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 15
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 16
+        },
+        {
           "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
           "line": 16
         }
@@ -200812,6 +200820,14 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 117
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 15
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 16
         },
         {
           "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
@@ -364387,32 +364403,32 @@
       "id": "ENV-00122"
     },
     {
-      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 34,
-      "value": "MONGODB_URI",
+      "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+      "line": 15,
+      "value": "AUTH_SECRET",
       "id": "ENV-00123"
     },
     {
-      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 41,
-      "value": "MONGODB_DB",
+      "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+      "line": 16,
+      "value": "AUTH_SECRET",
       "id": "ENV-00124"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 66,
+      "line": 34,
       "value": "MONGODB_URI",
       "id": "ENV-00125"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 67,
-      "value": "MONGODB_URI",
+      "line": 41,
+      "value": "MONGODB_DB",
       "id": "ENV-00126"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 67,
+      "line": 66,
       "value": "MONGODB_URI",
       "id": "ENV-00127"
     },
@@ -364424,25 +364440,25 @@
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 68,
-      "value": "MONGODB_DB",
+      "line": 67,
+      "value": "MONGODB_URI",
       "id": "ENV-00129"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 71,
+      "line": 67,
       "value": "MONGODB_URI",
       "id": "ENV-00130"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 106,
-      "value": "MONGODB_URI",
+      "line": 68,
+      "value": "MONGODB_DB",
       "id": "ENV-00131"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 106,
+      "line": 71,
       "value": "MONGODB_URI",
       "id": "ENV-00132"
     },
@@ -364461,30 +364477,30 @@
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
       "line": 106,
-      "value": "MONGODB_DB",
+      "value": "MONGODB_URI",
       "id": "ENV-00135"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 107,
+      "line": 106,
       "value": "MONGODB_URI",
       "id": "ENV-00136"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 136,
-      "value": "MONGODB_URI",
+      "line": 106,
+      "value": "MONGODB_DB",
       "id": "ENV-00137"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 137,
+      "line": 107,
       "value": "MONGODB_URI",
       "id": "ENV-00138"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
-      "line": 137,
+      "line": 136,
       "value": "MONGODB_URI",
       "id": "ENV-00139"
     },
@@ -364496,55 +364512,67 @@
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 137,
+      "value": "MONGODB_URI",
+      "id": "ENV-00141"
+    },
+    {
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 137,
+      "value": "MONGODB_URI",
+      "id": "ENV-00142"
+    },
+    {
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
       "line": 138,
       "value": "MONGODB_DB",
-      "id": "ENV-00141"
+      "id": "ENV-00143"
     },
     {
       "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
       "line": 141,
       "value": "MONGODB_URI",
-      "id": "ENV-00142"
+      "id": "ENV-00144"
     },
     {
       "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
       "line": 3,
       "value": "MONGODB_URI",
-      "id": "ENV-00143"
+      "id": "ENV-00145"
     },
     {
       "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
       "line": 7,
       "value": "MONGODB_URI",
-      "id": "ENV-00144"
+      "id": "ENV-00146"
     },
     {
       "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
       "line": 10,
       "value": "MONGODB_DB",
-      "id": "ENV-00145"
+      "id": "ENV-00147"
     },
     {
       "file": "cloudflare/r41-api/test/mongodb-live-preflight.mjs",
       "line": 5,
       "value": "MONGODB_URI",
-      "id": "ENV-00146"
+      "id": "ENV-00148"
     },
     {
       "file": "cloudflare/r41-api/test/mongodb-live-preflight.mjs",
       "line": 37,
       "value": "MONGODB_DB",
-      "id": "ENV-00147"
+      "id": "ENV-00149"
     },
     {
       "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
       "line": 1,
       "value": "API_ORIGIN",
-      "id": "ENV-00148"
+      "id": "ENV-00150"
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T21:41:34.519Z",
+    "generatedAt": "2026-08-26T23:08:02.755Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364607,7 +364635,7 @@
         "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
         "sourceType": "module",
         "functions": 3,
-        "bytes": 2118
+        "bytes": 3476
       },
       {
         "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
@@ -365101,7 +365129,7 @@
       "events": 14,
       "movement": 8081,
       "assets": 15838,
-      "environment": 314
+      "environment": 316
     },
     "after": {
       "functions": 3370,
@@ -365113,7 +365141,7 @@
       "events": 14,
       "movement": 7881,
       "assets": 15816,
-      "environment": 148
+      "environment": 150
     }
   },
   "assetAudit": {

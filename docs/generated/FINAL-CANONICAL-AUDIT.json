@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T21:41:49.261Z",
+  "generatedAt": "2026-08-26T23:08:15.315Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T21:41:31.982Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T23:08:00.383Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3370,
@@ -40043,8 +40043,8 @@
     },
     {
       "path": ".github/workflows/publish-request-scoped-mongodb-once.yml",
-      "size": 4299,
-      "sha256": "d0270210a32ecd3d89833ea495bbb2262bbe892455e08145bf83742f7cf49f01"
+      "size": 4705,
+      "sha256": "709e940651cb55d8535af76512672337f590cba4421f6ea6b6e67bf95c42f5f8"
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
@@ -40069,17 +40069,17 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2700,
-      "sha256": "cbbba7ae40f4870469874aeff084082309f4fd040e2b49f26d78ad6b531dd3aa"
+      "sha256": "f92fb4783633a958b77d94f27aeb5a06a3f58802172572e9151458eb0e342522"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "239781321cb990a53d4466645e83bd73f767c743eaf4356466abfb4a088e094d"
+      "size": 5604,
+      "sha256": "438503e0f2113b8344ddf77fefffbe0ca2663cfe4a739691ac91a241b152a88e"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "707ccd9463ab8b957c4bc82e87ccf9ea76d6bc6609f0367602f6fd189446ec1e"
+      "sha256": "d1b3f7264191a5aef2c2ef30e1dd3d8e4c57963d64366d14f978da6e41bef96d"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40148,8 +40148,8 @@
     },
     {
       "path": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
-      "size": 2118,
-      "sha256": "a22ab86c49d0fb39e8d9fcfff790359364182517b09787b61eb3f3fe6033f541"
+      "size": 3476,
+      "sha256": "b17039b4be635c45bc2036a75d5c97c5d6680c26d2fba980380f86c541bdb06c"
     },
     {
       "path": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
