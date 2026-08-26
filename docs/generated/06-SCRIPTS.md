@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T20:14:24.682Z`
+Gerado em: `2026-08-26T20:17:10.191Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -60,14 +60,15 @@ Gerado em: `2026-08-26T20:14:24.682Z`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 16180 bytes — SHA-256 `ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 4337 bytes — SHA-256 `8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc`
 - `.github/workflows/post-live-backend-orchestration.yml` — domínio `tooling` — 1054 bytes — SHA-256 `7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad`
+- `.github/workflows/probe-cloudflare-mongodb-tls-once.yml` — domínio `tooling` — 4201 bytes — SHA-256 `3866349c1d84c0e4f77a49cea2fa2f8e1e8d50bf54dbd7b87f4a4a1b6c22f2ff`
 - `.github/workflows/public-release-coherence.yml` — domínio `tooling` — 4447 bytes — SHA-256 `29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 6129 bytes — SHA-256 `ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8`
 - `.github/workflows/sync-public-release-fingerprint.yml` — domínio `tooling` — 1753 bytes — SHA-256 `0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 3026 bytes — SHA-256 `d6223efeb35def10dfcf1dfd7b131e773630b4e6518edc4311442c033b28f692`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2667 bytes — SHA-256 `a0b79b446d141885e2d9545e3b346d4118dc88e8c6ac9c7984ec4ceac3582787`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `dc828549ab20d882cbd0e09d0cd61dc09b94fc389c7af4719c3443ef213b0bec`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `b6c7f747fa069581e4356296b0ddde03769dc572ac68ea3428bd2dac22c9bc6b`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5568 bytes — SHA-256 `23443a1650dc83d3abd335e954ca2d9f36fe8789026efc7243f7d23f8557cd7f`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `943b528d17e5ebdc07d8ff31342f2db5a6ec0ec90f22dd90f56c7bbdc4c94e2f`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
@@ -82,7 +83,7 @@ Gerado em: `2026-08-26T20:14:24.682Z`
 - `cloudflare/r41-api/src/terion-mechanics.js` — domínio `game-runtime` — 5469 bytes — SHA-256 `3fcc0d19df10fbbef766f7f1c90d609eaff47d5cae5b98d8e3b41bd160e4ab3d`
 - `cloudflare/r41-api/test/mongodb-live-preflight.mjs` — domínio `game-runtime` — 3123 bytes — SHA-256 `2ec8d45dae1071fc2b79ab0a1f867dcdd501d8dfaba47c859e76a351e00aa22d`
 - `cloudflare/r41-api/test/terion-mechanics.test.mjs` — domínio `game-runtime` — 2964 bytes — SHA-256 `82aa21f304d70bd7ff37e1e5a34738127def2e3cb8fd22fc7aff38bf45a910c1`
-- `cloudflare/r41-api/wrangler.toml` — domínio `game-runtime` — 438 bytes — SHA-256 `65428ea7d510fb94a98760ed05e50aaed9b107d0ae9a815ef84bf6274e1fe1bd`
+- `cloudflare/r41-api/wrangler.toml` — domínio `game-runtime` — 481 bytes — SHA-256 `c25b042ead89981e535d4273f3cb6369ff72283e4184e4abdf9348b2052a44cb`
 - `data/aliases/characters.json` — domínio `game-runtime` — 15079 bytes — SHA-256 `2e8aad5cf63738d192f96de4cbd2e9bdcb203814c0aa00ceba84db71e6f0c047`
 - `data/aliases/items.json` — domínio `game-runtime` — 3 bytes — SHA-256 `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356`
 - `data/aliases/jutsu.json` — domínio `game-runtime` — 3 bytes — SHA-256 `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356`

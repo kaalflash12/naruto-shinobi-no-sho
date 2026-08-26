@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T20:14:24.682Z",
+  "generatedAt": "2026-08-26T20:17:10.191Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5578,
+    "files": 5579,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 138,
+    "textFiles": 139,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 126,
+    "sourceFiles": 127,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 58,
+    "toolingSourceFiles": 59,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -151,6 +151,14 @@
       "path": ".github/workflows/post-live-backend-orchestration.yml",
       "size": 1054,
       "sha256": "7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/probe-cloudflare-mongodb-tls-once.yml",
+      "size": 4201,
+      "sha256": "3866349c1d84c0e4f77a49cea2fa2f8e1e8d50bf54dbd7b87f4a4a1b6c22f2ff",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43693,8 +43701,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "dc828549ab20d882cbd0e09d0cd61dc09b94fc389c7af4719c3443ef213b0bec",
+      "size": 5568,
+      "sha256": "23443a1650dc83d3abd335e954ca2d9f36fe8789026efc7243f7d23f8557cd7f",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43702,7 +43710,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "b6c7f747fa069581e4356296b0ddde03769dc572ac68ea3428bd2dac22c9bc6b",
+      "sha256": "943b528d17e5ebdc07d8ff31342f2db5a6ec0ec90f22dd90f56c7bbdc4c94e2f",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43861,8 +43869,8 @@
     },
     {
       "path": "cloudflare/r41-api/wrangler.toml",
-      "size": 438,
-      "sha256": "65428ea7d510fb94a98760ed05e50aaed9b107d0ae9a815ef84bf6274e1fe1bd",
+      "size": 481,
+      "sha256": "c25b042ead89981e535d4273f3cb6369ff72283e4184e4abdf9348b2052a44cb",
       "extension": ".toml",
       "runtime": true,
       "asset": false
@@ -363688,7 +363696,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T20:14:27.077Z",
+    "generatedAt": "2026-08-26T20:17:12.766Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364215,7 +364223,7 @@
       "events": 14,
       "movement": 8067,
       "assets": 15838,
-      "environment": 203
+      "environment": 206
     },
     "after": {
       "functions": 3360,
