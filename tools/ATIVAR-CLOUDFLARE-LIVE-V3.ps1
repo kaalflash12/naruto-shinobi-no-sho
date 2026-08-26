@@ -1,6 +1,7 @@
 param(
   [string]$Repo = 'kaalflash12/naruto-shinobi-no-sho',
-  [string]$PreferredCloudflareAccountId = '2a0d551fcc5064ae91aed8b42513f3a'
+  [string]$PreferredCloudflareAccountId = '2a0d551fcc5064ae91aed8b42513f3a',
+  [switch]$ValidateRunParsing
 )
 
 Set-StrictMode -Version Latest
@@ -308,14 +309,69 @@ function Get-MongoUriAutomatic {
   return $mongo
 }
 
+function Get-GhRunRows($Value) {
+  if ($null -eq $Value) { return @() }
+  if ($Value -is [System.Array]) {
+    foreach ($item in $Value) {
+      if ($item -is [System.Array]) {
+        Get-GhRunRows $item
+      } elseif ($null -ne $item) {
+        $item
+      }
+    }
+    return
+  }
+  return @($Value)
+}
+
+function Convert-GhCreatedAtUtc($Value) {
+  $current = $Value
+  while ($current -is [System.Array]) {
+    if ($current.Count -eq 0) { return $null }
+    $current = $current[0]
+  }
+  if ($null -eq $current) { return $null }
+  $text = [string]$current
+  if ([string]::IsNullOrWhiteSpace($text)) { return $null }
+
+  $parsed = [DateTimeOffset]::MinValue
+  $styles = [Globalization.DateTimeStyles]::AllowWhiteSpaces -bor [Globalization.DateTimeStyles]::AssumeUniversal -bor [Globalization.DateTimeStyles]::AdjustToUniversal
+  if ([DateTimeOffset]::TryParse($text, [Globalization.CultureInfo]::InvariantCulture, $styles, [ref]$parsed)) {
+    return $parsed.UtcDateTime
+  }
+  return $null
+}
+
 function Get-NewRunId([string]$Gh, [string]$Workflow, [DateTime]$SinceUtc, [int]$WaitSeconds = 600) {
   $deadline = [DateTime]::UtcNow.AddSeconds($WaitSeconds)
   while ([DateTime]::UtcNow -lt $deadline) {
     $json = & $Gh run list --repo $Repo --workflow $Workflow --limit 30 --json databaseId,createdAt,status,conclusion,event 2>$null
     if ($LASTEXITCODE -eq 0 -and $json) {
-      $runs = @($json | ConvertFrom-Json)
-      $candidate = $runs | Where-Object { ([DateTime]$_.createdAt).ToUniversalTime() -ge $SinceUtc.AddSeconds(-5) } | Sort-Object { [DateTime]$_.createdAt } -Descending | Select-Object -First 1
-      if ($candidate) { return [long]$candidate.databaseId }
+      $parsedRuns = $json | ConvertFrom-Json
+      $runs = @(Get-GhRunRows $parsedRuns)
+      $best = $null
+      $bestCreatedUtc = [DateTime]::MinValue
+      $minimumCreatedUtc = $SinceUtc.ToUniversalTime().AddSeconds(-5)
+
+      foreach ($run in $runs) {
+        if ($null -eq $run) { continue }
+        $createdUtc = Convert-GhCreatedAtUtc $run.createdAt
+        if ($null -eq $createdUtc) { continue }
+        if ($createdUtc -lt $minimumCreatedUtc) { continue }
+        if ($null -eq $best -or $createdUtc -gt $bestCreatedUtc) {
+          $best = $run
+          $bestCreatedUtc = $createdUtc
+        }
+      }
+
+      if ($best) {
+        $databaseId = $best.databaseId
+        while ($databaseId -is [System.Array]) {
+          if ($databaseId.Count -eq 0) { $databaseId = $null; break }
+          $databaseId = $databaseId[0]
+        }
+        if ($null -ne $databaseId) { return [long]$databaseId }
+      }
     }
     Start-Sleep -Seconds 2
   }
@@ -421,6 +477,21 @@ function Complete-FinalReadiness([string]$Gh) {
   if (-not $report) { throw 'FINAL-READINESS.json nao confirmou PASS_FINAL_READINESS.' }
   Write-Host 'PASS_FINAL_READINESS confirmado no repositorio.' -ForegroundColor Green
   return $finalId
+}
+
+if ($ValidateRunParsing) {
+  $fixture = ,@(
+    [PSCustomObject]@{ databaseId = @(101); createdAt = @('2026-08-26T12:00:00Z') },
+    [PSCustomObject]@{ databaseId = 102; createdAt = '2026-08-26T12:01:00Z' }
+  )
+  $rows = @(Get-GhRunRows $fixture)
+  if ($rows.Count -ne 2) { throw "Regressao: flatten de runs retornou $($rows.Count), esperado 2." }
+  $firstDate = Convert-GhCreatedAtUtc $rows[0].createdAt
+  $secondDate = Convert-GhCreatedAtUtc $rows[1].createdAt
+  if ($null -eq $firstDate -or $firstDate.ToString('o') -notmatch '^2026-08-26T12:00:00') { throw 'Regressao: createdAt System.Object[] nao foi convertido.' }
+  if ($null -eq $secondDate -or $secondDate -le $firstDate) { throw 'Regressao: ordenacao temporal de runs invalida.' }
+  Write-Host 'PASS_GITHUB_RUN_CREATEDAT_ARRAY_REGRESSION'
+  exit 0
 }
 
 $gh = Get-GhExecutable
