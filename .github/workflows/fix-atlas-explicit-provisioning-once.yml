@@ -1,0 +1,249 @@
+name: Fix Atlas Explicit Provisioning Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-atlas-explicit-provisioning-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Patch canonical V3
+        shell: powershell
+        run: |
+          @'
+          from pathlib import Path
+          import re
+
+          p = Path('tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1')
+          s = p.read_text(encoding='utf-8')
+
+          # Add a permanent offline validation switch.
+          old = "  [switch]$ValidateRunParsing,\n  [switch]$ValidatePortableTools\n)"
+          new = "  [switch]$ValidateRunParsing,\n  [switch]$ValidatePortableTools,\n  [switch]$ValidateAtlasProvisioning\n)"
+          if '[switch]$ValidateAtlasProvisioning' not in s:
+              assert old in s, 'param block nao localizado'
+              s = s.replace(old, new, 1)
+
+          # Replace the Atlas invocation layer with diagnostic redaction + explicit provisioning-plan helper.
+          start = s.index('function Invoke-AtlasCli(')
+          end = s.index('\nfunction Get-MongoUriAutomatic', start)
+          replacement = r'''function Format-AtlasArgumentsForLog([string[]]$Arguments) {
+            $safe = New-Object System.Collections.Generic.List[string]
+            $redactNext = $false
+            foreach ($argument in $Arguments) {
+              if ($redactNext) {
+                [void]$safe.Add('<redacted>')
+                $redactNext = $false
+                continue
+              }
+              $text = [string]$argument
+              [void]$safe.Add($text)
+              if ($text -eq '--password' -or $text -eq '-p') { $redactNext = $true }
+            }
+            return ($safe -join ' ')
+          }
+
+          function Protect-AtlasDiagnostic([string]$Text, [string[]]$Arguments) {
+            $safe = [string]$Text
+            for ($i = 0; $i -lt $Arguments.Count - 1; $i++) {
+              if ([string]$Arguments[$i] -eq '--password' -or [string]$Arguments[$i] -eq '-p') {
+                $secret = [string]$Arguments[$i + 1]
+                if (-not [string]::IsNullOrWhiteSpace($secret)) {
+                  $safe = $safe -replace [regex]::Escape($secret), '<redacted>'
+                }
+              }
+            }
+            return $safe
+          }
+
+          function Get-AtlasProvisioningPlan([string]$ProjectId, [string]$ClusterName, [string]$Username, [string]$Password) {
+            return [PSCustomObject]@{
+              CreateCluster = @('clusters','create',$ClusterName,'--projectId',$ProjectId,'--provider','AWS','--region','US_EAST_1','--tier','M0','--output','json')
+              ListAccess = @('accessLists','list','--projectId',$ProjectId,'--limit','500','--output','json')
+              CreateAccess = @('accessLists','create','0.0.0.0/0','--type','cidrBlock','--projectId',$ProjectId)
+              UpdateUser = @('dbusers','update',$Username,'--password',$Password,'--projectId',$ProjectId)
+              CreateUser = @('dbusers','create','readWriteAnyDatabase','--username',$Username,'--password',$Password,'--projectId',$ProjectId)
+              DescribeCluster = @('clusters','describe',$ClusterName,'--projectId',$ProjectId,'--output','json')
+              ConnectionString = @('clusters','connectionStrings','describe',$ClusterName,'--projectId',$ProjectId,'--output','json')
+            }
+          }
+
+          function Invoke-AtlasCli([string]$Atlas, [string[]]$Arguments, [switch]$AllowFailure) {
+            $stdoutFile = [IO.Path]::GetTempFileName()
+            $stderrFile = [IO.Path]::GetTempFileName()
+            try {
+              $process = Start-Process -FilePath $Atlas -ArgumentList $Arguments -NoNewWindow -Wait -PassThru -RedirectStandardOutput $stdoutFile -RedirectStandardError $stderrFile
+              $stdout = if (Test-Path $stdoutFile) { Get-Content $stdoutFile -Raw -ErrorAction SilentlyContinue } else { '' }
+              $stderr = if (Test-Path $stderrFile) { Get-Content $stderrFile -Raw -ErrorAction SilentlyContinue } else { '' }
+              $result = [PSCustomObject]@{
+                ExitCode = [int]$process.ExitCode
+                StdOut = [string]$stdout
+                StdErr = [string]$stderr
+              }
+              if ($result.ExitCode -ne 0 -and -not $AllowFailure) {
+                $safeArgs = Format-AtlasArgumentsForLog $Arguments
+                $safeErr = Protect-AtlasDiagnostic $result.StdErr $Arguments
+                throw ("Atlas CLI falhou: {0}. {1}" -f $safeArgs, $safeErr)
+              }
+              return $result
+            } finally {
+              Remove-Item $stdoutFile,$stderrFile -Force -ErrorAction SilentlyContinue
+            }
+          }
+          '''
+          s = s[:start] + replacement + s[end:]
+
+          # Replace setup/onboarding with explicit project-scoped Atlas commands.
+          pattern = re.compile(r"  \$username = 'shinobi_game'\n  \$password = New-RandomHex 24\n  if \(-not \$cluster\) \{.*?\n  \}\n\n  \$deadline = \[DateTime\]::UtcNow.AddMinutes\(15\)", re.S)
+          block = r'''  $username = 'shinobi_game'
+            $password = New-RandomHex 24
+            $clusterName = if ($cluster) { [string]$cluster.name } else { 'shinobi-no-sho' }
+            $plan = Get-AtlasProvisioningPlan $projectId $clusterName $username $password
+
+            if (-not $cluster) {
+              [void](Invoke-AtlasCli $atlas $plan.CreateCluster)
+            }
+
+            $accessResult = Invoke-AtlasCli $atlas $plan.ListAccess
+            $accessRows = @(Get-JsonRows ($accessResult.StdOut | ConvertFrom-Json))
+            $allowAllExists = @($accessRows | Where-Object { [string]$_.cidrBlock -eq '0.0.0.0/0' }).Count -gt 0
+            if (-not $allowAllExists) {
+              [void](Invoke-AtlasCli $atlas $plan.CreateAccess)
+            }
+
+            $updateUser = Invoke-AtlasCli $atlas $plan.UpdateUser -AllowFailure
+            if ($updateUser.ExitCode -ne 0) {
+              [void](Invoke-AtlasCli $atlas $plan.CreateUser)
+            }
+
+            $deadline = [DateTime]::UtcNow.AddMinutes(15)'''
+          s, count = pattern.subn(block, s, count=1)
+          assert count == 1, 'bloco setup Atlas nao localizado'
+
+          s = s.replace("Invoke-AtlasCli $atlas @('clusters','describe',$clusterName,'--projectId',$projectId,'--output','json') -AllowFailure", "Invoke-AtlasCli $atlas $plan.DescribeCluster -AllowFailure", 1)
+          s = s.replace("Invoke-AtlasCli $atlas @('clusters','connectionStrings','describe',$clusterName,'--projectId',$projectId,'--output','json')", "Invoke-AtlasCli $atlas $plan.ConnectionString", 1)
+
+          # Permanent local fixture: verify plan shape, no setup dependency, and secret redaction.
+          if "PASS_ATLAS_EXPLICIT_PROJECT_SCOPED_PROVISIONING" not in s:
+              marker = 'if ($ValidatePortableTools) {'
+              assert marker in s, 'ValidatePortableTools marker nao localizado'
+              fixture = r'''if ($ValidateAtlasProvisioning) {
+            $fixtureProject = '0123456789abcdef01234567'
+            $fixtureCluster = 'shinobi-no-sho'
+            $fixtureUser = 'shinobi_game'
+            $fixturePassword = 'TOP_SECRET_FIXTURE_VALUE'
+            $plan = Get-AtlasProvisioningPlan $fixtureProject $fixtureCluster $fixtureUser $fixturePassword
+            $commands = @($plan.CreateCluster,$plan.ListAccess,$plan.CreateAccess,$plan.UpdateUser,$plan.CreateUser,$plan.DescribeCluster,$plan.ConnectionString)
+            foreach ($command in $commands) {
+              $joined = @($command) -join ' '
+              if ($joined -notmatch [regex]::Escape("--projectId $fixtureProject")) { throw "Comando Atlas sem projectId explicito: $joined" }
+              if ($joined -match '(^|\s)setup(\s|$)') { throw "Regressao: atlas setup voltou ao provisioning: $joined" }
+            }
+            if ((@($plan.CreateCluster) -join ' ') -notmatch 'clusters create shinobi-no-sho .*--provider AWS .*--region US_EAST_1 .*--tier M0') { throw 'Plano de criacao M0 invalido.' }
+            if ((@($plan.CreateAccess) -join ' ') -notmatch 'accessLists create 0\.0\.0\.0/0 --type cidrBlock') { throw 'Plano de access list invalido.' }
+            if ((@($plan.CreateUser) -join ' ') -notmatch 'dbusers create readWriteAnyDatabase --username shinobi_game') { throw 'Plano de dbuser invalido.' }
+            $safe = Format-AtlasArgumentsForLog $plan.CreateUser
+            if ($safe.Contains($fixturePassword)) { throw 'Senha Atlas vazou no formatter de argumentos.' }
+            if (-not $safe.Contains('<redacted>')) { throw 'Formatter Atlas nao marcou segredo redigido.' }
+            $diag = Protect-AtlasDiagnostic ("erro contendo $fixturePassword") $plan.CreateUser
+            if ($diag.Contains($fixturePassword)) { throw 'Senha Atlas vazou no diagnostico.' }
+            $source = Get-Content $PSCommandPath -Raw
+            if ($source.Contains("@('setup','--projectId'")) { throw 'Regressao: provisioning ainda usa atlas setup.' }
+            Write-Host 'PASS_ATLAS_EXPLICIT_PROJECT_SCOPED_PROVISIONING'
+            exit 0
+          }
+
+          '''
+              s = s.replace(marker, fixture + marker, 1)
+
+          p.write_text(s, encoding='utf-8', newline='\n')
+          '@ | python -
+
+      - name: Parse patched canonical V3
+        shell: powershell
+        run: |
+          $tokens=$null; $errors=$null
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'),[ref]$tokens,[ref]$errors)
+          if($errors.Count -gt 0){ $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+          Write-Host 'PASS_PATCHED_V3_PARSE'
+
+      - name: Run Atlas provisioning fixture
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateAtlasProvisioning
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Preserve portable and run parsing fixtures
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidatePortableTools
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateRunParsing
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Validate commands against current Atlas CLI help
+        shell: powershell
+        run: |
+          $ErrorActionPreference='Stop'
+          $headers=@{'User-Agent'='naruto-shinobi-no-sho-ci'}
+          $release=Invoke-RestMethod -Headers $headers -Uri 'https://api.github.com/repos/mongodb/mongodb-atlas-cli/releases/latest'
+          $asset=@($release.assets | Where-Object { $_.name -match '^mongodb-atlas-cli_.*_windows_x86_64\.zip$' }) | Select-Object -First 1
+          if(-not $asset){ throw 'Atlas CLI Windows asset nao encontrado.' }
+          $root=Join-Path $env:RUNNER_TEMP 'atlas-cli-current'
+          New-Item -ItemType Directory -Path $root -Force | Out-Null
+          $zip=Join-Path $root 'atlas.zip'
+          Invoke-WebRequest -Headers $headers -Uri $asset.browser_download_url -OutFile $zip
+          Expand-Archive $zip $root -Force
+          $atlas=(Get-ChildItem $root -Recurse -Filter atlas.exe | Select-Object -First 1).FullName
+          $checks=@(
+            @('clusters','create','--help'),
+            @('accessLists','create','--help'),
+            @('dbusers','create','--help'),
+            @('dbusers','update','--help'),
+            @('clusters','describe','--help'),
+            @('clusters','connectionStrings','describe','--help')
+          )
+          foreach($args in $checks){
+            $text=(& $atlas @args 2>&1 | Out-String)
+            if($LASTEXITCODE -ne 0){ throw "Atlas help falhou: $($args -join ' ')" }
+            if(-not $text.Contains('--projectId')){ throw "Atlas atual nao anuncia --projectId em: $($args -join ' ')" }
+          }
+          $clusterHelp=(& $atlas clusters create --help 2>&1 | Out-String)
+          if(-not $clusterHelp.Contains('--provider') -or -not $clusterHelp.Contains('--region') -or -not $clusterHelp.Contains('--tier')){ throw 'Atlas clusters create nao possui flags esperadas.' }
+          Write-Host 'PASS_CURRENT_ATLAS_CLI_EXPLICIT_COMMAND_SURFACE'
+
+      - name: Assert no password is present in source diagnostics
+        shell: powershell
+        run: |
+          $source=Get-Content tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -Raw
+          if($source.Contains("@('setup','--projectId'")){ throw 'atlas setup ainda presente no provisioning.' }
+          if(-not $source.Contains('Protect-AtlasDiagnostic')){ throw 'Redacao de diagnostico ausente.' }
+          if(-not $source.Contains('Get-AtlasProvisioningPlan')){ throw 'Plano explicito Atlas ausente.' }
+          Write-Host 'PASS_ATLAS_SECRET_REDACTION_STATIC'
+
+      - name: Publish tested V3 only
+        shell: powershell
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+          git commit -m 'fix: provision Atlas explicitly without default profile dependency'
+          for($i=0; $i -lt 5; $i++){
+            git pull --rebase origin main
+            if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+            git push origin HEAD:main
+            if($LASTEXITCODE -eq 0){ exit 0 }
+            Start-Sleep -Seconds 2
+          }
+          throw 'Nao foi possivel publicar V3 Atlas explicito.'
