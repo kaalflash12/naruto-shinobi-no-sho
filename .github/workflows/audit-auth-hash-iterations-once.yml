@@ -1,4 +1,4 @@
-# trigger after workflow registration
+# trigger partial registration audit
 name: Audit Auth Hash Iterations Once
 
 on:
@@ -16,7 +16,7 @@ jobs:
     env:
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
     steps:
-      - name: Read only iteration distribution
+      - name: Read only auth and partial-registration state
         shell: bash
         run: |
           set -euo pipefail
@@ -30,11 +30,30 @@ jobs:
           await client.connect();
           try{
             const db=client.db('naruto_shinobi_no_sho');
-            const users=db.collection('users'), recovery=db.collection('recovery_codes');
+            const users=db.collection('users'), recovery=db.collection('recovery_codes'), sessions=db.collection('sessions');
             const userCount=await users.countDocuments({});
             const recoveryCount=await recovery.countDocuments({});
+            const sessionCount=await sessions.countDocuments({});
             const userDist=await users.aggregate([{$group:{_id:'$passIter',count:{$sum:1}}},{$sort:{_id:1}}]).toArray();
             const recDist=await recovery.aggregate([{$group:{_id:'$iterations',count:{$sum:1}}},{$sort:{_id:1}}]).toArray();
-            console.log(JSON.stringify({status:'PASS_AUTH_HASH_READ_ONLY_AUDIT',userCount,recoveryCount,usersOver100k:await users.countDocuments({passIter:{$gt:100000}}),recoveryOver100k:await recovery.countDocuments({iterations:{$gt:100000}}),userIterationDistribution:userDist.map(x=>({iterations:x._id??null,count:x.count})),recoveryIterationDistribution:recDist.map(x=>({iterations:x._id??null,count:x.count}))},null,2));
+            const users100k=await users.countDocuments({passIter:100000});
+            const users210k=await users.countDocuments({passIter:210000});
+            const recovery100k=await recovery.countDocuments({iterations:100000});
+            const orphanUsers=await users.aggregate([
+              {$lookup:{from:'recovery_codes',localField:'_id',foreignField:'userId',as:'recovery'}},
+              {$match:{recovery:{$size:0}}},
+              {$count:'count'}
+            ]).toArray();
+            const recentUsers=await users.countDocuments({createdAt:{$gte:new Date(Date.now()-6*60*60*1000)}});
+            console.log(JSON.stringify({
+              status:'PASS_AUTH_PARTIAL_REGISTRATION_READ_ONLY_AUDIT',
+              userCount,recoveryCount,sessionCount,recentUsers,
+              users100k,users210k,recovery100k,
+              usersOver100k:await users.countDocuments({passIter:{$gt:100000}}),
+              recoveryOver100k:await recovery.countDocuments({iterations:{$gt:100000}}),
+              orphanUsersWithoutRecovery:Number(orphanUsers[0]?.count||0),
+              userIterationDistribution:userDist.map(x=>({iterations:x._id??null,count:x.count})),
+              recoveryIterationDistribution:recDist.map(x=>({iterations:x._id??null,count:x.count}))
+            },null,2));
           }finally{await client.close();}
           NODE
