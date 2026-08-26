@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T18:05:45.415Z",
+  "generatedAt": "2026-08-26T18:42:11.197Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtaem2lpkls3g",
-  "slotId": "gameplay-mtaem2lp",
+  "temporaryAccount": "play_mtafwxf6n9sck",
+  "slotId": "gameplay-mtafwxf6",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787767516423,
+          "at": 1787769702274,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 13,
+          "total": 12,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 454,
-          "success": false,
-          "errors": 2,
+          "score": 515,
+          "success": true,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtaem2lpkls3g",
+        "intent": "Cobrir saída E2E mtafwxf6n9sck",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787767520972,
-        "cloudAt": 1787767513983,
+        "localAt": 1787769706790,
+        "cloudAt": 1787769699838,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
