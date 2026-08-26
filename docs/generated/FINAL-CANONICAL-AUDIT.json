@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T21:25:35.354Z",
+  "generatedAt": "2026-08-26T21:28:01.359Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T21:25:20.853Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T21:27:48.046Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 138,
+    "sourceFiles": 139,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39927,6 +39927,11 @@
       "sha256": "d1f9d12deaa2ed6ac195efa55b4ab12dbfca159993731883cc6c8056180bb6f3"
     },
     {
+      "path": ".github/workflows/probe-request-scoped-mongodb-once.yml",
+      "size": 11252,
+      "sha256": "de8ff42b6a9b8f3a8a229ed88163aa47dfa215c2660d5c356a823d47ab20a45c"
+    },
+    {
       "path": ".github/workflows/public-release-coherence.yml",
       "size": 4447,
       "sha256": "29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205"
@@ -39963,13 +39968,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "77f8bcac0e382e523399e2d941244f9618f5999c92dfc2852a23cfcdf883cab5"
+      "size": 5607,
+      "sha256": "e3987ef7d43e70e6fe6c5ef7a557223ba818999b7fc8c13c3fe4b4c99f4c06b7"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "e9c29d18f42b48c9908dba7091794a57d427bede383849149e5c8313d19cdc11"
+      "sha256": "62dc23cd871805c6f5077e0f8a23a9c9139f7bcedee7f05514393b48b6f21086"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
