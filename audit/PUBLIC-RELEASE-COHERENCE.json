@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-26T00:01:59.900Z",
+  "generatedAt": "2026-08-26T11:02:58.543Z",
   "status": "PASS_PUBLIC_RELEASE_COHERENCE",
   "ok": true,
   "site": "https://kaalflash12.github.io/naruto-shinobi-no-sho/",
-  "releaseFingerprint": "8ca3c3be259de80233c525a257c2b63ab00f5aa084f25d921f85de14f94fc677",
-  "localMarker": "8ca3c3be259de80233c525a257c2b63ab00f5aa084f25d921f85de14f94fc677",
+  "releaseFingerprint": "4e8daff0ae189e9dfc78dda3ed969eb81606ad6c228b5bf3ccd90980f2a4f851",
+  "localMarker": "4e8daff0ae189e9dfc78dda3ed969eb81606ad6c228b5bf3ccd90980f2a4f851",
   "publicMarkerMatch": true,
   "files": 44,
   "checks": [
@@ -21,8 +21,8 @@
       "file": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "status": 200,
       "ok": true,
-      "localSha256": "9540643e8caa33d9f2d2417d1cc57651edacd4752ca1e9482f68e2dbbcc9ef3a",
-      "remoteSha256": "9540643e8caa33d9f2d2417d1cc57651edacd4752ca1e9482f68e2dbbcc9ef3a",
+      "localSha256": "718ad1c491bc14d2509cc9340a02737ee4dc1f5267c195f8d076b1408995f3ce",
+      "remoteSha256": "718ad1c491bc14d2509cc9340a02737ee4dc1f5267c195f8d076b1408995f3ce",
       "bytesLocal": 65,
       "bytesRemote": 65
     },
