@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T18:48:02.591Z",
+  "generatedAt": "2026-08-26T18:59:22.759Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtag4ggzmsue0",
-  "slotId": "gameplay-mtag4ggz",
+  "temporaryAccount": "play_mtagj1cwy718b",
+  "slotId": "gameplay-mtagj1cw",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -89,7 +89,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.9,
+          "time": 4.8,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787770053604,
+          "at": 1787770734116,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 12,
+          "total": 15,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 36,
-          "enemyHpAfter": 36,
+          "enemyHpBefore": 26,
+          "enemyHpAfter": 26,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 382,
-          "success": false,
-          "errors": 4,
+          "score": 522,
+          "success": true,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtag4ggzmsue0",
+        "intent": "Cobrir saída E2E mtagj1cwy718b",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787770058121,
-        "cloudAt": 1787770051116,
+        "localAt": 1787770738681,
+        "cloudAt": 1787770731677,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
