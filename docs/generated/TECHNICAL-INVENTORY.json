@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-26T11:00:42.850Z",
+  "generatedAt": "2026-08-26T11:54:22.945Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5575,
+    "files": 5576,
     "runtimeFiles": 107,
     "assetFiles": 5434,
     "textFiles": 136,
@@ -85,8 +85,8 @@
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
-      "size": 2633,
-      "sha256": "a1ad0551b409070e64cfcd7f550268bdb86ed15b6aeb03b91c4155eb97c34f41",
+      "size": 3693,
+      "sha256": "1a247aa1462588301a71ccef00238c56f9e0d5212b440011ce91b5ccebe1a3c6",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43660,9 +43660,17 @@
       "asset": false
     },
     {
+      "path": "ATIVAR-TUDO.cmd",
+      "size": 1212,
+      "sha256": "ad2dc7d69b715da9c4907fe829e8ba3089cc0beb6e778bdd1fc2e358419f2163",
+      "extension": ".cmd",
+      "runtime": false,
+      "asset": false
+    },
+    {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2558,
-      "sha256": "0f585b01e0fa5ba018b21426be5ad2861d808e904809a97cab877bac5e787c80",
+      "sha256": "ac064ba258e50f7e75381595ed722292c682a555e276a42d175ab8f85c3efcce",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43670,7 +43678,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "e85e310866b338a6db803036df8b59ec2b8da003f053adf826319cf44cde89bc",
+      "sha256": "7c0e2ae855f9f33a6b74edda8d99138d917a65db98c928a1cbe390d3cf1634d5",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43678,7 +43686,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "b26edf24afa729cf9bacc14f2fc6a1061fdbbf39bf6ffaa4d82f3b3d933ba8b6",
+      "sha256": "3534fc6c1b62dcdbf2eeea7b12c4c04a8ac159093bbe862d71d78a7fda895e57",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43710,7 +43718,7 @@
     {
       "path": "audit/PUBLIC-RELEASE-COHERENCE.json",
       "size": 14718,
-      "sha256": "e7a08c44a0095822157846d3abdddcf8df3d8d187f046b7943a81f0e70ffee07",
+      "sha256": "f54054dd8b60ac1b1a14f51af431ad34f80fb1cc7d4df59a09b1deaf25788910",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363664,7 +363672,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T11:00:45.322Z",
+    "generatedAt": "2026-08-26T11:54:25.165Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
