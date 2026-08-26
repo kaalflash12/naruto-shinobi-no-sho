@@ -1,0 +1,146 @@
+name: Publish V3 Locksafe Once
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish-v3:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Patch canonical V3 only
+        shell: powershell
+        run: |
+          @'
+          from pathlib import Path
+
+          p = Path('tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1')
+          s = p.read_text(encoding='utf-8')
+
+          if '[switch]$ValidatePortableTools' not in s:
+              old = "  [switch]$ValidateRunParsing\n)"
+              new = "  [switch]$ValidateRunParsing,\n  [switch]$ValidatePortableTools\n)"
+              assert old in s
+              s = s.replace(old, new, 1)
+
+          replacements = [
+              (
+                  "  Write-Step 'Baixando GitHub CLI portatil'\n  $root = Join-Path $env:TEMP 'shinobi-gh-portable'\n  if (Test-Path $root) { Remove-Item $root -Recurse -Force }\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  "  $cacheRoot = Join-Path $env:TEMP 'shinobi-gh-portable'\n  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter gh.exe -ErrorAction SilentlyContinue | Select-Object -First 1\n  if ($cached) {\n    Write-Host (\"Reutilizando GitHub CLI portatil existente: {0}\" -f $cached.FullName) -ForegroundColor Green\n    return $cached.FullName\n  }\n  Write-Step 'Baixando GitHub CLI portatil'\n  $root = Join-Path $env:TEMP (\"shinobi-gh-portable-{0}\" -f [Guid]::NewGuid().ToString('N'))\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  'Reutilizando GitHub CLI portatil existente'
+              ),
+              (
+                  "  Write-Step 'Baixando Node.js LTS portatil'\n  $root = Join-Path $env:TEMP 'shinobi-node-portable'\n  if (Test-Path $root) { Remove-Item $root -Recurse -Force }\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  "  $cacheRoot = Join-Path $env:TEMP 'shinobi-node-portable'\n  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter npx.cmd -ErrorAction SilentlyContinue | Select-Object -First 1\n  if ($cached) {\n    Write-Host (\"Reutilizando Node.js portatil existente: {0}\" -f $cached.FullName) -ForegroundColor Green\n    return $cached.FullName\n  }\n  Write-Step 'Baixando Node.js LTS portatil'\n  $root = Join-Path $env:TEMP (\"shinobi-node-portable-{0}\" -f [Guid]::NewGuid().ToString('N'))\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  'Reutilizando Node.js portatil existente'
+              ),
+              (
+                  "  Write-Step 'Baixando MongoDB Atlas CLI portatil'\n  $root = Join-Path $env:TEMP 'shinobi-atlas-portable'\n  if (Test-Path $root) { Remove-Item $root -Recurse -Force }\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  "  $cacheRoot = Join-Path $env:TEMP 'shinobi-atlas-portable'\n  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter atlas.exe -ErrorAction SilentlyContinue | Select-Object -First 1\n  if ($cached) {\n    Write-Host (\"Reutilizando MongoDB Atlas CLI portatil existente: {0}\" -f $cached.FullName) -ForegroundColor Green\n    return $cached.FullName\n  }\n  Write-Step 'Baixando MongoDB Atlas CLI portatil'\n  $root = Join-Path $env:TEMP (\"shinobi-atlas-portable-{0}\" -f [Guid]::NewGuid().ToString('N'))\n  New-Item -ItemType Directory -Path $root -Force | Out-Null",
+                  'Reutilizando MongoDB Atlas CLI portatil existente'
+              ),
+          ]
+          for old, new, expected in replacements:
+              if old in s:
+                  s = s.replace(old, new, 1)
+              else:
+                  assert expected in s, expected
+
+          old_gh = "  & $Gh auth status --hostname github.com *> $null\n  if ($LASTEXITCODE -eq 0) {"
+          new_gh = "  $previousEap = $ErrorActionPreference\n  try {\n    $ErrorActionPreference = 'Continue'\n    & $Gh auth status --hostname github.com 2>$null | Out-Null\n    $ghAuthenticated = ($LASTEXITCODE -eq 0)\n  } finally {\n    $ErrorActionPreference = $previousEap\n  }\n  if ($ghAuthenticated) {"
+          if old_gh in s:
+              s = s.replace(old_gh, new_gh, 1)
+
+          old_cf = "  & $Npx --yes 'wrangler@4.119.0' whoami *> $null\n  if ($LASTEXITCODE -ne 0) {"
+          new_cf = "  $previousEap = $ErrorActionPreference\n  try {\n    $ErrorActionPreference = 'Continue'\n    & $Npx --yes 'wrangler@4.119.0' whoami 2>$null | Out-Null\n    $wranglerAuthenticated = ($LASTEXITCODE -eq 0)\n  } finally {\n    $ErrorActionPreference = $previousEap\n  }\n  if (-not $wranglerAuthenticated) {"
+          if old_cf in s:
+              s = s.replace(old_cf, new_cf, 1)
+
+          if 'PASS_PORTABLE_TOOL_LOCK_REUSE' not in s:
+              marker = 'if ($ValidateRunParsing) {'
+              assert marker in s
+              validation = r'''if ($ValidatePortableTools) {
+            $savedPath = $env:PATH
+            $savedTemp = $env:TEMP
+            $fixtureRoot = Join-Path $env:TEMP ("shinobi-portable-lock-fixture-{0}" -f [Guid]::NewGuid().ToString('N'))
+            New-Item -ItemType Directory -Path $fixtureRoot -Force | Out-Null
+            $locks = @()
+            try {
+              $env:TEMP = $fixtureRoot
+              $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot"
+              foreach ($fixture in @(
+                @{ Dir = 'shinobi-gh-portable\bin'; Name = 'gh.exe' },
+                @{ Dir = 'shinobi-node-portable\bin'; Name = 'npx.cmd' },
+                @{ Dir = 'shinobi-atlas-portable\bin'; Name = 'atlas.exe' }
+              )) {
+                $dir = Join-Path $fixtureRoot $fixture.Dir
+                New-Item -ItemType Directory -Path $dir -Force | Out-Null
+                $file = Join-Path $dir $fixture.Name
+                [IO.File]::WriteAllText($file, 'locked-fixture')
+                $locks += [IO.File]::Open($file, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::None)
+              }
+              $ghFixture = Get-GhExecutable
+              $npxFixture = Get-NpxExecutable
+              $atlasFixture = Get-AtlasExecutable
+              if ((Split-Path $ghFixture -Leaf) -ne 'gh.exe') { throw 'GitHub CLI bloqueado nao foi reutilizado.' }
+              if ((Split-Path $npxFixture -Leaf) -ne 'npx.cmd') { throw 'Node.js bloqueado nao foi reutilizado.' }
+              if ((Split-Path $atlasFixture -Leaf) -ne 'atlas.exe') { throw 'Atlas CLI bloqueado nao foi reutilizado.' }
+              Write-Host 'PASS_PORTABLE_TOOL_LOCK_REUSE'
+              exit 0
+            } finally {
+              foreach ($lock in $locks) { if ($lock) { $lock.Dispose() } }
+              $env:TEMP = $savedTemp
+              $env:PATH = $savedPath
+              Remove-Item $fixtureRoot -Recurse -Force -ErrorAction SilentlyContinue
+            }
+          }
+
+          '''
+              s = s.replace(marker, validation + marker, 1)
+
+          p.write_text(s, encoding='utf-8', newline='\n')
+          '@ | python -
+
+      - name: Parse canonical V3
+        shell: powershell
+        run: |
+          $tokens=$null; $errors=$null
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'),[ref]$tokens,[ref]$errors)
+          if($errors.Count -gt 0){ $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+          Write-Host 'PASS_PATCHED_V3_PARSE'
+
+      - name: Reproduce exact locked portable tools on Windows
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidatePortableTools
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Preserve existing V3 regression
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidateRunParsing
+          if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+
+      - name: Publish tested canonical V3 only
+        shell: powershell
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+          git commit -m 'fix: make portable bootstrap tools lock-safe and probe-safe'
+          for($i=0; $i -lt 5; $i++){
+            git pull --rebase origin main
+            if($LASTEXITCODE -ne 0){ exit $LASTEXITCODE }
+            git push origin HEAD:main
+            if($LASTEXITCODE -eq 0){ exit 0 }
+            Start-Sleep -Seconds 2
+          }
+          throw 'Nao foi possivel publicar V3 depois de 5 tentativas.'
