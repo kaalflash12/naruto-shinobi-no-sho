@@ -3,6 +3,7 @@ import fs from 'node:fs';
 const has=name=>Boolean(String(process.env[name]||'').trim());
 const isHash=value=>/^[a-f0-9]{64}$/.test(String(value||''));
 const read=p=>{try{return JSON.parse(fs.readFileSync(p,'utf8'));}catch{return null;}};
+const cloudflareAuthValid=String(process.env.CLOUDFLARE_AUTH_VALID||'false').trim().toLowerCase()==='true';
 const secrets={
   CLOUDFLARE_API_TOKEN:has('SECRET_CLOUDFLARE_API_TOKEN'),
   CLOUDFLARE_ACCOUNT_ID:has('SECRET_CLOUDFLARE_ACCOUNT_ID'),
@@ -19,17 +20,20 @@ const variables={
   LIVE_API_ORIGIN:has('VAR_LIVE_API_ORIGIN')
 };
 const usable={
-  CLOUDFLARE_API_TOKEN:secrets.CLOUDFLARE_API_TOKEN,
+  CLOUDFLARE_API_TOKEN:secrets.CLOUDFLARE_API_TOKEN&&cloudflareAuthValid,
   CLOUDFLARE_ACCOUNT_ID:secrets.CLOUDFLARE_ACCOUNT_ID||variables.CLOUDFLARE_ACCOUNT_ID,
   MONGODB_URI:secrets.MONGODB_URI,
   AUTH_SECRET:secrets.AUTH_SECRET,
   LEON_PRIVATE_CODE:secrets.LEON_PRIVATE_CODE,
   LIVE_API_ORIGIN:variables.LIVE_API_ORIGIN
 };
-const manualRequired={
-  CLOUDFLARE_API_TOKEN:secrets.CLOUDFLARE_API_TOKEN
+const credentialHealth={
+  CLOUDFLARE_API_TOKEN:{present:secrets.CLOUDFLARE_API_TOKEN,workersCapability:cloudflareAuthValid,reauthRequired:secrets.CLOUDFLARE_API_TOKEN&&!cloudflareAuthValid}
 };
-const missingManualRequired=Object.entries(manualRequired).filter(([,present])=>!present).map(([name])=>name);
+const manualRequired={
+  CLOUDFLARE_API_TOKEN:usable.CLOUDFLARE_API_TOKEN
+};
+const missingManualRequired=Object.entries(manualRequired).filter(([,ready])=>!ready).map(([name])=>name);
 const conditionalManual={
   MONGODB_URI:{
     provided:secrets.MONGODB_URI,
@@ -77,9 +81,9 @@ const consumersPass=livePass&&accountPass&&gameplayPass;
 
 const report={
   generatedAt:new Date().toISOString(),
-  status:'BACKEND_CREDENTIAL_PRESENCE_ONLY',
+  status:'BACKEND_CREDENTIAL_PRESENCE_AND_CAPABILITY',
   ok:true,
-  secrets,variables,usable,
+  secrets,variables,usable,credentialHealth,
   manualRequired,
   missingManualRequired,
   conditionalManual,
@@ -89,14 +93,14 @@ const report={
   currentSourceFingerprint,liveSourceFingerprint,
   currentReleaseFingerprint,
   consumerReleaseFingerprints:{account:accountReleaseFingerprint,browserAccount:browserAccountReleaseFingerprint,gameplay:gameplayReleaseFingerprint},
-  note:'Para iniciar o bootstrap live, somente CLOUDFLARE_API_TOKEN precisa existir no GitHub. MONGODB_URI é reutilizada do secret persistido do Worker quando já existir; só será necessária uma configuração manual de MongoDB se o Worker não tiver esse secret. CLOUDFLARE_ACCOUNT_ID e LIVE_API_ORIGIN são derivados pelo workflow; AUTH_SECRET é reutilizado do Worker ou gerado criptograficamente; LEON_PRIVATE_CODE é opcional. Nenhum valor secreto é gravado neste relatório.'
+  note:'O bootstrap live só é considerado pronto quando CLOUDFLARE_API_TOKEN existe e consegue acessar a API de Workers da conta. MONGODB_URI é reutilizada do secret persistido do Worker quando já existir; só será necessária configuração de MongoDB se o Worker não tiver esse secret. CLOUDFLARE_ACCOUNT_ID e LIVE_API_ORIGIN podem ser derivados; AUTH_SECRET é reutilizado ou gerado; LEON_PRIVATE_CODE é opcional. Nenhum valor secreto é gravado neste relatório.'
 };
 let previous=null;
 try{previous=JSON.parse(fs.readFileSync('audit/BACKEND-SECRET-PRESENCE.json','utf8'));}catch{}
-const semantic=r=>JSON.stringify({status:r?.status,ok:r?.ok,secrets:r?.secrets,variables:r?.variables,usable:r?.usable,manualRequired:r?.manualRequired,missingManualRequired:r?.missingManualRequired,conditionalManual:r?.conditionalManual,autoManaged:r?.autoManaged,optional:r?.optional,requiredReady:r?.requiredReady,livePass:r?.livePass,consumersPass:r?.consumersPass,currentSourceFingerprint:r?.currentSourceFingerprint||null,liveSourceFingerprint:r?.liveSourceFingerprint||null,currentReleaseFingerprint:r?.currentReleaseFingerprint||null,consumerReleaseFingerprints:r?.consumerReleaseFingerprints||null,note:r?.note});
+const semantic=r=>JSON.stringify({status:r?.status,ok:r?.ok,secrets:r?.secrets,variables:r?.variables,usable:r?.usable,credentialHealth:r?.credentialHealth,manualRequired:r?.manualRequired,missingManualRequired:r?.missingManualRequired,conditionalManual:r?.conditionalManual,autoManaged:r?.autoManaged,optional:r?.optional,requiredReady:r?.requiredReady,livePass:r?.livePass,consumersPass:r?.consumersPass,currentSourceFingerprint:r?.currentSourceFingerprint||null,liveSourceFingerprint:r?.liveSourceFingerprint||null,currentReleaseFingerprint:r?.currentReleaseFingerprint||null,consumerReleaseFingerprints:r?.consumerReleaseFingerprints||null,note:r?.note});
 fs.mkdirSync('audit',{recursive:true});
 if(!previous||semantic(previous)!==semantic(report))fs.writeFileSync('audit/BACKEND-SECRET-PRESENCE.json',JSON.stringify(report,null,2)+'\n');
 if(process.env.GITHUB_OUTPUT){
   fs.appendFileSync(process.env.GITHUB_OUTPUT,`ready=${requiredReady?'true':'false'}\nlive_pass=${livePass?'true':'false'}\nconsumers_pass=${consumersPass?'true':'false'}\n`);
 }
-console.log(JSON.stringify({requiredReady,missingManualRequired,conditionalManual,autoManaged,optional,livePass,consumersPass,currentSourceFingerprint,liveSourceFingerprint,currentReleaseFingerprint,consumerReleaseFingerprints:report.consumerReleaseFingerprints},null,2));
+console.log(JSON.stringify({requiredReady,missingManualRequired,credentialHealth,conditionalManual,autoManaged,optional,livePass,consumersPass,currentSourceFingerprint,liveSourceFingerprint,currentReleaseFingerprint,consumerReleaseFingerprints:report.consumerReleaseFingerprints},null,2));
