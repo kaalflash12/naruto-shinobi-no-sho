@@ -56,6 +56,15 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "createdAt regression test falhou: $LASTEXITCODE" }
           Write-Host 'PASS_GITHUB_RUN_CREATEDAT_ARRAY_GATE'
 
+      - name: Validate production scalar-output and token-retention hotfix
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'ATIVAR-CLOUDFLARE-LIVE.ps1'
+          & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $path -SourceRef $env:GITHUB_SHA -ValidateHotfix
+          if ($LASTEXITCODE -ne 0) { throw "Production bootstrap hotfix validation falhou: $LASTEXITCODE" }
+          Write-Host 'PASS_BOOTSTRAP_SCALAR_OUTPUT_TOKEN_RETENTION_GATE'
+
       - name: Enforce zero-paste bootstrap
         shell: powershell
         run: |
