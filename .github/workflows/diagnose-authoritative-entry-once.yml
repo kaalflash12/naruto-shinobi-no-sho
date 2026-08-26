@@ -1,0 +1,71 @@
+name: Diagnose Authoritative Entry Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/diagnose-authoritative-entry-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cloudflare/r41-api
+    env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      MONGODB_DB: naruto_shinobi_no_sho
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install Worker dependencies
+        run: npm install --no-audit --no-fund
+      - name: Diagnose V6 authority migration read-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import { MongoClient } from 'mongodb';
+          if (!process.env.MONGODB_URI) throw new Error('MONGODB_URI_MISSING');
+          const client = new MongoClient(process.env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+          await client.connect();
+          try {
+            const db = client.db(process.env.MONGODB_DB || 'naruto_shinobi_no_sho');
+            const profiles = db.collection('mechanical_profiles');
+            const indexes = await profiles.indexes().catch(()=>[]);
+            const missingProfileKey = await profiles.countDocuments({profileKey:{$exists:false}});
+            const legacyCount = await profiles.countDocuments({profileKey:'legacy'});
+            const duplicateLegacy = await profiles.aggregate([
+              {$match:{profileKey:'legacy'}},
+              {$group:{_id:'$userId',count:{$sum:1}}},
+              {$match:{count:{$gt:1}}},
+              {$count:'groups'}
+            ]).toArray();
+            const duplicateAnyKey = await profiles.aggregate([
+              {$match:{profileKey:{$type:'string'}}},
+              {$group:{_id:{userId:'$userId',profileKey:'$profileKey'},count:{$sum:1}}},
+              {$match:{count:{$gt:1}}},
+              {$count:'groups'}
+            ]).toArray();
+            const oldUnique = indexes.some(x=>x.name==='uq_mechanical_profile_user');
+            const v6Unique = indexes.some(x=>x.name==='uq_mechanical_profile_user_key');
+            console.log(JSON.stringify({
+              status:'PASS_READ_ONLY_DIAGNOSTIC',
+              mongodbConnect:true,
+              missingProfileKey,
+              legacyCount,
+              duplicateLegacyGroups:Number(duplicateLegacy[0]?.groups||0),
+              duplicateUserProfileKeyGroups:Number(duplicateAnyKey[0]?.groups||0),
+              oldUniqueIndexPresent:oldUnique,
+              v6UniqueIndexPresent:v6Unique,
+              indexNames:indexes.map(x=>x.name).sort()
+            },null,2));
+          } finally {
+            await client.close();
+          }
+          NODE
