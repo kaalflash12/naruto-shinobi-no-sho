@@ -103,3 +103,5 @@ jobs:
           git commit -m 'fix: make Atlas auth probe safe on Windows PowerShell'
           git pull --rebase origin main
           git push origin HEAD:main
+
+# trigger-after-valid-registration
