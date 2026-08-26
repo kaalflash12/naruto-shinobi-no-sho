@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T11:55:39.915Z",
+  "generatedAt": "2026-08-26T13:00:27.063Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mta1e4qlghhlj",
-  "slotId": "gameplay-mta1e4ql",
+  "temporaryAccount": "play_mta3pg3zbhr2v",
+  "slotId": "gameplay-mta3pg3z",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787745310807,
+          "at": 1787749198072,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 13,
+          "total": 21,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 26,
-          "enemyHpAfter": 26,
+          "enemyHpBefore": 36,
+          "enemyHpAfter": 36,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,7 +148,7 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 516,
+          "score": 533,
           "success": true,
           "errors": 3,
           "time": 0.8,
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mta1e4qlghhlj",
+        "intent": "Cobrir saída E2E mta3pg3zbhr2v",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787745315323,
-        "cloudAt": 1787745308323,
+        "localAt": 1787749202588,
+        "cloudAt": 1787749195569,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
