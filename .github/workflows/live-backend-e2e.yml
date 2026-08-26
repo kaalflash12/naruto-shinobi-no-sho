@@ -68,16 +68,31 @@ jobs:
           NODE
             exit 1
           fi
-          verify="$(curl -sS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' 'https://api.cloudflare.com/client/v4/accounts?per_page=50' || true)"
-          if ! TOKEN_JSON="$verify" node --input-type=module <<'NODE'
+
+          verify_active() {
+            local verify_url="$1"
+            local verify
+            verify="$(curl -sS --max-time 30 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' "$verify_url" || true)"
+            TOKEN_JSON="$verify" node --input-type=module <<'NODE'
           let data={};try{data=JSON.parse(process.env.TOKEN_JSON||'{}')}catch{};
-          const rows=Array.isArray(data.result)?data.result:[];
-          if(!(data.success===true&&rows.length>0))process.exit(1);
+          const status=String(data?.result?.status||'').toLowerCase();
+          if(!(data.success===true&&status==='active'))process.exit(1);
           NODE
-          then
+          }
+
+          verified=false
+          if verify_active 'https://api.cloudflare.com/client/v4/user/tokens/verify'; then
+            verified=true
+            echo 'CLOUDFLARE_TOKEN_SCOPE=user'
+          elif [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ] && verify_active "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/tokens/verify"; then
+            verified=true
+            echo 'CLOUDFLARE_TOKEN_SCOPE=account'
+          fi
+
+          if [ "$verified" != "true" ]; then
             node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_INVALID_CLOUDFLARE_AUTH',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',sourceFingerprint:String(process.env.SOURCE_FINGERPRINT||'')||null,failures:['O bearer Cloudflare nao conseguiu listar nenhuma conta acessivel.']},null,2)+'\n');
+          fs.writeFileSync('audit/LIVE-BACKEND.json',JSON.stringify({generatedAt:new Date().toISOString(),status:'BLOCKED_INVALID_CLOUDFLARE_AUTH',ok:false,scope:'CLOUDFLARE_WORKER_MONGODB_ATLAS_DURABLE_OBJECTS_LIVE',sourceFingerprint:String(process.env.SOURCE_FINGERPRINT||'')||null,failures:['O bearer Cloudflare não foi confirmado como token ativo pelos endpoints oficiais de verificação de token.']},null,2)+'\n');
           NODE
             exit 1
           fi
