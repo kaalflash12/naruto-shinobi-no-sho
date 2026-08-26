@@ -149,7 +149,7 @@ jobs:
           function Get-GhRunRows'''
 
           pattern = r'function Get-MongoUriAutomatic \{.*?\n\}\n\nfunction Get-GhRunRows'
-          patched, count = re.subn(pattern, replacement, source, count=1, flags=re.S)
+          patched, count = re.subn(pattern, lambda _: replacement, source, count=1, flags=re.S)
           if count != 1:
               raise SystemExit(f'Get-MongoUriAutomatic replacement count: {count}')
 
@@ -187,7 +187,7 @@ jobs:
             "`$cluster = @(`$clusters | Where-Object { ([string]`$_.name) -eq 'shinobi-no-sho' }) | Select-Object -First 1",
             "Invoke-AtlasCli `$atlas @('dbusers','update',`$username,'--password',`$password,'--projectId',`$projectId) -AllowFailure",
             "Invoke-AtlasCli `$atlas @('accessLists','list','--projectId',`$projectId,'--limit','500','--output','json')",
-            "if (`$state -ne 'IDLE') { throw \"Cluster MongoDB Atlas nao ficou pronto. Estado final: `$state\" }",
+            'Cluster MongoDB Atlas nao ficou pronto. Estado final:',
             "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
           )
           foreach ($needle in $required) {
