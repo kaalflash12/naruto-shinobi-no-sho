@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-26T21:31:32.317Z`
+Gerado em: `2026-08-26T21:36:21.305Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -31,12 +31,12 @@ Gerado em: `2026-08-26T21:31:32.317Z`
 
 ## API-00006 — `/api/auth/delete-account`
 
-- **Referências:** `cloudflare/r41-api/src/entry-authoritative.js:131`, `cloudflare/r41-api/src/entry.js:67`, `r41-github-api.js:62`
+- **Referências:** `cloudflare/r41-api/src/entry-authoritative.js:131`, `cloudflare/r41-api/src/entry.js:67`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:47`, `r41-github-api.js:62`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00007 — `/api/auth/login`
 
-- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `r41-github-api.js:28`, `r41-github-api.js:57`
+- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:24`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:40`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:43`, `r41-github-api.js:28`, `r41-github-api.js:57`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00008 — `/api/auth/logout`
@@ -46,22 +46,22 @@ Gerado em: `2026-08-26T21:31:32.317Z`
 
 ## API-00009 — `/api/auth/me`
 
-- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `r41-github-api.js:58`
+- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:156`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:28`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:51`, `r41-github-api.js:58`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00010 — `/api/auth/recover`
 
-- **Referências:** `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `r41-github-api.js:60`
+- **Referências:** `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:36`, `r41-github-api.js:60`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00011 — `/api/auth/recovery-code`
 
-- **Referências:** `cloudflare/r41-api/src/entry.js:59`, `r41-github-api.js:61`
+- **Referências:** `cloudflare/r41-api/src/entry.js:59`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:32`, `r41-github-api.js:61`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00012 — `/api/auth/register`
 
-- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:92`, `cloudflare/r41-api/src/index.js:94`, `r41-github-api.js:28`, `r41-github-api.js:56`
+- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:92`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:20`, `r41-github-api.js:28`, `r41-github-api.js:56`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00013 — `/api/cloud/load`
@@ -86,7 +86,7 @@ Gerado em: `2026-08-26T21:31:32.317Z`
 
 ## API-00017 — `/api/online/action`
 
-- **Referências:** `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/index.js:125`
+- **Referências:** `app.js:5598`, `cloudflare/oneclick-backend/src/index.js:86`, `cloudflare/oneclick-backend/test/local-e2e.mjs:14`, `cloudflare/oneclick-backend/test/local-e2e.mjs:15`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/index.js:125`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:161`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00018 — `/api/online/create`
@@ -146,7 +146,7 @@ Gerado em: `2026-08-26T21:31:32.317Z`
 
 ## API-00029 — `/api/status`
 
-- **Referências:** `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89`
+- **Referências:** `app.js:565`, `app.js:1145`, `cloudflare/oneclick-backend/src/index.js:58`, `cloudflare/oneclick-backend/test/local-e2e.mjs:5`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:135`, `cloudflare/r41-api/src/index.js:89`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:155`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00030 — `/api/v84/bootstrap`

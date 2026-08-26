@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-26T21:31:47.219Z",
+  "generatedAt": "2026-08-26T21:36:36.118Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T21:31:32.317Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T21:36:21.305Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
-    "functions": 3360,
-    "functionsWithExactCode": 3360,
+    "functions": 3367,
+    "functionsWithExactCode": 3367,
     "routes": 33,
     "models": 2,
     "collections": 12,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 140,
+    "sourceFiles": 143,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -26686,6 +26686,66 @@
     },
     {
       "id": "FUNC-02666",
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 5,
+      "name": "file",
+      "exactCode": true,
+      "snippetSha256": "f7b45312daea9c6f26b0a50c110956db941c44b9413946b715bd53d25af0bb00",
+      "astStart": 112,
+      "astEnd": 141
+    },
+    {
+      "id": "FUNC-02667",
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 6,
+      "name": "read",
+      "exactCode": true,
+      "snippetSha256": "4ea0cffa9c857ed5008b69288ac29c59dcb9475ce07acfedcf752e4bae00cc20",
+      "astStart": 156,
+      "astEnd": 199
+    },
+    {
+      "id": "FUNC-02668",
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 7,
+      "name": "write",
+      "exactCode": true,
+      "snippetSha256": "f5a39dd5c078c9cdf6116041cffb88c9526709d366bd0c484212a4ea845d6651",
+      "astStart": 215,
+      "astEnd": 296
+    },
+    {
+      "id": "FUNC-02669",
+      "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "line": 8,
+      "name": "replaceOnce",
+      "exactCode": true,
+      "snippetSha256": "a6cfb31ab99e7eeb120065e760d02f22299a137793ff1e56fbf184443e2f6abc",
+      "astStart": 318,
+      "astEnd": 613
+    },
+    {
+      "id": "FUNC-02670",
+      "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
+      "line": 5,
+      "name": "<callback:prefixes.map#0>",
+      "exactCode": true,
+      "snippetSha256": "3eb79dbcbf95a68d19ead1edff8c6d3a84862bc341eecb4e997a63c7443f0953",
+      "astStart": 260,
+      "astEnd": 307
+    },
+    {
+      "id": "FUNC-02671",
+      "file": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
+      "line": 13,
+      "name": "<callback:rows.map#0>",
+      "exactCode": true,
+      "snippetSha256": "ce94774f31a864f67d7a067d8527b8f958c74b334fc868abe608afc161d2e3c7",
+      "astStart": 802,
+      "astEnd": 814
+    },
+    {
+      "id": "FUNC-02672",
       "file": "cloudflare/r41-api/test/mongodb-live-preflight.mjs",
       "line": 9,
       "name": "classify",
@@ -26695,7 +26755,7 @@
       "astEnd": 1045
     },
     {
-      "id": "FUNC-02667",
+      "id": "FUNC-02673",
       "file": "cloudflare/r41-api/test/mongodb-live-preflight.mjs",
       "line": 18,
       "name": "write",
@@ -26705,7 +26765,17 @@
       "astEnd": 1237
     },
     {
-      "id": "FUNC-02668",
+      "id": "FUNC-02674",
+      "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
+      "line": 8,
+      "name": "post",
+      "exactCode": true,
+      "snippetSha256": "1398226bed5db57b09b7677629bfc708f17af507a49b728ed67730cd2dbde60d",
+      "astStart": 353,
+      "astEnd": 973
+    },
+    {
+      "id": "FUNC-02675",
       "file": "cloudflare/r41-api/test/terion-mechanics.test.mjs",
       "line": 14,
       "name": "random",
@@ -26715,7 +26785,7 @@
       "astEnd": 998
     },
     {
-      "id": "FUNC-02669",
+      "id": "FUNC-02676",
       "file": "data/r38-master-loader.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -26725,7 +26795,7 @@
       "astEnd": 1102
     },
     {
-      "id": "FUNC-02670",
+      "id": "FUNC-02677",
       "file": "data/r38-master-loader.js",
       "line": 6,
       "name": "window.NARUTO_R38_LOAD_MASTER",
@@ -26735,7 +26805,7 @@
       "astEnd": 1099
     },
     {
-      "id": "FUNC-02671",
+      "id": "FUNC-02678",
       "file": "data/r38-master-loader.js",
       "line": 9,
       "name": "<anonymous@9:24>",
@@ -26745,7 +26815,7 @@
       "astEnd": 1018
     },
     {
-      "id": "FUNC-02672",
+      "id": "FUNC-02679",
       "file": "data/r38-master-loader.js",
       "line": 16,
       "name": "<callback:a.map#0>",
@@ -26755,7 +26825,7 @@
       "astEnd": 955
     },
     {
-      "id": "FUNC-02673",
+      "id": "FUNC-02680",
       "file": "data/r41-data-delta.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -26765,7 +26835,7 @@
       "astEnd": 2624
     },
     {
-      "id": "FUNC-02674",
+      "id": "FUNC-02681",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:a.mandatoryBeats||[].every#0>",
@@ -26775,7 +26845,7 @@
       "astEnd": 2311
     },
     {
-      "id": "FUNC-02675",
+      "id": "FUNC-02682",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:Object.entries().every#0>",
@@ -26785,7 +26855,7 @@
       "astEnd": 2167
     },
     {
-      "id": "FUNC-02676",
+      "id": "FUNC-02683",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:Object.entries().every#0>",
@@ -26795,7 +26865,7 @@
       "astEnd": 2164
     },
     {
-      "id": "FUNC-02677",
+      "id": "FUNC-02684",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:V7.npcs?.folha||[].find#0>",
@@ -26805,7 +26875,7 @@
       "astEnd": 2109
     },
     {
-      "id": "FUNC-02678",
+      "id": "FUNC-02685",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:W.arcs||[].filter().every#0>",
@@ -26815,7 +26885,7 @@
       "astEnd": 2312
     },
     {
-      "id": "FUNC-02679",
+      "id": "FUNC-02686",
       "file": "data/r41-data-delta.js",
       "line": 18,
       "name": "<callback:W.arcs||[].filter#0>",
@@ -26825,7 +26895,7 @@
       "astEnd": 2234
     },
     {
-      "id": "FUNC-02680",
+      "id": "FUNC-02687",
       "file": "data/r41-user-visuals.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -26835,7 +26905,7 @@
       "astEnd": 4306
     },
     {
-      "id": "FUNC-02681",
+      "id": "FUNC-02688",
       "file": "data/v84-integrated-config.js",
       "line": 1,
       "name": "<anonymous@1:22>",
@@ -26845,7 +26915,7 @@
       "astEnd": 7093
     },
     {
-      "id": "FUNC-02682",
+      "id": "FUNC-02689",
       "file": "data/v84-integrated-config.js",
       "line": 4,
       "name": "trainer",
@@ -26855,7 +26925,7 @@
       "astEnd": 521
     },
     {
-      "id": "FUNC-02683",
+      "id": "FUNC-02690",
       "file": "r41-account-deeplink-fix.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -26865,7 +26935,7 @@
       "astEnd": 583
     },
     {
-      "id": "FUNC-02684",
+      "id": "FUNC-02691",
       "file": "r41-account-deeplink-fix.js",
       "line": 9,
       "name": "openOnce",
@@ -26875,7 +26945,7 @@
       "astEnd": 456
     },
     {
-      "id": "FUNC-02685",
+      "id": "FUNC-02692",
       "file": "r41-account-ui.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -26885,7 +26955,7 @@
       "astEnd": 12178
     },
     {
-      "id": "FUNC-02686",
+      "id": "FUNC-02693",
       "file": "r41-account-ui.js",
       "line": 5,
       "name": "<callback:String().replace#1>",
@@ -26895,7 +26965,7 @@
       "astEnd": 252
     },
     {
-      "id": "FUNC-02687",
+      "id": "FUNC-02694",
       "file": "r41-account-ui.js",
       "line": 5,
       "name": "esc",
@@ -26905,7 +26975,7 @@
       "astEnd": 255
     },
     {
-      "id": "FUNC-02688",
+      "id": "FUNC-02695",
       "file": "r41-account-ui.js",
       "line": 6,
       "name": "errorText",
@@ -26915,7 +26985,7 @@
       "astEnd": 932
     },
     {
-      "id": "FUNC-02689",
+      "id": "FUNC-02696",
       "file": "r41-account-ui.js",
       "line": 7,
       "name": "style",
@@ -26925,7 +26995,7 @@
       "astEnd": 4143
     },
     {
-      "id": "FUNC-02690",
+      "id": "FUNC-02697",
       "file": "r41-account-ui.js",
       "line": 16,
       "name": "ensureButton",
@@ -26935,7 +27005,7 @@
       "astEnd": 4518
     },
     {
-      "id": "FUNC-02691",
+      "id": "FUNC-02698",
       "file": "r41-account-ui.js",
       "line": 18,
       "name": "<callback:btn.addEventListener#1>",
@@ -26945,7 +27015,7 @@
       "astEnd": 4431
     },
     {
-      "id": "FUNC-02692",
+      "id": "FUNC-02699",
       "file": "r41-account-ui.js",
       "line": 22,
       "name": "updateButton",
@@ -26955,7 +27025,7 @@
       "astEnd": 5015
     },
     {
-      "id": "FUNC-02693",
+      "id": "FUNC-02700",
       "file": "r41-account-ui.js",
       "line": 23,
       "name": "field",
@@ -26965,7 +27035,7 @@
       "astEnd": 5165
     },
     {
-      "id": "FUNC-02694",
+      "id": "FUNC-02701",
       "file": "r41-account-ui.js",
       "line": 24,
       "name": "tabs",
@@ -26975,7 +27045,7 @@
       "astEnd": 5544
     },
     {
-      "id": "FUNC-02695",
+      "id": "FUNC-02702",
       "file": "r41-account-ui.js",
       "line": 25,
       "name": "unauthBody",
@@ -26985,7 +27055,7 @@
       "astEnd": 6965
     },
     {
-      "id": "FUNC-02696",
+      "id": "FUNC-02703",
       "file": "r41-account-ui.js",
       "line": 26,
       "name": "authBody",
@@ -26995,7 +27065,7 @@
       "astEnd": 7567
     },
     {
-      "id": "FUNC-02697",
+      "id": "FUNC-02704",
       "file": "r41-account-ui.js",
       "line": 27,
       "name": "<callback:b.addEventListener#1>",
@@ -27005,7 +27075,7 @@
       "astEnd": 8506
     },
     {
-      "id": "FUNC-02698",
+      "id": "FUNC-02705",
       "file": "r41-account-ui.js",
       "line": 27,
       "name": "<callback:overlay.querySelectorAll().forEach#0>",
@@ -27015,7 +27085,7 @@
       "astEnd": 8507
     },
     {
-      "id": "FUNC-02699",
+      "id": "FUNC-02706",
       "file": "r41-account-ui.js",
       "line": 27,
       "name": "render",
@@ -27025,7 +27095,7 @@
       "astEnd": 8775
     },
     {
-      "id": "FUNC-02700",
+      "id": "FUNC-02707",
       "file": "r41-account-ui.js",
       "line": 28,
       "name": "<callback:form.querySelectorAll().forEach#0>",
@@ -27035,7 +27105,7 @@
       "astEnd": 8891
     },
     {
-      "id": "FUNC-02701",
+      "id": "FUNC-02708",
       "file": "r41-account-ui.js",
       "line": 28,
       "name": "values",
@@ -27045,7 +27115,7 @@
       "astEnd": 8903
     },
     {
-      "id": "FUNC-02702",
+      "id": "FUNC-02709",
       "file": "r41-account-ui.js",
       "line": 29,
       "name": "submitLogin",
@@ -27055,7 +27125,7 @@
       "astEnd": 9318
     },
     {
-      "id": "FUNC-02703",
+      "id": "FUNC-02710",
       "file": "r41-account-ui.js",
       "line": 30,
       "name": "submitRegister",
@@ -27065,7 +27135,7 @@
       "astEnd": 9869
     },
     {
-      "id": "FUNC-02704",
+      "id": "FUNC-02711",
       "file": "r41-account-ui.js",
       "line": 31,
       "name": "submitRecover",
@@ -27075,7 +27145,7 @@
       "astEnd": 10283
     },
     {
-      "id": "FUNC-02705",
+      "id": "FUNC-02712",
       "file": "r41-account-ui.js",
       "line": 32,
       "name": "logout",
@@ -27085,7 +27155,7 @@
       "astEnd": 10472
     },
     {
-      "id": "FUNC-02706",
+      "id": "FUNC-02713",
       "file": "r41-account-ui.js",
       "line": 33,
       "name": "newRecoveryCode",
@@ -27095,7 +27165,7 @@
       "astEnd": 10692
     },
     {
-      "id": "FUNC-02707",
+      "id": "FUNC-02714",
       "file": "r41-account-ui.js",
       "line": 34,
       "name": "deleteAccount",
@@ -27105,7 +27175,7 @@
       "astEnd": 10999
     },
     {
-      "id": "FUNC-02708",
+      "id": "FUNC-02715",
       "file": "r41-account-ui.js",
       "line": 35,
       "name": "close",
@@ -27115,7 +27185,7 @@
       "astEnd": 11110
     },
     {
-      "id": "FUNC-02709",
+      "id": "FUNC-02716",
       "file": "r41-account-ui.js",
       "line": 35,
       "name": "open",
@@ -27125,7 +27195,7 @@
       "astEnd": 11066
     },
     {
-      "id": "FUNC-02710",
+      "id": "FUNC-02717",
       "file": "r41-account-ui.js",
       "line": 36,
       "name": "<callback:document.addEventListener#1>",
@@ -27135,7 +27205,7 @@
       "astEnd": 11514
     },
     {
-      "id": "FUNC-02711",
+      "id": "FUNC-02718",
       "file": "r41-account-ui.js",
       "line": 37,
       "name": "boot",
@@ -27145,7 +27215,7 @@
       "astEnd": 11861
     },
     {
-      "id": "FUNC-02712",
+      "id": "FUNC-02719",
       "file": "r41-account-ui.js",
       "line": 38,
       "name": "<callback:window.addEventListener#1>",
@@ -27155,7 +27225,7 @@
       "astEnd": 11980
     },
     {
-      "id": "FUNC-02713",
+      "id": "FUNC-02720",
       "file": "r41-account-ui.js",
       "line": 38,
       "name": "account",
@@ -27165,7 +27235,7 @@
       "astEnd": 12064
     },
     {
-      "id": "FUNC-02714",
+      "id": "FUNC-02721",
       "file": "r41-api-config.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27175,7 +27245,7 @@
       "astEnd": 1036
     },
     {
-      "id": "FUNC-02715",
+      "id": "FUNC-02722",
       "file": "r41-api-config.js",
       "line": 4,
       "name": "clean",
@@ -27185,7 +27255,7 @@
       "astEnd": 139
     },
     {
-      "id": "FUNC-02716",
+      "id": "FUNC-02723",
       "file": "r41-api-config.js",
       "line": 5,
       "name": "allowedOverride",
@@ -27195,7 +27265,7 @@
       "astEnd": 220
     },
     {
-      "id": "FUNC-02717",
+      "id": "FUNC-02724",
       "file": "r41-github-api.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27205,7 +27275,7 @@
       "astEnd": 6202
     },
     {
-      "id": "FUNC-02718",
+      "id": "FUNC-02725",
       "file": "r41-github-api.js",
       "line": 8,
       "name": "apiOrigin",
@@ -27215,7 +27285,7 @@
       "astEnd": 386
     },
     {
-      "id": "FUNC-02719",
+      "id": "FUNC-02726",
       "file": "r41-github-api.js",
       "line": 9,
       "name": "token",
@@ -27225,7 +27295,7 @@
       "astEnd": 709
     },
     {
-      "id": "FUNC-02720",
+      "id": "FUNC-02727",
       "file": "r41-github-api.js",
       "line": 13,
       "name": "setToken",
@@ -27235,7 +27305,7 @@
       "astEnd": 926
     },
     {
-      "id": "FUNC-02721",
+      "id": "FUNC-02728",
       "file": "r41-github-api.js",
       "line": 14,
       "name": "captureClaim",
@@ -27245,7 +27315,7 @@
       "astEnd": 1217
     },
     {
-      "id": "FUNC-02722",
+      "id": "FUNC-02729",
       "file": "r41-github-api.js",
       "line": 17,
       "name": "mapTarget",
@@ -27255,7 +27325,7 @@
       "astEnd": 1656
     },
     {
-      "id": "FUNC-02723",
+      "id": "FUNC-02730",
       "file": "r41-github-api.js",
       "line": 22,
       "name": "withAuth",
@@ -27265,7 +27335,7 @@
       "astEnd": 1909
     },
     {
-      "id": "FUNC-02724",
+      "id": "FUNC-02731",
       "file": "r41-github-api.js",
       "line": 27,
       "name": "applyLeonClaim",
@@ -27275,7 +27345,7 @@
       "astEnd": 3081
     },
     {
-      "id": "FUNC-02725",
+      "id": "FUNC-02732",
       "file": "r41-github-api.js",
       "line": 34,
       "name": "<callback:claimed.json().catch#0>",
@@ -27285,7 +27355,7 @@
       "astEnd": 2655
     },
     {
-      "id": "FUNC-02726",
+      "id": "FUNC-02733",
       "file": "r41-github-api.js",
       "line": 40,
       "name": "window.fetch",
@@ -27295,7 +27365,7 @@
       "astEnd": 3804
     },
     {
-      "id": "FUNC-02727",
+      "id": "FUNC-02734",
       "file": "r41-github-api.js",
       "line": 48,
       "name": "request",
@@ -27305,7 +27375,7 @@
       "astEnd": 4226
     },
     {
-      "id": "FUNC-02728",
+      "id": "FUNC-02735",
       "file": "r41-github-api.js",
       "line": 50,
       "name": "<callback:res.json().catch#0>",
@@ -27315,7 +27385,7 @@
       "astEnd": 4089
     },
     {
-      "id": "FUNC-02729",
+      "id": "FUNC-02736",
       "file": "r41-github-api.js",
       "line": 55,
       "name": "authenticated",
@@ -27325,7 +27395,7 @@
       "astEnd": 4318
     },
     {
-      "id": "FUNC-02730",
+      "id": "FUNC-02737",
       "file": "r41-github-api.js",
       "line": 55,
       "name": "token",
@@ -27335,7 +27405,7 @@
       "astEnd": 4279
     },
     {
-      "id": "FUNC-02731",
+      "id": "FUNC-02738",
       "file": "r41-github-api.js",
       "line": 56,
       "name": "register",
@@ -27345,7 +27415,7 @@
       "astEnd": 4658
     },
     {
-      "id": "FUNC-02732",
+      "id": "FUNC-02739",
       "file": "r41-github-api.js",
       "line": 57,
       "name": "login",
@@ -27355,7 +27425,7 @@
       "astEnd": 4974
     },
     {
-      "id": "FUNC-02733",
+      "id": "FUNC-02740",
       "file": "r41-github-api.js",
       "line": 58,
       "name": "me",
@@ -27365,7 +27435,7 @@
       "astEnd": 5246
     },
     {
-      "id": "FUNC-02734",
+      "id": "FUNC-02741",
       "file": "r41-github-api.js",
       "line": 59,
       "name": "logout",
@@ -27375,7 +27445,7 @@
       "astEnd": 5435
     },
     {
-      "id": "FUNC-02735",
+      "id": "FUNC-02742",
       "file": "r41-github-api.js",
       "line": 60,
       "name": "recover",
@@ -27385,7 +27455,7 @@
       "astEnd": 5597
     },
     {
-      "id": "FUNC-02736",
+      "id": "FUNC-02743",
       "file": "r41-github-api.js",
       "line": 61,
       "name": "generateRecoveryCode",
@@ -27395,7 +27465,7 @@
       "astEnd": 5678
     },
     {
-      "id": "FUNC-02737",
+      "id": "FUNC-02744",
       "file": "r41-github-api.js",
       "line": 62,
       "name": "deleteAccount",
@@ -27405,7 +27475,7 @@
       "astEnd": 5863
     },
     {
-      "id": "FUNC-02738",
+      "id": "FUNC-02745",
       "file": "r41-github-api.js",
       "line": 65,
       "name": "apiOrigin",
@@ -27415,7 +27485,7 @@
       "astEnd": 5994
     },
     {
-      "id": "FUNC-02739",
+      "id": "FUNC-02746",
       "file": "r41-github-api.js",
       "line": 65,
       "name": "authOrigin",
@@ -27425,7 +27495,7 @@
       "astEnd": 6032
     },
     {
-      "id": "FUNC-02740",
+      "id": "FUNC-02747",
       "file": "r41-github-api.js",
       "line": 65,
       "name": "backend",
@@ -27435,7 +27505,7 @@
       "astEnd": 6119
     },
     {
-      "id": "FUNC-02741",
+      "id": "FUNC-02748",
       "file": "r41-github-api.js",
       "line": 65,
       "name": "leonClaimPending",
@@ -27445,7 +27515,7 @@
       "astEnd": 6198
     },
     {
-      "id": "FUNC-02742",
+      "id": "FUNC-02749",
       "file": "src/r41-account-active-slot.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27455,7 +27525,7 @@
       "astEnd": 16935
     },
     {
-      "id": "FUNC-02743",
+      "id": "FUNC-02750",
       "file": "src/r41-account-active-slot.js",
       "line": 19,
       "name": "parse",
@@ -27465,7 +27535,7 @@
       "astEnd": 656
     },
     {
-      "id": "FUNC-02744",
+      "id": "FUNC-02751",
       "file": "src/r41-account-active-slot.js",
       "line": 20,
       "name": "copy",
@@ -27475,7 +27545,7 @@
       "astEnd": 749
     },
     {
-      "id": "FUNC-02745",
+      "id": "FUNC-02752",
       "file": "src/r41-account-active-slot.js",
       "line": 21,
       "name": "authenticated",
@@ -27485,7 +27555,7 @@
       "astEnd": 883
     },
     {
-      "id": "FUNC-02746",
+      "id": "FUNC-02753",
       "file": "src/r41-account-active-slot.js",
       "line": 22,
       "name": "active",
@@ -27495,7 +27565,7 @@
       "astEnd": 955
     },
     {
-      "id": "FUNC-02747",
+      "id": "FUNC-02754",
       "file": "src/r41-account-active-slot.js",
       "line": 23,
       "name": "remember",
@@ -27505,7 +27575,7 @@
       "astEnd": 1047
     },
     {
-      "id": "FUNC-02748",
+      "id": "FUNC-02755",
       "file": "src/r41-account-active-slot.js",
       "line": 24,
       "name": "forget",
@@ -27515,7 +27585,7 @@
       "astEnd": 1158
     },
     {
-      "id": "FUNC-02749",
+      "id": "FUNC-02756",
       "file": "src/r41-account-active-slot.js",
       "line": 26,
       "name": "activeAccountEntry",
@@ -27525,7 +27595,7 @@
       "astEnd": 1524
     },
     {
-      "id": "FUNC-02750",
+      "id": "FUNC-02757",
       "file": "src/r41-account-active-slot.js",
       "line": 37,
       "name": "sameCharacter",
@@ -27535,7 +27605,7 @@
       "astEnd": 1940
     },
     {
-      "id": "FUNC-02751",
+      "id": "FUNC-02758",
       "file": "src/r41-account-active-slot.js",
       "line": 46,
       "name": "characterSummary",
@@ -27545,7 +27615,7 @@
       "astEnd": 2391
     },
     {
-      "id": "FUNC-02752",
+      "id": "FUNC-02759",
       "file": "src/r41-account-active-slot.js",
       "line": 51,
       "name": "apiPost",
@@ -27555,7 +27625,7 @@
       "astEnd": 2692
     },
     {
-      "id": "FUNC-02753",
+      "id": "FUNC-02760",
       "file": "src/r41-account-active-slot.js",
       "line": 53,
       "name": "<callback:r.json().catch#0>",
@@ -27565,7 +27635,7 @@
       "astEnd": 2599
     },
     {
-      "id": "FUNC-02754",
+      "id": "FUNC-02761",
       "file": "src/r41-account-active-slot.js",
       "line": 58,
       "name": "persistAccountSave",
@@ -27575,7 +27645,7 @@
       "astEnd": 2893
     },
     {
-      "id": "FUNC-02755",
+      "id": "FUNC-02762",
       "file": "src/r41-account-active-slot.js",
       "line": 65,
       "name": "applyKuraiMode",
@@ -27585,7 +27655,7 @@
       "astEnd": 3530
     },
     {
-      "id": "FUNC-02756",
+      "id": "FUNC-02763",
       "file": "src/r41-account-active-slot.js",
       "line": 77,
       "name": "setKuraiModeDirect",
@@ -27595,7 +27665,7 @@
       "astEnd": 4476
     },
     {
-      "id": "FUNC-02757",
+      "id": "FUNC-02764",
       "file": "src/r41-account-active-slot.js",
       "line": 97,
       "name": "onlineBridgeReady",
@@ -27605,7 +27675,7 @@
       "astEnd": 4603
     },
     {
-      "id": "FUNC-02758",
+      "id": "FUNC-02765",
       "file": "src/r41-account-active-slot.js",
       "line": 101,
       "name": "removeOnlineIntentNotice",
@@ -27615,7 +27685,7 @@
       "astEnd": 4728
     },
     {
-      "id": "FUNC-02759",
+      "id": "FUNC-02766",
       "file": "src/r41-account-active-slot.js",
       "line": 102,
       "name": "<callback:document.querySelectorAll().forEach#0>",
@@ -27625,7 +27695,7 @@
       "astEnd": 4722
     },
     {
-      "id": "FUNC-02760",
+      "id": "FUNC-02767",
       "file": "src/r41-account-active-slot.js",
       "line": 105,
       "name": "showOnlineIntentNotice",
@@ -27635,7 +27705,7 @@
       "astEnd": 5201
     },
     {
-      "id": "FUNC-02761",
+      "id": "FUNC-02768",
       "file": "src/r41-account-active-slot.js",
       "line": 116,
       "name": "replayOnlineIntentWhenReady",
@@ -27645,7 +27715,7 @@
       "astEnd": 7399
     },
     {
-      "id": "FUNC-02762",
+      "id": "FUNC-02769",
       "file": "src/r41-account-active-slot.js",
       "line": 124,
       "name": "<callback:new Promise#0>",
@@ -27655,7 +27725,7 @@
       "astEnd": 5729
     },
     {
-      "id": "FUNC-02763",
+      "id": "FUNC-02770",
       "file": "src/r41-account-active-slot.js",
       "line": 158,
       "name": "finishOnlineTransition",
@@ -27665,7 +27735,7 @@
       "astEnd": 7738
     },
     {
-      "id": "FUNC-02764",
+      "id": "FUNC-02771",
       "file": "src/r41-account-active-slot.js",
       "line": 165,
       "name": "createOnlineRoomDirect",
@@ -27675,7 +27745,7 @@
       "astEnd": 9095
     },
     {
-      "id": "FUNC-02765",
+      "id": "FUNC-02772",
       "file": "src/r41-account-active-slot.js",
       "line": 183,
       "name": "joinOnlineRoomDirect",
@@ -27685,7 +27755,7 @@
       "astEnd": 10554
     },
     {
-      "id": "FUNC-02766",
+      "id": "FUNC-02773",
       "file": "src/r41-account-active-slot.js",
       "line": 201,
       "name": "reconcileOnlineRoomMirror",
@@ -27695,7 +27765,7 @@
       "astEnd": 11918
     },
     {
-      "id": "FUNC-02767",
+      "id": "FUNC-02774",
       "file": "src/r41-account-active-slot.js",
       "line": 216,
       "name": "<callback:setTimeout#0>",
@@ -27705,7 +27775,7 @@
       "astEnd": 11783
     },
     {
-      "id": "FUNC-02768",
+      "id": "FUNC-02775",
       "file": "src/r41-account-active-slot.js",
       "line": 222,
       "name": "clearSatisfiedRecovery",
@@ -27715,7 +27785,7 @@
       "astEnd": 12239
     },
     {
-      "id": "FUNC-02769",
+      "id": "FUNC-02776",
       "file": "src/r41-account-active-slot.js",
       "line": 228,
       "name": "slotControl",
@@ -27725,7 +27795,7 @@
       "astEnd": 12621
     },
     {
-      "id": "FUNC-02770",
+      "id": "FUNC-02777",
       "file": "src/r41-account-active-slot.js",
       "line": 234,
       "name": "accountChooserVisible",
@@ -27735,7 +27805,7 @@
       "astEnd": 12943
     },
     {
-      "id": "FUNC-02771",
+      "id": "FUNC-02778",
       "file": "src/r41-account-active-slot.js",
       "line": 240,
       "name": "returnToRequestedScreen",
@@ -27745,7 +27815,7 @@
       "astEnd": 13240
     },
     {
-      "id": "FUNC-02772",
+      "id": "FUNC-02779",
       "file": "src/r41-account-active-slot.js",
       "line": 246,
       "name": "recoverActiveSlot",
@@ -27755,7 +27825,7 @@
       "astEnd": 13993
     },
     {
-      "id": "FUNC-02773",
+      "id": "FUNC-02780",
       "file": "src/r41-account-active-slot.js",
       "line": 257,
       "name": "<callback:new Promise#0>",
@@ -27765,7 +27835,7 @@
       "astEnd": 13928
     },
     {
-      "id": "FUNC-02774",
+      "id": "FUNC-02781",
       "file": "src/r41-account-active-slot.js",
       "line": 263,
       "name": "repairAndRecover",
@@ -27775,7 +27845,7 @@
       "astEnd": 14168
     },
     {
-      "id": "FUNC-02775",
+      "id": "FUNC-02782",
       "file": "src/r41-account-active-slot.js",
       "line": 270,
       "name": "<callback:document.addEventListener#1>",
@@ -27785,7 +27855,7 @@
       "astEnd": 16008
     },
     {
-      "id": "FUNC-02776",
+      "id": "FUNC-02783",
       "file": "src/r41-account-active-slot.js",
       "line": 295,
       "name": "<callback:window.addEventListener#1>",
@@ -27795,7 +27865,7 @@
       "astEnd": 16221
     },
     {
-      "id": "FUNC-02777",
+      "id": "FUNC-02784",
       "file": "src/r41-account-active-slot.js",
       "line": 297,
       "name": "<callback:new MutationObserver#0>",
@@ -27805,7 +27875,7 @@
       "astEnd": 16302
     },
     {
-      "id": "FUNC-02778",
+      "id": "FUNC-02785",
       "file": "src/r41-account-active-slot.js",
       "line": 298,
       "name": "start",
@@ -27815,7 +27885,7 @@
       "astEnd": 16578
     },
     {
-      "id": "FUNC-02779",
+      "id": "FUNC-02786",
       "file": "src/r41-asset-path-repair.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27825,7 +27895,7 @@
       "astEnd": 3619
     },
     {
-      "id": "FUNC-02780",
+      "id": "FUNC-02787",
       "file": "src/r41-asset-path-repair.js",
       "line": 9,
       "name": "path",
@@ -27835,7 +27905,7 @@
       "astEnd": 435
     },
     {
-      "id": "FUNC-02781",
+      "id": "FUNC-02788",
       "file": "src/r41-asset-path-repair.js",
       "line": 28,
       "name": "rewrite",
@@ -27845,7 +27915,7 @@
       "astEnd": 1669
     },
     {
-      "id": "FUNC-02782",
+      "id": "FUNC-02789",
       "file": "src/r41-asset-path-repair.js",
       "line": 40,
       "name": "set",
@@ -27855,7 +27925,7 @@
       "astEnd": 2072
     },
     {
-      "id": "FUNC-02783",
+      "id": "FUNC-02790",
       "file": "src/r41-asset-path-repair.js",
       "line": 46,
       "name": "Element.prototype.insertAdjacentHTML",
@@ -27865,7 +27935,7 @@
       "astEnd": 2449
     },
     {
-      "id": "FUNC-02784",
+      "id": "FUNC-02791",
       "file": "src/r41-asset-path-repair.js",
       "line": 51,
       "name": "Element.prototype.setAttribute",
@@ -27875,7 +27945,7 @@
       "astEnd": 2872
     },
     {
-      "id": "FUNC-02785",
+      "id": "FUNC-02792",
       "file": "src/r41-asset-path-repair.js",
       "line": 62,
       "name": "set",
@@ -27885,7 +27955,7 @@
       "astEnd": 3413
     },
     {
-      "id": "FUNC-02786",
+      "id": "FUNC-02793",
       "file": "src/r41-canonical-repair.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27895,7 +27965,7 @@
       "astEnd": 4738
     },
     {
-      "id": "FUNC-02787",
+      "id": "FUNC-02794",
       "file": "src/r41-canonical-repair.js",
       "line": 7,
       "name": "<callback:v.npcs.map#0>",
@@ -27905,7 +27975,7 @@
       "astEnd": 200
     },
     {
-      "id": "FUNC-02788",
+      "id": "FUNC-02795",
       "file": "src/r41-canonical-repair.js",
       "line": 28,
       "name": "slug",
@@ -27915,7 +27985,7 @@
       "astEnd": 2159
     },
     {
-      "id": "FUNC-02789",
+      "id": "FUNC-02796",
       "file": "src/r41-canonical-repair.js",
       "line": 65,
       "name": "window.R41ResolveImage",
@@ -27925,7 +27995,7 @@
       "astEnd": 4371
     },
     {
-      "id": "FUNC-02790",
+      "id": "FUNC-02797",
       "file": "src/r41-core-bundle.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -27935,7 +28005,7 @@
       "astEnd": 3125
     },
     {
-      "id": "FUNC-02791",
+      "id": "FUNC-02798",
       "file": "src/r41-core-bundle.js",
       "line": 5,
       "name": "normalize",
@@ -27945,7 +28015,7 @@
       "astEnd": 317
     },
     {
-      "id": "FUNC-02792",
+      "id": "FUNC-02799",
       "file": "src/r41-core-bundle.js",
       "line": 6,
       "name": "getJson",
@@ -27955,7 +28025,7 @@
       "astEnd": 463
     },
     {
-      "id": "FUNC-02793",
+      "id": "FUNC-02800",
       "file": "src/r41-core-bundle.js",
       "line": 7,
       "name": "indexManifest",
@@ -27965,7 +28035,7 @@
       "astEnd": 753
     },
     {
-      "id": "FUNC-02794",
+      "id": "FUNC-02801",
       "file": "src/r41-core-bundle.js",
       "line": 14,
       "name": "init",
@@ -27975,7 +28045,7 @@
       "astEnd": 1443
     },
     {
-      "id": "FUNC-02795",
+      "id": "FUNC-02802",
       "file": "src/r41-core-bundle.js",
       "line": 25,
       "name": "resolve",
@@ -27985,7 +28055,7 @@
       "astEnd": 2826
     },
     {
-      "id": "FUNC-02796",
+      "id": "FUNC-02803",
       "file": "src/r41-core-bundle.js",
       "line": 28,
       "name": "<callback:state.byCanonical.get(canonical)||[].filter#0>",
@@ -27995,7 +28065,7 @@
       "astEnd": 1718
     },
     {
-      "id": "FUNC-02797",
+      "id": "FUNC-02804",
       "file": "src/r41-core-bundle.js",
       "line": 32,
       "name": "<callback:candidates.find#0>",
@@ -28005,7 +28075,7 @@
       "astEnd": 2032
     },
     {
-      "id": "FUNC-02798",
+      "id": "FUNC-02805",
       "file": "src/r41-core-bundle.js",
       "line": 33,
       "name": "<callback:candidates.find#0>",
@@ -28015,7 +28085,7 @@
       "astEnd": 2125
     },
     {
-      "id": "FUNC-02799",
+      "id": "FUNC-02806",
       "file": "src/r41-core-bundle.js",
       "line": 34,
       "name": "<callback:candidates.find#0>",
@@ -28025,7 +28095,7 @@
       "astEnd": 2184
     },
     {
-      "id": "FUNC-02800",
+      "id": "FUNC-02807",
       "file": "src/r41-core-bundle.js",
       "line": 42,
       "name": "auditKnown",
@@ -28035,7 +28105,7 @@
       "astEnd": 2968
     },
     {
-      "id": "FUNC-02801",
+      "id": "FUNC-02808",
       "file": "src/r41-core-bundle.js",
       "line": 43,
       "name": "manifest",
@@ -28045,7 +28115,7 @@
       "astEnd": 3092
     },
     {
-      "id": "FUNC-02802",
+      "id": "FUNC-02809",
       "file": "src/r41-core-bundle.js",
       "line": 43,
       "name": "ready",
@@ -28055,7 +28125,7 @@
       "astEnd": 3053
     },
     {
-      "id": "FUNC-02803",
+      "id": "FUNC-02810",
       "file": "src/r41-core-bundle.js",
       "line": 47,
       "name": "<anonymous@47:1>",
@@ -28065,7 +28135,7 @@
       "astEnd": 4850
     },
     {
-      "id": "FUNC-02804",
+      "id": "FUNC-02811",
       "file": "src/r41-core-bundle.js",
       "line": 51,
       "name": "normalize",
@@ -28075,7 +28145,7 @@
       "astEnd": 3525
     },
     {
-      "id": "FUNC-02805",
+      "id": "FUNC-02812",
       "file": "src/r41-core-bundle.js",
       "line": 52,
       "name": "fromCombatResult",
@@ -28085,7 +28155,7 @@
       "astEnd": 4615
     },
     {
-      "id": "FUNC-02806",
+      "id": "FUNC-02813",
       "file": "src/r41-core-bundle.js",
       "line": 63,
       "name": "validateEvent",
@@ -28095,7 +28165,7 @@
       "astEnd": 4746
     },
     {
-      "id": "FUNC-02807",
+      "id": "FUNC-02814",
       "file": "src/r41-core-bundle.js",
       "line": 69,
       "name": "<anonymous@69:1>",
@@ -28105,7 +28175,7 @@
       "astEnd": 5827
     },
     {
-      "id": "FUNC-02808",
+      "id": "FUNC-02815",
       "file": "src/r41-core-bundle.js",
       "line": 70,
       "name": "clone",
@@ -28115,7 +28185,7 @@
       "astEnd": 4942
     },
     {
-      "id": "FUNC-02809",
+      "id": "FUNC-02816",
       "file": "src/r41-core-bundle.js",
       "line": 71,
       "name": "ensure",
@@ -28125,7 +28195,7 @@
       "astEnd": 5309
     },
     {
-      "id": "FUNC-02810",
+      "id": "FUNC-02817",
       "file": "src/r41-core-bundle.js",
       "line": 72,
       "name": "apply",
@@ -28135,7 +28205,7 @@
       "astEnd": 5433
     },
     {
-      "id": "FUNC-02811",
+      "id": "FUNC-02818",
       "file": "src/r41-core-bundle.js",
       "line": 73,
       "name": "validate",
@@ -28145,7 +28215,7 @@
       "astEnd": 5764
     },
     {
-      "id": "FUNC-02812",
+      "id": "FUNC-02819",
       "file": "src/r41-core-bundle.js",
       "line": 77,
       "name": "<anonymous@77:1>",
@@ -28155,7 +28225,7 @@
       "astEnd": 6996
     },
     {
-      "id": "FUNC-02813",
+      "id": "FUNC-02820",
       "file": "src/r41-core-bundle.js",
       "line": 78,
       "name": "fromResult",
@@ -28165,7 +28235,7 @@
       "astEnd": 6636
     },
     {
-      "id": "FUNC-02814",
+      "id": "FUNC-02821",
       "file": "src/r41-core-bundle.js",
       "line": 79,
       "name": "<callback:events.some#0>",
@@ -28175,7 +28245,7 @@
       "astEnd": 6760
     },
     {
-      "id": "FUNC-02815",
+      "id": "FUNC-02822",
       "file": "src/r41-core-bundle.js",
       "line": 79,
       "name": "<callback:events.some#0>",
@@ -28185,7 +28255,7 @@
       "astEnd": 6863
     },
     {
-      "id": "FUNC-02816",
+      "id": "FUNC-02823",
       "file": "src/r41-core-bundle.js",
       "line": 79,
       "name": "validate",
@@ -28195,7 +28265,7 @@
       "astEnd": 6936
     },
     {
-      "id": "FUNC-02817",
+      "id": "FUNC-02824",
       "file": "src/r41-core-bundle.js",
       "line": 83,
       "name": "<anonymous@83:1>",
@@ -28205,7 +28275,7 @@
       "astEnd": 8572
     },
     {
-      "id": "FUNC-02818",
+      "id": "FUNC-02825",
       "file": "src/r41-core-bundle.js",
       "line": 84,
       "name": "norm",
@@ -28215,7 +28285,7 @@
       "astEnd": 7176
     },
     {
-      "id": "FUNC-02819",
+      "id": "FUNC-02826",
       "file": "src/r41-core-bundle.js",
       "line": 85,
       "name": "kindOf",
@@ -28225,7 +28295,7 @@
       "astEnd": 7472
     },
     {
-      "id": "FUNC-02820",
+      "id": "FUNC-02827",
       "file": "src/r41-core-bundle.js",
       "line": 86,
       "name": "<callback:character.appearanceState.overlays||[].filter#0>",
@@ -28235,7 +28305,7 @@
       "astEnd": 7987
     },
     {
-      "id": "FUNC-02821",
+      "id": "FUNC-02828",
       "file": "src/r41-core-bundle.js",
       "line": 86,
       "name": "apply",
@@ -28245,7 +28315,7 @@
       "astEnd": 8388
     },
     {
-      "id": "FUNC-02822",
+      "id": "FUNC-02829",
       "file": "src/r41-core-bundle.js",
       "line": 87,
       "name": "validate",
@@ -28255,7 +28325,7 @@
       "astEnd": 8510
     },
     {
-      "id": "FUNC-02823",
+      "id": "FUNC-02830",
       "file": "src/r41-core-bundle.js",
       "line": 91,
       "name": "<anonymous@91:1>",
@@ -28265,7 +28335,7 @@
       "astEnd": 10095
     },
     {
-      "id": "FUNC-02824",
+      "id": "FUNC-02831",
       "file": "src/r41-core-bundle.js",
       "line": 94,
       "name": "norm",
@@ -28275,7 +28345,7 @@
       "astEnd": 8743
     },
     {
-      "id": "FUNC-02825",
+      "id": "FUNC-02832",
       "file": "src/r41-core-bundle.js",
       "line": 95,
       "name": "register",
@@ -28285,7 +28355,7 @@
       "astEnd": 8864
     },
     {
-      "id": "FUNC-02826",
+      "id": "FUNC-02833",
       "file": "src/r41-core-bundle.js",
       "line": 96,
       "name": "get",
@@ -28295,7 +28365,7 @@
       "astEnd": 8947
     },
     {
-      "id": "FUNC-02827",
+      "id": "FUNC-02834",
       "file": "src/r41-core-bundle.js",
       "line": 97,
       "name": "infer",
@@ -28305,7 +28375,7 @@
       "astEnd": 9480
     },
     {
-      "id": "FUNC-02828",
+      "id": "FUNC-02835",
       "file": "src/r41-core-bundle.js",
       "line": 110,
       "name": "list",
@@ -28315,7 +28385,7 @@
       "astEnd": 10091
     },
     {
-      "id": "FUNC-02829",
+      "id": "FUNC-02836",
       "file": "src/r41-core-bundle.js",
       "line": 113,
       "name": "<anonymous@113:1>",
@@ -28325,7 +28395,7 @@
       "astEnd": 11430
     },
     {
-      "id": "FUNC-02830",
+      "id": "FUNC-02837",
       "file": "src/r41-core-bundle.js",
       "line": 115,
       "name": "clamp",
@@ -28335,7 +28405,7 @@
       "astEnd": 10217
     },
     {
-      "id": "FUNC-02831",
+      "id": "FUNC-02838",
       "file": "src/r41-core-bundle.js",
       "line": 116,
       "name": "normalizeResult",
@@ -28345,7 +28415,7 @@
       "astEnd": 10559
     },
     {
-      "id": "FUNC-02832",
+      "id": "FUNC-02839",
       "file": "src/r41-core-bundle.js",
       "line": 120,
       "name": "terionModifier",
@@ -28355,7 +28425,7 @@
       "astEnd": 10908
     },
     {
-      "id": "FUNC-02833",
+      "id": "FUNC-02840",
       "file": "src/r41-core-bundle.js",
       "line": 126,
       "name": "trainingResult",
@@ -28365,7 +28435,7 @@
       "astEnd": 11354
     },
     {
-      "id": "FUNC-02834",
+      "id": "FUNC-02841",
       "file": "src/r41-core-bundle.js",
       "line": 133,
       "name": "<anonymous@133:1>",
@@ -28375,7 +28445,7 @@
       "astEnd": 12463
     },
     {
-      "id": "FUNC-02835",
+      "id": "FUNC-02842",
       "file": "src/r41-core-bundle.js",
       "line": 137,
       "name": "normalizeScene",
@@ -28385,7 +28455,7 @@
       "astEnd": 12190
     },
     {
-      "id": "FUNC-02836",
+      "id": "FUNC-02843",
       "file": "src/r41-core-bundle.js",
       "line": 141,
       "name": "fromMissionStage",
@@ -28395,7 +28465,7 @@
       "astEnd": 12385
     },
     {
-      "id": "FUNC-02837",
+      "id": "FUNC-02844",
       "file": "src/r41-core-bundle.js",
       "line": 145,
       "name": "<anonymous@145:1>",
@@ -28405,7 +28475,7 @@
       "astEnd": 13269
     },
     {
-      "id": "FUNC-02838",
+      "id": "FUNC-02845",
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "name": "<callback:[change.type,...Object.keys(change)].map#0>",
@@ -28415,7 +28485,7 @@
       "astEnd": 12818
     },
     {
-      "id": "FUNC-02839",
+      "id": "FUNC-02846",
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "name": "<callback:keys.some#0>",
@@ -28425,7 +28495,7 @@
       "astEnd": 12856
     },
     {
-      "id": "FUNC-02840",
+      "id": "FUNC-02847",
       "file": "src/r41-core-bundle.js",
       "line": 149,
       "name": "shouldSave",
@@ -28435,7 +28505,7 @@
       "astEnd": 12859
     },
     {
-      "id": "FUNC-02841",
+      "id": "FUNC-02848",
       "file": "src/r41-core-bundle.js",
       "line": 150,
       "name": "record",
@@ -28445,7 +28515,7 @@
       "astEnd": 13196
     },
     {
-      "id": "FUNC-02842",
+      "id": "FUNC-02849",
       "file": "src/r41-core-bundle.js",
       "line": 154,
       "name": "recent",
@@ -28455,7 +28525,7 @@
       "astEnd": 13265
     },
     {
-      "id": "FUNC-02843",
+      "id": "FUNC-02850",
       "file": "src/r41-core-bundle.js",
       "line": 157,
       "name": "<anonymous@157:1>",
@@ -28465,7 +28535,7 @@
       "astEnd": 14175
     },
     {
-      "id": "FUNC-02844",
+      "id": "FUNC-02851",
       "file": "src/r41-core-bundle.js",
       "line": 160,
       "name": "boot",
@@ -28475,7 +28545,7 @@
       "astEnd": 14058
     },
     {
-      "id": "FUNC-02845",
+      "id": "FUNC-02852",
       "file": "src/r41-final-ui-repair.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28485,7 +28555,7 @@
       "astEnd": 3909
     },
     {
-      "id": "FUNC-02846",
+      "id": "FUNC-02853",
       "file": "src/r41-final-ui-repair.js",
       "line": 14,
       "name": "activeSave",
@@ -28495,7 +28565,7 @@
       "astEnd": 1430
     },
     {
-      "id": "FUNC-02847",
+      "id": "FUNC-02854",
       "file": "src/r41-final-ui-repair.js",
       "line": 21,
       "name": "ensureKuraiResource",
@@ -28505,7 +28575,7 @@
       "astEnd": 2435
     },
     {
-      "id": "FUNC-02848",
+      "id": "FUNC-02855",
       "file": "src/r41-final-ui-repair.js",
       "line": 41,
       "name": "repair",
@@ -28515,7 +28585,7 @@
       "astEnd": 3402
     },
     {
-      "id": "FUNC-02849",
+      "id": "FUNC-02856",
       "file": "src/r41-final-ui-repair.js",
       "line": 60,
       "name": "<callback:queueMicrotask#0>",
@@ -28525,7 +28595,7 @@
       "astEnd": 3517
     },
     {
-      "id": "FUNC-02850",
+      "id": "FUNC-02857",
       "file": "src/r41-final-ui-repair.js",
       "line": 60,
       "name": "schedule",
@@ -28535,7 +28605,7 @@
       "astEnd": 3520
     },
     {
-      "id": "FUNC-02851",
+      "id": "FUNC-02858",
       "file": "src/r41-leon-state-repair.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28545,7 +28615,7 @@
       "astEnd": 1881
     },
     {
-      "id": "FUNC-02852",
+      "id": "FUNC-02859",
       "file": "src/r41-local-reset-fix.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28555,7 +28625,7 @@
       "astEnd": 1592
     },
     {
-      "id": "FUNC-02853",
+      "id": "FUNC-02860",
       "file": "src/r41-local-reset-fix.js",
       "line": 20,
       "name": "localProgressKeys",
@@ -28565,7 +28635,7 @@
       "astEnd": 904
     },
     {
-      "id": "FUNC-02854",
+      "id": "FUNC-02861",
       "file": "src/r41-local-reset-fix.js",
       "line": 25,
       "name": "<callback:LOCAL_PROGRESS_PREFIXES.some#0>",
@@ -28575,7 +28645,7 @@
       "astEnd": 860
     },
     {
-      "id": "FUNC-02855",
+      "id": "FUNC-02862",
       "file": "src/r41-local-reset-fix.js",
       "line": 30,
       "name": "resetLocalProgress",
@@ -28585,7 +28655,7 @@
       "astEnd": 1272
     },
     {
-      "id": "FUNC-02856",
+      "id": "FUNC-02863",
       "file": "src/r41-local-reset-fix.js",
       "line": 38,
       "name": "<callback:document.addEventListener#1>",
@@ -28595,7 +28665,7 @@
       "astEnd": 1504
     },
     {
-      "id": "FUNC-02857",
+      "id": "FUNC-02864",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28605,7 +28675,7 @@
       "astEnd": 6558
     },
     {
-      "id": "FUNC-02858",
+      "id": "FUNC-02865",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 18,
       "name": "parse",
@@ -28615,7 +28685,7 @@
       "astEnd": 550
     },
     {
-      "id": "FUNC-02859",
+      "id": "FUNC-02866",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 22,
       "name": "runtimeOnline",
@@ -28625,7 +28695,7 @@
       "astEnd": 836
     },
     {
-      "id": "FUNC-02860",
+      "id": "FUNC-02867",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 26,
       "name": "runtimeRoomId",
@@ -28635,7 +28705,7 @@
       "astEnd": 982
     },
     {
-      "id": "FUNC-02861",
+      "id": "FUNC-02868",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 30,
       "name": "activeEntry",
@@ -28645,7 +28715,7 @@
       "astEnd": 1417
     },
     {
-      "id": "FUNC-02862",
+      "id": "FUNC-02869",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 42,
       "name": "roomContext",
@@ -28655,7 +28725,7 @@
       "astEnd": 1814
     },
     {
-      "id": "FUNC-02863",
+      "id": "FUNC-02870",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 51,
       "name": "bridge",
@@ -28665,7 +28735,7 @@
       "astEnd": 2354
     },
     {
-      "id": "FUNC-02864",
+      "id": "FUNC-02871",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 66,
       "name": "marker",
@@ -28675,7 +28745,7 @@
       "astEnd": 2423
     },
     {
-      "id": "FUNC-02865",
+      "id": "FUNC-02872",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 68,
       "name": "clearSatisfied",
@@ -28685,7 +28755,7 @@
       "astEnd": 2665
     },
     {
-      "id": "FUNC-02866",
+      "id": "FUNC-02873",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 78,
       "name": "recoverBridge",
@@ -28695,7 +28765,7 @@
       "astEnd": 4188
     },
     {
-      "id": "FUNC-02867",
+      "id": "FUNC-02874",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 91,
       "name": "<callback:response.json().catch#0>",
@@ -28705,7 +28775,7 @@
       "astEnd": 3223
     },
     {
-      "id": "FUNC-02868",
+      "id": "FUNC-02875",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 116,
       "name": "requestOneRecovery",
@@ -28715,7 +28785,7 @@
       "astEnd": 4716
     },
     {
-      "id": "FUNC-02869",
+      "id": "FUNC-02876",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 124,
       "name": "<callback:setTimeout#0>",
@@ -28725,7 +28795,7 @@
       "astEnd": 4690
     },
     {
-      "id": "FUNC-02870",
+      "id": "FUNC-02877",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 128,
       "name": "tick",
@@ -28735,7 +28805,7 @@
       "astEnd": 5475
     },
     {
-      "id": "FUNC-02871",
+      "id": "FUNC-02878",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 155,
       "name": "start",
@@ -28745,7 +28815,7 @@
       "astEnd": 6101
     },
     {
-      "id": "FUNC-02872",
+      "id": "FUNC-02879",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 157,
       "name": "<callback:setInterval#0>",
@@ -28755,7 +28825,7 @@
       "astEnd": 5548
     },
     {
-      "id": "FUNC-02873",
+      "id": "FUNC-02880",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 158,
       "name": "<callback:setTimeout#0>",
@@ -28765,7 +28835,7 @@
       "astEnd": 5638
     },
     {
-      "id": "FUNC-02874",
+      "id": "FUNC-02881",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 158,
       "name": "<callback:window.addEventListener#1>",
@@ -28775,7 +28845,7 @@
       "astEnd": 5642
     },
     {
-      "id": "FUNC-02875",
+      "id": "FUNC-02882",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 159,
       "name": "<callback:setTimeout#0>",
@@ -28785,7 +28855,7 @@
       "astEnd": 5804
     },
     {
-      "id": "FUNC-02876",
+      "id": "FUNC-02883",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 159,
       "name": "<callback:window.addEventListener#1>",
@@ -28795,7 +28865,7 @@
       "astEnd": 5810
     },
     {
-      "id": "FUNC-02877",
+      "id": "FUNC-02884",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 160,
       "name": "<callback:window.addEventListener#1>",
@@ -28805,7 +28875,7 @@
       "astEnd": 5868
     },
     {
-      "id": "FUNC-02878",
+      "id": "FUNC-02885",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 161,
       "name": "<callback:document.addEventListener#1>",
@@ -28815,7 +28885,7 @@
       "astEnd": 5938
     },
     {
-      "id": "FUNC-02879",
+      "id": "FUNC-02886",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 162,
       "name": "<callback:new MutationObserver#0>",
@@ -28825,7 +28895,7 @@
       "astEnd": 6017
     },
     {
-      "id": "FUNC-02880",
+      "id": "FUNC-02887",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 162,
       "name": "<callback:setTimeout#0>",
@@ -28835,7 +28905,7 @@
       "astEnd": 6014
     },
     {
-      "id": "FUNC-02881",
+      "id": "FUNC-02888",
       "file": "src/r41-online-bridge-recovery.js",
       "line": 170,
       "name": "state",
@@ -28845,7 +28915,7 @@
       "astEnd": 6508
     },
     {
-      "id": "FUNC-02882",
+      "id": "FUNC-02889",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 1,
       "name": "<anonymous@1:1>",
@@ -28855,7 +28925,7 @@
       "astEnd": 10093
     },
     {
-      "id": "FUNC-02883",
+      "id": "FUNC-02890",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 14,
       "name": "clone",
@@ -28865,7 +28935,7 @@
       "astEnd": 672
     },
     {
-      "id": "FUNC-02884",
+      "id": "FUNC-02891",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 15,
       "name": "parseSave",
@@ -28875,7 +28945,7 @@
       "astEnd": 757
     },
     {
-      "id": "FUNC-02885",
+      "id": "FUNC-02892",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 16,
       "name": "activeSlotId",
@@ -28885,7 +28955,7 @@
       "astEnd": 849
     },
     {
-      "id": "FUNC-02886",
+      "id": "FUNC-02893",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 17,
       "name": "legacySlotKey",
@@ -28895,7 +28965,7 @@
       "astEnd": 937
     },
     {
-      "id": "FUNC-02887",
+      "id": "FUNC-02894",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 18,
       "name": "accountEntries",
@@ -28905,7 +28975,7 @@
       "astEnd": 1499
     },
     {
-      "id": "FUNC-02888",
+      "id": "FUNC-02895",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 28,
       "name": "<callback:rows.sort#0>",
@@ -28915,7 +28985,7 @@
       "astEnd": 1476
     },
     {
-      "id": "FUNC-02889",
+      "id": "FUNC-02896",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 31,
       "name": "readSaveEntry",
@@ -28925,7 +28995,7 @@
       "astEnd": 1943
     },
     {
-      "id": "FUNC-02890",
+      "id": "FUNC-02897",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 39,
       "name": "readRuntimeSave",
@@ -28935,7 +29005,7 @@
       "astEnd": 2009
     },
     {
-      "id": "FUNC-02891",
+      "id": "FUNC-02898",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 40,
       "name": "readPersistedSave",
@@ -28945,7 +29015,7 @@
       "astEnd": 2067
     },
     {
-      "id": "FUNC-02892",
+      "id": "FUNC-02899",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 41,
       "name": "writeSave",
@@ -28955,7 +29025,7 @@
       "astEnd": 2511
     },
     {
-      "id": "FUNC-02893",
+      "id": "FUNC-02900",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 52,
       "name": "readDomVitals",
@@ -28965,7 +29035,7 @@
       "astEnd": 2867
     },
     {
-      "id": "FUNC-02894",
+      "id": "FUNC-02901",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 54,
       "name": "value",
@@ -28975,7 +29045,7 @@
       "astEnd": 2768
     },
     {
-      "id": "FUNC-02895",
+      "id": "FUNC-02902",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 57,
       "name": "readFeedback",
@@ -28985,7 +29055,7 @@
       "astEnd": 3085
     },
     {
-      "id": "FUNC-02896",
+      "id": "FUNC-02903",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 59,
       "name": "<callback:[...document.querySelectorAll('#toast-root,.toast-root,[role=\"alert\"]')].map#0>",
@@ -28995,7 +29065,7 @@
       "astEnd": 3038
     },
     {
-      "id": "FUNC-02897",
+      "id": "FUNC-02904",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 63,
       "name": "readCharacterVitals",
@@ -29005,7 +29075,7 @@
       "astEnd": 3270
     },
     {
-      "id": "FUNC-02898",
+      "id": "FUNC-02905",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 67,
       "name": "makeResult",
@@ -29015,7 +29085,7 @@
       "astEnd": 5152
     },
     {
-      "id": "FUNC-02899",
+      "id": "FUNC-02906",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 78,
       "name": "<callback:afterLines.filter#0>",
@@ -29025,7 +29095,7 @@
       "astEnd": 4406
     },
     {
-      "id": "FUNC-02900",
+      "id": "FUNC-02907",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 91,
       "name": "makePresentation",
@@ -29035,7 +29105,7 @@
       "astEnd": 5763
     },
     {
-      "id": "FUNC-02901",
+      "id": "FUNC-02908",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 99,
       "name": "renderPresentation",
@@ -29045,7 +29115,7 @@
       "astEnd": 6355
     },
     {
-      "id": "FUNC-02902",
+      "id": "FUNC-02909",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 100,
       "name": "<callback:document.querySelectorAll().forEach#0>",
@@ -29055,7 +29125,7 @@
       "astEnd": 5872
     },
     {
-      "id": "FUNC-02903",
+      "id": "FUNC-02910",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 106,
       "name": "<callback:setTimeout#0>",
@@ -29065,7 +29135,7 @@
       "astEnd": 6344
     },
     {
-      "id": "FUNC-02904",
+      "id": "FUNC-02911",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 108,
       "name": "persistPresentation",
@@ -29075,7 +29145,7 @@
       "astEnd": 7558
     },
     {
-      "id": "FUNC-02905",
+      "id": "FUNC-02912",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 121,
       "name": "installPublicApiBridge",
@@ -29085,7 +29155,7 @@
       "astEnd": 8361
     },
     {
-      "id": "FUNC-02906",
+      "id": "FUNC-02913",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 127,
       "name": "wrapped",
@@ -29095,7 +29165,7 @@
       "astEnd": 8186
     },
     {
-      "id": "FUNC-02907",
+      "id": "FUNC-02914",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 137,
       "name": "finishAction",
@@ -29105,7 +29175,7 @@
       "astEnd": 9351
     },
     {
-      "id": "FUNC-02908",
+      "id": "FUNC-02915",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 138,
       "name": "<callback:new Promise#0>",
@@ -29115,7 +29185,7 @@
       "astEnd": 8490
     },
     {
-      "id": "FUNC-02909",
+      "id": "FUNC-02916",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 151,
       "name": "<callback:document.addEventListener#1>",
@@ -29125,7 +29195,7 @@
       "astEnd": 9857
     },
     {
-      "id": "FUNC-02910",
+      "id": "FUNC-02917",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 156,
       "name": "<callback:queueMicrotask#0>",
@@ -29135,7 +29205,7 @@
       "astEnd": 9851
     },
     {
-      "id": "FUNC-02911",
+      "id": "FUNC-02918",
       "file": "src/r41-v82-combat-bridge.js",
       "line": 158,
       "name": "boot",
@@ -29145,7 +29215,7 @@
       "astEnd": 9906
     },
     {
-      "id": "FUNC-02912",
+      "id": "FUNC-02919",
       "file": "tools/account-live-e2e.mjs",
       "line": 11,
       "name": "ok",
@@ -29155,7 +29225,7 @@
       "astEnd": 555
     },
     {
-      "id": "FUNC-02913",
+      "id": "FUNC-02920",
       "file": "tools/account-live-e2e.mjs",
       "line": 12,
       "name": "call",
@@ -29165,7 +29235,7 @@
       "astEnd": 1133
     },
     {
-      "id": "FUNC-02914",
+      "id": "FUNC-02921",
       "file": "tools/account-live-e2e.mjs",
       "line": 21,
       "name": "write",
@@ -29175,7 +29245,7 @@
       "astEnd": 1472
     },
     {
-      "id": "FUNC-02915",
+      "id": "FUNC-02922",
       "file": "tools/ast-index-functions.mjs",
       "line": 12,
       "name": "uniq",
@@ -29185,7 +29255,7 @@
       "astEnd": 513
     },
     {
-      "id": "FUNC-02916",
+      "id": "FUNC-02923",
       "file": "tools/ast-index-functions.mjs",
       "line": 13,
       "name": "clean",
@@ -29195,7 +29265,7 @@
       "astEnd": 592
     },
     {
-      "id": "FUNC-02917",
+      "id": "FUNC-02924",
       "file": "tools/ast-index-functions.mjs",
       "line": 14,
       "name": "sha",
@@ -29205,7 +29275,7 @@
       "astEnd": 666
     },
     {
-      "id": "FUNC-02918",
+      "id": "FUNC-02925",
       "file": "tools/ast-index-functions.mjs",
       "line": 15,
       "name": "code",
@@ -29215,7 +29285,7 @@
       "astEnd": 723
     },
     {
-      "id": "FUNC-02919",
+      "id": "FUNC-02926",
       "file": "tools/ast-index-functions.mjs",
       "line": 16,
       "name": "norm",
@@ -29225,7 +29295,7 @@
       "astEnd": 771
     },
     {
-      "id": "FUNC-02920",
+      "id": "FUNC-02927",
       "file": "tools/ast-index-functions.mjs",
       "line": 17,
       "name": "isNode",
@@ -29235,7 +29305,7 @@
       "astEnd": 889
     },
     {
-      "id": "FUNC-02921",
+      "id": "FUNC-02928",
       "file": "tools/ast-index-functions.mjs",
       "line": 18,
       "name": "isFunction",
@@ -29245,7 +29315,7 @@
       "astEnd": 999
     },
     {
-      "id": "FUNC-02922",
+      "id": "FUNC-02929",
       "file": "tools/ast-index-functions.mjs",
       "line": 19,
       "name": "read",
@@ -29255,7 +29325,7 @@
       "astEnd": 1062
     },
     {
-      "id": "FUNC-02923",
+      "id": "FUNC-02930",
       "file": "tools/ast-index-functions.mjs",
       "line": 21,
       "name": "parseJs",
@@ -29265,7 +29335,7 @@
       "astEnd": 1799
     },
     {
-      "id": "FUNC-02924",
+      "id": "FUNC-02931",
       "file": "tools/ast-index-functions.mjs",
       "line": 24,
       "name": "opts",
@@ -29275,7 +29345,7 @@
       "astEnd": 1402
     },
     {
-      "id": "FUNC-02925",
+      "id": "FUNC-02932",
       "file": "tools/ast-index-functions.mjs",
       "line": 40,
       "name": "walk",
@@ -29285,7 +29355,7 @@
       "astEnd": 2245
     },
     {
-      "id": "FUNC-02926",
+      "id": "FUNC-02933",
       "file": "tools/ast-index-functions.mjs",
       "line": 55,
       "name": "walkFunctionBody",
@@ -29295,7 +29365,7 @@
       "astEnd": 2729
     },
     {
-      "id": "FUNC-02927",
+      "id": "FUNC-02934",
       "file": "tools/ast-index-functions.mjs",
       "line": 56,
       "name": "rec",
@@ -29305,7 +29375,7 @@
       "astEnd": 2709
     },
     {
-      "id": "FUNC-02928",
+      "id": "FUNC-02935",
       "file": "tools/ast-index-functions.mjs",
       "line": 74,
       "name": "literal",
@@ -29315,7 +29385,7 @@
       "astEnd": 2981
     },
     {
-      "id": "FUNC-02929",
+      "id": "FUNC-02936",
       "file": "tools/ast-index-functions.mjs",
       "line": 77,
       "name": "<callback:n.quasis.map#0>",
@@ -29325,7 +29395,7 @@
       "astEnd": 2953
     },
     {
-      "id": "FUNC-02930",
+      "id": "FUNC-02937",
       "file": "tools/ast-index-functions.mjs",
       "line": 81,
       "name": "propName",
@@ -29335,7 +29405,7 @@
       "astEnd": 3236
     },
     {
-      "id": "FUNC-02931",
+      "id": "FUNC-02938",
       "file": "tools/ast-index-functions.mjs",
       "line": 89,
       "name": "exprName",
@@ -29345,7 +29415,7 @@
       "astEnd": 3872
     },
     {
-      "id": "FUNC-02932",
+      "id": "FUNC-02939",
       "file": "tools/ast-index-functions.mjs",
       "line": 103,
       "name": "patternName",
@@ -29355,7 +29425,7 @@
       "astEnd": 4196
     },
     {
-      "id": "FUNC-02933",
+      "id": "FUNC-02940",
       "file": "tools/ast-index-functions.mjs",
       "line": 111,
       "name": "contextName",
@@ -29365,7 +29435,7 @@
       "astEnd": 5273
     },
     {
-      "id": "FUNC-02934",
+      "id": "FUNC-02941",
       "file": "tools/ast-index-functions.mjs",
       "line": 125,
       "name": "kindOf",
@@ -29375,7 +29445,7 @@
       "astEnd": 5590
     },
     {
-      "id": "FUNC-02935",
+      "id": "FUNC-02942",
       "file": "tools/ast-index-functions.mjs",
       "line": 133,
       "name": "refs",
@@ -29385,7 +29455,7 @@
       "astEnd": 6386
     },
     {
-      "id": "FUNC-02936",
+      "id": "FUNC-02943",
       "file": "tools/ast-index-functions.mjs",
       "line": 134,
       "name": "cap",
@@ -29395,7 +29465,7 @@
       "astEnd": 5755
     },
     {
-      "id": "FUNC-02937",
+      "id": "FUNC-02944",
       "file": "tools/ast-index-functions.mjs",
       "line": 158,
       "name": "analyze",
@@ -29405,7 +29475,7 @@
       "astEnd": 6830
     },
     {
-      "id": "FUNC-02938",
+      "id": "FUNC-02945",
       "file": "tools/ast-index-functions.mjs",
       "line": 161,
       "name": "<callback:walkFunctionBody#1>",
@@ -29415,7 +29485,7 @@
       "astEnd": 6768
     },
     {
-      "id": "FUNC-02939",
+      "id": "FUNC-02946",
       "file": "tools/ast-index-functions.mjs",
       "line": 174,
       "name": "<callback:inv.files||[].filter#0>",
@@ -29425,7 +29495,7 @@
       "astEnd": 6987
     },
     {
-      "id": "FUNC-02940",
+      "id": "FUNC-02947",
       "file": "tools/ast-index-functions.mjs",
       "line": 193,
       "name": "<callback:walk#4>",
@@ -29435,7 +29505,7 @@
       "astEnd": 8564
     },
     {
-      "id": "FUNC-02941",
+      "id": "FUNC-02948",
       "file": "tools/ast-index-functions.mjs",
       "line": 207,
       "name": "<callback:node.params||[].map#0>",
@@ -29445,7 +29515,7 @@
       "astEnd": 7895
     },
     {
-      "id": "FUNC-02942",
+      "id": "FUNC-02949",
       "file": "tools/ast-index-functions.mjs",
       "line": 234,
       "name": "<callback:functions.sort#0>",
@@ -29455,7 +29525,7 @@
       "astEnd": 8778
     },
     {
-      "id": "FUNC-02943",
+      "id": "FUNC-02950",
       "file": "tools/ast-index-functions.mjs",
       "line": 235,
       "name": "<callback:functions.forEach#0>",
@@ -29465,7 +29535,7 @@
       "astEnd": 8846
     },
     {
-      "id": "FUNC-02944",
+      "id": "FUNC-02951",
       "file": "tools/ast-index-functions.mjs",
       "line": 247,
       "name": "<callback:functions.filter#0>",
@@ -29475,7 +29545,7 @@
       "astEnd": 9341
     },
     {
-      "id": "FUNC-02945",
+      "id": "FUNC-02952",
       "file": "tools/ast-index-functions.mjs",
       "line": 248,
       "name": "<callback:functions.filter#0>",
@@ -29485,7 +29555,7 @@
       "astEnd": 9422
     },
     {
-      "id": "FUNC-02946",
+      "id": "FUNC-02953",
       "file": "tools/audit-ast-function-index.mjs",
       "line": 10,
       "name": "sha",
@@ -29495,7 +29565,7 @@
       "astEnd": 359
     },
     {
-      "id": "FUNC-02947",
+      "id": "FUNC-02954",
       "file": "tools/audit-ast-function-index.mjs",
       "line": 11,
       "name": "fail",
@@ -29505,7 +29575,7 @@
       "astEnd": 391
     },
     {
-      "id": "FUNC-02948",
+      "id": "FUNC-02955",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 10,
       "name": "fail",
@@ -29515,7 +29585,7 @@
       "astEnd": 255
     },
     {
-      "id": "FUNC-02949",
+      "id": "FUNC-02956",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 11,
       "name": "warn",
@@ -29525,7 +29595,7 @@
       "astEnd": 287
     },
     {
-      "id": "FUNC-02950",
+      "id": "FUNC-02957",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 12,
       "name": "exists",
@@ -29535,7 +29605,7 @@
       "astEnd": 337
     },
     {
-      "id": "FUNC-02951",
+      "id": "FUNC-02958",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 13,
       "name": "norm",
@@ -29545,7 +29615,7 @@
       "astEnd": 385
     },
     {
-      "id": "FUNC-02952",
+      "id": "FUNC-02959",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 14,
       "name": "isDoc",
@@ -29555,7 +29625,7 @@
       "astEnd": 429
     },
     {
-      "id": "FUNC-02953",
+      "id": "FUNC-02960",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 15,
       "name": "isTooling",
@@ -29565,7 +29635,7 @@
       "astEnd": 510
     },
     {
-      "id": "FUNC-02954",
+      "id": "FUNC-02961",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 16,
       "name": "isGameRuntime",
@@ -29575,7 +29645,7 @@
       "astEnd": 559
     },
     {
-      "id": "FUNC-02955",
+      "id": "FUNC-02962",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 37,
       "name": "auditGameGrouped",
@@ -29585,7 +29655,7 @@
       "astEnd": 3294
     },
     {
-      "id": "FUNC-02956",
+      "id": "FUNC-02963",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 44,
       "name": "<callback:inv.files||[].filter#0>",
@@ -29595,7 +29665,7 @@
       "astEnd": 4474
     },
     {
-      "id": "FUNC-02957",
+      "id": "FUNC-02964",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 72,
       "name": "<callback:inv.models||[].map#0>",
@@ -29605,7 +29675,7 @@
       "astEnd": 9369
     },
     {
-      "id": "FUNC-02958",
+      "id": "FUNC-02965",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 72,
       "name": "<callback:modelNames.some#0>",
@@ -29615,7 +29685,7 @@
       "astEnd": 9432
     },
     {
-      "id": "FUNC-02959",
+      "id": "FUNC-02966",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 76,
       "name": "<callback:failures.some#0>",
@@ -29625,7 +29695,7 @@
       "astEnd": 10945
     },
     {
-      "id": "FUNC-02960",
+      "id": "FUNC-02967",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:failures.map#0>",
@@ -29635,7 +29705,7 @@
       "astEnd": 12943
     },
     {
-      "id": "FUNC-02961",
+      "id": "FUNC-02968",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:modelNames.map#0>",
@@ -29645,7 +29715,7 @@
       "astEnd": 12549
     },
     {
-      "id": "FUNC-02962",
+      "id": "FUNC-02969",
       "file": "tools/audit-documentation-coverage.mjs",
       "line": 80,
       "name": "<callback:warnings.map#0>",
@@ -29655,7 +29725,7 @@
       "astEnd": 12862
     },
     {
-      "id": "FUNC-02963",
+      "id": "FUNC-02970",
       "file": "tools/audit-final-canonical-spec.mjs",
       "line": 10,
       "name": "sha256",
@@ -29665,7 +29735,7 @@
       "astEnd": 440
     },
     {
-      "id": "FUNC-02964",
+      "id": "FUNC-02971",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 11,
       "name": "<callback:inv.files || [].map#0>",
@@ -29675,7 +29745,7 @@
       "astEnd": 381
     },
     {
-      "id": "FUNC-02965",
+      "id": "FUNC-02972",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 12,
       "name": "<callback:inv.files || [].map().filter#0>",
@@ -29685,7 +29755,7 @@
       "astEnd": 513
     },
     {
-      "id": "FUNC-02966",
+      "id": "FUNC-02973",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 13,
       "name": "<callback:inv.files || [].map().filter().filter#0>",
@@ -29695,7 +29765,7 @@
       "astEnd": 563
     },
     {
-      "id": "FUNC-02967",
+      "id": "FUNC-02974",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 14,
       "name": "<callback:runtimeFiles.map#0>",
@@ -29705,7 +29775,7 @@
       "astEnd": 675
     },
     {
-      "id": "FUNC-02968",
+      "id": "FUNC-02975",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 30,
       "name": "<callback:contracts.map#0>",
@@ -29715,7 +29785,7 @@
       "astEnd": 1622
     },
     {
-      "id": "FUNC-02969",
+      "id": "FUNC-02976",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 33,
       "name": "<callback:needles.filter#0>",
@@ -29725,7 +29795,7 @@
       "astEnd": 1511
     },
     {
-      "id": "FUNC-02970",
+      "id": "FUNC-02977",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 34,
       "name": "<callback:needles.every#0>",
@@ -29735,7 +29805,7 @@
       "astEnd": 1566
     },
     {
-      "id": "FUNC-02971",
+      "id": "FUNC-02978",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 39,
       "name": "<callback:[ 'assets/user-provided/reference-ui/' ].flatMap#0>",
@@ -29745,7 +29815,7 @@
       "astEnd": 1870
     },
     {
-      "id": "FUNC-02972",
+      "id": "FUNC-02979",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 39,
       "name": "<callback:runtimeFiles.flatMap#0>",
@@ -29755,7 +29825,7 @@
       "astEnd": 1869
     },
     {
-      "id": "FUNC-02973",
+      "id": "FUNC-02980",
       "file": "tools/audit-operational-static-contracts.mjs",
       "line": 46,
       "name": "<callback:contractResults.every#0>",
@@ -29765,7 +29835,7 @@
       "astEnd": 2043
     },
     {
-      "id": "FUNC-02974",
+      "id": "FUNC-02981",
       "file": "tools/audit-r41-assets.mjs",
       "line": 17,
       "name": "walk",
@@ -29775,7 +29845,7 @@
       "astEnd": 1244
     },
     {
-      "id": "FUNC-02975",
+      "id": "FUNC-02982",
       "file": "tools/audit-r41-assets.mjs",
       "line": 26,
       "name": "cleanRef",
@@ -29785,7 +29855,7 @@
       "astEnd": 1394
     },
     {
-      "id": "FUNC-02976",
+      "id": "FUNC-02983",
       "file": "tools/audit-r41-assets.mjs",
       "line": 31,
       "name": "isDynamic",
@@ -29795,7 +29865,7 @@
       "astEnd": 1462
     },
     {
-      "id": "FUNC-02977",
+      "id": "FUNC-02984",
       "file": "tools/audit-r41-assets.mjs",
       "line": 32,
       "name": "addRef",
@@ -29805,7 +29875,7 @@
       "astEnd": 1777
     },
     {
-      "id": "FUNC-02978",
+      "id": "FUNC-02985",
       "file": "tools/audit-r41-assets.mjs",
       "line": 53,
       "name": "<callback:[...refs.values()].sort#0>",
@@ -29815,7 +29885,7 @@
       "astEnd": 2150
     },
     {
-      "id": "FUNC-02979",
+      "id": "FUNC-02986",
       "file": "tools/audit-r41-assets.mjs",
       "line": 60,
       "name": "<callback:rows.filter#0>",
@@ -29825,7 +29895,7 @@
       "astEnd": 2472
     },
     {
-      "id": "FUNC-02980",
+      "id": "FUNC-02987",
       "file": "tools/audit-r41-assets.mjs",
       "line": 61,
       "name": "<callback:missing.filter#0>",
@@ -29835,7 +29905,7 @@
       "astEnd": 2527
     },
     {
-      "id": "FUNC-02981",
+      "id": "FUNC-02988",
       "file": "tools/audit-r41-assets.mjs",
       "line": 62,
       "name": "<callback:missing.filter#0>",
@@ -29845,7 +29915,7 @@
       "astEnd": 2607
     },
     {
-      "id": "FUNC-02982",
+      "id": "FUNC-02989",
       "file": "tools/backend-presence-audit.mjs",
       "line": 3,
       "name": "has",
@@ -29855,7 +29925,7 @@
       "astEnd": 88
     },
     {
-      "id": "FUNC-02983",
+      "id": "FUNC-02990",
       "file": "tools/backend-presence-audit.mjs",
       "line": 4,
       "name": "isHash",
@@ -29865,7 +29935,7 @@
       "astEnd": 150
     },
     {
-      "id": "FUNC-02984",
+      "id": "FUNC-02991",
       "file": "tools/backend-presence-audit.mjs",
       "line": 5,
       "name": "read",
@@ -29875,7 +29945,7 @@
       "astEnd": 237
     },
     {
-      "id": "FUNC-02985",
+      "id": "FUNC-02992",
       "file": "tools/backend-presence-audit.mjs",
       "line": 36,
       "name": "<callback:Object.entries().filter().map#0>",
@@ -29885,7 +29955,7 @@
       "astEnd": 1642
     },
     {
-      "id": "FUNC-02986",
+      "id": "FUNC-02993",
       "file": "tools/backend-presence-audit.mjs",
       "line": 36,
       "name": "<callback:Object.entries().filter#0>",
@@ -29895,7 +29965,7 @@
       "astEnd": 1622
     },
     {
-      "id": "FUNC-02987",
+      "id": "FUNC-02994",
       "file": "tools/backend-presence-audit.mjs",
       "line": 100,
       "name": "semantic",
@@ -29905,7 +29975,7 @@
       "astEnd": 6385
     },
     {
-      "id": "FUNC-02988",
+      "id": "FUNC-02995",
       "file": "tools/browser-account-live.mjs",
       "line": 11,
       "name": "assert",
@@ -29915,7 +29985,7 @@
       "astEnd": 662
     },
     {
-      "id": "FUNC-02989",
+      "id": "FUNC-02996",
       "file": "tools/browser-account-live.mjs",
       "line": 13,
       "name": "<callback:page.on#1>",
@@ -29925,7 +29995,7 @@
       "astEnd": 886
     },
     {
-      "id": "FUNC-02990",
+      "id": "FUNC-02997",
       "file": "tools/browser-account-live.mjs",
       "line": 13,
       "name": "<callback:page.on#1>",
@@ -29935,7 +30005,7 @@
       "astEnd": 962
     },
     {
-      "id": "FUNC-02991",
+      "id": "FUNC-02998",
       "file": "tools/browser-account-live.mjs",
       "line": 17,
       "name": "<callback:page.evaluate#0>",
@@ -29945,7 +30015,7 @@
       "astEnd": 1525
     },
     {
-      "id": "FUNC-02992",
+      "id": "FUNC-02999",
       "file": "tools/browser-account-live.mjs",
       "line": 18,
       "name": "<callback:page.evaluate#0>",
@@ -29955,7 +30025,7 @@
       "astEnd": 1683
     },
     {
-      "id": "FUNC-02993",
+      "id": "FUNC-03000",
       "file": "tools/browser-account-live.mjs",
       "line": 19,
       "name": "<callback:page.evaluate#0>",
@@ -29965,7 +30035,7 @@
       "astEnd": 1884
     },
     {
-      "id": "FUNC-02994",
+      "id": "FUNC-03001",
       "file": "tools/browser-account-live.mjs",
       "line": 23,
       "name": "<callback:page.waitForFunction#0>",
@@ -29975,7 +30045,7 @@
       "astEnd": 3373
     },
     {
-      "id": "FUNC-02995",
+      "id": "FUNC-03002",
       "file": "tools/browser-account-live.mjs",
       "line": 26,
       "name": "<callback:page.once#1>",
@@ -29985,7 +30055,7 @@
       "astEnd": 3928
     },
     {
-      "id": "FUNC-02996",
+      "id": "FUNC-03003",
       "file": "tools/browser-account-live.mjs",
       "line": 27,
       "name": "<callback:consoleErrors.filter#0>",
@@ -29995,7 +30065,7 @@
       "astEnd": 4301
     },
     {
-      "id": "FUNC-02997",
+      "id": "FUNC-03004",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate().catch#0>",
@@ -30005,7 +30075,7 @@
       "astEnd": 4654
     },
     {
-      "id": "FUNC-02998",
+      "id": "FUNC-03005",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate#0>",
@@ -30015,7 +30085,7 @@
       "astEnd": 4549
     },
     {
-      "id": "FUNC-02999",
+      "id": "FUNC-03006",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.evaluate#0>",
@@ -30025,7 +30095,7 @@
       "astEnd": 4640
     },
     {
-      "id": "FUNC-03000",
+      "id": "FUNC-03007",
       "file": "tools/browser-account-live.mjs",
       "line": 28,
       "name": "<callback:page.once#1>",
@@ -30035,7 +30105,7 @@
       "astEnd": 4584
     },
     {
-      "id": "FUNC-03001",
+      "id": "FUNC-03008",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 39,
       "name": "isImage",
@@ -30045,7 +30115,7 @@
       "astEnd": 2996
     },
     {
-      "id": "FUNC-03002",
+      "id": "FUNC-03009",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 40,
       "name": "<callback:page.on#1>",
@@ -30055,7 +30125,7 @@
       "astEnd": 3059
     },
     {
-      "id": "FUNC-03003",
+      "id": "FUNC-03010",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 41,
       "name": "<callback:page.on#1>",
@@ -30065,7 +30135,7 @@
       "astEnd": 3225
     },
     {
-      "id": "FUNC-03004",
+      "id": "FUNC-03011",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 42,
       "name": "<callback:page.on#1>",
@@ -30075,7 +30145,7 @@
       "astEnd": 3396
     },
     {
-      "id": "FUNC-03005",
+      "id": "FUNC-03012",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 43,
       "name": "<callback:page.route#1>",
@@ -30085,7 +30155,7 @@
       "astEnd": 4118
     },
     {
-      "id": "FUNC-03006",
+      "id": "FUNC-03013",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 46,
       "name": "json",
@@ -30095,7 +30165,7 @@
       "astEnd": 3634
     },
     {
-      "id": "FUNC-03007",
+      "id": "FUNC-03014",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 57,
       "name": "<callback:page.evaluate#0>",
@@ -30105,7 +30175,7 @@
       "astEnd": 5071
     },
     {
-      "id": "FUNC-03008",
+      "id": "FUNC-03015",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 67,
       "name": "<callback:page.waitForFunction#0>",
@@ -30115,7 +30185,7 @@
       "astEnd": 5382
     },
     {
-      "id": "FUNC-03009",
+      "id": "FUNC-03016",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 73,
       "name": "<callback:page.evaluate#0>",
@@ -30125,7 +30195,7 @@
       "astEnd": 6172
     },
     {
-      "id": "FUNC-03010",
+      "id": "FUNC-03017",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 76,
       "name": "<callback:[...document.querySelectorAll('[data-action]')].map#0>",
@@ -30135,7 +30205,7 @@
       "astEnd": 6164
     },
     {
-      "id": "FUNC-03011",
+      "id": "FUNC-03018",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 100,
       "name": "<callback:page.evaluate#0>",
@@ -30145,7 +30215,7 @@
       "astEnd": 6921
     },
     {
-      "id": "FUNC-03012",
+      "id": "FUNC-03019",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 101,
       "name": "<callback:page.evaluate#0>",
@@ -30155,7 +30225,7 @@
       "astEnd": 7165
     },
     {
-      "id": "FUNC-03013",
+      "id": "FUNC-03020",
       "file": "tools/browser-combat-local-e2e.mjs",
       "line": 111,
       "name": "<callback:failedImages.map#0>",
@@ -30165,7 +30235,7 @@
       "astEnd": 8121
     },
     {
-      "id": "FUNC-03014",
+      "id": "FUNC-03021",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 16,
       "name": "readSaveV2",
@@ -30175,7 +30245,7 @@
       "astEnd": 1929
     },
     {
-      "id": "FUNC-03015",
+      "id": "FUNC-03022",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 17,
       "name": "<callback:page.evaluate#0>",
@@ -30185,7 +30255,7 @@
       "astEnd": 1810
     },
     {
-      "id": "FUNC-03016",
+      "id": "FUNC-03023",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 18,
       "name": "tryParse",
@@ -30195,7 +30265,7 @@
       "astEnd": 1010
     },
     {
-      "id": "FUNC-03017",
+      "id": "FUNC-03024",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 48,
       "name": "registerV2",
@@ -30205,7 +30275,7 @@
       "astEnd": 3064
     },
     {
-      "id": "FUNC-03018",
+      "id": "FUNC-03025",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 59,
       "name": "<callback:page.waitForFunction#0>",
@@ -30215,7 +30285,7 @@
       "astEnd": 2757
     },
     {
-      "id": "FUNC-03019",
+      "id": "FUNC-03026",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 60,
       "name": "<callback:page.evaluate#0>",
@@ -30225,7 +30295,7 @@
       "astEnd": 2939
     },
     {
-      "id": "FUNC-03020",
+      "id": "FUNC-03027",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 66,
       "name": "seedNormalV2",
@@ -30235,7 +30305,7 @@
       "astEnd": 6676
     },
     {
-      "id": "FUNC-03021",
+      "id": "FUNC-03028",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 69,
       "name": "<callback:page.evaluate#0>",
@@ -30245,7 +30315,7 @@
       "astEnd": 3491
     },
     {
-      "id": "FUNC-03022",
+      "id": "FUNC-03029",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 75,
       "name": "<callback:r.json().catch#0>",
@@ -30255,7 +30325,7 @@
       "astEnd": 3450
     },
     {
-      "id": "FUNC-03023",
+      "id": "FUNC-03030",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 82,
       "name": "<callback:page.evaluate#0>",
@@ -30265,7 +30335,7 @@
       "astEnd": 3873
     },
     {
-      "id": "FUNC-03024",
+      "id": "FUNC-03031",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 84,
       "name": "<callback:r.json().catch#0>",
@@ -30275,7 +30345,7 @@
       "astEnd": 3832
     },
     {
-      "id": "FUNC-03025",
+      "id": "FUNC-03032",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 90,
       "name": "<callback:listed.data.slots.some#0>",
@@ -30285,7 +30355,7 @@
       "astEnd": 4031
     },
     {
-      "id": "FUNC-03026",
+      "id": "FUNC-03033",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 96,
       "name": "<callback:page.waitForFunction#0>",
@@ -30295,7 +30365,7 @@
       "astEnd": 4303
     },
     {
-      "id": "FUNC-03027",
+      "id": "FUNC-03034",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 98,
       "name": "<callback:page.waitForFunction#0>",
@@ -30305,7 +30375,7 @@
       "astEnd": 4605
     },
     {
-      "id": "FUNC-03028",
+      "id": "FUNC-03035",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 99,
       "name": "<callback:[...document.querySelectorAll('[data-id],[data-slot-id],[data-slot]')].some#0>",
@@ -30315,7 +30385,7 @@
       "astEnd": 4594
     },
     {
-      "id": "FUNC-03029",
+      "id": "FUNC-03036",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 101,
       "name": "<callback:[el.getAttribute('data-id'),el.getAttribute('data-slot-id'),el.getAttribute('data-slot')].some#0>",
@@ -30325,7 +30395,7 @@
       "astEnd": 4593
     },
     {
-      "id": "FUNC-03030",
+      "id": "FUNC-03037",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 103,
       "name": "<callback:page.waitForFunction().catch#0>",
@@ -30335,7 +30405,7 @@
       "astEnd": 4643
     },
     {
-      "id": "FUNC-03031",
+      "id": "FUNC-03038",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 117,
       "name": "<callback:el.evaluate().catch#0>",
@@ -30345,7 +30415,7 @@
       "astEnd": 5033
     },
     {
-      "id": "FUNC-03032",
+      "id": "FUNC-03039",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 117,
       "name": "<callback:el.evaluate#0>",
@@ -30355,7 +30425,7 @@
       "astEnd": 5019
     },
     {
-      "id": "FUNC-03033",
+      "id": "FUNC-03040",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 118,
       "name": "<callback:el.getAttribute().catch#0>",
@@ -30365,7 +30435,7 @@
       "astEnd": 5097
     },
     {
-      "id": "FUNC-03034",
+      "id": "FUNC-03041",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 133,
       "name": "<callback:page.evaluate#0>",
@@ -30375,7 +30445,7 @@
       "astEnd": 6105
     },
     {
-      "id": "FUNC-03035",
+      "id": "FUNC-03042",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 140,
       "name": "<callback:[...document.querySelectorAll('button,a,[role=\"button\"]')].slice().map#0>",
@@ -30385,7 +30455,7 @@
       "astEnd": 6097
     },
     {
-      "id": "FUNC-03036",
+      "id": "FUNC-03043",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 152,
       "name": "<callback:slotButton.evaluate#0>",
@@ -30395,7 +30465,7 @@
       "astEnd": 6249
     },
     {
-      "id": "FUNC-03037",
+      "id": "FUNC-03044",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 154,
       "name": "<callback:page.waitForFunction#0>",
@@ -30405,7 +30475,7 @@
       "astEnd": 6391
     },
     {
-      "id": "FUNC-03038",
+      "id": "FUNC-03045",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 165,
       "name": "navigateV2",
@@ -30415,7 +30485,7 @@
       "astEnd": 7816
     },
     {
-      "id": "FUNC-03039",
+      "id": "FUNC-03046",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 171,
       "name": "<callback:page.evaluate#0>",
@@ -30425,7 +30495,7 @@
       "astEnd": 7433
     },
     {
-      "id": "FUNC-03040",
+      "id": "FUNC-03047",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 175,
       "name": "<callback:[...document.querySelectorAll('#main-nav [data-screen]')].map#0>",
@@ -30435,7 +30505,7 @@
       "astEnd": 7219
     },
     {
-      "id": "FUNC-03041",
+      "id": "FUNC-03048",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 182,
       "name": "<callback:b.evaluate#0>",
@@ -30445,7 +30515,7 @@
       "astEnd": 7556
     },
     {
-      "id": "FUNC-03042",
+      "id": "FUNC-03049",
       "file": "tools/browser-gameplay-e2e-v2.mjs",
       "line": 185,
       "name": "<callback:page.locator().first().textContent().catch#0>",
@@ -30455,7 +30525,7 @@
       "astEnd": 7708
     },
     {
-      "id": "FUNC-03043",
+      "id": "FUNC-03050",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 10,
       "name": "seedNormalV3",
@@ -30465,7 +30535,7 @@
       "astEnd": 4364
     },
     {
-      "id": "FUNC-03044",
+      "id": "FUNC-03051",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 13,
       "name": "<callback:page.evaluate#0>",
@@ -30475,7 +30545,7 @@
       "astEnd": 792
     },
     {
-      "id": "FUNC-03045",
+      "id": "FUNC-03052",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 19,
       "name": "<callback:r.json().catch#0>",
@@ -30485,7 +30555,7 @@
       "astEnd": 751
     },
     {
-      "id": "FUNC-03046",
+      "id": "FUNC-03053",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 30,
       "name": "<callback:page.evaluate#0>",
@@ -30495,7 +30565,7 @@
       "astEnd": 1255
     },
     {
-      "id": "FUNC-03047",
+      "id": "FUNC-03054",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 32,
       "name": "<callback:r.json().catch#0>",
@@ -30505,7 +30575,7 @@
       "astEnd": 1214
     },
     {
-      "id": "FUNC-03048",
+      "id": "FUNC-03055",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 38,
       "name": "<callback:slots.data.slots.some#0>",
@@ -30515,7 +30585,7 @@
       "astEnd": 1410
     },
     {
-      "id": "FUNC-03049",
+      "id": "FUNC-03056",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 44,
       "name": "<callback:page.waitForFunction#0>",
@@ -30525,7 +30595,7 @@
       "astEnd": 1680
     },
     {
-      "id": "FUNC-03050",
+      "id": "FUNC-03057",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 48,
       "name": "<callback:page.waitForFunction#0>",
@@ -30535,7 +30605,7 @@
       "astEnd": 2132
     },
     {
-      "id": "FUNC-03051",
+      "id": "FUNC-03058",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 49,
       "name": "<callback:[...document.querySelectorAll('[data-id],[data-slot-id],[data-slot]')].some#0>",
@@ -30545,7 +30615,7 @@
       "astEnd": 2121
     },
     {
-      "id": "FUNC-03052",
+      "id": "FUNC-03059",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 51,
       "name": "<callback:[el.getAttribute('data-id'),el.getAttribute('data-slot-id'),el.getAttribute('data-slot')].some#0>",
@@ -30555,7 +30625,7 @@
       "astEnd": 2120
     },
     {
-      "id": "FUNC-03053",
+      "id": "FUNC-03060",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 53,
       "name": "<callback:page.waitForFunction().catch#0>",
@@ -30565,7 +30635,7 @@
       "astEnd": 2170
     },
     {
-      "id": "FUNC-03054",
+      "id": "FUNC-03061",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 67,
       "name": "<callback:el.evaluate().catch#0>",
@@ -30575,7 +30645,7 @@
       "astEnd": 2562
     },
     {
-      "id": "FUNC-03055",
+      "id": "FUNC-03062",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 67,
       "name": "<callback:el.evaluate#0>",
@@ -30585,7 +30655,7 @@
       "astEnd": 2548
     },
     {
-      "id": "FUNC-03056",
+      "id": "FUNC-03063",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 68,
       "name": "<callback:el.getAttribute().catch#0>",
@@ -30595,7 +30665,7 @@
       "astEnd": 2626
     },
     {
-      "id": "FUNC-03057",
+      "id": "FUNC-03064",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 83,
       "name": "<callback:page.evaluate#0>",
@@ -30605,7 +30675,7 @@
       "astEnd": 3634
     },
     {
-      "id": "FUNC-03058",
+      "id": "FUNC-03065",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 90,
       "name": "<callback:[...document.querySelectorAll('button,a,[role=\"button\"]')].slice().map#0>",
@@ -30615,7 +30685,7 @@
       "astEnd": 3626
     },
     {
-      "id": "FUNC-03059",
+      "id": "FUNC-03066",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 102,
       "name": "<callback:slotButton.evaluate#0>",
@@ -30625,7 +30695,7 @@
       "astEnd": 3778
     },
     {
-      "id": "FUNC-03060",
+      "id": "FUNC-03067",
       "file": "tools/browser-gameplay-e2e-v3.mjs",
       "line": 104,
       "name": "<callback:page.waitForFunction#0>",
@@ -30635,7 +30705,7 @@
       "astEnd": 3979
     },
     {
-      "id": "FUNC-03061",
+      "id": "FUNC-03068",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 18,
       "name": "assert",
@@ -30645,7 +30715,7 @@
       "astEnd": 827
     },
     {
-      "id": "FUNC-03062",
+      "id": "FUNC-03069",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 19,
       "name": "pass",
@@ -30655,7 +30725,7 @@
       "astEnd": 892
     },
     {
-      "id": "FUNC-03063",
+      "id": "FUNC-03070",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 20,
       "name": "contract",
@@ -30665,7 +30735,7 @@
       "astEnd": 1098
     },
     {
-      "id": "FUNC-03064",
+      "id": "FUNC-03071",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 21,
       "name": "<callback:new Promise#0>",
@@ -30675,7 +30745,7 @@
       "astEnd": 1156
     },
     {
-      "id": "FUNC-03065",
+      "id": "FUNC-03072",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 21,
       "name": "sleep",
@@ -30685,7 +30755,7 @@
       "astEnd": 1159
     },
     {
-      "id": "FUNC-03066",
+      "id": "FUNC-03073",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 23,
       "name": "normalFixture",
@@ -30695,7 +30765,7 @@
       "astEnd": 3170
     },
     {
-      "id": "FUNC-03067",
+      "id": "FUNC-03074",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 55,
       "name": "leonFixture",
@@ -30705,7 +30775,7 @@
       "astEnd": 4452
     },
     {
-      "id": "FUNC-03068",
+      "id": "FUNC-03075",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 65,
       "name": "<callback:page.evaluate#0>",
@@ -30715,7 +30785,7 @@
       "astEnd": 4587
     },
     {
-      "id": "FUNC-03069",
+      "id": "FUNC-03076",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 65,
       "name": "readSave",
@@ -30725,7 +30795,7 @@
       "astEnd": 4599
     },
     {
-      "id": "FUNC-03070",
+      "id": "FUNC-03077",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 66,
       "name": "<callback:page.evaluate#0>",
@@ -30735,7 +30805,7 @@
       "astEnd": 4693
     },
     {
-      "id": "FUNC-03071",
+      "id": "FUNC-03078",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 66,
       "name": "r41State",
@@ -30745,7 +30815,7 @@
       "astEnd": 4696
     },
     {
-      "id": "FUNC-03072",
+      "id": "FUNC-03079",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 67,
       "name": "masterState",
@@ -30755,7 +30825,7 @@
       "astEnd": 4816
     },
     {
-      "id": "FUNC-03073",
+      "id": "FUNC-03080",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 68,
       "name": "navigate",
@@ -30765,7 +30835,7 @@
       "astEnd": 5009
     },
     {
-      "id": "FUNC-03074",
+      "id": "FUNC-03081",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 70,
       "name": "playVisibleMinigame",
@@ -30775,7 +30845,7 @@
       "astEnd": 6076
     },
     {
-      "id": "FUNC-03075",
+      "id": "FUNC-03082",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 89,
       "name": "register",
@@ -30785,7 +30855,7 @@
       "astEnd": 7100
     },
     {
-      "id": "FUNC-03076",
+      "id": "FUNC-03083",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 101,
       "name": "<callback:page.evaluate#0>",
@@ -30795,7 +30865,7 @@
       "astEnd": 6984
     },
     {
-      "id": "FUNC-03077",
+      "id": "FUNC-03084",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 107,
       "name": "seedNormal",
@@ -30805,7 +30875,7 @@
       "astEnd": 7719
     },
     {
-      "id": "FUNC-03078",
+      "id": "FUNC-03085",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 109,
       "name": "<callback:page.evaluate#0>",
@@ -30815,7 +30885,7 @@
       "astEnd": 7311
     },
     {
-      "id": "FUNC-03079",
+      "id": "FUNC-03086",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 111,
       "name": "<callback:page.waitForFunction#0>",
@@ -30825,7 +30895,7 @@
       "astEnd": 7543
     },
     {
-      "id": "FUNC-03080",
+      "id": "FUNC-03087",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 118,
       "name": "testNormalGameplay",
@@ -30835,7 +30905,7 @@
       "astEnd": 20338
     },
     {
-      "id": "FUNC-03081",
+      "id": "FUNC-03088",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 126,
       "name": "<callback:page.evaluate#0>",
@@ -30845,7 +30915,7 @@
       "astEnd": 8241
     },
     {
-      "id": "FUNC-03082",
+      "id": "FUNC-03089",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 127,
       "name": "<callback:injuriesBefore.map#0>",
@@ -30855,7 +30925,7 @@
       "astEnd": 8445
     },
     {
-      "id": "FUNC-03083",
+      "id": "FUNC-03090",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 127,
       "name": "<callback:injuriesBefore.some#0>",
@@ -30865,7 +30935,7 @@
       "astEnd": 8324
     },
     {
-      "id": "FUNC-03084",
+      "id": "FUNC-03091",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 146,
       "name": "<callback:afterHospital.character.injuries.find#0>",
@@ -30875,7 +30945,7 @@
       "astEnd": 9649
     },
     {
-      "id": "FUNC-03085",
+      "id": "FUNC-03092",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 167,
       "name": "<callback:afterLong.character.injuries||[].some#0>",
@@ -30885,7 +30955,7 @@
       "astEnd": 11540
     },
     {
-      "id": "FUNC-03086",
+      "id": "FUNC-03093",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 196,
       "name": "<callback:page.locator().waitFor().catch#0>",
@@ -30895,7 +30965,7 @@
       "astEnd": 13795
     },
     {
-      "id": "FUNC-03087",
+      "id": "FUNC-03094",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 230,
       "name": "<callback:missionState?.minigames?.history||[].slice().reverse().find#0>",
@@ -30905,7 +30975,7 @@
       "astEnd": 16168
     },
     {
-      "id": "FUNC-03088",
+      "id": "FUNC-03095",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 244,
       "name": "<callback:page.waitForFunction#0>",
@@ -30915,7 +30985,7 @@
       "astEnd": 17209
     },
     {
-      "id": "FUNC-03089",
+      "id": "FUNC-03096",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 246,
       "name": "<callback:onlineState?.online?.actions||[].some#0>",
@@ -30925,7 +30995,7 @@
       "astEnd": 17392
     },
     {
-      "id": "FUNC-03090",
+      "id": "FUNC-03097",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 250,
       "name": "<callback:page.waitForFunction#0>",
@@ -30935,7 +31005,7 @@
       "astEnd": 17645
     },
     {
-      "id": "FUNC-03091",
+      "id": "FUNC-03098",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 253,
       "name": "<callback:page.waitForFunction#0>",
@@ -30945,7 +31015,7 @@
       "astEnd": 17855
     },
     {
-      "id": "FUNC-03092",
+      "id": "FUNC-03099",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 273,
       "name": "<callback:page.evaluate#0>",
@@ -30955,7 +31025,7 @@
       "astEnd": 19598
     },
     {
-      "id": "FUNC-03093",
+      "id": "FUNC-03100",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 275,
       "name": "<callback:cloudSave?.character?.injuries||[].some#0>",
@@ -30965,7 +31035,7 @@
       "astEnd": 19830
     },
     {
-      "id": "FUNC-03094",
+      "id": "FUNC-03101",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 276,
       "name": "<callback:cloudSave.character.injuries.find#0>",
@@ -30975,7 +31045,7 @@
       "astEnd": 20131
     },
     {
-      "id": "FUNC-03095",
+      "id": "FUNC-03102",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 283,
       "name": "testKurai",
@@ -30985,7 +31055,7 @@
       "astEnd": 22041
     },
     {
-      "id": "FUNC-03096",
+      "id": "FUNC-03103",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 289,
       "name": "<callback:page.evaluate#0>",
@@ -30995,7 +31065,7 @@
       "astEnd": 20722
     },
     {
-      "id": "FUNC-03097",
+      "id": "FUNC-03104",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 291,
       "name": "<callback:page.waitForFunction#0>",
@@ -31005,7 +31075,7 @@
       "astEnd": 20884
     },
     {
-      "id": "FUNC-03098",
+      "id": "FUNC-03105",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 301,
       "name": "<callback:kuraiPanel.innerText().catch#0>",
@@ -31015,7 +31085,7 @@
       "astEnd": 21495
     },
     {
-      "id": "FUNC-03099",
+      "id": "FUNC-03106",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 308,
       "name": "cleanupAccount",
@@ -31025,7 +31095,7 @@
       "astEnd": 22533
     },
     {
-      "id": "FUNC-03100",
+      "id": "FUNC-03107",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 315,
       "name": "<callback:page.once#1>",
@@ -31035,7 +31105,7 @@
       "astEnd": 22380
     },
     {
-      "id": "FUNC-03101",
+      "id": "FUNC-03108",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 324,
       "name": "<callback:page.on#1>",
@@ -31045,7 +31115,7 @@
       "astEnd": 22788
     },
     {
-      "id": "FUNC-03102",
+      "id": "FUNC-03109",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 325,
       "name": "<callback:page.on#1>",
@@ -31055,7 +31125,7 @@
       "astEnd": 22867
     },
     {
-      "id": "FUNC-03103",
+      "id": "FUNC-03110",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 332,
       "name": "<callback:contracts.some#0>",
@@ -31065,7 +31135,7 @@
       "astEnd": 23349
     },
     {
-      "id": "FUNC-03104",
+      "id": "FUNC-03111",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 332,
       "name": "<callback:required.filter#0>",
@@ -31075,7 +31145,7 @@
       "astEnd": 23350
     },
     {
-      "id": "FUNC-03105",
+      "id": "FUNC-03112",
       "file": "tools/browser-gameplay-e2e.mjs",
       "line": 342,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31085,7 +31155,7 @@
       "astEnd": 23745
     },
     {
-      "id": "FUNC-03106",
+      "id": "FUNC-03113",
       "file": "tools/browser-live-api.mjs",
       "line": 9,
       "name": "assert",
@@ -31095,7 +31165,7 @@
       "astEnd": 516
     },
     {
-      "id": "FUNC-03107",
+      "id": "FUNC-03114",
       "file": "tools/browser-live-api.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31105,7 +31175,7 @@
       "astEnd": 753
     },
     {
-      "id": "FUNC-03108",
+      "id": "FUNC-03115",
       "file": "tools/browser-live-api.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31115,7 +31185,7 @@
       "astEnd": 829
     },
     {
-      "id": "FUNC-03109",
+      "id": "FUNC-03116",
       "file": "tools/browser-live-api.mjs",
       "line": 17,
       "name": "<callback:page.goto().catch#0>",
@@ -31125,7 +31195,7 @@
       "astEnd": 1349
     },
     {
-      "id": "FUNC-03110",
+      "id": "FUNC-03117",
       "file": "tools/browser-live-api.mjs",
       "line": 19,
       "name": "<callback:page.locator().innerText().catch#0>",
@@ -31135,7 +31205,7 @@
       "astEnd": 1628
     },
     {
-      "id": "FUNC-03111",
+      "id": "FUNC-03118",
       "file": "tools/browser-live-api.mjs",
       "line": 20,
       "name": "<callback:page.evaluate#0>",
@@ -31145,7 +31215,7 @@
       "astEnd": 1991
     },
     {
-      "id": "FUNC-03112",
+      "id": "FUNC-03119",
       "file": "tools/browser-live-api.mjs",
       "line": 22,
       "name": "<callback:page.evaluate#0>",
@@ -31155,7 +31225,7 @@
       "astEnd": 2696
     },
     {
-      "id": "FUNC-03113",
+      "id": "FUNC-03120",
       "file": "tools/browser-live-api.mjs",
       "line": 25,
       "name": "<callback:page.evaluate#0>",
@@ -31165,7 +31235,7 @@
       "astEnd": 3946
     },
     {
-      "id": "FUNC-03114",
+      "id": "FUNC-03121",
       "file": "tools/browser-live-api.mjs",
       "line": 26,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31175,7 +31245,7 @@
       "astEnd": 4296
     },
     {
-      "id": "FUNC-03115",
+      "id": "FUNC-03122",
       "file": "tools/browser-smoke.mjs",
       "line": 7,
       "name": "assert",
@@ -31185,7 +31255,7 @@
       "astEnd": 382
     },
     {
-      "id": "FUNC-03116",
+      "id": "FUNC-03123",
       "file": "tools/browser-smoke.mjs",
       "line": 7,
       "name": "fail",
@@ -31195,7 +31265,7 @@
       "astEnd": 345
     },
     {
-      "id": "FUNC-03117",
+      "id": "FUNC-03124",
       "file": "tools/browser-smoke.mjs",
       "line": 9,
       "name": "<callback:page.on#1>",
@@ -31205,7 +31275,7 @@
       "astEnd": 620
     },
     {
-      "id": "FUNC-03118",
+      "id": "FUNC-03125",
       "file": "tools/browser-smoke.mjs",
       "line": 9,
       "name": "<callback:page.on#1>",
@@ -31215,7 +31285,7 @@
       "astEnd": 696
     },
     {
-      "id": "FUNC-03119",
+      "id": "FUNC-03126",
       "file": "tools/browser-smoke.mjs",
       "line": 10,
       "name": "<callback:page.on#1>",
@@ -31225,7 +31295,7 @@
       "astEnd": 896
     },
     {
-      "id": "FUNC-03120",
+      "id": "FUNC-03127",
       "file": "tools/browser-smoke.mjs",
       "line": 11,
       "name": "<callback:page.on#1>",
@@ -31235,7 +31305,7 @@
       "astEnd": 1073
     },
     {
-      "id": "FUNC-03121",
+      "id": "FUNC-03128",
       "file": "tools/browser-smoke.mjs",
       "line": 14,
       "name": "<callback:page.locator().innerText().catch#0>",
@@ -31245,7 +31315,7 @@
       "astEnd": 1378
     },
     {
-      "id": "FUNC-03122",
+      "id": "FUNC-03129",
       "file": "tools/browser-smoke.mjs",
       "line": 15,
       "name": "<callback:page.evaluate#0>",
@@ -31255,7 +31325,7 @@
       "astEnd": 1877
     },
     {
-      "id": "FUNC-03123",
+      "id": "FUNC-03130",
       "file": "tools/browser-smoke.mjs",
       "line": 20,
       "name": "<callback:page.evaluate#0>",
@@ -31265,7 +31335,7 @@
       "astEnd": 2635
     },
     {
-      "id": "FUNC-03124",
+      "id": "FUNC-03131",
       "file": "tools/browser-smoke.mjs",
       "line": 21,
       "name": "<callback:page.evaluate#0>",
@@ -31275,7 +31345,7 @@
       "astEnd": 2854
     },
     {
-      "id": "FUNC-03125",
+      "id": "FUNC-03132",
       "file": "tools/browser-smoke.mjs",
       "line": 22,
       "name": "<callback:page.once#1>",
@@ -31285,7 +31355,7 @@
       "astEnd": 3006
     },
     {
-      "id": "FUNC-03126",
+      "id": "FUNC-03133",
       "file": "tools/browser-smoke.mjs",
       "line": 23,
       "name": "<callback:page.evaluate#0>",
@@ -31295,7 +31365,7 @@
       "astEnd": 3349
     },
     {
-      "id": "FUNC-03127",
+      "id": "FUNC-03134",
       "file": "tools/browser-smoke.mjs",
       "line": 24,
       "name": "<callback:consoleErrors.filter#0>",
@@ -31305,7 +31375,7 @@
       "astEnd": 3829
     },
     {
-      "id": "FUNC-03128",
+      "id": "FUNC-03135",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 18,
       "name": "sha256",
@@ -31315,7 +31385,7 @@
       "astEnd": 827
     },
     {
-      "id": "FUNC-03129",
+      "id": "FUNC-03136",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 19,
       "name": "norm",
@@ -31325,7 +31395,7 @@
       "astEnd": 882
     },
     {
-      "id": "FUNC-03130",
+      "id": "FUNC-03137",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 20,
       "name": "isDocs",
@@ -31335,7 +31405,7 @@
       "astEnd": 931
     },
     {
-      "id": "FUNC-03131",
+      "id": "FUNC-03138",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 21,
       "name": "isSource",
@@ -31345,7 +31415,7 @@
       "astEnd": 1020
     },
     {
-      "id": "FUNC-03132",
+      "id": "FUNC-03139",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 22,
       "name": "esc",
@@ -31355,7 +31425,7 @@
       "astEnd": 1087
     },
     {
-      "id": "FUNC-03133",
+      "id": "FUNC-03140",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 23,
       "name": "code",
@@ -31365,7 +31435,7 @@
       "astEnd": 1155
     },
     {
-      "id": "FUNC-03134",
+      "id": "FUNC-03141",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 24,
       "name": "fence",
@@ -31375,7 +31445,7 @@
       "astEnd": 1254
     },
     {
-      "id": "FUNC-03135",
+      "id": "FUNC-03142",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 25,
       "name": "langFor",
@@ -31385,7 +31455,7 @@
       "astEnd": 1514
     },
     {
-      "id": "FUNC-03136",
+      "id": "FUNC-03143",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 42,
       "name": "exactFunctionRecord",
@@ -31395,7 +31465,7 @@
       "astEnd": 2876
     },
     {
-      "id": "FUNC-03137",
+      "id": "FUNC-03144",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 74,
       "name": "<callback:functionRecords.filter#0>",
@@ -31405,7 +31475,7 @@
       "astEnd": 3021
     },
     {
-      "id": "FUNC-03138",
+      "id": "FUNC-03145",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 75,
       "name": "<callback:functionRecords.filter().map#0>",
@@ -31415,7 +31485,7 @@
       "astEnd": 3118
     },
     {
-      "id": "FUNC-03139",
+      "id": "FUNC-03146",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 77,
       "name": "actionHandlerEvidence",
@@ -31425,7 +31495,7 @@
       "astEnd": 4909
     },
     {
-      "id": "FUNC-03140",
+      "id": "FUNC-03147",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 97,
       "name": "<callback:explicit.some#0>",
@@ -31435,7 +31505,7 @@
       "astEnd": 4172
     },
     {
-      "id": "FUNC-03141",
+      "id": "FUNC-03148",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 101,
       "name": "<callback:action.sources || [].every#0>",
@@ -31445,7 +31515,7 @@
       "astEnd": 4378
     },
     {
-      "id": "FUNC-03142",
+      "id": "FUNC-03149",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 117,
       "name": "<callback:inv.uiActions || [].map#0>",
@@ -31455,7 +31525,7 @@
       "astEnd": 4998
     },
     {
-      "id": "FUNC-03143",
+      "id": "FUNC-03150",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 118,
       "name": "<callback:uiTraces.filter#0>",
@@ -31465,7 +31535,7 @@
       "astEnd": 5093
     },
     {
-      "id": "FUNC-03144",
+      "id": "FUNC-03151",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 119,
       "name": "<callback:MANUAL_DOCS.map#0>",
@@ -31475,7 +31545,7 @@
       "astEnd": 5293
     },
     {
-      "id": "FUNC-03145",
+      "id": "FUNC-03152",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 124,
       "name": "<callback:manualDocs.filter().map#0>",
@@ -31485,7 +31555,7 @@
       "astEnd": 5371
     },
     {
-      "id": "FUNC-03146",
+      "id": "FUNC-03153",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 124,
       "name": "<callback:manualDocs.filter#0>",
@@ -31495,7 +31565,7 @@
       "astEnd": 5354
     },
     {
-      "id": "FUNC-03147",
+      "id": "FUNC-03154",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 125,
       "name": "<callback:inv.files || [].filter#0>",
@@ -31505,7 +31575,7 @@
       "astEnd": 5482
     },
     {
-      "id": "FUNC-03148",
+      "id": "FUNC-03155",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 126,
       "name": "<callback:inv.files || [].filter#0>",
@@ -31515,7 +31585,7 @@
       "astEnd": 5541
     },
     {
-      "id": "FUNC-03149",
+      "id": "FUNC-03156",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 127,
       "name": "<callback:uiTraces.filter#0>",
@@ -31525,7 +31595,7 @@
       "astEnd": 5599
     },
     {
-      "id": "FUNC-03150",
+      "id": "FUNC-03157",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 131,
       "name": "gate",
@@ -31535,7 +31605,7 @@
       "astEnd": 5857
     },
     {
-      "id": "FUNC-03151",
+      "id": "FUNC-03158",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 141,
       "name": "<callback:functionRecords.filter#0>",
@@ -31545,7 +31615,7 @@
       "astEnd": 6194
     },
     {
-      "id": "FUNC-03152",
+      "id": "FUNC-03159",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 147,
       "name": "<callback:uiTraces.filter#0>",
@@ -31555,7 +31625,7 @@
       "astEnd": 6483
     },
     {
-      "id": "FUNC-03153",
+      "id": "FUNC-03160",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 148,
       "name": "<callback:concreteActions.filter#0>",
@@ -31565,7 +31635,7 @@
       "astEnd": 6584
     },
     {
-      "id": "FUNC-03154",
+      "id": "FUNC-03161",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 166,
       "name": "<callback:unresolvedUIActions.map#0>",
@@ -31575,7 +31645,7 @@
       "astEnd": 7251
     },
     {
-      "id": "FUNC-03155",
+      "id": "FUNC-03162",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 167,
       "name": "<callback:functionRecords.map#0>",
@@ -31585,7 +31655,7 @@
       "astEnd": 7479
     },
     {
-      "id": "FUNC-03156",
+      "id": "FUNC-03163",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 171,
       "name": "<callback:uiTraces.map#0>",
@@ -31595,7 +31665,7 @@
       "astEnd": 7622
     },
     {
-      "id": "FUNC-03157",
+      "id": "FUNC-03164",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 172,
       "name": "<callback:sourceFiles.map#0>",
@@ -31605,7 +31675,7 @@
       "astEnd": 7711
     },
     {
-      "id": "FUNC-03158",
+      "id": "FUNC-03165",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 173,
       "name": "<callback:assetFiles.map#0>",
@@ -31615,7 +31685,7 @@
       "astEnd": 7798
     },
     {
-      "id": "FUNC-03159",
+      "id": "FUNC-03166",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 215,
       "name": "<callback:r.sources || [].map#0>",
@@ -31625,7 +31695,7 @@
       "astEnd": 9987
     },
     {
-      "id": "FUNC-03160",
+      "id": "FUNC-03167",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 217,
       "name": "<callback:a.sources || [].map#0>",
@@ -31635,7 +31705,7 @@
       "astEnd": 10201
     },
     {
-      "id": "FUNC-03161",
+      "id": "FUNC-03168",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 219,
       "name": "<callback:c.sources || [].map#0>",
@@ -31645,7 +31715,7 @@
       "astEnd": 10422
     },
     {
-      "id": "FUNC-03162",
+      "id": "FUNC-03169",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 228,
       "name": "<callback:a.sources || [].map#0>",
@@ -31655,7 +31725,7 @@
       "astEnd": 11027
     },
     {
-      "id": "FUNC-03163",
+      "id": "FUNC-03170",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 229,
       "name": "<callback:a.evidence || [].map#0>",
@@ -31665,7 +31735,7 @@
       "astEnd": 11146
     },
     {
-      "id": "FUNC-03164",
+      "id": "FUNC-03171",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 233,
       "name": "<callback:e.sources || [].map#0>",
@@ -31675,7 +31745,7 @@
       "astEnd": 11418
     },
     {
-      "id": "FUNC-03165",
+      "id": "FUNC-03172",
       "file": "tools/build-final-canonical-spec.mjs",
       "line": 256,
       "name": "<callback:a.sources || [].map#0>",
@@ -31685,7 +31755,7 @@
       "astEnd": 13217
     },
     {
-      "id": "FUNC-03166",
+      "id": "FUNC-03173",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 4,
       "name": "read",
@@ -31695,7 +31765,7 @@
       "astEnd": 181
     },
     {
-      "id": "FUNC-03167",
+      "id": "FUNC-03174",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 8,
       "name": "normalize",
@@ -31705,7 +31775,7 @@
       "astEnd": 241
     },
     {
-      "id": "FUNC-03168",
+      "id": "FUNC-03175",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 9,
       "name": "isHash",
@@ -31715,7 +31785,7 @@
       "astEnd": 301
     },
     {
-      "id": "FUNC-03169",
+      "id": "FUNC-03176",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 10,
       "name": "runHash",
@@ -31725,7 +31795,7 @@
       "astEnd": 443
     },
     {
-      "id": "FUNC-03170",
+      "id": "FUNC-03177",
       "file": "tools/final-readiness-orchestration-gate.mjs",
       "line": 62,
       "name": "<callback:gameplay.contracts.every#0>",
@@ -31735,7 +31805,7 @@
       "astEnd": 3721
     },
     {
-      "id": "FUNC-03171",
+      "id": "FUNC-03178",
       "file": "tools/final-readiness.mjs",
       "line": 8,
       "name": "pass",
@@ -31745,7 +31815,7 @@
       "astEnd": 284
     },
     {
-      "id": "FUNC-03172",
+      "id": "FUNC-03179",
       "file": "tools/final-readiness.mjs",
       "line": 9,
       "name": "normalizedOrigin",
@@ -31755,7 +31825,7 @@
       "astEnd": 359
     },
     {
-      "id": "FUNC-03173",
+      "id": "FUNC-03180",
       "file": "tools/final-readiness.mjs",
       "line": 10,
       "name": "isHash",
@@ -31765,7 +31835,7 @@
       "astEnd": 421
     },
     {
-      "id": "FUNC-03174",
+      "id": "FUNC-03181",
       "file": "tools/final-readiness.mjs",
       "line": 11,
       "name": "readJson",
@@ -31775,7 +31845,7 @@
       "astEnd": 675
     },
     {
-      "id": "FUNC-03175",
+      "id": "FUNC-03182",
       "file": "tools/final-readiness.mjs",
       "line": 12,
       "name": "fingerprint",
@@ -31785,7 +31855,7 @@
       "astEnd": 892
     },
     {
-      "id": "FUNC-03176",
+      "id": "FUNC-03183",
       "file": "tools/final-readiness.mjs",
       "line": 41,
       "name": "<callback:operational.contracts.every#0>",
@@ -31795,7 +31865,7 @@
       "astEnd": 3272
     },
     {
-      "id": "FUNC-03177",
+      "id": "FUNC-03184",
       "file": "tools/final-readiness.mjs",
       "line": 109,
       "name": "<callback:gameplay.contracts.every#0>",
@@ -31805,7 +31875,7 @@
       "astEnd": 11870
     },
     {
-      "id": "FUNC-03178",
+      "id": "FUNC-03185",
       "file": "tools/final-readiness.mjs",
       "line": 132,
       "name": "<callback:[consumerFingerprints.account,consumerFingerprints.browserAccount,consumerFingerprints.gameplay].every#0>",
@@ -31815,7 +31885,7 @@
       "astEnd": 14086
     },
     {
-      "id": "FUNC-03179",
+      "id": "FUNC-03186",
       "file": "tools/final-readiness.mjs",
       "line": 134,
       "name": "<callback:[consumerReleaseFingerprints.account,consumerReleaseFingerprints.browserAccount,consumerReleaseFingerprints.gameplay].every#0>",
@@ -31825,7 +31895,7 @@
       "astEnd": 14493
     },
     {
-      "id": "FUNC-03180",
+      "id": "FUNC-03187",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 26,
       "name": "walk",
@@ -31835,7 +31905,7 @@
       "astEnd": 1539
     },
     {
-      "id": "FUNC-03181",
+      "id": "FUNC-03188",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 40,
       "name": "reEsc",
@@ -31845,7 +31915,7 @@
       "astEnd": 1620
     },
     {
-      "id": "FUNC-03182",
+      "id": "FUNC-03189",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 41,
       "name": "lineAt",
@@ -31855,7 +31925,7 @@
       "astEnd": 1749
     },
     {
-      "id": "FUNC-03183",
+      "id": "FUNC-03190",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 46,
       "name": "occurrences",
@@ -31865,7 +31935,7 @@
       "astEnd": 1943
     },
     {
-      "id": "FUNC-03184",
+      "id": "FUNC-03191",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 55,
       "name": "uniqEvidence",
@@ -31875,7 +31945,7 @@
       "astEnd": 2153
     },
     {
-      "id": "FUNC-03185",
+      "id": "FUNC-03192",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 57,
       "name": "<callback:items.filter#0>",
@@ -31885,7 +31955,7 @@
       "astEnd": 2149
     },
     {
-      "id": "FUNC-03186",
+      "id": "FUNC-03193",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 65,
       "name": "aliasesForDatasetAction",
@@ -31895,7 +31965,7 @@
       "astEnd": 2418
     },
     {
-      "id": "FUNC-03187",
+      "id": "FUNC-03194",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 73,
       "name": "handlerEvidence",
@@ -31905,7 +31975,7 @@
       "astEnd": 5904
     },
     {
-      "id": "FUNC-03188",
+      "id": "FUNC-03195",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 145,
       "name": "<callback:report.uiTraces || [].map#0>",
@@ -31915,7 +31985,7 @@
       "astEnd": 5974
     },
     {
-      "id": "FUNC-03189",
+      "id": "FUNC-03196",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 156,
       "name": "<callback:report.uiTraces || [].filter#0>",
@@ -31925,7 +31995,7 @@
       "astEnd": 6358
     },
     {
-      "id": "FUNC-03190",
+      "id": "FUNC-03197",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 157,
       "name": "<callback:concrete.filter#0>",
@@ -31935,7 +32005,7 @@
       "astEnd": 6430
     },
     {
-      "id": "FUNC-03191",
+      "id": "FUNC-03198",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 158,
       "name": "<callback:unresolved.map#0>",
@@ -31945,7 +32015,7 @@
       "astEnd": 6560
     },
     {
-      "id": "FUNC-03192",
+      "id": "FUNC-03199",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 159,
       "name": "<callback:concrete.filter#0>",
@@ -31955,7 +32025,7 @@
       "astEnd": 6658
     },
     {
-      "id": "FUNC-03193",
+      "id": "FUNC-03200",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 179,
       "name": "<callback:trace.evidence || [].map#0>",
@@ -31965,7 +32035,7 @@
       "astEnd": 7797
     },
     {
-      "id": "FUNC-03194",
+      "id": "FUNC-03201",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 198,
       "name": "<callback:a.sources || [].map#0>",
@@ -31975,7 +32045,7 @@
       "astEnd": 8941
     },
     {
-      "id": "FUNC-03195",
+      "id": "FUNC-03202",
       "file": "tools/finalize-canonical-ui-trace.mjs",
       "line": 218,
       "name": "<callback:unresolved.map#0>",
@@ -31985,7 +32055,7 @@
       "astEnd": 9675
     },
     {
-      "id": "FUNC-03196",
+      "id": "FUNC-03203",
       "file": "tools/generate-technical-spec.mjs",
       "line": 13,
       "name": "px",
@@ -31995,7 +32065,7 @@
       "astEnd": 590
     },
     {
-      "id": "FUNC-03197",
+      "id": "FUNC-03204",
       "file": "tools/generate-technical-spec.mjs",
       "line": 14,
       "name": "rel",
@@ -32005,7 +32075,7 @@
       "astEnd": 630
     },
     {
-      "id": "FUNC-03198",
+      "id": "FUNC-03205",
       "file": "tools/generate-technical-spec.mjs",
       "line": 15,
       "name": "code",
@@ -32015,7 +32085,7 @@
       "astEnd": 687
     },
     {
-      "id": "FUNC-03199",
+      "id": "FUNC-03206",
       "file": "tools/generate-technical-spec.mjs",
       "line": 16,
       "name": "clean",
@@ -32025,7 +32095,7 @@
       "astEnd": 767
     },
     {
-      "id": "FUNC-03200",
+      "id": "FUNC-03207",
       "file": "tools/generate-technical-spec.mjs",
       "line": 17,
       "name": "uniq",
@@ -32035,7 +32105,7 @@
       "astEnd": 814
     },
     {
-      "id": "FUNC-03201",
+      "id": "FUNC-03208",
       "file": "tools/generate-technical-spec.mjs",
       "line": 18,
       "name": "ident",
@@ -32045,7 +32115,7 @@
       "astEnd": 876
     },
     {
-      "id": "FUNC-03202",
+      "id": "FUNC-03209",
       "file": "tools/generate-technical-spec.mjs",
       "line": 19,
       "name": "hash",
@@ -32055,7 +32125,7 @@
       "astEnd": 943
     },
     {
-      "id": "FUNC-03203",
+      "id": "FUNC-03210",
       "file": "tools/generate-technical-spec.mjs",
       "line": 21,
       "name": "walk",
@@ -32065,7 +32135,7 @@
       "astEnd": 1246
     },
     {
-      "id": "FUNC-03204",
+      "id": "FUNC-03211",
       "file": "tools/generate-technical-spec.mjs",
       "line": 32,
       "name": "lineLocator",
@@ -32075,7 +32145,7 @@
       "astEnd": 1529
     },
     {
-      "id": "FUNC-03205",
+      "id": "FUNC-03212",
       "file": "tools/generate-technical-spec.mjs",
       "line": 35,
       "name": "<anonymous@35:9>",
@@ -32085,7 +32155,7 @@
       "astEnd": 1526
     },
     {
-      "id": "FUNC-03206",
+      "id": "FUNC-03213",
       "file": "tools/generate-technical-spec.mjs",
       "line": 42,
       "name": "readText",
@@ -32095,7 +32165,7 @@
       "astEnd": 1718
     },
     {
-      "id": "FUNC-03207",
+      "id": "FUNC-03214",
       "file": "tools/generate-technical-spec.mjs",
       "line": 48,
       "name": "blockEnd",
@@ -32105,7 +32175,7 @@
       "astEnd": 2455
     },
     {
-      "id": "FUNC-03208",
+      "id": "FUNC-03215",
       "file": "tools/generate-technical-spec.mjs",
       "line": 69,
       "name": "bodyAt",
@@ -32115,7 +32185,7 @@
       "astEnd": 2614
     },
     {
-      "id": "FUNC-03209",
+      "id": "FUNC-03216",
       "file": "tools/generate-technical-spec.mjs",
       "line": 75,
       "name": "captures",
@@ -32125,7 +32195,7 @@
       "astEnd": 2756
     },
     {
-      "id": "FUNC-03210",
+      "id": "FUNC-03217",
       "file": "tools/generate-technical-spec.mjs",
       "line": 81,
       "name": "refs",
@@ -32135,7 +32205,7 @@
       "astEnd": 3498
     },
     {
-      "id": "FUNC-03211",
+      "id": "FUNC-03218",
       "file": "tools/generate-technical-spec.mjs",
       "line": 99,
       "name": "extractFunctions",
@@ -32145,7 +32215,7 @@
       "astEnd": 4637
     },
     {
-      "id": "FUNC-03212",
+      "id": "FUNC-03219",
       "file": "tools/generate-technical-spec.mjs",
       "line": 133,
       "name": "<callback:files.sort#0>",
@@ -32155,7 +32225,7 @@
       "astEnd": 5112
     },
     {
-      "id": "FUNC-03213",
+      "id": "FUNC-03220",
       "file": "tools/generate-technical-spec.mjs",
       "line": 137,
       "name": "<callback:functions.sort#0>",
@@ -32165,7 +32235,7 @@
       "astEnd": 5365
     },
     {
-      "id": "FUNC-03214",
+      "id": "FUNC-03221",
       "file": "tools/generate-technical-spec.mjs",
       "line": 138,
       "name": "<callback:functions.map#0>",
@@ -32175,7 +32245,7 @@
       "astEnd": 5416
     },
     {
-      "id": "FUNC-03215",
+      "id": "FUNC-03222",
       "file": "tools/generate-technical-spec.mjs",
       "line": 144,
       "name": "<callback:functions.forEach#0>",
@@ -32185,7 +32255,7 @@
       "astEnd": 5692
     },
     {
-      "id": "FUNC-03216",
+      "id": "FUNC-03223",
       "file": "tools/generate-technical-spec.mjs",
       "line": 149,
       "name": "add",
@@ -32195,7 +32265,7 @@
       "astEnd": 5984
     },
     {
-      "id": "FUNC-03217",
+      "id": "FUNC-03224",
       "file": "tools/generate-technical-spec.mjs",
       "line": 150,
       "name": "<callback:add#2>",
@@ -32205,7 +32275,7 @@
       "astEnd": 6081
     },
     {
-      "id": "FUNC-03218",
+      "id": "FUNC-03225",
       "file": "tools/generate-technical-spec.mjs",
       "line": 151,
       "name": "<callback:add#2>",
@@ -32215,7 +32285,7 @@
       "astEnd": 6173
     },
     {
-      "id": "FUNC-03219",
+      "id": "FUNC-03226",
       "file": "tools/generate-technical-spec.mjs",
       "line": 152,
       "name": "<callback:add#2>",
@@ -32225,7 +32295,7 @@
       "astEnd": 6277
     },
     {
-      "id": "FUNC-03220",
+      "id": "FUNC-03227",
       "file": "tools/generate-technical-spec.mjs",
       "line": 153,
       "name": "<callback:add#2>",
@@ -32235,7 +32305,7 @@
       "astEnd": 6445
     },
     {
-      "id": "FUNC-03221",
+      "id": "FUNC-03228",
       "file": "tools/generate-technical-spec.mjs",
       "line": 154,
       "name": "<callback:add#2>",
@@ -32245,7 +32315,7 @@
       "astEnd": 6542
     },
     {
-      "id": "FUNC-03222",
+      "id": "FUNC-03229",
       "file": "tools/generate-technical-spec.mjs",
       "line": 155,
       "name": "<callback:add#2>",
@@ -32255,7 +32325,7 @@
       "astEnd": 6642
     },
     {
-      "id": "FUNC-03223",
+      "id": "FUNC-03230",
       "file": "tools/generate-technical-spec.mjs",
       "line": 156,
       "name": "<callback:add#2>",
@@ -32265,7 +32335,7 @@
       "astEnd": 6733
     },
     {
-      "id": "FUNC-03224",
+      "id": "FUNC-03231",
       "file": "tools/generate-technical-spec.mjs",
       "line": 157,
       "name": "<callback:add#2>",
@@ -32275,7 +32345,7 @@
       "astEnd": 6814
     },
     {
-      "id": "FUNC-03225",
+      "id": "FUNC-03232",
       "file": "tools/generate-technical-spec.mjs",
       "line": 158,
       "name": "<callback:text.split().forEach#0>",
@@ -32285,7 +32355,7 @@
       "astEnd": 7074
     },
     {
-      "id": "FUNC-03226",
+      "id": "FUNC-03233",
       "file": "tools/generate-technical-spec.mjs",
       "line": 163,
       "name": "grouped",
@@ -32295,7 +32365,7 @@
       "astEnd": 7411
     },
     {
-      "id": "FUNC-03227",
+      "id": "FUNC-03234",
       "file": "tools/generate-technical-spec.mjs",
       "line": 166,
       "name": "<callback:[...map.entries()].sort().map#0>",
@@ -32305,7 +32375,7 @@
       "astEnd": 7407
     },
     {
-      "id": "FUNC-03228",
+      "id": "FUNC-03235",
       "file": "tools/generate-technical-spec.mjs",
       "line": 166,
       "name": "<callback:[...map.entries()].sort#0>",
@@ -32315,7 +32385,7 @@
       "astEnd": 7342
     },
     {
-      "id": "FUNC-03229",
+      "id": "FUNC-03236",
       "file": "tools/generate-technical-spec.mjs",
       "line": 168,
       "name": "<callback:grouped().map#0>",
@@ -32325,7 +32395,7 @@
       "astEnd": 7501
     },
     {
-      "id": "FUNC-03230",
+      "id": "FUNC-03237",
       "file": "tools/generate-technical-spec.mjs",
       "line": 169,
       "name": "<callback:grouped().map#0>",
@@ -32335,7 +32405,7 @@
       "astEnd": 7592
     },
     {
-      "id": "FUNC-03231",
+      "id": "FUNC-03238",
       "file": "tools/generate-technical-spec.mjs",
       "line": 170,
       "name": "<callback:grouped().map#0>",
@@ -32345,7 +32415,7 @@
       "astEnd": 7692
     },
     {
-      "id": "FUNC-03232",
+      "id": "FUNC-03239",
       "file": "tools/generate-technical-spec.mjs",
       "line": 173,
       "name": "<callback:occ.storage.forEach#0>",
@@ -32355,7 +32425,7 @@
       "astEnd": 7825
     },
     {
-      "id": "FUNC-03233",
+      "id": "FUNC-03240",
       "file": "tools/generate-technical-spec.mjs",
       "line": 174,
       "name": "<callback:occ.movement.forEach#0>",
@@ -32365,7 +32435,7 @@
       "astEnd": 7878
     },
     {
-      "id": "FUNC-03234",
+      "id": "FUNC-03241",
       "file": "tools/generate-technical-spec.mjs",
       "line": 175,
       "name": "<callback:occ.assets.forEach#0>",
@@ -32375,7 +32445,7 @@
       "astEnd": 7933
     },
     {
-      "id": "FUNC-03235",
+      "id": "FUNC-03242",
       "file": "tools/generate-technical-spec.mjs",
       "line": 176,
       "name": "<callback:occ.env.forEach#0>",
@@ -32385,7 +32455,7 @@
       "astEnd": 7980
     },
     {
-      "id": "FUNC-03236",
+      "id": "FUNC-03243",
       "file": "tools/generate-technical-spec.mjs",
       "line": 179,
       "name": "<anonymous@179:49>",
@@ -32395,7 +32465,7 @@
       "astEnd": 8079
     },
     {
-      "id": "FUNC-03237",
+      "id": "FUNC-03244",
       "file": "tools/generate-technical-spec.mjs",
       "line": 186,
       "name": "<callback:files.filter().map#0>",
@@ -32405,7 +32475,7 @@
       "astEnd": 8466
     },
     {
-      "id": "FUNC-03238",
+      "id": "FUNC-03245",
       "file": "tools/generate-technical-spec.mjs",
       "line": 186,
       "name": "<callback:files.filter#0>",
@@ -32415,7 +32485,7 @@
       "astEnd": 8451
     },
     {
-      "id": "FUNC-03239",
+      "id": "FUNC-03246",
       "file": "tools/generate-technical-spec.mjs",
       "line": 187,
       "name": "<callback:occ.assets.map#0>",
@@ -32425,7 +32495,7 @@
       "astEnd": 8543
     },
     {
-      "id": "FUNC-03240",
+      "id": "FUNC-03247",
       "file": "tools/generate-technical-spec.mjs",
       "line": 195,
       "name": "<callback:files.filter#0>",
@@ -32435,7 +32505,7 @@
       "astEnd": 8873
     },
     {
-      "id": "FUNC-03241",
+      "id": "FUNC-03248",
       "file": "tools/generate-technical-spec.mjs",
       "line": 196,
       "name": "<callback:files.filter#0>",
@@ -32445,7 +32515,7 @@
       "astEnd": 8921
     },
     {
-      "id": "FUNC-03242",
+      "id": "FUNC-03249",
       "file": "tools/generate-technical-spec.mjs",
       "line": 208,
       "name": "<callback:assetRefs.filter#0>",
@@ -32455,7 +32525,7 @@
       "astEnd": 9352
     },
     {
-      "id": "FUNC-03243",
+      "id": "FUNC-03250",
       "file": "tools/generate-technical-spec.mjs",
       "line": 216,
       "name": "header",
@@ -32465,7 +32535,7 @@
       "astEnd": 9770
     },
     {
-      "id": "FUNC-03244",
+      "id": "FUNC-03251",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "<callback:a.map#0>",
@@ -32475,7 +32545,7 @@
       "astEnd": 9830
     },
     {
-      "id": "FUNC-03245",
+      "id": "FUNC-03252",
       "file": "tools/generate-technical-spec.mjs",
       "line": 217,
       "name": "sources",
@@ -32485,7 +32555,7 @@
       "astEnd": 9844
     },
     {
-      "id": "FUNC-03246",
+      "id": "FUNC-03253",
       "file": "tools/generate-technical-spec.mjs",
       "line": 218,
       "name": "listCodes",
@@ -32495,7 +32565,7 @@
       "astEnd": 9912
     },
     {
-      "id": "FUNC-03247",
+      "id": "FUNC-03254",
       "file": "tools/generate-technical-spec.mjs",
       "line": 265,
       "name": "<callback:files.filter#0>",
@@ -32505,7 +32575,7 @@
       "astEnd": 13248
     },
     {
-      "id": "FUNC-03248",
+      "id": "FUNC-03255",
       "file": "tools/live-worker-e2e.mjs",
       "line": 11,
       "name": "assert",
@@ -32515,7 +32585,7 @@
       "astEnd": 385
     },
     {
-      "id": "FUNC-03249",
+      "id": "FUNC-03256",
       "file": "tools/live-worker-e2e.mjs",
       "line": 12,
       "name": "record",
@@ -32525,7 +32595,7 @@
       "astEnd": 449
     },
     {
-      "id": "FUNC-03250",
+      "id": "FUNC-03257",
       "file": "tools/live-worker-e2e.mjs",
       "line": 13,
       "name": "request",
@@ -32535,7 +32605,7 @@
       "astEnd": 1173
     },
     {
-      "id": "FUNC-03251",
+      "id": "FUNC-03258",
       "file": "tools/live-worker-e2e.mjs",
       "line": 23,
       "name": "safe",
@@ -32545,7 +32615,7 @@
       "astEnd": 1401
     },
     {
-      "id": "FUNC-03252",
+      "id": "FUNC-03259",
       "file": "tools/live-worker-e2e.mjs",
       "line": 29,
       "name": "writeReport",
@@ -32555,7 +32625,7 @@
       "astEnd": 1827
     },
     {
-      "id": "FUNC-03253",
+      "id": "FUNC-03260",
       "file": "tools/live-worker-e2e.mjs",
       "line": 123,
       "name": "<callback:slots.data.slots.some#0>",
@@ -32565,7 +32635,7 @@
       "astEnd": 8130
     },
     {
-      "id": "FUNC-03254",
+      "id": "FUNC-03261",
       "file": "tools/live-worker-e2e.mjs",
       "line": 123,
       "name": "<callback:slots.data.slots.some#0>",
@@ -32575,7 +32645,7 @@
       "astEnd": 8184
     },
     {
-      "id": "FUNC-03255",
+      "id": "FUNC-03262",
       "file": "tools/live-worker-e2e.mjs",
       "line": 132,
       "name": "<callback:create.data?.members || [].find#0>",
@@ -32585,7 +32655,7 @@
       "astEnd": 8685
     },
     {
-      "id": "FUNC-03256",
+      "id": "FUNC-03263",
       "file": "tools/live-worker-e2e.mjs",
       "line": 144,
       "name": "<callback:createAlt.data?.members || [].find#0>",
@@ -32595,7 +32665,7 @@
       "astEnd": 9401
     },
     {
-      "id": "FUNC-03257",
+      "id": "FUNC-03264",
       "file": "tools/live-worker-e2e.mjs",
       "line": 171,
       "name": "<callback:messages.data.messages.some#0>",
@@ -32605,7 +32675,7 @@
       "astEnd": 11386
     },
     {
-      "id": "FUNC-03258",
+      "id": "FUNC-03265",
       "file": "tools/live-worker-e2e.mjs",
       "line": 207,
       "name": "<callback:actions.some#0>",
@@ -32615,7 +32685,7 @@
       "astEnd": 13814
     },
     {
-      "id": "FUNC-03259",
+      "id": "FUNC-03266",
       "file": "tools/live-worker-e2e.mjs",
       "line": 208,
       "name": "<callback:members.find#0>",
@@ -32625,7 +32695,7 @@
       "astEnd": 13948
     },
     {
-      "id": "FUNC-03260",
+      "id": "FUNC-03267",
       "file": "tools/live-worker-e2e.mjs",
       "line": 217,
       "name": "<callback:leaderboard.data?.leaderboard || [].filter#0>",
@@ -32635,7 +32705,7 @@
       "astEnd": 14644
     },
     {
-      "id": "FUNC-03261",
+      "id": "FUNC-03268",
       "file": "tools/live-worker-e2e.mjs",
       "line": 218,
       "name": "<callback:ranksA.find#0>",
@@ -32645,7 +32715,7 @@
       "astEnd": 14719
     },
     {
-      "id": "FUNC-03262",
+      "id": "FUNC-03269",
       "file": "tools/live-worker-e2e.mjs",
       "line": 219,
       "name": "<callback:ranksA.find#0>",
@@ -32655,7 +32725,7 @@
       "astEnd": 14795
     },
     {
-      "id": "FUNC-03263",
+      "id": "FUNC-03270",
       "file": "tools/live-worker-e2e.mjs",
       "line": 263,
       "name": "<callback:rankAfterSlotDelete.data?.leaderboard || [].filter#0>",
@@ -32665,7 +32735,7 @@
       "astEnd": 18045
     },
     {
-      "id": "FUNC-03264",
+      "id": "FUNC-03271",
       "file": "tools/live-worker-e2e.mjs",
       "line": 264,
       "name": "<callback:afterRows.some#0>",
@@ -32675,7 +32745,7 @@
       "astEnd": 18114
     },
     {
-      "id": "FUNC-03265",
+      "id": "FUNC-03272",
       "file": "tools/live-worker-e2e.mjs",
       "line": 265,
       "name": "<callback:afterRows.some#0>",
@@ -32685,7 +32755,7 @@
       "astEnd": 18273
     },
     {
-      "id": "FUNC-03266",
+      "id": "FUNC-03273",
       "file": "tools/live-worker-e2e.mjs",
       "line": 284,
       "name": "<callback:afterDeleteRank.data?.leaderboard || [].some#0>",
@@ -32695,7 +32765,7 @@
       "astEnd": 19523
     },
     {
-      "id": "FUNC-03267",
+      "id": "FUNC-03274",
       "file": "tools/public-release-coherence.mjs",
       "line": 12,
       "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map#0>",
@@ -32705,7 +32775,7 @@
       "astEnd": 757
     },
     {
-      "id": "FUNC-03268",
+      "id": "FUNC-03275",
       "file": "tools/public-release-coherence.mjs",
       "line": 13,
       "name": "<callback:[...html.matchAll(/(?:src|href)=\"([^\"#]+)\"/g)].map().filter#0>",
@@ -32715,7 +32785,7 @@
       "astEnd": 810
     },
     {
-      "id": "FUNC-03269",
+      "id": "FUNC-03276",
       "file": "tools/public-release-coherence.mjs",
       "line": 14,
       "name": "<callback:[...new Set(['index.html',markerPath,...refs])].filter#0>",
@@ -32725,7 +32795,7 @@
       "astEnd": 899
     },
     {
-      "id": "FUNC-03270",
+      "id": "FUNC-03277",
       "file": "tools/public-release-coherence.mjs",
       "line": 15,
       "name": "sha256",
@@ -32735,7 +32805,7 @@
       "astEnd": 969
     },
     {
-      "id": "FUNC-03271",
+      "id": "FUNC-03278",
       "file": "tools/public-release-coherence.mjs",
       "line": 41,
       "name": "<callback:checks.find#0>",
@@ -32745,7 +32815,7 @@
       "astEnd": 2233
     },
     {
-      "id": "FUNC-03272",
+      "id": "FUNC-03279",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 11,
       "name": "norm",
@@ -32755,7 +32825,7 @@
       "astEnd": 482
     },
     {
-      "id": "FUNC-03273",
+      "id": "FUNC-03280",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 12,
       "name": "isDynamic",
@@ -32765,7 +32835,7 @@
       "astEnd": 621
     },
     {
-      "id": "FUNC-03274",
+      "id": "FUNC-03281",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 16,
       "name": "existsLiteral",
@@ -32775,7 +32845,7 @@
       "astEnd": 765
     },
     {
-      "id": "FUNC-03275",
+      "id": "FUNC-03282",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 21,
       "name": "code",
@@ -32785,7 +32855,7 @@
       "astEnd": 841
     },
     {
-      "id": "FUNC-03276",
+      "id": "FUNC-03283",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "<callback:refs || [].map#0>",
@@ -32795,7 +32865,7 @@
       "astEnd": 913
     },
     {
-      "id": "FUNC-03277",
+      "id": "FUNC-03284",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 22,
       "name": "srcs",
@@ -32805,7 +32875,7 @@
       "astEnd": 925
     },
     {
-      "id": "FUNC-03278",
+      "id": "FUNC-03285",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 32,
       "name": "<callback:[...byPath.values()].sort#0>",
@@ -32815,7 +32885,7 @@
       "astEnd": 1261
     },
     {
-      "id": "FUNC-03279",
+      "id": "FUNC-03286",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 41,
       "name": "<callback:refs.filter#0>",
@@ -32825,7 +32895,7 @@
       "astEnd": 1702
     },
     {
-      "id": "FUNC-03280",
+      "id": "FUNC-03287",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 42,
       "name": "<callback:refs.filter#0>",
@@ -32835,7 +32905,7 @@
       "astEnd": 1747
     },
     {
-      "id": "FUNC-03281",
+      "id": "FUNC-03288",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 43,
       "name": "<callback:literal.filter#0>",
@@ -32845,7 +32915,7 @@
       "astEnd": 1819
     },
     {
-      "id": "FUNC-03282",
+      "id": "FUNC-03289",
       "file": "tools/reconcile-asset-references.mjs",
       "line": 44,
       "name": "<callback:literal.filter#0>",
@@ -32855,7 +32925,7 @@
       "astEnd": 1889
     },
     {
-      "id": "FUNC-03283",
+      "id": "FUNC-03290",
       "file": "tools/refine-technical-spec.mjs",
       "line": 13,
       "name": "norm",
@@ -32865,7 +32935,7 @@
       "astEnd": 578
     },
     {
-      "id": "FUNC-03284",
+      "id": "FUNC-03291",
       "file": "tools/refine-technical-spec.mjs",
       "line": 14,
       "name": "hasSourceExt",
@@ -32875,7 +32945,7 @@
       "astEnd": 653
     },
     {
-      "id": "FUNC-03285",
+      "id": "FUNC-03292",
       "file": "tools/refine-technical-spec.mjs",
       "line": 15,
       "name": "isDocumentation",
@@ -32885,7 +32955,7 @@
       "astEnd": 707
     },
     {
-      "id": "FUNC-03286",
+      "id": "FUNC-03293",
       "file": "tools/refine-technical-spec.mjs",
       "line": 16,
       "name": "isTooling",
@@ -32895,7 +32965,7 @@
       "astEnd": 818
     },
     {
-      "id": "FUNC-03287",
+      "id": "FUNC-03294",
       "file": "tools/refine-technical-spec.mjs",
       "line": 17,
       "name": "isSource",
@@ -32905,7 +32975,7 @@
       "astEnd": 874
     },
     {
-      "id": "FUNC-03288",
+      "id": "FUNC-03295",
       "file": "tools/refine-technical-spec.mjs",
       "line": 18,
       "name": "isGameRuntimeSource",
@@ -32915,7 +32985,7 @@
       "astEnd": 931
     },
     {
-      "id": "FUNC-03289",
+      "id": "FUNC-03296",
       "file": "tools/refine-technical-spec.mjs",
       "line": 19,
       "name": "domainOf",
@@ -32925,7 +32995,7 @@
       "astEnd": 1028
     },
     {
-      "id": "FUNC-03290",
+      "id": "FUNC-03297",
       "file": "tools/refine-technical-spec.mjs",
       "line": 20,
       "name": "code",
@@ -32935,7 +33005,7 @@
       "astEnd": 1085
     },
     {
-      "id": "FUNC-03291",
+      "id": "FUNC-03298",
       "file": "tools/refine-technical-spec.mjs",
       "line": 21,
       "name": "clean",
@@ -32945,7 +33015,7 @@
       "astEnd": 1165
     },
     {
-      "id": "FUNC-03292",
+      "id": "FUNC-03299",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "<callback:a||[].map#0>",
@@ -32955,7 +33025,7 @@
       "astEnd": 1219
     },
     {
-      "id": "FUNC-03293",
+      "id": "FUNC-03300",
       "file": "tools/refine-technical-spec.mjs",
       "line": 22,
       "name": "srcs",
@@ -32965,7 +33035,7 @@
       "astEnd": 1231
     },
     {
-      "id": "FUNC-03294",
+      "id": "FUNC-03301",
       "file": "tools/refine-technical-spec.mjs",
       "line": 23,
       "name": "listCodes",
@@ -32975,7 +33045,7 @@
       "astEnd": 1288
     },
     {
-      "id": "FUNC-03295",
+      "id": "FUNC-03302",
       "file": "tools/refine-technical-spec.mjs",
       "line": 24,
       "name": "header",
@@ -32985,7 +33055,7 @@
       "astEnd": 1390
     },
     {
-      "id": "FUNC-03296",
+      "id": "FUNC-03303",
       "file": "tools/refine-technical-spec.mjs",
       "line": 26,
       "name": "filterGrouped",
@@ -32995,7 +33065,7 @@
       "astEnd": 1619
     },
     {
-      "id": "FUNC-03297",
+      "id": "FUNC-03304",
       "file": "tools/refine-technical-spec.mjs",
       "line": 29,
       "name": "<callback:item.sources||[].filter#0>",
@@ -33005,7 +33075,7 @@
       "astEnd": 1546
     },
     {
-      "id": "FUNC-03298",
+      "id": "FUNC-03305",
       "file": "tools/refine-technical-spec.mjs",
       "line": 51,
       "name": "<callback:inv.functions||[].filter#0>",
@@ -33015,7 +33085,7 @@
       "astEnd": 2367
     },
     {
-      "id": "FUNC-03299",
+      "id": "FUNC-03306",
       "file": "tools/refine-technical-spec.mjs",
       "line": 52,
       "name": "<callback:inv.functions||[].filter().map#0>",
@@ -33025,7 +33095,7 @@
       "astEnd": 2411
     },
     {
-      "id": "FUNC-03300",
+      "id": "FUNC-03307",
       "file": "tools/refine-technical-spec.mjs",
       "line": 56,
       "name": "<callback:inv.storage||[].filter#0>",
@@ -33035,7 +33105,7 @@
       "astEnd": 2665
     },
     {
-      "id": "FUNC-03301",
+      "id": "FUNC-03308",
       "file": "tools/refine-technical-spec.mjs",
       "line": 59,
       "name": "<callback:inv.movement||[].filter#0>",
@@ -33045,7 +33115,7 @@
       "astEnd": 2859
     },
     {
-      "id": "FUNC-03302",
+      "id": "FUNC-03309",
       "file": "tools/refine-technical-spec.mjs",
       "line": 60,
       "name": "<callback:inv.assets||[].filter#0>",
@@ -33055,7 +33125,7 @@
       "astEnd": 2927
     },
     {
-      "id": "FUNC-03303",
+      "id": "FUNC-03310",
       "file": "tools/refine-technical-spec.mjs",
       "line": 61,
       "name": "<callback:inv.environment||[].filter#0>",
@@ -33065,7 +33135,7 @@
       "astEnd": 3005
     },
     {
-      "id": "FUNC-03304",
+      "id": "FUNC-03311",
       "file": "tools/refine-technical-spec.mjs",
       "line": 63,
       "name": "<callback:inv.functions.sort#0>",
@@ -33075,7 +33145,7 @@
       "astEnd": 3108
     },
     {
-      "id": "FUNC-03305",
+      "id": "FUNC-03312",
       "file": "tools/refine-technical-spec.mjs",
       "line": 64,
       "name": "<callback:inv.functions.forEach#0>",
@@ -33085,7 +33155,7 @@
       "astEnd": 3180
     },
     {
-      "id": "FUNC-03306",
+      "id": "FUNC-03313",
       "file": "tools/refine-technical-spec.mjs",
       "line": 65,
       "name": "<callback:inv.routes.forEach#0>",
@@ -33095,7 +33165,7 @@
       "astEnd": 3248
     },
     {
-      "id": "FUNC-03307",
+      "id": "FUNC-03314",
       "file": "tools/refine-technical-spec.mjs",
       "line": 66,
       "name": "<callback:inv.models.forEach#0>",
@@ -33105,7 +33175,7 @@
       "astEnd": 3315
     },
     {
-      "id": "FUNC-03308",
+      "id": "FUNC-03315",
       "file": "tools/refine-technical-spec.mjs",
       "line": 67,
       "name": "<callback:inv.collections.forEach#0>",
@@ -33115,7 +33185,7 @@
       "astEnd": 3387
     },
     {
-      "id": "FUNC-03309",
+      "id": "FUNC-03316",
       "file": "tools/refine-technical-spec.mjs",
       "line": 68,
       "name": "<callback:inv.storage.forEach#0>",
@@ -33125,7 +33195,7 @@
       "astEnd": 3458
     },
     {
-      "id": "FUNC-03310",
+      "id": "FUNC-03317",
       "file": "tools/refine-technical-spec.mjs",
       "line": 69,
       "name": "<callback:inv.uiActions.forEach#0>",
@@ -33135,7 +33205,7 @@
       "astEnd": 3528
     },
     {
-      "id": "FUNC-03311",
+      "id": "FUNC-03318",
       "file": "tools/refine-technical-spec.mjs",
       "line": 70,
       "name": "<callback:inv.events.forEach#0>",
@@ -33145,7 +33215,7 @@
       "astEnd": 3598
     },
     {
-      "id": "FUNC-03312",
+      "id": "FUNC-03319",
       "file": "tools/refine-technical-spec.mjs",
       "line": 71,
       "name": "<callback:inv.movement.forEach#0>",
@@ -33155,7 +33225,7 @@
       "astEnd": 3669
     },
     {
-      "id": "FUNC-03313",
+      "id": "FUNC-03320",
       "file": "tools/refine-technical-spec.mjs",
       "line": 72,
       "name": "<callback:inv.assets.forEach#0>",
@@ -33165,7 +33235,7 @@
       "astEnd": 3742
     },
     {
-      "id": "FUNC-03314",
+      "id": "FUNC-03321",
       "file": "tools/refine-technical-spec.mjs",
       "line": 73,
       "name": "<callback:inv.environment.forEach#0>",
@@ -33175,7 +33245,7 @@
       "astEnd": 3815
     },
     {
-      "id": "FUNC-03315",
+      "id": "FUNC-03322",
       "file": "tools/refine-technical-spec.mjs",
       "line": 82,
       "name": "<callback:[...assetByPath.values()].sort#0>",
@@ -33185,7 +33255,7 @@
       "astEnd": 4198
     },
     {
-      "id": "FUNC-03316",
+      "id": "FUNC-03323",
       "file": "tools/refine-technical-spec.mjs",
       "line": 84,
       "name": "<callback:inv.functions.filter#0>",
@@ -33195,7 +33265,7 @@
       "astEnd": 4288
     },
     {
-      "id": "FUNC-03317",
+      "id": "FUNC-03324",
       "file": "tools/refine-technical-spec.mjs",
       "line": 85,
       "name": "<callback:inv.functions.filter#0>",
@@ -33205,7 +33275,7 @@
       "astEnd": 4352
     },
     {
-      "id": "FUNC-03318",
+      "id": "FUNC-03325",
       "file": "tools/refine-technical-spec.mjs",
       "line": 86,
       "name": "<callback:inv.functions.filter#0>",
@@ -33215,7 +33285,7 @@
       "astEnd": 4425
     },
     {
-      "id": "FUNC-03319",
+      "id": "FUNC-03326",
       "file": "tools/refine-technical-spec.mjs",
       "line": 103,
       "name": "<callback:assetReferences.filter#0>",
@@ -33225,7 +33295,7 @@
       "astEnd": 4987
     },
     {
-      "id": "FUNC-03320",
+      "id": "FUNC-03327",
       "file": "tools/refine-technical-spec.mjs",
       "line": 104,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33235,7 +33305,7 @@
       "astEnd": 5053
     },
     {
-      "id": "FUNC-03321",
+      "id": "FUNC-03328",
       "file": "tools/refine-technical-spec.mjs",
       "line": 105,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33245,7 +33315,7 @@
       "astEnd": 5141
     },
     {
-      "id": "FUNC-03322",
+      "id": "FUNC-03329",
       "file": "tools/refine-technical-spec.mjs",
       "line": 106,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33255,7 +33325,7 @@
       "astEnd": 5237
     },
     {
-      "id": "FUNC-03323",
+      "id": "FUNC-03330",
       "file": "tools/refine-technical-spec.mjs",
       "line": 189,
       "name": "<callback:inv.files||[].filter#0>",
@@ -33265,7 +33335,7 @@
       "astEnd": 9866
     },
     {
-      "id": "FUNC-03324",
+      "id": "FUNC-03331",
       "file": "tools/refine-technical-spec.mjs",
       "line": 205,
       "name": "<callback:assetReferences.filter#0>",
@@ -33275,7 +33345,7 @@
       "astEnd": 11653
     },
     {
-      "id": "FUNC-03325",
+      "id": "FUNC-03332",
       "file": "tools/refine-technical-spec.mjs",
       "line": 220,
       "name": "<callback:inv.models.map#0>",
@@ -33285,7 +33355,7 @@
       "astEnd": 12305
     },
     {
-      "id": "FUNC-03326",
+      "id": "FUNC-03333",
       "file": "tools/release-source-fingerprint.mjs",
       "line": 56,
       "name": "<callback:records.map#0>",
@@ -33295,7 +33365,7 @@
       "astEnd": 2147
     },
     {
-      "id": "FUNC-03327",
+      "id": "FUNC-03334",
       "file": "tools/release-source-fingerprint.mjs",
       "line": 57,
       "name": "<callback:publicRuntime.filter#0>",
@@ -33305,7 +33375,7 @@
       "astEnd": 2239
     },
     {
-      "id": "FUNC-03328",
+      "id": "FUNC-03335",
       "file": "tools/release-source-fingerprint.mjs",
       "line": 58,
       "name": "<callback:requiredFiles.filter#0>",
@@ -33315,7 +33385,7 @@
       "astEnd": 2336
     },
     {
-      "id": "FUNC-03329",
+      "id": "FUNC-03336",
       "file": "tools/release-source-fingerprint.mjs",
       "line": 61,
       "name": "<callback:[...trackedPaths].some#0>",
@@ -33325,7 +33395,7 @@
       "astEnd": 2544
     },
     {
-      "id": "FUNC-03330",
+      "id": "FUNC-03337",
       "file": "tools/repair-canonical-markdown-after-trace.mjs",
       "line": 51,
       "name": "<callback:trace.evidence || [].map#0>",
@@ -33335,7 +33405,7 @@
       "astEnd": 2383
     },
     {
-      "id": "FUNC-03331",
+      "id": "FUNC-03338",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 7,
       "name": "constructor",
@@ -33345,7 +33415,7 @@
       "astEnd": 238
     },
     {
-      "id": "FUNC-03332",
+      "id": "FUNC-03339",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 8,
       "name": "length",
@@ -33355,7 +33425,7 @@
       "astEnd": 276
     },
     {
-      "id": "FUNC-03333",
+      "id": "FUNC-03340",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 9,
       "name": "key",
@@ -33365,7 +33435,7 @@
       "astEnd": 324
     },
     {
-      "id": "FUNC-03334",
+      "id": "FUNC-03341",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 10,
       "name": "getItem",
@@ -33375,7 +33445,7 @@
       "astEnd": 399
     },
     {
-      "id": "FUNC-03335",
+      "id": "FUNC-03342",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 11,
       "name": "setItem",
@@ -33385,7 +33455,7 @@
       "astEnd": 450
     },
     {
-      "id": "FUNC-03336",
+      "id": "FUNC-03343",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 12,
       "name": "removeItem",
@@ -33395,7 +33465,7 @@
       "astEnd": 495
     },
     {
-      "id": "FUNC-03337",
+      "id": "FUNC-03344",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 15,
       "name": "makeHarness",
@@ -33405,7 +33475,7 @@
       "astEnd": 2576
     },
     {
-      "id": "FUNC-03338",
+      "id": "FUNC-03345",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 25,
       "name": "clone",
@@ -33415,7 +33485,7 @@
       "astEnd": 1038
     },
     {
-      "id": "FUNC-03339",
+      "id": "FUNC-03346",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 28,
       "name": "state",
@@ -33425,7 +33495,7 @@
       "astEnd": 1201
     },
     {
-      "id": "FUNC-03340",
+      "id": "FUNC-03347",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 29,
       "name": "fetch",
@@ -33435,7 +33505,7 @@
       "astEnd": 1490
     },
     {
-      "id": "FUNC-03341",
+      "id": "FUNC-03348",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 33,
       "name": "json",
@@ -33445,7 +33515,7 @@
       "astEnd": 1475
     },
     {
-      "id": "FUNC-03342",
+      "id": "FUNC-03349",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 36,
       "name": "addEventListener",
@@ -33455,7 +33525,7 @@
       "astEnd": 1546
     },
     {
-      "id": "FUNC-03343",
+      "id": "FUNC-03350",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 37,
       "name": "dispatchEvent",
@@ -33465,7 +33535,7 @@
       "astEnd": 1612
     },
     {
-      "id": "FUNC-03344",
+      "id": "FUNC-03351",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 39,
       "name": "constructor",
@@ -33475,7 +33545,7 @@
       "astEnd": 1708
     },
     {
-      "id": "FUNC-03345",
+      "id": "FUNC-03352",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 40,
       "name": "constructor",
@@ -33485,7 +33555,7 @@
       "astEnd": 1767
     },
     {
-      "id": "FUNC-03346",
+      "id": "FUNC-03353",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 40,
       "name": "disconnect",
@@ -33495,7 +33565,7 @@
       "astEnd": 1792
     },
     {
-      "id": "FUNC-03347",
+      "id": "FUNC-03354",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 40,
       "name": "observe",
@@ -33505,7 +33575,7 @@
       "astEnd": 1778
     },
     {
-      "id": "FUNC-03348",
+      "id": "FUNC-03355",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 44,
       "name": "addEventListener",
@@ -33515,7 +33585,7 @@
       "astEnd": 1925
     },
     {
-      "id": "FUNC-03349",
+      "id": "FUNC-03356",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 45,
       "name": "dispatchEvent",
@@ -33525,7 +33595,7 @@
       "astEnd": 1993
     },
     {
-      "id": "FUNC-03350",
+      "id": "FUNC-03357",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 49,
       "name": "reload",
@@ -33535,7 +33605,7 @@
       "astEnd": 2120
     },
     {
-      "id": "FUNC-03351",
+      "id": "FUNC-03358",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 52,
       "name": "setInterval",
@@ -33545,7 +33615,7 @@
       "astEnd": 2220
     },
     {
-      "id": "FUNC-03352",
+      "id": "FUNC-03359",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 53,
       "name": "clearInterval",
@@ -33555,7 +33625,7 @@
       "astEnd": 2246
     },
     {
-      "id": "FUNC-03353",
+      "id": "FUNC-03360",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 54,
       "name": "setTimeout",
@@ -33565,7 +33635,7 @@
       "astEnd": 2285
     },
     {
-      "id": "FUNC-03354",
+      "id": "FUNC-03361",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 55,
       "name": "clearTimeout",
@@ -33575,7 +33645,7 @@
       "astEnd": 2310
     },
     {
-      "id": "FUNC-03355",
+      "id": "FUNC-03362",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 62,
       "name": "reloads",
@@ -33585,7 +33655,7 @@
       "astEnd": 2572
     },
     {
-      "id": "FUNC-03356",
+      "id": "FUNC-03363",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 65,
       "name": "assert",
@@ -33595,7 +33665,7 @@
       "astEnd": 2653
     },
     {
-      "id": "FUNC-03357",
+      "id": "FUNC-03364",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 85,
       "name": "<callback:h.documentEvents.some#0>",
@@ -33605,7 +33675,7 @@
       "astEnd": 4159
     },
     {
-      "id": "FUNC-03358",
+      "id": "FUNC-03365",
       "file": "tools/test-online-bridge-recovery.mjs",
       "line": 86,
       "name": "<callback:h.windowEvents.some#0>",
@@ -33615,7 +33685,7 @@
       "astEnd": 4271
     },
     {
-      "id": "FUNC-03359",
+      "id": "FUNC-03366",
       "file": "tools/wait-public-release-coherence.mjs",
       "line": 5,
       "name": "<callback:new Promise#0>",
@@ -33625,7 +33695,7 @@
       "astEnd": 268
     },
     {
-      "id": "FUNC-03360",
+      "id": "FUNC-03367",
       "file": "tools/wait-public-release-coherence.mjs",
       "line": 5,
       "name": "sleep",
@@ -39943,8 +40013,8 @@
     },
     {
       "path": ".github/workflows/publish-request-scoped-mongodb-once.yml",
-      "size": 20534,
-      "sha256": "0e52b185a2075718d158884f4ddcd633ad0161a28eedbe23646d9cd9c8dd9066"
+      "size": 4135,
+      "sha256": "16a0b02b99a939601333ca030c1067f07491ffa896216810123bd7c7ca5e3211"
     },
     {
       "path": ".github/workflows/runtime-integrity.yml",
@@ -39968,8 +40038,8 @@
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
-      "size": 2667,
-      "sha256": "d17a85cc1ae33c1ab64716e5315181338664272a2426579203dcef52cc0055d8"
+      "size": 2700,
+      "sha256": "ebba235536a9255ae571fffe5c2d6e30db27382a0415bb9f8102b582b1bad7a8"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
@@ -40042,9 +40112,24 @@
       "sha256": "3fcc0d19df10fbbef766f7f1c90d609eaff47d5cae5b98d8e3b41bd160e4ab3d"
     },
     {
+      "path": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
+      "size": 11521,
+      "sha256": "291ebe3a8b83cb3724d170708c85c595d004e93f966b7220ed007137f48f4303"
+    },
+    {
+      "path": "cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs",
+      "size": 1570,
+      "sha256": "c9d4e759ff93e355bfe211b2ecd78a68d2bfb8365fdc48497fefe34ff9e13f19"
+    },
+    {
       "path": "cloudflare/r41-api/test/mongodb-live-preflight.mjs",
       "size": 3123,
       "sha256": "2ec8d45dae1071fc2b79ab0a1f867dcdd501d8dfaba47c859e76a351e00aa22d"
+    },
+    {
+      "path": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
+      "size": 2649,
+      "sha256": "6926b83b36d0f66dff14b163d1455a8bf5bcd33ed2bab679fd7d4095cf4c8e36"
     },
     {
       "path": "cloudflare/r41-api/test/terion-mechanics.test.mjs",
