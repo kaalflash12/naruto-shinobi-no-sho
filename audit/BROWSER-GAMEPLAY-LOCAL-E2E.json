@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T11:01:54.420Z",
+  "generatedAt": "2026-08-26T11:55:39.915Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt9zh02sxq1j7",
-  "slotId": "gameplay-mt9zh02s",
+  "temporaryAccount": "play_mta1e4qlghhlj",
+  "slotId": "gameplay-mta1e4ql",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -89,7 +89,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.8,
+          "time": 4.9,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787742085484,
+          "at": 1787745310807,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 17,
+          "total": 13,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 435,
-          "success": false,
+          "score": 516,
+          "success": true,
           "errors": 3,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt9zh02sxq1j7",
+        "intent": "Cobrir saída E2E mta1e4qlghhlj",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787742089966,
-        "cloudAt": 1787742083045,
+        "localAt": 1787745315323,
+        "cloudAt": 1787745308323,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
