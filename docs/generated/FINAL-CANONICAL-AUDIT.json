@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T17:22:25.265Z",
+  "generatedAt": "2026-08-26T17:25:11.923Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T17:22:10.386Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T17:24:56.519Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -39808,8 +39808,8 @@
   "sourceFiles": [
     {
       "path": ".github/workflows/_temp-hotfix-v3-atlas-winps.yml",
-      "size": 4165,
-      "sha256": "07bd351b0c62d8e9fdf200bcb3bdbc255833f542787b59a068816316835f3f14"
+      "size": 4224,
+      "sha256": "8bc110061d314a79155f58605b29bd2100b210902ee25432d1e35563fd4418ca"
     },
     {
       "path": ".github/workflows/account-live-e2e.yml",

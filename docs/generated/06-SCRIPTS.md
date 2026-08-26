@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T17:22:10.386Z`
+Gerado em: `2026-08-26T17:24:56.519Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -47,7 +47,7 @@ Gerado em: `2026-08-26T17:22:10.386Z`
 
 ## Fonte/configuração/tooling
 
-- `.github/workflows/_temp-hotfix-v3-atlas-winps.yml` — domínio `tooling` — 4165 bytes — SHA-256 `07bd351b0c62d8e9fdf200bcb3bdbc255833f542787b59a068816316835f3f14`
+- `.github/workflows/_temp-hotfix-v3-atlas-winps.yml` — domínio `tooling` — 4224 bytes — SHA-256 `8bc110061d314a79155f58605b29bd2100b210902ee25432d1e35563fd4418ca`
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 9864 bytes — SHA-256 `803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41`
 - `.github/workflows/backend-secret-presence.yml` — domínio `tooling` — 5110 bytes — SHA-256 `5599920435add034f19aa6f4d2326efbb89b940f6b0dfd5408b591ff0463b9ee`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 5093 bytes — SHA-256 `f3cf3000ff267f60d38d2c2504aeaae1b4a77f2d1dca3c8cabe0d9a5334f9047`

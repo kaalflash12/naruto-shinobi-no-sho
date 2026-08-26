@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T17:22:10.386Z",
+  "generatedAt": "2026-08-26T17:24:56.519Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/_temp-hotfix-v3-atlas-winps.yml",
-      "size": 4165,
-      "sha256": "07bd351b0c62d8e9fdf200bcb3bdbc255833f542787b59a068816316835f3f14",
+      "size": 4224,
+      "sha256": "8bc110061d314a79155f58605b29bd2100b210902ee25432d1e35563fd4418ca",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -363688,7 +363688,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T17:22:12.441Z",
+    "generatedAt": "2026-08-26T17:24:59.085Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
