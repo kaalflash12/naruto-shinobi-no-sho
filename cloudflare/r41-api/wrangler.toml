@@ -1,7 +1,7 @@
 name = "naruto-shinobi-no-sho-api"
 main = "src/entry-authoritative.js"
 compatibility_date = "2026-08-19"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "no_throw_on_not_implemented_tls_options"]
 
 [vars]
 MONGODB_DB = "naruto_shinobi_no_sho"
