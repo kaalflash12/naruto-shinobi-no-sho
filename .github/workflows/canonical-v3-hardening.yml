@@ -38,7 +38,7 @@ jobs:
           powershell.exe -NoProfile -ExecutionPolicy Bypass -File $path -ValidateRunParsing
           if ($LASTEXITCODE -ne 0) { throw "Canonical V3 regression fixture failed with exit code $LASTEXITCODE." }
 
-      - name: Enforce Cloudflare and Atlas hardening contracts
+      - name: Enforce Cloudflare Atlas and portable-tool hardening contracts
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
@@ -60,7 +60,17 @@ jobs:
             'Cluster MongoDB Atlas nao ficou pronto. Estado final:',
             "`$finalReadinessPassed = `$false",
             "`$finalReadinessPassed = `$true",
-            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed",
+            '[switch]$ValidatePortableTools',
+            'PASS_PORTABLE_TOOL_LOCK_REUSE',
+            'Reutilizando GitHub CLI portatil existente:',
+            'Reutilizando Node.js portatil existente:',
+            'Reutilizando MongoDB Atlas CLI portatil existente:',
+            'shinobi-gh-portable-{0}',
+            'shinobi-node-portable-{0}',
+            'shinobi-atlas-portable-{0}',
+            "`$ghAuthenticated = (`$LASTEXITCODE -eq 0)",
+            "`$wranglerAuthenticated = (`$LASTEXITCODE -eq 0)"
           )
           foreach ($needle in $required) {
             if (-not $canonical.Contains($needle)) { throw "Canonical V3 hardening missing: $needle" }
@@ -68,15 +78,27 @@ jobs:
 
           $unsafe = @(
             '& $Atlas auth whoami *> $null',
+            '& $Gh auth status --hostname github.com *> $null',
+            "& `$Npx --yes 'wrangler@4.119.0' whoami *> `$null",
             '$project = $projects | Select-Object -First 1',
             '$cluster = $clusters | Select-Object -First 1',
             '& $atlas dbusers update',
+            "`$root = Join-Path `$env:TEMP 'shinobi-gh-portable'",
+            "`$root = Join-Path `$env:TEMP 'shinobi-node-portable'",
+            "`$root = Join-Path `$env:TEMP 'shinobi-atlas-portable'",
             '  if ($temporaryCloudflareSecretWritten) {'
           )
           foreach ($needle in $unsafe) {
             if ($canonical.Contains($needle)) { throw "Unsafe canonical V3 contract remains: $needle" }
           }
-          Write-Host 'PASS_CANONICAL_V3_CLOUDFLARE_ATLAS_HARDENING'
+          Write-Host 'PASS_CANONICAL_V3_CLOUDFLARE_ATLAS_PORTABLE_HARDENING'
+
+      - name: Reproduce locked portable tools on Windows
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1 -ValidatePortableTools
+          if ($LASTEXITCODE -ne 0) { throw "Portable tool lock fixture failed with exit code $LASTEXITCODE." }
 
       - name: Verify root launcher executes canonical V3 directly
         shell: powershell
