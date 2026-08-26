@@ -1,0 +1,92 @@
+name: Canonical V3 Hardening
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+      - ATIVAR-CLOUDFLARE-LIVE.ps1
+      - .github/workflows/canonical-v3-hardening.yml
+  pull_request:
+    paths:
+      - tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
+      - ATIVAR-CLOUDFLARE-LIVE.ps1
+      - .github/workflows/canonical-v3-hardening.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate-canonical-v3:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse canonical V3 and regression fixture
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
+          $tokens = $null
+          $errors = $null
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $path), [ref]$tokens, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            throw "Canonical V3 parse failed with $($errors.Count) error(s)."
+          }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File $path -ValidateRunParsing
+          if ($LASTEXITCODE -ne 0) { throw "Canonical V3 regression fixture failed with exit code $LASTEXITCODE." }
+
+      - name: Require scalar outputs and safe bearer lifetime in canonical source
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+          $required = @(
+            "login --device | Out-Host",
+            "--connectWith skip --force *> `$null",
+            "run watch `$RunId --repo `$Repo --exit-status | Out-Host",
+            "workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null",
+            "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
+            "`$finalReadinessPassed = `$false",
+            "`$finalReadinessPassed = `$true",
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+          )
+          foreach ($needle in $required) {
+            if (-not $canonical.Contains($needle)) { throw "Canonical V3 hardening missing: $needle" }
+          }
+
+          $unsafe = @(
+            "    & `$Npx --yes 'wrangler@4.119.0' login --device`n",
+            "  & `$Gh run watch `$RunId --repo `$Repo --exit-status`n",
+            "  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main`n",
+            "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main`n",
+            "  if (`$temporaryCloudflareSecretWritten) {"
+          )
+          foreach ($needle in $unsafe) {
+            if ($canonical.Contains($needle)) { throw "Unsafe canonical V3 contract remains: $needle" }
+          }
+          Write-Host 'PASS_CANONICAL_V3_SOURCE_HARDENING'
+
+      - name: Verify root launcher is idempotent with hardened canonical V3
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $launcher = Get-Content 'ATIVAR-CLOUDFLARE-LIVE.ps1' -Raw
+          if (-not $launcher.Contains('if ($Text.Contains($New)) { return $Text }')) {
+            throw 'Root launcher is not idempotent when canonical V3 is already hardened.'
+          }
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+          $required = @(
+            "login --device | Out-Host",
+            "--connectWith skip --force *> `$null",
+            "run watch `$RunId --repo `$Repo --exit-status | Out-Host",
+            "workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null",
+            "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+          )
+          foreach ($needle in $required) {
+            if (-not $canonical.Contains($needle)) { throw "Root launcher would need to repair missing canonical contract: $needle" }
+          }
+          Write-Host 'PASS_CANONICAL_V3_LAUNCHER_IDEMPOTENCE'

@@ -110,7 +110,7 @@ function Get-CloudflareOAuth([string]$Npx) {
   & $Npx --yes 'wrangler@4.119.0' whoami *> $null
   if ($LASTEXITCODE -ne 0) {
     Write-Host 'O navegador vai abrir com o codigo ja preenchido. Apenas aprove a autorizacao Cloudflare.' -ForegroundColor Yellow
-    & $Npx --yes 'wrangler@4.119.0' login --device
+    & $Npx --yes 'wrangler@4.119.0' login --device | Out-Host
     if ($LASTEXITCODE -ne 0) { throw 'OAuth Cloudflare via Wrangler falhou.' }
   }
 
@@ -272,7 +272,7 @@ function Get-MongoUriAutomatic {
   $password = New-RandomHex 24
   if (-not $cluster) {
     $clusterName = 'shinobi-no-sho'
-    & $atlas setup --projectId $projectId --clusterName $clusterName --provider AWS --region US_EAST_1 --tier M0 --username $username --password $password --accessListIp '0.0.0.0/0' --skipSampleData --connectWith skip --force
+    & $atlas setup --projectId $projectId --clusterName $clusterName --provider AWS --region US_EAST_1 --tier M0 --username $username --password $password --accessListIp '0.0.0.0/0' --skipSampleData --connectWith skip --force *> $null
     if ($LASTEXITCODE -ne 0) { throw 'Falha ao criar cluster M0 gratuito no MongoDB Atlas.' }
   } else {
     $clusterName = [string]$cluster.name
@@ -380,7 +380,7 @@ function Get-NewRunId([string]$Gh, [string]$Workflow, [DateTime]$SinceUtc, [int]
 
 function Watch-Run([string]$Gh, [long]$RunId, [string]$Label, [switch]$AllowFailure) {
   Write-Host "$Label run: $RunId" -ForegroundColor Green
-  & $Gh run watch $RunId --repo $Repo --exit-status
+  & $Gh run watch $RunId --repo $Repo --exit-status | Out-Host
   $ok = ($LASTEXITCODE -eq 0)
   if (-not $ok -and -not $AllowFailure) { throw "$Label falhou. Run $RunId" }
   return $ok
@@ -412,7 +412,7 @@ function Get-RepoJson([string]$Gh, [string]$Path) {
 function Start-AuditAndGetLiveRun([string]$Gh) {
   Write-Step 'Disparando auditor de credenciais'
   $started = [DateTime]::UtcNow
-  & $Gh workflow run backend-secret-presence.yml --repo $Repo --ref main
+  & $Gh workflow run backend-secret-presence.yml --repo $Repo --ref main *> $null
   if ($LASTEXITCODE -ne 0) { throw 'Falha ao disparar Backend Secret Presence Audit.' }
   $auditId = Get-NewRunId $Gh 'backend-secret-presence.yml' $started 600
   [void](Watch-Run $Gh $auditId 'Backend Secret Presence Audit')
@@ -461,7 +461,7 @@ function Complete-LiveConsumers([string]$Gh, [DateTime]$SinceUtc) {
 function Complete-FinalReadiness([string]$Gh) {
   Write-Step 'Executando orquestracao final'
   $started = [DateTime]::UtcNow
-  & $Gh workflow run final-readiness-orchestration.yml --repo $Repo --ref main
+  & $Gh workflow run final-readiness-orchestration.yml --repo $Repo --ref main *> $null
   if ($LASTEXITCODE -ne 0) { throw 'Falha ao disparar Final Readiness Orchestration.' }
   $orchestrationId = Get-NewRunId $Gh 'final-readiness-orchestration.yml' $started 600
   [void](Watch-Run $Gh $orchestrationId 'Final Readiness Orchestration')
@@ -499,6 +499,7 @@ Ensure-GhLogin $gh
 $npx = Get-NpxExecutable
 $cloudflare = $null
 $temporaryCloudflareSecretWritten = $false
+$finalReadinessPassed = $false
 try {
   $cloudflare = Get-CloudflareOAuth $npx
   $accountId = Resolve-CloudflareAccount ([string]$cloudflare.Token) $PreferredCloudflareAccountId
@@ -515,9 +516,10 @@ try {
   $consumers = Complete-LiveConsumers $gh $chainStarted
   Write-Host ("Consumidores Live PASS. Account={0} Gameplay={1}" -f $consumers.Account, $consumers.Gameplay) -ForegroundColor Green
   $finalRun = Complete-FinalReadiness $gh
+  $finalReadinessPassed = $true
   Write-Host "Final Readiness PASS. Run $finalRun" -ForegroundColor Green
 } finally {
-  if ($temporaryCloudflareSecretWritten) {
+  if ($temporaryCloudflareSecretWritten -and $finalReadinessPassed) {
     Write-Step 'Removendo bearer OAuth temporario do GitHub'
     try { Remove-GhSecret $gh 'CLOUDFLARE_API_TOKEN' } catch { Write-Host 'Nao foi possivel remover automaticamente o bearer temporario.' -ForegroundColor Yellow }
   }
@@ -527,3 +529,4 @@ try {
 
 Write-Host ''
 Write-Host 'PASS_FINAL_READINESS' -ForegroundColor Green
+
