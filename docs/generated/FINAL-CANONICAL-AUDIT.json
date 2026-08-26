@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T20:33:47.926Z",
+  "generatedAt": "2026-08-26T20:37:56.603Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T20:33:32.962Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T20:37:41.763Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 133,
+    "sourceFiles": 135,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39840,6 +39840,16 @@
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
       "size": 4917,
       "sha256": "5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa"
+    },
+    {
+      "path": ".github/workflows/diagnose-auth-runtime-v2-once.yml",
+      "size": 5030,
+      "sha256": "6bb7fc3726bdf7df2f1e5996bcb25c2f60bf66a95084b26894ee64c4ac315a36"
+    },
+    {
+      "path": ".github/workflows/diagnose-auth-runtime-v3-once.yml",
+      "size": 5613,
+      "sha256": "0ba9d5df9ff3754231f8a2f1249e05d7a134320a44f77856681dba5514d1acd9"
     },
     {
       "path": ".github/workflows/diagnose-authoritative-entry-once.yml",

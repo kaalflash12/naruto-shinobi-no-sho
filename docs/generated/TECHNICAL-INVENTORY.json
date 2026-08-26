@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T20:33:32.962Z",
+  "generatedAt": "2026-08-26T20:37:41.763Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5585,
+    "files": 5587,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 145,
+    "textFiles": 147,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 133,
+    "sourceFiles": 135,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 65,
+    "toolingSourceFiles": 67,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -103,6 +103,22 @@
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
       "size": 4917,
       "sha256": "5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/diagnose-auth-runtime-v2-once.yml",
+      "size": 5030,
+      "sha256": "6bb7fc3726bdf7df2f1e5996bcb25c2f60bf66a95084b26894ee64c4ac315a36",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/diagnose-auth-runtime-v3-once.yml",
+      "size": 5613,
+      "sha256": "0ba9d5df9ff3754231f8a2f1249e05d7a134320a44f77856681dba5514d1acd9",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -363744,7 +363760,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T20:33:35.887Z",
+    "generatedAt": "2026-08-26T20:37:44.153Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364271,7 +364287,7 @@
       "events": 14,
       "movement": 8073,
       "assets": 15838,
-      "environment": 227
+      "environment": 239
     },
     "after": {
       "functions": 3360,

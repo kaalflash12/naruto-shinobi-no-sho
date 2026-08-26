@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T20:33:32.962Z`
+Gerado em: `2026-08-26T20:37:41.763Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -54,6 +54,8 @@ Gerado em: `2026-08-26T20:33:32.962Z`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 8763 bytes — SHA-256 `ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43`
 - `.github/workflows/canonical-v3-hardening.yml` — domínio `tooling` — 8280 bytes — SHA-256 `5a305cfb82ce51249a781523977473f73bc3e97c810b88b4627d1a21d49cb27e`
 - `.github/workflows/cloudflare-bootstrap-syntax.yml` — domínio `tooling` — 4917 bytes — SHA-256 `5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa`
+- `.github/workflows/diagnose-auth-runtime-v2-once.yml` — domínio `tooling` — 5030 bytes — SHA-256 `6bb7fc3726bdf7df2f1e5996bcb25c2f60bf66a95084b26894ee64c4ac315a36`
+- `.github/workflows/diagnose-auth-runtime-v3-once.yml` — domínio `tooling` — 5613 bytes — SHA-256 `0ba9d5df9ff3754231f8a2f1249e05d7a134320a44f77856681dba5514d1acd9`
 - `.github/workflows/diagnose-authoritative-entry-once.yml` — domínio `tooling` — 3462 bytes — SHA-256 `f9a525500d2312fbc60cc32c8104dcc8530e7532d83abdae8a6c1f2f91bae391`
 - `.github/workflows/diagnose-authoritative-worker-tail-once.yml` — domínio `tooling` — 4051 bytes — SHA-256 `8b8d24daffa5a8d788847b98d5736e90d7e15b2e7a4b4d76904c6ccfb37f21f4`
 - `.github/workflows/diagnose-base-register-error-once.yml` — domínio `tooling` — 4194 bytes — SHA-256 `8b5541a5100013976d259a2f7710e208e08981f9055ba7d3ac3b1543b45b8353`
