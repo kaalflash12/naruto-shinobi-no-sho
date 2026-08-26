@@ -1,0 +1,39 @@
+name: Fix Portable Validator Once
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Fix validator false positive and publish
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/portable-bootstrap-hardening-fast.yml')
+          s=p.read_text(encoding='utf-8')
+          old='if ($sourceText.Contains($unsafe)) { throw "Regressao insegura encontrada: $unsafe" }'
+          new='if (([regex]::Matches($sourceText, [regex]::Escape($unsafe))).Count -gt 1) { throw "Regressao insegura encontrada fora do proprio fixture: $unsafe" }'
+          assert old in s, 'condicao antiga do validator nao encontrada'
+          p.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/fix-portable-validator-once.yml
+          git add .github/workflows/portable-bootstrap-hardening-fast.yml
+          git commit -m 'ci: avoid self-match in portable lock validator'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 2
+          done
+          exit 1
