@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T17:42:15.497Z`
+Gerado em: `2026-08-26T17:51:53.114Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -65,8 +65,8 @@ Gerado em: `2026-08-26T17:42:15.497Z`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 4151 bytes — SHA-256 `bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2521 bytes — SHA-256 `11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5570 bytes — SHA-256 `0d3bb75fcbf771c9e46f310113844388bc2a5fcec8e11618ed45497aa9421528`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `51ef2e9be00c74db521ea25ea3e2e8f00431b4e6065e5816c805da791d246e2c`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5638 bytes — SHA-256 `f76c882abbaac0055e85ff4c19e1029eb6bcf52d8e6006d77525536c277934b1`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `f4d47788e4aa9615158ae74beb1b88910fd999903c5d05c0633bc8180faea0cf`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
