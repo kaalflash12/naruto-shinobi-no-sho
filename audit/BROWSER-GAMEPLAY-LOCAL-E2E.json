@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T21:28:36.874Z",
+  "generatedAt": "2026-08-26T00:00:22.093Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mt96f3fw9qvk9",
-  "slotId": "gameplay-mt96f3fw",
+  "temporaryAccount": "play_mt9bu9jexmdfk",
+  "slotId": "gameplay-mt9bu9je",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -89,7 +89,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.9,
+          "time": 4.8,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -97,14 +97,14 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787693287748,
+          "at": 1787702393534,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 24,
+          "total": 9,
           "cd": 11,
-          "ok": true,
-          "reward": "+3 material(is)"
+          "ok": false,
+          "reward": "sem recompensa; tempo foi gasto"
         }
       }
     },
@@ -125,7 +125,7 @@
           "ko": false,
           "enemyHpBefore": 26,
           "enemyHpAfter": 26,
-          "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
+          "reason": "Coleta: falha • sem recompensa; tempo foi gasto.\nAlvo fora do alcance (1)."
         },
         "validation": {
           "ok": true,
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 567,
-          "success": true,
-          "errors": 4,
+          "score": 224,
+          "success": false,
+          "errors": 5,
           "time": 0.8,
           "performanceTags": [
-            "estavel",
+            "impreciso",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mt96f3fw9qvk9",
+        "intent": "Cobrir saída E2E mt9bu9jexmdfk",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787693292298,
-        "cloudAt": 1787693285262,
+        "localAt": 1787702398049,
+        "cloudAt": 1787702391099,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
