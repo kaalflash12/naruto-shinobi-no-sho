@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T13:29:42.413Z",
+  "generatedAt": "2026-08-26T13:54:46.653Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mta4r2rca6u0c",
-  "slotId": "gameplay-mta4r2rc",
+  "temporaryAccount": "play_mta5nbibltr5m",
+  "slotId": "gameplay-mta5nbib",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,7 +97,7 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787750953440,
+          "at": 1787752457697,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 26,
-          "enemyHpAfter": 26,
+          "enemyHpBefore": 36,
+          "enemyHpAfter": 36,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,9 +148,9 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 569,
+          "score": 501,
           "success": true,
-          "errors": 2,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
             "estavel",
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mta4r2rca6u0c",
+        "intent": "Cobrir saída E2E mta5nbibltr5m",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787750957939,
-        "cloudAt": 1787750950987,
+        "localAt": 1787752462197,
+        "cloudAt": 1787752455257,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
