@@ -71,14 +71,42 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/PUBLIC-RELEASE-COHERENCE.json
-          if git diff --cached --quiet; then
-            echo 'PUBLIC_RELEASE_EVIDENCE_CURRENT'
-            exit 0
-          fi
-          git commit -m 'test: public release coherence PASS'
-          git pull --rebase origin main
-          git push origin HEAD:main
+
+          report_tmp="$(mktemp)"
+          cp audit/PUBLIC-RELEASE-COHERENCE.json "$report_tmp"
+          trap 'rm -f "$report_tmp"' EXIT
+
+          for attempt in 1 2 3 4 5; do
+            echo "PUBLIC_RELEASE_PUBLISH_ATTEMPT=$attempt"
+            git fetch origin main
+            git reset --hard origin/main
+
+            latest="$(node tools/release-source-fingerprint.mjs)"
+            marker="$(tr -d '\r\n' < PUBLIC-RELEASE-FINGERPRINT.txt)"
+            if [ "$latest" != "$RELEASE_FINGERPRINT" ] || [ "$marker" != "$RELEASE_FINGERPRINT" ]; then
+              echo "PUBLIC_RELEASE_CHANGED_DURING_PUBLISH expected=$RELEASE_FINGERPRINT latest=$latest marker=$marker"
+              exit 1
+            fi
+
+            cp "$report_tmp" audit/PUBLIC-RELEASE-COHERENCE.json
+            git add audit/PUBLIC-RELEASE-COHERENCE.json
+            if git diff --cached --quiet; then
+              echo 'PUBLIC_RELEASE_EVIDENCE_CURRENT'
+              exit 0
+            fi
+
+            git commit -m 'test: public release coherence PASS'
+            if git push origin HEAD:main; then
+              echo "PASS_PUBLIC_RELEASE_EVIDENCE_PUBLISH attempt=$attempt"
+              exit 0
+            fi
+
+            echo "PUBLIC_RELEASE_PUBLISH_RACE attempt=$attempt"
+            sleep $((attempt * 2))
+          done
+
+          echo 'PUBLIC_RELEASE_EVIDENCE_PUBLISH_FAILED_AFTER_RETRIES'
+          exit 1
 
       - name: Upload public release evidence
         uses: actions/upload-artifact@v6
