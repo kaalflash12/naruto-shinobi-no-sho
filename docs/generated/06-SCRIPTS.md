@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T17:24:56.519Z`
+Gerado em: `2026-08-26T17:31:07.772Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -47,12 +47,11 @@ Gerado em: `2026-08-26T17:24:56.519Z`
 
 ## Fonte/configuração/tooling
 
-- `.github/workflows/_temp-hotfix-v3-atlas-winps.yml` — domínio `tooling` — 4224 bytes — SHA-256 `8bc110061d314a79155f58605b29bd2100b210902ee25432d1e35563fd4418ca`
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 9864 bytes — SHA-256 `803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41`
 - `.github/workflows/backend-secret-presence.yml` — domínio `tooling` — 5110 bytes — SHA-256 `5599920435add034f19aa6f4d2326efbb89b940f6b0dfd5408b591ff0463b9ee`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 5093 bytes — SHA-256 `f3cf3000ff267f60d38d2c2504aeaae1b4a77f2d1dca3c8cabe0d9a5334f9047`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 8763 bytes — SHA-256 `ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43`
-- `.github/workflows/canonical-v3-hardening.yml` — domínio `tooling` — 4096 bytes — SHA-256 `171bfd67b4c49c339997670bde7900be228efc2a8273e44455dfa4a1c51a64b7`
+- `.github/workflows/canonical-v3-hardening.yml` — domínio `tooling` — 4504 bytes — SHA-256 `4144ff7658f919abd17d62a2ff979eb33c1c90849fa33b19d8e226ab189b2e6c`
 - `.github/workflows/cloudflare-bootstrap-syntax.yml` — domínio `tooling` — 4917 bytes — SHA-256 `5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 6488 bytes — SHA-256 `95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9`
 - `.github/workflows/final-readiness-orchestration.yml` — domínio `tooling` — 1612 bytes — SHA-256 `b6066a2bc1d120eb8ae201c3d14a7972edb8231fbc63f8d9a774b79f5453b531`
@@ -66,8 +65,8 @@ Gerado em: `2026-08-26T17:24:56.519Z`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 4151 bytes — SHA-256 `bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2521 bytes — SHA-256 `11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `a4c5135e14cc69c1fea8430b1fa911178985cc96427b6a3de51a55a5c0390759`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `b97733e01374457ab8ad8e63f6bffd1c23bc06b3b8b0c9d653f5f4f426500e16`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `7846138bd0c0e97a03540b5cd34fb7e6cb91726d273fa1b362316227dbacf800`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `0548f172cc38e8c2125a202e6f34e9e2278cacde3a3bfb4797454ad78749937b`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
@@ -140,7 +139,7 @@ Gerado em: `2026-08-26T17:24:56.519Z`
 - `styles.css` — domínio `game-runtime` — 153759 bytes — SHA-256 `6fd9f955dddb1825f20a4c4779aa4179d8d293db84040bec9098ed6cface55ab`
 - `tools/account-live-e2e.mjs` — domínio `tooling` — 4937 bytes — SHA-256 `e2cc845a2fb5221addbd26ea3ec5c65a1a9677aaaeed6eefae9e1c9c2493b9d7`
 - `tools/ast-index-functions.mjs` — domínio `tooling` — 10765 bytes — SHA-256 `6ae52e8e5c03ce06932aff343fe7d0ac9cdda4436b3cdf846f5202b76a8f7d6d`
-- `tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1` — domínio `tooling` — 24671 bytes — SHA-256 `ff0e92e70559bf47aa331321fab5f17aa452c89324fd00d6a4e2c73e50e22a3a`
+- `tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1` — domínio `tooling` — 25244 bytes — SHA-256 `cb6f598fdc5b1b8ae533eeb014184e448dc2f924fbc5f5fa7bd6e0db6a73461a`
 - `tools/audit-ast-function-index.mjs` — domínio `tooling` — 3270 bytes — SHA-256 `52cf32e7557158bbe7522d3e1645d2963b8d9802fcd1089acea6e79bc79632a3`
 - `tools/audit-documentation-coverage.mjs` — domínio `tooling` — 13113 bytes — SHA-256 `9a3b81f709b44720beb176fe2aaba3e91d213e67280e11743ab236628b24e594`
 - `tools/audit-final-canonical-spec.mjs` — domínio `tooling` — 3143 bytes — SHA-256 `d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb`
