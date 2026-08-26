@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T18:45:05.191Z",
+  "generatedAt": "2026-08-26T18:46:48.561Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5577,
+    "files": 5578,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 137,
+    "textFiles": 138,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 125,
+    "sourceFiles": 126,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 57,
+    "toolingSourceFiles": 58,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -135,6 +135,14 @@
       "path": ".github/workflows/live-backend-failure-evidence.yml",
       "size": 4337,
       "sha256": "8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/portable-bootstrap-hardening-once.yml",
+      "size": 12443,
+      "sha256": "947908e15ebe87a8a178a3fc0d34bfd12a088b02ec4934674eee292b56fc4dc1",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43685,8 +43693,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "c5fb9ffb645cef84e32ae357fde612835c06cfaed854c008f7628dd06ed49bc0",
+      "size": 5604,
+      "sha256": "83213b16312850ea56d77e8c2f01c65a0263c7cce460760802eb7fac69ccac54",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43702,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "9d5d7cc56bdc185d67cff5321e8054e0d6922401bc5add3b14f07cb4bd9cff85",
+      "sha256": "bb8cd96e886fe4c4ed473521e0b5b330ede5e39a21b1430a81bcf01cc8c5c42f",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363680,7 +363688,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T18:45:07.681Z",
+    "generatedAt": "2026-08-26T18:46:51.576Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
