@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T13:53:32.425Z",
+  "generatedAt": "2026-08-26T17:22:10.386Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5577,
+    "files": 5578,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 137,
+    "textFiles": 138,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 125,
+    "sourceFiles": 126,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 57,
+    "toolingSourceFiles": 58,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -45,9 +45,17 @@
     },
     {
       "path": ".github/public-release-coherence-trigger.txt",
-      "size": 159,
-      "sha256": "b091b69d5f8a3fecca72d83d539b52cb9572d5451922a1ee0525dced55a38165",
+      "size": 207,
+      "sha256": "9a607a4f5c9486c8616f8e37f69e71884e4968ee02e7a67e664ce3aa5a25af6e",
       "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/_temp-hotfix-v3-atlas-winps.yml",
+      "size": 4165,
+      "sha256": "07bd351b0c62d8e9fdf200bcb3bdbc255833f542787b59a068816316835f3f14",
+      "extension": ".yml",
       "runtime": false,
       "asset": false
     },
@@ -43678,7 +43686,7 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2521,
-      "sha256": "421623a85c98db7033d21afb8a8b65d5d5c6d911599a914c173aaac96cee53a1",
+      "sha256": "11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43686,7 +43694,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "acf09ee6d0b354591288daf9ba924388c29b0a270548f3e2a708c1e2039b36f9",
+      "sha256": "a4c5135e14cc69c1fea8430b1fa911178985cc96427b6a3de51a55a5c0390759",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43702,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "78b4ae121b31d4d8c9ccb3e6878af1adee9f40864802d2e0584ad376493c83dd",
+      "sha256": "b97733e01374457ab8ad8e63f6bffd1c23bc06b3b8b0c9d653f5f4f426500e16",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -363680,7 +363688,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T13:53:34.982Z",
+    "generatedAt": "2026-08-26T17:22:12.441Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
