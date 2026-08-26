@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T21:17:13.550Z`
+Gerado em: `2026-08-26T21:19:36.361Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -48,7 +48,7 @@ Gerado em: `2026-08-26T21:17:13.550Z`
 ## Fonte/configuração/tooling
 
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 9864 bytes — SHA-256 `803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41`
-- `.github/workflows/audit-auth-hash-iterations-once.yml` — domínio `tooling` — 1957 bytes — SHA-256 `3b9c4d1e8d53f11f0243d21fe5ee80d385f8d48708816943273132a7356cb1f8`
+- `.github/workflows/audit-auth-hash-iterations-once.yml` — domínio `tooling` — 2941 bytes — SHA-256 `23cebb7fe5cf1dafe89ff79025b6001a13f041f4a41b6fcc2610a83e72f0fc4e`
 - `.github/workflows/backend-secret-presence.yml` — domínio `tooling` — 6485 bytes — SHA-256 `bebb5d3d2f4e74ca054d9d87c17fac69a9b5707923194f31f6e70efeaf4f8efc`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 5093 bytes — SHA-256 `f3cf3000ff267f60d38d2c2504aeaae1b4a77f2d1dca3c8cabe0d9a5334f9047`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 8763 bytes — SHA-256 `ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43`
@@ -75,8 +75,8 @@ Gerado em: `2026-08-26T21:17:13.550Z`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
 - `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 3026 bytes — SHA-256 `d6223efeb35def10dfcf1dfd7b131e773630b4e6518edc4311442c033b28f692`
 - `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2667 bytes — SHA-256 `d17a85cc1ae33c1ab64716e5315181338664272a2426579203dcef52cc0055d8`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `9c58a3587b6875146b0dbf7a3044961a395be9955dd11479152256e28e199972`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `71db5053eabd991c54696bb043a785ea4c399c1f328424a6b0264b826064f2a3`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `55da32da4fb956293090a5d937c19adca780dc3720bf623d074bf9d3e133fea0`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `8c6321ef530a2daca8bf951e2bb921b9f4050e2e75175013dd9416752e2ce807`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
