@@ -1,0 +1,94 @@
+name: Diagnose Auth Runtime V2 Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/diagnose-auth-runtime-v2-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      API_ORIGIN: https://naruto-shinobi-no-sho-api.mestrederpg35.workers.dev
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install and apply three proven runtime fixes locally
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/entry-authoritative.js');s=p.read_text(encoding='utf-8')
+          old='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}'
+          new='try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}'
+          if old not in s: raise SystemExit('authority block missing')
+          p.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
+
+          p=Path('src/index.js');s=p.read_text(encoding='utf-8')
+          for old,new in {
+            'iterations=210000':'iterations=100000',
+            'passIter:210000':'passIter:100000',
+            'hashPassword(recoveryCode,recoverySalt,120000)':'hashPassword(recoveryCode,recoverySalt,100000)',
+            'iterations:120000':'iterations:100000',
+            'u.passIter||210000':'u.passIter||100000',
+            'rc.iterations||120000':'rc.iterations||100000',
+          }.items():
+            if old not in s: raise SystemExit(f'missing index literal {old}')
+            s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8',newline='\n')
+
+          p=Path('src/entry.js');s=p.read_text(encoding='utf-8')
+          if 'iterations=120000' not in s: raise SystemExit('entry iteration literal missing')
+          p.write_text(s.replace('iterations=120000','iterations=100000'),encoding='utf-8',newline='\n')
+          PY
+          npm run check
+      - name: Deploy patched Worker temporarily
+        working-directory: cloudflare/r41-api
+        run: npx wrangler deploy
+      - name: Capture next base register exception
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          tail_file="$RUNNER_TEMP/auth-v2-tail.log"; : > "$tail_file"
+          timeout 35s npx wrangler tail naruto-shinobi-no-sho-api --format pretty --method POST --search R41_API_ERROR >"$tail_file" 2>&1 &
+          tail_pid=$!
+          sleep 6
+          suffix="${GITHUB_RUN_ID}-${RANDOM}"; username="authdiag_${suffix}"; username="${username:0:32}"; email="${username}@example.test"; password="Diag!${GITHUB_RUN_ID}aA9"
+          payload="$(USER="$username" EMAIL="$email" PASS="$password" node --input-type=module <<'NODE'
+          process.stdout.write(JSON.stringify({username:process.env.USER,password:process.env.PASS,displayName:'Auth V2 Diagnostic',email:process.env.EMAIL}));
+          NODE
+          )"
+          response_file="$RUNNER_TEMP/auth-v2-response.json"
+          code="$(curl -sS --max-time 25 -o "$response_file" -w '%{http_code}' -X POST "$API_ORIGIN/api/auth/register" -H 'content-type: application/json' --data "$payload" || true)"
+          echo "REGISTER_HTTP=$code"
+          sleep 8
+          kill "$tail_pid" >/dev/null 2>&1 || true; wait "$tail_pid" >/dev/null 2>&1 || true
+          TAIL_FILE="$tail_file" HTTP_CODE="$code" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          let raw=fs.readFileSync(process.env.TAIL_FILE,'utf8');
+          raw=raw.replace(/mongodb(?:\+srv)?:\/\/[^\s"']+/gi,'<redacted-mongodb-uri>').replace(/Bearer\s+\S+/gi,'Bearer <redacted>');
+          const lines=raw.split(/\r?\n/).filter(Boolean),hits=[];
+          for(let i=0;i<lines.length;i++)if(/R41_API_ERROR|Error:|TypeError|Mongo\w*Error|DOMException|OperationError|NotSupportedError|code(Name)?:|ERR_/i.test(lines[i]))for(let j=Math.max(0,i-1);j<=Math.min(lines.length-1,i+8);j++)hits.push(lines[j]);
+          console.log(JSON.stringify({status:'AUTH_RUNTIME_V2_TAIL',registerHttp:Number(process.env.HTTP_CODE||0),captured:[...new Set(hits)].slice(0,120)},null,2));
+          if(!raw.includes('R41_API_ERROR')) throw new Error('R41_API_ERROR_NOT_CAPTURED');
+          NODE
+      - name: Restore production Worker unconditionally
+        if: always()
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          git checkout -- src/index.js src/entry.js src/entry-authoritative.js
+          npx wrangler deploy
