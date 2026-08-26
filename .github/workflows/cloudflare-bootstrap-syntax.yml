@@ -47,6 +47,15 @@ jobs:
           }
           Write-Host 'PASS_CLOUDFLARE_BOOTSTRAP_POWERSHELL_PARSE'
 
+      - name: Reproduce and block createdAt Object[] regression
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = Join-Path $PWD 'tools\ATIVAR-CLOUDFLARE-LIVE-V3.ps1'
+          & powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $path -ValidateRunParsing
+          if ($LASTEXITCODE -ne 0) { throw "createdAt regression test falhou: $LASTEXITCODE" }
+          Write-Host 'PASS_GITHUB_RUN_CREATEDAT_ARRAY_GATE'
+
       - name: Enforce zero-paste bootstrap
         shell: powershell
         run: |
@@ -56,6 +65,8 @@ jobs:
           if ($source -match '(?i)Read-Host\s+[''\"]CLOUDFLARE_API_TOKEN') { throw 'Cloudflare token manual prompt voltou.' }
           if ($source -match '(?i)Read-Host\s+[''\"]MONGODB_URI') { throw 'MongoDB URI manual prompt voltou.' }
           if ($source -match '(?i)Read-Host\s+[''\"]Numero da conta') { throw 'Selecao manual de conta Cloudflare voltou.' }
+          if ($source -match '\(\[DateTime\]\$_\.createdAt\)') { throw 'Cast fragil de createdAt voltou.' }
+          if ($source -notmatch 'Convert-GhCreatedAtUtc') { throw 'Normalizacao robusta de createdAt ausente.' }
           if ($source -notmatch "wrangler@4\.119\.0' login --device") { throw 'Wrangler device OAuth ausente.' }
           if ($source -notmatch "wrangler@4\.119\.0' auth token --json") { throw 'Captura automatica da credencial Wrangler ausente.' }
           if ($source -notmatch 'Get-MongoUriAutomatic') { throw 'Provisionamento MongoDB automatico ausente.' }
