@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T19:19:20.462Z",
+  "generatedAt": "2026-08-26T19:24:39.420Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5578,
+    "files": 5577,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 138,
+    "textFiles": 137,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 126,
+    "sourceFiles": 125,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 58,
+    "toolingSourceFiles": 57,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -85,8 +85,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 6324,
-      "sha256": "77519bf96d0542d9ac31c71cabad5719ea80d605371e60d9795732473222ae75",
+      "size": 8280,
+      "sha256": "5a305cfb82ce51249a781523977473f73bc3e97c810b88b4627d1a21d49cb27e",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -119,14 +119,6 @@
       "path": ".github/workflows/final-readiness.yml",
       "size": 3417,
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6",
-      "extension": ".yml",
-      "runtime": false,
-      "asset": false
-    },
-    {
-      "path": ".github/workflows/fix-atlas-explicit-provisioning-once.yml",
-      "size": 13726,
-      "sha256": "35b6d1e3acbd63cac6c7354dec85ab78c1be4f7bab59ceea5ea4e6dfe9521e2e",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43693,8 +43685,8 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "c9cbcc26a3d7bf930470b26f8f942faf627efe894c4d6c94db9ab57aeb50135b",
+      "size": 5607,
+      "sha256": "a90c1655450828731bcd0448e074a400882adb35de134e85054c33ed9faa2ab3",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43702,7 +43694,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "4a669f81b58b6c48f4365b2473ba5c0b199bf80ce5d8a9b9231484822dac3971",
+      "sha256": "2e665da13cf837cfd0fe1bbaed7260bb684843d83484c047d0fe0c1d748b4d5e",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44397,8 +44389,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 30115,
-      "sha256": "bd44ecac4f17aa3b888c4a86ed8799c6e4676e31e8d1d62fb1ae1251ffd19c50",
+      "size": 33451,
+      "sha256": "df195123992329ba14cd38e2b377c02dd2b1e8e482233575e5140066c83ca13c",
       "extension": ".ps1",
       "runtime": true,
       "asset": false
@@ -363688,7 +363680,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T19:19:22.377Z",
+    "generatedAt": "2026-08-26T19:24:41.863Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T19:19:32.564Z",
+  "generatedAt": "2026-08-26T19:24:53.695Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T19:19:20.462Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T19:24:39.420Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 126,
+    "sourceFiles": 125,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39828,8 +39828,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 6324,
-      "sha256": "77519bf96d0542d9ac31c71cabad5719ea80d605371e60d9795732473222ae75"
+      "size": 8280,
+      "sha256": "5a305cfb82ce51249a781523977473f73bc3e97c810b88b4627d1a21d49cb27e"
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
@@ -39850,11 +39850,6 @@
       "path": ".github/workflows/final-readiness.yml",
       "size": 3417,
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6"
-    },
-    {
-      "path": ".github/workflows/fix-atlas-explicit-provisioning-once.yml",
-      "size": 13726,
-      "sha256": "35b6d1e3acbd63cac6c7354dec85ab78c1be4f7bab59ceea5ea4e6dfe9521e2e"
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
@@ -39903,13 +39898,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "c9cbcc26a3d7bf930470b26f8f942faf627efe894c4d6c94db9ab57aeb50135b"
+      "size": 5607,
+      "sha256": "a90c1655450828731bcd0448e074a400882adb35de134e85054c33ed9faa2ab3"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "4a669f81b58b6c48f4365b2473ba5c0b199bf80ce5d8a9b9231484822dac3971"
+      "sha256": "2e665da13cf837cfd0fe1bbaed7260bb684843d83484c047d0fe0c1d748b4d5e"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40273,8 +40268,8 @@
     },
     {
       "path": "tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1",
-      "size": 30115,
-      "sha256": "bd44ecac4f17aa3b888c4a86ed8799c6e4676e31e8d1d62fb1ae1251ffd19c50"
+      "size": 33451,
+      "sha256": "df195123992329ba14cd38e2b377c02dd2b1e8e482233575e5140066c83ca13c"
     },
     {
       "path": "tools/audit-ast-function-index.mjs",
