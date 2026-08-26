@@ -106,7 +106,7 @@ jobs:
                 '& $Gh auth status --hostname github.com *> $null',
                 "& `$Npx --yes 'wrangler@4.119.0' whoami *> `$null"
               )) {
-                if ($sourceText.Contains($unsafe)) { throw "Regressao insegura encontrada: $unsafe" }
+                if (([regex]::Matches($sourceText, [regex]::Escape($unsafe))).Count -gt 1) { throw "Regressao insegura encontrada fora do proprio fixture: $unsafe" }
               }
               Write-Host 'PASS_PORTABLE_TOOL_LOCK_REUSE'
               exit 0
