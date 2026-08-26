@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T20:22:33.648Z",
+  "generatedAt": "2026-08-26T20:25:05.203Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T20:22:18.960Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T20:24:47.644Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 129,
+    "sourceFiles": 130,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39847,6 +39847,11 @@
       "sha256": "8b8d24daffa5a8d788847b98d5736e90d7e15b2e7a4b4d76904c6ccfb37f21f4"
     },
     {
+      "path": ".github/workflows/diagnose-base-register-error-once.yml",
+      "size": 4194,
+      "sha256": "8b5541a5100013976d259a2f7710e208e08981f9055ba7d3ac3b1543b45b8353"
+    },
+    {
       "path": ".github/workflows/documentation-audit.yml",
       "size": 6488,
       "sha256": "95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9"
@@ -39918,13 +39923,13 @@
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "901bfb78254218f3c7961eb472e1ca1acff71193157eeb441019476d95c6c382"
+      "size": 5567,
+      "sha256": "c3b5ab22231f65b807c207fd74e086cf971fca3aab6e122711fdbef50ba87dfc"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "0ec4efdcb3d95f25b75e29d7674d5571b967e76a5ad6982b015ae730da9b09e1"
+      "sha256": "ad01e4c9c4b6b0fee21459f2c5b3f2b61260def5ef38ded5720d91db75d9b90f"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
