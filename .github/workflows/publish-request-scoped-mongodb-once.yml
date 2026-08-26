@@ -41,6 +41,10 @@ jobs:
         working-directory: cloudflare/r41-api
         run: node test/apply-request-scoped-runtime-fix.mjs
 
+      - name: Replace auth me loopback with direct helper
+        working-directory: cloudflare/r41-api
+        run: node test/apply-direct-account-helper-fix.mjs
+
       - name: Static regressions and Wrangler dry run
         working-directory: cloudflare/r41-api
         run: |
