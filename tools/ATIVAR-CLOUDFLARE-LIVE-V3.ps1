@@ -1,7 +1,8 @@
 param(
   [string]$Repo = 'kaalflash12/naruto-shinobi-no-sho',
   [string]$PreferredCloudflareAccountId = '2a0d551fcc5064ae91aed8b42513f3a',
-  [switch]$ValidateRunParsing
+  [switch]$ValidateRunParsing,
+  [switch]$ValidatePortableTools
 )
 
 Set-StrictMode -Version Latest
@@ -16,9 +17,14 @@ function Get-GhExecutable {
   $existing = Get-Command gh -ErrorAction SilentlyContinue
   if ($existing) { return $existing.Source }
 
+  $cacheRoot = Join-Path $env:TEMP 'shinobi-gh-portable'
+  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter gh.exe -ErrorAction SilentlyContinue | Select-Object -First 1
+  if ($cached) {
+    Write-Host ("Reutilizando GitHub CLI portatil existente: {0}" -f $cached.FullName) -ForegroundColor Green
+    return $cached.FullName
+  }
   Write-Step 'Baixando GitHub CLI portatil'
-  $root = Join-Path $env:TEMP 'shinobi-gh-portable'
-  if (Test-Path $root) { Remove-Item $root -Recurse -Force }
+  $root = Join-Path $env:TEMP ("shinobi-gh-portable-{0}" -f [Guid]::NewGuid().ToString('N'))
   New-Item -ItemType Directory -Path $root -Force | Out-Null
   $headers = @{ 'User-Agent' = 'naruto-shinobi-no-sho-bootstrap' }
   $release = Invoke-RestMethod -Headers $headers -Uri 'https://api.github.com/repos/cli/cli/releases/latest'
@@ -34,8 +40,15 @@ function Get-GhExecutable {
 
 function Ensure-GhLogin([string]$Gh) {
   Write-Step 'Validando login GitHub'
-  & $Gh auth status --hostname github.com *> $null
-  if ($LASTEXITCODE -eq 0) {
+  $previousEap = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = 'Continue'
+    & $Gh auth status --hostname github.com 2>$null | Out-Null
+    $ghAuthenticated = ($LASTEXITCODE -eq 0)
+  } finally {
+    $ErrorActionPreference = $previousEap
+  }
+  if ($ghAuthenticated) {
     Write-Host 'GitHub autenticado.' -ForegroundColor Green
     return
   }
@@ -74,9 +87,14 @@ function Get-NpxExecutable {
   if (-not $existing) { $existing = Get-Command npx -ErrorAction SilentlyContinue }
   if ($existing) { return $existing.Source }
 
+  $cacheRoot = Join-Path $env:TEMP 'shinobi-node-portable'
+  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter npx.cmd -ErrorAction SilentlyContinue | Select-Object -First 1
+  if ($cached) {
+    Write-Host ("Reutilizando Node.js portatil existente: {0}" -f $cached.FullName) -ForegroundColor Green
+    return $cached.FullName
+  }
   Write-Step 'Baixando Node.js LTS portatil'
-  $root = Join-Path $env:TEMP 'shinobi-node-portable'
-  if (Test-Path $root) { Remove-Item $root -Recurse -Force }
+  $root = Join-Path $env:TEMP ("shinobi-node-portable-{0}" -f [Guid]::NewGuid().ToString('N'))
   New-Item -ItemType Directory -Path $root -Force | Out-Null
   $index = Invoke-RestMethod -Uri 'https://nodejs.org/dist/index.json'
   $release = @($index | Where-Object { $_.version -like 'v24.*' -and $_.lts -and ($_.files -contains 'win-x64-zip') }) | Select-Object -First 1
@@ -107,8 +125,15 @@ function Clear-CloudflareEnvironment {
 function Get-CloudflareOAuth([string]$Npx) {
   Clear-CloudflareEnvironment
   Write-Step 'Autorizando Cloudflare sem copiar token'
-  & $Npx --yes 'wrangler@4.119.0' whoami *> $null
-  if ($LASTEXITCODE -ne 0) {
+  $previousEap = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = 'Continue'
+    & $Npx --yes 'wrangler@4.119.0' whoami 2>$null | Out-Null
+    $wranglerAuthenticated = ($LASTEXITCODE -eq 0)
+  } finally {
+    $ErrorActionPreference = $previousEap
+  }
+  if (-not $wranglerAuthenticated) {
     Write-Host 'O navegador vai abrir com o codigo ja preenchido. Apenas aprove a autorizacao Cloudflare.' -ForegroundColor Yellow
     & $Npx --yes 'wrangler@4.119.0' login --device | Out-Host
     if ($LASTEXITCODE -ne 0) { throw 'OAuth Cloudflare via Wrangler falhou.' }
@@ -164,9 +189,14 @@ function Get-AtlasExecutable {
   if (-not $existing) { $existing = Get-Command atlas -ErrorAction SilentlyContinue }
   if ($existing) { return $existing.Source }
 
+  $cacheRoot = Join-Path $env:TEMP 'shinobi-atlas-portable'
+  $cached = Get-ChildItem $cacheRoot -Recurse -File -Filter atlas.exe -ErrorAction SilentlyContinue | Select-Object -First 1
+  if ($cached) {
+    Write-Host ("Reutilizando MongoDB Atlas CLI portatil existente: {0}" -f $cached.FullName) -ForegroundColor Green
+    return $cached.FullName
+  }
   Write-Step 'Baixando MongoDB Atlas CLI portatil'
-  $root = Join-Path $env:TEMP 'shinobi-atlas-portable'
-  if (Test-Path $root) { Remove-Item $root -Recurse -Force }
+  $root = Join-Path $env:TEMP ("shinobi-atlas-portable-{0}" -f [Guid]::NewGuid().ToString('N'))
   New-Item -ItemType Directory -Path $root -Force | Out-Null
   $headers = @{ 'User-Agent' = 'naruto-shinobi-no-sho-bootstrap' }
   $release = Invoke-RestMethod -Headers $headers -Uri 'https://api.github.com/repos/mongodb/mongodb-atlas-cli/releases/latest'
@@ -532,6 +562,42 @@ function Complete-FinalReadiness([string]$Gh) {
   if (-not $report) { throw 'FINAL-READINESS.json nao confirmou PASS_FINAL_READINESS.' }
   Write-Host 'PASS_FINAL_READINESS confirmado no repositorio.' -ForegroundColor Green
   return $finalId
+}
+
+if ($ValidatePortableTools) {
+  $savedPath = $env:PATH
+  $savedTemp = $env:TEMP
+  $fixtureRoot = Join-Path $env:TEMP ("shinobi-portable-lock-fixture-{0}" -f [Guid]::NewGuid().ToString('N'))
+  New-Item -ItemType Directory -Path $fixtureRoot -Force | Out-Null
+  $locks = @()
+  try {
+    $env:TEMP = $fixtureRoot
+    $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot"
+    foreach ($fixture in @(
+      @{ Dir = 'shinobi-gh-portable\bin'; Name = 'gh.exe' },
+      @{ Dir = 'shinobi-node-portable\bin'; Name = 'npx.cmd' },
+      @{ Dir = 'shinobi-atlas-portable\bin'; Name = 'atlas.exe' }
+    )) {
+      $dir = Join-Path $fixtureRoot $fixture.Dir
+      New-Item -ItemType Directory -Path $dir -Force | Out-Null
+      $file = Join-Path $dir $fixture.Name
+      [IO.File]::WriteAllText($file, 'locked-fixture')
+      $locks += [IO.File]::Open($file, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::None)
+    }
+    $ghFixture = Get-GhExecutable
+    $npxFixture = Get-NpxExecutable
+    $atlasFixture = Get-AtlasExecutable
+    if ((Split-Path $ghFixture -Leaf) -ne 'gh.exe') { throw 'GitHub CLI bloqueado nao foi reutilizado.' }
+    if ((Split-Path $npxFixture -Leaf) -ne 'npx.cmd') { throw 'Node.js bloqueado nao foi reutilizado.' }
+    if ((Split-Path $atlasFixture -Leaf) -ne 'atlas.exe') { throw 'Atlas CLI bloqueado nao foi reutilizado.' }
+    Write-Host 'PASS_PORTABLE_TOOL_LOCK_REUSE'
+    exit 0
+  } finally {
+    foreach ($lock in $locks) { if ($lock) { $lock.Dispose() } }
+    $env:TEMP = $savedTemp
+    $env:PATH = $savedPath
+    Remove-Item $fixtureRoot -Recurse -Force -ErrorAction SilentlyContinue
+  }
 }
 
 if ($ValidateRunParsing) {
