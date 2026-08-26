@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T18:52:06.470Z",
+  "generatedAt": "2026-08-26T18:56:11.388Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T18:51:48.663Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T18:55:56.254Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 127,
+    "sourceFiles": 128,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39852,6 +39852,11 @@
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6"
     },
     {
+      "path": ".github/workflows/fix-portable-validator-once.yml",
+      "size": 1465,
+      "sha256": "8b8260870eb607723f3e85c727d3e284fc1c79fc505c1e6256e5f25ec198eba1"
+    },
+    {
       "path": ".github/workflows/live-backend-e2e.yml",
       "size": 16180,
       "sha256": "ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884"
@@ -39863,8 +39868,8 @@
     },
     {
       "path": ".github/workflows/portable-bootstrap-hardening-fast.yml",
-      "size": 10949,
-      "sha256": "e99125cceffa67c04333756b5f7d5f2da1a3355cd2b10fb3a53cbcec3bf45bb7"
+      "size": 11013,
+      "sha256": "43edf93b2d8a38e2c7095f03ea85a75521749223519caad9bf3ee2a7277bc95e"
     },
     {
       "path": ".github/workflows/portable-bootstrap-hardening-once.yml",

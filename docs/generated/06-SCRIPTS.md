@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T18:51:48.663Z`
+Gerado em: `2026-08-26T18:55:56.254Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -56,9 +56,10 @@ Gerado em: `2026-08-26T18:51:48.663Z`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 6488 bytes — SHA-256 `95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9`
 - `.github/workflows/final-readiness-orchestration.yml` — domínio `tooling` — 1612 bytes — SHA-256 `b6066a2bc1d120eb8ae201c3d14a7972edb8231fbc63f8d9a774b79f5453b531`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3417 bytes — SHA-256 `a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6`
+- `.github/workflows/fix-portable-validator-once.yml` — domínio `tooling` — 1465 bytes — SHA-256 `8b8260870eb607723f3e85c727d3e284fc1c79fc505c1e6256e5f25ec198eba1`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 16180 bytes — SHA-256 `ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 4337 bytes — SHA-256 `8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc`
-- `.github/workflows/portable-bootstrap-hardening-fast.yml` — domínio `tooling` — 10949 bytes — SHA-256 `e99125cceffa67c04333756b5f7d5f2da1a3355cd2b10fb3a53cbcec3bf45bb7`
+- `.github/workflows/portable-bootstrap-hardening-fast.yml` — domínio `tooling` — 11013 bytes — SHA-256 `43edf93b2d8a38e2c7095f03ea85a75521749223519caad9bf3ee2a7277bc95e`
 - `.github/workflows/portable-bootstrap-hardening-once.yml` — domínio `tooling` — 12443 bytes — SHA-256 `947908e15ebe87a8a178a3fc0d34bfd12a088b02ec4934674eee292b56fc4dc1`
 - `.github/workflows/post-live-backend-orchestration.yml` — domínio `tooling` — 1054 bytes — SHA-256 `7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad`
 - `.github/workflows/public-release-coherence.yml` — domínio `tooling` — 4447 bytes — SHA-256 `29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205`
