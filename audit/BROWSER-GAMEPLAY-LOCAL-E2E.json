@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-26T21:42:59.225Z",
+  "generatedAt": "2026-08-26T23:09:24.672Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtamdfie62gl3",
-  "slotId": "gameplay-mtamdfie",
+  "temporaryAccount": "play_mtapgkm5kc8ke",
+  "slotId": "gameplay-mtapgkm5",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -89,7 +89,7 @@
           "score": 1000,
           "success": true,
           "errors": 0,
-          "time": 4.8,
+          "time": 4.9,
           "performanceTags": [
             "preciso",
             "controlado"
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787780550136,
+          "at": 1787785735615,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 20,
+          "total": 24,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -123,8 +123,8 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 36,
-          "enemyHpAfter": 36,
+          "enemyHpBefore": 30,
+          "enemyHpAfter": 30,
           "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
         },
         "validation": {
@@ -148,9 +148,9 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 560,
+          "score": 537,
           "success": true,
-          "errors": 2,
+          "errors": 3,
           "time": 0.8,
           "performanceTags": [
             "estavel",
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtamdfie62gl3",
+        "intent": "Cobrir saída E2E mtapgkm5kc8ke",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787780554703,
-        "cloudAt": 1787780547678,
+        "localAt": 1787785740131,
+        "cloudAt": 1787785733130,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
