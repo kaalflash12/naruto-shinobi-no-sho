@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T20:20:33.167Z",
+  "generatedAt": "2026-08-26T20:22:33.648Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T20:20:18.390Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T20:22:18.960Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 128,
+    "sourceFiles": 129,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -39860,6 +39860,11 @@
       "path": ".github/workflows/final-readiness.yml",
       "size": 3417,
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6"
+    },
+    {
+      "path": ".github/workflows/fix-authority-namespace-not-found-once.yml",
+      "size": 7550,
+      "sha256": "5d7cd0fedb51b6ffb22ee1ed5fbc5e4240b180e52b24f4acde7422c752d09b94"
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",

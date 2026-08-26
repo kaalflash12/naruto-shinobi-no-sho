@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T20:20:18.390Z",
+  "generatedAt": "2026-08-26T20:22:18.960Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5580,
+    "files": 5581,
     "runtimeFiles": 107,
     "assetFiles": 5434,
-    "textFiles": 140,
+    "textFiles": 141,
     "functions": 3360,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2911,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 128,
+    "sourceFiles": 129,
     "gameRuntimeSourceFiles": 68,
-    "toolingSourceFiles": 60,
+    "toolingSourceFiles": 61,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -135,6 +135,14 @@
       "path": ".github/workflows/final-readiness.yml",
       "size": 3417,
       "sha256": "a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/fix-authority-namespace-not-found-once.yml",
+      "size": 7550,
+      "sha256": "5d7cd0fedb51b6ffb22ee1ed5fbc5e4240b180e52b24f4acde7422c752d09b94",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -363704,7 +363712,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T20:20:20.773Z",
+    "generatedAt": "2026-08-26T20:22:21.504Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364229,9 +364237,9 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8067,
+      "movement": 8068,
       "assets": 15838,
-      "environment": 209
+      "environment": 217
     },
     "after": {
       "functions": 3360,
