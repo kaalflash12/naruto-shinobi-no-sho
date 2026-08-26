@@ -15,78 +15,15 @@ on:
       - .github/workflows/canonical-v3-hardening.yml
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  patch-and-validate-canonical-v3:
+  validate-canonical-v3:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Patch Atlas authentication probe idempotently
-        shell: python
-        run: |
-          from pathlib import Path
-
-          path = Path('tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1')
-          source = path.read_text(encoding='utf-8-sig')
-
-          if 'function Test-AtlasAuthenticated([string]$Atlas)' in source:
-              print('ATLAS_WINPS_HOTFIX_ALREADY_PRESENT')
-              raise SystemExit(0)
-
-          old_start = """function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
-            & $Atlas auth whoami *> $null
-            if ($LASTEXITCODE -eq 0) { return }
-          """
-          new_start = """function Test-AtlasAuthenticated([string]$Atlas) {
-            $psi = New-Object System.Diagnostics.ProcessStartInfo
-            $psi.FileName = $Atlas
-            $psi.Arguments = 'auth whoami'
-            $psi.UseShellExecute = $false
-            $psi.RedirectStandardOutput = $true
-            $psi.RedirectStandardError = $true
-            $psi.CreateNoWindow = $true
-            $p = New-Object System.Diagnostics.Process
-            $p.StartInfo = $psi
-            try {
-              [void]$p.Start()
-              [void]$p.StandardOutput.ReadToEnd()
-              [void]$p.StandardError.ReadToEnd()
-              $p.WaitForExit()
-              return ($p.ExitCode -eq 0)
-            } catch {
-              return $false
-            } finally {
-              if ($p) { $p.Dispose() }
-            }
-          }
-
-          function Ensure-AtlasLoginZeroPaste([string]$Atlas) {
-            if (Test-AtlasAuthenticated $Atlas) { return }
-          """
-          if source.count(old_start) != 1:
-              raise SystemExit(f'Atlas login start probe match count: {source.count(old_start)}')
-          patched = source.replace(old_start, new_start, 1)
-
-          old_tail = """  & $Atlas auth whoami *> $null
-            if ($LASTEXITCODE -ne 0) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
-          """
-          new_tail = """  if (-not (Test-AtlasAuthenticated $Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }
-          """
-          if patched.count(old_tail) != 1:
-              raise SystemExit(f'Atlas login final probe match count: {patched.count(old_tail)}')
-          patched = patched.replace(old_tail, new_tail, 1)
-
-          if 'auth login --force --skipConfig --noBrowser' not in patched:
-              raise SystemExit('Fluxo Atlas zero-paste foi removido indevidamente.')
-          path.write_text(patched, encoding='utf-8', newline='')
-          print('PATCHED_CANONICAL_V3_ATLAS_WINPS')
-
-      - name: Parse and run deterministic V3 regression
+      - name: Parse canonical V3 and regression fixture
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
@@ -100,25 +37,62 @@ jobs:
           }
           powershell.exe -NoProfile -ExecutionPolicy Bypass -File $path -ValidateRunParsing
           if ($LASTEXITCODE -ne 0) { throw "Canonical V3 regression fixture failed with exit code $LASTEXITCODE." }
-          $canonical = Get-Content $path -Raw
-          if (-not $canonical.Contains('function Test-AtlasAuthenticated([string]$Atlas)')) { throw 'Atlas safe probe helper missing.' }
-          if (-not $canonical.Contains('if (Test-AtlasAuthenticated $Atlas) { return }')) { throw 'Atlas initial safe probe missing.' }
-          if (-not $canonical.Contains("if (-not (Test-AtlasAuthenticated `$Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }")) { throw 'Atlas final safe probe missing.' }
-          if ($canonical.Contains('& $Atlas auth whoami *> $null')) { throw 'Unsafe direct Atlas whoami probe remains.' }
-          Write-Host 'PASS_CANONICAL_V3_ATLAS_WINPS_HARDENING'
 
-      - name: Commit V3 hotfix when changed
+      - name: Require scalar outputs safe bearer lifetime and safe Atlas probe
         shell: powershell
         run: |
           $ErrorActionPreference = 'Stop'
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1
-          if (git diff --cached --quiet) {
-            Write-Host 'CANONICAL_V3_ALREADY_PATCHED'
-            exit 0
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+          $required = @(
+            "login --device | Out-Host",
+            "auth login --force --skipConfig --noBrowser",
+            "--connectWith skip --force *> `$null",
+            "run watch `$RunId --repo `$Repo --exit-status | Out-Host",
+            "workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null",
+            "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
+            "function Test-AtlasAuthenticated([string]`$Atlas)",
+            "if (Test-AtlasAuthenticated `$Atlas) { return }",
+            "if (-not (Test-AtlasAuthenticated `$Atlas)) { throw 'MongoDB Atlas CLI nao ficou autenticado.' }",
+            "`$finalReadinessPassed = `$false",
+            "`$finalReadinessPassed = `$true",
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+          )
+          foreach ($needle in $required) {
+            if (-not $canonical.Contains($needle)) { throw "Canonical V3 hardening missing: $needle" }
           }
-          git diff --cached --check
-          git commit -m 'fix: make Atlas auth probe safe on Windows PowerShell'
-          git pull --rebase origin main
-          git push origin HEAD:main
+
+          $unsafe = @(
+            "    & `$Npx --yes 'wrangler@4.119.0' login --device`n",
+            "  & `$Gh run watch `$RunId --repo `$Repo --exit-status`n",
+            "  & `$Gh workflow run backend-secret-presence.yml --repo `$Repo --ref main`n",
+            "  & `$Gh workflow run final-readiness-orchestration.yml --repo `$Repo --ref main`n",
+            "& `$Atlas auth whoami *> `$null",
+            "  if (`$temporaryCloudflareSecretWritten) {"
+          )
+          foreach ($needle in $unsafe) {
+            if ($canonical.Contains($needle)) { throw "Unsafe canonical V3 contract remains: $needle" }
+          }
+          Write-Host 'PASS_CANONICAL_V3_SOURCE_HARDENING'
+
+      - name: Verify root launcher is idempotent with hardened canonical V3
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $launcher = Get-Content 'ATIVAR-CLOUDFLARE-LIVE.ps1' -Raw
+          if (-not $launcher.Contains('if ($Text.Contains($New)) { return $Text }')) {
+            throw 'Root launcher is not idempotent when canonical V3 is already hardened.'
+          }
+          $canonical = Get-Content 'tools/ATIVAR-CLOUDFLARE-LIVE-V3.ps1' -Raw
+          $required = @(
+            "login --device | Out-Host",
+            "--connectWith skip --force *> `$null",
+            "run watch `$RunId --repo `$Repo --exit-status | Out-Host",
+            "workflow run backend-secret-presence.yml --repo `$Repo --ref main *> `$null",
+            "workflow run final-readiness-orchestration.yml --repo `$Repo --ref main *> `$null",
+            "function Test-AtlasAuthenticated([string]`$Atlas)",
+            "`$temporaryCloudflareSecretWritten -and `$finalReadinessPassed"
+          )
+          foreach ($needle in $required) {
+            if (-not $canonical.Contains($needle)) { throw "Root launcher would need to repair missing canonical contract: $needle" }
+          }
+          Write-Host 'PASS_CANONICAL_V3_LAUNCHER_IDEMPOTENCE'
