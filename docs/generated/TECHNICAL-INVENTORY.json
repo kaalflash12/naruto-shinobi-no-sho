@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T17:55:50.379Z",
+  "generatedAt": "2026-08-26T18:03:37.071Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -61,8 +61,8 @@
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
-      "size": 5110,
-      "sha256": "5599920435add034f19aa6f4d2326efbb89b940f6b0dfd5408b591ff0463b9ee",
+      "size": 6485,
+      "sha256": "bebb5d3d2f4e74ca054d9d87c17fac69a9b5707923194f31f6e70efeaf4f8efc",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -85,8 +85,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 4653,
-      "sha256": "442b34ddfef6a42ccac9a2c9ffe177912d880bc0960d6d50856d21b0668e5c42",
+      "size": 5073,
+      "sha256": "0c3f6d423b58afde7a4534fdf668f5874a310701cc796d3987d349dca719ecad",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -125,8 +125,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 16379,
-      "sha256": "1659cc5fb1b4170ba00b3c6fcf0ed177865bbe66b904be63570e5be7f4733d67",
+      "size": 16180,
+      "sha256": "ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43661,8 +43661,8 @@
     },
     {
       "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
-      "size": 4151,
-      "sha256": "bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896",
+      "size": 2152,
+      "sha256": "1489763534a302ddfdffd419527ccc8f8006150a071f86df5d5d0022cc0047f5",
       "extension": ".ps1",
       "runtime": true,
       "asset": false
@@ -43678,15 +43678,15 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2521,
-      "sha256": "11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172",
+      "sha256": "1fca625db178f061ac71478abf782fe7909b82ca28de975b942505701c43c4a7",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "72cf6f6d7e88706eb4877647644441ceec514197fcbbc814d336a974b0f14c78",
+      "size": 5604,
+      "sha256": "a40d4ee06716d5bfc2fb1514a8746198d0f9296e90719ac70265477ef9debfde",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43694,7 +43694,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "5cd0da77f1ebef68287ff00297fe052fdd3634e5fb9a9e7d85eb948822560329",
+      "sha256": "c95a2ba013ba34ab612ccf419e1f24ff5b50360043fb51b82eabbc621279a0ff",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44214,7 +44214,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "718ad1c491bc14d2509cc9340a02737ee4dc1f5267c195f8d076b1408995f3ce",
+      "sha256": "43350e250db712cdd7b41c2dfaadaf7a0369edfbfdec7726516c2787671ba345",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -44437,8 +44437,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 6696,
-      "sha256": "03e6b4228cb1799a173de666d41ebc75e43a055d4fe932f03abac1bb92459d31",
+      "size": 7083,
+      "sha256": "8dec7baa4adcd664f7e1dbedf546ff19e57c44073cc7e625dc3c4fe886849775",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -182364,10 +182364,10 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 32,
-      "endLine": 32,
-      "column": 94,
-      "endColumn": 108,
+      "line": 36,
+      "endLine": 36,
+      "column": 90,
+      "endColumn": 104,
       "name": "<callback:Object.entries().filter().map#0>",
       "kind": "arrow",
       "params": "[name]",
@@ -182386,10 +182386,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1310,
-        "end": 1324,
-        "bodyStart": 1320,
-        "bodyEnd": 1324,
+        "start": 1628,
+        "end": 1642,
+        "bodyStart": 1638,
+        "bodyEnd": 1642,
         "functionSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
         "bodySha256": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
         "async": false,
@@ -182405,13 +182405,13 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 32,
-      "endLine": 32,
+      "line": 36,
+      "endLine": 36,
       "column": 66,
-      "endColumn": 88,
+      "endColumn": 84,
       "name": "<callback:Object.entries().filter#0>",
       "kind": "arrow",
-      "params": "[,present]",
+      "params": "[,ready]",
       "calls": [],
       "refs": {
         "routes": [],
@@ -182427,12 +182427,12 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 1282,
-        "end": 1304,
-        "bodyStart": 1296,
-        "bodyEnd": 1304,
-        "functionSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
-        "bodySha256": "ac3d1ec39d3f5f45ba30dd0d5de90418695feae4d877e6bbdf242948d72e2891",
+        "start": 1604,
+        "end": 1622,
+        "bodyStart": 1616,
+        "bodyEnd": 1622,
+        "functionSha256": "783df0c05eeef1ed52030da3b6b4626af588000d040acf9e8d6822df48ab7fce",
+        "bodySha256": "c13899f0d1410d48eba547c99e5c8b0e353cc1347eaedc80babd79d63c0b8e48",
         "async": false,
         "generator": false,
         "expressionBody": true,
@@ -182446,10 +182446,10 @@
     },
     {
       "file": "tools/backend-presence-audit.mjs",
-      "line": 96,
-      "endLine": 96,
+      "line": 100,
+      "endLine": 100,
       "column": 15,
-      "endColumn": 621,
+      "endColumn": 658,
       "name": "semantic",
       "kind": "arrow",
       "params": "r",
@@ -182470,12 +182470,12 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "ArrowFunctionExpression",
-        "start": 5410,
-        "end": 6016,
-        "bodyStart": 5413,
-        "bodyEnd": 6016,
-        "functionSha256": "55cbde07427d1a5587fe2453e71dcbfdcbb6781f1af5b3423a41960b9c4228bf",
-        "bodySha256": "d13275aa2036d2009ad39ad72ca47963881320181b345661be0cbee4d02ed1d8",
+        "start": 5742,
+        "end": 6385,
+        "bodyStart": 5745,
+        "bodyEnd": 6385,
+        "functionSha256": "574856c2addf4d1162a1c1e24a7636bea310cdd20bbe3623101f7326990e6cc5",
+        "bodySha256": "83fc6577ff2981177d98f23e33fe886b4158660851e30ef800a44e38524d4c49",
         "async": false,
         "generator": false,
         "expressionBody": true,
@@ -363680,7 +363680,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T17:55:52.880Z",
+    "generatedAt": "2026-08-26T18:03:38.964Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364013,7 +364013,7 @@
         "file": "tools/backend-presence-audit.mjs",
         "sourceType": "module",
         "functions": 6,
-        "bytes": 6696
+        "bytes": 7083
       },
       {
         "file": "tools/browser-account-live.mjs",
@@ -364207,7 +364207,7 @@
       "events": 14,
       "movement": 8066,
       "assets": 15838,
-      "environment": 196
+      "environment": 200
     },
     "after": {
       "functions": 3360,

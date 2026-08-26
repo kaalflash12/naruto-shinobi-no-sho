@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T17:55:50.379Z`
+Gerado em: `2026-08-26T18:03:37.071Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -48,25 +48,25 @@ Gerado em: `2026-08-26T17:55:50.379Z`
 ## Fonte/configuração/tooling
 
 - `.github/workflows/account-live-e2e.yml` — domínio `tooling` — 9864 bytes — SHA-256 `803c72107774d3e861349f8a8ede0aeb7c978facdb84246dc2ade0f189a33d41`
-- `.github/workflows/backend-secret-presence.yml` — domínio `tooling` — 5110 bytes — SHA-256 `5599920435add034f19aa6f4d2326efbb89b940f6b0dfd5408b591ff0463b9ee`
+- `.github/workflows/backend-secret-presence.yml` — domínio `tooling` — 6485 bytes — SHA-256 `bebb5d3d2f4e74ca054d9d87c17fac69a9b5707923194f31f6e70efeaf4f8efc`
 - `.github/workflows/browser-e2e.yml` — domínio `tooling` — 5093 bytes — SHA-256 `f3cf3000ff267f60d38d2c2504aeaae1b4a77f2d1dca3c8cabe0d9a5334f9047`
 - `.github/workflows/browser-gameplay-e2e.yml` — domínio `tooling` — 8763 bytes — SHA-256 `ee14697f97f9edf76e8208ff8961ab52e0591efaa91b1cf2ab766c99a870da43`
-- `.github/workflows/canonical-v3-hardening.yml` — domínio `tooling` — 4653 bytes — SHA-256 `442b34ddfef6a42ccac9a2c9ffe177912d880bc0960d6d50856d21b0668e5c42`
+- `.github/workflows/canonical-v3-hardening.yml` — domínio `tooling` — 5073 bytes — SHA-256 `0c3f6d423b58afde7a4534fdf668f5874a310701cc796d3987d349dca719ecad`
 - `.github/workflows/cloudflare-bootstrap-syntax.yml` — domínio `tooling` — 4917 bytes — SHA-256 `5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa`
 - `.github/workflows/documentation-audit.yml` — domínio `tooling` — 6488 bytes — SHA-256 `95ba7370201786c7d07364693c35647b982f62a10c46e3fb71466eafeef919c9`
 - `.github/workflows/final-readiness-orchestration.yml` — domínio `tooling` — 1612 bytes — SHA-256 `b6066a2bc1d120eb8ae201c3d14a7972edb8231fbc63f8d9a774b79f5453b531`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3417 bytes — SHA-256 `a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6`
-- `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 16379 bytes — SHA-256 `1659cc5fb1b4170ba00b3c6fcf0ed177865bbe66b904be63570e5be7f4733d67`
+- `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 16180 bytes — SHA-256 `ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 4337 bytes — SHA-256 `8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc`
 - `.github/workflows/post-live-backend-orchestration.yml` — domínio `tooling` — 1054 bytes — SHA-256 `7e023fbf676af0fc4bacdf968486608343fd823c1986b8e7b23e07beb38fa7ad`
 - `.github/workflows/public-release-coherence.yml` — domínio `tooling` — 4447 bytes — SHA-256 `29b64ba6ccd53a91d587f44044658aa39eefaae58aa13ab2e361baea270bb205`
 - `.github/workflows/runtime-integrity.yml` — domínio `tooling` — 6129 bytes — SHA-256 `ed8ca1ffa6779fc92c1762abd6c4c1065fc269f80d4a8062fa5df0de829898e8`
 - `.github/workflows/sync-public-release-fingerprint.yml` — domínio `tooling` — 1753 bytes — SHA-256 `0a9d6158d5b5ecd3c0cbd5192fe1ec8e99b5bb09135af6634eb358a4fb9793d4`
 - `app.js` — domínio `game-runtime` — 1084160 bytes — SHA-256 `88bc3f11ff90d1c0fe792451c4b01c9c36e5e009ff1fdbedc9693179057b0c06`
-- `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 4151 bytes — SHA-256 `bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896`
-- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2521 bytes — SHA-256 `11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172`
-- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5607 bytes — SHA-256 `72cf6f6d7e88706eb4877647644441ceec514197fcbbc814d336a974b0f14c78`
-- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `5cd0da77f1ebef68287ff00297fe052fdd3634e5fb9a9e7d85eb948822560329`
+- `ATIVAR-CLOUDFLARE-LIVE.ps1` — domínio `game-runtime` — 2152 bytes — SHA-256 `1489763534a302ddfdffd419527ccc8f8006150a071f86df5d5d0022cc0047f5`
+- `audit/BACKEND-SECRET-PRESENCE.json` — domínio `tooling` — 2521 bytes — SHA-256 `1fca625db178f061ac71478abf782fe7909b82ca28de975b942505701c43c4a7`
+- `audit/BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 5604 bytes — SHA-256 `a40d4ee06716d5bfc2fb1514a8746198d0f9296e90719ac70265477ef9debfde`
+- `audit/BROWSER-SMOKE.json` — domínio `tooling` — 823 bytes — SHA-256 `c95a2ba013ba34ab612ccf419e1f24ff5b50360043fb51b82eabbc621279a0ff`
 - `audit/LIVE-BACKEND.json` — domínio `tooling` — 1023 bytes — SHA-256 `0be72375eedacd96eddc3cb39de6f9b59e916472b99c5d154a5611a4da71926e`
 - `audit/PR39-BROWSER-GAMEPLAY-LOCAL-E2E.json` — domínio `tooling` — 1776 bytes — SHA-256 `7f3a29dc22b6cf3ea103cce4d3701e229f3faf8ea1e02b0a0cd1f57be03c6d98`
 - `audit/PR39-BROWSER-SMOKE.json` — domínio `tooling` — 1032 bytes — SHA-256 `4e2bcac6cdb3a5a10b36fa75a7108377b3f502fb965ed05300c85a550205f9c2`
@@ -145,7 +145,7 @@ Gerado em: `2026-08-26T17:55:50.379Z`
 - `tools/audit-final-canonical-spec.mjs` — domínio `tooling` — 3143 bytes — SHA-256 `d5ba4fb27a3c519eeca10798716adc5b2f2b594b77b2e5aea2e240cb65e2cabb`
 - `tools/audit-operational-static-contracts.mjs` — domínio `tooling` — 2954 bytes — SHA-256 `218e2758c48d50308241329b8715fb3963b673e33b5136e2ebd5b17fcab4eea4`
 - `tools/audit-r41-assets.mjs` — domínio `tooling` — 4125 bytes — SHA-256 `39749a4858fc14f1ea27a22e269f947346e90cf51916befec19691945b95606a`
-- `tools/backend-presence-audit.mjs` — domínio `tooling` — 6696 bytes — SHA-256 `03e6b4228cb1799a173de666d41ebc75e43a055d4fe932f03abac1bb92459d31`
+- `tools/backend-presence-audit.mjs` — domínio `tooling` — 7083 bytes — SHA-256 `8dec7baa4adcd664f7e1dbedf546ff19e57c44073cc7e625dc3c4fe886849775`
 - `tools/browser-account-live.mjs` — domínio `tooling` — 5191 bytes — SHA-256 `1d62144ef47d69f22aa9c8efac15adfb66e8c25abda0a89d8928dd78b0552f2f`
 - `tools/browser-combat-local-e2e.mjs` — domínio `tooling` — 8444 bytes — SHA-256 `e30a710e5ef378e068eaabad8fe77cdd481175994b77b7b372a9ea97f3961d21`
 - `tools/browser-gameplay-e2e-v2.mjs` — domínio `tooling` — 9309 bytes — SHA-256 `670e38ea4666b7d99411aa2d9f2a443bdaea2d09b5e401ed2467f7a70e00e4b5`

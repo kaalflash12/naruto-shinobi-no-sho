@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-26T17:55:50.379Z`
+Gerado em: `2026-08-26T18:03:37.071Z`
 
 ## FUNC-00001 — `<anonymous@1:1>`
 
@@ -47750,7 +47750,7 @@ Gerado em: `2026-08-26T17:55:50.379Z`
 
 ## FUNC-02985 — `<callback:Object.entries().filter().map#0>`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:32`
+- **Fonte:** `tools/backend-presence-audit.mjs:36`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `[name]`
@@ -47766,10 +47766,10 @@ Gerado em: `2026-08-26T17:55:50.379Z`
 
 ## FUNC-02986 — `<callback:Object.entries().filter#0>`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:32`
+- **Fonte:** `tools/backend-presence-audit.mjs:36`
 - **Domínio:** `tooling`
 - **Forma:** arrow
-- **Parâmetros:** `[,present]`
+- **Parâmetros:** `[,ready]`
 - **Chamadas internas detectadas:** —
 - **Rotas referidas:** —
 - **Coleções MongoDB:** —
@@ -47782,7 +47782,7 @@ Gerado em: `2026-08-26T17:55:50.379Z`
 
 ## FUNC-02987 — `semantic`
 
-- **Fonte:** `tools/backend-presence-audit.mjs:96`
+- **Fonte:** `tools/backend-presence-audit.mjs:100`
 - **Domínio:** `tooling`
 - **Forma:** arrow
 - **Parâmetros:** `r`

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T17:56:04.869Z",
+  "generatedAt": "2026-08-26T18:03:48.047Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T17:55:50.379Z",
+  "sourceInventoryGeneratedAt": "2026-08-26T18:03:37.071Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3360,
@@ -29877,32 +29877,32 @@
     {
       "id": "FUNC-02985",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 32,
+      "line": 36,
       "name": "<callback:Object.entries().filter().map#0>",
       "exactCode": true,
       "snippetSha256": "e6c724800197dc0f23fde3076902922add0801559b3cc9406364fd4966a0d552",
-      "astStart": 1310,
-      "astEnd": 1324
+      "astStart": 1628,
+      "astEnd": 1642
     },
     {
       "id": "FUNC-02986",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 32,
+      "line": 36,
       "name": "<callback:Object.entries().filter#0>",
       "exactCode": true,
-      "snippetSha256": "4f9991eb575856f6dad07d3a8d6c966e0566d762c658236f8f515bc7a08f328b",
-      "astStart": 1282,
-      "astEnd": 1304
+      "snippetSha256": "783df0c05eeef1ed52030da3b6b4626af588000d040acf9e8d6822df48ab7fce",
+      "astStart": 1604,
+      "astEnd": 1622
     },
     {
       "id": "FUNC-02987",
       "file": "tools/backend-presence-audit.mjs",
-      "line": 96,
+      "line": 100,
       "name": "semantic",
       "exactCode": true,
-      "snippetSha256": "55cbde07427d1a5587fe2453e71dcbfdcbb6781f1af5b3423a41960b9c4228bf",
-      "astStart": 5410,
-      "astEnd": 6016
+      "snippetSha256": "574856c2addf4d1162a1c1e24a7636bea310cdd20bbe3623101f7326990e6cc5",
+      "astStart": 5742,
+      "astEnd": 6385
     },
     {
       "id": "FUNC-02988",
@@ -39813,8 +39813,8 @@
     },
     {
       "path": ".github/workflows/backend-secret-presence.yml",
-      "size": 5110,
-      "sha256": "5599920435add034f19aa6f4d2326efbb89b940f6b0dfd5408b591ff0463b9ee"
+      "size": 6485,
+      "sha256": "bebb5d3d2f4e74ca054d9d87c17fac69a9b5707923194f31f6e70efeaf4f8efc"
     },
     {
       "path": ".github/workflows/browser-e2e.yml",
@@ -39828,8 +39828,8 @@
     },
     {
       "path": ".github/workflows/canonical-v3-hardening.yml",
-      "size": 4653,
-      "sha256": "442b34ddfef6a42ccac9a2c9ffe177912d880bc0960d6d50856d21b0668e5c42"
+      "size": 5073,
+      "sha256": "0c3f6d423b58afde7a4534fdf668f5874a310701cc796d3987d349dca719ecad"
     },
     {
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
@@ -39853,8 +39853,8 @@
     },
     {
       "path": ".github/workflows/live-backend-e2e.yml",
-      "size": 16379,
-      "sha256": "1659cc5fb1b4170ba00b3c6fcf0ed177865bbe66b904be63570e5be7f4733d67"
+      "size": 16180,
+      "sha256": "ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884"
     },
     {
       "path": ".github/workflows/live-backend-failure-evidence.yml",
@@ -39888,23 +39888,23 @@
     },
     {
       "path": "ATIVAR-CLOUDFLARE-LIVE.ps1",
-      "size": 4151,
-      "sha256": "bafe1d3b0e4a19b2340a054e9fba7b067983fab4f7f2d7bd3c7089d4975c7896"
+      "size": 2152,
+      "sha256": "1489763534a302ddfdffd419527ccc8f8006150a071f86df5d5d0022cc0047f5"
     },
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2521,
-      "sha256": "11f0328155bbd21486fc7dd0fdf6d24e59c5095beac1b775b8a3bba939bd5172"
+      "sha256": "1fca625db178f061ac71478abf782fe7909b82ca28de975b942505701c43c4a7"
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5607,
-      "sha256": "72cf6f6d7e88706eb4877647644441ceec514197fcbbc814d336a974b0f14c78"
+      "size": 5604,
+      "sha256": "a40d4ee06716d5bfc2fb1514a8746198d0f9296e90719ac70265477ef9debfde"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "5cd0da77f1ebef68287ff00297fe052fdd3634e5fb9a9e7d85eb948822560329"
+      "sha256": "c95a2ba013ba34ab612ccf419e1f24ff5b50360043fb51b82eabbc621279a0ff"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40298,8 +40298,8 @@
     },
     {
       "path": "tools/backend-presence-audit.mjs",
-      "size": 6696,
-      "sha256": "03e6b4228cb1799a173de666d41ebc75e43a055d4fe932f03abac1bb92459d31"
+      "size": 7083,
+      "sha256": "8dec7baa4adcd664f7e1dbedf546ff19e57c44073cc7e625dc3c4fe886849775"
     },
     {
       "path": "tools/browser-account-live.mjs",
