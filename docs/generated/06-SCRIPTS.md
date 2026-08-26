@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-26T21:40:15.714Z`
+Gerado em: `2026-08-26T21:41:31.982Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -94,6 +94,7 @@ Gerado em: `2026-08-26T21:40:15.714Z`
 - `cloudflare/r41-api/src/entry.js` — domínio `game-runtime` — 14173 bytes — SHA-256 `6eb0e3ce5e05445a593af9913a2c819dde387678b4b0eb2926a192eab00d7947`
 - `cloudflare/r41-api/src/index.js` — domínio `game-runtime` — 27910 bytes — SHA-256 `a7e4d6a44085a96644bc43c20cc32e4b1ccc24b74c60965a851a776ad214e8c4`
 - `cloudflare/r41-api/src/terion-mechanics.js` — domínio `game-runtime` — 5469 bytes — SHA-256 `3fcc0d19df10fbbef766f7f1c90d609eaff47d5cae5b98d8e3b41bd160e4ab3d`
+- `cloudflare/r41-api/test/apply-auth-presence-debug.mjs` — domínio `game-runtime` — 663 bytes — SHA-256 `72bea1a8fcbb2d5107cf54a1bc8589a5156dedf62719c4c47734ad7a830e72b2`
 - `cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs` — domínio `game-runtime` — 2118 bytes — SHA-256 `a22ab86c49d0fb39e8d9fcfff790359364182517b09787b61eb3f3fe6033f541`
 - `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs` — domínio `game-runtime` — 11521 bytes — SHA-256 `291ebe3a8b83cb3724d170708c85c595d004e93f966b7220ed007137f48f4303`
 - `cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs` — domínio `game-runtime` — 1570 bytes — SHA-256 `c9d4e759ff93e355bfe211b2ecd78a68d2bfb8365fdc48497fefe34ff9e13f19`

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-26T21:40:15.714Z",
+  "generatedAt": "2026-08-26T21:41:31.982Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5596,
-    "runtimeFiles": 111,
+    "files": 5597,
+    "runtimeFiles": 112,
     "assetFiles": 5434,
-    "textFiles": 156,
+    "textFiles": 157,
     "functions": 3370,
     "routes": 33,
     "models": 2,
@@ -21,13 +21,13 @@
     "scriptTags": 38,
     "assetReferences": 15816,
     "missingLiteralAssetReferences": 0,
-    "astParsedJsFiles": 84,
+    "astParsedJsFiles": 85,
     "astParseFailures": 0,
     "gameRuntimeFunctions": 2921,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 144,
-    "gameRuntimeSourceFiles": 72,
+    "sourceFiles": 145,
+    "gameRuntimeSourceFiles": 73,
     "toolingSourceFiles": 72,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
@@ -43956,6 +43956,14 @@
       "asset": false
     },
     {
+      "path": "cloudflare/r41-api/test/apply-auth-presence-debug.mjs",
+      "size": 663,
+      "sha256": "72bea1a8fcbb2d5107cf54a1bc8589a5156dedf62719c4c47734ad7a830e72b2",
+      "extension": ".mjs",
+      "runtime": true,
+      "asset": false
+    },
+    {
       "path": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
       "size": 2118,
       "sha256": "a22ab86c49d0fb39e8d9fcfff790359364182517b09787b61eb3f3fe6033f541",
@@ -44366,7 +44374,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "5e2fc6024ee4da111579598fe768f83cef6309e0a1d1e5b0130073f5089ae5fe",
+      "sha256": "7ae8389fbbe5ce9bd72160eabb91591d3623b6a1c5fe6638beb64cfc644bc564",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -364536,12 +364544,12 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T21:40:18.218Z",
+    "generatedAt": "2026-08-26T21:41:34.519Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
-    "sourceFiles": 84,
-    "parsedFiles": 84,
+    "sourceFiles": 85,
+    "parsedFiles": 85,
     "parseFailures": 0,
     "functions": 3370,
     "anonymousFunctions": 35,
@@ -364588,6 +364596,12 @@
         "sourceType": "module",
         "functions": 14,
         "bytes": 5469
+      },
+      {
+        "file": "cloudflare/r41-api/test/apply-auth-presence-debug.mjs",
+        "sourceType": "module",
+        "functions": 0,
+        "bytes": 663
       },
       {
         "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",

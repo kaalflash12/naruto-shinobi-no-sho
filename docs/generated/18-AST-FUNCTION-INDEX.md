@@ -2,8 +2,8 @@
 
 Parser: `Acorn 8.15.0`. Delimitação por AST; regex não define início/fim de função.
 
-- Arquivos JS candidatos: **84**
-- Arquivos parseados: **84**
+- Arquivos JS candidatos: **85**
+- Arquivos parseados: **85**
 - Falhas de parse: **0**
 - Funções/callbacks: **3370**
 - Callbacks por contexto: **1517**
