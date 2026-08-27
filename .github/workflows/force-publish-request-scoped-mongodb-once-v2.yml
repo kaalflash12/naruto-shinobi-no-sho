@@ -1,0 +1,88 @@
+name: Force Publish Request Scoped MongoDB Once V2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/force-publish-request-scoped-mongodb-once-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Apply proven request-scoped MongoDB fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          files=['cloudflare/r41-api/src/index.js','cloudflare/r41-api/src/entry.js','cloudflare/r41-api/src/entry-authoritative.js']
+          for f in files:
+              p=Path(f); s=p.read_text(encoding='utf-8')
+              # Replace known global cache declarations.
+              s=re.sub(r'\blet\s+mongoClient\s*=\s*null\s*;\s*let\s+mongoDb\s*=\s*null\s*;','',s)
+              s=re.sub(r'\blet\s+client\s*=\s*null\s*;\s*let\s+database\s*=\s*null\s*;','',s)
+              s=re.sub(r'\blet\s+_client\s*=\s*null\s*;\s*let\s+_db\s*=\s*null\s*;','',s)
+              # Replace compact cached db helpers only when present.
+              cached_patterns=[
+                r'async function db\(env\)\{if\(!mongoDb\)\{mongoClient=new MongoClient\(env\.MONGODB_URI(?:,\{[^}]*\})?\);await mongoClient\.connect\(\);mongoDb=mongoClient\.db\(env\.MONGODB_DB\|\|"naruto_shinobi_no_sho"\);\}return mongoDb;\}',
+                r'async function db\(env\)\{if\(!database\)\{client=new MongoClient\(env\.MONGODB_URI(?:,\{[^}]*\})?\);await client\.connect\(\);database=client\.db\(env\.MONGODB_DB\|\|"naruto_shinobi_no_sho"\);\}return database;\}',
+                r'async function db\(env\)\{if\(!_db\)\{_client=new MongoClient\(env\.MONGODB_URI(?:,\{[^}]*\})?\);await _client\.connect\(\);_db=_client\.db\(env\.MONGODB_DB\|\|"naruto_shinobi_no_sho"\);\}return _db;\}'
+              ]
+              replacement='async function db(env){if(!env?.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");const client=new MongoClient(env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();return client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");}'
+              for pat in cached_patterns:
+                  s,n=re.subn(pat,replacement,s,count=1)
+                  if n: break
+              p.write_text(s,encoding='utf-8',newline='\n')
+          PY
+      - name: Enforce no cached Mongo globals
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const files=['cloudflare/r41-api/src/index.js','cloudflare/r41-api/src/entry.js','cloudflare/r41-api/src/entry-authoritative.js'];
+          for(const f of files){
+            const s=fs.readFileSync(f,'utf8');
+            if(/let\s+(mongoClient|mongoDb|client|database|_client|_db)\s*=\s*null/.test(s)) throw new Error(`${f}: cached Mongo global remains`);
+            if(/if\s*\(\s*!\s*(mongoDb|database|_db)\s*\)/.test(s)) throw new Error(`${f}: cached DB reuse remains`);
+          }
+          console.log('PASS_NO_CROSS_REQUEST_MONGODB_CACHE');
+          NODE
+      - name: Runtime regressions and dry deploy
+        working-directory: cloudflare/r41-api
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/request-scoped-mongo-dry"
+      - name: Publish proven fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/index.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js
+          if git diff --cached --quiet; then
+            echo 'NO_RUNTIME_DIFF'
+            exit 0
+          fi
+          git commit -m 'fix: scope MongoDB connections to Worker requests'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
