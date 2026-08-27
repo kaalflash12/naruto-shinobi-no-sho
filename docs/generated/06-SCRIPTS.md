@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-27T19:00:53.472Z`
+Gerado em: `2026-08-27T19:03:23.869Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|

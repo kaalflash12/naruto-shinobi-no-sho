@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T19:00:53.472Z",
+  "generatedAt": "2026-08-27T19:03:23.869Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -364900,7 +364900,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T19:00:55.449Z",
+    "generatedAt": "2026-08-27T19:03:26.288Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
