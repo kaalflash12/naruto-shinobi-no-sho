@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T01:03:15.146Z",
+  "generatedAt": "2026-08-27T01:08:01.949Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -43798,15 +43798,15 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2700,
-      "sha256": "f92fb4783633a958b77d94f27aeb5a06a3f58802172572e9151458eb0e342522",
+      "sha256": "10fc21391575c66da41a9154de0c185ca5f1c820688eb53af59164a00aba25a8",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5604,
-      "sha256": "d2264bcc8bf2f1765fdace8c6c04b2037d4ff0ef0c56cb93f2354f4775c92327",
+      "size": 5607,
+      "sha256": "f05c3de5898124c353c8e4ce00ade8a55b0ac940556b86acb62e0a0e1a9a5557",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43814,7 +43814,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "5614519718cb2cca490a0ee48afd77681840106b88e1a018992fd9ece0cd40fc",
+      "sha256": "79d50a2480da724d808fc12728251294ae5a46843f382108bc4245c4f5dcf799",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43965,8 +43965,8 @@
     },
     {
       "path": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
-      "size": 3476,
-      "sha256": "b17039b4be635c45bc2036a75d5c97c5d6680c26d2fba980380f86c541bdb06c",
+      "size": 4823,
+      "sha256": "2dd469e865965ab6760802498e7d8ce85d0f569319feafa82169e99552f56d2d",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -44374,7 +44374,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "e6c4d4c7b371b55b5f3132c48a068d92d718649cbd84d3d90adf02fedae2ab7a",
+      "sha256": "1d9830417525158a7500d37b79ac576f1e3b768e871f0a1c8c7fa53cf6978357",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -199782,6 +199782,14 @@
           "line": 36
         },
         {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 48
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 49
+        },
+        {
           "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
           "line": 156
         },
@@ -199992,6 +200000,14 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 125
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 52
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 53
         },
         {
           "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
@@ -200268,6 +200284,14 @@
         {
           "file": "cloudflare/r41-api/src/index.js",
           "line": 89
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 44
+        },
+        {
+          "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
+          "line": 45
         },
         {
           "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
@@ -364572,7 +364596,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T01:03:17.621Z",
+    "generatedAt": "2026-08-27T01:08:03.899Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364635,7 +364659,7 @@
         "file": "cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs",
         "sourceType": "module",
         "functions": 3,
-        "bytes": 3476
+        "bytes": 4823
       },
       {
         "file": "cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs",
