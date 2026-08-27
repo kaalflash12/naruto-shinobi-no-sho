@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-26T23:08:15.315Z",
+  "generatedAt": "2026-08-27T01:03:30.170Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-26T23:08:00.383Z",
+  "sourceInventoryGeneratedAt": "2026-08-27T01:03:15.146Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3370,
@@ -26797,12 +26797,12 @@
     {
       "id": "FUNC-02677",
       "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-      "line": 8,
+      "line": 9,
       "name": "post",
       "exactCode": true,
       "snippetSha256": "1398226bed5db57b09b7677629bfc708f17af507a49b728ed67730cd2dbde60d",
-      "astStart": 353,
-      "astEnd": 973
+      "astStart": 436,
+      "astEnd": 1056
     },
     {
       "id": "FUNC-02678",
@@ -40074,12 +40074,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "438503e0f2113b8344ddf77fefffbe0ca2663cfe4a739691ac91a241b152a88e"
+      "sha256": "d2264bcc8bf2f1765fdace8c6c04b2037d4ff0ef0c56cb93f2354f4775c92327"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "d1b3f7264191a5aef2c2ef30e1dd3d8e4c57963d64366d14f978da6e41bef96d"
+      "sha256": "5614519718cb2cca490a0ee48afd77681840106b88e1a018992fd9ece0cd40fc"
     },
     {
       "path": "audit/LIVE-BACKEND.json",
@@ -40168,8 +40168,8 @@
     },
     {
       "path": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-      "size": 2649,
-      "sha256": "6926b83b36d0f66dff14b163d1455a8bf5bcd33ed2bab679fd7d4095cf4c8e36"
+      "size": 2732,
+      "sha256": "361f4b4f140b16b164aed0d5cb9d4ea43bf9bee72c783215cbddcd0f2e9d1d2f"
     },
     {
       "path": "cloudflare/r41-api/test/terion-mechanics.test.mjs",

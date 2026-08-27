@@ -2686,7 +2686,7 @@ Parser: `Acorn 8.15.0`. Delimitação por AST; regex não define início/fim de 
 | FUNC-02674 | `<callback:rows.map#0>` | `cloudflare/r41-api/test/cleanup-runtime-diagnostic-users.mjs:13-13` | arrow | `481e67552a7a47003f466c01afae876ce948ad5d7b16cbb4b296683e81e292e9` |
 | FUNC-02675 | `classify` | `cloudflare/r41-api/test/mongodb-live-preflight.mjs:9-17` | declaration | `cb993851758602efdd0ab8ed80c8739c74cffc651cffd756d55f0ba658ab847f` |
 | FUNC-02676 | `write` | `cloudflare/r41-api/test/mongodb-live-preflight.mjs:18-22` | declaration | `21de189b911b25280b653f76d488cb8312b2a7856a130063e8a88176cea28bdf` |
-| FUNC-02677 | `post` | `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:8-18` | declaration | `58ccf5060b3134a509b0c89818d664062eb8d0e3c9665be1378b2f4e4da5d061` |
+| FUNC-02677 | `post` | `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:9-19` | declaration | `58ccf5060b3134a509b0c89818d664062eb8d0e3c9665be1378b2f4e4da5d061` |
 | FUNC-02678 | `random` | `cloudflare/r41-api/test/terion-mechanics.test.mjs:14-14` | arrow | `931ae5741e770efe36088bcfe60728b68c9c2e62dad7f91cab4f42c1141fe96a` |
 | FUNC-02679 | `<anonymous@1:1>` | `data/r38-master-loader.js:1-22` | arrow | `966ca4f4a47cc6306a217fa41bb752d775161d48fc4d01670a79a497799e662e` |
 | FUNC-02680 | `window.NARUTO_R38_LOAD_MASTER` | `data/r38-master-loader.js:6-21` | function-expression | `3bbdb0ab2e74a58c115c5fcf0592ee6e581fa0c3d0eff1e57b2fa34700e0d6d6` |

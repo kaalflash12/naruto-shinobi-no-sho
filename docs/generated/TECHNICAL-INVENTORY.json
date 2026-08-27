@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T23:08:00.383Z",
+  "generatedAt": "2026-08-27T01:03:15.146Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
@@ -43806,7 +43806,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "438503e0f2113b8344ddf77fefffbe0ca2663cfe4a739691ac91a241b152a88e",
+      "sha256": "d2264bcc8bf2f1765fdace8c6c04b2037d4ff0ef0c56cb93f2354f4775c92327",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43814,7 +43814,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "d1b3f7264191a5aef2c2ef30e1dd3d8e4c57963d64366d14f978da6e41bef96d",
+      "sha256": "5614519718cb2cca490a0ee48afd77681840106b88e1a018992fd9ece0cd40fc",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43997,8 +43997,8 @@
     },
     {
       "path": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-      "size": 2649,
-      "sha256": "6926b83b36d0f66dff14b163d1455a8bf5bcd33ed2bab679fd7d4095cf4c8e36",
+      "size": 2732,
+      "sha256": "361f4b4f140b16b164aed0d5cb9d4ea43bf9bee72c783215cbddcd0f2e9d1d2f",
       "extension": ".mjs",
       "runtime": true,
       "asset": false
@@ -168437,8 +168437,8 @@
     },
     {
       "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-      "line": 8,
-      "endLine": 18,
+      "line": 9,
+      "endLine": 19,
       "column": 0,
       "endColumn": 1,
       "name": "post",
@@ -168469,10 +168469,10 @@
         "parserVersion": "8.15.0",
         "sourceType": "module",
         "nodeType": "FunctionDeclaration",
-        "start": 353,
-        "end": 973,
-        "bodyStart": 410,
-        "bodyEnd": 973,
+        "start": 436,
+        "end": 1056,
+        "bodyStart": 493,
+        "bodyEnd": 1056,
         "functionSha256": "1398226bed5db57b09b7677629bfc708f17af507a49b728ed67730cd2dbde60d",
         "bodySha256": "58ccf5060b3134a509b0c89818d664062eb8d0e3c9665be1378b2f4e4da5d061",
         "async": true,
@@ -199653,7 +199653,7 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 47
+          "line": 48
         },
         {
           "file": "r41-github-api.js",
@@ -199691,15 +199691,15 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 24
+          "line": 25
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 40
+          "line": 41
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 43
+          "line": 44
         },
         {
           "file": "r41-github-api.js",
@@ -199787,11 +199787,11 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 28
+          "line": 29
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 51
+          "line": 52
         },
         {
           "file": "r41-github-api.js",
@@ -199825,7 +199825,7 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 36
+          "line": 37
         },
         {
           "file": "r41-github-api.js",
@@ -199843,7 +199843,7 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 32
+          "line": 33
         },
         {
           "file": "r41-github-api.js",
@@ -199885,7 +199885,7 @@
         },
         {
           "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-          "line": 20
+          "line": 21
         },
         {
           "file": "r41-github-api.js",
@@ -364566,13 +364566,13 @@
     },
     {
       "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
-      "line": 1,
+      "line": 2,
       "value": "API_ORIGIN",
       "id": "ENV-00150"
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-26T23:08:02.755Z",
+    "generatedAt": "2026-08-27T01:03:17.621Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -364659,7 +364659,7 @@
         "file": "cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs",
         "sourceType": "module",
         "functions": 1,
-        "bytes": 2649
+        "bytes": 2732
       },
       {
         "file": "cloudflare/r41-api/test/terion-mechanics.test.mjs",

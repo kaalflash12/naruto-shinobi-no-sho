@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-26T23:08:00.383Z`
+Gerado em: `2026-08-27T01:03:15.146Z`
 
 ## FUNC-00001 — `<anonymous@1:1>`
 
@@ -42822,7 +42822,7 @@ Gerado em: `2026-08-26T23:08:00.383Z`
 
 ## FUNC-02677 — `post`
 
-- **Fonte:** `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:8`
+- **Fonte:** `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:9`
 - **Domínio:** `game-runtime`
 - **Forma:** declaration
 - **Parâmetros:** `path, body={}, token='', expected=[200]`

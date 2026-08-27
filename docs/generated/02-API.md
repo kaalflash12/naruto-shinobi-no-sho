@@ -2,7 +2,7 @@
 
 Rotas /api encontradas somente no runtime do jogo; docs e tooling são excluídos.
 
-Gerado em: `2026-08-26T23:08:00.383Z`
+Gerado em: `2026-08-27T01:03:15.146Z`
 
 ## API-00001 — `/api/account/delete`
 
@@ -31,12 +31,12 @@ Gerado em: `2026-08-26T23:08:00.383Z`
 
 ## API-00006 — `/api/auth/delete-account`
 
-- **Referências:** `cloudflare/r41-api/src/entry-authoritative.js:131`, `cloudflare/r41-api/src/entry.js:67`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:47`, `r41-github-api.js:62`
+- **Referências:** `cloudflare/r41-api/src/entry-authoritative.js:131`, `cloudflare/r41-api/src/entry.js:67`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:48`, `r41-github-api.js:62`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00007 — `/api/auth/login`
 
-- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:24`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:40`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:43`, `r41-github-api.js:28`, `r41-github-api.js:57`
+- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:61`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:95`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:25`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:41`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:44`, `r41-github-api.js:28`, `r41-github-api.js:57`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00008 — `/api/auth/logout`
@@ -46,22 +46,22 @@ Gerado em: `2026-08-26T23:08:00.383Z`
 
 ## API-00009 — `/api/auth/me`
 
-- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs:36`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:156`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:28`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:51`, `r41-github-api.js:58`
+- **Referências:** `app.js:3537`, `cloudflare/oneclick-backend/src/index.js:66`, `cloudflare/oneclick-backend/test/local-e2e.mjs:8`, `cloudflare/oneclick-backend/test/local-e2e.mjs:18`, `cloudflare/r41-api/src/entry-authoritative.js:88`, `cloudflare/r41-api/src/entry-authoritative.js:134`, `cloudflare/r41-api/src/entry.js:20`, `cloudflare/r41-api/src/index.js:101`, `cloudflare/r41-api/test/apply-direct-account-helper-fix.mjs:36`, `cloudflare/r41-api/test/apply-request-scoped-runtime-fix.mjs:156`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:29`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:52`, `r41-github-api.js:58`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00010 — `/api/auth/recover`
 
-- **Referências:** `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:36`, `r41-github-api.js:60`
+- **Referências:** `cloudflare/oneclick-backend/src/index.js:62`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry.js:51`, `cloudflare/r41-api/src/entry.js:139`, `cloudflare/r41-api/src/index.js:96`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:37`, `r41-github-api.js:60`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00011 — `/api/auth/recovery-code`
 
-- **Referências:** `cloudflare/r41-api/src/entry.js:59`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:32`, `r41-github-api.js:61`
+- **Referências:** `cloudflare/r41-api/src/entry.js:59`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:33`, `r41-github-api.js:61`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00012 — `/api/auth/register`
 
-- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:92`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:20`, `r41-github-api.js:28`, `r41-github-api.js:56`
+- **Referências:** `app.js:3530`, `cloudflare/oneclick-backend/src/index.js:60`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/oneclick-backend/test/local-e2e.mjs:7`, `cloudflare/r41-api/src/entry-authoritative.js:91`, `cloudflare/r41-api/src/entry-authoritative.js:92`, `cloudflare/r41-api/src/index.js:94`, `cloudflare/r41-api/test/request-scoped-auth-lifecycle.mjs:21`, `r41-github-api.js:28`, `r41-github-api.js:56`
 - **Status:** `STATICALLY_TRACED`
 
 ## API-00013 — `/api/cloud/load`
