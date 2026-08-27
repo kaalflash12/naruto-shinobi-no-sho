@@ -46,6 +46,49 @@ jobs:
           ! grep -Eqi 'naruto[ -]?unison' index.html r41-api-config.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/src/index.js
           ! grep -Eqi 'supabase|vercel' r41-api-config.js r41-github-api.js r41-account-ui.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js cloudflare/r41-api/src/index.js
 
+      - name: Validate Cloudflare Mongo auth runtime contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'no_throw_on_not_implemented_tls_options' cloudflare/r41-api/wrangler.toml
+          grep -F 'requestMongoDb' cloudflare/r41-api/src/index.js
+          grep -F 'requestMongoDb' cloudflare/r41-api/src/entry.js
+          grep -F 'createMongoRequestEnv' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'closeMongoRequestEnv' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'finally{' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'await closeMongoRequestEnv(requestEnv)' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'code!==26&&code!==27' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'NamespaceNotFound' cloudflare/r41-api/src/entry-authoritative.js
+          grep -F 'export const R41_MONGO_REQUEST_SCOPE' cloudflare/r41-api/src/mongo-request.js
+          grep -F 'const client=new MongoClient' cloudflare/r41-api/src/mongo-request.js
+          grep -F 'scope.clients.push(client)' cloudflare/r41-api/src/mongo-request.js
+          grep -F 'clients.map(client=>client.close())' cloudflare/r41-api/src/mongo-request.js
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const paths=[
+            'cloudflare/r41-api/src/index.js',
+            'cloudflare/r41-api/src/entry.js'
+          ];
+          for(const path of paths){
+            const src=fs.readFileSync(path,'utf8');
+            const values=[];
+            for(const re of [
+              /hashPassword\([^)]*iterations\s*=\s*(\d+)/g,
+              /(?:passIter|iterations)\s*:\s*(\d+)/g,
+              /hashPassword\([^\n;]*?,\s*(\d+)\s*\)/g
+            ]){
+              for(const m of src.matchAll(re)) values.push(Number(m[1]));
+            }
+            if(values.some(v=>v>100000)) throw new Error(`${path}: PBKDF2 acima de 100000: ${values.join(',')}`);
+          }
+          const mongo=fs.readFileSync('cloudflare/r41-api/src/mongo-request.js','utf8');
+          if(!mongo.includes('createMongoRequestEnv')||!mongo.includes('closeMongoRequestEnv')) throw new Error('request-scoped Mongo helper incompleto');
+          const authority=fs.readFileSync('cloudflare/r41-api/src/entry-authoritative.js','utf8');
+          if(!authority.includes('const requestEnv=createMongoRequestEnv(env)')) throw new Error('requestEnv nao criado por request');
+          if(!authority.includes('await closeMongoRequestEnv(requestEnv)')) throw new Error('requestEnv nao fechado no finally');
+          console.log('PASS_CLOUDFLARE_MONGO_AUTH_RUNTIME_CONTRACTS');
+          NODE
+
       - name: Validate anti-exploit gameplay contracts in source
         shell: bash
         run: |
