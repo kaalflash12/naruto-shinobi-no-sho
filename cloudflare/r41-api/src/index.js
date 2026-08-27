@@ -1,20 +1,19 @@
 import { DurableObject } from "cloudflare:workers";
-import { MongoClient, ObjectId } from "mongodb";
+import { ObjectId } from "mongodb";
+import { requestMongoDb } from "./mongo-request.js";
 
 const enc = new TextEncoder();
 const dec = new TextDecoder();
 const JSON_HEADERS = { "content-type": "application/json; charset=utf-8" };
 const BUILD = "R41-CLOUDFLARE-MONGODB-INTEGRAL-20260819";
 const TOKEN_MS = 30 * 24 * 60 * 60 * 1000;
-let sharedClient = null;
-let sharedUri = "";
-let indexesPromise = null;
+let indexesReady = false;
 
 function b64url(bytes){let s="";for(const b of bytes)s+=String.fromCharCode(b);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");}
 function unb64url(s){s=String(s||"").replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const raw=atob(s),out=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)out[i]=raw.charCodeAt(i);return out;}
 async function hmac(secret,data){const key=await crypto.subtle.importKey("raw",enc.encode(secret),{name:"HMAC",hash:"SHA-256"},false,["sign"]);return new Uint8Array(await crypto.subtle.sign("HMAC",key,enc.encode(data)));}
 function timingSafe(a,b){a=String(a||"");b=String(b||"");if(a.length!==b.length)return false;let d=0;for(let i=0;i<a.length;i++)d|=a.charCodeAt(i)^b.charCodeAt(i);return d===0;}
-async function hashPassword(password,salt,iterations=210000){const key=await crypto.subtle.importKey("raw",enc.encode(password),"PBKDF2",false,["deriveBits"]);const bits=await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt,iterations},key,256);return b64url(new Uint8Array(bits));}
+async function hashPassword(password,salt,iterations=100000){const key=await crypto.subtle.importKey("raw",enc.encode(password),"PBKDF2",false,["deriveBits"]);const bits=await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt,iterations},key,256);return b64url(new Uint8Array(bits));}
 function randomBytes(n=16){const a=new Uint8Array(n);crypto.getRandomValues(a);return a;}
 function randomSecret(n=24){return b64url(randomBytes(n));}
 function norm(v){return String(v??"").trim();}
@@ -31,11 +30,11 @@ function roomId(){return `room-${crypto.randomUUID()}`;}
 
 async function mongo(env){
   if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");
-  if(!sharedClient || sharedUri!==env.MONGODB_URI){sharedUri=env.MONGODB_URI;sharedClient=new MongoClient(env.MONGODB_URI,{maxPoolSize:6,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await sharedClient.connect();indexesPromise=null;}
-  return sharedClient.db(env.MONGODB_DB||"naruto_shinobi_r41");
+  return requestMongoDb(env,"naruto_shinobi_r41");
 }
 async function ensureIndexes(db){
-  if(!indexesPromise) indexesPromise=Promise.all([
+  if(indexesReady)return;
+  await Promise.all([
     db.collection("users").createIndex({usernameLower:1},{unique:true,name:"uq_username"}),
     db.collection("sessions").createIndex({sid:1},{unique:true,name:"uq_session"}),
     db.collection("sessions").createIndex({expiresAt:1},{expireAfterSeconds:0,name:"ttl_session"}),
@@ -48,12 +47,13 @@ async function ensureIndexes(db){
     db.collection("world_state").createIndex({campaignId:1},{unique:true,name:"uq_world_campaign"}),
     db.collection("audit_events").createIndex({createdAt:-1},{name:"ix_audit_time"}),
     db.collection("recovery_codes").createIndex({userId:1},{name:"ix_recovery_user"})
-  ]).catch(e=>{indexesPromise=null;throw e;});
-  return indexesPromise;
+  ]);
+  indexesReady=true;
 }
 async function issueToken(env,db,user){const sid=crypto.randomUUID(),expiresAt=new Date(Date.now()+TOKEN_MS),payload=b64url(enc.encode(JSON.stringify({sub:plainId(user._id),usr:user.username,sid,exp:expiresAt.getTime()}))),sig=b64url(await hmac(env.AUTH_SECRET,payload));await db.collection("sessions").insertOne({sid,userId:user._id,createdAt:new Date(),expiresAt,revoked:false});return `${payload}.${sig}`;}
-async function verifyToken(env,db,token){if(!token||!token.includes("."))return null;const [p,s]=token.split(".",2),expected=b64url(await hmac(env.AUTH_SECRET,p));if(!timingSafe(s,expected))return null;try{const data=JSON.parse(dec.decode(unb64url(p)));if(!data.exp||data.exp<Date.now()||!data.sid)return null;const session=await db.collection("sessions").findOne({sid:data.sid,revoked:{$ne:true},expiresAt:{$gt:new Date()}});if(!session)return null;const oid=toObjectId(data.sub);return oid?await db.collection("users").findOne({_id:oid}):null;}catch{return null;}}
+async function verifyToken(env,db,token){if(!token||!token.includes("."))return null;const [p,s]=token.split(".",2),expected=b64url(await hmac(env.AUTH_SECRET,p));if(!timingSafe(s,expected))return null;let data;try{data=JSON.parse(dec.decode(unb64url(p)));}catch{return null;}if(!data.exp||data.exp<Date.now()||!data.sid)return null;const session=await db.collection("sessions").findOne({sid:data.sid,revoked:{$ne:true},expiresAt:{$gt:new Date()}});if(!session)return null;const oid=toObjectId(data.sub);return oid?await db.collection("users").findOne({_id:oid}):null;}
 async function requireUser(req,env,db){return verifyToken(env,db,bearer(req));}
+export async function accountFromRequest(req,env){const db=await mongo(env);await ensureIndexes(db);const user=await requireUser(req,env,db);return user?safeAccount(user):null;}
 async function revokeCurrent(req,env,db){const token=bearer(req);if(!token)return;try{const [p]=token.split(".",1),data=JSON.parse(dec.decode(unb64url(p)));if(data.sid)await db.collection("sessions").updateOne({sid:data.sid},{$set:{revoked:true,revokedAt:new Date()}});}catch{}}
 function slotSummary(s){const c=s?.data?.character||{};return {slotId:s.slotId,name:c.name||c.nome||"Personagem",level:Number(c.level||c.nivel||1),graduation:c.graduation||c.graduacao||"",avatar:c.avatar||c.portrait||"",updatedAt:s.updatedAt||null,gameVersion:s.gameVersion||""};}
 function clampSaveForStorage(save){if(!save||typeof save!=="object"||Array.isArray(save))throw new Error("SAVE_INVALID");const raw=JSON.stringify(save);if(raw.length>3_500_000)throw new Error("SAVE_TOO_LARGE");return save;}
@@ -91,9 +91,9 @@ export default {async fetch(req,env){
   let db;
   try{db=await mongo(env);await ensureIndexes(db);}catch(e){console.error("MONGO_CONNECT",e);return reply(req,env,503,{ok:false,error:"DATABASE_UNAVAILABLE"});}
   try{
-    if(path==="/api/auth/register"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),password=String(b.password||""),displayName=cleanText(b.displayName||username,60);if(!/^[\p{L}\p{N}_.-]{3,32}$/u.test(username)||password.length<8||password.length>200)return reply(req,env,400,{ok:false,error:"INVALID_CREDENTIALS_FORMAT"});const salt=randomBytes(),passHash=await hashPassword(password,salt),now=new Date(),role="player";let r;try{r=await db.collection("users").insertOne({username,usernameLower:username.toLowerCase(),displayName,role,passSalt:b64url(salt),passHash,passIter:210000,createdAt:now,updatedAt:now});}catch(e){if(e?.code===11000)return reply(req,env,409,{ok:false,error:"USERNAME_EXISTS"});throw e;}const user={_id:r.insertedId,username,displayName,role,createdAt:now},token=await issueToken(env,db,user),recoveryCode=randomSecret(18),recoverySalt=randomBytes(),recoveryHash=await hashPassword(recoveryCode,recoverySalt,120000);await db.collection("recovery_codes").insertOne({userId:r.insertedId,hash:recoveryHash,salt:b64url(recoverySalt),iterations:120000,used:false,createdAt:now});await audit(db,"auth.register",r.insertedId,{username});return reply(req,env,201,{ok:true,token,account:safeAccount(user),recoveryCode,mirrors:{cloud:true,mongodb:true,drive:false}});}
-    if(path==="/api/auth/login"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),password=String(b.password||""),u=await db.collection("users").findOne({usernameLower:username.toLowerCase()});if(!u)return reply(req,env,401,{ok:false,error:"LOGIN_INVALID"});const got=await hashPassword(password,unb64url(u.passSalt),u.passIter||210000);if(!timingSafe(got,u.passHash))return reply(req,env,401,{ok:false,error:"LOGIN_INVALID"});const token=await issueToken(env,db,u);await audit(db,"auth.login",u._id,{});return reply(req,env,200,{ok:true,token,account:safeAccount(u),mirrors:{cloud:true,mongodb:true,drive:false}});}
-    if(path==="/api/auth/recover"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),code=String(b.recoveryCode||""),newPassword=String(b.newPassword||"");if(newPassword.length<8)return reply(req,env,400,{ok:false,error:"PASSWORD_TOO_SHORT"});const u=await db.collection("users").findOne({usernameLower:username.toLowerCase()});if(!u)return reply(req,env,401,{ok:false,error:"RECOVERY_INVALID"});const docs=await db.collection("recovery_codes").find({userId:u._id,used:{$ne:true}}).sort({createdAt:-1}).limit(10).toArray();let match=null;for(const rc of docs){const got=await hashPassword(code,unb64url(rc.salt),rc.iterations||120000);if(timingSafe(got,rc.hash)){match=rc;break;}}if(!match)return reply(req,env,401,{ok:false,error:"RECOVERY_INVALID"});const salt=randomBytes(),passHash=await hashPassword(newPassword,salt);await db.collection("users").updateOne({_id:u._id},{$set:{passSalt:b64url(salt),passHash,passIter:210000,updatedAt:new Date()}});await db.collection("recovery_codes").updateOne({_id:match._id},{$set:{used:true,usedAt:new Date()}});await db.collection("sessions").updateMany({userId:u._id},{$set:{revoked:true,revokedAt:new Date()}});return reply(req,env,200,{ok:true,recovered:true});}
+    if(path==="/api/auth/register"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),password=String(b.password||""),displayName=cleanText(b.displayName||username,60);if(!/^[\p{L}\p{N}_.-]{3,32}$/u.test(username)||password.length<8||password.length>200)return reply(req,env,400,{ok:false,error:"INVALID_CREDENTIALS_FORMAT"});const salt=randomBytes(),passHash=await hashPassword(password,salt),now=new Date(),role="player";let r;try{r=await db.collection("users").insertOne({username,usernameLower:username.toLowerCase(),displayName,role,passSalt:b64url(salt),passHash,passIter:100000,createdAt:now,updatedAt:now});}catch(e){if(e?.code===11000)return reply(req,env,409,{ok:false,error:"USERNAME_EXISTS"});throw e;}const user={_id:r.insertedId,username,displayName,role,createdAt:now},token=await issueToken(env,db,user),recoveryCode=randomSecret(18),recoverySalt=randomBytes(),recoveryHash=await hashPassword(recoveryCode,recoverySalt,100000);await db.collection("recovery_codes").insertOne({userId:r.insertedId,hash:recoveryHash,salt:b64url(recoverySalt),iterations:100000,used:false,createdAt:now});await audit(db,"auth.register",r.insertedId,{username});return reply(req,env,201,{ok:true,token,account:safeAccount(user),recoveryCode,mirrors:{cloud:true,mongodb:true,drive:false}});}
+    if(path==="/api/auth/login"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),password=String(b.password||""),u=await db.collection("users").findOne({usernameLower:username.toLowerCase()});if(!u)return reply(req,env,401,{ok:false,error:"LOGIN_INVALID"});const got=await hashPassword(password,unb64url(u.passSalt),u.passIter||100000);if(!timingSafe(got,u.passHash))return reply(req,env,401,{ok:false,error:"LOGIN_INVALID"});const token=await issueToken(env,db,u);await audit(db,"auth.login",u._id,{});return reply(req,env,200,{ok:true,token,account:safeAccount(u),mirrors:{cloud:true,mongodb:true,drive:false}});}
+    if(path==="/api/auth/recover"&&req.method==="POST"){const b=await bodyJson(req),username=cleanText(b.username,32),code=String(b.recoveryCode||""),newPassword=String(b.newPassword||"");if(newPassword.length<8)return reply(req,env,400,{ok:false,error:"PASSWORD_TOO_SHORT"});const u=await db.collection("users").findOne({usernameLower:username.toLowerCase()});if(!u)return reply(req,env,401,{ok:false,error:"RECOVERY_INVALID"});const docs=await db.collection("recovery_codes").find({userId:u._id,used:{$ne:true}}).sort({createdAt:-1}).limit(10).toArray();let match=null;for(const rc of docs){const got=await hashPassword(code,unb64url(rc.salt),rc.iterations||100000);if(timingSafe(got,rc.hash)){match=rc;break;}}if(!match)return reply(req,env,401,{ok:false,error:"RECOVERY_INVALID"});const salt=randomBytes(),passHash=await hashPassword(newPassword,salt);await db.collection("users").updateOne({_id:u._id},{$set:{passSalt:b64url(salt),passHash,passIter:100000,updatedAt:new Date()}});await db.collection("recovery_codes").updateOne({_id:match._id},{$set:{used:true,usedAt:new Date()}});await db.collection("sessions").updateMany({userId:u._id},{$set:{revoked:true,revokedAt:new Date()}});return reply(req,env,200,{ok:true,recovered:true});}
     if(path==="/api/ai"&&req.method==="POST")return aiRoute(req,env);
     if(path==="/api/v84/bootstrap"){const user=await requireUser(req,env,db);const campaignId=user?cleanText((await bodyJson(req)).campaignId,120):"public";const ws=campaignId&&campaignId!=="public"?await db.collection("world_state").findOne({campaignId}):null;return reply(req,env,200,{ok:true,world:ws?.world||{npcs:[],arcs:[],missions:[],locations:[]},serverTime:nowIso(),build:BUILD});}
 

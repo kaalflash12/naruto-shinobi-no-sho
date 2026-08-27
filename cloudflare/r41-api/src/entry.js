@@ -1,23 +1,22 @@
-import { MongoClient, ObjectId } from "mongodb";
-import worker, { GameRoom } from "./index.js";
+import { ObjectId } from "mongodb";
+import { requestMongoDb } from "./mongo-request.js";
+import worker, { GameRoom, accountFromRequest } from "./index.js";
 export { GameRoom };
 
 const AI_MODEL = "@cf/zai-org/glm-4.7-flash";
 const enc = new TextEncoder();
-let guardClient = null;
-let guardUri = "";
-let guardIndex = null;
+let guardIndexReady = false;
 
 function safeEqual(a,b){a=String(a||"");b=String(b||"");if(a.length!==b.length)return false;let d=0;for(let i=0;i<a.length;i++)d|=a.charCodeAt(i)^b.charCodeAt(i);return d===0;}
 function b64url(bytes){let s="";for(const b of bytes)s+=String.fromCharCode(b);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");}
 function randomBytes(n=16){const a=new Uint8Array(n);crypto.getRandomValues(a);return a;}
 function randomSecret(n=24){return b64url(randomBytes(n));}
-async function hashPassword(password,salt,iterations=120000){const key=await crypto.subtle.importKey("raw",enc.encode(String(password)),"PBKDF2",false,["deriveBits"]);const bits=await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt,iterations},key,256);return b64url(new Uint8Array(bits));}
+async function hashPassword(password,salt,iterations=100000){const key=await crypto.subtle.importKey("raw",enc.encode(String(password)),"PBKDF2",false,["deriveBits"]);const bits=await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt,iterations},key,256);return b64url(new Uint8Array(bits));}
 function cors(req,env){const origin=req.headers.get("origin")||"",allowed=String(env.ALLOWED_ORIGINS||env.ALLOWED_ORIGIN||"https://kaalflash12.github.io").split(",").map(x=>x.trim()).filter(Boolean),selected=allowed.includes(origin)?origin:(!origin?(allowed[0]||"*"):"null");return{"content-type":"application/json; charset=utf-8","access-control-allow-origin":selected,"access-control-allow-methods":"GET,POST,PUT,PATCH,DELETE,OPTIONS","access-control-allow-headers":"authorization,content-type,x-r41-revision","cache-control":"no-store","vary":"origin"};}
 function json(req,env,status,body){return new Response(JSON.stringify(body),{status,headers:cors(req,env)});}
 async function fingerprint(value){const bytes=enc.encode(String(value||"")),hash=new Uint8Array(await crypto.subtle.digest("SHA-256",bytes));return [...hash].map(x=>x.toString(16).padStart(2,"0")).join("");}
-async function guardDb(env){if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");if(!guardClient||guardUri!==env.MONGODB_URI){guardUri=env.MONGODB_URI;guardClient=new MongoClient(env.MONGODB_URI,{maxPoolSize:3,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await guardClient.connect();guardIndex=null;}const db=guardClient.db(env.MONGODB_DB||"naruto_shinobi_r41");if(!guardIndex)guardIndex=db.collection("room_memberships").createIndex({roomId:1,userId:1},{unique:true,name:"uq_room_membership"}).catch(e=>{guardIndex=null;throw e;});await guardIndex;return db;}
-async function currentAccount(req,env,ctx){const u=new URL(req.url);u.pathname="/api/auth/me";u.search="";const r=await worker.fetch(new Request(u.toString(),{method:"POST",headers:req.headers}),env,ctx),d=await r.json().catch(()=>({}));return r.ok&&d.ok&&d.account?.id?d.account:null;}
+async function guardDb(env){if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");const db=await requestMongoDb(env,"naruto_shinobi_r41");if(!guardIndexReady){await db.collection("room_memberships").createIndex({roomId:1,userId:1},{unique:true,name:"uq_room_membership"});guardIndexReady=true;}return db;}
+async function currentAccount(req,env,ctx){return accountFromRequest(req,env);}
 async function rememberMembership(env,roomId,userId,mode,role="member"){const db=await guardDb(env),now=new Date();await db.collection("room_memberships").updateOne({roomId:String(roomId),userId:String(userId)},{$set:{mode:String(mode||"online"),role,lastSeen:now,updatedAt:now},$setOnInsert:{roomId:String(roomId),userId:String(userId),joinedAt:now}},{upsert:true});}
 async function hasMembership(env,roomId,userId){const db=await guardDb(env);return !!(await db.collection("room_memberships").findOne({roomId:String(roomId),userId:String(userId)}));}
 async function touchMembership(env,roomId,userId){const db=await guardDb(env);await db.collection("room_memberships").updateOne({roomId:String(roomId),userId:String(userId)},{$set:{lastSeen:new Date(),updatedAt:new Date()}});}
@@ -58,7 +57,7 @@ async function remapIdentifier(req,path){
 async function accountExtension(req,env,ctx,path){
   if(path==="/api/auth/recovery-code"&&req.method==="POST"){
     const account=await currentAccount(req,env,ctx);if(!account)return json(req,env,401,{ok:false,error:"UNAUTHORIZED"});
-    const db=await guardDb(env),uid=new ObjectId(String(account.id)),code=randomSecret(18),salt=randomBytes(16),iterations=120000,hash=await hashPassword(code,salt,iterations),now=new Date();
+    const db=await guardDb(env),uid=new ObjectId(String(account.id)),code=randomSecret(18),salt=randomBytes(16),iterations=100000,hash=await hashPassword(code,salt,iterations),now=new Date();
     await db.collection("recovery_codes").updateMany({userId:uid,used:{$ne:true}},{$set:{used:true,usedAt:now,rotated:true}});
     await db.collection("recovery_codes").insertOne({userId:uid,hash,salt:b64url(salt),iterations,used:false,createdAt:now});
     await db.collection("audit_events").insertOne({type:"auth.recovery-code.rotate",userId:uid,detail:{},createdAt:now,build:"R41-CLOUDFLARE-MONGODB-INTEGRAL-20260823"}).catch(()=>{});

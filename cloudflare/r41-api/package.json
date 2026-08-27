@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "check": "node --check src/terion-mechanics.js && node --check src/index.js && node --check src/entry.js && node --check src/entry-authoritative.js && node --check test/mongodb-live-preflight.mjs",
-    "test": "node test/terion-mechanics.test.mjs",
+    "check": "node --check src/terion-mechanics.js && node --check src/mongo-request.js && node --check src/index.js && node --check src/entry.js && node --check src/entry-authoritative.js && node --check test/mongodb-live-preflight.mjs",
+    "test": "node test/terion-mechanics.test.mjs && node test/cloudflare-runtime-contract.test.mjs",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },

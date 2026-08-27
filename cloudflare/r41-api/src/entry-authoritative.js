@@ -1,10 +1,11 @@
-import { MongoClient, ObjectId } from "mongodb";
+import { ObjectId } from "mongodb";
+import { createMongoRequestEnv, requestMongoDb, closeMongoRequestEnv } from "./mongo-request.js";
 import base, { GameRoom } from "./entry.js";
 import { resolveTerionIntent, hasClientResult, stripClientMechanical } from "./terion-mechanics.js";
 export { GameRoom };
 
 const BUILD="R41-AUTHORITATIVE-TERION-20260823-V6";
-let client=null,clientUri="",authorityIndexesPromise=null;
+let authorityIndexesReady=false;
 
 function originHeaders(req,env){
   const origin=req.headers.get("origin")||"";
@@ -21,9 +22,10 @@ function finite(value,fallback=0){const n=Number(value);return Number.isFinite(n
 function validEmail(value){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value||"").trim());}
 function copyRequest(req,url,data){const headers=new Headers(req.headers);headers.set("content-type","application/json");return new Request(url,{method:req.method,headers,body:JSON.stringify(data)});}
 async function ensureAuthorityIndexes(store){
-  if(!authorityIndexesPromise)authorityIndexesPromise=(async()=>{
+  if(authorityIndexesReady)return;
+  await (async()=>{
     const profiles=store.collection("mechanical_profiles");
-    try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){if(Number(e?.code)!==27&&String(e?.codeName||"")!=="IndexNotFound")throw e;}
+    try{await profiles.dropIndex("uq_mechanical_profile_user");}catch(e){const code=Number(e?.code),codeName=String(e?.codeName||"");if(code!==26&&code!==27&&codeName!=="NamespaceNotFound"&&codeName!=="IndexNotFound")throw e;}
     await profiles.updateMany({profileKey:{$exists:false}},{$set:{profileKey:"legacy",migration:"v4-single-profile"}});
     await profiles.updateMany({slotId:{$exists:false},baselineSlotId:{$type:"string"}},[{$set:{slotId:"$baselineSlotId"}}]);
     await Promise.all([
@@ -33,13 +35,14 @@ async function ensureAuthorityIndexes(store){
       profiles.createIndex({playerId:1},{sparse:true,name:"ix_mechanical_profile_player"}),
       profiles.createIndex({userId:1,slotId:1},{sparse:true,name:"ix_mechanical_profile_slot"})
     ]);
-  })().catch(e=>{authorityIndexesPromise=null;throw e;});
-  await authorityIndexesPromise;
+  })();
+  authorityIndexesReady=true;
 }
 async function db(env){
   if(!env.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");
-  if(!client||clientUri!==env.MONGODB_URI){clientUri=env.MONGODB_URI;client=new MongoClient(env.MONGODB_URI,{maxPoolSize:4,minPoolSize:0,maxIdleTimeMS:45000,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();authorityIndexesPromise=null;}
-  const store=client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");await ensureAuthorityIndexes(store);return store;
+  const store=await requestMongoDb(env,"naruto_shinobi_no_sho");
+  await ensureAuthorityIndexes(store);
+  return store;
 }
 function cloneBounded(value,depth=0){
   if(depth>8)return null;if(value===null||value===undefined||typeof value==="string"||typeof value==="boolean")return value;if(typeof value==="number")return Number.isFinite(value)?value:0;
@@ -131,4 +134,24 @@ async function authoritativeSlotDelete(req,env,ctx,path){
 async function authoritativeAccountDelete(req,env,ctx,path){if(path!=="/api/auth/delete-account")return null;if(!env.MONGODB_URI||!env.AUTH_SECRET)return base.fetch(req,env,ctx);const me=await account(req,env,ctx),res=await base.fetch(req,env,ctx);if(res.ok&&me?.id){const store=await db(env),userObjectId=oid(me.id);if(userObjectId)await store.collection("mechanical_profiles").deleteMany({userId:userObjectId});}return res;}
 async function status(req,env,ctx){const res=await base.fetch(req,env,ctx);let data;try{data=await res.clone().json();}catch{return res;}data.authority="server-terion-2d10";data.serverMechanicalResolution=true;data.clientDifficultyIgnored=true;data.clientRoomCharacterIgnored=true;data.mechanicsReadFromMongoProfile=true;data.mechanicalProfilesPerCharacter=true;data.mechanicalProfileIndexMigrationV6=true;data.mechanicalBaselineSeededFromMatchingSave=true;data.clientAutosaveCannotOverwriteMechanicalProfile=true;data.leaderboardUsesMechanicalProfiles=true;data.slotDeleteCleansMechanicalProfile=true;data.worldMechanicalPayloadSanitized=true;data.worldSavepointCharacterFromMechanicalProfile=true;data.emailLogin=true;data.buildAuthority=BUILD;data.routes={...(data.routes||{}),serverMechanicalResolution:true,authoritativeRoomCharacter:true,authoritativeWorldPersistence:true,authoritativeMechanicalProfile:true,authoritativeLeaderboard:true,authoritativeSlotDelete:true,emailLogin:true};return new Response(JSON.stringify(data),{status:res.status,statusText:res.statusText,headers:originHeaders(req,env)});}
 
-export default {async fetch(req,env,ctx){try{const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";if(path==="/"||path==="/api/status")return status(req,env,ctx);if(path==="/api/auth/me")return augmentAccountEmail(req,env,await base.fetch(req,env,ctx));const auth=await emailAwareAuth(req,env,ctx,path);if(auth)return auth;const deletion=await authoritativeAccountDelete(req,env,ctx,path);if(deletion)return deletion;const slotDelete=await authoritativeSlotDelete(req,env,ctx,path);if(slotDelete)return slotDelete;const membership=await authoritativeMembership(req,env,ctx,path);if(membership)return membership;if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return authoritativeAction(req,env,ctx);const world=await authoritativeWorld(req,env,ctx,path);if(world)return world;const leaderboard=await authoritativeLeaderboard(req,env,ctx,path);if(leaderboard)return leaderboard;return base.fetch(req,env,ctx);}catch(e){console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);return json(req,env,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});}}};
+export default {async fetch(req,env,ctx){
+  const requestEnv=createMongoRequestEnv(env);
+  try{
+    const path=new URL(req.url).pathname.replace(/\/+$/g,"")||"/";
+    if(path==="/"||path==="/api/status")return await status(req,requestEnv,ctx);
+    if(path==="/api/auth/me")return await augmentAccountEmail(req,requestEnv,await base.fetch(req,requestEnv,ctx));
+    const auth=await emailAwareAuth(req,requestEnv,ctx,path);if(auth)return auth;
+    const deletion=await authoritativeAccountDelete(req,requestEnv,ctx,path);if(deletion)return deletion;
+    const slotDelete=await authoritativeSlotDelete(req,requestEnv,ctx,path);if(slotDelete)return slotDelete;
+    const membership=await authoritativeMembership(req,requestEnv,ctx,path);if(membership)return membership;
+    if(path==="/api/online/action"||/^\/api\/(pvp|coop)\/action$/.test(path))return await authoritativeAction(req,requestEnv,ctx);
+    const world=await authoritativeWorld(req,requestEnv,ctx,path);if(world)return world;
+    const leaderboard=await authoritativeLeaderboard(req,requestEnv,ctx,path);if(leaderboard)return leaderboard;
+    return await base.fetch(req,requestEnv,ctx);
+  }catch(e){
+    console.error("R41_AUTHORITATIVE_ENTRY_ERROR",e);
+    return json(req,requestEnv,500,{ok:false,error:"AUTHORITATIVE_ENTRY_FAILED"});
+  }finally{
+    await closeMongoRequestEnv(requestEnv);
+  }
+}};
