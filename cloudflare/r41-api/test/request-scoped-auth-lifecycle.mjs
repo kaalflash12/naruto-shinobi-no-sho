@@ -1,3 +1,4 @@
+// retrigger request-scoped MongoDB publisher after confirmed register/login probe
 const origin = String(process.env.API_ORIGIN || 'http://127.0.0.1:8787').replace(/\/+$/,'');
 const suffix = `${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
 const username = `runtimeproof_${suffix}`.slice(0,32);
