@@ -1,0 +1,103 @@
+name: Force Publish Request Scoped MongoDB Once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/force-publish-request-scoped-mongodb-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Apply proven request-scoped MongoDB fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          files=['cloudflare/r41-api/src/index.js','cloudflare/r41-api/src/entry.js','cloudflare/r41-api/src/entry-authoritative.js']
+          for f in files:
+              p=Path(f); s=p.read_text(encoding='utf-8')
+              # remove module-global cached client/db state when present
+              s=s.replace('let mongoClient=null;let mongoDb=null;','')
+              s=s.replace('let client=null;let database=null;','')
+              s=s.replace('let _client=null;let _db=null;','')
+              # canonical db helpers: always connect a fresh client for the current request
+              import re
+              patterns=[
+                r'async function db\(env\)\{[^{}]*(?:\{[^{}]*\}[^{}]*)*?return [^;]+;\}',
+                r'async function getDb\(env\)\{[^{}]*(?:\{[^{}]*\}[^{}]*)*?return [^;]+;\}'
+              ]
+              replaced=False
+              for pat in patterns:
+                  m=re.search(pat,s)
+                  if m:
+                      name='db' if m.group(0).startswith('async function db') else 'getDb'
+                      new=f'''async function {name}(env){{\n  if(!env?.MONGODB_URI) throw new Error("MONGODB_URI_MISSING");\n  const client=new MongoClient(env.MONGODB_URI,{{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000}});\n  await client.connect();\n  return client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");\n}}'''
+                      s=s[:m.start()]+new+s[m.end():]
+                      replaced=True
+                      break
+              if not replaced:
+                  # targeted simple known forms
+                  old_forms=[
+                    'async function db(env){if(!mongoDb){mongoClient=new MongoClient(env.MONGODB_URI);await mongoClient.connect();mongoDb=mongoClient.db(env.MONGODB_DB||"naruto_shinobi_no_sho");}return mongoDb;}',
+                    'async function db(env){if(!mongoDb){mongoClient=new MongoClient(env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await mongoClient.connect();mongoDb=mongoClient.db(env.MONGODB_DB||"naruto_shinobi_no_sho");}return mongoDb;}'
+                  ]
+                  for old in old_forms:
+                      if old in s:
+                          s=s.replace(old,'async function db(env){if(!env?.MONGODB_URI)throw new Error("MONGODB_URI_MISSING");const client=new MongoClient(env.MONGODB_URI,{serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});await client.connect();return client.db(env.MONGODB_DB||"naruto_shinobi_no_sho");}',1)
+                          replaced=True
+                          break
+              p.write_text(s,encoding='utf-8',newline='\n')
+          PY
+      - name: Enforce no cached MongoClient globals
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const files=['cloudflare/r41-api/src/index.js','cloudflare/r41-api/src/entry.js','cloudflare/r41-api/src/entry-authoritative.js'];
+          for(const f of files){
+            const s=fs.readFileSync(f,'utf8');
+            if(/let\s+(mongoClient|mongoDb|client|database|_client|_db)\s*=\s*null/.test(s)) throw new Error(`${f}: cached Mongo global remains`);
+            if(/if\s*\(\s*!\s*(mongoDb|database|_db)\s*\)/.test(s)) throw new Error(`${f}: cached DB reuse remains`);
+          }
+          console.log('PASS_NO_CROSS_REQUEST_MONGODB_CACHE');
+          NODE
+      - name: Runtime regressions and dry deploy
+        working-directory: cloudflare/r41-api
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run check
+          npx wrangler deploy --dry-run --outdir "$RUNNER_TEMP/request-scoped-mongo-dry"
+      - name: Publish proven fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cloudflare/r41-api/src/index.js cloudflare/r41-api/src/entry.js cloudflare/r41-api/src/entry-authoritative.js
+          if git diff --cached --quiet; then
+            echo 'No runtime diff to publish'
+            exit 0
+          fi
+          git commit -m 'fix: scope MongoDB connections to Worker requests'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
