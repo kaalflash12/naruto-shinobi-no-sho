@@ -48,6 +48,59 @@ jobs:
         working-directory: cloudflare/r41-api
         run: node test/apply-direct-account-helper-fix.mjs
 
+      - name: Prevent closed client reuse inside one request
+        working-directory: cloudflare/r41-api
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const helper=`import { MongoClient } from "mongodb";
+
+          export const R41_MONGO_REQUEST_SCOPE = Symbol.for("r41.mongo.request.scope.v2");
+
+          export function createMongoRequestEnv(env){
+            const scope={clients:[]};
+            return new Proxy(env,{get(target,prop){if(prop===R41_MONGO_REQUEST_SCOPE)return scope;return target[prop];}});
+          }
+
+          function requestScope(env){
+            const scope=env?.[R41_MONGO_REQUEST_SCOPE];
+            if(!scope)throw new Error("MONGO_REQUEST_SCOPE_MISSING");
+            return scope;
+          }
+
+          export async function requestMongoDb(env,fallbackDb="naruto_shinobi_no_sho"){
+            const scope=requestScope(env);
+            const client=new MongoClient(env.MONGODB_URI,{maxPoolSize:1,minPoolSize:0,maxIdleTimeMS:0,serverSelectionTimeoutMS:6000,connectTimeoutMS:6000});
+            try{
+              await client.connect();
+              scope.clients.push(client);
+              return client.db(env.MONGODB_DB||fallbackDb);
+            }catch(e){
+              try{await client.close();}catch{}
+              throw e;
+            }
+          }
+
+          export async function closeMongoRequestEnv(env){
+            const scope=env?.[R41_MONGO_REQUEST_SCOPE];
+            if(!scope)return;
+            const clients=Array.isArray(scope.clients)?scope.clients.splice(0):[];
+            await Promise.allSettled(clients.map(client=>client.close()));
+          }
+          `.replace(/^          /gm,'');
+          fs.writeFileSync('src/mongo-request.js',helper,'utf8');
+
+          const p='test/cloudflare-runtime-contract.test.mjs';
+          let contract=fs.readFileSync(p,'utf8');
+          const anchor='assert.match(mongoRequest,/client\\.close\\(\\)/);';
+          if(!contract.includes(anchor))throw new Error('MONGO_CONTRACT_ANCHOR_NOT_FOUND');
+          contract=contract.replace(anchor,`${anchor}\nassert.match(mongoRequest,/const scope=\\{clients:\\[\\]\\}/);\nassert.doesNotMatch(mongoRequest,/clientPromise|scope\\.client\\b/);\nassert.match(mongoRequest,/scope\\.clients\\.push\\(client\\)/);\nassert.match(mongoRequest,/Promise\\.allSettled\\(clients\\.map\\(client=>client\\.close\\(\\)\\)\\)/);`);
+          fs.writeFileSync(p,contract,'utf8');
+          console.log('PASS_REQUEST_SCOPED_MULTI_CLIENT_LIFECYCLE_PATCH');
+          NODE
+
       - name: Static regressions and Wrangler dry run
         working-directory: cloudflare/r41-api
         run: |
