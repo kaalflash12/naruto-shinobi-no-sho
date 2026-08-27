@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-27T14:22:59.357Z",
+  "generatedAt": "2026-08-27T14:31:02.134Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-27T14:22:49.238Z",
+  "sourceInventoryGeneratedAt": "2026-08-27T14:30:46.386Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3376,
@@ -16,7 +16,7 @@
     "dynamicUIActionTemplates": 2,
     "concreteUIActionsWithHandler": 221,
     "unresolvedConcreteUIActions": 0,
-    "sourceFiles": 148,
+    "sourceFiles": 153,
     "assetFiles": 5434,
     "manualDocs": 5
   },
@@ -40060,6 +40060,31 @@
       "path": ".github/workflows/fix-cloudflare-auth-runtime-once.yml",
       "size": 10781,
       "sha256": "ac5da30f8bbbe4030f3e06fbf903ca6bf243ed4a5a6bb30117637df89e27e424"
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-final.yml",
+      "size": 3616,
+      "sha256": "62ce6f2157df622e1ca9f1406f0f0e09f2cde940680d320b37441bb3a18a78db"
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-trigger.yml",
+      "size": 200,
+      "sha256": "2cf7e10b5d05db6f4859de8c70aa8a33259d9bba7ecbc28dcab4ee6c5a640b0f"
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v2-trigger.yml",
+      "size": 203,
+      "sha256": "dc11eda97a3db3abf02970c8389dab4c863f956a62c1420820944ca6a6fdb9d4"
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v2.yml",
+      "size": 4318,
+      "sha256": "3a87b8d556ea05123cd7810a026d3fba5f784845eb74c5f29a88c2558cbf2646"
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v3.yml",
+      "size": 3614,
+      "sha256": "1f4a82fd4c13396e47f5e4972fee67b87d96ed6bf9c556fb99887f4ff46bd8bb"
     },
     {
       "path": ".github/workflows/force-publish-request-scoped-mongodb-once.yml",

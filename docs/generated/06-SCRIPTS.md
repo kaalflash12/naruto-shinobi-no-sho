@@ -2,7 +2,7 @@
 
 Ordem real das tags script do index e inventário de fonte/tooling com SHA-256.
 
-Gerado em: `2026-08-27T14:22:49.238Z`
+Gerado em: `2026-08-27T14:30:46.386Z`
 
 | Ordem | Script | Existe | Linha |
 |---:|---|---|---:|
@@ -66,6 +66,11 @@ Gerado em: `2026-08-27T14:22:49.238Z`
 - `.github/workflows/final-readiness.yml` — domínio `tooling` — 3417 bytes — SHA-256 `a621b5b29ad693c888599c9a013eb6448542221948ca404d8a09f16c931587e6`
 - `.github/workflows/fix-authority-namespace-not-found-once.yml` — domínio `tooling` — 7550 bytes — SHA-256 `5d7cd0fedb51b6ffb22ee1ed5fbc5e4240b180e52b24f4acde7422c752d09b94`
 - `.github/workflows/fix-cloudflare-auth-runtime-once.yml` — domínio `tooling` — 10781 bytes — SHA-256 `ac5da30f8bbbe4030f3e06fbf903ca6bf243ed4a5a6bb30117637df89e27e424`
+- `.github/workflows/force-publish-request-scoped-mongodb-final.yml` — domínio `tooling` — 3616 bytes — SHA-256 `62ce6f2157df622e1ca9f1406f0f0e09f2cde940680d320b37441bb3a18a78db`
+- `.github/workflows/force-publish-request-scoped-mongodb-once-trigger.yml` — domínio `tooling` — 200 bytes — SHA-256 `2cf7e10b5d05db6f4859de8c70aa8a33259d9bba7ecbc28dcab4ee6c5a640b0f`
+- `.github/workflows/force-publish-request-scoped-mongodb-once-v2-trigger.yml` — domínio `tooling` — 203 bytes — SHA-256 `dc11eda97a3db3abf02970c8389dab4c863f956a62c1420820944ca6a6fdb9d4`
+- `.github/workflows/force-publish-request-scoped-mongodb-once-v2.yml` — domínio `tooling` — 4318 bytes — SHA-256 `3a87b8d556ea05123cd7810a026d3fba5f784845eb74c5f29a88c2558cbf2646`
+- `.github/workflows/force-publish-request-scoped-mongodb-once-v3.yml` — domínio `tooling` — 3614 bytes — SHA-256 `1f4a82fd4c13396e47f5e4972fee67b87d96ed6bf9c556fb99887f4ff46bd8bb`
 - `.github/workflows/force-publish-request-scoped-mongodb-once.yml` — domínio `tooling` — 5072 bytes — SHA-256 `edd24b0c88e0bd4374a6ef01537d6e914ad30436bcd47bebd3e88ec0fa7fcb86`
 - `.github/workflows/live-backend-e2e.yml` — domínio `tooling` — 16180 bytes — SHA-256 `ddaca4cdf4177dec5e38aedb192cf2dfcb6ea8a1e831bbda9f483cf5cf053884`
 - `.github/workflows/live-backend-failure-evidence.yml` — domínio `tooling` — 4337 bytes — SHA-256 `8e5479912a8e4c929e5a6ceb8a71cd7c3e1cfcc2d0fb345c3b46243da2bef5cc`

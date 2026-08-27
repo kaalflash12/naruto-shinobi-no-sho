@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-27T14:22:49.238Z",
+  "generatedAt": "2026-08-27T14:30:46.386Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5600,
+    "files": 5610,
     "runtimeFiles": 114,
     "assetFiles": 5434,
-    "textFiles": 160,
+    "textFiles": 170,
     "functions": 3376,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2927,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 148,
+    "sourceFiles": 153,
     "gameRuntimeSourceFiles": 75,
-    "toolingSourceFiles": 73,
+    "toolingSourceFiles": 78,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -44,9 +44,49 @@
       "asset": false
     },
     {
+      "path": ".github/final-publisher-trigger-2.txt",
+      "size": 37,
+      "sha256": "1bf9b74fc6d057653283dbb7bd0d11b9b58867138259b53fa1869f89df19e5bd",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/final-publisher-trigger.txt",
+      "size": 24,
+      "sha256": "2287da70dd6c43824b279824c923a5b95071d9276851790d103d2ba19468b947",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/force-publish-request-scoped-trigger.txt",
+      "size": 52,
+      "sha256": "367598706c36e43a36a9da68082938c14ba715fc82e9852146f14856fa133148",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
       "path": ".github/public-release-coherence-trigger.txt",
       "size": 259,
       "sha256": "400191cc633de50b3bf31d1b845f93514b41848ffc6528fd8b1a968a3123df41",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/trigger-any-2.txt",
+      "size": 43,
+      "sha256": "fa06e7ef8b1f7bf0b25209618bacebc850c0b47bbcecdc4fc58c6a556f406be1",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/trigger-any.txt",
+      "size": 31,
+      "sha256": "59ad7f2a6439ee0df5e71c0e5475eabc9578abdb8bac07caf42c95dd63c11ecf",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -199,6 +239,46 @@
       "path": ".github/workflows/fix-cloudflare-auth-runtime-once.yml",
       "size": 10781,
       "sha256": "ac5da30f8bbbe4030f3e06fbf903ca6bf243ed4a5a6bb30117637df89e27e424",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-final.yml",
+      "size": 3616,
+      "sha256": "62ce6f2157df622e1ca9f1406f0f0e09f2cde940680d320b37441bb3a18a78db",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-trigger.yml",
+      "size": 200,
+      "sha256": "2cf7e10b5d05db6f4859de8c70aa8a33259d9bba7ecbc28dcab4ee6c5a640b0f",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v2-trigger.yml",
+      "size": 203,
+      "sha256": "dc11eda97a3db3abf02970c8389dab4c863f956a62c1420820944ca6a6fdb9d4",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v2.yml",
+      "size": 4318,
+      "sha256": "3a87b8d556ea05123cd7810a026d3fba5f784845eb74c5f29a88c2558cbf2646",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/force-publish-request-scoped-mongodb-once-v3.yml",
+      "size": 3614,
+      "sha256": "1f4a82fd4c13396e47f5e4972fee67b87d96ed6bf9c556fb99887f4ff46bd8bb",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -44398,7 +44478,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "05871e61bd0cd2ee9a27a9c46142e195a962ed5db9e052adca99505334624003",
+      "sha256": "505c3711d3659412d8b1609b11539951efde6206c6c54487d8b2114e92af0bf5",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -364823,7 +364903,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T14:22:50.759Z",
+    "generatedAt": "2026-08-27T14:30:48.462Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -365392,7 +365472,7 @@
       "events": 14,
       "movement": 8083,
       "assets": 15838,
-      "environment": 314
+      "environment": 320
     },
     "after": {
       "functions": 3376,
