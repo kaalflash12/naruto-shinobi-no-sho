@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-27T18:00:38.965Z",
+  "generatedAt": "2026-08-27T18:04:30.202Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtbtvcy0subsj",
-  "slotId": "gameplay-mtbtvcy0",
+  "temporaryAccount": "play_mtbu0cjued6an",
+  "slotId": "gameplay-mtbu0cju",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,11 +97,11 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787853610362,
+          "at": 1787853842171,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 17,
+          "total": 12,
           "cd": 11,
           "ok": true,
           "reward": "+3 material(is)"
@@ -148,9 +148,9 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 276,
+          "score": 498,
           "success": false,
-          "errors": 5,
+          "errors": 4,
           "time": 0.8,
           "performanceTags": [
             "impreciso",
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtbtvcy0subsj",
+        "intent": "Cobrir saída E2E mtbu0cjued6an",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787853614896,
-        "cloudAt": 1787853607923,
+        "localAt": 1787853846654,
+        "cloudAt": 1787853839764,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
