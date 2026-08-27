@@ -40,13 +40,27 @@ jobs:
         working-directory: cloudflare/r41-api
         run: node test/cleanup-runtime-diagnostic-users.mjs
 
-      - name: Apply request-scoped runtime fix
+      - name: Apply request-scoped runtime fix if legacy source remains
         working-directory: cloudflare/r41-api
-        run: node test/apply-request-scoped-runtime-fix.mjs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f src/mongo-request.js ] && grep -q 'requestMongoDb' src/index.js && grep -q 'createMongoRequestEnv' src/entry-authoritative.js; then
+            echo 'PASS_REQUEST_SCOPED_RUNTIME_ALREADY_PRESENT'
+          else
+            node test/apply-request-scoped-runtime-fix.mjs
+          fi
 
-      - name: Replace auth me loopback with direct helper
+      - name: Apply direct auth helper if legacy loopback remains
         working-directory: cloudflare/r41-api
-        run: node test/apply-direct-account-helper-fix.mjs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -q 'export async function accountFromRequest' src/index.js && grep -q 'accountFromRequest(req,env)' src/entry.js; then
+            echo 'PASS_DIRECT_ACCOUNT_HELPER_ALREADY_PRESENT'
+          else
+            node test/apply-direct-account-helper-fix.mjs
+          fi
 
       - name: Prevent closed client reuse inside one request
         working-directory: cloudflare/r41-api
@@ -94,9 +108,11 @@ jobs:
 
           const p='test/cloudflare-runtime-contract.test.mjs';
           let contract=fs.readFileSync(p,'utf8');
-          const anchor='assert.match(mongoRequest,/client\\.close\\(\\)/);';
-          if(!contract.includes(anchor))throw new Error('MONGO_CONTRACT_ANCHOR_NOT_FOUND');
-          contract=contract.replace(anchor,`${anchor}\nassert.match(mongoRequest,/const scope=\\{clients:\\[\\]\\}/);\nassert.doesNotMatch(mongoRequest,/clientPromise|scope\\.client\\b/);\nassert.match(mongoRequest,/scope\\.clients\\.push\\(client\\)/);\nassert.match(mongoRequest,/Promise\\.allSettled\\(clients\\.map\\(client=>client\\.close\\(\\)\\)\\)/);`);
+          if(!contract.includes('scope\\.clients\\.push')){
+            const anchor='assert.match(mongoRequest,/client\\.close\\(\\)/);';
+            if(!contract.includes(anchor))throw new Error('MONGO_CONTRACT_ANCHOR_NOT_FOUND');
+            contract=contract.replace(anchor,`${anchor}\nassert.match(mongoRequest,/const scope=\\{clients:\\[\\]\\}/);\nassert.doesNotMatch(mongoRequest,/clientPromise|scope\\.client\\b/);\nassert.match(mongoRequest,/scope\\.clients\\.push\\(client\\)/);\nassert.match(mongoRequest,/Promise\\.allSettled\\(clients\\.map\\(client=>client\\.close\\(\\)\\)\\)/);`);
+          }
           fs.writeFileSync(p,contract,'utf8');
           console.log('PASS_REQUEST_SCOPED_MULTI_CLIENT_LIFECYCLE_PATCH');
           NODE
@@ -172,6 +188,10 @@ jobs:
             cloudflare/r41-api/test/cloudflare-runtime-contract.test.mjs \
             cloudflare/r41-api/package.json
           git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'PASS_REQUEST_SCOPED_RUNTIME_ALREADY_PUBLISHED'
+            exit 0
+          fi
           git commit -m 'fix: scope MongoDB connections to each Worker request'
           for i in 1 2 3 4 5; do
             git pull --rebase origin main
