@@ -13,6 +13,10 @@ for(const [name,source] of [["index",index],["entry",entry],["authority",authori
 assert.match(mongoRequest,/createMongoRequestEnv/);
 assert.match(mongoRequest,/maxPoolSize:1/);
 assert.match(mongoRequest,/client\.close\(\)/);
+assert.match(mongoRequest,/const scope=\{clients:\[\]\}/);
+assert.doesNotMatch(mongoRequest,/clientPromise|scope\.client\b/);
+assert.match(mongoRequest,/scope\.clients\.push\(client\)/);
+assert.match(mongoRequest,/Promise\.allSettled\(clients\.map\(client=>client\.close\(\)\)\)/);
 assert.match(authority,/finally\s*\{\s*await closeMongoRequestEnv\(requestEnv\)/s);
 assert.match(authority,/code!==26&&code!==27/);
 assert.match(authority,/NamespaceNotFound/);
