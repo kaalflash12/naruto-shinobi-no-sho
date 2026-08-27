@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-27T18:16:24.313Z",
+  "generatedAt": "2026-08-27T19:10:21.295Z",
   "status": "PASS_BROWSER_GAMEPLAY_E2E",
   "ok": true,
   "scope": "LOCAL_HTTP_CHROMIUM_WITH_API_FIXTURE",
   "site": "http://127.0.0.1:4173/",
-  "temporaryAccount": "play_mtbufms9osfbx",
-  "slotId": "gameplay-mtbufms9",
+  "temporaryAccount": "play_mtbwd0h49zx1j",
+  "slotId": "gameplay-mtbwd0h4",
   "checks": {
     "temporaryAccountRegistered": true,
     "cloudFixtureSaved": true,
@@ -97,14 +97,14 @@
           "meta": {}
         },
         "activity": {
-          "at": 1787854555728,
+          "at": 1787857792581,
           "clock": 44005,
           "id": "coleta",
           "score": 1000,
-          "total": 20,
+          "total": 9,
           "cd": 11,
-          "ok": true,
-          "reward": "+3 material(is)"
+          "ok": false,
+          "reward": "sem recompensa; tempo foi gasto"
         }
       }
     },
@@ -123,9 +123,9 @@
           "playerDamageTaken": 0,
           "resourceSpent": 0,
           "ko": false,
-          "enemyHpBefore": 26,
-          "enemyHpAfter": 26,
-          "reason": "Coleta: sucesso • +3 material(is).\nAlvo fora do alcance (1)."
+          "enemyHpBefore": 36,
+          "enemyHpAfter": 36,
+          "reason": "Coleta: falha • sem recompensa; tempo foi gasto.\nAlvo fora do alcance (1)."
         },
         "validation": {
           "ok": true,
@@ -148,12 +148,12 @@
         "clicks": 5,
         "minigame": "chakra_control",
         "result": {
-          "score": 471,
-          "success": false,
+          "score": 531,
+          "success": true,
           "errors": 3,
           "time": 0.8,
           "performanceTags": [
-            "impreciso",
+            "estavel",
             "com_erros"
           ],
           "meta": {}
@@ -171,7 +171,7 @@
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
         "roomId": "room-local-gameplay-e2e",
-        "intent": "Cobrir saída E2E mtbufms9osfbx",
+        "intent": "Cobrir saída E2E mtbwd0h49zx1j",
         "persistedAcrossReload": true
       }
     },
@@ -190,8 +190,8 @@
       "id": "save_autosave",
       "status": "PASS_GAMEPLAY_E2E",
       "evidence": {
-        "localAt": 1787854560277,
-        "cloudAt": 1787854553288,
+        "localAt": 1787857797096,
+        "cloudAt": 1787857790139,
         "lastError": "",
         "cloudStatus": 200,
         "cloudMinigames": 2,
