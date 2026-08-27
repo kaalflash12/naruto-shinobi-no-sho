@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-27T18:16:21.729Z",
+  "generatedAt": "2026-08-27T18:19:28.617Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-27T18:16:06.732Z",
+  "sourceInventoryGeneratedAt": "2026-08-27T18:19:14.265Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3375,
@@ -40154,12 +40154,12 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "c934d4031eea2a73669f5fba1e6bb78e8a8b28938abe53d198b3ebce23989c85"
+      "sha256": "fe45ff668e93b7dc9161e0ebee3a7515a9c41d78466f7d0a7567a7fc4f54a46d"
     },
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "563a32eb2c44ed2dccfe1607bb7945d8c4bfc1a5a4b76d5f3d43f873ac28e841"
+      "sha256": "5b33adb8ae31d158e1a0581ec06ee444138567fcd1b0b9a3fe4a12028ded6df4"
     },
     {
       "path": "audit/LIVE-BACKEND.json",

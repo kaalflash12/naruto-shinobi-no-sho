@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-27T18:16:06.732Z",
+  "generatedAt": "2026-08-27T18:19:14.265Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5612,
+    "files": 5613,
     "runtimeFiles": 114,
     "assetFiles": 5434,
-    "textFiles": 172,
+    "textFiles": 173,
     "functions": 3375,
     "routes": 33,
     "models": 2,
@@ -43910,7 +43910,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5607,
-      "sha256": "c934d4031eea2a73669f5fba1e6bb78e8a8b28938abe53d198b3ebce23989c85",
+      "sha256": "fe45ff668e93b7dc9161e0ebee3a7515a9c41d78466f7d0a7567a7fc4f54a46d",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43918,7 +43918,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "563a32eb2c44ed2dccfe1607bb7945d8c4bfc1a5a4b76d5f3d43f873ac28e841",
+      "sha256": "5b33adb8ae31d158e1a0581ec06ee444138567fcd1b0b9a3fe4a12028ded6df4",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43960,6 +43960,14 @@
       "size": 2042,
       "sha256": "2d3af5133044801a53a8b534cf43b783422ad8069d341e7016bbae53302bf667",
       "extension": ".md",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": "audit/REQUEST-SCOPED-MONGODB-RETRY.txt",
+      "size": 80,
+      "sha256": "748644951f1926082e7eb44313ecf37ba0245eaef7d9524b97b3ef5a16c34be9",
+      "extension": ".txt",
       "runtime": false,
       "asset": false
     },
@@ -44494,7 +44502,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "505c3711d3659412d8b1609b11539951efde6206c6c54487d8b2114e92af0bf5",
+      "sha256": "e45f31992915ba4168eda76196d9d11e30f60a423be56112a982d8ea2083cd16",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -364892,7 +364900,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T18:16:09.101Z",
+    "generatedAt": "2026-08-27T18:19:16.745Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
