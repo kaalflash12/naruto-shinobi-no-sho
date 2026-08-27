@@ -1,0 +1,1 @@
+retry request-scoped MongoDB publisher after proven workerd register-login pass
