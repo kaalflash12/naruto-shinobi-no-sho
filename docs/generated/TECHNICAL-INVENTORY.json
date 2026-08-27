@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-27T14:30:46.386Z",
+  "generatedAt": "2026-08-27T17:59:30.540Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5610,
+    "files": 5611,
     "runtimeFiles": 114,
     "assetFiles": 5434,
-    "textFiles": 170,
+    "textFiles": 171,
     "functions": 3376,
     "routes": 33,
     "models": 2,
@@ -71,6 +71,14 @@
       "path": ".github/public-release-coherence-trigger.txt",
       "size": 259,
       "sha256": "400191cc633de50b3bf31d1b845f93514b41848ffc6528fd8b1a968a3123df41",
+      "extension": ".txt",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/STOP_CREATING_TRIGGERS.txt",
+      "size": 29,
+      "sha256": "c00fa1eb2643521741cf7b66da52d79b9b5b93964490b739a7a080206e92fd5a",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -357,8 +365,8 @@
     },
     {
       "path": ".github/workflows/publish-request-scoped-mongodb-once.yml",
-      "size": 4705,
-      "sha256": "709e940651cb55d8535af76512672337f590cba4421f6ea6b6e67bf95c42f5f8",
+      "size": 7313,
+      "sha256": "a81f53ce15be44ccf874c3b1fb02ad012dd4a6422b65e578d42c1b6892c898e0",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43894,7 +43902,7 @@
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
       "size": 5604,
-      "sha256": "9c09966b657b6721446976df95f8ad1d1ee79de2bf651ffe9ae69d273e3f8f14",
+      "sha256": "dea8986b0d58cd72c47c6679984a619e9306638e9c94f1e13ce02622696fa4fe",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43902,7 +43910,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "bcb459a9cafaa563181006464a02d5f543078b83277828296f0b2e105c85ac55",
+      "sha256": "c7fe094822d7c728a592b4e6a6afa012737f99741eb78674495c0d4c2dae663d",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -364903,7 +364911,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T14:30:48.462Z",
+    "generatedAt": "2026-08-27T17:59:33.210Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -365470,9 +365478,9 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8083,
+      "movement": 8085,
       "assets": 15838,
-      "environment": 320
+      "environment": 322
     },
     "after": {
       "functions": 3376,
