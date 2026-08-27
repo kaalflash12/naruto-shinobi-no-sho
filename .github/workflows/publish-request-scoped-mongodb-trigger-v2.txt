@@ -1,0 +1,1 @@
+trigger request-scoped mongodb publisher v2
