@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-27T18:19:28.617Z",
+  "generatedAt": "2026-08-27T18:59:26.915Z",
   "status": "PASS_FINAL_CANONICAL_SPEC",
   "ok": true,
   "repository": "kaalflash12/naruto-shinobi-no-sho",
-  "sourceInventoryGeneratedAt": "2026-08-27T18:19:14.265Z",
+  "sourceInventoryGeneratedAt": "2026-08-27T18:59:11.780Z",
   "functionCodeResolution": "ast-exact-span-sha256-v1",
   "counts": {
     "functions": 3375,
