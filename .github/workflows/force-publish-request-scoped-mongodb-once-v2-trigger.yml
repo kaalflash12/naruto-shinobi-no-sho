@@ -1,0 +1,11 @@
+name: Force Publish Request Scoped MongoDB Once V2 Trigger
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo trigger
