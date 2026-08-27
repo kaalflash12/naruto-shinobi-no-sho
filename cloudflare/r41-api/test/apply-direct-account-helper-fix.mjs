@@ -39,10 +39,29 @@ entry=replaceOnce(
 );
 write('src/entry.js',entry);
 
+let authority=read('src/entry-authoritative.js');
+authority=replaceOnce(authority,
+  'if(path==="/"||path==="/api/status")return status(req,requestEnv,ctx);',
+  'if(path==="/"||path==="/api/status")return await status(req,requestEnv,ctx);',
+  'AUTHORITY_AWAIT_STATUS');
+authority=replaceOnce(authority,
+  'if(path==="/api/auth/me")return augmentAccountEmail(req,requestEnv,await base.fetch(req,requestEnv,ctx));',
+  'if(path==="/api/auth/me")return await augmentAccountEmail(req,requestEnv,await base.fetch(req,requestEnv,ctx));',
+  'AUTHORITY_AWAIT_ME_AUGMENT');
+authority=replaceOnce(authority,
+  'if(path==="/api/online/action"||/^\\/api\\/(pvp|coop)\\/action$/.test(path))return authoritativeAction(req,requestEnv,ctx);',
+  'if(path==="/api/online/action"||/^\\/api\\/(pvp|coop)\\/action$/.test(path))return await authoritativeAction(req,requestEnv,ctx);',
+  'AUTHORITY_AWAIT_ACTION');
+authority=replaceOnce(authority,
+  'return base.fetch(req,requestEnv,ctx);',
+  'return await base.fetch(req,requestEnv,ctx);',
+  'AUTHORITY_AWAIT_BASE_FALLBACK');
+write('src/entry-authoritative.js',authority);
+
 let contract=read('test/cloudflare-runtime-contract.test.mjs');
 const anchor='assert.match(authority,/NamespaceNotFound/);';
 if(!contract.includes(anchor))throw new Error('RUNTIME_CONTRACT_ANCHOR_NOT_FOUND');
-contract=contract.replace(anchor,`${anchor}\nassert.match(index,/export async function accountFromRequest/);\nassert.match(index,/let data;try\\{data=JSON\\.parse/);\nassert.match(index,/const session=await db\\.collection\\(\\"sessions\\"\\)\\.findOne/);\nassert.match(entry,/accountFromRequest\\(req,env\\)/);\nassert.doesNotMatch(entry,/pathname=\\"\\/api\\/auth\\/me\\"/);`);
+contract=contract.replace(anchor,`${anchor}\nassert.match(index,/export async function accountFromRequest/);\nassert.match(index,/let data;try\\{data=JSON\\.parse/);\nassert.match(index,/const session=await db\\.collection\\(\\"sessions\\"\\)\\.findOne/);\nassert.match(entry,/accountFromRequest\\(req,env\\)/);\nassert.doesNotMatch(entry,/pathname=\\"\\/api\\/auth\\/me\\"/);\nassert.match(authority,/return await base\\.fetch\\(req,requestEnv,ctx\\)/);\nassert.match(authority,/return await augmentAccountEmail\\(req,requestEnv/);\nassert.match(authority,/finally\\s*\\{\\s*await closeMongoRequestEnv\\(requestEnv\\)/s);`);
 write('test/cloudflare-runtime-contract.test.mjs',contract);
 
 console.log('PASS_APPLY_DIRECT_ACCOUNT_HELPER_FIX');
