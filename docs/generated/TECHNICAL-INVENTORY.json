@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-27T19:21:47.499Z",
+  "generatedAt": "2026-08-29T20:25:43.527Z",
   "repository": "kaalflash12/naruto-shinobi-no-sho",
   "methodology": {
     "type": "static-source-inventory",
     "rule": "Nao inferir comportamento ausente. Rastrear elementos detectados ate arquivo e linha."
   },
   "counts": {
-    "files": 5613,
+    "files": 5614,
     "runtimeFiles": 114,
     "assetFiles": 5434,
-    "textFiles": 173,
+    "textFiles": 174,
     "functions": 3375,
     "routes": 33,
     "models": 2,
@@ -26,9 +26,9 @@
     "gameRuntimeFunctions": 2926,
     "toolingFunctions": 449,
     "uniqueAssetReferences": 5442,
-    "sourceFiles": 153,
+    "sourceFiles": 154,
     "gameRuntimeSourceFiles": 75,
-    "toolingSourceFiles": 78,
+    "toolingSourceFiles": 79,
     "literalAssetReferences": 5422,
     "dynamicAssetReferences": 20,
     "missingExternalUserOverlayReferences": 0,
@@ -151,6 +151,14 @@
       "path": ".github/workflows/cloudflare-bootstrap-syntax.yml",
       "size": 4917,
       "sha256": "5c62b078edbc901fbaa56b54bab39f3b9c1e61a234b8c23e3aa3c9b16b39b1aa",
+      "extension": ".yml",
+      "runtime": false,
+      "asset": false
+    },
+    {
+      "path": ".github/workflows/cloudflare-credential-diagnostic.yml",
+      "size": 4553,
+      "sha256": "e42760fb7da15fe6035d451aa6468f52be4a15ec0d665c0898b49dc7ade7135c",
       "extension": ".yml",
       "runtime": false,
       "asset": false
@@ -43902,15 +43910,15 @@
     {
       "path": "audit/BACKEND-SECRET-PRESENCE.json",
       "size": 2700,
-      "sha256": "e7f799bf6adde3d3147d19b3c25c624ab529af42c3e402b8a6b417e67682b41e",
+      "sha256": "9e6e040043ae62542cb4b6d4b6c7625998b91f4224f71c137118e20257687971",
       "extension": ".json",
       "runtime": true,
       "asset": false
     },
     {
       "path": "audit/BROWSER-GAMEPLAY-LOCAL-E2E.json",
-      "size": 5634,
-      "sha256": "2481ba25688c52a292c539b240cb2e46e986c696c17984f7606314cba8ed7184",
+      "size": 5604,
+      "sha256": "50c1e998c6bfede6d088b9c399ec78d526464a915f1ece09e20c640cf0ae10c0",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -43918,7 +43926,7 @@
     {
       "path": "audit/BROWSER-SMOKE.json",
       "size": 823,
-      "sha256": "e4a8466602bd66f1277e026193985eaa64cbe1b7500e6aed84e0993323ec0079",
+      "sha256": "d784cfe052784e230dcc464126234accc7ea0c2046cf7c5963df2e04a796f417",
       "extension": ".json",
       "runtime": true,
       "asset": false
@@ -44502,7 +44510,7 @@
     {
       "path": "PUBLIC-RELEASE-FINGERPRINT.txt",
       "size": 65,
-      "sha256": "e45f31992915ba4168eda76196d9d11e30f60a423be56112a982d8ea2083cd16",
+      "sha256": "6bb2a67a7410f4af77642f491ced3bf9883a879d896ef4e137cc005cc9f69ed0",
       "extension": ".txt",
       "runtime": false,
       "asset": false
@@ -364900,7 +364908,7 @@
     }
   ],
   "astIndex": {
-    "generatedAt": "2026-08-27T19:21:49.421Z",
+    "generatedAt": "2026-08-29T20:25:45.205Z",
     "parser": "acorn",
     "parserVersion": "8.15.0",
     "ecmaVersion": "latest",
@@ -365467,9 +365475,9 @@
       "storage": 42,
       "uiActions": 224,
       "events": 14,
-      "movement": 8088,
+      "movement": 8091,
       "assets": 15838,
-      "environment": 322
+      "environment": 326
     },
     "after": {
       "functions": 3375,

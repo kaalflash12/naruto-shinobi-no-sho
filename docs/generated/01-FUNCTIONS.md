@@ -2,7 +2,7 @@
 
 Todas as funções/métodos detectados em fonte não documental. Cada entrada informa se pertence ao runtime do jogo ou ao tooling.
 
-Gerado em: `2026-08-27T19:21:47.499Z`
+Gerado em: `2026-08-29T20:25:43.527Z`
 
 ## FUNC-00001 — `<anonymous@1:1>`
 
